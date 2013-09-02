@@ -6,6 +6,8 @@ title: What to do if you get hacked
 
 If your forum was hacked or you want to know what to do when and if you get hacked, read this guide and follow the instructions precisely. Please note we try to cover every single possible situation. In most cases you won't need to follow all the steps outlined, but it is still highly recommended to do so.
 
+Whenever an SQL query is provided, we assume your table prefix is `mybb_`. If you have a different table prefix remember to replace it in the SQL query.
+
 1. [Get in Control](#get-in-control)
 	1. [Secure Your Computer](#secure-your-computer)
 	2. [Secure Your Online Accounts](#secure-your-online-accounts)
@@ -53,11 +55,11 @@ Using safe passwords, however, may not be enough. What if someone else gets thei
 
 Having audited your computer and reset all your passwords, the first thing you want to do is to check if you have access to the Admin CP and the server. After all, you can't do anything if the hacker kicked you out of the administrator group or changed your permissions.
 
-First let's check if the default administrator group actually has permission to access the Admin CP. To do so run the following SQL query. Replace `mybb_` with your table prefix if you have a different one.
+First let's check if the default administrator group actually has permission to access the Admin CP. To do so run the following SQL query.
 
 	UPDATE `mybb_usergroups` SET `cancp`= '1' WHERE `gid` = '4';
 
-And to make sure your account is in the administrator group, run the following SQL query. Replace X with your uid and change `mybb_` to your table prefix if you have a different one.
+And to make sure your account is in the administrator group, run the following SQL query. Replace `X` with your uid.
 
 	UPDATE `mybb_users` SET usergroup = '4' WHERE uid = 'X';
 
@@ -65,9 +67,9 @@ Next, you want to open the `inc/config.php` file in a text editor. Find the code
 
 	$config['super_admins'] = '1'; 
 
-Finally, to reset your password, in case the hacker changed it too, run the following SQL query. Remember to replace X with your uid and `mybb_` with your table prefix. The password will be set to `test` so you can change it afterwards in the User CP.
+Finally, to reset your password, in case the hacker changed it too, run the following SQL query. Remember to replace `X` with your uid and `example` with the desired new password.
 
-	UPDATE `mybb_users` SET `password` = '098f6bcd4621d373cade4e832627b4f6', `salt` = '' WHERE `uid` = 'X';
+	UPDATE `mybb_users` SET `password` = md5('example'), `salt` = '' WHERE `uid` = 'X';
 
 ### Restrict Access to the Forum
 
@@ -141,7 +143,7 @@ Changing your table prefix can prove to be helpful in certain cases. If a hacker
 
 ### Disallow HTML in Posts
 
-Allowing HTML to be used in posts is a terrible, terrible idea. That is why MyBB does not allow it by default. Unless you are absolutely certain that you want to use it (in which case you should install [HTML Purifier](http://mods.mybb.com/view/htmlpurifier)) it should be disabled on all forums. To do this quickly, run the following SQL query. Replace `mybb_` with your own table prefix.
+Allowing HTML to be used in posts is a terrible, terrible idea. That is why MyBB does not allow it by default. Unless you are absolutely certain that you want to use it (in which case you should install [HTML Purifier](http://mods.mybb.com/view/htmlpurifier)) it should be disabled on all forums. To do this quickly, run the following SQL query.
 
 	UPDATE `mybb_forums` SET `allowhtml` = '0';
 
