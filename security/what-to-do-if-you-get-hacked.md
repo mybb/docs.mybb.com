@@ -41,7 +41,18 @@ Whenever an SQL query is provided, we assume your table prefix is `mybb_`. If yo
 
 First things first: secure your computer. It is possible that you downloaded something that infected your computer and allowed your forum to be hacked. Therefore it is not safe to do anything else from your computer until it is 100% clean. Even if you were to recover your forum right now it could be useless because the hacker could easily know what you're up to and destroy everything again. Securing your computer is a priority at the moment. If you have another computer that you can use which is not infected then get on it immediately.
 
-However if you don't have another computer lying around or other people to help you then you will have to take care of it right now. If you're using Windows we urge you to run tools like [Spybot - Search & Destroy](http://www.safer-networking.org/en/spybotsd/index.html) and [Malwarebytes](http://www.malwarebytes.org/) on your system right now to eliminate any malware or spyware. [HiJackThis](http://www.filehippo.com/download_hijackthis/) is also something worth considering, but it's a bit more advanced. Scanning your computer with your antivirus' own tools is also a good idea. If you don't already have one, [Microsoft Security Essentials](http://windows.microsoft.com/MSE) or [AntiVir](http://www.avira.com/en/avira-free-antivirus) are excellent choices. A firewall like [Comodo Internet Security](http://www.comodo.com/home/internet-security/free-internet-security.php) or [ZoneAlarm](http://www.zonealarm.com/) is recommended as well.
+However if you don't have another computer lying around or other people to help you then you will have to take care of it right now. If you're using Windows we urge you to run tools like:
+
+- [Spybot - Search & Destroy](http://www.safer-networking.org/en/spybotsd/index.html)
+- [Malwarebytes](http://www.malwarebytes.org/)
+- [HiJackThis](http://www.filehippo.com/download_hijackthis/)
+
+Scanning your computer with your antivirus' own tools is also a good idea and installing a firewall. We recommend the following:
+
+- [Microsoft Security Essentials](http://windows.microsoft.com/MSE)
+- [AntiVir](http://www.avira.com/en/avira-free-antivirus)
+- [Comodo Internet Security](http://www.comodo.com/home/internet-security/free-internet-security.php)
+- [ZoneAlarm](http://www.zonealarm.com/)
 
 ### Secure Your Online Accounts
 
