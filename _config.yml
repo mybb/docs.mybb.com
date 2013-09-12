@@ -1,0 +1,4 @@
+name: MyBB Documentation
+markdown: redcarpet
+pygments: true
+permalink: pretty
