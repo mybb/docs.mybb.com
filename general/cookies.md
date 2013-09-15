@@ -4,13 +4,11 @@ category: Miscellaneous
 title: Cookies
 ---
 
-## Cookie Settings
-
-### Introduction
+## Introduction
 
 [Cookies](http://en.wikipedia.org/wiki/HTTP_cookie) are important in MyBB to identify and verify logged-in users, and store inline-moderation selections. Incorrect cookie settings are the leading cause of login/logout problems on forums. If you or your users are having problems logging into the Front End of your board, see if the cookie settings are the culprit before posting your support request on the forum.
 
-### MyBB Cookie Settings
+## MyBB Cookie Settings
 
 MyBB has three inherent settings related to cookies:
 
@@ -18,15 +16,15 @@ MyBB has three inherent settings related to cookies:
 - Cookie Path
 - Cookie Prefix
 
-#### Cookie Domain
+### Cookie Domain
 
 This is the domain or subdomain that contains your forum. Usually a period/dot (".") is placed in front of this domain/subdomain in order to include all of its subdomains
 
-#### Cookie Path
+### Cookie Path
 
 This is the path from the root of your domain to your forum directory. The starting slash and ending slash should be included.
 
-#### Cookie Prefix
+### Cookie Prefix
 
 This is a prefix to all cookies used by your forum, to further prevent any conflicts with other installations of MyBB on the same domain or conflicts with other softwares.
 
