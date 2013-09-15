@@ -76,10 +76,10 @@ The following is a list of the cookies that MyBB sets, and a note about each one
 	<dd>Stores the current admin's Admin Session ID.</dd>
 
 	<dt>loginattempts</dt>
-	<dl>Stores the number of login attempts a user has had.</dl>
+	<dd>Stores the number of login attempts a user has had.</dd>
 
 	<dt>mybb</dt>
-	<dl>The mybb cookie is actually an array of cookies:</dl>
+	<dd>The mybb cookie is actually an array of cookies:</dd>
 
 	<dt>mybb[lastvisit]</dt>
 	<dd>This cookie stores the last time of visit in the UNIX timestamp format.</dd>
@@ -94,14 +94,18 @@ The following is a list of the cookies that MyBB sets, and a note about each one
 	<dd>This cookie keeps track of which categories and boxes have been collapsed (as opposed to being expanded by default).</dd>
 
 	<dt>inlinemod_</dt>
-	<dl>There are two kinds of inline moderating cookies: forum and thread and they are named as follows:
+	<dd>
+		There are two kinds of inline moderating cookies: forum and thread and they are named as follows:
+		
+		<ul>
+			<li>inlinemod_forumfid</li>
+			<li>inlinemod_threadtid</li>
+		</ul>
 
-	- inlinemod_forumfid
-	- inlinemod_threadtid
+		fid is replaced with the forum ID and tid is replaced with the thread ID.
 
-	fid is replaced with the forum ID and tid is replaced with the thread ID.
-
-	The contents are a pipe-delimited and pipe-enclosed list of thread IDs or post IDs which have been checked for inline moderation.</dl>
+		The contents are a pipe-delimited and pipe-enclosed list of thread IDs or post IDs which have been checked for inline moderation.
+	</dd>
 
 	<dt>sid</dt>
 	<dd>The current user's Session ID.</dd>
