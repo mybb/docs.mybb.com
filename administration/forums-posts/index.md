@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Admin CP: Forums & Posts
+title:  "Admin CP: Forums & Posts"
 ---

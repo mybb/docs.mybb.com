@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Spam
+title:  "Spam"
 ---

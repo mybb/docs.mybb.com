@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Install MyBB
+title:  "Install MyBB"
 ---

@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Admin CP: Templates & Style
+title:  "Admin CP: Templates & Style"
 ---
