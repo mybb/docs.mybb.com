@@ -1,4 +1,5 @@
-name: MyBB Documentation
-markdown: redcarpet
-pygments: true
+name:      MyBB Documentation
+markdown:  redcarpet
+pygments:  true
 permalink: pretty
+url:       http://mybb.github.io

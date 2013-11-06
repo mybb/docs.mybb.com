@@ -1,4 +1,4 @@
 ---
 layout: page
-title: MyBB Usage 
+title:  "MyBB Usage"
 ---
