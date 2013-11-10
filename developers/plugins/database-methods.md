@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Database Methods
+title:  "Database Methods"
 ---
 
 The database class provides a wrapper of most common functions used for database access, and also others which simplify common queries. All queries performed with the database through the database abstraction layer can be analyzed for the execution time and further optimization.
@@ -40,19 +40,19 @@ The database class provides a wrapper of most common functions used for database
             global $db;
 
             $query = $db->simple_select("settings", "*", "name='boardclosed_reason'", array(
-                "order_by" => 'name', 
+                "order_by" => 'name',
                 "order_dir" => 'DESC',
                 "limit" => 1
                 )
             );
 
             $settings = $db->fetch_array($query);
-            
+
             echo "<pre>";
             print_r($settings);
             echo "</pre>";
 
-            /* 
+            /*
             Outputs:
                 Array
                 (
@@ -104,7 +104,7 @@ The database class provides a wrapper of most common functions used for database
 
     <dt>$db->update_query</dt>
     <dd>
-        Runs an update query on a table in a database. 
+        Runs an update query on a table in a database.
         Parameters: ('table name', 'update array', 'conditional')
     </dd>
 

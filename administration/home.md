@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Admin CP Home
+title:  "Admin CP Home"
 ---
 
 The Home tab is your starting base for all tasks in the Admin CP. It is the first page you see after logging in, and provides some useful statistics for managing your forum.
@@ -10,28 +10,28 @@ The Home tab is your starting base for all tasks in the Admin CP. It is the firs
 The Dashboard is the main page underneath the "Home" tab, meaning it is the page you see directly after logging in. On this page, you can see the following information:
 
 <dl>
-    <dt>MyBB Version</dt> 
+    <dt>MyBB Version</dt>
     <dd>The version of MyBB you are currently running.</dd>
 
-    <dt>PHP Version</dt> 
+    <dt>PHP Version</dt>
     <dd>The version of PHP installed on your server.</dd>
-    
-    <dt>SQL Engine</dt> 
+
+    <dt>SQL Engine</dt>
     <dd>The version of MySQL, SQLite, or PgSQL being used by your MyBB forum.</dd>
-    
-    <dt>Server Load</dt> 
+
+    <dt>Server Load</dt>
     <dd>If supported, the current load on the server.</dd>
-    
-    <dt>Threads</dt> 
+
+    <dt>Threads</dt>
     <dd>Number of threads, new threads today, and unapproved threads on your forum.</dd>
-    
-    <dt>Posts</dt> 
+
+    <dt>Posts</dt>
     <dd>Number of posts, new posts today, and unapproved posts on your forum.</dd>
-    
-    <dt>Users</dt> 
+
+    <dt>Users</dt>
     <dd>Number of registered users, active users, registrations today, and users awaiting activation.</dd>
-    
-    <dt>Attachments</dt> 
+
+    <dt>Attachments</dt>
     <dd>Number of attachments, unapproved attachments, and approximate space used for attachments.</dd>
 </dl>
 

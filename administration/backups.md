@@ -1,7 +1,7 @@
 ---
-layout: page
+layout:   page
 category: Admin CP
-title: Backups
+title:    "Backups"
 ---
 
 From the database backups page, you can easily create backups that are either stored on your server or downloaded to your computer. The database backups listing page shows you all backups that are currently stored on your server, the size of the backup, the time and day of creation, and allows you to download or delete the backup.

@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Ugrade MyBB
+title:  "Ugrade MyBB"
 ---

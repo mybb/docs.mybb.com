@@ -7,10 +7,10 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="{{ site.url }}/assets/css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
 
     </head>
     <body>
@@ -18,8 +18,8 @@
         <div class="container">
           <div class="site">
             <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
+              <h1 class="title"><a href="{{ site.url }}">{{ site.name }}</a></h1>
+              <a class="extra" href="{{ site.url }}">home</a>
             </div>
 
                 {{ content }}
@@ -34,8 +34,8 @@
               </div>
               <div class="contact">
                 <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
+                  <a href="http://github.com/mybb">GitHub/mybb</a><br />
+                  <a href="http://twitter.com/MyBBGroup">@MyBBGroup</a><br />
                 </p>
               </div>
             </div>

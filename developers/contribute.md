@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contribute
+title:  "Contribute"
 ---
 
 MyBB is free, open-source software. Anyone can contribute to its development and progress. MyBB source code is hosted on GitHub, which makes it easy to contribute to the project.
@@ -70,7 +70,7 @@ An **Open** issue describes a problem that is yet to be fixed by a developer. Th
     <dt>Feedback</dt>
     <dd>
         The issue may not contain enough evidence of a valid problem, or difficult to reproduce, and requires more input from the reporter.
-    
+
         The issue may have been fixed by a developer but may not have actually solved the problem/causes further problems/contains code that doesn't match the Development Standards.
     </dd>
 </dl>

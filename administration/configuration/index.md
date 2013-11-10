@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Admin CP: Configuration
+title:  "Admin CP: Configuration"
 ---

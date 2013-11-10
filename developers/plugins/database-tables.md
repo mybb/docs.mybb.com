@@ -1,7 +1,7 @@
 ---
-layout: page
+layout:   page
 category: Database
-title: Database Tables
+title:    "Database Tables"
 ---
 
 List of all database tables created with a standard MyBB installation that describes the structure and format of each table.

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Requirements
+title:  "Requirements"
 ---
 
 ## Minimum Requirements
