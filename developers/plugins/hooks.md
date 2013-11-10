@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Plugin Hooks
+title:  "Plugin Hooks"
 ---

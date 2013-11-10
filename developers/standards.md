@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Development Standards
+title:  "Development Standards"
 ---
 
 The purpose of this document is to outline the development standards for use whilst developing MyBB. Plugin and modification authors are recommended to use these coding standards when developing plugins and modifications.
@@ -29,7 +29,7 @@ Trailing whitespace on the end of lines or end of files is not permitted. Most t
 
 ### PHP Code Demarcation
 
-Short PHP open and close tags (`<? ?>` or `<?= ?>`) are not permitted. To 
+Short PHP open and close tags (`<? ?>` or `<?= ?>`) are not permitted. To
 delimit PHP code, the full `<?php ?>` tags must be used as this is the most portable way to include PHP code on differing PHP configurations.
 
 ### Strings
@@ -265,7 +265,7 @@ A complete example is shown below.
          * @access private
          */
         private $db;
-        
+
         /**
          * Get a list of threads with the specified name.
          *
@@ -307,7 +307,7 @@ Database insert queries should be performed using the `insert_query()` method. T
         "column" => $db->escape_string('test'),
         "column2" => 1
     );
-    
+
     $db->insert_query('table', $new_record);
 
 ### Update Queries

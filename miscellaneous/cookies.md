@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cookies
+title:  "Cookies"
 ---
 
 ## Introduction
@@ -93,7 +93,7 @@ The following is a list of the cookies that MyBB sets, and a note about each one
 	<dt>inlinemod_</dt>
 	<dd>
 		There are two kinds of inline moderating cookies: forum and thread and they are named as follows:
-		
+
 		<ul>
 			<li>inlinemod_forumfid</li>
 			<li>inlinemod_threadtid</li>
