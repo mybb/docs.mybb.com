@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Translations"
+title:  "Translations"
 ---
 
 
