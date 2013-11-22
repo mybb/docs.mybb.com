@@ -3,9 +3,7 @@ layout: page
 title:  "How to CHMOD Files"
 ---
 
-
 # How To CHMOD Files
-
 
 CHMODing a file changes its permissions. This controls who can and can not have access to the file. There are three user permission groups used when CHMODing a file and every user belongs to one of these permission groups.
 
@@ -21,18 +19,15 @@ A string that looks like `rwx rw- r--`, defines who can access this file. The fi
 
 When using FTP programs, permissions can sometime be given as numbers.
 
-
     0 (or blank) = No permissions 1 = Execute 2 = Write 3 = Execute + Write 4 = Read 5 = Read + Execute 6 = Read + Write 7 = Read + Write + Execute 
 
 A permission string of *764* means the **owner** of the file can read, write and execute, the **group** can read and write and the **others** can only read.
-
 
 The easiest way to change permissions in Unix via the command line is to use the command
 
     chmod ABC file_name
     
 where *ABC* are the number representations of the permissions you wish to set. With *A* being the permissions for **owner**, *B* permissions for **group** and *C* permissions for **other**. `file_name` is the name of the file you wish to set permissions for.
-
 
 **Example:**
 
