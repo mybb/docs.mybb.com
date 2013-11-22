@@ -3,42 +3,29 @@ layout: page
 title:  "Ugrade MyBB"
 ---
 
+## Upgrading
 
-##Upgrading
-
-
-
-###The Upgrade Process
-
+### The Upgrade Process
 
 As with any software, there are various different types of upgrades. They vary in size, difficulty and the type of changes being made.
 
 With MyBB, we follow a sequenced-based version scheme to describe the changes we've made.
 
-
-#####Major Point Upgrades
-
+##### Major Point Upgrades
 
 A major upgrade is where the version number changes. For example, going from version 1.x to 2.x. This type of change means that plugins, themes and language packs will need major changes to work on the new version.
 
-
-#####Minor Point Upgrades
-
+##### Minor Point Upgrades
 
 This type of updates means the minor number of the version changes. For example, going from version 1.4.x to 1.6.x. This type of change might require some changes to plugins, themes and language packs.
 
-
-#####Maintenance Point Upgrades
-
+##### Maintenance Point Upgrades
 
 The maintenance upgrade makes small changes, mostly bug fixes, to the minor point versions. These can also be security upgrades. As an example, going from version 1.6.2 to 1.6.3 or 1.6.1 to 1.6.4 is a maintenance point upgrade. These changes are meant to make the new version more stable than the last. It is very unlikely that any changes to plugins are needed, but language packs or themes may need to be updated.
 
-
-###Preparing for your Upgrade
-
+### Preparing for your Upgrade
 
 Before you upgrade, you should always read the announcement blog post properly before starting. The new version's changes will clearly be explained and provide an insight into how difficult the upgrade will be.
-
 
 1.	First, you may want to shut down your forum. Doing this means that no one will interrupt the upgrade process accidentally. Please remember that switching the forum by using the **Board Online/Offline** setting **IS NOT** recommended. The best method is to use a `.htaccess` restriction on your forum's root folder so that no one can access the front end. There are various tutorials on search engines that help you do this and some hosts (especially ones that give you cPanel) provide simple tools to do this.
 
@@ -46,30 +33,21 @@ Before you upgrade, you should always read the announcement blog post properly b
 
 3.	If you are upgrading to a major or minor point, you must deactivate (or disable) all of your plugins. This is because it is likely they will need to be updated to work on the new version and can cause problems if they are left active. You may also want to deactivate or disable all of your plugins for maintenance upgrades too, but it is not usually required.
       
-
-
-      
-#####Downloading the correct upgrade package
+##### Downloading the correct upgrade package
 
 There are two different methods of upgrading your forum, full upgrades and a changed files upgrade.
 
-
-####Full Upgrade
-
+#### Full Upgrade
 
 If your current version is more than one point below the newest version, you need to make a full upgrade. For example, if you're using 1.6.1 and the newest version is 1.6.4, then you need a full upgrade. The same applies if you're using 1.4.x and you're upgrading to 1.6. You need use the latest version of the software.
 
 [Download the latest version](http://mybb.com/download/latest)
 
-
 **Changed Files Upgrade**
-
 
 If you're just one point behind the newest version - for example, you're using 1.6.3 and the newest version is 1.6.4 - then you can use the changed files package. This is available in the blog post announcement. If a changed files package is not available then the latest version of the software should be used.
 
-
-#####Beginning the Upgrade
-
+##### Beginning the Upgrade
 
 Once you've downloaded the correct upgrade package for you, it's time to do the upgrade. Please follow these steps carefully.
 
@@ -101,9 +79,7 @@ Once you've downloaded the correct upgrade package for you, it's time to do the 
 
 5.	The upgrade process should now be complete! You may want to re-open your forum by removing the `.htaccess` block or turning your forum on again. Before you do this, ensure that your forum functions correct and it looks the way it's supposed to look! Take your time don't rush it.
 
-
-###Help and Support
-
+### Help and Support
 
 If you run into any problems at any point of the upgrade process, visit the [Community Forum](http://community.mybb.com/) and post a thread in the [Support area](http://community.mybb.com/forum-124.html). Our Support Team will try their best to provide help as fast as they can, but please note they are extremely busy when there is a new release. Remember to take screenshots if you can and include them in your new thread, and be as detailed as possible when writing your post.
 
