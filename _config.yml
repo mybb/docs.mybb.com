@@ -2,4 +2,4 @@ name:      MyBB Documentation
 markdown:  redcarpet
 pygments:  true
 permalink: pretty
-url:       http://mybb.github.io
+url:       http://127.0.0.1:4000

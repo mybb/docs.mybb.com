@@ -121,6 +121,11 @@ ul.pages span {
   border: 0;
 }
 
+.page img {
+    max-width: 42em;
+    border: 4px solid #eee;
+}
+
 /*****************************************************************************/
 /*
 /* pages
