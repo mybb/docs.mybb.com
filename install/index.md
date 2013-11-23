@@ -12,28 +12,6 @@ Thanks for choosing MyBB as the discussion board software for your community. Yo
 * You will require a web host to run your forum
 * Your web host must satisfy a few basic requirements for MyBB to run properly.
 
-1. [Preparation](#preparation)
-	1. [Downloading the MyBB files](#downloading-the-mybb-files)
-	2. [Uploading files](#uploading-files)
-	3. [File permissions] (#file-permissions)
-
-2. [Installer](#installer)
-	1. [Welcome](#welcome)
-	2. [License Agreement](#license-agreement)
-	3. [Requirements Check](#requirements-check)
-	4. [Database Configuration](#database-configuration)
-	5. [Table Creation](#table-creation)
-	6. [Data Insertion](#data-insertion)
-	7. [Theme Installation](#theme-installation)
-	8. [Board Configuration](#board-configuration)
-	9. [Administrator User](#administrator-user)
-	10. [Finish Setup](#finish-setup)
-
-3. [Other Information](#other-information)
-    * [Troubleshooting](#troubleshooting)
-	* [Installing on MySQL 4.0.x](#post-installation-tips)
-	* [Installation via SSH](#post-installation-tips)
-
 ## Preparation
 
 ### Downloading the MyBB files
@@ -61,28 +39,32 @@ Certain file permissions are required for MyBB to function correctly. Once you'v
 
 On Linux, Unix and similar systems the following permissions should be applied:
 
-* ./inc/config.php : 666
-* ./inc/settings.php : 666
-* ./cache/ : 777
-* ./cache/themes/ : 777
-* ./uploads/ : 777
-* ./uploads/avatars : 777
+* `inc/config.php` : 666
+* `inc/settings.php` : 666
+* `cache/` : 777
+* `cache/themes/` : 777
+* `uploads/` : 777
+* `uploads/avatars` : 777
 
 The following permissions may optionally be applied:
 
-* ./admin/backups : 777
-* ./inc/languages/english/<all files> : 666
-* ./inc/languages/english/admin/<all files> : 666
+* `admin/backups` : 777
+* `inc/languages/english/*` : 666
+* `inc/languages/english/admin/*` : 666
 
 If you have SSH access, these permissions can be applied via the following command, executed from your root MyBB directory:
 
-    chmod 666 inc/config.php inc/settings.php
-    chmod 777 cache cache/themes uploads uploads/avatars
+```shell
+chmod 666 inc/config.php inc/settings.php
+chmod 777 cache cache/themes uploads uploads/avatars
+```
 
 And for optional permissions:
 
-    chmod 666 inc/languages/english/*.php inc/languages/english/admin/*.php
-    chmod 777 cache cache/themes uploads uploads/avatars admin/backups
+```shell
+chmod 666 inc/languages/english/*.php inc/languages/english/admin/*.php
+chmod 777 cache cache/themes uploads uploads/avatars admin/backups
+```
 
 If you are using FileZilla you can right click on a file or directory and click File Attributes to modify the permissions of that object.
 
@@ -227,11 +209,7 @@ If your site looks like the following then your site URL probably wasn't entered
 
 To fix this edit the `inc/settings.php` file and find the `$settings['bburl']` line.
 
-Change the value to the correct URL, such as:
-
-    $settings['bburl'] = "http://notmysite.com";
-to
-    $settings['bburl'] = "http://mysite.com";
+Change the value to the correct URL, such as `$settings['bburl'] = "http://notmysite.com";` to `$settings['bburl'] = "http://mysite.com";`.
 
 Next, log into your Admin Control Panel > Configuration > General Configuration and update your Board URL here too.
 
@@ -239,22 +217,21 @@ Next, log into your Admin Control Panel > Configuration > General Configuration 
 
 To be able to install MyBB on mySQL 4.0.x, you need to make an alteration to a file first before running the installation script. **This is a workaround, and not an alternative - mySQL 4.0 has already reached it's end of life so you really should upgrade as soon as possible**.
 
-In ./inc/db_mysql.php, delete/remove or comment out:
+In `inc/db_mysql.php`, delete/remove or comment out:
 
-    if($success && $this->db_encoding)
+```php
+if($success && $this->db_encoding)
+{
+    $this->query("SET NAMES '{$this->db_encoding}'");
+    if($write_success && count($this->connections) > 1)
     {
-        $this->query("SET NAMES '{$this->db_encoding}'");
-        if($write_success && count($this->connections) > 1)
-        {
-            $this->write_query("SET NAMES '{$this->db_encoding}'");
-        }
+        $this->write_query("SET NAMES '{$this->db_encoding}'");
     }
-    return $success;
+}
+return $success;
+```
 
-and also:
-
-    return " CHARACTER SET {$this->db_encoding} COLLATE {$collation}";
-
+and also: `return " CHARACTER SET {$this->db_encoding} COLLATE {$collation}";`
 
 ### Installation via SSH
 
@@ -268,7 +245,7 @@ Requirements:
 
 wget:
 
-```
+```shell
 wget --content-disposition http://www.mybb.com/download/latest -O mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
@@ -279,7 +256,7 @@ chmod -R 0777 cache uploads inc/settings.php inc/config.php
 
 aria2c
 
-```
+```shell
 aria2c http://www.mybb.com/download/latest -o mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
@@ -289,7 +266,7 @@ chmod -R 0777 cache uploads inc/settings.php inc/config.php
 
 curl
 
-```
+```shell
 curl http://www.mybb.com/download/latest -o mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
@@ -300,7 +277,7 @@ chmod -R 0777 cache uploads inc/settings.php inc/config.php
 
 lynx
 
-```
+```shell
 lynx -crawl -dump http://www.mybb.com/download/latest > mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
