@@ -7,7 +7,7 @@ title:  "MyBB Documentation"
   <h1>Articles</h1>
   <ul class="pages">
     {% for page in site.pages %}
-      <li><a href="{{ site.url }}/{{ page.url }}">{{ page.title }}</a></li>
+      <li><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
