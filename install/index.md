@@ -7,7 +7,7 @@ Thanks for choosing MyBB as the discussion board software for your community. Yo
 
 * MyBB comes with the [features](http://www.mybb.com/features) that one would expect from a bulletin board software, as well as some unique features not found elsewhere.
 * Having trouble with MyBB? The support at the [MyBB Community Forums](http://community.mybb.com/) is free and available to anyone using MyBB, supported by the [volunteer team](/developers), and other members of the community!
-* MyBB is [easily customizable](/developers/themes) to suit your site's needs and looks.
+* MyBB is easily customizable to suit your site's needs and looks.
 * Best of all, MyBB is [released under the GNU Lesser GPL licence](http://www.mybb.com/about/license), and therefore it's [entirely free](http://www.gnu.org/philosophy/free-sw.html)! No forced advertisements, no cost, no sign-ups, no forced email subscriptions!
 * You will require a web host to run your forum
 * Your web host must satisfy a few basic requirements for MyBB to run properly.
@@ -54,14 +54,14 @@ The following permissions may optionally be applied:
 
 If you have SSH access, these permissions can be applied via the following command, executed from your root MyBB directory:
 
-```shell
+```sh
 chmod 666 inc/config.php inc/settings.php
 chmod 777 cache cache/themes uploads uploads/avatars
 ```
 
 And for optional permissions:
 
-```shell
+```sh
 chmod 666 inc/languages/english/*.php inc/languages/english/admin/*.php
 chmod 777 cache cache/themes uploads uploads/avatars admin/backups
 ```
@@ -199,40 +199,6 @@ If you simply wish to lock your MyBB install directory, simply create a new file
 
 ## Other Information
 
-### Troubleshooting
-
-#### My site has no styles / looks broken
-
-If your site looks like the following then your site URL probably wasn't entered correctly:
-
-[![Broken installation](/assets/images/install/broken.jpg)](/assets/images/install/broken.jpg)
-
-To fix this edit the `inc/settings.php` file and find the `$settings['bburl']` line.
-
-Change the value to the correct URL, such as `$settings['bburl'] = "http://notmysite.com";` to `$settings['bburl'] = "http://mysite.com";`.
-
-Next, log into your Admin Control Panel > Configuration > General Configuration and update your Board URL here too.
-
-### Installing on MySQL 4.0.x
-
-To be able to install MyBB on mySQL 4.0.x, you need to make an alteration to a file first before running the installation script. **This is a workaround, and not an alternative - mySQL 4.0 has already reached it's end of life so you really should upgrade as soon as possible**.
-
-In `inc/db_mysql.php`, delete/remove or comment out:
-
-```php
-if($success && $this->db_encoding)
-{
-    $this->query("SET NAMES '{$this->db_encoding}'");
-    if($write_success && count($this->connections) > 1)
-    {
-        $this->write_query("SET NAMES '{$this->db_encoding}'");
-    }
-}
-return $success;
-```
-
-and also: `return " CHARACTER SET {$this->db_encoding} COLLATE {$collation}";`
-
 ### Installation via SSH
 
 If you have SSH access on your *nix server you may prefer to use one of the following methods which will allow you to skip the preparation steps mentioned above.
@@ -245,7 +211,7 @@ Requirements:
 
 wget:
 
-```shell
+```sh
 wget --content-disposition http://www.mybb.com/download/latest -O mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
@@ -256,17 +222,18 @@ chmod -R 0777 cache uploads inc/settings.php inc/config.php
 
 aria2c
 
-```shell
+```sh
 aria2c http://www.mybb.com/download/latest -o mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
-rm -Rf Upload mybb.zip && mv inc/config.default.php inc/config.php
+rm -Rf Upload mybb.zip
+mv inc/config.default.php inc/config.php
 chmod -R 0777 cache uploads inc/settings.php inc/config.php
 ```
 
 curl
 
-```shell
+```sh
 curl http://www.mybb.com/download/latest -o mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
@@ -277,7 +244,7 @@ chmod -R 0777 cache uploads inc/settings.php inc/config.php
 
 lynx
 
-```shell
+```sh
 lynx -crawl -dump http://www.mybb.com/download/latest > mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
