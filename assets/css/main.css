@@ -34,16 +34,16 @@ a:visited { color: #a0a; }
 /* Home
 /*
 /*****************************************************************************/
-ul.posts {
+ul.pages {
   list-style-type: none;
   margin-bottom: 2em;
 }
 
-ul.posts li {
+ul.pages li {
   line-height: 1.75em;
 }
 
-ul.posts span {
+ul.pages span {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
@@ -121,40 +121,45 @@ ul.posts span {
   border: 0;
 }
 
+.page img {
+    max-width: 42em;
+    border: 4px solid #eee;
+}
+
 /*****************************************************************************/
 /*
-/* Posts
+/* pages
 /*
 /*****************************************************************************/
 
 /* standard */
-.post pre {
+.page pre {
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .4em;
 }
 
-.post ul, .post ol {
+.page ul, .page ol {
   margin-left: 1.35em;
 }
 
-.post code {
+.page code {
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .2em;
 }
 
-.post pre code {
+.page pre code {
   border: none;
 }
 
 /* terminal */
-.post pre.terminal {
+.page pre.terminal {
   border: 1px solid #000;
   background-color: #333;
   color: #FFF;
 }
 
-.post pre.terminal code {
+.page pre.terminal code {
   background-color: #333;
 }

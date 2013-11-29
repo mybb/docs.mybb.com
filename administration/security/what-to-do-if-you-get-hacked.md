@@ -1,6 +1,6 @@
 ---
 layout: page
-title: What to do if you get hacked
+title:  "What to do if you get hacked"
 ---
 
 If your forum was hacked or you want to know what to do when and if you get hacked, read this guide and follow the instructions precisely. Please note we try to cover every single possible situation. In most cases you won't need to follow all the steps outlined, but it is still highly recommended to do so.
@@ -31,7 +31,7 @@ Whenever an SQL query is provided, we assume your table prefix is `mybb_`. If yo
 	8. [Keep Plugins to a Minimum](#keep-plugins-to-a-minimum)
 	9. [Secure Other Software](#secure-other-software)
 	10. [Backup Regularly](#backup-regularly)
-	
+
 4. [Final Words](#final-words)
 
 ## Get in Control
@@ -75,7 +75,7 @@ And to make sure your account is in the administrator group, run the following S
 
 Next, you want to open the `inc/config.php` file in a text editor. Find the code below within that file and make sure your uid is within quotes. If you have multiple administrators you can separate them with a comma. It is recommended to stick with your uid only for now though.
 
-	$config['super_admins'] = '1'; 
+	$config['super_admins'] = '1';
 
 Finally, to reset your password, in case the hacker changed it too, run the following SQL query. Remember to replace `X` with your uid and `example` with the desired new password.
 
@@ -107,13 +107,13 @@ But this is just MyBB's side. In addition to that we also recommend that you che
 
 To ensure that your MyBB installation is clean and no extra files have been added, you should delete all your files and upload a fresh copy of the latest version of MyBB. You only really need to backup your `inc/config.php` file. And even that should be double checked against the [default structure of the file](http://docs.mybb.com/Incconfigphp.html). Pay attention to your database details specifically, as well as your admin directory, super admins, etc.
 
-If you have a lot of plugins, images, language packs or custom modifications you should create a full backup and upload these things later on. Note that it is possible that a vulnerability lies within these files, so make sure to review them carefully. In the future consider using the [Patches](http://mods.mybb.com/view/patches) plugin to edit all of the core files. This makes it supremely easy to restore patches when you're upgrading or replacing files. 
+If you have a lot of plugins, images, language packs or custom modifications you should create a full backup and upload these things later on. Note that it is possible that a vulnerability lies within these files, so make sure to review them carefully. In the future consider using the [Patches](http://mods.mybb.com/view/patches) plugin to edit all of the core files. This makes it supremely easy to restore patches when you're upgrading or replacing files.
 
 Deleting the files and re-uploading a fresh copy of MyBB also has the benefit of updating to the latest code. If you were running an older version of MyBB - which is why most forums get hacked - you will now be running on code free of any known vulnerabilities. Please note that to complete the upgrade, you need to point your browser to `install/upgrade.php` and run the upgrade script. You only need to do this if you were not running on the latest version.
 
 ### Check CHMOD Permissions
 
-If certain files or folders have unnecessary permissions you may be up against a security risk. They should only have the permissions required by MyBB to run. There is no recommended set of permissions specifically. It varies from server to server, because they are configured differently. For more information read our docs on [CHMOD permissions](http://docs.mybb.com/CHMOD_Files.html) or contact your web host for their recommendations. 
+If certain files or folders have unnecessary permissions you may be up against a security risk. They should only have the permissions required by MyBB to run. There is no recommended set of permissions specifically. It varies from server to server, because they are configured differently. For more information read our docs on [CHMOD permissions](http://docs.mybb.com/CHMOD_Files.html) or contact your web host for their recommendations.
 
 ### Check New Users
 
@@ -145,7 +145,7 @@ However, if you need help as an administrator permissions should be limited as m
 
 ### Protect the `inc` Directory
 
-The `inc` directory in your MyBB installation is something that should not be accessible to the end user at all. It contains sensitive information such as your database details (`inc/config.php`). And even though it is almost impossible for hackers to access that data, it's always a good idea to make things extra difficult to access. And the `inc` directory certainly doesn't need to be publicly available. You should therefore protect it completely by [disallowing access to the `inc` directory](http://www.mybbsecurity.net/topic-protecting-the-inc-directory). 
+The `inc` directory in your MyBB installation is something that should not be accessible to the end user at all. It contains sensitive information such as your database details (`inc/config.php`). And even though it is almost impossible for hackers to access that data, it's always a good idea to make things extra difficult to access. And the `inc` directory certainly doesn't need to be publicly available. You should therefore protect it completely by [disallowing access to the `inc` directory](http://www.mybbsecurity.net/topic-protecting-the-inc-directory).
 
 ### Change the Default Table Prefix
 
