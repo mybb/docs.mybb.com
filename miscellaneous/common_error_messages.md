@@ -123,8 +123,8 @@ This occurs when you are using MySQL and you attempt to upgrade from 1.4.3 to 1.
 
 #### Error Message: *Error*
 
-The installer is currently locked, please remove 'lock' from the install directory to continue
-Information: This happens when you try to run the installation or upgrade script, but your ./install/ folder is locked. Simply remove the 'lock' file from the ./install/ folder to continue.
+The installer is currently locked, please remove *lock* from the install directory to continue
+Information: This happens when you try to run the installation or upgrade script, but your `./install/` folder is locked. Simply remove the *lock* file from the `./install/` folder to continue.
 
 #### Error Message: *Forbidden*
 
