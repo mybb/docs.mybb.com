@@ -9,12 +9,12 @@ Well, there are three main reasons for this.
 
 The first two relate the following error when clicking the **Logout** link:
 
-    Your user ID could not be verified to log you out. This may have been because a malicious Javascript was attempting to log you out automatically. If you intended to logout, please click the Logout button at the top menu.
+ Your user ID could not be verified to log you out. This may have been because a malicious Javascript was attempting to log you out automatically. If you intended to logout, please click the Logout button at the top menu.
 
 This means that your Logout link doesn't contain an SID and since MyBB 1.2.8, this is required. There are two possible reasons for this:
 
-    The board has been updated to a newer version of MyBB but some template information hasn't been updated.
-    You are using a template designed for a version of MyBB older than 1.2.8 and as such, the logout link is also missing the SID component. 
+ The board has been updated to a newer version of MyBB but some template information hasn't been updated.
+ You are using a template designed for a version of MyBB older than 1.2.8 and as such, the logout link is also missing the SID component. 
 
 A fix for both these issues can be found by following the instructions [here](http://community.mybb.com/showthread.php?tid=25210&pid=177101#pid177101) to manually update your templates' Logout link to contain the SID. Note: You will need to do this for every theme that you use on your forum which does not currently contain an SID link.
 
