@@ -7,7 +7,7 @@ title:  "Cannot login"
 
 So every day we have people reporting that logins don't work on their forum. Let's fix this once and for all!
 
-Most of the time this is a problem with your cookie settings being incorrect or inadequate. For more information about MyBB's cookies, read [Cookies](cookies).
+Most of the time this is a problem with your cookie settings being incorrect or inadequate. For more information about MyBB's cookies, read [Cookies](../miscellaneous/cookies).
 
 Your cookie settings can be found in: **Admin CP** > **Configuration** > **Settings** > **General Configuration**. The two settings are *Cookie Domain* and *Cookie Path*.
 
