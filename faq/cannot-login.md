@@ -34,4 +34,4 @@ Alternatively you can use [this tool](http://www.dennistt.net/mybb/cookiesetting
 
 These cookie settings should work on all MyBB installations. If you have site-integration, your cookie settings may need to be more generalized.
 
-After you change your cookie settings, please advise your users to log out and [clear their cookies from their browser](/faq/clear_board_cookies), so that the new cookies can take effect. 
+After you change your cookie settings, please advise your users to log out and [clear their cookies from their browser](/faq/clear-board-cookies), so that the new cookies can take effect. 
