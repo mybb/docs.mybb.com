@@ -24,6 +24,6 @@ The third reason could relate to your cookie settings. Either, the Cookie settin
 
 Or, you have some cookies remaining from a previous session (when the Cookie settings were different) and also a set of cookies for this session (with the new cookie settings). In this case, MyBB will clear your new cookies, but not the old ones so you will appear unable to logout.
 
-Please see [Cannot login](cannot_login) or [Cookies](../miscellaneous/cookies) to find your correct cookie settings.
+Please see [Cannot login](cant-login) or [Cookies](../miscellaneous/cookies) to find your correct cookie settings.
 
 In both situations, the best solution is to clear the cookies in your browser.
