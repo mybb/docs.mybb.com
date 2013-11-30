@@ -6,9 +6,6 @@ title:  "User CP"
 # User Control Panel
 
 The User Control Panel is available to registered members (with appropriate permissions) to manage their user profile. At the top of the menu, you are provided with a link back to the User CP home page.
-Contents
-
-
 
 ## Messenger
 
@@ -111,7 +108,7 @@ You can choose avatars using two methods:
  1. **Upload** - You can upload an avatar from your computer.
  2. **Remote URL** - You can type in a URL to an image file somewhere on the internet that you want to use as your avatar. 
 
-The board administrator may also enable a feature that will automatically resize avatars. If set to automatically resize large avatars, any avatar over the specified limit will be automatically resized. If set to give users the choice of resizing large avatars, you will need to check *Try to resize my avatar if it is too large* to have your avatar automatically resized if too large. If the administrator has disabled automatic resizing of avatars, you will be asked to upload another image if your avatar is too large.
+The board administrator may also enable a feature that will automatically resize avatars. If set to automatically resize large avatars, any avatar over the specified limit will be automatically resized. If set to give users the choice of resizing large avatars, you will need to check **Try to resize my avatar if it is too large** to have your avatar automatically resized if too large. If the administrator has disabled automatic resizing of avatars, you will be asked to upload another image if your avatar is too large.
 
 Uploading a new avatar will replace your current avatar. Also, if you wish to have no avatar, you may select **Remove Avatar** at the bottom of the page, which will leave you with no avatar.
 
