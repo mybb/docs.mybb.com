@@ -18,31 +18,31 @@ The menu includes the following links:
 
 **Compose**
 
-    This allows you to send a private message to another user. 
+This allows you to send a private message to another user. 
     
 **Inbox**
 
-    This is your folder of received and unfiled messages. 
+This is your folder of received and unfiled messages. 
     
 **Sent Items** 
 
-    This folder contains private messages you have sent.
+This folder contains private messages you have sent.
     
 **Drafts** 
 
-    This folder contains private messages you have written but have not sent. 
+This folder contains private messages you have written but have not sent. 
     
 **Trash Can**
 
-    This folder contains messages you have deleted.
+This folder contains messages you have deleted.
     
 **Tracking** 
 
-    This page allows you to track messages you have sent - allowing you to see if and when a user has read your message. If they have not read the message, you can delete the message from their inbox. 
+This page allows you to track messages you have sent - allowing you to see if and when a user has read your message. If they have not read the message, you can delete the message from their inbox. 
     
 **Edit Folders** 
 
-    This page allows you to add additional folders, allowing you to file your private messages, similar to email. 
+This page allows you to add additional folders, allowing you to file your private messages, similar to email. 
 
 From any of the folders, you can also access the **Empty Folders** and **Download Messages** pages.
 
@@ -59,15 +59,15 @@ The only required field, by default, is your email address, which you can change
 
 **Date of Birth** 
 
-    Your date of birth. 
+Your date of birth. 
     
 **Date of Birth Privacy** 
 
-    You can choose to either display age and date of birth publicly, only display your age, or hide age and date of birth. Hiding your age and date of birth will only allow the administrative staff to see it. 
+You can choose to either display age and date of birth publicly, only display your age, or hide age and date of birth. Hiding your age and date of birth will only allow the administrative staff to see it. 
     
 **Your Website URL** 
 
-    If you have a website, you can enter it here. 
+If you have a website, you can enter it here. 
 
 
 **Additional Information**
@@ -133,99 +133,99 @@ Would you like to be shown to all users on the who's online list when you are lo
 
 **Receive emails from the Administrators** 
 
-    **Would you like to receive mass mailings from the administrators?** 
+Would you like to receive mass mailings from the administrators?
     
 **Hide your email from other members** 
 
-    Would you like to be able to be contacted by other members of the forum using the **Email user** form? (Note: Your email address is NEVER shown publicly, regardless of this setting.) 
+Would you like to be able to be contacted by other members of the forum using the **Email user** form? (Note: Your email address is NEVER shown publicly, regardless of this setting.) 
     
 **Receive private messages from other users** 
 
-    Would you like to be able to have other users send you private messages? (If you have this disabled, you will not be able to send private messages)
+Would you like to be able to have other users send you private messages? (If you have this disabled, you will not be able to send private messages)
     
 **Alert me with a notice when I receive a Private Message**
 
-    Would you like to see an alert at the top of the forum when you receive a new private message?
+Would you like to see an alert at the top of the forum when you receive a new private message?
     
 **Notify me by email when I receive a new Private Message**
 
-    Would you like to receive an email every time someone sends you a private message?
+Would you like to receive an email every time someone sends you a private message?
     
 **Default Thread Subscription Mode**
 
-    When you reply to a thread, would you like to not subscribe, subscribe but with no email notification of new replies, or receive instant notification of new replies? 
+When you reply to a thread, would you like to not subscribe, subscribe but with no email notification of new replies, or receive instant notification of new replies? 
 
 **Date and Time Options**
 
 **Date format** 
 
-    What format should dates be in? 
+What format should dates be in? 
     
 **Time format** 
 
-    What format should times be in? 
+What format should times be in? 
     
 **If you live in a time zone which differs to what this board is set at, you can select it from the list below** 
 
-    The time zone you live in. 
+The time zone you live in. 
     
 **Daylight Savings Time correction** 
 
-    Would you like to have the board automatically detect DST settings, always use DST correction, or never use DST correction? 
+Would you like to have the board automatically detect DST settings, always use DST correction, or never use DST correction? 
 
 **Forum Display Options**
 
 **Threads per page** 
 
-    The number of threads to display on the thread listing. This can be either the forum default, 10, 20, 25, 30, 40, or 50 threads per page.
+The number of threads to display on the thread listing. This can be either the forum default, 10, 20, 25, 30, 40, or 50 threads per page.
     
 **Default Thread View** 
 
-    How old should threads be that are displayed in the thread listing? There are various choices, in addition to use the default for the forum and show all threads 
+How old should threads be that are displayed in the thread listing? There are various choices, in addition to use the default for the forum and show all threads 
 
 **Thread View Options**
 
 **Display posts in classic mode** 
 
-    Would you like to show threads in a vertical postbit instead of a horizontal one? 
+Would you like to show threads in a vertical postbit instead of a horizontal one? 
     
 **Display users' signatures in their posts** 
 
-    Would you like to see user signatures after posts? 
+Would you like to see user signatures after posts? 
     
 **Display users' avatars in their posts** 
 
-    Would you like to see user avatars in posts? 
+Would you like to see user avatars in posts? 
     
 **Show the quick reply box on the view thread page** 
 
-    Would you like to have the quick reply box shown? 
+Would you like to have the quick reply box shown? 
     
 **Posts Per Page** 
 
-    The number of posts to display on a page. This includes either the board default, 5, 10, 20, 25, 30, 40, or 50 posts. 
+The number of posts to display on a page. This includes either the board default, 5, 10, 20, 25, 30, 40, or 50 posts. 
     
 **Thread View Mode** 
 
-    Would you like to view the thread in linear mode or threaded (USENET) mode? 
+Would you like to view the thread in linear mode or threaded (USENET) mode? 
 
 **Other Options**
 
 **Show friendly redirect pages** 
 
-    Would you like to see the friendly redirect pages after completing various actions on the board? 
+Would you like to see the friendly redirect pages after completing various actions on the board? 
     
 **Show the MyCode formatting options on the posting pages** 
 
-    Would you like to have the MyCode editor enabled? 
+Would you like to have the MyCode editor enabled? 
     
 **Board Style** 
 
-    What theme should be used? You can choose to use the board default or a specific theme. 
+What theme should be used? You can choose to use the board default or a specific theme. 
     
 **Board Language** 
 
-    What language should the board be displayed in? You can choose to use the board default or a specific language. 
+What language should the board be displayed in? You can choose to use the board default or a specific language. 
 
 ## Miscellaneous
 
