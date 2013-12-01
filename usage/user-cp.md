@@ -46,7 +46,12 @@ From any of the folders, you can also access the **Empty Folders** and **Downloa
 ## Your Profile
 
 The **Your Profile** section deals with everything relating to your account and your profile.
+
+### Edit Profile
+
 Various profile fields are available for you to describe yourself and publicize your contact information. These include:
+
+![Edit profile screen](/assets/images/user-cp/edit-profile.jpg)
 
 ### Required Fields
 
@@ -118,7 +123,11 @@ This page allows you to change the signature that can be displayed below your po
 
 A MyCode editor is displayed, in addition to the smilie listing. The administrative-set permissions for signatures are also displayed, including whether smilies, MyCode, [img] tags, and HTML are enabled, as well as the maximum number of characters allowed.
 
+![Edit signature screen](/assets/images/user-cp/edit-signature.jpg)
+
 ### Edit Options
+
+![Edit options screen](/assets/images/user-cp/edit-options.jpg)
 
 #### Privacy
 
@@ -234,6 +243,12 @@ On the **View Members** page of groups that you are a leader of, you can choose 
 
 On the **Join Requests** page of groups that you are a leader of (if joins to the group are moderated), you can choose to approve requests (add them to the group), ignore requests (do not add but do not decline the request), or decline requests (do not add them to the group).
 
+![Group memberships screen](/assets/images/user-cp/group-memberships.jpg)
+
+![Join requests management screen](/assets/images/user-cp/group-manage-join-requests.jpg)
+
+![Group membership management screen](/assets/images/user-cp/group-members.jpg)
+
 ### Buddy/Ignore List
 
 This page allows you to add or remove users from your buddy and ignore list.
@@ -242,12 +257,15 @@ To add a user to your buddy list or ignore list, enter their username in the cor
 
 After users have been added, you will see them in the listing of your buddies or ignored users. To remove a user from your buddy or ignore list, click on the icon that depicts a person with a [-] in front of them. The other icon shows whether a user is online, offline, or away.
 
+![Buddy List screen](/assets/images/user-cp/buddy-list.jpg)
 
 ### Manage Attachments
 
 This page allows you to manage attachments that you have previously uploaded to the forum. It gives you the attachment name, size, and number of downloads, the post and thread it was posted in, and the date and time it was posted. To delete an attachment, select it using the checkbox to the right and click on **Delete Selected Attachments** below the tale.
 
 Also, the page gives you various statistics on your attachments, including the number of attachments you have uploaded, the space used (and your quota, in parentheses), your attachment quota, the total number of downloads on all of your attachments, and the approximate bandwidth usage of all of your attachments.
+
+![Attachments Manager screen](/assets/images/user-cp/attachments-manager.jpg)
 
 ### Saved Drafts
 
