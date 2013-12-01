@@ -17,7 +17,6 @@ Please create a new `.php` file with this content:
 
     <?php 
      error_reporting(E_ALL); 
-      
        $to = 'your.email@address.com'; 
        if(mail($to, 'Testing mail', 'This is a mailing test to see if PHP mail works.')) 
        { 
