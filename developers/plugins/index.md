@@ -138,5 +138,213 @@ You can find a list of hooks [here](hooks), alternatively you can run the follow
 
 `grep -inr '$plugins->run_hooks' ./`
 
-### Hook usage
+
+### Basic usage
+
+First add the hook by putting the following code above the `_info()` function near the top of your plugin file:
+
+```php
+$plugins->add_hook('<hook name>', '<function name>');
+```
+Where `<hook name>` is the name of the hook you wish to use and `<function name>` is the name of a function in your plugin that will be run every time this hook is called.
+
+**Note, it must be a function *name*, you shouldn't actually call the function here.**
+
+Here is an example which used the `index_start` hook and calls the `do_something()` function:
+
+```php
+$plugins->add_hook('index_start', 'do_something');
+```
+
+Now you can implement the function you specified, this function must be either in your plugin file or included by your plugin.
+
+For example, if I defined the following function in my plugin file it would be called every time `index_start` is called:
+
+```php
+function do_something()
+{
+    // Do whatever you want here
+}
+```
+
+To achieve most things you'll need to interact with the MyBB global variables such as `$mybb`, `$user`, `$db`, etc.
+
+For example, this would test if the current user is an Admin:
+
+ ```php
+ function do_something()
+ {
+    global $mybb;
+    if($mybb->usergroup['isadmin'] == 1)
+    {
+        // Admin only
+    } else {
+        // Everyone else
+    }
+ }
+ ```
+
+### Hooks with arguments
+
+Some hooks also pass a value relevant to the location where it's called, these hooks are added the same way except you must add an argument to your plugin function.
+In some cases you must also return that value (which your plugin may have modified).
+
+Here is an example of two hooks:
+
+```php
+$plugins->add_hook("pre_output_page", "hello_world");
+$plugins->add_hook("postbit", "hello_world_postbit");
+```
+
+And two associated plugin functions, the first modifies the content of `$content` and returns it, the second modifies a value passed by reference.
+
+```php
+function hello_world($page)
+{
+	// This will add Hello World to the top of pages
+	$page = str_replace(
+        '<div id="content">',
+        '<div id="content"><p>Hello World!</p>',
+        $page
+	);
+	return $page;
+}
+
+function hello_world_postbit(&$post)
+{
+	// This will add Hello World to the top of all posts
+	$post['message'] = '<strong>Hello world!</strong><br />' . $post['message'];
+}
+```
+
+You'll need to check the context where the hook is called to determine whether it is necessary to return the argument back, or whether it should be modified by reference.
+
+### Other hook options
+
+There are two other optional arguments which can be passed to `$plugins->add_hook()`: priority and file.
+
+For example:
+
+```php
+$plugins->add_hook('<hook name>', '<function name>', '<priority>', '<file>');
+
+// With values
+$plugins->add_hook('index_start', 'do_something', 5, 'anotherfile.php');
+```
+
+The priority takes into effect if there are two or more functions that are associated with a hook. A lesser value in the priority parameter will mean the function will be executed before the other function(s) with a higher value priority (for example, a priority "0" will execute before "10"). The default priority is 10. Usually you will not need to use this parameter unless you have two plugins that conflict with each other on one hook.
+
+The filename in the file parameter will be "included-once" when the hook is run, before the function is executed.
+
+## Plugin Settings
+
+Plugins can create settings which integrate with the "Configuration" tab of the ACP.
+General plugin options should be implemented using this method to ensure consistency between plugins.
+
+Settings are usually added and removed in the `_install()` and `_uninstall()` methods respectively, this way the plugin can be deactivated without losing the settings.
+
+### Adding settings
+
+To create settings you must first create a group and get it's ID:
+
+```php
+global $db, $mybb;
+
+$setting_group = array(
+    'name' => 'mysettinggroup',
+    'title' => 'My Plugin Settings',
+    'description' => 'This is my plugin and it does some things',
+    'disporder' => 5, // The order your setting group will display
+    'isdefault' => 0
+);
+
+$gid = $db->insert_query("settinggroups", $setting_group);
+```
+Now you can add some settings:
+
+```php
+$setting_array = array(
+    // A text setting
+    'fav_colour' => array(
+        'title' => 'Favorite Colour',
+        'description' => 'Enter your favorite colour:',
+        'optionscode' => 'text',
+        'value' => 'Blue', // Default
+        'disporder' => 1
+    ),
+    // A select box
+    'green_good' => array(
+        'title' => 'Is green good?',
+        'description' => 'Select your opinion on whether green is good:',
+        'optionscode' => "select\n0=Yes\n1=Maybe\n2=No",
+        'value' => 2,
+        'disporder' => 2
+    ),
+    // A yes/no boolean box
+    'enable_lasers' => array(
+        'title' => 'Enable lasers?',
+        'description' => 'Do you want the lasers turned on?',
+        'optionscode' => 'yesno',
+        'value' => 1,
+        'disporder' => 3
+    ),
+);
+
+foreach($setting_array as $name => $setting)
+{
+    $setting['name'] = $name;
+    $setting['gid'] = $gid;
+
+    $db->insert_query('settings', $setting);
+}
+
+// Don't forget this!
+rebuild_settings();
+```
+
+The following setting field type (aka. optionscode) values are supported:
+
+* text : A regular text box
+* textarea : A larger text box
+* yesno : A boolean yes/no control
+* onoff : A boolean on/off control
+* select : A select box (in the format select followed by <key>=<value> with one per newline)
+* radio : A set of radio buttons (in the format select followed by <key>=<value> with one per newline)
+* checkbox : A boolean checkbox field
+
+If you were to install the plugin you'd now see your new settings group and settings group in the "Configuration" tab of the ACP.
+
+You can access these values via `$mybb->settings['<setting name>']`, for example `$mybb->settings['enable_lasers']`.
+
+### Removing settings
+
+If you add settings in your `_install()` function you must also remove them in your `_uninstall()` function.
+
+Here is an example of removing the above settings:
+
+```php
+global $db;
+
+$db->delete_query('settings', "name IN ('fav_colour','green_good','enable_lasers')");
+$db->delete_query('settinggroups', "name = 'mysettinggroup'");
+
+// Don't forget this
+rebuild_settings();
+```
+
+### Using settings for `_is_installed()`
+
+You may wish to use one of your settings to implement the `_is_installed()` function, here is such an example:
+
+```php
+
+global $mybb;
+if(isset($mybb->settings['green_good']))
+{
+    return true;
+}
+
+return false;
+```
+
 
