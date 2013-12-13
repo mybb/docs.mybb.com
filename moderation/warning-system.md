@@ -47,7 +47,7 @@ Select **Warn User** to add the warning and to, if chosen, send the private mess
 
 From the user's postbit and profile, you will see the user's warning level. Clicking on this takes you a page listing all of their warnings (the user's warning log). Warnings can either be active or expired (they are separated in this listing). For each warning, you see the warning type/reason, the post the user was warned for (if applicable), the date issued, when the warning will expire (if ever, and if it has not already expired), who issued the warning, and will be given a link to view more information on the warning.
 
-Warning Details
+**Warning Details**
 
 ![Warning details screen](/assets/images/mod-cp/warning-system-warn-details.jpg)
 
