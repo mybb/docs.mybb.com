@@ -71,7 +71,7 @@ The date and time the warning will expire. If the warning has already expired, y
 
 These are the notes the warner added when warning the user, to not be displayed to the warned user. 
 
-**Revoke this Warning**
+### Revoke this Warning
 
 You may also opt to revoke the warning, which will essentially expire the warning early, making it no longer count toward the user's warning level. However, this will not remove any bans or suspensions that were imposed as a result of the warning.
 
