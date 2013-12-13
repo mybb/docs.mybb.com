@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Common Error Meesages"
+title:  "Common Error Messages"
 ---
 
 ### Introduction
