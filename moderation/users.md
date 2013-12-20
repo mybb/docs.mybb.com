@@ -97,7 +97,7 @@ You can sort the results by:
  1. Expiry Date
  2. Issued Date
  3. Warned User
- 4. User who issued the warning ("Issued By")
+ 4. User who issued the warning (**Issued By**)
 
 You can sort the results in ascending or descending order. You can also specify the number of results to display per page.
 
