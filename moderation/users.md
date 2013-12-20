@@ -44,7 +44,7 @@ You can set the user's ICQ number, AIM Screen Name, MSN ID, and Yahoo! ID here.
 
 You can edit the user's signature, with MyCode editor and smilie selector, here.
 
-** Moderator Notes**
+**Moderator Notes**
 
 You can add/edit Moderator Notes to user's for other Moderators and Administrators to view.
 
