@@ -7,6 +7,40 @@ title:  "Versions"
 
 On this page you will find a description of the MyBB versioning scheme and the release cycle.  Finally, there is a list of all MyBB versions released (beta and public).
 
+## Version system
+
+Starting from version 1.2.0, MyBB has used a 3-number versioning system, x.y.z, where x is the major version number, y is the minor version number, and z is the bug fix number.
+
+The major version number is incremented when there is a major change in MyBB, such as a major rewrite of the core.
+
+The minor version number indicates two things. Even numbers (ie. 2, 4, 6, etc) indicate public releases. Odd numbers (ie. 1, 3, 5, etc) indicate that the version is a development (non-public) version.
+
+The bug fix version is incremented every time a security or maintenance update is released. These patches usually will not contain new major features, but are usually crucial to the security or functionality of your forum.
+
+The version numbers above may overflow from one digit into two digits. For example, after 1.6.9, the next maintenance/security release would be 1.6.10.
+
+Whatever the version number is, MyBB always urges users to upgrade to the latest version for the highest security of MyBB installations. Even minor patches that seem insignificant can protect from possibly critical security vulnerabilities.
+
+## Release cycle 
+
+### Major releases
+
+Major releases increment the major or minor version number (see version system above). Usually these will have new features and changes to the database schema, and therefore may break existing forum customizations, such as themes and plugins. Major releases may also contain security vulnerability patches and bug fixes.
+Major releases usually end with a 0 (zero) in the version number (eg. x.y.0 or x.0.0) and usually mark the start of a new **series**.
+MyBB's major releases thus far include 1.00, 1.2.0, 1.4.0 and 1.6.0.
+
+### Minor releases
+
+Minor releases are produced as necessary in between major releases. They fall into two categories, but may be combined in a release. Customizations (plugins, themes, etc.) generally are compatible across releases in one series.
+
+#### Security Vulnerability Patches
+
+These are released as often as necessary to fix any known security holes. Upgrading should be completed as soon as possible, or forum security could be compromised.
+
+#### Bug Fix / Maintenance Releases
+
+These fix bugs and small errors in the software. Upgrading is not as immediately necessary with simple maintenance releases as it is with security vulnerability patches, but it is recommended and encouraged to upgrade as soon as it is convenient.
+
 ## Version List
 
 The following is a list of official (public and private) releases of MyBB from the MyBB Group.
@@ -125,38 +159,3 @@ Download links are provided on this page for older versions for non-production-s
 | [RC1](versions/rc1) | 10 December 2003 | (Release Candidate 1) | - |
 | [Beta 4](versions/beta-4) | August 2003 | Beta release | - |
 | [DevBB](versions/devbb) | Pre-2003 | Predecessor to MyBB | - |
-
-		
-## Version system
-
-Starting from version 1.2.0, MyBB has used a 3-number versioning system, x.y.z, where x is the major version number, y is the minor version number, and z is the bug fix number.
-
-The major version number is incremented when there is a major change in MyBB, such as a major rewrite of the core.
-
-The minor version number indicates two things. Even numbers (ie. 2, 4, 6, etc) indicate public releases. Odd numbers (ie. 1, 3, 5, etc) indicate that the version is a development (non-public) version.
-
-The bug fix version is incremented every time a security or maintenance update is released. These patches usually will not contain new major features, but are usually crucial to the security or functionality of your forum.
-
-The version numbers above may overflow from one digit into two digits. For example, after 1.6.9, the next maintenance/security release would be 1.6.10.
-
-Whatever the version number is, MyBB always urges users to upgrade to the latest version for the highest security of MyBB installations. Even minor patches that seem insignificant can protect from possibly critical security vulnerabilities.
-
-## Release cycle 
-
-### Major releases
-
-Major releases increment the major or minor version number (see version system above). Usually these will have new features and changes to the database schema, and therefore may break existing forum customizations, such as themes and plugins. Major releases may also contain security vulnerability patches and bug fixes.
-Major releases usually end with a 0 (zero) in the version number (eg. x.y.0 or x.0.0) and usually mark the start of a new **series**.
-MyBB's major releases thus far include 1.00, 1.2.0, 1.4.0 and 1.6.0.
-
-### Minor releases
-
-Minor releases are produced as necessary in between major releases. They fall into two categories, but may be combined in a release. Customizations (plugins, themes, etc.) generally are compatible across releases in one series.
-
-#### Security Vulnerability Patches
-
-These are released as often as necessary to fix any known security holes. Upgrading should be completed as soon as possible, or forum security could be compromised.
-
-#### Bug Fix / Maintenance Releases
-
-These fix bugs and small errors in the software. Upgrading is not as immediately necessary with simple maintenance releases as it is with security vulnerability patches, but it is recommended and encouraged to upgrade as soon as it is convenient.
