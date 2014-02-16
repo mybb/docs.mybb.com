@@ -4,7 +4,7 @@
 	{% for catpage in sorted_pages %}
 		{% for pc in catpage.categories %}
 		{% if pc == include.category %}
-			<li><a href="{{ site.url }}{{ catpage.url }}">{{ catpage.title }}</a></li>
+			<li><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.title }}</a></li>
 		{% endif %}
 		{% endfor %}
 	{% endfor %}
