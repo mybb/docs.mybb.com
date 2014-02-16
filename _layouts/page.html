@@ -1,8 +1,14 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-
-<div class="page">
-{{ content }}
-</div>
+<article id="docs_page">
+	<header id="mainFeature">
+		<div class="wrapper">
+			<h1><a href="{{ site.baseurl }}/">MyBB Documentation</a> &rsaquo;</h1>
+			<h2>{{ page.title }}
+		</div>
+	</header>
+	<div class="page wrapper">
+		{{ content }}
+	</div>
+</article>

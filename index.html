@@ -2,12 +2,75 @@
 layout: default
 title:  "MyBB Documentation"
 ---
+<article id="docs_home">
+	<header id="mainFeature">
+		<div class="wrapper">
+			<h1>MyBB Documentation</h1>
+			<p class="description">Welcome to the MyBB Documentation. Here you can read tutorials and the online documentation and find solutions to common problems with MyBB.</p>
+		</div>
+	</header>
+	<div class="wrapper">
+	<div id="home">
+		<section>
+			<h1>Administration</h1>
+			{% include category.html category="administration" %}		
+			<h2>Configuration</h2>
+			{% include category.html category="administration-configuration" %}		
 
-<div id="home">
-  <h1>Articles</h1>
-  <ul class="pages">
-    {% for page in site.pages %}
-      <li><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+
+			<h2>Forums and Posts</h2>
+			{% include category.html category="administration-forums-posts" %}
+
+			<h2>Users and Groups</h2>
+			{% include category.html category="administration-users-groups" %}
+
+			<h2>Templates and Style</h2>
+			{% include category.html category="administration-templates-style" %}
+
+			<h2>Tools and Maintenance</h2>
+			{% include category.html category="administration-tools-maintenance" %}		
+
+		</section>
+
+		<section>
+			<h1>Moderation</h1>
+			{% include category.html category="moderation" %}
+		</section>
+
+		<section>
+			<h1>Development</h1>
+			{% include category.html category="developers" %}
+		</section>
+
+		<section>
+			<h1>Frequently Asked Questions</h1>
+			{% include category.html category="faq" %}
+		</section>
+
+		<section>
+			<h1>Installation</h1>
+			{% include category.html category="install" %}
+		</section>
+
+		<section>
+			<h1>Front End</h1>
+			{% include category.html category="frontend" %}
+		</section>
+
+		<section>
+			<h1>Versions</h1>
+			{% include category.html category="versions" %}
+		</section>
+
+
+	  <h1>Uncategorized Articles</h1>
+	  <ul class="pages">
+	    {% for page in site.pages %}
+	    	{% if page.categories %}
+	    	{% else %}
+	    	<li><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></li>
+	    	{% endif %}
+	    {% endfor %}
+	  </ul>
+	</div>
+</article>
