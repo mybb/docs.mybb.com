@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Mail Issues"
+categories: [faq]
 ---
 
 # Mail Issues

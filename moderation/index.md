@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Moderation"
+categories: [moderation]
 ---
 
 # Moderator Control Panel Home

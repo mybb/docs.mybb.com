@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "FAQ"
+categories: [faq]
 ---
 
 ## My site has no styles / looks broken

@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Ugrade MyBB"
+categories: [install]
 ---
 
 ## Upgrading

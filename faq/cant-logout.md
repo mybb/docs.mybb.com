@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Cannot logout"
+categories: [faq]
 ---
 
 # Unable to logout

@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Moderation: Users"
+categories: [moderation]
 ---
 
 # Moderator Control Panel Users
