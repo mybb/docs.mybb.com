@@ -65,7 +65,8 @@ Download links are provided on this page for older versions for non-production-s
 
 | Version Number | Release Date | Release type | Availabilty |
 | :------------: | ------------ | ------------ | :---------: |
-| [1.6.11](1611) *`Latest`* | 8 October 2013 | Maintenance and Security Release | [Download](http://www.mybb.com/download/158) |
+| [1.6.12](1612) *`Latest`* | 30 December 2013 | Maintenance and Security Release | [Download](http://www.mybb.com/download/159) |
+| [1.6.11](1611) | 8 October 2013 | Maintenance and Security Release | [Download](http://www.mybb.com/download/158) |
 | [1.6.10](1610) | 22 April 2013 | Maintenance and Security Release | [Download](http://www.mybb.com/download/157) |
 | [1.6.9](169) | 15 December 2012 | Security Release | [Download](http://www.mybb.com/download/156) |
 | [1.6.8](168) | 27 May 2012 | Maintenance Release | [Download](http://www.mybb.com/download/156) |
