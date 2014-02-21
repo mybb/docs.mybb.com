@@ -47,15 +47,16 @@ article#docs_page table {
     border: 1px solid #DFDFDF;
     border-radius: 6px 6px 6px 6px;
     margin: 10px;
-	border-spacing: 0px;
+    border-spacing: 0px;
 }
 article#docs_page td {
     border-top: 1px solid #DFDFDF;
-	padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
 }
 article#docs_page code {
+    display: inline-block;
     border: 1px solid #DFDFDF;
-	padding: 3px;
+    padding: 3px;
     border-radius: 4px 4px 4px 4px;
-	background: #F7F8FC;
+    background: #F7F8FC;
 }
