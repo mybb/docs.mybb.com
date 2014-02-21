@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   var headers = $('h1, h2, h3, h4, h5, h6').filter(function() {return this.id}), // get all headers with an ID
       output = $('.toc');
-  if (!headers.length || headers.length < 3 || !output.length)
+  if (!headers.length || headers.length < 2 || !output.length)
     return;
 
   var get_level = function(ele) { return parseInt(ele.nodeName.replace("H", ""), 10) }
