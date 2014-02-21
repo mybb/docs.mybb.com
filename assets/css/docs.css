@@ -44,10 +44,18 @@ article#docs_page .page img {
     border: 5px solid #eee;
 }
 article#docs_page table {
-    border: 1px solid #eee;
+    border: 1px solid #DFDFDF;
     border-radius: 6px 6px 6px 6px;
     margin: 10px;
+	border-spacing: 0px;
 }
 article#docs_page td {
-    border: 1px solid #eee;
+    border-top: 1px solid #DFDFDF;
+	padding: 5px 5px 5px 5px;
+}
+article#docs_page code {
+    border: 1px solid #DFDFDF;
+	padding: 3px;
+    border-radius: 4px 4px 4px 4px;
+	background: #F7F8FC;
 }
