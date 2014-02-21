@@ -1,6 +1,6 @@
 // https://github.com/ghiculescu/jekyll-table-of-contents
 $(document).ready(function() {
-  var no_back_to_top_links = false
+  var no_back_to_top_links = true;
 
   var headers = $('h1, h2, h3, h4, h5, h6').filter(function() {return this.id}), // get all headers with an ID
       output = $('.toc');
@@ -11,7 +11,7 @@ $(document).ready(function() {
   var highest_level = headers.map(function(_, ele) { return get_level(ele) }).get().sort()[0]
   var return_to_top = '<i class="icon-arrow-up back-to-top"> </i>'
 
-  var level = get_level(headers[0]), this_level, html = "<i>Jump to...</i> <ol>";
+  var level = get_level(headers[0]), this_level, html = "<h3>Contents</h3> <ol>";
   headers.on('click', function() {
     if (!no_back_to_top_links) window.location.hash = this.id
   }).addClass('clickable-header').each(function(_, header) {
