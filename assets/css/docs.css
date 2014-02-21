@@ -60,3 +60,17 @@ article#docs_page code {
     border-radius: 4px 4px 4px 4px;
     background: #F7F8FC;
 }
+
+.clickable-header {
+  cursor:pointer;
+}
+.clickable-header:hover {
+  text-decoration:underline;
+}
+.top-level-header {
+  display:inline;
+}
+.back-to-top {
+  margin-left:5px;
+  cursor:pointer;
+}
