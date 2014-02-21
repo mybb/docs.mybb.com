@@ -4,7 +4,7 @@ title:  "Installation Requirements"
 categories: [install]
 ---
 
-## Minimum Requirements
+# Minimum Requirements
 
 MyBB 1.8 and the Merge System 1.8 have a few minimum system requirements:
 
