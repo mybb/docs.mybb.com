@@ -60,6 +60,12 @@ article#docs_page code {
     border-radius: 4px 4px 4px 4px;
     background: #F7F8FC;
 }
+article#docs_page .toc {
+    border: 1px solid #DFDFDF;
+    border-radius: 6px 6px 6px 6px;
+    margin: 10px;
+    border-spacing: 0px;
+}
 
 .clickable-header {
   cursor:pointer;
