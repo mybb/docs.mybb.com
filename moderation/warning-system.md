@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Warning System"
+categories: [moderation]
 ---
 
 # Warning System

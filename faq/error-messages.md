@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Common Error Messages"
+categories: [faq]
 ---
 
 ### Introduction

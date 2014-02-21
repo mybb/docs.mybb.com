@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Install MyBB"
+categories: [install]
 ---
 
 Thanks for choosing MyBB as the discussion board software for your community. You are only steps away from completing the installation of your new forum. We've broken down the installation into many smaller steps, as you can see on the navigation bar on the right. Don't worry if it looks daunting; if you need any help, just post a thread in one of our [Support Forums](http://community.mybb.com/) for the version you are running, and we will help you out.

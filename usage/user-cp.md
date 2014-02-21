@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "User CP"
+categories: [frontend]
 ---
 
 # User Control Panel

@@ -1,6 +1,7 @@
 ---
 layout: page
-title:  "Requirements"
+title:  "Installation Requirements"
+categories: [install]
 ---
 
 ## Minimum Requirements

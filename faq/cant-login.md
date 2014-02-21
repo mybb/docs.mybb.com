@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Cannot login"
+categories: [faq]
 ---
 
 # Unable to login

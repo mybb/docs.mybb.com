@@ -1,9 +1,10 @@
 ---
 layout: page
-title:  "Moderation: Forums&Posts"
+title:  "Moderation: Forums and Posts"
+categories: [moderation]
 ---
 
-# Moderator Control Panel Forums&Posts
+# Moderator Control Panel: Forums and Posts
 
 ## Announcements
 

@@ -1,0 +1,11 @@
+<ul class="pages">
+	{% assign i = 0 %}
+	{% assign sorted_pages = site.pages | sort:"name" %}
+	{% for catpage in sorted_pages %}
+		{% for pc in catpage.categories %}
+		{% if pc == include.category %}
+			<li><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.title }}</a></li>
+		{% endif %}
+		{% endfor %}
+	{% endfor %}
+</ul>
