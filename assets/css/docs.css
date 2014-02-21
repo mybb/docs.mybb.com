@@ -65,6 +65,8 @@ article#docs_page .toc {
     border-radius: 6px 6px 6px 6px;
     margin: 10px;
     border-spacing: 0px;
+    padding: 10px;
+    width: 400px;
 }
 
 .clickable-header {
