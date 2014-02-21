@@ -9,7 +9,7 @@ $(document).ready(function() {
   var highest_level = headers.map(function(_, ele) { return get_level(ele) }).get().sort()[0]
   var return_to_top = '<i class="icon-arrow-up back-to-top"> </i>'
 
-  var level = get_level(headers[0]), this_level, html = "<code>Content</code> <ol>";
+  var level = get_level(headers[0]), this_level, html = "<code><b>Contents</b><ol>";
   headers.on('click', function() {
     window.location.hash = this.id
   }).addClass('clickable-header').each(function(_, header) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
       html += "<ol><li><a href='#" + header.id + "'>" + header.innerHTML + "</a>";
     level = this_level; // update for the next one
   });
-  html += "</ol>";
+  html += "</ol></code>";
   $(document).on('click', '.back-to-top', function() {
     $(window).scrollTop(0)
     window.location.hash = ''
