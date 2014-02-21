@@ -43,3 +43,7 @@ article#docs_page .page img {
     max-width: 42em;
     border: 5px solid #eee;
 }
+article#docs_page table {
+    border: 1px solid #eee;
+    border-radius: 6px 6px 6px 6px;
+}
