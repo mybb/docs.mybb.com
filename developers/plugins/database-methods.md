@@ -16,26 +16,26 @@ The database class provides a wrapper of most common functions used for database
 
     <dt>$db->simple_select</dt>
     <dd>
-        Used to perform a simple select query (with no joins) on a table.
+        <dt>Used to perform a simple select query (with no joins) on a table.</dt>
+		
+        <dd>`string simple_select ( string table [,string field(s)] [, string conditions] [, array options])`</dd>
 
-        string simple_select ( string table [,string field(s)] [, string conditions] [, array options])
+        <dt>Builds a simple query, then sends it off to $db->query().</dt>
 
-        Builds a simple query, then sends it off to $db->query().
+        <dt>table</dt>
+        <dd>The table name to be queried.</dd>
 
-        table
-        The table name to be queried.
+        <dt>field(s)</dt>
+        <dd>Comma delimetered list of fields to be selected.</dd>
 
-        field(s)
-        Comma delimetered list of fields to be selected.
+        <dt>conditions</dt>
+        <dd>SQL formatted list of conditions to be matched.</dd>
 
-        conditions
-        SQL formatted list of conditions to be matched.
+        <dt>options</dt>
+        <dd>List of options: order by, order direction, limit, limit start
+        Returns a resource on success, or FALSE on error.</dd>
 
-        options
-        List of options: order by, order direction, limit, limit start
-        Returns a resource on success, or FALSE on error.
-
-        Example
+        ```php
 
             global $db;
 
@@ -52,8 +52,10 @@ The database class provides a wrapper of most common functions used for database
             print_r($settings);
             echo "</pre>";
 
-            /*
-            Outputs:
+        ```
+            <dt>Outputs:</dt>
+			<dd>
+			`
                 Array
                 (
                     [sid] => 6
@@ -65,7 +67,8 @@ The database class provides a wrapper of most common functions used for database
                     [disporder] => 2
                     [gid] => 2
                 )
-            */
+            `
+			</dd>
     </dd>
 
     <dt>$db->fetch_array</dt>
@@ -73,7 +76,7 @@ The database class provides a wrapper of most common functions used for database
         Returns an array of values for the first row (can be iterated through with a while statement).
 
         Example:
-
+		```php
             $query = $db->query("SELECT * FROM Table [WHERE Field='Value']");
             while($result = $db->fetch_array($query))
             {
@@ -81,6 +84,7 @@ The database class provides a wrapper of most common functions used for database
                 $data2 = $result['FieldName2'];
                 // etc.
             }
+		```
     </dd>
 
     <dt>$db->fetch_field</dt>

@@ -7,33 +7,6 @@ If your forum was hacked or you want to know what to do when and if you get hack
 
 Whenever an SQL query is provided, we assume your table prefix is `mybb_`. If you have a different table prefix remember to replace it in the SQL query.
 
-1. [Get in Control](#get-in-control)
-	1. [Secure Your Computer](#secure-your-computer)
-	2. [Secure Your Online Accounts](#secure-your-online-accounts)
-	3. [Restore Your Admin Account](#restore-your-admin-account)
-	4. [Restrict Access to the Forum](#restrict-access-to-the-forum)
-	5. [Check the Logs](#check-the-logs)
-
-2. [Secure the Forum](#secure-the-forum)
-	1. [Replace All the Files](#replace-all-the-files)
-	2. [Check CHMOD Permissions](#check-chmod-permissions)
-	3. [Check New Users](#check-new-users)
-	4. [Check Templates for Malicious Code](#check-templates-for-malicious-code)
-
-3. [New Security Measures](#new-security-measures)
-	1. [MyBB Updates](#mybb-updates)
-	2. [Fine Tuning the Admin CP](#fine-tuning-the-admin-cp)
-	3. [Administrator Accounts](#administrator-accounts)
-	4. [Protect the inc Directory](#protect-the-inc-directory)
-	5. [Change the Default Table Prefix](#change-the-default-table-prefix)
-	6. [Disallow HTML in Posts](#disallow-html-in-posts)
-	7. [Hide the Version Number](#hide-the-version-number)
-	8. [Keep Plugins to a Minimum](#keep-plugins-to-a-minimum)
-	9. [Secure Other Software](#secure-other-software)
-	10. [Backup Regularly](#backup-regularly)
-
-4. [Final Words](#final-words)
-
 ## Get in Control
 
 ### Secure Your Computer
