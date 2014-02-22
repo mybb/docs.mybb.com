@@ -40,7 +40,7 @@ article#docs_page .page h4 {
 }
 
 article#docs_page .page img {
-    max-width: 42em;
+    max-width: 34em;
     border: 5px solid #eee;
 }
 article#docs_page table {
@@ -68,21 +68,21 @@ article#docs_page .toc {
     padding: 10px;
 	width: 400px;
     min-width: 400px;
+	float: right;
 }
 article#docs_page .toc:empty {
 display: none;
 }
-
-.clickable-header {
+article#docs_page .clickable-header {
   cursor:pointer;
 }
-.clickable-header:hover {
+article#docs_page .clickable-header:hover {
   text-decoration:underline;
 }
-.top-level-header {
+article#docs_page .top-level-header {
   display:inline;
 }
-.back-to-top {
+article#docs_page .back-to-top {
   margin-left:5px;
   cursor:pointer;
 }
