@@ -1,6 +1,6 @@
 // https://github.com/ghiculescu/jekyll-table-of-contents
 $(document).ready(function() {
-  var no_back_to_top_links = true;
+  var no_back_to_top_links = false;
 
   var headers = $('h1, h2, h3, h4, h5, h6').filter(function() {return this.id}), // get all headers with an ID
       output = $('.toc');
