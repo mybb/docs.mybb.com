@@ -1,7 +1,7 @@
 name:      MyBB Documentation
 markdown:  redcarpet
 redcarpet:
-  extensions: ["tables", "with_toc_data", "autolink"]
+  extensions: ["no_intra_emphasis", "tables", "with_toc_data", "autolink"]
 pygments:  true
 permalink: pretty
 baseurl:   http://mybb.github.io
