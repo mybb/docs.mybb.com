@@ -5,7 +5,7 @@ title:  "Development Standards"
 
 The purpose of this document is to outline the development standards for use whilst developing MyBB. Plugin and modification authors are recommended to use these coding standards when developing plugins and modifications.
 
-These coding standards were written for the MyBB 1.4.x, 1.6.x and 1.8.x series.
+These coding standards were written for the MyBB 1.x series.
 
 ## Coding Standards
 
@@ -49,7 +49,8 @@ Variable substitution is permitted in strings using either of the following form
 
 String concatenation should be performed by terminating the string with a period (`.`). To help improve readability, if concatenation is required in a large string, it’s recommended to separate it in to appended variables:
 
-    $example = 'Hello'; $example .= $name;
+    $example = 'Hello';
+    $example .= $name;
 
 ### Variables
 
@@ -64,7 +65,7 @@ For class member variables, the variable declaration must be prefixed as either 
         public $example_variable_name = 'sample';
     }
 
-Verbosity is encouraged. Variables should always be as verbose as possible to describe what they contain. Terse variable names such as `$i` and `$n` are discouraged for anything other than small loop contexts. The use of variables such as $tmp and $temp are also not permitted.
+Verbosity is encouraged. Variables should always be as verbose as possible to describe what they contain. Terse variable names such as `$i` and `$n` are discouraged for anything other than small loop contexts. The use of variables such as `$tmp` and `$temp` are also not permitted.
 
 ### Arrays
 
@@ -192,7 +193,19 @@ When increasing or decreasing the value of a variable, the arithmetic operator (
 ### Banned Practices
 
 It is not permitted to use the `sprintf()` function for variable substitution in strings. Instead, standard string concatenation should be used. Use of a `sprintf()` statement with 20 replacement values spread over 10 lines is far more difficult to maintain than substituted variables.
+
 Use of the ereg regular expression library is also not permitted. Instead, the PCRE regular expression library should be used.
+
+### Type Juggling
+
+To convert a variable's type you should use type casting.
+
+    $foo = '5';
+    $bar = (int)$foo;
+
+    $baz = (string)5;
+
+**Do not** use functions like `settype()` or `intval()` and `strval()`.
 
 ### Sanitizing Data for Output
 
