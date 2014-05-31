@@ -9,52 +9,63 @@ title:  "MyBB Documentation"
 			<p class="description">Welcome to the MyBB Documentation. Here you can read tutorials and the online documentation and find solutions to common problems with MyBB.</p>
 		</div>
 	</header>
+
 	<div class="wrapper">
-	<div id="home">
 		<section>
-			<h1>Administration</h1>
-			{% include category.html category="administration" %}		
-			<h2>Configuration</h2>
-			{% include category.html category="administration-configuration" %}		
-
-
-			<h2>Forums and Posts</h2>
-			{% include category.html category="administration-forums-posts" %}
-
-			<h2>Users and Groups</h2>
-			{% include category.html category="administration-users-groups" %}
-
-			<h2>Templates and Style</h2>
-			{% include category.html category="administration-templates-style" %}
-
-			<h2>Tools and Maintenance</h2>
-			{% include category.html category="administration-tools-maintenance" %}		
-
+			<h1>MyBB 1.6 Documentation</h1>
 		</section>
 
 		<section>
-			<h1>Moderation</h1>
-			{% include category.html category="moderation" %}
+			<h1>MyBB 1.8 Documentation</h1>
+
+			<section>
+				<h2>Administration</h2>
+				{% include category.html category="administration" %}
+
+				<h3>Configuration</h3>
+				{% include category.html category="administration-configuration" %}
+
+				<h3>Forums and Posts</h3>
+				{% include category.html category="administration-forums-posts" %}
+
+				<h3>Users and Groups</h3>
+				{% include category.html category="administration-users-groups" %}
+
+				<h3>Templates and Style</h3>
+				{% include category.html category="administration-templates-style" %}
+
+				<h3>Tools and Maintenance</h3>
+				{% include category.html category="administration-tools-maintenance" %}
+			</section>
+
+			<section>
+				<h2>Moderation</h2>
+				{% include category.html category="moderation" %}
+			</section>
+
+			<section>
+				<h2>Development</h2>
+				{% include category.html category="developers" %}
+			</section>
+
+			<section>
+				<h2>Frequently Asked Questions</h2>
+				{% include category.html category="faq" %}
+			</section>
+
+			<section>
+				<h2>Installation</h2>
+				{% include category.html category="install" %}
+			</section>
+
+			<section>
+				<h2>Usage</h2>
+				{% include category.html category="usage" %}
+			</section>
 		</section>
 
 		<section>
-			<h1>Development</h1>
-			{% include category.html category="developers" %}
-		</section>
-
-		<section>
-			<h1>Frequently Asked Questions</h1>
-			{% include category.html category="faq" %}
-		</section>
-
-		<section>
-			<h1>Installation</h1>
-			{% include category.html category="install" %}
-		</section>
-
-		<section>
-			<h1>Front End</h1>
-			{% include category.html category="frontend" %}
+			<h1>MyBB 2.0 Documentation</h1>
 		</section>
 
 		<section>
@@ -62,15 +73,16 @@ title:  "MyBB Documentation"
 			{% include category.html category="versions" %}
 		</section>
 
-
-	  <h1>Uncategorized Articles</h1>
-	  <ul class="pages">
-	    {% for page in site.pages %}
-	    	{% if page.categories %}
-	    	{% else %}
-	    	<li><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></li>
-	    	{% endif %}
-	    {% endfor %}
-	  </ul>
+		<section>
+		  <h1>Uncategorized Articles</h1>
+		  <ul class="pages">
+		    {% for page in site.pages %}
+		    	{% if page.categories %}
+		    	{% else %}
+		    	<li><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></li>
+		    	{% endif %}
+		    {% endfor %}
+		  </ul>
+		</section>
 	</div>
 </article>
