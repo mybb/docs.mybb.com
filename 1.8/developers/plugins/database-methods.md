@@ -195,3 +195,21 @@ The database class provides a wrapper of most common functions used for database
 
 <dt>$db->drop_index</dt>
 <dd>Drop an index with the specified name from the specified table.</dd>
+
+<dt>$db->add_column</dt>
+<dd>Adds a new column to the specified table.</dd>
+
+<dt>$db->modify_column</dt>
+<dd>Changes the definition of the specified column in the specified table.</dd>
+
+<dt>$db->rename_column</dt>
+<dd>Renames the specified column.</dd>
+
+<dt>$db->drop_column</dt>
+<dd>Drops the specified column from the specified table.</dd>
+
+<dt>$db->rename_table</dt>
+<dd>Renames the specified table.</dd>
+
+<dt>$db->drop_table</dt>
+<dd>Drops the specified table.</dd>
