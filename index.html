@@ -12,10 +12,6 @@ categories: [page]
 	</header>
 	<div class="page wrapper">
 		<section>
-			<h1>MyBB 1.6 Documentation</h1>
-		</section>
-
-		<section>
 			<h1>MyBB 1.8 Documentation</h1>
 
 			<section>
@@ -45,11 +41,10 @@ categories: [page]
 			<section>
 				<h2>Administration</h2>
 				{% include category.html category="administration" %}
-			</section>
-		</section>
 
-		<section>
-			<h1>MyBB 2.0 Documentation</h1>
+				<h3>Security</h3>
+				{% include category.html category="security" %}
+			</section>
 		</section>
 
 		<section>
@@ -58,7 +53,7 @@ categories: [page]
 		</section>
 
 		<section>
-			<h1>Uncategorized Articles</h1>
+			<h1>Miscellaneous</h1>
 			<ul class="pages">
 		    	{% for page in site.pages %}
 			    	{% if page.categories %}
