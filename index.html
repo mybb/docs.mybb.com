@@ -51,17 +51,5 @@ categories: [page]
 			<h1>Versions</h1>
 			{% include category.html category="versions" %}
 		</section>
-
-		<section>
-			<h1>Miscellaneous</h1>
-			<ul class="pages">
-		    	{% for page in site.pages %}
-			    	{% if page.categories %}
-			    	{% else %}
-			    		<li><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></li>
-			    	{% endif %}
-		    	{% endfor %}
-		  	</ul>
-		</section>
 	</div>
 </article>
