@@ -153,3 +153,7 @@ None of this stuff matters if a hacker gets access to your database and drops al
 Even if you had the world's most advanced security system, if the person in control of it does something wrong, then all work is in vain. Always keep an eye on what you install and run on your computer, make sure your passwords are safe, ensure your forum is properly patched, and never try to do anything that would expose any "flaws" to others. If you and your fellow administrators do your job properly, your website will certainly be much safer. And to be prepared at all times, make backups, frequently, and you will thank yourself in the long run.
 
 We hope you never have to go through the "recovery" steps in this guide. What you should follow are the preparation steps - if you are prepared, it makes you a much less viable target.
+
+# New Security Measures
+
+Your forum is safe, but you shouldn't stop here. You should take new security measures immediately to prevent this from happening again. See [Protecting Your MyBB Forum](protection).
