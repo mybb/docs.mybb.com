@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Common Error Messages"
+title:  "Error Messages"
 categories: [faq]
 ---
 
@@ -142,4 +142,4 @@ and **REPLACE** it to
 
     {$hiddencaptcha}
 
-It should resolve the error. 
+It should resolve the error.
