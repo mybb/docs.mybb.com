@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Cannot login"
+title:  "Cannot Login"
 categories: [faq]
 ---
 
@@ -19,20 +19,20 @@ First a few examples of what your cookie settings should look like:
 If your URL is **http://www.example.com**, your settings should be:
 
     Cookie Domain: .example.com
-    Cookie Path: / 
+    Cookie Path: /
 
 If your URL is **http://www.example.com/myforum**, your settings should be:
 
     Cookie Domain: .example.com
-    Cookie Path: /myforum/ 
+    Cookie Path: /myforum/
 
 If your URL is **http://subdomain.example.com/wow**, your settings should be:
 
     Cookie Domain: .subdomain.example.com OR .example.com
-    Cookie Path: /wow/ 
+    Cookie Path: /wow/
 
 Alternatively you can use [this tool](http://www.dennistt.net/mybb/cookiesettings.php) to provide your cookie settings based on your forum's URL.
 
 These cookie settings should work on all MyBB installations. If you have site-integration, your cookie settings may need to be more generalized.
 
-After you change your cookie settings, please advise your users to log out and [clear their cookies from their browser](/faq/clear-board-cookies), so that the new cookies can take effect. 
+After you change your cookie settings, please advise your users to log out and [clear their cookies from their browser](/faq/clear-board-cookies), so that the new cookies can take effect.
