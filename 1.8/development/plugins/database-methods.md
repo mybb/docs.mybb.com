@@ -122,95 +122,97 @@ The database class provides a wrapper of most common functions used for database
 
 ## Others
 
-<dt>$db->connect</dt>
-<dd>Connects a new database.</dd>
+<dl>
+    <dt>$db->connect</dt>
+    <dd>Connects a new database.</dd>
 
-<dt>$db->select_db</dt>
-<dd>Selects the database for the current MySQL Session</dd>
+    <dt>$db->select_db</dt>
+    <dd>Selects the database for the current MySQL Session</dd>
 
-<dt>$db->explain_query</dt>
-<dd>Helps to explain queries run from on database from the current session for debugging purposes.</dd>
+    <dt>$db->explain_query</dt>
+    <dd>Helps to explain queries run from on database from the current session for debugging purposes.</dd>
 
-<dt>$db->data_seek</dt>
-<dd>Moves the internal pointer to the specified column.</dd>
+    <dt>$db->data_seek</dt>
+    <dd>Moves the internal pointer to the specified column.</dd>
 
-<dt>$db->close</dt>
-<dd>Closes the connection to the currently open database.</dd>
+    <dt>$db->close</dt>
+    <dd>Closes the connection to the currently open database.</dd>
 
-<dt>$db->error_number</dt>
-<dd>Returns the error number (if any) of the specified query resource.</dd>
+    <dt>$db->error_number</dt>
+    <dd>Returns the error number (if any) of the specified query resource.</dd>
 
-<dt>$db->error</dt>
-<dd>Returns the error string (if any) of the specified query resource.</dd>
+    <dt>$db->error</dt>
+    <dd>Returns the error string (if any) of the specified query resource.</dd>
 
-<dt>$db->dberror</dt>
-<dd>Outputs an error message (if any) of the specified query resource.</dd>
+    <dt>$db->dberror</dt>
+    <dd>Outputs an error message (if any) of the specified query resource.</dd>
 
-<dt>$db->affected_rows</dt>
-<dd>Returns the amount of affected rows from a "write" query.</dd>
+    <dt>$db->affected_rows</dt>
+    <dd>Returns the amount of affected rows from a "write" query.</dd>
 
-<dt>$db->num_fields</dt>
-<dd>Returns the number of fields of the specified query resource.</dd>
+    <dt>$db->num_fields</dt>
+    <dd>Returns the number of fields of the specified query resource.</dd>
 
-<dt>$db->list_tables</dt>
-<dd>Returns the tables in the current open database.</dd>
+    <dt>$db->list_tables</dt>
+    <dd>Returns the tables in the current open database.</dd>
 
-<dt>$db->table_exists</dt>
-<dd>Returns true if the specified table exists.</dd>
+    <dt>$db->table_exists</dt>
+    <dd>Returns true if the specified table exists.</dd>
 
-<dt>$db->field_exists</dt>
-<dd>Returns true if the specified field exists.</dd>
+    <dt>$db->field_exists</dt>
+    <dd>Returns true if the specified field exists.</dd>
 
-<dt>$db->shutdown_query</dt>
-<dd>Runs a query thats performed when php is done parsing the file.</dd>
+    <dt>$db->shutdown_query</dt>
+    <dd>Runs a query thats performed when php is done parsing the file.</dd>
 
-<dt>$db->select_query</dt>
-<dd>Runs a complex query (join queries). (Note: Depreciated in MyBB 1.4).</dd>
+    <dt>$db->select_query</dt>
+    <dd>Runs a complex query (join queries). (Note: Depreciated in MyBB 1.4).</dd>
 
-<dt>$db->get_version</dt>
-<dd>Returns the version number of the database server being used.</dd>
+    <dt>$db->get_version</dt>
+    <dd>Returns the version number of the database server being used.</dd>
 
-<dt>$db->optimize_table</dt>
-<dd>Runs an optimize query on a table.</dd>
+    <dt>$db->optimize_table</dt>
+    <dd>Runs an optimize query on a table.</dd>
 
-<dt>$db->analyze_table</dt>
-<dd>Runs an analyze query on a table.</dd>
+    <dt>$db->analyze_table</dt>
+    <dd>Runs an analyze query on a table.</dd>
 
-<dt>$db->show_create_table</dt>
-<dd>Return the "create table" command for a specific table.</dd>
+    <dt>$db->show_create_table</dt>
+    <dd>Return the "create table" command for a specific table.</dd>
 
-<dt>$db->show_fields_from</dt>
-<dd>Show the "show fields from" command for a specific table.</dd>
+    <dt>$db->show_fields_from</dt>
+    <dd>Show the "show fields from" command for a specific table.</dd>
 
-<dt>$db->is_fulltext</dt>
-<dd>Returns whether or not the table contains a fulltext index.</dd>
+    <dt>$db->is_fulltext</dt>
+    <dd>Returns whether or not the table contains a fulltext index.</dd>
 
-<dt>$db->supports_fulltext</dt>
-<dd>Returns whether or not this database engine supports fulltext indexing.</dd>
+    <dt>$db->supports_fulltext</dt>
+    <dd>Returns whether or not this database engine supports fulltext indexing.</dd>
 
-<dt>$db->supports_fulltext_boolean</dt>
-<dd>Returns whether or not this database engine supports boolean fulltext matching.</dd>
+    <dt>$db->supports_fulltext_boolean</dt>
+    <dd>Returns whether or not this database engine supports boolean fulltext matching.</dd>
 
-<dt>$db->create_fulltext_index</dt>
-<dd>Creates a fulltext index on the specified column in the specified table with optional index name.</dd>
+    <dt>$db->create_fulltext_index</dt>
+    <dd>Creates a fulltext index on the specified column in the specified table with optional index name.</dd>
 
-<dt>$db->drop_index</dt>
-<dd>Drop an index with the specified name from the specified table.</dd>
+    <dt>$db->drop_index</dt>
+    <dd>Drop an index with the specified name from the specified table.</dd>
 
-<dt>$db->add_column</dt>
-<dd>Adds a new column to the specified table.</dd>
+    <dt>$db->add_column</dt>
+    <dd>Adds a new column to the specified table.</dd>
 
-<dt>$db->modify_column</dt>
-<dd>Changes the definition of the specified column in the specified table.</dd>
+    <dt>$db->modify_column</dt>
+    <dd>Changes the definition of the specified column in the specified table.</dd>
 
-<dt>$db->rename_column</dt>
-<dd>Renames the specified column.</dd>
+    <dt>$db->rename_column</dt>
+    <dd>Renames the specified column.</dd>
 
-<dt>$db->drop_column</dt>
-<dd>Drops the specified column from the specified table.</dd>
+    <dt>$db->drop_column</dt>
+    <dd>Drops the specified column from the specified table.</dd>
 
-<dt>$db->rename_table</dt>
-<dd>Renames the specified table.</dd>
+    <dt>$db->rename_table</dt>
+    <dd>Renames the specified table.</dd>
 
-<dt>$db->drop_table</dt>
-<dd>Drops the specified table.</dd>
+    <dt>$db->drop_table</dt>
+    <dd>Drops the specified table.</dd>
+</dl>
