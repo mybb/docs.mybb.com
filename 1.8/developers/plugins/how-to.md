@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "How To"
-categories: [development]
+categories: [plugins]
 ---
 
 This section demonstrates how to implement several functions commonly required by plugins.

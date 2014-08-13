@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Versions"
+categories: [versions]
 ---
 
 # Versions
@@ -21,7 +22,7 @@ The version numbers above may overflow from one digit into two digits. For examp
 
 Whatever the version number is, MyBB always urges users to upgrade to the latest version for the highest security of MyBB installations. Even minor patches that seem insignificant can protect from possibly critical security vulnerabilities.
 
-## Release cycle 
+## Release cycle
 
 ### Major releases
 
@@ -87,7 +88,7 @@ Download links are provided on this page for older versions for non-production-s
 | Version Number | Release Date | Release type | Availabilty |
 | :------------: | ------------ | ------------ | :---------: |
 | [1.4.16](1416) | 17 April 2011 | Security release | [Download](http://www.mybb.com/download/138) |
-| [1.4.15](1415) | 22 February 2011 | Maintenance release | [Download](http://www.mybb.com/download/132/zip) | 
+| [1.4.15](1415) | 22 February 2011 | Maintenance release | [Download](http://www.mybb.com/download/132/zip) |
 | [1.4.14](1414) | 2 August 2010 | Maintenance release | [Download](http://www.mybb.com/download/123/zip) |
 | [1.4.13](1413) | 19 April 2010 | Security patch release | [Download](http://www.mybb.com/download/121/zip) |
 | [1.4.12](1412) | 13 April 2010 | Security and Maintenance release | [Download](http://www.mybb.com/download/119/zip) |
@@ -104,22 +105,22 @@ Download links are provided on this page for older versions for non-production-s
 | [1.4.1](141) | 17 August 2008 | Security and Maintenance release | [Download](http://www.mybb.com/download/83/zip) |
 | [1.4.0](140) | 3 August 2008 | Major Release  | [Download](http://www.mybb.com/download/77/zip) |
 
-#### 1.2.x 
+#### 1.2.x
 
 | Version Number | Release Date | Release type | Availabilty |
 | :------------: | ------------ | ------------ | :---------: |
 | [1.2.14](1214) | 18 July 2008 | Security and Maintenance release | [Download](http://www.mybb.com/download/71/zip) |
-| [1.2.13](1213) | 21 May 2008 | Security vulnerability patch | [Download](http://www.mybb.com/download/70/zip) | 
+| [1.2.13](1213) | 21 May 2008 | Security vulnerability patch | [Download](http://www.mybb.com/download/70/zip) |
 | [1.2.12](1212) | 20 January 2008 | Security and Maintenance release | [Download](http://www.mybb.com/download/64/zip) |
-| [1.2.11](1211) | 8 January 2008 | Security vulnerability patch | [Download](http://www.mybb.com/download/63/zip) | 
+| [1.2.11](1211) | 8 January 2008 | Security vulnerability patch | [Download](http://www.mybb.com/download/63/zip) |
 | [1.2.10](1210) | 1 December 2007 | Maintenance Release | [Download](http://www.mybb.com/download/59/zip) |
 | [1.2.9](129) | 10 July 2007 | Security vulnerability patch | [Download](http://www.mybb.com/download/54/zip) |
 | [1.2.8](128) | 28 June 2007 | Maintenance and Security vulnerability patch | [Download](http://www.mybb.com/download/53/zip) |
-| [1.2.7](127) | 15 May 2007 | Maintenance and Security vulnerability patch | [Download](http://www.mybb.com/download/52/zip) | 
-| [1.2.6](126) | 25 April 2007 | Security vulnerability patch | [Download](http://www.mybb.com/download/51/zip) | 
-| [1.2.5](125) | 13 April 2007 | Security vulnerability patch | [Download](http://www.mybb.com/download/50/zip) | 
-| [1.2.4](124) | 4 April 2007 | Security vulnerability patch | [Download](http://www.mybb.com/download/48/zip) | 
-| [1.2.3](123) | 14 February 2007 | Maintenance and Security vulnerability patch | [Download](http://www.mybb.com/download/46/zip) | 
+| [1.2.7](127) | 15 May 2007 | Maintenance and Security vulnerability patch | [Download](http://www.mybb.com/download/52/zip) |
+| [1.2.6](126) | 25 April 2007 | Security vulnerability patch | [Download](http://www.mybb.com/download/51/zip) |
+| [1.2.5](125) | 13 April 2007 | Security vulnerability patch | [Download](http://www.mybb.com/download/50/zip) |
+| [1.2.4](124) | 4 April 2007 | Security vulnerability patch | [Download](http://www.mybb.com/download/48/zip) |
+| [1.2.3](123) | 14 February 2007 | Maintenance and Security vulnerability patch | [Download](http://www.mybb.com/download/46/zip) |
 | [1.2.2](122) | 1 December 2006 | Maintenance and Security vulnerability patch | [Download](http://www.mybb.com/download/45/zip) |
 | [1.2.1](121) | 26 November 2006 | Small security update.  Version number unchanged. | [Download](http://www.mybb.com/download/44/zip) |
 | [1.2.1](121) | 27 September 2006 | Maintenance and Security vulnerability patch | [Download](http://www.mybb.com/download/44/zip) |
@@ -135,11 +136,11 @@ Download links are provided on this page for older versions for non-production-s
 | [1.1.5](115) | 27 June 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/39/zip) |
 | [1.1.4](114) | 22 June 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/38/zip) |
 | [1.1.3](113) | 10 June 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/35/zip) |
-| [1.1.2](112) | 6 May 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/32/zip) | 
-| [1.1.1](111) | 14 April 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/31/zip) | 
+| [1.1.2](112) | 6 May 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/32/zip) |
+| [1.1.1](111) | 14 April 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/31/zip) |
 | [1.1.0](110) | 8 March 2006 | Also known as 1.1 or 1.10 - Security and bug fixes | [Download](http://www.mybb.com/download/21/zip) |
-| [1.0.4](104) | 15 February 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/20/zip) | 
-| [1.0.3](103) | 31 January 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/19/zip) | 
+| [1.0.4](104) | 15 February 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/20/zip) |
+| [1.0.3](103) | 31 January 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/19/zip) |
 | [1.0.2](102) | 11 January 2006 | Security vulnerability patch (Originally released on 7 January 2006) | [Download](http://www.mybb.com/download/17/zip) |
 | [1.0.1](101) | 28 December 2005 | Security vulnerability patch | [Download](http://www.mybb.com/download/13/zip) |
 | [1.0.0](100) | 9 December 2005 | Major release | - |

@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Protecting Your MyBB Forum"
-categories: [administration]
+categories: [security]
 ---
 
 ## MyBB Updates
