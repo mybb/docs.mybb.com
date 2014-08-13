@@ -1,0 +1,18 @@
+---
+layout: default
+title: File Not Found
+---
+
+    <section class="general">
+        <p class="body_intro"><strong>Unfortunately, the page you tried to access could not be found.</strong>  If you were brought to this page from our website, please <a href="{{ site.baseurl }}/contact/">contact us</a> with a description of how you came to this page. You can also search for what you were looking for below.
+    </section>
+    <form method="get" action="http://www.google.com/search">
+    <section class="general form page_search">
+        <p>
+            <label for="q">Search MyBB</label>
+                <input type="hidden" name="as_sitesearch" id="as_sitesearch" value="mybb.com">
+                <input name="q" id="q" type="search" class="searchField inputText" placeholder="Search keyword" />
+        </p>
+        <p class="submit"><input id="submit" type="submit" value="Search" class="searchSubmit inputSubmit" /></p>
+    </section>
+    </form>
