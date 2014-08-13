@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Plugin Hooks"
+categories: [development]
 ---
 
 # MyBB Hooks

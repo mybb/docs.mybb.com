@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Translations"
+categories: [administration]
 ---
 
 Translations, also known as **language packs** or **languages** are available to translate the MyBB interface into another language. All of the text that MyBB generates (besides user-inputted messages), are translatable.

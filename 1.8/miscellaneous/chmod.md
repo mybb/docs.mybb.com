@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "How to CHMOD Files"
+categories: [miscellaneous]
 ---
 
 # How To CHMOD Files
@@ -19,20 +20,20 @@ A string that looks like `rwx rw- r--`, defines who can access this file. The fi
 
 When using FTP programs, permissions can sometime be given as numbers.
 
-    0 (or blank) = No permissions 1 = Execute 2 = Write 3 = Execute + Write 4 = Read 5 = Read + Execute 6 = Read + Write 7 = Read + Write + Execute 
+    0 (or blank) = No permissions 1 = Execute 2 = Write 3 = Execute + Write 4 = Read 5 = Read + Execute 6 = Read + Write 7 = Read + Write + Execute
 
 A permission string of *764* means the **owner** of the file can read, write and execute, the **group** can read and write and the **others** can only read.
 
 The easiest way to change permissions in Unix via the command line is to use the command
 
     chmod ABC file_name
-    
+
 where *ABC* are the number representations of the permissions you wish to set. With *A* being the permissions for **owner**, *B* permissions for **group** and *C* permissions for **other**. `file_name` is the name of the file you wish to set permissions for.
 
 **Example:**
 
     chmod 666 inc/config.php chmod 777 uploads
-    
+
 Most GUI applications have a box that allows you to check/uncheck permissions per permission group. This will save you time working out which numbers you require. Where this command/tool is located depends on the program, but in Smart FTP, it is located under the Commands menu. Most programs should also allow you to change your file permissions by right clicking on the file you require.
 
 See [Using FTP](ftp) for a list of programs that you can use and how to use them. Tutorials on CHMODing on specific programs can be found here.

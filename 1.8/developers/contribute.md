@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Contribute"
+categories: [development]
 ---
 
 MyBB is free, open-source software. Anyone can contribute to its development and progress. MyBB source code is hosted on GitHub, which makes it easy to contribute to the project.

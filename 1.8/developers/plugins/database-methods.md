@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Database Methods"
+categories: [development]
 ---
 
 The database class provides a wrapper of most common functions used for database access, and also others which simplify common queries. All queries performed with the database through the database abstraction layer can be analyzed for the execution time and further optimization.
@@ -17,7 +18,7 @@ The database class provides a wrapper of most common functions used for database
     <dt>$db->simple_select</dt>
     <dd>
         <dt>Used to perform a simple select query (with no joins) on a table.</dt>
-		
+
         <dd>`string simple_select ( string table [,string field(s)] [, string conditions] [, array options])`</dd>
 
         <dt>Builds a simple query, then sends it off to $db->query().</dt>

@@ -1,4 +1,5 @@
 ---
 layout: page
-title:  "Developers"
+title:  "Development"
+categories: [development]
 ---
