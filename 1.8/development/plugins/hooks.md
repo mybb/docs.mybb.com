@@ -6,7 +6,7 @@ categories: [plugins]
 
 # MyBB Hooks
 
-The following list was generated using [MyBB Hook Finder](https://github.com/euantorano/MyBB-Hook-Finder), the line numbers may be out of date therefore it is advisable to generate your own list.
+The following list was generated using [MyBB Hook Finder](https://github.com/euantorano/MyBB-Hook-Finder). The line numbers may be out of date.
 
 <table>
     <thead>
