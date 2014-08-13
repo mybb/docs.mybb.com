@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  "How to CHMOD Files"
-categories: [miscellaneous]
 ---
 
 # How To CHMOD Files

@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  "Using FTP"
-categories: [miscellaneous]
 ---
 
 ### Using FTP
