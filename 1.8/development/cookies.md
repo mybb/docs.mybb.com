@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Cookies"
-categories: [miscellaneous]
+categories: [development]
 ---
 
 ## Introduction
