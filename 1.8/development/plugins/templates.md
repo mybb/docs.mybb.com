@@ -1,10 +1,8 @@
 ---
 layout: page
-title:  "How To"
+title:  "Templates"
 categories: [plugins]
 ---
-
-This section demonstrates how to implement several functions commonly required by plugins.
 
 ## Templates and passing values to a template
 
@@ -186,5 +184,3 @@ function ajax_action()
 ```
 
 This will output a JSON encoded response of the `$data` array when accessing `xmlhttp.php?action=my_ajax`.
-
-
