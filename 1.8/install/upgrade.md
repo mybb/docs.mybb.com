@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Ugrade MyBB"
+title:  "Upgrade MyBB"
 categories: [install]
 ---
 
@@ -33,7 +33,7 @@ Before you upgrade, you should always read the announcement blog post properly b
 2. Secondly, you should back up your files and database and store them in a safe place. Just in case something goes wrong, you can restore the backup and start again. You can back up the database using the [MyBB Admin CP or your database management software](../administration/backups).
 
 3. If you are upgrading to a major or minor point, you must deactivate (or disable) all of your plugins. This is because it is likely they will need to be updated to work on the new version and can cause problems if they are left active. You may also want to deactivate or disable all of your plugins for maintenance upgrades too, but it is not usually required.
-      
+
 ### Downloading the correct upgrade package
 
 There are two different methods of upgrading your forum, full upgrades and a changed files upgrade.
