@@ -1,10 +1,10 @@
 ---
 layout: page
-title:  "What to do if you get hacked"
+title:  "Recovering a Hacked Forum"
 categories: [security]
 ---
 
-If your forum was hacked or you want to know what to do when and if you get hacked, read this guide and follow the instructions precisely. Please note we try to cover every single possible situation. In most cases you won't need to follow all the steps outlined, but it is still highly recommended to do so.
+If your forum was hacked, or you want to know what to do when and if you get hacked, read this guide and follow the instructions precisely. Please note we try to cover every single possible situation. In most cases you won't need to follow all the steps outlined, but it is still highly recommended to do so.
 
 Whenever an SQL query is provided, we assume your table prefix is `mybb_`. If you have a different table prefix remember to replace it in the SQL query.
 
