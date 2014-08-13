@@ -38,7 +38,3 @@ Add a newline after the heading.
 ### Links
 
 When linking to internal pages use relative links, e.g. `[Using FTP](http://docs.mybb.com/install/ftp)` should be `[Using FTP](install/ftp)`.
-
-## What to Contribute
-
-Browse [the current MyBB documentation](http://docs.mybb.com/) and pick **any article**. Copy paste it into a new file. Rewrite it in Markdown very neatly and put it under the right category.
