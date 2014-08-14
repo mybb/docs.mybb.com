@@ -1,0 +1,36 @@
+---
+layout: post
+title: Cannot login
+permalink: Help-Cannot_login.html
+category: General Help
+---
+
+<p>So every day we have people reporting that logins don't work on their forum.  Let's fix this once and for all!
+</p><p><b>99%</b> of the time this is a problem with your cookie settings being incorrect or inadequate.  (For more information about MyBB's cookies, read <a href="{{ site.url }}/Cookies.html" title="Cookies">Cookies</a>)
+</p>
+
+<p>Your cookie settings can be found in: <b>Admin CP &gt; Configuration &gt; Settings &gt; General Configuration</b>.  The two settings are <b>Cookie Domain</b>, and <b>Cookie Path</b>.
+</p><p>By default, MyBB suggests Cookie Domain to be blank, and Cookie Path to be "/".  Although this theoretically will work, in many cases it is <i>inadequate</i>.
+</p><p>First a few examples of what your cookie settings should look like:
+</p><p>If your URL is <b>http://www.example.com</b>, your settings should be:
+</p>
+<ul><li>Cookie Domain: .example.com
+</li><li>Cookie Path: /
+</li></ul>
+<p>If your URL is <b>http://www.example.com/myforum</b>, your settings should be:
+</p>
+<ul><li>Cookie Domain: .example.com
+</li><li>Cookie Path: /myforum/
+</li></ul>
+<p>If your URL is <b>http://subdomain.example.com/wow</b>, your settings should be:
+</p>
+<ul><li>Cookie Domain: .subdomain.example.com <b>OR</b> .example.com
+</li><li>Cookie Path: /wow/
+</li></ul>
+<p>Alternatively you can use <a rel="nofollow" class="external text" href="http://www.dennistt.net/mybb/cookiesettings.php">this tool</a> to provide your cookie settings based on your forum's URL. 
+</p><p>These cookie settings should work on all MyBB installations.  If you have site-integration, your cookie settings may need to be more generalized.
+</p><p>After you change your cookie settings, please advise your users to log out and <a href="Help:How_to_clear_your_cookies" title="Help:How to clear your cookies">clear their cookies from their browser</a>, so that the new cookies can take effect.
+</p>
+
+
+

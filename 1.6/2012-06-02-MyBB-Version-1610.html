@@ -1,0 +1,282 @@
+---
+layout: post
+title: MyBB 1.6.10
+permalink: 1610.html
+category: Versions
+---
+
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Release_Date"><span class="tocnumber">1</span> <span class="toctext">Release Date</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Announcement_Summary"><span class="tocnumber">2</span> <span class="toctext">Announcement Summary</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Overview"><span class="tocnumber">2.1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Fixed_Issues"><span class="tocnumber">2.2</span> <span class="toctext">Fixed Issues</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Changed_Files"><span class="tocnumber">2.3</span> <span class="toctext">Changed Files</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Language_Changes"><span class="tocnumber">2.4</span> <span class="toctext">Language Changes</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Template_Changes"><span class="tocnumber">2.5</span> <span class="toctext">Template Changes</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+<p>MyBB 1.6.10 was released on 22 April 2013.
+</p>
+
+
+<p>MyBB 1.6.10 is a security and maintenance release and fixes 7 vulnerabilities and over 95 reported issues reported issues.
+</p>
+
+<ul><li> <a rel="nofollow" class="external text" href="http://dev.mybb.com/versions/46">Fixed issues in 1.6.10</a>
+</li><li> <a rel="nofollow" class="external text" href="http://dev.mybb.com/projects/mybb/issues">Unfixed issues</a>
+</li></ul>
+
+<p>The following files have changed since MyBB 1.6.9.
+</p>
+<ul>
+<li>admin<ul>
+<li>inc<ul>
+<li>class_form.php</li>
+<li>class_page.php</li>
+<li>class_table.php</li>
+<li>functions_themes.php</li>
+</ul></li>
+<li>modules<ul>
+<li>config<ul>
+<li>help_documents.php</li>
+<li>languages.php</li>
+<li>mycode.php</li>
+<li>post_icons.php</li>
+<li>settings.php</li>
+</ul></li>
+<li>forum<ul>
+<li>announcements.php</li>
+<li>attachments.php</li>
+<li>management.php</li>
+</ul></li>
+<li>home<ul>
+<li>credits.php</li>
+<li>index.php</li>
+<li>module_meta.php</li>
+<li>preferences.php</li>
+<li>version_check.php</li>
+</ul></li>
+<li>style<ul>
+<li>templates.php</li>
+<li>themes.php</li>
+</ul></li>
+<li>tools<ul>
+<li>backupdb.php</li>
+<li>file_verification.php</li>
+<li>optimizedb.php</li>
+<li>system_health.php</li>
+</ul></li>
+<li>user<ul>
+<li>mass_mail.php</li>
+<li>users.php</li>
+</ul></li>
+</ul></li>
+<li>index.php</li>
+</ul></li>
+<li>archive<ul>
+<li>global.php</li>
+</ul></li>
+<li>inc<ul>
+<li>3rdparty<ul>
+<li>diff<ul>
+<li>Diff<ul>
+<li>Engine<ul>
+<li>Native.php</li>
+<li>Shell.php</li>
+<li>String.php</li>
+<li>Xdiff.php</li>
+</ul></li>
+<li>Op<ul>
+<li>Add.php</li>
+<li>Base.php</li>
+<li>Change.php</li>
+<li>Copy.php</li>
+<li>Delete.php</li>
+<li>index.html</li>
+</ul></li>
+<li>Renderer<ul>
+<li>Context.php</li>
+<li>Inline.php</li>
+<li>Unified.php</li>
+</ul></li>
+<li>ThreeWay<ul>
+<li>Op<ul>
+<li>Base.php</li>
+<li>Copy.php</li>
+<li>index.html</li>
+</ul></li>
+<li>BlockBuilder.php</li>
+<li>index.html</li>
+</ul></li>
+<li>Exception.php</li>
+<li>Mapped.php</li>
+<li>Renderer.php</li>
+<li>String.php</li>
+<li>ThreeWay.php</li>
+</ul></li>
+<li>Diff.php</li>
+</ul></li>
+</ul></li>
+<li>datahandlers<ul>
+<li>event.php</li>
+<li>pm.php</li>
+<li>post.php</li>
+<li>user.php</li>
+</ul></li>
+<li>class_captcha.php</li>
+<li>class_core.php</li>
+<li>class_error.php</li>
+<li>class_mailhandler.php</li>
+<li>class_moderation.php</li>
+<li>class_parser.php</li>
+<li>class_plugins.php</li>
+<li>class_session.php</li>
+<li>class_templates.php</li>
+<li>class_xml.php</li>
+<li>db_mysql.php</li>
+<li>db_mysqli.php</li>
+<li>db_pgsql.php</li>
+<li>db_sqlite.php</li>
+<li>functions.php</li>
+<li>functions_archive.php</li>
+<li>functions_calendar.php</li>
+<li>functions_forumlist.php</li>
+<li>functions_image.php</li>
+<li>functions_indicators.php</li>
+<li>functions_online.php</li>
+<li>functions_post.php</li>
+<li>functions_time.php</li>
+<li>functions_upload.php</li>
+<li>functions_user.php</li>
+<li>init.php</li>
+<li>languages<ul>
+<li>english<ul>
+<li>admin<ul>
+<li>config_settings.lang.php</li>
+<li>forum_announcements.lang.php</li>
+<li>tools_file_verification.lang.php</li>
+<li>tools_system_health.lang.php</li>
+<li>tools_tasks.lang.php</li>
+<li>user_users.lang.php</li>
+</ul></li>
+<li>datahandler_user.lang.php</li>
+<li>global.lang.php</li>
+<li>helpdocs.lang.php</li>
+<li>helpsections.lang.php</li>
+<li>member.lang.php</li>
+<li>modcp.lang.php</li>
+</ul></li>
+<li>english.php</li>
+</ul></li>
+<li>mailhandlers<ul>
+<li>smtp.php</li>
+</ul></li>
+<li>plugins<ul>
+<li>akismet.php</li>
+</ul></li>
+<li>tasks<ul>
+<li>checktables.php</li>
+</ul></li>
+</ul></li>
+<li>install<ul>
+<li>resources<ul>
+<li>language.lang.php</li>
+<li>mybb_theme.xml</li>
+<li>mysql_db_inserts.php</li>
+<li>mysql_db_tables.php</li>
+<li>pgsql_db_tables.php</li>
+<li>settings.xml</li>
+<li>sqlite_db_tables.php</li>
+<li>upgrade12.php</li>
+<li>upgrade14.php</li>
+<li>upgrade15.php</li>
+<li>upgrade17.php</li>
+<li>upgrade19.php</li>
+<li>upgrade26.php</li>
+</ul></li>
+<li>index.php</li>
+<li>upgrade.php</li>
+</ul></li>
+<li>jscripts<ul>
+<li>autocomplete.js</li>
+<li>inline_edit.js</li>
+<li>prototype.js</li>
+<li>usercp.js</li>
+</ul></li>
+<li>announcements.php</li>
+<li>attachment.php</li>
+<li>calendar.php</li>
+<li>editpost.php</li>
+<li>forumdisplay.php</li>
+<li>global.php</li>
+<li>index.php</li>
+<li>managegroup.php</li>
+<li>member.php</li>
+<li>memberlist.php</li>
+<li>misc.php</li>
+<li>modcp.php</li>
+<li>moderation.php</li>
+<li>newreply.php</li>
+<li>newthread.php</li>
+<li>online.php</li>
+<li>polls.php</li>
+<li>portal.php</li>
+<li>printthread.php</li>
+<li>private.php</li>
+<li>ratethread.php</li>
+<li>report.php</li>
+<li>reputation.php</li>
+<li>search.php</li>
+<li>sendthread.php</li>
+<li>showteam.php</li>
+<li>showthread.php</li>
+<li>syndication.php</li>
+<li>usercp.php</li>
+<li>usercp2.php</li>
+<li>warnings.php</li>
+<li>xmlhttp.php</li>
+</ul>
+
+<p>There are changes to 12 language files. Changed languages files can be cross-referenced from the list above.
+</p>
+
+<p>There are changes to 25 templates.
+</p>
+<ul><li> calendar_move
+</li><li> editpost
+</li><li> forumdisplay_threadlist
+</li><li> newreply
+</li><li> newreply_options_signature
+</li><li> newreply_disablesmilies
+</li><li> newthread
+</li><li> newthread_options_signature
+</li><li> newthread_disablesmilies
+</li><li> postbit_quote
+</li><li> private_send
+</li><li> private_send_tracking
+</li><li> private_send_signature
+</li><li> member_coppa_form
+</li><li> misc_imcenter_aim
+</li><li> modcp_announcements_new
+</li><li> modcp_announcements_edit
+</li><li> showthread_quickreply
+</li><li> showthread_quickreply_options_signature
+</li><li> usercp_nav_messenger
+</li><li> usercp_nav_messenger_tracking
+</li><li> video_dailymotion_embed
+</li><li> video_yahoo_embed
+</li><li> video_vimeo_embed
+</li><li> video_youtube_embed
+</li></ul>
+
+<p><br />
+</p>
+{% include versions_footer.html %}
+
+
+

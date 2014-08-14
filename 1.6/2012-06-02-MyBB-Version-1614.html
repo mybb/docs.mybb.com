@@ -1,0 +1,207 @@
+---
+layout: post
+title: MyBB 1.6.14
+permalink: 1614.html
+category: Versions
+---
+
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Release_Date"><span class="tocnumber">1</span> <span class="toctext">Release Date</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Announcement_Summary"><span class="tocnumber">2</span> <span class="toctext">Announcement Summary</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Overview"><span class="tocnumber">2.1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Fixed_Issues"><span class="tocnumber">2.2</span> <span class="toctext">Fixed Issues</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Changed_Files"><span class="tocnumber">2.3</span> <span class="toctext">Changed Files</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Language_Changes"><span class="tocnumber">2.4</span> <span class="toctext">Language Changes</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Template_Changes"><span class="tocnumber">2.5</span> <span class="toctext">Template Changes</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+<h1><span class="mw-headline" id="Release_Date">Release Date</span></h1>
+<p>MyBB 1.6.14 was released on 30 June 2014.
+</p>
+
+<h1><span class="mw-headline" id="Announcement_Summary">Announcement Summary</span></h1>
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>MyBB 1.6.14 is a security and maintenance release and fixes 5 vulnerabilities and 50 reported issues.
+</p>
+
+<h2><span class="mw-headline" id="Fixed_Issues">Fixed Issues</span></h2>
+<ul><li>Vulnerabilities:<ul>
+<li>Medium Risk: Possibility of executing PHP code through settings</li>
+<li>Low Risk: A XSS vulnerability in polls.php</li>
+<li>Low Risk: A XSS vulnerability in portal.php</li>
+<li>Low Risk: Password protected forums can be viewed from the portal</li>
+<li>Low Risk: Super moderators have more permissions than expected</li>
+</ul>
+</li>
+<li><a href="https://github.com/mybb/mybb/issues?milestone=1&amp;state=closed">Fixed issues in 1.6.14</a></li>
+<li><a href="https://github.com/mybb/mybb/issues?labels=1.6&amp;state=open">Unfixed issues</a></li>
+</ul>
+
+<h2><span class="mw-headline" id="Changed_Files">Changed Files</span></h2>
+<p>The following files have changed since MyBB 1.6.13.
+</p>
+<ul>
+<li>admin
+<ul>
+<li>inc
+<ul>
+<li>functions_view_manager.php</li>
+</ul>
+</li>
+<li>modules
+<ul>
+<li>config
+<ul>
+<li>profile_fields.php</li>
+<li>settings.php</li>
+</ul>
+</li>
+<li>forum
+<ul>
+<li>attachments.php</li>
+<li>management.php</li>
+</ul>
+</li>
+<li>style
+<ul>
+<li>themes.php</li>
+</ul>
+</li>
+<li>tools
+<ul>
+<li>adminlog.php</li>
+<li>backupdb.php</li>
+<li>modlog.php</li>
+<li>recount_rebuild.php</li>
+</ul>
+</li>
+<li>user
+<ul>
+<li>admin_permissions.php</li>
+<li>groups.php</li>
+<li>mass_mail.php</li>
+<li>titles.php</li>
+<li>users.php</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>index.php</li>
+</ul>
+</li>
+<li>inc
+<ul>
+<li>datahandlers
+<ul>
+<li>user.php</li>
+</ul>
+</li>
+<li>languages
+<ul>
+<li>english
+<ul>
+<li>admin
+<ul>
+<li>forum_attachments.lang.php</li>
+<li>forum_management.lang.php</li>
+<li>tools_adminlog.lang.php</li>
+<li>tools_modlog.lang.php</li>
+<li>user_mass_mail.lang.php</li>
+<li>user_titles.lang.php</li>
+</ul>
+</li>
+<li>messages.lang.php</li>
+<li>modcp.lang.php</li>
+<li>polls.lang.php</li>
+<li>showthread.lang.php</li>
+</ul>
+</li>
+<li>english.php</li>
+</ul>
+</li>
+<li>mailhandlers
+<ul>
+<li>smtp.php</li>
+</ul>
+</li>
+<li>tasks
+<ul>
+<li>promotions.php</li>
+<li>userpruning.php</li>
+</ul>
+</li>
+<li>class_core.php</li>
+<li>class_language.php</li>
+<li>class_moderation.php</li>
+<li>class_parser.php</li>
+<li>class_session.php</li>
+<li>functions.php</li>
+<li>functions_search.php</li>
+<li>functions_upload.php</li>
+</ul>
+</li>
+<li>install
+<ul>
+<li>resources
+<ul>
+<li>language.lang.php</li>
+<li>mybb_theme.xml</li>
+<li>upgrade29.php</li>
+</ul>
+</li>
+<li>upgrade.php</li>
+</ul>
+</li>
+<li>jscripts
+<ul>
+<li>inline_moderation.js</li>
+<li>validator.js</li>
+</ul>
+</li>
+<li>calendar.php</li>
+<li>editpost.php</li>
+<li>forumdisplay.php</li>
+<li>member.php</li>
+<li>modcp.php</li>
+<li>newreply.php</li>
+<li>newthread.php</li>
+<li>polls.php</li>
+<li>portal.php</li>
+<li>reputation.php</li>
+<li>search.php</li>
+<li>showthread.php</li>
+<li>syndication.php</li>
+<li>task.php</li>
+<li>usercp.php</li>
+</ul>
+
+<h2><span class="mw-headline" id="Language_Changes">Language Changes</span></h2>
+<p>There are changes to 10 language files. Changed languages files can be cross-referenced from the list above.
+</p>
+
+<h2><span class="mw-headline" id="Template_Changes">Template Changes</span></h2>
+<p>There are changes to 9 templates.
+</p>
+<ul>
+<li>forumdisplay_inlinemoderation</li>
+<li>member_register</li>
+<li>modcp_ipsearch_misc_info</li>
+<li>modcp_modqueue_attachments_attachment</li>
+<li>post_attachments_add</li>
+<li>post_attachments_new</li>
+<li>search_results_posts_inlinemoderation</li>
+<li>search_results_threads_inlinemoderation</li>
+<li>showthread_inlinemoderation</li>
+</ul>
+
+<p><br />
+</p>
+{% include versions_footer.html %}
+
+
+

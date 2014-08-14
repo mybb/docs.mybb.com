@@ -1,0 +1,224 @@
+---
+layout: post
+title: MyBB 1.6.7
+permalink: 167.html
+category: Versions
+---
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Release_Date"><span class="tocnumber">1</span> <span class="toctext">Release Date</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Announcement_Summary"><span class="tocnumber">2</span> <span class="toctext">Announcement Summary</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Overview"><span class="tocnumber">2.1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Security_Vulnerabilities"><span class="tocnumber">2.2</span> <span class="toctext">Security Vulnerabilities</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Fixed_Issues"><span class="tocnumber">2.3</span> <span class="toctext">Fixed Issues</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Feature_Updates"><span class="tocnumber">2.4</span> <span class="toctext">Feature Updates</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Changed_Files"><span class="tocnumber">2.5</span> <span class="toctext">Changed Files</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Language_Changes"><span class="tocnumber">2.6</span> <span class="toctext">Language Changes</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Template_Changes"><span class="tocnumber">2.7</span> <span class="toctext">Template Changes</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+<p>MyBB 1.6.7 was released on April 1, 2012.
+</p>
+
+
+<p>MyBB 1.6.7 is a security, maintenance and feature release fixing 5 low-risk vulnerabilities and over 70 reported issues. It introduces 5 new feature updates.
+</p>
+
+<p><b>Low Risk</b>
+</p>
+<ul><li> SQL injection vulnerability within the Admin Control Panel (ACP) in user search (reported by Nathan Malcolm, MyBB SQA Team)
+</li><li> SQL injection vulnerability within the ACP in Mail Log (reported by Nathan Malcolm, MyBB SQA Team)
+</li><li> SQL injection vulnerability within the ACP in User Inline Moderation (reported by Jammerx2, MyBB Developer)
+</li><li> XSS within the ACP where an orphaned attachment has a malformed filename (reported by Nathan Malcolm, MyBB SQA Team)
+</li><li> Full Path Disclosure if malformed forumread cookie is used
+</li></ul>
+<p>ACP vulnerabilities require Administrator permissions and so considered low-risk. With thanks to those who discovered these vulnerabilities.
+</p>
+
+<p>Over 70 reported issues were fixed in 1.6.7
+</p>
+<dl><dd><dl><dd> <a rel="nofollow" class="external text" href="http://dev.mybb.com/projects/mybb/versions/42">Fixed issues in 1.6.7</a>
+</dd><dd> <a rel="nofollow" class="external text" href="http://dev.mybb.com/projects/mybb/issues">Unfixed issues</a>
+</dd></dl>
+</dd></dl>
+
+<p>Feature updates can be small or large changes to the way MyBB features work. The following changes have been made in 1.6.7.
+</p>
+<ul><li> <b>Displaying Forum Rules</b>
+</li></ul>
+<dl><dd><dl><dd>Previously, you were able to display forum rules as a link or inline within the thread listing. A new option has been added to show forum rules inline with the thread listing and when a user is making a new thread/post. You can find this option within a forum's settings.
+</dd></dl>
+</dd></dl>
+<ul><li> <b>Custom Moderator Tools Permissions</b>
+</li></ul>
+<dl><dd><dl><dd>Before 1.6.7, forum moderators were able to use custom moderator tools. An option has been added to the moderator options as to whether a moderator can use these tools or not. Upon upgrading to 1.6.7, if existing moderators can manage threads they are able to use custom moderator tools.
+</dd></dl>
+</dd></dl>
+<ul><li> <b>Ignore List Email Override</b>
+</li></ul>
+<dl><dd><dl><dd>Previously, if a user was on an ignore list and attempted to send the user an email they would be denied permission to do so. A new usergroup option is available to override this scenario.
+</dd></dl>
+</dd></dl>
+<ul><li> <b>Editing a User's Birthday in ACP</b>
+</li></ul>
+<dl><dd><dl><dd>In 1.6.7 you are now able to modify users' birthdays from within their profile in the ACP.
+</dd></dl>
+</dd></dl>
+<ul><li> <b>Login with Username or Email or Both</b>
+</li></ul>
+<dl><dd><dl><dd>The largest new feature is the ability to choose how a user logs in to your forum. From the General Configuration settings in the ACP, a new <b>Allowed Login Methods</b> setting can determine whether a user can log in using their username only, registered email only or by using their username and email.
+</dd></dl>
+</dd></dl>
+
+<p>The following files have changed since MyBB 1.6.6.
+</p>
+<ul><li> admin
+<ul><li> inc
+<ul><li> class_form.php
+</li><li> class_page.php
+</li><li> <span style="color: red;">functions.php</span>
+</li></ul>
+</li><li> modules
+<ul><li> config
+<ul><li> calendars.php
+</li><li> profile_fields.php
+</li><li> smilies.php
+</li></ul>
+</li><li> forum
+<ul><li> <span style="color: red;">attachments.php</span>
+</li><li> management.php
+</li></ul>
+</li><li> home
+<ul><li> credits.php
+</li></ul>
+</li><li> tools
+<ul><li> <span style="color: red;">maillogs.php</span>
+</li><li> modlog.php
+</li></ul>
+</li><li> user
+<ul><li> group_promotions.php
+</li><li> groups.php
+</li><li> <span style="color: red;">users.php</span>
+</li></ul>
+</li></ul>
+</li><li>index.php
+</li></ul>
+</li><li> inc
+<ul><li> datahandlers
+<ul><li> event.php
+</li><li> pm.php
+</li><li> post.php
+</li><li> user.php
+</li></ul>
+</li><li> languages
+<ul><li> english
+<ul><li> admin
+<ul><li> forum_management.lang.php
+</li><li> global.lang.php
+</li><li> user_group_promotions.lang.php
+</li><li> user_groups.lang.php
+</li><li> user_users.lang.php
+</li></ul>
+</li><li> datahandler_post.lang.php
+</li><li> global.lang.php
+</li><li> managegroup.lang.php
+</li><li> member.lang.php
+</li><li> messages.lang.php
+</li><li> modcp.lang.php
+</li><li> newreply.lang.php
+</li><li> newthread.lang.php
+</li><li> private.lang.php
+</li><li> reputation.lang.php
+</li><li> xmlhttp.lang.php
+</li></ul>
+</li><li> english.php
+</li></ul>
+</li><li> plugins
+<ul><li> akismet.php
+</li><li> hello.php
+</li></ul>
+</li><li> class_core.php
+</li><li> class_datacache.php
+</li><li> class_moderation.php
+</li><li> class_parser.php
+</li><li> class_plugins.php
+</li><li> functions.php
+</li><li> functions_forumlist.php
+</li><li> functions_image.php
+</li><li> functions_indicators.php
+</li><li> functions_post.php
+</li><li> functions_upload.php
+</li><li> functions_user.php
+</li><li> init.php
+</li></ul>
+</li><li> install
+<ul><li> resources
+<ul><li> mybb_theme.xml
+</li><li> mysql_db_tables.php
+</li><li> pgsql_db_tables.php
+</li><li> settings.xml
+</li><li> sqlite_db_tables.php
+</li><li> upgrade22.php
+</li><li> <span style="color: green;">upgrade23.php</span>
+</li><li> upgrade5.php
+</li><li> usergroups.xml
+</li></ul>
+</li></ul>
+</li><li> jscripts
+<ul><li> editor.js
+</li></ul>
+</li><li> announcements.php
+</li><li> calendar.php
+</li><li> editpost.php
+</li><li> forumdisplay.php
+</li><li> global.php
+</li><li> index.php
+</li><li> managegroup.php
+</li><li> member.php
+</li><li> misc.php
+</li><li> modcp.php
+</li><li> newreply.php
+</li><li> newthread.php
+</li><li> online.php
+</li><li> portal.php
+</li><li> private.php
+</li><li> ratethread.php
+</li><li> reputation.php
+</li><li> search.php
+</li><li> showthread.php
+</li><li> task.php
+</li><li> usercp.php
+</li></ul>
+<p><span style="color: red;">Red represents files that contain security updates</span>
+<br /><span style="color: green;">Green represents new files added in this release</span>
+<br />
+</p>
+
+<p>There are changes to 16 language files. Changed languages files can be cross-referenced from the list above.
+</p>
+
+<p>There are changes to 15 templates.
+</p>
+<ul><li> modcp_reports
+</li><li> forumdisplay_rules
+</li><li> forumdisplay_rules_link
+</li><li> header_welcomeblock_guest
+</li><li> managegroup_no_users
+</li><li> postbit_rep_button
+</li><li> portal_welcome_guesttext
+</li><li> modcp_reports_report
+</li><li> modcp_reports_noreports
+</li><li> index_loginform
+</li><li> member_resetpassword
+</li><li> moderation_split
+</li><li> error_nopermission
+</li><li> moderation_inline_splitposts
+</li><li> warnings_warn_type
+</li></ul>
+{% include versions_footer.html %}
+
+

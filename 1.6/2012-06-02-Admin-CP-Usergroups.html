@@ -1,0 +1,280 @@
+---
+layout: post
+title: Usergroups
+permalink: Admin_CP_Usergroups.html
+category: Admin CP
+---
+<p>User groups categorize users, providing access levels and permissions for forums and forum features. From the User Groups section in the Admin CP, you can manage the user groups on your forum, group leaders, join requests, and see a listing of all users in each group. For more information on user groups, see <a href="{{ site.url }}/Usergroups.html" title="Usergroups" class="mw-redirect">User Groups</a>.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#User_Group_Listing"><span class="tocnumber">1</span> <span class="toctext">User Group Listing</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Editing_User_Group"><span class="tocnumber">2</span> <span class="toctext">Editing User Group</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#General"><span class="tocnumber">2.1</span> <span class="toctext">General</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#General_Options"><span class="tocnumber">2.1.1</span> <span class="toctext">General Options</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Publicly_Joinable_Options"><span class="tocnumber">2.1.2</span> <span class="toctext">Publicly Joinable Options</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Moderation.2FAdministration_Options"><span class="tocnumber">2.1.3</span> <span class="toctext">Moderation/Administration Options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Forums_and_Posts"><span class="tocnumber">2.2</span> <span class="toctext">Forums and Posts</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Viewing_Options"><span class="tocnumber">2.2.1</span> <span class="toctext">Viewing Options</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Posting.2FRating_Options"><span class="tocnumber">2.2.2</span> <span class="toctext">Posting/Rating Options</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Poll_Options"><span class="tocnumber">2.2.3</span> <span class="toctext">Poll Options</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Attachment_Options"><span class="tocnumber">2.2.4</span> <span class="toctext">Attachment Options</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Editing.2FDeleting_Options"><span class="tocnumber">2.2.5</span> <span class="toctext">Editing/Deleting Options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Users_and_Permissions"><span class="tocnumber">2.3</span> <span class="toctext">Users and Permissions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Account_Management"><span class="tocnumber">2.3.1</span> <span class="toctext">Account Management</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Reputation_System"><span class="tocnumber">2.3.2</span> <span class="toctext">Reputation System</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Warning_System"><span class="tocnumber">2.3.3</span> <span class="toctext">Warning System</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Private_Messaging"><span class="tocnumber">2.3.4</span> <span class="toctext">Private Messaging</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#Miscellaneous"><span class="tocnumber">2.4</span> <span class="toctext">Miscellaneous</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#Calendar"><span class="tocnumber">2.4.1</span> <span class="toctext">Calendar</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Who.27s_Online"><span class="tocnumber">2.4.2</span> <span class="toctext">Who's Online</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Miscellaneous_2"><span class="tocnumber">2.4.3</span> <span class="toctext">Miscellaneous</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Add_New_User_Group"><span class="tocnumber">3</span> <span class="toctext">Add New User Group</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Publicly_Join-able_Usergroup"><span class="tocnumber">4</span> <span class="toctext">Publicly Join-able Usergroup</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Group_Leaders"><span class="tocnumber">5</span> <span class="toctext">Group Leaders</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#Add_.2F_Edit_Group_Leaders"><span class="tocnumber">5.1</span> <span class="toctext">Add / Edit Group Leaders</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="#Group_Join_Requests"><span class="tocnumber">6</span> <span class="toctext">Group Join Requests</span></a></li>
+</ul>
+</td></tr></table>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/4/45/ACP_User_Groups.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/4/45/ACP_User_Groups.png/180px-ACP_User_Groups.png" width="180" height="145" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/4/45/ACP_User_Groups.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: User Groups</div></div></div>
+<p>The user group listing includes:
+</p>
+<dl><dt>Group name&#160;</dt><dd> The name specified for this group.
+</dd><dt>Group description&#160;</dt><dd> A short description for the purpose of this group.
+</dd><dt>Outstanding join requests&#160;</dt><dd> If a custom (joinable) user group has outstanding join requests, the number of join requests will be shown next to the group name in red.
+</dd><dt>Type of User Group&#160;</dt><dd> This is represented by an icon in the right-hand side of the group table. A legend at the bottom of the group listing specifies which icon represents which.
+</dd></dl>
+<p>page shows all user groups, their description, and whether or not it is a custom or default user group. For staff user groups (user groups shown on Forum Team page), you can also change the display order for these groups. Leaving this field blank sorts fields alphabetically.
+</p>
+<dl><dt>Number of Users&#160;</dt><dd> The total number of users in each user group.
+</dd><dt>Order&#160;</dt><dd> The display order for groups that are staff groups and are listed on the forum team page. Leaving the display order box empty will sort groups alphabetically.
+</dd></dl>
+<p>For each group, under controls, you can:
+</p>
+<dl><dt>Edit User Group&#160;</dt><dd> Change all settings for the user group.
+</dd><dt>List Users&#160;</dt><dd> List all members of this user group.
+</dd><dt>Moderate all new join requests&#160;</dt><dd> If the group is a joinable user group and join requests remain, this will list all requests and allow you to approve or deny the requests.
+</dd><dt>Group Leaders&#160;</dt><dd> Specify leaders of the group, who can add/remove users of the group and moderate join requests if enabled.
+</dd><dt>Delete Group&#160;</dt><dd> If the group is a custom user group (not one that is included with MyBB), you can remove the group from your board permanently.
+</dd></dl>
+
+<p>The edit user group page is divided into four tabs: General, Forums and Posts, Users and Permissions, and Miscellaneous.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/d/d0/ACP_User_EditGroup_General.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/d/d0/ACP_User_EditGroup_General.png/180px-ACP_User_EditGroup_General.png" width="180" height="204" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/d/d0/ACP_User_EditGroup_General.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Edit User Group, General</div></div></div>
+<p>The general tab deals with the basic settings for a group, and generic permissions.
+</p>
+<dl><dt>Title&#160;</dt><dd> Name for the user group.
+</dd><dt>Short Description&#160;</dt><dd> A short description describing the user group.
+</dd><dt>Username Style&#160;</dt><dd> HTML style for users who have this group as their display group.
+</dd><dt>Default User Title&#160;</dt><dd> The user title that will be displayed if a user does not have a custom user title specified.
+</dd><dt>User Stars&#160;</dt><dd> The number of stars and relative URL to the star image for this group. If no star image is entered, the default star image will be used based on post counts.
+</dd><dt>Group Image&#160;</dt><dd> A group image that will be displayed in each post made by users of this group.
+</dd></dl>
+
+<dl><dt>Show on 'Forum Team' page&#160;</dt><dd> Should this user group be classified as staff and be displayed on the Forum Team page?
+</dd><dt>Is banned group? Should users be able to be banned to this group?
+</dt></dl>
+
+<p>These options are only displayed if this user group is a custom user group, not a default user group.
+</p>
+<dl><dt>Users can join this group&#160;</dt><dd> Should users be able to join this group from their User CP?
+</dd><dt>Moderate all new join requests&#160;</dt><dd> Should group leaders and administrators approve all requests to join this group?
+</dd><dt>Users can set this group as their display group&#160;</dt><dd> Should users be able to set this user group as their display group?
+</dd></dl>
+
+<dl><dt>Is Super Moderator&#160;</dt><dd> Should members of this group be able to moderate all forums?
+</dd><dt>Can access Moderator CP&#160;</dt><dd> Should members of this group be able to access the Moderator Control Panel?
+</dd><dt>Can access Admin CP&#160;</dt><dd> Should members of this group be able to access the Administrator Control Panel (subject to <a href="{{ site.url }}/Admin_CP_Admin_Perms.html" title="Admin CP Admin Perms">Admin Permissions</a>)
+</dd></dl>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/0/0a/ACP_User_EditGroup_ForumsPosts.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/0/0a/ACP_User_EditGroup_ForumsPosts.png/180px-ACP_User_EditGroup_ForumsPosts.png" width="180" height="187" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/0/0a/ACP_User_EditGroup_ForumsPosts.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Edit User Group, Forums and Posts</div></div></div>
+<p>The forums and posts tab includes permissions relating to the viewing and posting of replies and threads.
+</p>
+
+<dl><dt>Can view board&#160;</dt><dd> Should members of this group have access to your board?
+</dd><dt>Can view threads&#160;</dt><dd> Should members of this group be able to view threads?
+</dd><dt>Can search forums&#160;</dt><dd> Should members of this group be able to search forums for posts or threads?
+</dd><dt>Can view user profiles&#160;</dt><dd> Should members of this group be able to view user profiles?
+</dd><dt>Can download attachments&#160;</dt><dd> Should members of this group be able to download attachments?
+</dd></dl>
+
+<dl><dt>Can post new threads&#160;</dt><dd> Should members of this group be able to post new threads?
+</dd><dt>Can post replies&#160;</dt><dd> Should members of this group be able to post replies to threads?
+</dd><dt>Can rate threads&#160;</dt><dd> Should members of this group be able to rate threads?
+</dd></dl>
+
+<dl><dt>Can post polls&#160;</dt><dd> Should members of this group be able to post polls?
+</dd><dt>Can vote in polls&#160;</dt><dd> Should members of this group be able to vote in polls?
+</dd></dl>
+
+<dl><dt>Can post attachments&#160;</dt><dd> Should members of this group be able to upload attachments to posts on your board?
+</dd><dt>Attachment Quota&#160;</dt><dd> The maximum amount of storage a member of this group may use for attachments.
+</dd></dl>
+
+<dl><dt>Can edit own posts&#160;</dt><dd> Should members of this group be able to edit their own posts?
+</dd><dt>Can delete own posts&#160;</dt><dd> Should members of this group be able to delete their own posts?
+</dd><dt>Can delete own threads&#160;</dt><dd> Should members of this group be able to delete their own threads?
+</dd><dt>Can edit own attachments&#160;</dt><dd> Should members of this group be able to edit their own attachments?
+</dd></dl>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/e/e0/ACP_User_EditGroup_UsersPermissions.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/e/e0/ACP_User_EditGroup_UsersPermissions.png/180px-ACP_User_EditGroup_UsersPermissions.png" width="180" height="217" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/e/e0/ACP_User_EditGroup_UsersPermissions.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Edit User Group, Users and Permissions</div></div></div>
+
+<dl><dt>Can access User CP&#160;</dt><dd> Should members of this group be able to access their User Control Panel?
+</dd><dt>Can change username&#160;</dt><dd> Should members of this group be able to change their username from their User CP?
+</dd><dt>Can use custom user titles&#160;</dt><dd> Should members of this group be able to make use of custom user titles?
+</dd><dt>Can upload avatars&#160;</dt><dd> Should members of this group be able to set an avatar to be shown with their posts?
+</dd></dl>
+
+<dl><dt>Show reputations for users in this group&#160;</dt><dd> Should reputations be displayed on the front end for members of this group?
+</dd><dt>Can give reputations to users&#160;</dt><dd> Should members of this group be able to give reputations to other users?
+</dd><dt>Points to Award/Take Away&#160;</dt><dd> How many points should members of this group be able to award or take away at a time? Users are able to award/take away reputation points in intervals of 1. That is, if you enter 3 in this field, they will be able to award/take away 1, 2, or 3 points.
+</dd><dt>Maximum Reputations Allowed Per Day&#160;</dt><dd> The maximum number of reputations members of this group can give per day. Entering 0 allows members of this group to give an unlimited number of reputations per day.
+</dd></dl>
+
+<dl><dt>Can send warnings to other users&#160;</dt><dd> Should members of this group be able to send <a href="{{ site.url }}/Warning_System.html" title="Warning System">warnings</a> to other users?
+</dd><dt>Can receive warnings from other users&#160;</dt><dd> Should members of this group be able to receive warnings?
+</dd><dt>Maximum warnings allowed per day&#160;</dt><dd> The maximum number of warnings members of this group can give in a day. Entering 0 allows members of this group to give an unlimited number of warnings in a day.
+</dd></dl>
+
+<dl><dt>Can use private messaging&#160;</dt><dd> Should members of this group be able to use the private messaging system?
+</dd><dt>Can send private messages&#160;</dt><dd> Should members of this group be able to send private messages?
+</dd><dt>Can track sent private messages&#160;</dt><dd> Should members of this group be able to see when users view private messages sent by them and cancel unread messages?
+</dd><dt>Can deny message receipt notifications&#160;</dt><dd> Should members of this group be able to deny the user who sent the private message the notification of when they read the private message?
+</dd><dt>Message Quota&#160;</dt><dd> The maximum number of private messages that can be stored by members of this group. If empty, an unlimited number of private messages can be stored.
+</dd><dt>Maximum Recipients Per Message&#160;</dt><dd> The maximum number of people a user can send a private message to at one time (including Blind Carbon Copy). If empty, members of this group can send a private message to an unlimited number of people at a time.
+</dd></dl>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/6/63/ACP_User_EditGroup_Miscellaneous.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/6/63/ACP_User_EditGroup_Miscellaneous.png/180px-ACP_User_EditGroup_Miscellaneous.png" width="180" height="145" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/6/63/ACP_User_EditGroup_Miscellaneous.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Edit User Group, Miscellaneous</div></div></div>
+<p>The miscellaneous tab contains settings that do not fit into other tabs.
+</p>
+
+<dl><dt>Can view calendar&#160;</dt><dd> Should users of this group be able to view the calendar?
+</dd><dt>Can post calendar events&#160;</dt><dd> Should members of this group be able to post events (both public and private) to the calendar?
+</dd><dt>Can bypass calendar event moderation cue&#160;</dt><dd> Should members of this group be able to bypass the moderation queue when moderation is required for new events in a calendar?
+</dd><dt>Can moderate calendar events&#160;</dt><dd> Should members of this group be able to edit, delete, and approve/unapprove others' events?
+</dd></dl>
+
+<dl><dt>Can view who's online&#160;</dt><dd> Should members of this group be able to view who is online at the time, both on the forum index and on the who's online page?
+</dd><dt>Can view invisible users&#160;</dt><dd> Should members of this group be able to view users who have hidden themselves from the who's online list ("Invisible users").
+</dd><dt>Can view IP addresses on who's online&#160;</dt><dd> Should members of this group be able to view the current IP addresses of users visiting the forum on the who's online listing?
+</dd></dl>
+
+<dl><dt>Can view member list&#160;</dt><dd> Should members of this group be able to view the member list?
+</dd><dt>Can send threads to friends and email users&#160;</dt><dd> Should members of this group be able to use the email user and send thread to friend features?
+</dd><dt>Maximum Emails Per Day&#160;</dt><dd> The maximum number of emails users can send using the Email User and Send Thread to Friend features.
+</dd></dl>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/4/4b/ACP_User_AddGroup.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/4/4b/ACP_User_AddGroup.png/180px-ACP_User_AddGroup.png" width="180" height="142" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/4/4b/ACP_User_AddGroup.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Add User Group</div></div></div>
+<p>When adding a user group, you are presented with a limited selection of options for the new user group. After adding the group, you will be able to modify all options.
+</p>
+<dl><dt>Title&#160;</dt><dd> Name for the user group.
+</dd><dt>Short Description&#160;</dt><dd> A short description describing the user group.
+</dd><dt>Username Style&#160;</dt><dd> HTML style for users who have this group as their display group.
+</dd><dt>Default User Title&#160;</dt><dd> The user title that will be displayed if a user does not have a custom user title specified.
+</dd><dt>Copy Permissions From...&#160;</dt><dd> This allows you to copy all forum and group permissions from another user group, allowing you to easily set up groups with the same permissions as another user group. If you wish to copy permissions, select the user group. Otherwise, select "Don't copy permissions from another group." Doing this will create the group with default permissions.
+</dd></dl>
+<p>After saving the new user group, you will be taken to the full edit page for the user group.
+</p>
+
+<p>This tutorial will guide you how to create a Publicly Join-able Usergroup. With Publicly Join-able Group, users of your forums may join and leave those Publicly Join-able Groups. Lets begin creating your own Publicly Join-able Group.
+</p><p>Go to: AdminCP &gt; Users and Groups &gt; Groups &gt; Click on "Add New Usergroup" tab &gt; enter the desired values in the option fields.
+</p><p>After adding the values, click on "Save Usergroup" button. You'll be redirected to the new page.
+</p><p>Tick the following two options;
+- Yes, users can freely join and leave this group
+- Yes, all new join requests need to be moderated first (Optional)
+</p><p>Click on "Save Usergroup" button.
+</p><p>If all of these simple steps are successfully done, then you've successfully created a new Publicly Join-able Usergroup. It'll be visible on User Control Panel &gt; Group Memberships &gt; Publicly Join-able Usergroups.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/4/40/ACP_User_GroupLeaders.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/4/40/ACP_User_GroupLeaders.png/180px-ACP_User_GroupLeaders.png" width="180" height="125" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/4/40/ACP_User_GroupLeaders.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Group Leaders</div></div></div>
+<p>The group leaders page allows you to manage the users who can manage the users in groups and who can manage the join requests for the group.
+</p><p>In the group leader listing, you will see:
+</p>
+<dl><dt>User&#160;</dt><dd> The username of the user
+</dd><dt>Can manage members&#160;</dt><dd> Can this user add or remove members of the group?
+</dd><dt>Can manage join requests&#160;</dt><dd> Can this user approve or deny the group's join requests?
+</dd><dt>Controls&#160;</dt><dd> You can choose to either edit or delete each leader.
+</dd></dl>
+
+<p>You can add a group leader at the bottom of the group leaders page, or edit a group leader by clicking on Edit next to the user.
+</p>
+<dl><dt>Username&#160;</dt><dd> The username of the group leader you are adding. If you are editing a leader, you cannot change this field.
+</dd><dt>Can manage members&#160;</dt><dd> Can this user add or remove members of the group?
+</dd><dt>Can manage join requests&#160;</dt><dd> Can this user approve or deny the group's join requests?
+</dd></dl>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/6/61/ACP_User_JoinRequests.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/6/61/ACP_User_JoinRequests.png/180px-ACP_User_JoinRequests.png" width="180" height="77" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/6/61/ACP_User_JoinRequests.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Join Requests</div></div></div>
+<p>The group join requests page allows you to manage the join requests for user groups that require join request moderation. You can choose to approve or deny each request.
+</p><p>In the join request listing, you will see:
+</p>
+<dl><dt>Users&#160;</dt><dd> The usernames of the users who are requesting to join this group.
+</dd><dt>Reason&#160;</dt><dd> The reason each user entered when requesting to join this group.
+</dd><dt>Date Requested&#160;</dt><dd> The date and time the request was sent.
+</dd><dt>Controls&#160;</dt><dd> Approve and Deny. This allows you to approve or deny individual requests, rather than batch approving or denying.
+</dd></dl>
+<p>For each request, you can check the checkbox in the far left of each row, and then "Approve Selected Requests" or "Deny Selected Requests." Either will perform the specified action for all of the selected requests.
+</p><p>Checking the checkbox at the top of the table will select all requests, allowing you to approve or deny all requests at once.
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html#Dashboard" title="Admin CP Home">Dashboard</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Preferences" title="Admin CP Home">Preferences</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Version_Check" title="Admin CP Home">Version Check</a> - <a href="{{ site.url }}/Admin_CP_Home.html#MyBB_Credits" title="Admin CP Home">MyBB Credits</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Config_Settings.html" title="Admin CP Config Settings">Settings</a> - <a href="{{ site.url }}/Admin_CP_Config_Banning.html" title="Admin CP Config Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Config_Profile_Fields.html" title="Admin CP Config Profile Fields">Custom Profile Fields</a> - <a href="{{ site.url }}/Admin_CP_Config_Smilies.html" title="Admin CP Config Smilies">Smilies</a> - <a href="{{ site.url }}/Admin_CP_Config_Word_Filters.html" title="Admin CP Config Word Filters">Word Filters</a> - <a href="{{ site.url }}/Admin_CP_Config_MyCode.html" title="Admin CP Config MyCode">MyCode</a> - <a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Languages</a> - <a href="{{ site.url }}/Admin_CP_Config_Post_Icons.html" title="Admin CP Config Post Icons">Post Icons</a> - <a href="{{ site.url }}/Admin_CP_Config_Help_Docs.html" title="Admin CP Config Help Docs">Help Documents</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugins</a> - <a href="{{ site.url }}/Admin_CP_Config_Attachments.html" title="Admin CP Config Attachments">Attachment Types</a> - <a href="{{ site.url }}/Admin_CP_Config_Mod_Tools.html" title="Admin CP Config Mod Tools">Moderator Tools</a> - <a href="{{ site.url }}/Admin_CP_Config_Spiders.html" title="Admin CP Config Spiders">Spiders/Bots</a> - <a href="{{ site.url }}/Admin_CP_Config_Calendars.html" title="Admin CP Config Calendars">Calendars</a> - <a href="{{ site.url }}/Admin_CP_Config_Warning_System.html" title="Admin CP Config Warning System">Warning System</a> - <a href="{{ site.url }}/Admin_CP_Config_Thread_Prefixes.html" title="Admin CP Config Thread Prefixes">Thread Prefixes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Forum_Management.html" title="Admin CP Forum Management">Forum Management</a> - <a href="{{ site.url }}/Admin_CP_Forum_Announcements.html" title="Admin CP Forum Announcements">Forum Announcements</a> - <a href="{{ site.url }}/Admin_CP_Moderation_Queue.html" title="Admin CP Moderation Queue">Moderation Queue</a> - <a href="{{ site.url }}/Admin_CP_Forum_Attachments.html" title="Admin CP Forum Attachments">Attachments</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Users.html" title="Admin CP Users">Users</a> - <strong class="selflink">Groups</strong> - <a href="{{ site.url }}/Admin_CP_User_Titles.html" title="Admin CP User Titles">User Titles</a> - <a href="{{ site.url }}/Admin_CP_User_Banning.html" title="Admin CP User Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Admin_Perms.html" title="Admin CP Admin Perms">Admin Permissions</a> - <a href="{{ site.url }}/Admin_CP_Mass_Mail.html" title="Admin CP Mass Mail">Mass Mail</a> - <a href="{{ site.url }}/Admin_CP_Group_Promotions.html" title="Admin CP Group Promotions">Group Promotions</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_System_Health.html" title="Admin CP System Health">System Health</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Cache_Manager" title="Admin CP Tools">Cache Manager</a> - <a href="{{ site.url }}/Admin_CP_Task_Manager.html" title="Admin CP Task Manager">Task Manager</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Recount_and_Rebuild" title="Admin CP Tools">Recount and Rebuild</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#PHP_Info" title="Admin CP Tools">PHP Info</a> - <a href="{{ site.url }}/Admin_CP_Backups.html" title="Admin CP Backups">Database Backups</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Optimize_Database" title="Admin CP Tools">Optimize Database</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#File_Verification" title="Admin CP Tools">File Verification</a> - <a href="{{ site.url }}/Admin_CP_Admin_Logs.html" title="Admin CP Admin Logs">Administrator Log</a> - <a href="{{ site.url }}/Admin_CP_Mod_Logs.html" title="Admin CP Mod Logs">Moderator Log</a> - <a href="{{ site.url }}/Admin_CP_User_Email_Logs.html" title="Admin CP User Email Logs">User Email Log</a> - <a href="{{ site.url }}/Admin_CP_System_Mail_Logs.html" title="Admin CP System Mail Logs">System Mail Log</a> - <a href="{{ site.url }}/Admin_CP_User_Warning_Logs.html" title="Admin CP User Warning Logs">User Warning Log</a> - <a href="{{ site.url }}/Admin_CP_Statistics.html" title="Admin CP Statistics">Statistics</a>
+</td></tr></table>
+</div>
+
+
+
+

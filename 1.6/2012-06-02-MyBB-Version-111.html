@@ -1,0 +1,27 @@
+---
+layout: post
+title: MyBB 1.1.1
+permalink: 111.html
+category: Versions
+---
+<p>MyBB 1.1.1 is a security update to the MyBB 1.x series. It fixes several moderate-low risk cross site scripting exploits which have recently been found and published in MyBB. It also fixes a potentially larger security issue on some installations.
+</p><p>We recommend all users upgrade their copy of MyBB to the latest available release.
+</p><p>Fixed vulnerabilities:
+</p>
+<ul><li> Fixes direct initialization of global.php and inc/init.php which could lead to security vulnerabilities (imei Web Security)
+</li><li> Possible cross site scripting through unproper sanitisation of [img] tags (imei Web Security)
+</li><li> Possible cross site scripting through login redirection URL (imei Web Security)
+</li><li> Possible cross site scripting through unproper sanitization of [email] tags (Devil-00)
+</li><li> Possible cross site scripting through signature preview page (Roozbeh Afrasiabi)
+</li><li> Possible cross site scripting through guest usernames when posting (Devil-00)
+</li><li> Possible cross site scripting through attachment content disposition for HTML attachments (WhiteAcid)
+</li></ul>
+<p><br />
+The release on the MyBB site has also been updated to 1.1.1.
+</p><p>Update instructions are in the next post, including a list of changed files (and a ZIP archive of them) as well as manual patching instructions for those of you who have customized their code.
+</p><p>More information: <a rel="nofollow" class="external free" href="http://community.mybb.com/showthread.php?tid=8232">http://community.mybb.com/showthread.php?tid=8232</a>
+</p><p><br />
+</p>
+{% include versions_footer.html %}
+
+

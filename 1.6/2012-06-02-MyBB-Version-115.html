@@ -1,0 +1,26 @@
+---
+layout: post
+title: MyBB 1.1.5
+permalink: 115.html
+category: Versions
+---
+<p>And in the continuation of something which couldn't have come at a worse time, we're releasing MyBB 1.1.5 - a security update to the MyBB 1.x series. It fixes a few potentially high risk vulnerabilities affecting MyBB 1.0 PR 2 to MyBB 1.1.4.
+</p><p>As an ever growing list of vulnerabilities appears to be found in MyBB, we've performed a software based code audit on the package which detects potential SQL injections, cross site scripting and general security issues. It made us aware of several issues in 1.1.4 so we're immediately releasing a patch. From now on, each release of MyBB will be audited using this application before it is downloadable.
+</p><p>The release also fixes a few other vulnerabilities discovered by third parties.
+</p><p>We recommend all users upgrade their copy of MyBB to the latest available release.
+</p>
+<pre>   * Potential cross site scripting with [url] tag - also affects MyBB 1.0 RC2 and greater (imei Web Security)
+   * Potential SQL injection in "Archive mode" on servers with register_globals enabled (imei Web Security)
+   * Potential user group manipulation (makpaolo)
+   * Other potential SQL injection attacks (Internal code audit, confirmed by DCoder)
+</pre>
+<p><br />
+</p><p>The release on the MyBB site has also been updated to 1.1.5.
+</p><p>Update instructions are in the next post, including a list of changed files (and a ZIP archive of them) as well as manual patching instructions for those of you who have customized their code.
+</p><p>There is the potential once again for scripts to be written to exploit these vulnerabilities. Please ensure you update your board as soon as you can and that you inform anyone you know running MyBB to do the same.
+</p><p>If your board is compromised, please send myself or one of the other team members as much information you can (including raw access logs) and we'll try to do our best to resolve the situation. If you also need assistance in upgrading, please do not hesitate to contact me about it and I'll get you up to date.
+</p><p>It does truly sadden me to see this happen to our product - people's installations being compromised by "script kiddy" and hacking groups where destroying other peoples property is considered fun. Hopefully things will calm down - and I am sorry, personally, for once again having to release another patch for MyBB.
+</p>
+{% include versions_footer.html %}
+
+

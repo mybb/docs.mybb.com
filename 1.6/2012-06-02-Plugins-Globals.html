@@ -1,0 +1,45 @@
+---
+layout: post
+title: Plugins:Globals
+permalink: Plugins-Globals.html
+category: Plugins
+---
+
+<p>MyBB has various PHP classes - $mybb, $db for example. To use these in our own plugins and other functions, we need to include their global variable. If you're not so sure about this, let's take a look at the _is_installed function for our plugins:
+</p>
+<pre>
+	function hello_is_installed()
+	{
+		global $db;
+		if($db-&gt;table_exists(&quot;hello_world&quot;))
+		{
+			return true;
+		}
+		return false;
+	}
+</pre>
+<p>Here, we're using the $db variable. This lets us access various MyBB methods to interact with the database (such as insert, write, delete etc.). We can only do this if we include this variable, and to do that, we use global to use it in the function. For a full list of MyBB database methods, see the <a href="{{ site.url }}/Database_Methods.html" title="Database Methods">Database Methods</a> page.
+</p><p>In the next example, we use the $mybb variable to find out if the current user is an Admin / Super Moderator.
+</p>
+<pre>
+	function hello_only_show_this_to_admins_and_supermods()
+	{
+		global $mybb;
+		if($mybb-&gt;usergroup['isadmin'] == 1 || $mybb-&gt;usergroup['issupermod'] == 1)
+		{
+			return true;
+		}
+		return false;
+	}
+</pre>
+<p>We can use two or more variables, we just do this:
+</p>
+<pre>
+	global $db, $mybb, $templates, $lang, $plugins;
+</pre>
+<p>That means we can use MyBB variables in our plugins instead of writing our own functions which do the same thing.
+</p><p>For a common list of available variables, see the <a href="{{ site.url }}/Plugin_Methods.html" title="Plugin Methods">Plugin Methods</a> page. You can also change templates using your plugins and through MyBB code. To find out how, read the <a href="{{ site.url }}/Changing_Templates.html" title="Changing Templates">Changing Templates</a> page.
+</p>
+
+
+

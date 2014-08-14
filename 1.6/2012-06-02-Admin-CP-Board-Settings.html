@@ -1,0 +1,353 @@
+---
+layout: post
+title: Board Settings
+permalink: Admin_CP_Board_Settings.html
+category: Extending MyBB
+category: Admin CP
+---
+
+<p>This page covers the settings that are <b>included</b> with MyBB. For information regarding the Settings section in general, including adding and editing your own settings and setting groups, see <a href="{{ site.url }}/Admin_CP_Config_Settings.html" title="Admin CP Config Settings">Admin CP: Settings</a>.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Board_Online.2FOffline"><span class="tocnumber">1</span> <span class="toctext">Board Online/Offline</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#General_Configuration"><span class="tocnumber">2</span> <span class="toctext">General Configuration</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Server_Optimization_Options"><span class="tocnumber">3</span> <span class="toctext">Server Optimization Options</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Date_and_Time_Formats"><span class="tocnumber">4</span> <span class="toctext">Date and Time Formats</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Forum_Home_Options"><span class="tocnumber">5</span> <span class="toctext">Forum Home Options</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Forum_Display_Options"><span class="tocnumber">6</span> <span class="toctext">Forum Display Options</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Show_Thread_Options"><span class="tocnumber">7</span> <span class="toctext">Show Thread Options</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#User_Registration_And_Profile_Options"><span class="tocnumber">8</span> <span class="toctext">User Registration And Profile Options</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Posting"><span class="tocnumber">9</span> <span class="toctext">Posting</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Member_List"><span class="tocnumber">10</span> <span class="toctext">Member List</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Reputation"><span class="tocnumber">11</span> <span class="toctext">Reputation</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Warning_System_Settings"><span class="tocnumber">12</span> <span class="toctext">Warning System Settings</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Show_Forum_Team_Options"><span class="tocnumber">13</span> <span class="toctext">Show Forum Team Options</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Private_Messaging"><span class="tocnumber">14</span> <span class="toctext">Private Messaging</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Calendar"><span class="tocnumber">15</span> <span class="toctext">Calendar</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Who.27s_Online"><span class="tocnumber">16</span> <span class="toctext">Who's Online</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Portal_Settings"><span class="tocnumber">17</span> <span class="toctext">Portal Settings</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Search_System"><span class="tocnumber">18</span> <span class="toctext">Search System</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Clickable_Smilies_and_BB_Code"><span class="tocnumber">19</span> <span class="toctext">Clickable Smilies and BB Code</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Control_Panel_Preferences_.28Global.29"><span class="tocnumber">20</span> <span class="toctext">Control Panel Preferences (Global)</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Mail_Settings"><span class="tocnumber">21</span> <span class="toctext">Mail Settings</span></a></li>
+</ul>
+</td></tr></table>
+
+<p>This setting group allows you to turn your MyBB forum on and off. You may also specify a reason for turning them off.
+</p>
+<dl><dt>Board Closed&#160;</dt><dd> If this is set to yes, the forum will display the Board Closed Reason. Only Administrators will be able to access the forum.
+</dd><dt>Board Closed Reason&#160;</dt><dd> A reason for closing your forum. This field will only be shown if the "Board Closed" setting is set to "Yes," meaning the forum is closed.
+</dd></dl>
+
+<p>This setting group contains various settings configuring your entire MyBB forum as a whole. In the General Configuration area you can control your forum's name, URL, cookie path, contact email and more.
+</p>
+<dl><dt>Board Name&#160;</dt><dd> The name of your board.
+</dd><dt>Board URL&#160;</dt><dd> This is the full URL to your board <b>without</b> the trailing (last) slash (/).<br /><b>Correct:</b> http://www.mysite.com/mybb<br /><b>Incorrect:</b> <strike>http://www.mysite.com/mybb/</strike>
+</dd><dt>Homepage Name&#160;</dt><dd> The name of your website, displayed in the default footer as a link to your website
+</dd><dt>Homepage URL&#160;</dt><dd> The link to your website. See Homepage Name above.
+</dd><dt>Admin Email</dt><dd> When the board generates automatic email notifications, the mails are sent from this address.
+</dd><dt>Return Email&#160;</dt><dd> This email address is used for incoming replies to outgoing emails sent via the forums, this email address is used. If this field is empty, the Admin Email will be used. See Admin Email above.
+</dd><dt>Contact Us link&#160;</dt><dd> A link in the default footer for users to contact you or your staff.  This can either be a URL (for example, "contact.php") or an email address (in the form of "mailto:your@email.com"). By default, this is filled in with a link to the admin email address.
+</dd><dt>Default Language&#160;</dt><dd> The language displayed on the board by default that guests and users who have not set their language setting will see.
+</dd><dt>Cookie domain&#160;</dt><dd> This should be in the form of ".mysite.com" without the quotes.  Alternatively, it can be left blank.  If your users are having problems logging in, check your cookie settings.  See <a href="{{ site.url }}/Cookie_Settings.html" title="Cookie Settings" class="mw-redirect">Cookie Settings</a> for more information.
+</dd><dt>Cookie path&#160;</dt><dd> This should be in the form of "/folder/to/mybb/" without the quotes.  See <a href="{{ site.url }}/Cookie_Settings.html" title="Cookie Settings" class="mw-redirect">Cookie Settings</a> for more information.
+</dd><dt>Cookie Prefix&#160;</dt><dd> This is a prefix for all cookies used by MyBB on your forum. This can be useful for possible conflicting cookies, such as having multiple copies of MyBB installed on one domain or having a software with conflicting cookies installed. Leaving this blank will not use a prefix.
+</dd><dt>Show Version Numbers&#160;</dt><dd> Allows you to turn off the public display of version numbers in MyBB. This is best disabled for security reasons.
+</dd><dt>CAPTCHA Images for Registration &amp; Posting&#160;</dt><dd> If yes, and GD is installed, an image will be shown during registration and guest posting where users are required to enter the text contained within the image to continue. This helps prevent automated registrations and postings.
+</dd><dt>Reported Posts Medium&#160;</dt><dd> When a user reports a post to the moderators, the report will be sent to one of the options you select here. Storing in a database is the default option and is recommended.
+</dd><dt>Stats Limit&#160;</dt><dd> The number of threads to be shown on the statistics page for most replies and most views. By default, this is set to 15.
+</dd><dt>Decimal Point&#160;</dt><dd> The decimal point you use in your region.
+</dd><dt>Thousands Numeric Separator&#160;</dt><dd> The punctuation you want to use to separate large numbers. (For example, the setting ',' with the number 1200 will give you a number such as 1,200)
+</dd><dt>Show Language Selector in Footer&#160;</dt><dd> If you wish to allow users and guests to change their language via a selector in the footer, set to yes. This is best for forums that have multiple languages installed.
+</dd><dt>Maximum Page Links in Pagination&#160;</dt><dd> The maximum number of next and previous page links to be shown when there is more than one page of results. This does not limit the number of pages, but the number of links shown at a time.
+</dd><dt>Mailing Address&#160;</dt><dd> The mailing address COPPA forms can be sent to. This is only necessary if you have <a href="http://localhost/mediawiki/index.php?title=COPPA&amp;action=edit&amp;redlink=1" class="new" title="COPPA (page does not exist)">COPPA</a> enabled.
+</dd><dt>Contact Fax No&#160;</dt><dd> The fax number COPPA forms can be sent to. This is only necessary if you have <a href="http://localhost/mediawiki/index.php?title=COPPA&amp;action=edit&amp;redlink=1" class="new" title="COPPA (page does not exist)">COPPA</a> enabled.
+</dd></dl>
+
+<p>These options allow you to set various server and optimization preferences allowing you to reduce the load on your server, and gain better performance on your board. Please keep in mind that all servers aren't the same, some settings should be left disabled. If your not sure if your server can handle some of the settings, please contact your host.
+</p>
+<dl><dt>Enable Search Engine Friendly URLS&#160;</dt><dd> Search engine friendly URLs allows links to be shorter and easier to type, such as showthread.php?tid=1 becoming thread-1.html. Your server must support mod_rewrite in order for this to work properly. See the <a href="{{ site.url }}/SEF_URLS.html" title="SEF URLS">Search Engine Friendly URLS</a> article for more information. By default, this is set to automatically detect, where MyBB checks to see if your server can support it; however, this may not always work. You can also enable or disable this feature.
+</dd><dt>Use GZip Page Compression&#160;</dt><dd> If this is set to yes, content sent to the user's browser will be compressed for a quicker download and use less bandwidth.
+</dd><dt>GZip Page Compression Level&#160;</dt><dd> The level of GZip compression, if GZip compression is enabled. 0 is no compression, whereas 9 is maximum compression.
+</dd><dt>Send Standard Headers&#160;</dt><dd> If this is set to yes, these headers will be sent:
+</dd></dl>
+<blockquote>HTTP/1.0 200 OK<br />
+HTTP/1.1 200 OK<br />
+Content:type: text/html</blockquote>
+<dl><dt>Send No Cache Headers&#160;</dt><dd> If this is set to yes, these headers will be sent:
+</dd></dl>
+<blockquote>Expires: Sat, 1 Jan 2000 01:00:00 GMT<br />
+Last:Modified: " . gmdate("D, d M Y H:i:s") . "GMT<br />
+Cache:Control: no:cache, must:revalidate<br />
+Pragma: no:cache</blockquote>
+<dl><dt>Friendly Redirection Pages&#160;</dt><dd> If this is set to on, redirection messages will be displayed.  If not, then the user will be directly transfered to the resulting page without a redirect message. Users can also set this in their User CP.
+</dd></dl>
+<dl><dt>NIX Load Limiting&#160;</dt><dd><ul><li> If you are concerned about having too high a server load, you can use this setting to set a limit.  If your server goes over the server load limit you set, then MyBB will reject the user until the server load falls back down below the limit.
+</li></ul>
+</dd></dl>
+<dl><dt>Output template start/end comments?&#160;</dt><dd> This will enable or disable the output of template start/end comments in the HTML. Start/end comments appear directly before a template begins and directly after a template ends.
+</dd><dt>Enable XMLHttp request features&#160;</dt><dd> Should any features using XMLHttp requests (AJAX features) be enabled?
+</dd><dt>Use PHP's Shutdown Functionality&#160;</dt><dd> This setting for the most part is best left at the default which is detected upon installation. If thread indicators are not updating as well as other meta information, set this setting to 'No'
+</dd><dt>Advanced Stats / Debug information&#160;</dt><dd> Shows server load, parse time, generation time, Gzip compression, et cetera on the bottom of all pages in the root folder. Please note that only administrators see this information.
+</dd><dt>Uploads Path&#160;</dt><dd> This is the path to the uploads folder.  Attachments and uploaded avatars are saved in this directory and therefore must be CHMODed 777 (world writable) on Unix/Linux servers.
+</dd><dt>Use Error Handling&#160;</dt><dd> To use MyBB's integrated error handling, this needs to be enabled. It is recommended this remains enabled.
+</dd><dt>Error Logging Medium&#160;</dt><dd> How should errors be logged, if they are logged? You can have them logged to a file, sent to an email address, both, or neither.
+</dd><dt>Error Type Medium&#160;</dt><dd> What types of errors should be shown? Should warnings, errors, or both be shown?
+</dd><dt>Error Logging Location&#160;</dt><dd> If error logging is enabled, what is the location of the error log?
+</dd><dt>Enable Forum Jump Menu&#160;</dt><dd> The forum jump menu provides quick access to other forums and pages from the forum and thread pages. If you have a large number of forums, it can add a large load to your forums. Setting to 'No' disables the forum jump menu.
+</dd></dl>
+
+<p>Here you can specify the different date and time formats used to display dates and times on the forums. These settings use the <a rel="nofollow" class="external text" href="http://php.net/date">PHP date() function</a>, so we don't recommend changing this unless you know what you're doing.
+</p>
+<dl><dt>Date Format&#160;</dt><dd> This is the format shown for dates in the forum.
+</dd><dt>Time Format&#160;</dt><dd> This is the format shown for times in the forum.
+</dd><dt>Registered Date Format&#160;</dt><dd> This is the format shown when a user makes a post for the date registered (for example, Registered: Apr 2005)
+</dd><dt>Default Timezone Offset&#160;</dt><dd> When users register, this will be the timezone selection by default.
+</dd><dt>Day Light Savings Time&#160;</dt><dd> If times are an hour out above and your timezone is selected correctly, enable day light savings time correction.
+</dd></dl>
+
+<p>This section allows you to manage the various settings used on the forum home (index.php) of your boards such as enabling and disabling different features such as Today's Birthdays, Hide Private Forums, Show Who's Online, and more.
+</p>
+<dl><dt>Show Forum Descriptions&#160;</dt><dd> This option allows you to change whether or not forum descriptions are shown below each forum on the homepage.
+</dd><dt>Subforums To Show On Index Listing&#160;</dt><dd> If a forum has a number of subforums, the number of subforums for that forum shown on the homepage is controlled by this setting. Set to 0 to now show the subforum list.
+</dd><dt>Show Subforum Status Icons?&#160;</dt><dd> Show icons indicating whether or not a subforum contains new posts or not? This won't have any effect unless you enabled subforums display on the index.
+</dd><dt>Hide Private Forums&#160;</dt><dd> If this setting is set to "yes" and the user does not have permission to view the forum, then the forum will be hidden to them. If this is set to no, then all users will see all forums on the forum list, but will not be able to view the the thread listings if they do not have the permissions to.
+</dd><dt>Forums Moderator Listing&#160;</dt><dd> If this is set to "yes," a list of moderators for each forum will be shown below the forum name, if the forum has moderators.
+</dd><dt>Show Today's Birthdays&#160;</dt><dd> Show user birthdays at the bottom of the homepage.
+</dd><dt>Show Who's Online&#160;</dt><dd> If this is set to "yes," then a list of users currently online will be shown at the bottom of the forum homepage.
+</dd><dt>Show Small Stats Section&#160;</dt><dd> Show a summary of the forum statistics at the bottom of the forum homepage (total members, total threads, total posts, newest member, etc).
+</dd><dt>Show x viewing forum&#160;</dt><dd> Should the current number of users viewing each forum be shown on the forum home?
+</dd></dl>
+
+<p>This section allows you to manage the various settings used on the forum display (forumdisplay.php) of your boards. This includes enabling and disabling different features, such as replies and views for a hot topic, threads per page, and more.
+</p>
+<dl><dt>Threads Per Page&#160;</dt><dd> The number of threads shown for each "page" of the forum by default.
+</dd><dt>Replies For Hot Topic&#160;</dt><dd> The number of posts needed in a thread to be considered "hot"
+</dd><dt>Views For Hot Topic&#160;</dt><dd> The number of views needed for a thread to be considered "hot"
+</dd><dt>User Selectable Threads Per Page&#160;</dt><dd> Users will be able to choose how many threads per page they want displayed from the list of numbers in this setting. Separate numbers with a comma.
+</dd><dt>Use "Dot" Icons&#160;</dt><dd> If this is set to "yes," if a user has posted in a thread, then the thread will have a special icon indicating that the user has posted in the thread previously.
+</dd><dt>Users Browsing This Forum&#160;</dt><dd> If enabled, this will show a list of users viewing the thread list at the top of the forum.
+</dd><dt>Announcements Limit&#160;</dt><dd> If there are active announcements in the forum, this setting will limit how many show up on the thread listing.
+</dd></dl>
+
+<p>This section allows you to manage the various settings used on the thread display page (showthread.php) of your boards such as enabling and disabling different features such as post layout (horizontal versus classic post layout), posts per page, maximum avatar dimensions in posts, and more.
+</p>
+<dl><dt>Post Layout&#160;</dt><dd> Which layout should posts be shown in by default? You can either select the horizonal post layout where author information is shown above the post or the classic layout where the author information is shown to the left of the post. Users can also choose to use the classic layout via their User CP.
+</dd><dt>Posts Per Page&#160;</dt><dd> The number of posts shown for each "page" of the thread by default
+</dd><dt>User Selectable Posts Per Page&#160;</dt><dd> Users will be able to choose how many posts per page they want displayed from the list of numbers in this setting.  Separate numbers with a comma.
+</dd><dt>Maximum Avatar Dimensions in Posts&#160;</dt><dd> The maximum size (in pixels) for avatars in posts. Avatars larger than this size will be scaled down. This is <i>not</i> the maximum dimensions for avatars users can upload, but for their display in posts.
+</dd><dt>Read Threads in Database (Days)&#160;</dt><dd> This is the number of days you want to keep the data of what threads the user has read. Set to 0 to disable.
+</dd><dt>Usenet Style Thread View&#160;</dt><dd> If selected, the display style of the thread will be converted to USENET style.
+</dd><dt>Show Quick Reply Form&#160;</dt><dd> Should the quick reply form be shown at the bottom of threads? It is only displayed to users who have it enabled in their User CP and those with permissions to post.
+</dd><dt>Show Multi-quote buttons&#160;</dt><dd> Should users be allowed to select multiple posts for quoting? Users select posts via the multi-quote buttons and then can either load them into the quick reply form, or have them appear when posting a reply to a thread or posting a new thread.
+</dd><dt>Show "Similar Threads" table&#160;</dt><dd> If enabled, a listing of similar threads will be displayed at the bottom of the thread.
+</dd><dt>Delayed Thread View Updates&#160;</dt><dd> If this setting is enabled, thread view counts will be updated using the task scheduling system. Otherwise, they will be incremented instantly. <i>Note: The 'Thread Views' task must be enabled for this to work. This task should be automatically enabled or disabled when changing this setting.</i>
+</dd></dl>
+
+<p>Here you can control various settings with relation to user account registration and account management.
+</p>
+<dl><dt>Disable Registrations&#160;</dt><dd> Should new registrations be disabled? Set to 'No' to <i>allow</i> registrations.
+</dd><dt>Registration Method&#160;</dt><dd> When registering an account, should users be activated instantly, be sent an email activation, be sent a random password, or be activated by an administrator?
+</dd></dl>
+<p><strong>Instant Activation</strong>: As soon as a user registers an account, they can post threads, replies etc without having to verify their email. <br />
+<strong>Email Activation</strong>: When users register an account, they are required to click a link that is sent to their email to verify their email. <br />
+<strong>Random Password</strong>: An email is sent to the users email address with a random password that they use to log in. <br />
+<strong>Administrator Activation</strong>: All users must be activated by an administrator.<br />
+</p><p>When it says <em>awaiting activation</em> in the ACP, it means the user has registered but has not clicked the activation link that they received in the welcome email. 
+</p>
+<dl><dt>Minimum Username Length&#160;</dt><dd> The minimum number of characters a user's username can be. A username with any less than this number of characters cannot be registered.
+</dd><dt>Maximum Username Length&#160;</dt><dd> The maximum number of characters a user's username can be. A username with any more than this number of characters cannot be registered.
+</dd><dt>Minimum Password Length&#160;</dt><dd> The minimum number of characters a user's password can be. A password with any less than this number of characters cannot be registered.
+</dd><dt>Maximum Password Length&#160;</dt><dd> The maximum number of characters a user's password can be. A password with any more than this number of characters cannot be registered.
+</dd><dt>Custom User Title Maximum Length&#160;</dt><dd> The maximum number of characters a user's custom user title, if enabled, can be. Any custom user title with more than this number of characters cannot be used.
+</dd><dt>Time Between Registrations&#160;</dt><dd> The amount of time, in hours, between registrations using the same IP address.
+</dd><dt>Allow emails to be registered multiple times&#160;</dt><dd> Should a single email address be allowed to be registered more than once?
+</dd><dt>Maximum Registrations Per IP Address&#160;</dt><dd> The maximum number of registrations a user can register while using a single IP address.
+</dd><dt>Numeber of times to allow failed logins&#160;</dt><dd> The number of failed logins allowed before they are locked out. Set to 0 to disable.
+</dd><dt>Time between failed logins&#160;</dt><dd> The amount of time between a user can try to login again after having been locked out.
+</dd><dt>Display number of failed logins&#160;</dt><dd> Should the user be shown the number of login attempts they have?
+</dd><dt>User Referrals System&#160;</dt><dd> Should users be able to specify a referrer when registering?
+</dd><dt>Allow MyCode in Signatures&#160;</dt><dd> Should <a href="{{ site.url }}/MyCode.html" title="MyCode">MyCode</a> be allowed in user's signatures?
+</dd><dt>Maximum Number of Images per Signature&#160;</dt><dd> The maximum number of images a user can put in their signature, including smilies. Set to 0 to disallow images in signatures.
+</dd><dt>Allow Smiles in Signatures&#160;</dt><dd> Should users be able to use smilies in their signatures?
+</dd><dt>Allow HTML in Signatures&#160;</dt><dd> Should HTML be allowed in user's signatures?
+</dd><dt>Allow [img] Code in Signatures&#160;</dt><dd> Should users be able to use the [img] code in their signatures?
+</dd><dt>Length limit in Signatures&#160;</dt><dd> The maximum numbers of characters a user can put in their signature. Any signature with more than this number of characters will not be allowed.
+</dd><dt>MyCode affects signature length&#160;</dt><dd> Should MyCode placed in a signature count towards the character limit?
+</dd><dt>Maximum Avatar Dimensions&#160;</dt><dd> The maximum dimensions of avatars users can upload in pixels and the format of width<b>x</b>height. Leaving this blank allows no restriction.
+</dd><dt>Max Uploaded Avatar Size&#160;</dt><dd> The maximum file size of uploaded avatars in kilobytes.
+</dd><dt>Avatar Resizing Mode&#160;</dt><dd> Should avatars over the maximum dimensions be resized when uploaded? You can choose to automatically resize all large avatars, give users the option of resizing large avatars, or disable avatar resizing.
+</dd><dt>Users Keep Email&#160;</dt><dd> If an already registered user has an email address that is in your banned list, should they be allowed to keep it?
+</dd><dt>COPPA Compliance&#160;</dt><dd> You can choose to require the user's birthday, to comply with the <a rel="nofollow" class="external text" href="http://www.coppa.org/comply.htm">COPPA</a> regulations. You can choose to "Disable this feature" (does not require date of birth), "Enabled" (require a COPPA form to be submitted for users under the age of 13, and require date of birth on registration), or "Deny users under the age of 13" (require date of birth on registration, and deny any under the age of 13).
+</dd><dt>Allow Away Statuses&#160;</dt><dd> If set to yes, users can set themselves as away (which is shown in the postbit), as well as specify a return date and a reason (which is shown in the user's profile).
+</dd></dl>
+
+<p>These options control the various elements in relation to posting messages on the forums. There are 15 settings you can enable or disable.
+</p>
+<dl><dt>Minimum Message Length&#160;</dt><dd> Posts must have at least this number of characters in order to be accepted.
+</dd><dt>Maximum Message Length&#160;</dt><dd> Users cannot post more than this amount of characters in one post. Entering 0 allows an unlimited length.
+</dd><dt>Maximum Posts Per Day&#160;</dt><dd> Users cannot post more than this amount of posts in 24 hours. Entering 0 allows unlimited posts per day.
+</dd><dt>Post Flood Checking&#160;</dt><dd> Setting this to "On" forbids a user from posting until a set number of seconds have passed after their previous post. The time is set in the following setting.
+</dd><dt>Post Flood Time&#160;</dt><dd> Users must wait this amount of time in order to post again (the setting above must be set to "On")
+</dd><dt>Post Merge Time&#160;</dt><dd> Posts made within so many minutes of each other (by the same user) will be automatically merged together. In this setting, you set the number of minutes until posts are no longer merged (meaning those made within x minutes will be merged). Set this to 0 or leave it blank to disable the feature.
+</dd><dt>Merge Forums to Ignore&#160;</dt><dd> The forum IDs to exclude from the auto merge feature (the setting above). Separate by a comma, and leave blank to merge double posts in all forums.
+</dd><dt>Merge User Groups to Ignore&#160;</dt><dd> User group IDs that will not be excluded from automatic merging of double posts. The default for this setting is <b>4</b>, which corresponds to the Adminstrator group.
+</dd><dt>Merge Separator&#160;</dt><dd> The separator that will be used when merging double posts. The default is <b>[hr]</b>.
+</dd><dt>Log Posting IP Address&#160;</dt><dd> This setting controls whether or not IP addresses of the post author are saved, and to whom they are shown to.
+</dd><dt>Show "Edited by" Messages&#160;</dt><dd> When a user edits his/her posts, this setting controls whether or not a small message at the bottom of the post logs the edit author and edit time (of the most previous edit).
+</dd><dt>Show "Edited by" Messages for Forum Staff&#160;</dt><dd> This is the same as the <i>Show "Edited by" Messages</i> setting, but for those specified as forum staff - most typically Adminstrators, Super Moderators, and Moderators.
+</dd><dt>Maximum Images Per Post&#160;</dt><dd> This setting limits the number of images and smilies that a user can post in one message.
+</dd><dt>Amount of Characters for Subscription Previews&#160;</dt><dd> The number of characters of a post to be sent with email notification of a new reply.
+</dd><dt>Maximum Attachments Per Post&#160;</dt><dd> This setting limits the number of files a user can attach to one post.
+</dd><dt>Show Attached Thumbnails In Posts&#160;</dt><dd> You can choose to show attached images in posts as either a thumbnail, the full size image, or as a download link.
+</dd><dt>Attached Thumbnail Maximum Height&#160;</dt><dd> The maximum height that a thumbnail can be generated at for an attached image
+</dd><dt>Attached Thumbnail Maximum Width&#160;</dt><dd> The maximum width that a thumbnail can be generated at for an attached image
+</dd><dt>Edit Time Limit&#160;</dt><dd> After the set number of minutes, regular users will not be able to edit their posts (if they have the permission to). Entering 0 will allow for no limit. This setting does not affect forum staff, most typically Administrators, Super Moderators, and Moderators.
+</dd><dt>Number of Characters before Word Wrapping Occurs&#160;</dt><dd> The number of characters in a word before a space is automatically inserted (to help preserve the forum layout). Setting to 0 will disable this feature.
+</dd><dt>Maximum Poll Option Length&#160;</dt><dd> Users cannot have poll options longer than this number of characters. Setting to 0 disables the limit.
+</dd><dt>Maximum Number Of Poll Options&#160;</dt><dd> Users cannot post more than this number of poll options in a single poll
+</dd><dt>Show Thread Review&#160;</dt><dd> Should the 10 most recent posts in the thread be shown when posting a reply?
+</dd></dl>
+
+<p>This section allows you to control various aspects of the board member listing (memberlist.php), such as whether to enable the member list, the number of members per page, and sort orders.
+</p>
+<dl><dt>Enable Member List Functionality&#160;</dt><dd> Should the member list be enabled?
+</dd><dt>Members Per Page&#160;</dt><dd> The number of members shown per page.
+</dd><dt>Default Sort Field&#160;</dt><dd> The field members should be sorted by default, including "Registration Date," "Post Count," "Username," and "Last Active."
+</dd><dt>Default Sort Order&#160;</dt><dd> Display in ascending (A-Z, beginning to end) or descending (Z-A, end to beginning) order?
+</dd><dt>Maximum Display Avatar Dimensions&#160;</dt><dd> The maximum dimensions for the avatars displayed on the member list. If an avatar is larger than these dimensions, it will be scaled down. This does <b>not</b> limit the size of avatars users can upload, but instead the size of already uploaded avatars displayed on the member list.
+</dd></dl>
+
+<p>The reputation system allows users to give feedback on other users.
+</p>
+<dl><dt>Enable Reputation Functionality&#160;</dt><dd> To completely disable reputation and all traces of it, set this to "No"
+</dd><dt>Reputation Comments Per Page&#160;</dt><dd> The number of comments to be displayed per page on a user's reputation page.
+</dd></dl>
+
+<p>The warning system allows forum staff to warn users for rule violations and keep track of these warnings.
+</p>
+<dl><dt>Enable Warning System&#160;</dt><dd> Set to no to disable the warning system and remove all traces of it.
+</dd><dt>Allow Custom Warning Types&#160;</dt><dd> Should those allowed to give permissions also be allowed to specify a custom warning type when warning a user?
+</dd><dt>Can Users View Own Warnings&#160;</dt><dd> Should users be able to view recent warnings in their User CP and see their warning level in their profile?
+</dd><dt>Maximum Warning Points&#160;</dt><dd> The number of warning points given to a user before their warning level is considered 100%.
+</dd></dl>
+
+<p>The show forum team page (showteam.php) lists all of those considered "forum staff," typically Administrators, Super Moderators, and Moderators.
+</p>
+<dl><dt>Separate Group Leaders&#160;</dt><dd> Setting to yes displays group leaders above the other group members on the forum team page.
+</dd></dl>
+
+<p>Various options relating to the MyBB private messaging system (private.php), which allows users to send private notes to each other
+</p>
+<dl><dt>Enable Private Messaging Functionality&#160;</dt><dd> To disable private messaging and remove all traces of it, set this option to "No."
+</dd><dt>Allow HTML&#160;</dt><dd> Show users be allowed to use HTML in private messages? <i>It is recommend you keep this disabled for security reasons.</i>
+</dd><dt>Allow MyCode&#160;</dt><dd> Should users be allowed to use <a href="{{ site.url }}/MyCode.html" title="MyCode">MyCode</a> in their private messages?
+</dd><dt>Allow Smilies&#160;</dt><dd> Should users be allowed to use <a href="{{ site.url }}/Smilies.html" title="Smilies">Smilies</a> in their private messages?
+</dd><dt>Allow [img] Code&#160;</dt><dd> Should users be allowed to use images in their private messages using the [img] MyCode?
+</dd></dl>
+
+<p>MyBB's calendar allows for the posting of ranged and repeating events to multiple calendars. Each calendar has it's own settings. For more information on managing calendars, see <a href="http://localhost/mediawiki/index.php?title=Admin_CP_Calendars&amp;action=edit&amp;redlink=1" class="new" title="Admin CP Calendars (page does not exist)">Admin CP: Calendars</a>
+</p>
+<dl><dt>Enable Calendar Functionality&#160;</dt><dd> To disable the calendar completely, set this setting to "No."
+</dd></dl>
+
+<p>Settings relating to the Who's Online page (online.php).
+</p>
+<dl><dt>Cut-off Time (mins)&#160;</dt><dd> The time before a user is marked as offline (after their last activity on the forum).
+</dd><dt>Refresh Who's online page time (mins)&#160;</dt><dd> The number of minutes before the "Who's Online" page refreshes. Setting this to 0 disables refreshing. Use 0.5 for 30 seconds.
+</dd></dl>
+
+<p>Settings relating to the forum portal (portal.php), such as what to show and the forums announcements should be pulled from.
+</p>
+<dl><dt>Forum ID to pull announcements from&#160;</dt><dd> The forums to pull the latest threads from for the announcements portion on the portal. Separate multiple forums by a comma.
+</dd><dt>Number of announcements to show&#160;</dt><dd> The number of announcements shown on the portal.
+</dd><dt> Show the Welcome box&#160;</dt><dd> Should the welcome box be shown to visitors and users?
+</dd><dt>Show the number of PMs to users&#160;</dt><dd> Should the number of private messages the current user has be displayed?
+</dd><dt>Show forum statistics&#160;</dt><dd> Should the number of posts, threads, members, and the newest member be displayed?
+</dd><dt>Show Who's Online&#160;</dt><dd> Should the who's online information be displayed?
+</dd><dt>Show Search Box&#160;</dt><dd> Should a search box be displayed?
+</dd><dt>Show Latest Discussions&#160;</dt><dd> Should the latest threads be displayed?
+</dd><dt>Number of latest discussions to show&#160;</dt><dd> The number of latest threads to be shown.
+</dd></dl>
+
+<p>Settings relating to the built-in search mechanism for threads and posts (search.php).
+</p>
+<dl><dt>Search Type&#160;</dt><dd> The type of search system you wish to use, either "Standard" or "Full Text." Full text searching is more powerful and quicker.
+</dd><dt>Search Flood Time (seconds)&#160;</dt><dd> The number of seconds until a user can make another search. Setting to 0 disables the search flood time.
+</dd><dt>Minimum Search Word Length&#160;</dt><dd> The minimum number of characters each word must be in a query. Set to 0 to disable this setting. For standard searching, there is a hard limit of 3, and for full text searching, there is a hard limit of 4. The hard limit will always override the set limit if the set limit is lower than the hard limit.
+</dd><dt>Hard Limit for Maximum Search Results&#160;</dt><dd> The maximum number of results to be processed in a search. This should be set to no higher than 1000 on boards with more than 1 million posts.
+</dd></dl>
+
+<p>Settings relating to the appearance of the clikable smilie inserter and the MyCode editor.
+</p>
+<dl><dt>Clickable MyCode Editor&#160;</dt><dd> Should the MyCode editor be enabled?
+</dd><dt>Clickable Smilies Inserter&#160;</dt><dd> Should the clickable smilies inserter be enabled?
+</dd><dt>No. of Smileis to Show&#160;</dt><dd> The number of smilies to show on the clickable smilie inserter.
+</dd><dt>No. of Smilie Cols to Show&#160;</dt><dd> The number of columns in the clickable smilie inserter.
+</dd></dl>
+
+<p>Global preferences for the Admin Control Panel.
+</p>
+<dl><dt>Control Panel Language&#160;</dt><dd> The language of the control panel. Default is English.
+</dd><dt>Control Panel Style&#160;</dt><dd> The Default style that the control panel will use. Styles are inside the styles folder. A folder name inside that folder becomes the style title.
+</dd></dl>
+
+<p>Settings relating to the MyBB Mail system, such as whether to use PHP mail or an off server SMTP server.
+</p>
+<dl><dt>Mail handler&#160;</dt><dd> Use PHP mail or SMTP mail?
+</dd><dt>Additional Parameters for PHP's mail()&#160;</dt><dd> Allows you to specify additional parameters in the PHP mail() function. More information can be found at the <a rel="nofollow" class="external text" href="http://php.net/function.mail">PHP website</a>. <i>This setting is only required when PHP mail is selected as the mail handler.</i>
+</dd><dt>SMTP hostname&#160;</dt><dd> The hostname of the SMTP server. <i>This setting is only required when SMTP mail is selected as the mail handler.</i>
+</dd><dt>SMTP port&#160;</dt><dd> The port number of the SMTP server. <i>This setting is only required when SMTP mail is selected as the mail handler.</i>
+</dd><dt>SMTP username&#160;</dt><dd> The username needed to authenticate with the SMTP server. <i>This setting is only required when SMTP mail is selected as the mail handler.</i>
+</dd><dt>SMTP password&#160;</dt><dd> The corresponding password used to authenticate with the SMTP server. <i>This setting is only required when SMTP mail is selected as the mail handler.</i>
+</dd><dt>SMTP Encryption Mode&#160;</dt><dd> The method of encryption required to communicate with the SMTP server. This is either "No encryption," "SSL encryption," or "TLS encryption." <i>This setting is only required when SMTP mail is selected as the mail handler.</i>
+</dd></dl>
+<div style="clear:both;border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Documentation.html" title="Documentation">MyBB Documentation</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Front_End.html" title="Front End">Front End</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Index_Page.html" title="Index Page">Index Page</a> - <a href="{{ site.url }}/Portal.html" title="Portal">Portal</a> - <a href="{{ site.url }}/Forum_Display.html" title="Forum Display">Forum Display</a> - <a href="{{ site.url }}/Thread_Display.html" title="Thread Display">Thread Display</a> - <a href="{{ site.url }}/Posting.html" title="Posting">Posting Threads and Replies</a> - <a href="{{ site.url }}/Searching.html" title="Searching">Searching</a> - <a href="{{ site.url }}/User_CP.html" title="User CP">User CP</a> - <a href="{{ site.url }}/Member_Profile.html" title="Member Profile">Member Profile</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <a href="{{ site.url }}/Calendar.html" title="Calendar">Calendar</a> - <a href="{{ site.url }}/Member_List.html" title="Member List">Member List</a> - <a href="{{ site.url }}/Help_Docs.html" title="Help Docs">Help Docs</a> - <a href="{{ site.url }}/Who_Is_Online.html" title="Who Is Online">Who Is Online</a> - <a href="{{ site.url }}/Lite_Archive_Mode.html" title="Lite (Archive) Mode">Lite (Archive) Mode</a> - <a href="{{ site.url }}/Forum_Team.html" title="Forum Team">Forum Team</a> - <a href="{{ site.url }}/Statistics.html" title="Statistics">Statistics</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/Miscellaneous_Front_End.html" title="Miscellaneous Frontend">Miscellaneous</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Moderating_Options.html" title="Moderating Options">Moderation</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Moderating_Options.html#Normal_Thread_Moderation" title="Moderating Options">Standard Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Thread_Moderation" title="Moderating Options">Inline Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Post_Moderation" title="Moderating Options">Inline Post Moderation</a> - <a href="{{ site.url }}/Warning_System.html" title="Warning System">Warning System</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Mod CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Home</a> - <a href="{{ site.url }}/Mod_CP_Forums_Posts.html" title="Mod CP Forums Posts">Forums and Posts</a> - <a href="{{ site.url }}/Mod_CP_Users.html" title="Mod CP Users">Users</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a> - <a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a> - <a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a> - <a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a> - <a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a> - <a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Templates &amp; Themes</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Images.html" title="Images">Images</a> - <a href="{{ site.url }}/Postbit.html" title="Postbit">Postbit</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a> - <a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Developer</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Database_Methods.html" title="Database Methods">Database Methods</a> - <a href="{{ site.url }}/Database_Tables.html" title="Database Tables">Database Tables</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Miscellaneous</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Cookies.html" title="Cookies">Cookies</a> - <a href="{{ site.url }}/UTF8_Setup.html" title="UTF8 Setup">UTF8 Setup</a> - <strong class="selflink">Default Settings</strong>
+</td></tr></table>
+</div>
+
+
+

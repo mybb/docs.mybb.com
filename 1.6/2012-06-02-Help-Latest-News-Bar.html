@@ -1,0 +1,57 @@
+---
+layout: post
+title: Latest News Bar
+permalink: Help-Latest_News_Bar.html
+category: General Help
+---
+<p>The <a rel="nofollow" class="external text" href="http://community.mybb.com">MyBB Community Forums</a> has a bar at the top of the index page.  This is a simple template modification as follows:
+</p>
+
+<p>For the bar only on the index page, follow this procedure:
+</p>
+<ol>
+<li>Go to <b>Admin CP --&gt; Templates &amp; Style --&gt; Templates --&gt; *expand your template set* --&gt; Index Page Templates --&gt; index</b>.</li>
+<li>Find: <pre>{$headerinclude}</pre></li>
+<li>Add after: <pre>&lt;style type=&quot;text/css&quot;&gt;
+.newsbar {
+	background: #D6ECA6;
+	border-top: 2px solid #8DC93E;
+	border-bottom: 2px solid #8DC93E;
+	text-align: center;
+	margin: 10px auto;
+	padding: 5px 20px;
+	font-weight: bold;
+}
+&lt;/style&gt;
+</pre></li>
+<li> Change the colors above to the colors of your choice if you wish.</li>
+<li> Find: <pre>{$header}</pre></li>
+<li> Add after: <pre>&lt;p class=&quot;newsbar&quot;&gt;Your Important Announcement Here&lt;/p&gt;</pre></li>
+</ol>
+For multiple news bars, repeat step 6.  For multiple news bars in different colours, you'll need to duplicate the CSS with a different class name (say .newsbar_red) and change the CSS colours accordingly.  Then you will need to use <pre>&lt;p class=&quot;newsbar_red&quot;&gt;...&lt;/p&gt;</pre> for example in your code.
+
+<p>For the bar to show up on all pages, follow this procedure:
+</p>
+<ol>
+<li>Go to <b>Admin CP --&gt; Templates &amp; Style --&gt; Templates --&gt; *expand your template set* --&gt; Ungrouped Templates --&gt; headerinclude</b>.</li>
+<li> At the end of the template, add: <pre>&lt;style type=&quot;text/css&quot;&gt;
+.newsbar {
+	background: #D6ECA6;
+	border-top: 2px solid #8DC93E;
+	border-bottom: 2px solid #8DC93E;
+	text-align: center;
+	margin: 10px auto;
+	padding: 5px 20px;
+	font-weight: bold;
+}
+&lt;/style&gt;
+</pre></li>
+<li>Change the colors above to the colors of your choice if you wish.</li>
+<li>Go to <b>Admin CP --&gt; Templates &amp; Style --&gt; Templates --&gt; *expand your template set* --&gt; Header Templates --&gt; header</b>.</li>
+<li> At the end of the template, add: <pre>&lt;p class=&quot;newsbar&quot;&gt;Your Important Announcement Here&lt;/p&gt;</pre></li>
+</ol>
+For multiple news bars, repeat step 6.  For multiple news bars in different colours, you'll need to duplicate the CSS with a different class name (say .newsbar_red) and change the CSS colours accordingly.  Then you will need to use <pre>&lt;p class=&quot;newsbar_red&quot;&gt;...&lt;/p&gt;</pre> for example in your code.
+
+
+
+

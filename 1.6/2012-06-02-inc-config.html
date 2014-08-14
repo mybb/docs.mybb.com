@@ -1,0 +1,158 @@
+---
+layout: post
+title: inc/config.php
+permalink: inc-config.html
+category: Other Topics
+---
+
+<p>The <b>inc/config.php</b> file stores the database information, and various global configuration settings.  This file is written during the <a href="{{ site.url }}/Installing.html" title="Installing">installation</a>, so it is not necessary to create this file yourself.
+</p><p>This file must be writable by the server during installation.  This file may be <a href="{{ site.url }}/HowTo_Chmod.html" title="HowTo Chmod">CHMODed</a> after installation to 644 or similar, to prevent writing over the file by malacious users.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Sample"><span class="tocnumber">1</span> <span class="toctext">Sample</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Database_Configuration"><span class="tocnumber">2</span> <span class="toctext">Database Configuration</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Admin_CP_URL"><span class="tocnumber">3</span> <span class="toctext">Admin CP URL</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Hide_Admin_CP_Links"><span class="tocnumber">4</span> <span class="toctext">Hide Admin CP Links</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Datacache_Configuration"><span class="tocnumber">5</span> <span class="toctext">Datacache Configuration</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Super_Administrators"><span class="tocnumber">6</span> <span class="toctext">Super Administrators</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Database_Encoding"><span class="tocnumber">7</span> <span class="toctext">Database Encoding</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Log_Pruning"><span class="tocnumber">8</span> <span class="toctext">Log Pruning</span></a></li>
+</ul>
+</td></tr></table>
+
+<p>This is a sample inc/config.php if you have accidentally overwritten your existing one.
+</p>
+<h2><span class="mw-headline" id="Sample"> Sample </span></h2>
+<pre>
+&lt;?php
+/**
+ * Database configuration
+ *
+ * Please see the MyBB Wiki for advanced
+ * database configuration for larger installations
+ * http://wiki.mybb.com/
+ */
+
+$config['database']['type'] = 'mysql';
+$config['database']['hostname'] = 'localhost';
+$config['database']['username'] = 'mysql-username';
+$config['database']['password'] = 'mysql-password';
+$config['database']['database'] = 'database-name';
+$config['database']['table_prefix'] = 'mybb_';
+
+/**
+ * Admin CP directory
+ *  For security reasons, it is recommended you
+ *  rename your Admin CP directory. You then need
+ *  to adjust the value below to point to the
+ *  new directory.
+ */
+
+$config['admin_dir'] = 'admin';
+
+/**
+ * Hide all Admin CP links
+ *  If you wish to hide all Admin CP links
+ *  on the front end of the board after
+ *  renaming your Admin CP directory, set this
+ *  to 1.
+ */
+
+$config['hide_admin_links'] = 0;
+
+/**
+ * Data-cache configuration
+ *  The data cache is a temporary cache
+ *  of the most commonly accessed data in MyBB.
+ *  By default, the database is used to store this data.
+ *
+ *  If you wish to use the file system (cache/ directory), MemCache or eAccelerator
+ *  you can change the value below to 'files', 'memcache' or 'eaccelerator' from 'db'.
+ */
+
+$config['cache_store'] = 'db';
+
+/**
+ * Super Administrators
+ *  A comma separated list of user IDs who cannot
+ *  be edited, deleted or banned in the Admin CP.
+ *  The administrator permissions for these users
+ *  cannot be altered either.
+ */
+
+$config['super_admins'] = '1';
+
+/**
+ * Database Encoding
+ *  If you wish to set an encoding for MyBB uncomment 
+ *  the line below (if it isn't already) and change
+ *  the current value to the mysql charset:
+ *  http://dev.mysql.com/doc/refman/5.1/en/charset-mysql.html
+ */
+
+$config['db_encoding'] = 'utf8';
+ 
+/**
+ * Automatic Log Pruning
+ *  The MyBB task system can automatically prune
+ *  various log files created by MyBB.
+ *  To enable this functionality for the logs below, set the
+ *  the number of days before each log should be pruned.
+ *  If you set the value to 0, the logs will not be pruned.
+ */
+
+$config['log_pruning'] = array(
+	'admin_logs' =&gt; 365, // Administrator logs
+	'mod_logs' =&gt; 365, // Moderator logs
+	'task_logs' =&gt; 30, // Scheduled task logs
+	'mail_logs' =&gt; 180, // Mail error logs
+	'user_mail_logs' =&gt; 180, // User mail logs
+	'promotion_logs' =&gt; 180 // Promotion logs
+);
+
+?&gt;
+</pre>
+
+<h2><span class="mw-headline" id="Database_Configuration"> Database Configuration </span></h2>
+<dl><dt>$config['dbtype']</dt><dd> This is the database driver that is used for your board.  mysql, mysqli, sqlite2, sqlite3 and postgresql are supported.
+</dd><dt>$config['hostname']</dt><dd> This is the hostname to your database server
+</dd><dt>$config['username']</dt><dd> This is the username to connect to your database server.
+</dd><dt>$config['password']</dt><dd> This is the password to connect to your database server.
+</dd><dt>$config['table_prefix']</dt><dd> This is the table prefix for the MyBB tables.
+</dd><dt>$config['db_encoding']</dt><dd> This is the database encoding used interpret characters
+</dd></dl>
+
+<h2><span class="mw-headline" id="Admin_CP_URL"> Admin CP URL </span></h2>
+<dl><dt>$config['admindir']</dt><dd> If you are changing your Admin CP folder name, you should change this to the name of that renamed directory (without preceding or trailing slash).
+</dd></dl>
+
+<h2><span class="mw-headline" id="Hide_Admin_CP_Links"> Hide Admin CP Links </span></h2>
+<dl><dt>$config['hide_admin_links']</dt><dd> If you wish to hide all Admin CP links on the front end of the board after renaming your Admin CP directory, set this to 1.
+</dd></dl>
+
+<h2><span class="mw-headline" id="Datacache_Configuration"> Datacache Configuration </span></h2>
+<dl><dt>$config['cachestore']</dt><dd> This is the method of storing the datacaches (either 'db', 'memcache', 'eaccelerator' or 'files'). In order to use Memcache or eAccelerator, you must have them installed on your server.
+</dd></dl>
+
+<h2><span class="mw-headline" id="Super_Administrators"> Super Administrators </span></h2>
+<dl><dt>$config['super_admins']</dt><dd> A comma separated list of user IDs who cannot be edited, deleted or banned in the Admin CP. The administrator permissions for these users cannot be altered either.
+</dd></dl>
+
+<h2><span class="mw-headline" id="Database_Encoding"> Database Encoding </span></h2>
+<dl><dt>$config['db_encoding']</dt><dd> This is the database encoding used to interpret characters. For a full list of encodings see <a rel="nofollow" class="external free" href="http://dev.mysql.com/doc/refman/5.1/en/charset-mysql.html">http://dev.mysql.com/doc/refman/5.1/en/charset-mysql.html</a>
+</dd></dl>
+
+<h2><span class="mw-headline" id="Log_Pruning"> Log Pruning </span></h2>
+<p>Log pruning is stored as an array in $config['log_pruning']. For any of these, if you set it to 0, the logs will not be pruned. Otherwise, set the number of <b>days</b> before each log is pruned.
+</p>
+<dl><dt>admin_logs&#160;</dt><dd> Administrator logs. Default is 365.
+</dd><dt>mod_logs&#160;</dt><dd> Moderator logs. Default is 365.
+</dd><dt>task_logs&#160;</dt><dd> Scheduled task logs. Default is 30.
+</dd><dt>mail_logs&#160;</dt><dd> Mail error logs. Default is 180.
+</dd><dt>user_mail_logs&#160;</dt><dd> User mail logs (both send thread to friend and email user). Default is 180.
+</dd><dt>promotion_logs&#160;</dt><dd> User group promotion logs. Default is 180.
+</dd></dl>
+
+
+

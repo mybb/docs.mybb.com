@@ -1,0 +1,74 @@
+---
+layout: post
+title: Chmod
+permalink: Chmod.html
+category: Other Topics
+---
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#The_Actual_Process"><span class="tocnumber">2</span> <span class="toctext">The Actual Process</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Command_line"><span class="tocnumber">2.1</span> <span class="toctext">Command line</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#GUI_program"><span class="tocnumber">2.2</span> <span class="toctext">GUI program</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#CHMOD_and_Windows_Servers"><span class="tocnumber">3</span> <span class="toctext">CHMOD and Windows Servers</span></a></li>
+</ul>
+</td></tr></table>
+
+<p>CHMODing a file changes its permissions. This controls who can and can not have access to the file. There are three user permission groups used when CHMODing a file and every user belongs to one of these permission groups. 
+</p><p><br />
+<b>Owner</b> - The owner of the file is the person who created it. Depending on how your system is setup, the user might be called 'root' or the username you use to login to the system.
+</p><p><b>Group</b> - Users can belong to a group. Being in a group allows an admin to put users who need the same level of access together in one group, and then set permissions for that group here.
+</p><p><b>Others</b> - If you are the user or do not belong to the group, you are treated as an 'other'.
+</p><p>Each permission group has three values associated with it. One for reading access, another for writing access and the last one is for execute access. With CHMOD, reading access is denoted by <b>r</b>, writing by <b>w</b> and execute by <b>x</b>. These are placed in one string with each permission groups' parameters tagged onto the end. 
+</p><p><br />
+A string that looks like <i>rwx rw- r--</i>, defines who can access this file.
+The first three characters (<i>rwx</i>) represent the 'owners' permissions. The second set of three characers (<i>rw-</i>) are for the 'group' permissions, and the last three characters (<i>r--</i>) represent the 'other' permissions. <i>rwx</i> means that user has the power to read, write and execute the file. <i>rw-</i> means the user has the power to read and write the file, but not execute it. <i>r--</i> means the user can only read the file.
+</p><p><br />
+When <a rel="nofollow" class="external text" href="http://wiki.mybb.com/index.php/Using_FTP">using FTP programs</a>, permissions can sometime be given as numbers.
+</p>
+<pre>0 (or blank) = No permissions
+1 = Execute
+2 = Write
+3 = Execute + Write
+4 = Read
+5 = Read + Execute
+6 = Read + Write
+7 = Read + Write + Execute
+</pre>
+<p>A permission string of <i>764</i> means the 'owner' of the file can read, write and execute, the 'group' can read and write and the 'other's can only read.
+</p><p><br />
+</p>
+
+
+<p>The easiest way to change permissions in Unix via the command line is to use the command
+</p>
+<pre>chmod <b>ABC file_name</b>
+</pre>
+<p>where <b>ABC</b> are the number representations of the permissions you wish to set. With <b>A</b> being the permissions for 'owner', <b>B</b> permissions for 'group' and <b>C</b> permissions for 'other'. <b>file_name</b> is the name of the file you wish to set permissions for.
+</p><p>Example:
+</p>
+<pre>chmod 666 inc/config.php
+chmod 777 uploads
+</pre>
+
+<p>Most GUI applications have a box that allows you to check/uncheck permissions per permission group. This will save you time working out which numbers you require. Where this command/tool is located depends on the program, but in 
+<a rel="nofollow" class="external text" href="http://www.smartftp.com">Smart FTP</a>, it is located under the <i>Commands</i> menu. Most programs should also allow you to change your file permissions by right clicking on the file you require.
+</p><p>See <a href="{{ site.url }}/Using_FTP.html" title="Using FTP">Using_FTP</a> for a list of programs that you can use and how to use them.  Tutorials on CHMODing on specific programs can be found <a rel="nofollow" class="external text" href="http://community.mybb.com/showthread.php?tid=14616">here</a>.
+</p>
+
+<p>CHMOD is a Linux/Unix file property.  In Windows the property is slightly different (read-only), but most of the time you will not need to modify the permissions of the files listed above on a Windows system.
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Tutorials.html" title="Tutorials" class="mw-redirect">Tutorials</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td><a href="{{ site.url }}/Database_Backup.html" title="Database Backup">Database Backup</a> - <a href="{{ site.url }}/Database_Restore.html" title="Database Restore">Database Restore</a> - <strong class="selflink">How to CHMOD</strong> - <a rel="nofollow" class="external text" href="http://community.mybb.com/forum-38.html">User-submitted tutorials on the Community Forums</a>
+</td></tr></table>
+</div>
+
+
+
+

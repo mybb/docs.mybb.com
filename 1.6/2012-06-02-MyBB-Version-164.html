@@ -1,0 +1,117 @@
+---
+layout: post
+title: MyBB 1.6.4
+permalink: 164.html
+category: Versions
+---
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Release_Date"><span class="tocnumber">1</span> <span class="toctext">Release Date</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Announcement_Summary"><span class="tocnumber">2</span> <span class="toctext">Announcement Summary</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Overview"><span class="tocnumber">2.1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Security_Vulnerabilities"><span class="tocnumber">2.2</span> <span class="toctext">Security Vulnerabilities</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Template_System_Changes"><span class="tocnumber">2.3</span> <span class="toctext">Template System Changes</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Feature_Updates"><span class="tocnumber">2.4</span> <span class="toctext">Feature Updates</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Performance_Changes"><span class="tocnumber">2.5</span> <span class="toctext">Performance Changes</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Language_Changes"><span class="tocnumber">2.6</span> <span class="toctext">Language Changes</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Support"><span class="tocnumber">2.7</span> <span class="toctext">Support</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+<p>MyBB 1.6.4 was released 26 July 2011. An <a rel="nofollow" class="external text" href="http://blog.mybb.com/2011/07/29/mybb-1-6-4-update/">update</a> was made available on 29 July 2011 to fix issues with the original release.
+</p>
+
+
+<p>1.6.4 is a large security, maintenance and feature upgrade for the 1.6 series. There are some changes to parts of the software that might affect the way plugins and themes work. These are explained below.
+</p><p>This upgrade will require <b>every</b> file to be replaced. There will be no changed files package.
+</p>
+
+<p>1.6.4 fixes 3 vulnerabilities. These are:
+</p><p><b>Non-Critical</b>
+</p>
+<ul><li> Complex syntax &amp; database information can be used in Templates - <a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/1508">Issue 1508</a>
+</li></ul>
+<ul><li> Potential XSS vulnerability in Smilies, Post Icons &amp; Custom Profile Fields - <a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/1474">Issue 1474</a>
+</li></ul>
+<p>All require access to the Admin Control Panel first and so are rated as non-critical.
+</p><p><b>Low Risk</b>
+</p>
+<ul><li> CSRF vulnerability in Polls - <a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/1639">Issue 1639</a>
+</li></ul>
+
+<p>We've made some changes to help enhance the security in the templates system. Because of these changes, it is now impossible to save a template with certain types of variables in it.
+</p><p>The following variables are recommended for use and <b>can</b> be used in the template system.
+</p>
+<div style="margin-left: 30px;"><pre>
+// Plain variables
+{$hello} {$world} {$foo_bar} {$hello-&gt;world} {$foo-&gt;bar}
+
+ // Array variables
+{$hello['world']} {$world['hello']} {$foo['bar']}
+
+ // Variables as array key
+{$hello[$world]} {$world[$hello]} {$foo[$bar]}
+</pre></div>
+<p>If another type of variable is entered into the template, it will not save the changes and you will see a <i>A potential security issue was found in the template. Please review your changes or contact the MyBB Group for support</i> error appear.
+</p><p>It is also impossible to save a template with a $config variable. This is to protect the database information contained in this global array.
+</p><p>These changes aren't retroactive. You can still enter a template using other types of variables directly into the database and any template already being used will still work - however, if an Administrator comes to make changes to this template, they will not be able to save it unless they remove the offending variable. It is recommended that each Plugin Developer and Theme Artist make sure that their work does not include such variables so that they work flawlessly with 1.6.4 and future versions of MyBB 1.6.
+</p>
+
+<p>Feature updates can be small or large changes to the way MyBB's features work. The following changes have been made in 1.6.4.
+</p>
+<ul><li> <b>Disable All Plugins</b>
+</li></ul>
+<dl><dd>There is a new setting that can disable all plugins. This does not run the plugin's '_deactivate' function, instead, it just prevents any plugin running when the page is loaded. The setting can be found in the 'General Configuration' setting group.
+</dd></dl>
+<ul><li> <b>File Verification Enhancements</b>
+</li></ul>
+<dl><dd>Many people rename 'index.php' to 'forums.php' and 'portal.php' to 'index.php'. MyBB can support this change, but the file verification feature introduced into 1.6 doesn't. The changes in 1.6.4 mean that if you do rename it, we'll check the right file for you when you run the verification check.
+</dd></dl>
+
+<p>In 1.6.4, we've made several changes to help improve the efficiency of your forum. These came in 3 stages:
+</p>
+<ul><li> <b>Code Changes</b>
+</li></ul>
+<dl><dd>Small changes were made to sections of the forumdisplay and showthread to help prevent unnecessary database queries. An example is not running the check for thread subscriptions if the user is a guest.
+</dd></dl>
+<ul><li> <b>Cache Stores</b>
+</li></ul>
+<dl><dd>One of the larger changes was to move announcements and mod tools ('forumdisplay') as well as thread prefixes ('threadprefixes') into the datacache table. This eliminates further unnecessary queries if you're not using any of these and making sure their information is only retrieved when it is needed.
+</dd></dl>
+<ul><li> <b>Breadcrumb Dropdown</b>
+</li></ul>
+<dl><dd>If there is more than one page of threads in a forum, when you visit a thread in that forum, a dropdown arrow appears in the breadcrumb navigation to help you navigate between pages directly from the thread. The 'Show Forum Multipage Dropdown' setting was added into the 'Show Thread Options' setting group to turn this feature off if you decide not to use it.
+</dd></dl>
+
+<p>Almost every file has changed in 1.6.4, but there are only a handful of language file translation changes you need to be aware of.
+</p><p>The following language files have had changes made to them. Use a file difference tool to cross reference.
+</p>
+<ul><li> admin/config_badwords.lang.php
+</li><li> admin/config_settings.lang.php
+</li><li> admin/forum_management.lang.php
+</li><li> admin/style_templates.lang.php
+</li><li> admin/style_themes.lang.php
+</li><li> admin/tools_system_health.lang.php
+</li><li> admin/tools_tasks.lang.php
+</li><li> admin/user_groups.lang.php
+</li><li> admin/user_titles.lang.php
+</li><li> admin/user_users.lang.php
+</li></ul>
+<ul><li> archive.lang.php
+</li><li> global.lang.php
+</li><li> messages.lang.php
+</li><li> online.lang.php
+</li><li> reputation.lang.php
+</li><li> usercp.lang.php
+</li></ul>
+
+<p>If you have any questions on these changes, please start a new thread on the Community Forums in the correct section. Plugin Authors should use the Plugin Development forum. Theme Artists should use the Theme Development forum.
+</p><p><br />
+</p>
+{% include versions_footer.html %}
+
+
+

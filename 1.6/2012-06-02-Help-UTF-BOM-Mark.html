@@ -1,0 +1,26 @@
+---
+layout: post
+title: UTF BOM Mark
+permalink: Help-UTF_BOM_Mark.html
+category: General Help
+---
+
+<p><i>Usually</i> this error presents itself in the event you were to edit a language file with a text editor, such as Microsoft's&#174; Notepad.
+</p>
+
+<p>Some applications insert a signature or Byte Order Mark (BOM) at the beginning of UTF-8 text. For example, Microsoft Notepad will always adds a BOM when saving as UTF-8.
+</p><p>Older text editors or browsers will display the BOM as a blank line on-screen, others will display unexpected characters, such as "ï»¿". This may also occur in the latest browsers if a file that starts with a BOM is included into another file by PHP.
+</p><p><br />
+</p>
+
+<p>I would recommend Notepad2 to remove the BOM. Notepad2 is a text-editor that enable fast converting between different encoding and line-ending types, and support highlight for many languages. It's very light and a portable application (doesn't need to be installed). Other alternatives that have reported to work are Wordpad, Dreamweaver (paid), Notepad++, and many more.
+</p><p>Another solution is to use a PHP function, it's also more convenient to convert many files with a PHP functions. 
+</p><p>Here is a nice explanation about the UTF-8 BOM and also a PHP function that remove the BOM (I haven't test it):
+<a rel="nofollow" class="external text" href="http://develobert.blogspot.com/2007/12/bom-squad.html">Develobert Blog</a>
+</p><p>Here are links related Notepad2:
+<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Notepad2">About Notpad2</a>
+<a rel="nofollow" class="external text" href="http://www.flos-freeware.ch/notepad2.html">Download Notepad2</a>
+</p>
+
+
+

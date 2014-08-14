@@ -1,0 +1,30 @@
+---
+layout: post
+title: Repair mybb_sessions
+permalink: Help-mybb_sessions.html
+category: General Help
+---
+
+<p>Users may experience a MySQL error saying that the mybb_sessions table is marked as crashed and should be repaired.
+</p>
+<pre>SQL Error:
+145 - Table './****/mybb_sessions' is marked as crashed and should be repaired
+Query:
+DELETE FROM mybb_sessions WHERE ip='****'
+</pre>
+<br />
+<h2> <span class="mw-headline" id="Fix">The Fix</span></h2>
+<p>Run the following query in phpMyAdmin. Replace "mybb_" with your table prefix.
+</p>
+<pre>REPAIR TABLE `mybb_sessions`
+</pre>
+<br />
+<h2> <span class="mw-headline" id="Permanent_Fix">Permanent Fix</span></h2>
+<p>If you want a permanent fix to this problem run this query in phpMyAdmin. Replace "mybb_" with your table prefix.
+</p>
+<pre>ALTER TABLE `mybb_sessions` engine = `memory`
+</pre>
+<br />
+<h2> <span class="mw-headline" id="How">How?</span></h2>
+<p>Visit this thread for help running MySQL Queries: <a href="http://community.mybb.com/thread-44380.html">Common SQL queries and how to run them</a>
+</p>

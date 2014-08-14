@@ -1,0 +1,37 @@
+---
+layout: post
+title: Theme problems
+permalink: Help-Theme_problems.html
+category: General Help
+---
+
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Broken_themes"><span class="tocnumber">1</span> <span class="toctext">Broken themes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Check_your_Board_URL"><span class="tocnumber">1.1</span> <span class="toctext">Check your Board URL</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Deleted_cache_file"><span class="tocnumber">1.2</span> <span class="toctext">Deleted cache file</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Incorrect_theme_image_directory"><span class="tocnumber">1.3</span> <span class="toctext">Incorrect theme image directory</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Incorrect_CHMOD_settings"><span class="tocnumber">1.4</span> <span class="toctext">Incorrect CHMOD settings</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Broken_themes">Broken themes</span></h1>
+<p>If your theme doesn't look right or is completely broken you can try the following things to help you fix it.
+</p>
+<h2> <span class="mw-headline" id="Check_your_Board_URL">Check your Board URL</span></h2>
+<p>If your board URL is not set correctly then the paths to the resources in your theme will be broken. To check your board URL go ACP &gt; Configuration &gt; General Configuration &gt; edit the Board URL field. Make sure you include http:// in your URL and don't put a trailing slash.
+</p>
+<h2> <span class="mw-headline" id="Deleted_cache_file">Deleted cache file</span></h2>
+<p>The CSS of your theme is cached in the cache directory and if this is modified or deleted (for example by accident during an upgrade) you can regenerate it by saving your theme again in the theme editor. To do this go ACP &gt; Templates &amp; Styles &gt; Select theme &gt; global.css &gt; Save changes.
+</p>
+<h2> <span class="mw-headline" id="Incorrect_theme_image_directory">Incorrect theme image directory</span></h2>
+<p>If images are not showing in your theme its possible that your image directory is not correctly set in your theme properties. Go ACP &gt; Templates &amp; Styles &gt; Select theme &gt; Edit the image directory field. The path here is relative to your root forum directory so for example if your images are located at <a rel="nofollow" class="external free" href="http://www.yoursite.com/forum/images/yourtheme">http://www.yoursite.com/forum/images/yourtheme</a> you would enter images/yourtheme and remember not to include a trailing slash.
+</p>
+<h2> <span class="mw-headline" id="Incorrect_CHMOD_settings">Incorrect CHMOD settings</span></h2>
+<p>Your theme cache files need to both readable and writable so make sure that your ./cache/ and ./cache/themes/ folders are set to 777, read <a href="{{ site.url }}/CHMOD_Files.html" title="CHMOD Files">CHMOD_Files</a> for more information.
+</p>
+
+
+

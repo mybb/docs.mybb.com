@@ -1,0 +1,429 @@
+---
+layout: post
+title: Custom MyCode
+permalink: Custom_MyCode.html
+category: Other Topics
+---
+
+<p>MyCode is used to format posts in MyBB. If you know HTML, MyCode will not be a problem.  MyCode is enclosed in square brackets: [ ]
+</p><p>There are several types of MyCode:
+</p>
+<ul><li> Those with an opening tag and a closing tag like the bold tag: [b]text[/b]
+</li><li> Those with only one tag: [hr]
+</li><li> Those with attributes within the tags: [font=Comic Sans MS]This will be in Comic Sans MS[/font]
+</li><li> Those that need an opening tag, a closing tag, and tags in the middle (such as in lists)
+</li><li> There is <a href="{{ site.url }}/Admin_CP_Config_MyCode.html" title="Admin CP Config MyCode">Custom MyCode</a>
+</li></ul>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#MyCode_Quick_Reference"><span class="tocnumber">1</span> <span class="toctext">MyCode Quick Reference</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Text_Formatting"><span class="tocnumber">2</span> <span class="toctext">Text Formatting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Bold.2C_Italics.2C_Underline.2C_Strikethrough"><span class="tocnumber">2.1</span> <span class="toctext">Bold, Italics, Underline, Strikethrough</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Font_Size"><span class="tocnumber">2.2</span> <span class="toctext">Font Size</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Font_Face"><span class="tocnumber">2.3</span> <span class="toctext">Font Face</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Font_Color"><span class="tocnumber">2.4</span> <span class="toctext">Font Color</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Text_Alignment"><span class="tocnumber">2.5</span> <span class="toctext">Text Alignment</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Preformatted_Text"><span class="tocnumber">3</span> <span class="toctext">Preformatted Text</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#General_Code"><span class="tocnumber">3.1</span> <span class="toctext">General Code</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#PHP_Code"><span class="tocnumber">3.2</span> <span class="toctext">PHP Code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Images_and_Attachments"><span class="tocnumber">4</span> <span class="toctext">Images and Attachments</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Images"><span class="tocnumber">4.1</span> <span class="toctext">Images</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Attachments"><span class="tocnumber">4.2</span> <span class="toctext">Attachments</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Links"><span class="tocnumber">5</span> <span class="toctext">Links</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#URL"><span class="tocnumber">5.1</span> <span class="toctext">URL</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Email"><span class="tocnumber">5.2</span> <span class="toctext">Email</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Lists"><span class="tocnumber">6</span> <span class="toctext">Lists</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Unordered_Lists"><span class="tocnumber">6.1</span> <span class="toctext">Unordered Lists</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Ordered_Lists"><span class="tocnumber">6.2</span> <span class="toctext">Ordered Lists</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Alphabetical_Lists"><span class="tocnumber">6.3</span> <span class="toctext">Alphabetical Lists</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+<p>This is a quick list of all of the default MyCode. Following this list, there is a more detailed description of each MyCode.
+</p>
+<table>
+<tr>
+<td>bold
+</td>
+<td>[b][/b]
+</td></tr>
+
+<tr>
+<td>italic
+</td>
+<td>[i][/i]
+</td></tr>
+
+<tr>
+<td>underline
+</td>
+<td>[u][/u]
+</td></tr>
+
+<tr>
+<td>strikethrough
+</td>
+<td>[s][/s]
+</td></tr>
+
+<tr>
+<td>URL
+</td>
+<td>[url]http://url.com[/url]<br />[url=http://url.com]My URL[/url]
+</td></tr>
+
+<tr>
+<td>email
+</td>
+<td>[email]myemail@mydomain.com[/email]<br />[email=myemail@mydomain.com]My Email[/email]
+</td></tr>
+
+<tr>
+<td>quote
+</td>
+<td>[quote][/quote]<br />[quote=Author][/quote]
+</td></tr>
+
+<tr>
+<td>code
+</td>
+<td>[code][/code]<br />[php][/php]
+</td></tr>
+
+<tr>
+<td>image
+</td>
+<td>[img]http://mysite.com/mypic.jpg[/img]
+</td></tr>
+
+<tr>
+<td>font color
+</td>
+<td>[color=red][/color]
+</td></tr>
+
+<tr>
+<td>font size
+</td>
+<td>[size=3][/size]
+</td></tr>
+
+<tr>
+<td>font face
+</td>
+<td>[font=tahoma][/font]
+</td></tr>
+
+<tr>
+<td>text alignment
+</td>
+<td>[align=center][/align]
+</td></tr>
+
+<tr>
+<td>listing
+</td>
+<td>[list][/list] and [*]
+</td></tr></table>
+
+
+<p><b>Syntax</b>
+</p>
+<pre>[b]TEXT[/b]
+[i]TEXT[/i]
+[u]TEXT[/i]
+[s]TEXT[/i]</pre>
+<p><b>Examples</b>
+</p>
+<pre>
+[b]Bold text[/b]
+[i]Italicized text[/i]
+[u]Underlined text[/u]
+[s]Strikethrough text[/s]
+</pre>
+<p><b>Results</b><br />
+</p><p><b>Bold text</b><br />
+<i>Italicized text</i><br />
+<u>Underlined text</u><br />
+<s>Strikethrough text</s><br />
+</p>
+
+<p><b>Syntax</b>
+</p>
+<pre>
+[size=SIZE]TEXT[/size]
+</pre>
+<p><b>Examples</b>
+</p>
+<pre>
+[size=xx-small]XX-Small[/size]
+[size=x-small]X-Small[/size]
+[size=small]Small[/size]
+[size=medium]Medium[/size]
+[size=large]Large[/size]
+[size=x-large]X-Large[/size]
+[size=xx-large]XX-Large[/size]
+</pre>
+<p><b>Results</b><br />
+<span style="font-size:xx-small">XX-Small</span><br />
+<span style="font-size:x-small">X-Small</span><br />
+<span style="font-size:small">Small</span><br />
+<span style="font-size:medium">Medium</span><br />
+<span style="font-size:large">Large</span><br />
+<span style="font-size:x-large">X-Large</span><br />
+<span style="font-size:xx-large">XX-Large</span><br />
+</p>
+
+<p><b>Syntax</b>
+</p>
+<pre>
+[font=NAME_OF_FONT]TEXT[/font]
+</pre>
+<p><b>Examples</b>
+</p>
+<pre>
+[font=Tahoma]This is in Tahoma[/font]
+[font=Courier]This is in Courier[/font]
+</pre>
+<p><b>Results</b><br />
+<font face="Tahoma">This is in Tahoma</font><br />
+<font face="Courier">This is in Courier</font>
+</p>
+
+<p><b>Syntax</b>
+</p>
+<pre>
+[color=THE_COLOR]TEXT[/font]
+</pre>
+<p><b>Examples</b>
+</p>
+<pre>
+[color=red]This is red[/color]
+[color=green]This is green[/color]
+[color=#0000FF]This is blue, in Hex form[/color]
+</pre>
+<p><b>Results</b><br />
+<span style="color: red;">This is red</span><br />
+<span style="color: green;">This is green</span><br />
+<span style="color: #0000FF;">This is blue, in Hex form</span>
+</p>
+
+<p><b>Syntax</b>
+</p>
+<pre>[align=POSITION]</pre>
+<p><b>Examples</b>
+</p>
+<pre>[align=left]Left-aligned[/align]
+[align=center]Center-aligned[/align]
+[align=right]Right-aligned[/align]
+[align=justify]Justified[/align]</pre>
+<p><b>Results</b><br />
+</p>
+<p style="text-align: left;">Left-aligned</p>
+<p style="text-align: center;">Center-aligned</p>
+<p style="text-align: right;">Right-aligned</p>
+<p style="text-align: justify;">Justified</p>
+<p><small>(Justified is more noticeable when there are large blocks of text. )</small>
+</p>
+
+
+<p><b>Syntax</b>
+</p>
+<pre>
+[code]CODE HERE[/code]
+</pre>
+<p><b>Examples</b>
+</p>
+<pre>[code]&lt;div class=&quot;menu&quot;&gt;Text Here..             &lt;- Those spaces won't be merged&lt;/div&gt;[/code]</pre>
+<pre>[code]&lt;a href=&quot;http://domain.com/&quot;&gt;Text Here..&lt;/a&gt;[/code]</pre>
+<p><b>Results</b><br />
+&lt;div class="menu"&gt;Text Here.. &#160; &#160; &#160; &#160; &#160; &lt;- Those spaces won't be merged&lt;/div&gt;<br />
+&lt;a href="http://domain.com/"&gt;Text Here..&lt;/a&gt;
+</p>
+
+<p><b>Syntax</b>
+</p>
+<pre>[php]PHP CODE HERE[/php]</pre>
+<p><b>Examples</b>
+</p>
+<pre>[php]&lt;?php echo &quot;Hi!&quot;;&#160;?&gt;[/php]</pre>
+<pre>[php]&lt;?php 
+// Comment
+$mybb-&gt;user['var'] = &quot;Hi&quot;; &#160;?&gt;[/php]</pre>
+<p><b>Results</b><br />
+<span style="color: rgb(0, 0, 187);">&lt;?php&#160;</span><span style="color: rgb(0, 119, 0);">echo&#160;</span><span style="color: rgb(221, 0, 0);">"Hi!"</span><span style="color: rgb(0, 119, 0);">;&#160;</span><span style="color: rgb(0, 0, 187);">?&gt;</span>
+<br /><span style="color: rgb(0, 0, 187);">&lt;?php&#160;<br /></span><span style="color: rgb(255, 128, 0);">//&#160;Comment<br /></span><span style="color: rgb(0, 0, 187);">$mybb</span><span style="color: rgb(0, 119, 0);">-&gt;</span><span style="color: rgb(0, 0, 187);">user</span><span style="color: rgb(0, 119, 0);">[</span><span style="color: rgb(221, 0, 0);">'var'</span><span style="color: rgb(0, 119, 0);">]&#160;=&#160;</span><span style="color: rgb(221, 0, 0);">"Hi"</span><span style="color: rgb(0, 119, 0);">;&#160;&#160;<br /></span><span style="color: rgb(0, 0, 187);">?&gt;</span>
+</p>
+
+
+<p><b>Syntax</b>
+</p>
+<pre>[img]http://example.com/image.gif[/img]</pre>
+<pre>[img=WIDTHxHEIGHT]http://example.com/image.gif[/img]</pre>
+<p><b>Examples</b>
+</p>
+<pre>[img]http://wiki.mybb.com/images/e/ea/Logo.gif[/img]</pre>
+<pre>[img=100x33]http://wiki.mybb.com/images/e/ea/Logo.gif[/img]</pre>
+<p><b>Results</b><br />
+<a href="{{ site.url }}/images/e/ea/Logo.gif" class="image"><img alt="Logo.gif" src="{{ site.url }}/images/e/ea/Logo.gif" width="248" height="82" /></a><br />
+<a href="{{ site.url }}/images/e/ea/Logo.gif" class="image"><img alt="Logo.gif" src="{{ site.url }}/images/thumb/e/ea/Logo.gif/100px-Logo.gif" width="100" height="33" /></a>
+</p>
+
+<p><b>Syntax</b>
+</p>
+<pre>[attachment=ATTACHMENT_ID]</pre>
+<p><b>Examples</b>
+</p>
+<pre>[attachment=11776]</pre>
+<p><b>Results</b><br />
+[icon] <a rel="nofollow" class="external text" href="http://community.mybb.com/attachment.php?aid=11776">mybb_1403_patches.txt</a> (Size: 2.16 KB / Downloads: 1125) 
+</p><p><i><b>NOTE:</b> This shortcut only works for attachments that are attached to the post you are writing. It does not allow you to include attachments from other posts.</i>
+</p>
+
+
+<p><b>Syntax</b>
+</p>
+<pre>[url]http://example.com[/url]</pre>
+<pre>[url=http://example.com]Title[/url]</pre>
+<p><b>Examples</b>
+</p>
+<pre>[url]http://community.mybb.com[/url]</pre>
+<pre>[url=http://community.mybb.com]Support Communtiy[/url]</pre>
+<p><b>Results</b><br />
+<a rel="nofollow" class="external free" href="http://community.mybb.com">http://community.mybb.com</a><br />
+<a rel="nofollow" class="external text" href="http://community.mybb.com">Support Communtiy</a>
+</p>
+
+<p><b>Syntax</b>
+</p>
+<pre>[email]example@example.com[/email]</pre>
+<pre>[email=example@example.com?subject=work]Link text[/email]</pre>
+<p><b>Examples</b>
+</p>
+<pre>[email]example@example.com[/email]</pre>
+<pre>[email=example@example.com]E-mail Me![/email]</pre>
+<pre>[email=example@example.com?subject=spam]E-mail with subject 'spam'[/email]</pre>
+<p><b>Results</b><br />
+<a rel="nofollow" class="external text" href="mailto:example@example.com">example@example.com</a><br />
+<a rel="nofollow" class="external text" href="mailto:example@example.com">E-mail Me!</a><br />
+<a rel="nofollow" class="external text" href="mailto:example@example.com?subject=spam">E-mail with subject 'spam'</a>
+</p>
+
+
+<p><b>Syntax</b>
+</p>
+<pre>
+[list]
+[*]List Item #1
+[*]List Item #2
+[*]List Item #3
+...
+[/list]
+</pre>
+<p><b>Examples</b>
+</p>
+<pre>
+To Do:
+[list]
+[*]Fix the boiler
+[*]Buy:
+  [list]
+  [*]Eggs
+  [*]Milk
+  [/list]
+[*]Call mother
+[/list]
+</pre>
+<p><small>(The indentation of the inner list is only for readability, it is not required)</small>
+</p><p><b>Results</b><br />
+To Do:
+</p>
+<ul><li> Fix the boiler
+</li><li> Buy:
+<ul><li> Eggs
+</li><li> Milk
+</li></ul>
+</li><li> Call mother
+</li></ul>
+
+<p><b>Syntax</b>
+</p>
+<pre>
+[list=1]
+[*]List Item #1
+[*]List Item #2
+[*]List Item #3
+...
+[/list]
+</pre>
+<p><b>Examples</b>
+</p>
+<pre>
+To Do:
+[list=1]
+[*]Fix the boiler
+[*]Buy eggs &amp; milk
+[*]Call mother
+[/list]
+</pre>
+<p><b>Results</b><br />
+To Do:
+</p>
+<ol><li> Fix the boiler
+</li><li> Buy eggs &amp; milk
+</li><li> Call mother
+</li></ol>
+
+<p><b>Syntax</b>
+</p>
+<pre>
+[list=a]
+[*]List Item #1
+[*]List Item #2
+[*]List Item #3
+...
+[/list]
+</pre>
+<p><b>Examples</b>
+</p>
+<pre>
+To Do:
+[list=a]
+[*]Fix the boiler
+[*]Buy eggs &amp; milk
+[*]Call mother
+[/list]
+</pre>
+<p><b> Results</b><br />
+To Do: <br />
+</p>
+<dl><dd> a.  Fix the boiler
+</dd><dd> b.  Buy eggs &amp; milk
+</dd><dd> c.  Call mother
+</dd></dl>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Features.html" title="Features">MyBB Features</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td><a href="{{ site.url }}/Lite_Archive_Mode.html" title="Lite (Archive) Mode">Archive Mode</a> - <a href="{{ site.url }}/Attachments.html" title="Attachments">Attachments</a> - <a href="{{ site.url }}/Multiquote.html" title="Multiquote">Multiquote</a> - <strong class="selflink">MyCode</strong> - <a href="{{ site.url }}/Polls.html" title="Polls">Polls</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <a href="{{ site.url }}/Reputation.html" title="Reputation">Reputation</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/SEF_URLS.html" title="SEF URLS">Search Engine Friendly URLs</a> - <a href="{{ site.url }}/Smilies.html" title="Smilies">Smilies</a> - <a href="{{ site.url }}/Subscriptions.html" title="Subscriptions">Subscriptions</a> - <a href="{{ site.url }}/User_Groups.html" title="User Groups">User Groups</a> - <a href="{{ site.url }}/Referrers.html" title="Referrers">User Referrals</a> - <a href="{{ site.url }}/Warning_System.html" title="Warning System">Warning System</a>
+</td></tr></table>
+<div style="text-align: center;"><i>This is obviously not the complete feature list.  See <a href="{{ site.url }}/Features.html" title="Features">Features</a>.</i></div>
+</div>
+
+
+

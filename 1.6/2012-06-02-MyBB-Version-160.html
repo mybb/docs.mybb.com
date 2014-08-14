@@ -1,0 +1,92 @@
+---
+layout: post
+title: MyBB 1.6.0
+permalink: 160.html
+category: Versions
+---
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Release_Date"><span class="tocnumber">1</span> <span class="toctext">Release Date</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Announcement_Summary"><span class="tocnumber">2</span> <span class="toctext">Announcement Summary</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Overview"><span class="tocnumber">3</span> <span class="toctext">Overview</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#New_PHP_Requirement"><span class="tocnumber">3.1</span> <span class="toctext">New PHP Requirement</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Feature_Preview"><span class="tocnumber">3.2</span> <span class="toctext">Feature Preview</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Completed_Features_and_Changes"><span class="tocnumber">3.3</span> <span class="toctext">Completed Features and Changes</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+<p>MyBB 1.6 was released on 3 August 2010.
+</p>
+
+<p>I'm very proud to announce that MyBB 1.6 has been released and is now available directly on the MyBB website.
+</p><p>MyBB 1.6 is a brand new release which vastly improves the functionality of your forum. There are over 40+ new features that have been built in to MyBB which include Delayed Moderation, an Improved Reputation System and many more.
+</p><p>More information on the MyBB Blog: <a rel="nofollow" class="external free" href="http://blog.mybb.com/2010/08/03/mybb-1-6-released/">http://blog.mybb.com/2010/08/03/mybb-1-6-released/</a>
+</p>
+
+<p>MyBB 1.6.0 is the latest major release for the MyBB series, meaning it will includes several new features and other tweaks to improve the MyBB software.
+</p><p>A feature tour of MyBB 1.6 is available on the <a rel="nofollow" class="external text" href="http://www.mybb.com/features">MyBB website</a>.
+</p>
+
+<p>Starting with MyBB 1.6 and onwards, the minimum requirement for PHP is <b>PHP 5.1.0</b> or newer.  We are glad to make this leap forward from PHP 4 and being able to take advantage of the new features of PHP 5 that we were not able to use with PHP 4 compatibility.  Remember to check with your host, before upgrading to MyBB 1.6!
+</p>
+
+<p>A series of posts on the MyBB Development have highlighted several new features in MyBB 1.6:
+</p>
+<ul><li> <a rel="nofollow" class="external text" href="http://blog.mybb.com/2010/01/01/mybb-16-sneak-preview-part-1/">MyBB 1.6 Sneak Preview (Part 1)</a>
+</li><li> <a rel="nofollow" class="external text" href="http://blog.mybb.com/2010/01/25/mybb-1-6-sneak-preview-part-2/">MyBB 1.6 Sneak Preview (Part 2)</a>
+</li></ul>
+
+<ul><li> Avatar time/date stamped (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/279">development tracker</a>)
+</li><li> Quick Language Phrases (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/40">development tracker</a>)
+</li><li> Thread prefixes (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/36">development tracker</a>)
+</li><li> User notes for mods/admins (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/35">development tracker</a>)
+</li><li> Breadcrumb pagination drop-down (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/213">development tracker</a>)
+</li><li> Reverse IP Address Lookup (<a rel="nofollow" class="external text" href="http://ideas.mybb.com/idea/ip-locator-on-ip-search-page">more information</a>) (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/25">development tracker</a>)
+</li><li> Search for unapproved posts (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/37">development tracker</a>)
+</li><li> Edit link for Announcements (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/27">development tracker</a>)
+</li><li> Improvements to error codes (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/146">development tracker</a>)
+</li><li> External theme image server (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/455">development tracker</a>)
+</li><li> Group as moderator (<a rel="nofollow" class="external text" href="http://ideas.mybb.com/idea/group-as-forum-moderator">more information</a>) (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/24">development tracker</a>)
+</li><li> Link to add/remove buddy in profile (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/32">development tracker</a>)
+</li><li> Automated recount process (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/159">development tracker</a>)
+</li><li> Maximum login attempts for ACP (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/28">development tracker</a>)
+</li><li> Nested quote limits (<a rel="nofollow" class="external text" href="http://community.mybb.com/thread-50280-post-352366.html#pid352366">more information</a>) (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/42">development tracker</a>)
+</li><li> Ability to reload/rebuild all caches (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/129">development tracker</a>)
+</li><li> Remove banned user posts (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/281">development tracker</a>)
+</li><li> Search users based on custom profile fields in ACP (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/339">development tracker</a>)
+</li><li> Alphabetic sorting of stylesheet selectors in simple theme editor (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/152">development tracker</a>)
+</li><li> Multiple memcached server support (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/282">development tracker</a>)
+</li><li> Change poll vote (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/45">development tracker</a>)
+</li><li> Update/replace attachments (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/277">development tracker</a>)
+</li><li> Upgrade script improvements (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/147">development tracker</a>)
+</li><li> Video embedding (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/280">development tracker</a>)
+</li><li> ACP Edit User link in profile (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/283">development tracker</a>)
+</li><li> Hide error messages (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/148">development tracker</a>)
+</li><li> Select all threads from all pages (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/41">development tracker</a>)
+</li><li> Group join requests alert (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/278">development tracker</a>)
+</li><li> Forum permissions improvements (<a rel="nofollow" class="external text" href="http://community.mybb.com/thread-53648-post-379882.html#pid379882">more information</a>) (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/210">development tracker</a>)
+</li><li> Remember me on login (<a rel="nofollow" class="external text" href="http://ideas.mybb.com/idea/remember-me-2">more information</a>) (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/30">development tracker</a>)
+</li><li> PM search (<a rel="nofollow" class="external text" href="http://community.mybb.com/thread-39845-post-383290.html#pid383290">more information</a>) (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/39">development tracker</a>)
+</li><li> Automatic user pruning (<a rel="nofollow" class="external text" href="http://ideas.mybb.com/idea/deleting-users-awaiting-activation">more information</a>) (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/43">development tracker</a>)
+</li><li> Verifying files with checksums (<a rel="nofollow" class="external text" href="http://community.mybb.com/thread-41972-post-286514.html#pid286514">more information</a>)  (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/23">development tracker</a>)
+</li><li> View own threads only (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/44">development tracker</a>)
+</li><li> Extended reputation system (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/214">development tracker</a>)
+</li><li> Only receive PMs from buddies (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/29">development tracker</a>)
+</li><li> Restructured User CP home (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/26">development tracker</a>)
+</li><li> Updated search engine list (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/259">development tracker</a>)
+</li><li> Users online in thread (<a rel="nofollow" class="external text" href="http://ideas.mybb.com/idea/whos-viewing-the-thread">more information</a>) (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/216">development tracker</a>)
+</li><li> Member list letter sorting (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/212">development tracker</a>)
+</li><li> Updated global notice styling (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/351">development tracker</a>)
+</li><li> Per user settings via ACP / Mod CP (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/211">development tracker</a>)
+</li><li> Mass actions for Users in ACP (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/31">development tracker</a>)
+</li><li> Delayed moderation actions (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/215">development tracker</a>)
+</li><li> Referral system enhancements (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/33">development tracker</a>)
+</li><li> ACP statistics graphs (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/459">development tracker</a>)
+</li><li> ACP integrated themes &amp; plugins list (<a rel="nofollow" class="external text" href="http://dev.mybb.com/issues/362">development tracker</a>)
+</li></ul>
+{% include versions_footer.html %}
+
+

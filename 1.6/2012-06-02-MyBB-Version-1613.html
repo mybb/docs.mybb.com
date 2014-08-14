@@ -1,0 +1,222 @@
+---
+layout: post
+title: MyBB 1.6.13
+permalink: 1613.html
+category: Versions
+---
+
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Release_Date"><span class="tocnumber">1</span> <span class="toctext">Release Date</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Announcement_Summary"><span class="tocnumber">2</span> <span class="toctext">Announcement Summary</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Overview"><span class="tocnumber">2.1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Fixed_Issues"><span class="tocnumber">2.2</span> <span class="toctext">Fixed Issues</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Changed_Files"><span class="tocnumber">2.3</span> <span class="toctext">Changed Files</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Language_Changes"><span class="tocnumber">2.4</span> <span class="toctext">Language Changes</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Template_Changes"><span class="tocnumber">2.5</span> <span class="toctext">Template Changes</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+<h1><span class="mw-headline" id="Release_Date">Release Date</span></h1>
+<p>MyBB 1.6.13 was released on 26 April 2014.
+</p>
+
+<h1><span class="mw-headline" id="Announcement_Summary">Announcement Summary</span></h1>
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>MyBB 1.6.13 is a security and maintenance release and fixes 4 vulnerabilities and 38 reported issues.
+</p>
+
+<h2><span class="mw-headline" id="Fixed_Issues">Fixed Issues</span></h2>
+<ul><li>Vulnerabilities:<ul>
+<li>Medium Risk: Possibility of executing PHP code through stylesheets</li>
+<li>Medium Risk: Possibility of executing PHP code through language files</li>
+<li>Low Risk: A XSS vulnerability in search system</li>
+<li>Low Risk: Potential weak random string generator</li>
+</ul>
+</li><li>Bugs fixed:<ul>
+<li><a href="http://dev.mybb.com/issues/1860">#1860 Wrong messsage displayed whilst editing user from mod cp</a></li>
+<li><a href="http://dev.mybb.com/issues/2089">#2089 Report post/split post glitch</a></li>
+<li><a href="http://dev.mybb.com/issues/2144">#2144 Wrong date structure in AdminCP statistics chart</a></li>
+<li><a href="http://dev.mybb.com/issues/2162">#2162 Threadlist can contain a thread without name, id etc.</a></li>
+<li><a href="http://dev.mybb.com/issues/2202">#2202 Admin Log logging has a few mistakes</a></li>
+<li><a href="http://dev.mybb.com/issues/2207">#2207 Wrong Post Dates and guest names in Moderation Queue</a></li>
+<li><a href="http://dev.mybb.com/issues/2212">#2212 Drafts update the forum last post</a></li>
+<li><a href="http://dev.mybb.com/issues/2243">#2243 Group Bug</a></li>
+<li><a href="http://dev.mybb.com/issues/2252">#2252 User Search posts=0 Returns All Users</a></li>
+<li><a href="http://dev.mybb.com/issues/2258">#2258 Unused template</a></li>
+<li><a href="http://dev.mybb.com/issues/2261">#2261 Showing the results of a poll uses theme from post with pid equal to poll's id</a></li>
+<li><a href="http://dev.mybb.com/issues/2264">#2264 delete user - thread uid</a></li>
+<li><a href="http://dev.mybb.com/issues/2272">#2272 empty customer specific profile fields after registration</a></li>
+<li><a href="http://dev.mybb.com/issues/2278">#2278 "You did not enter a description for this scheduled task"</a></li>
+<li><a href="http://dev.mybb.com/issues/2280">#2280 Hitting Post Thread when having disallowed attachment ignores all submitted content</a></li>
+<li><a href="http://dev.mybb.com/issues/2281">#2281 Signature nofollow doesn't work in user profile</a></li>
+<li><a href="http://dev.mybb.com/issues/2292">#2292 Problem with Find Attachments result in ACP</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/140">#140 modcp_reports_multipage</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/141">#141 modcp_reports_report</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/220">#220 Can't edit group leader</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/229">#229 Missing global $mybb</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/233">#233 Admin Log errors</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/244">#244 No message if all tasks removed</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/245">#245 Missing cache reload functions</a></li>
+<li><a href="https://github.com/mybb/mybb/pull/254">#254 change "$bottom_label" type</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/258">#258 Stick Thread checkbox is not checked by default</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/277">#277 Issues with admin cp Inline User Moderation and super administrators</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/281">#281 [Theme] Creating new theme using admin panel</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/282">#282 [Plugins] Akismet 1.2.1 installation error</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/289">#289 Pop up smiley inserter doesn't use cursor CSS</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/295">#295 Search & replace in admin panel</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/317">#317 User Merge bug/problem</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/350">#350 Reload Cache no language</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/370">#370 Admin Permissions breadcrumb does not display username if user is an admin through an additional group</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/379">#379 User(s) browsing this thread incorrect when linking to post</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/381">#381 dbpdoEngine::num_rows() doesn't work as expected</a></li>
+<li><a href="https://github.com/mybb/mybb/issues/389">#389 Misleading text under 'Bans Ending Soon' in ModCP</a></li>
+<li><a href="https://github.com/mybb/mybb/pull/396">#396 Link detection</a></li>
+</ul>
+</li></ul>
+
+<h2><span class="mw-headline" id="Changed_Files">Changed Files</span></h2>
+<p>The following files have changed since MyBB 1.6.12.
+</p>
+<ul>
+<li>admin
+<ul>
+<li>inc
+<ul>
+<li>functions_themes.php</li>
+</ul>
+</li>
+<li>modules
+<ul>
+<li>config
+<ul>
+<li>languages.php</li>
+</ul>
+</li>
+<li>forum
+<ul>
+<li>attachments.php</li>
+<li>management.php</li>
+<li>moderation_queue.php</li>
+</ul>
+</li>
+<li>style
+<ul>
+<li>templates.php</li>
+<li>themes.php</li>
+</ul>
+</li>
+<li>tools
+<ul>
+<li>adminlog.php</li>
+<li>statistics.php</li>
+<li>system_health.php</li>
+<li>tasks.php</li>
+</ul>
+</li>
+<li>user
+<ul>
+<li>admin_permissions.php</li>
+<li>group_promotions.php</li>
+<li>groups.php</li>
+<li>users.php</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>inc
+<ul>
+<li>datahandlers
+<ul>
+<li>user.php</li>
+</ul>
+</li>
+<li>languages
+<ul>
+<li>english
+<ul>
+<li>admin
+<ul>
+<li>config_profile_fields.lang.php</li>
+<li>tools_adminlog.lang.php</li>
+<li>tools_system_health.lang.php</li>
+<li>tools_tasks.lang.php</li>
+</ul>
+</li>
+<li>modcp.lang.php</li>
+</ul>
+</li>
+<li>english.php</li>
+</ul>
+</li>
+<li>tasks
+<ul>
+<li>userpruning.php</li>
+</ul>
+</li>
+<li>class_core.php</li>
+<li>class_datacache.php</li>
+<li>class_error.php</li>
+<li>class_graph.php</li>
+<li>class_moderation.php</li>
+<li>class_parser.php</li>
+<li>class_session.php</li>
+<li>db_pdo.php</li>
+<li>db_sqlite.php</li>
+<li>functions.php</li>
+<li>functions_forumlist.php</li>
+<li>functions_post.php</li>
+<li>functions_search.php</li>
+</ul>
+</li>
+<li>install
+<ul>
+<li>resources
+<ul>
+<li>mybb_theme.xml</li>
+<li>settings.xml</li>
+<li>upgrade28.php</li>
+</ul>
+</li>
+<li>index.php</li>
+</ul>
+</li>
+<li>jscripts
+<ul>
+<li>inline_moderation.js</li>
+</ul>
+</li>
+<li>forumdisplay.php</li>
+<li>global.php</li>
+<li>managegroup.php</li>
+<li>member.php</li>
+<li>misc.php</li>
+<li>modcp.php</li>
+<li>newthread.php</li>
+</ul>
+
+<h2><span class="mw-headline" id="Language_Changes">Language Changes</span></h2>
+<p>There are changes to 5 language files. Changed languages files can be cross-referenced from the list above.
+</p>
+
+<h2><span class="mw-headline" id="Template_Changes">Template Changes</span></h2>
+<p>There are changes to 4 templates.
+</p>
+<ul>
+<li>misc_smilies_popup_smilie</li>
+<li>modcp_nobanned</li>
+<li>modcp_reports_multipage</li>
+<li>modcp_reports_report</li>
+</ul>
+
+<p><br />
+</p>
+{% include versions_footer.html %}
+
+
+

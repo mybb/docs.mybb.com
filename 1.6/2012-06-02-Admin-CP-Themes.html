@@ -1,0 +1,395 @@
+---
+layout: post
+title: Themes
+permalink: Admin_CP_Themes.html
+category: Admin CP
+---
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/8/8c/ACP_Themes.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/8/8c/ACP_Themes.png/180px-ACP_Themes.png" width="180" height="74" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/8/8c/ACP_Themes.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Themes</div></div></div>
+<p>Themes make up the style and design of your board, and are also frequently called styles or skins. They stylize the layout of your forum. Themes use CSS and are stored in both the database and as files.
+</p><p>The base page in the themes section lists all of your themes. You can edit, force on users (select this theme for all users), set as default (if not already default), export the theme, or delete the theme. Each theme contains stylesheets, as well.
+<i>Note: The MyBB Master Style is the master theme for your forum, and cannot be edited.</i>
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Import_Theme"><span class="tocnumber">1</span> <span class="toctext">Import Theme</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Advanced_Options"><span class="tocnumber">1.1</span> <span class="toctext">Advanced Options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Edit_Theme"><span class="tocnumber">2</span> <span class="toctext">Edit Theme</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Stylesheets"><span class="tocnumber">2.1</span> <span class="toctext">Stylesheets</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Add_Stylesheet"><span class="tocnumber">2.1.1</span> <span class="toctext">Add Stylesheet</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Editing_a_Stylesheet"><span class="tocnumber">2.1.2</span> <span class="toctext">Editing a Stylesheet</span></a>
+<ul>
+<li class="toclevel-4 tocsection-7"><a href="#Simple_Mode"><span class="tocnumber">2.1.2.1</span> <span class="toctext">Simple Mode</span></a></li>
+<li class="toclevel-4 tocsection-8"><a href="#Advanced_Mode"><span class="tocnumber">2.1.2.2</span> <span class="toctext">Advanced Mode</span></a></li>
+<li class="toclevel-4 tocsection-9"><a href="#Default_Elements_in_global.css"><span class="tocnumber">2.1.2.3</span> <span class="toctext">Default Elements in global.css</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-10"><a href="#Editing_Stylesheet_Properties"><span class="tocnumber">2.1.3</span> <span class="toctext">Editing Stylesheet Properties</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Edit_Theme_Properties"><span class="tocnumber">2.2</span> <span class="toctext">Edit Theme Properties</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Export_Theme"><span class="tocnumber">3</span> <span class="toctext">Export Theme</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Create_New_Theme"><span class="tocnumber">4</span> <span class="toctext">Create New Theme</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Using_Simple_Mode"><span class="tocnumber">5</span> <span class="toctext">Using Simple Mode</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Primary_CSS_Attributes"><span class="tocnumber">5.1</span> <span class="toctext">Primary CSS Attributes</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Background"><span class="tocnumber">5.1.1</span> <span class="toctext">Background</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Color"><span class="tocnumber">5.1.2</span> <span class="toctext">Color</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Width"><span class="tocnumber">5.1.3</span> <span class="toctext">Width</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Font_Family"><span class="tocnumber">5.1.4</span> <span class="toctext">Font Family</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Font_Size"><span class="tocnumber">5.1.5</span> <span class="toctext">Font Size</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Font_Style"><span class="tocnumber">5.1.6</span> <span class="toctext">Font Style</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Font_Weight"><span class="tocnumber">5.1.7</span> <span class="toctext">Font Weight</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Text_Decoration"><span class="tocnumber">5.1.8</span> <span class="toctext">Text Decoration</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#Extra_CSS_Attributes"><span class="tocnumber">5.2</span> <span class="toctext">Extra CSS Attributes</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Import_Theme"> Import Theme </span></h1>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/9/98/ACP_Themes_Import.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/9/98/ACP_Themes_Import.png/180px-ACP_Themes_Import.png" width="180" height="141" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/9/98/ACP_Themes_Import.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Import Theme</div></div></div>
+<p>Importing a theme can be done by clicking on the "Import a Theme" link near the top of the base page in the themes section.
+</p>
+<dl><dt>Import From&#160;</dt><dd> Select the file to import. You can either upload the file from your computer or import from a URL. If importing from a file, select the file on your computer. If importing from a URL, enter in the URL to the file.
+</dd><dt>Parent Theme&#160;</dt><dd> The theme this theme will be a child of, inheriting all stylesheets that are not customized.
+</dd><dt>New Name&#160;</dt><dd> Name for the imported theme. If this field is left blank, the name specified in the theme file will be used.
+</dd></dl>
+<h2> <span class="mw-headline" id="Advanced_Options"> Advanced Options </span></h2>
+<dl><dt>Ignore Version Compatibility&#160;</dt><dd> Import the theme regardless of whether or not it is compatible with your current version.
+</dd><dt>Import Stylesheets&#160;</dt><dd> If the theme contains custom stylesheets, should they be imported?
+</dd><dt>Import Templates&#160;</dt><dd> If the theme contains custom templates, should they be imported?
+</dd></dl>
+<h1> <span class="mw-headline" id="Edit_Theme"> Edit Theme </span></h1>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/2/27/ACP_Themes_Edit.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/2/27/ACP_Themes_Edit.png/180px-ACP_Themes_Edit.png" width="180" height="258" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/2/27/ACP_Themes_Edit.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Edit Theme</div></div></div>
+<p>The edit theme page lists all of the stylesheets in your theme and allows you to edit the theme properties.
+</p>
+<h2> <span class="mw-headline" id="Stylesheets"> Stylesheets </span></h2>
+<p>For each stylesheet, you can see whether or not the theme is inherited (if it is, you will see a message next to the stylesheet name saying what theme it is inherited from), what files the stylesheet is attached to, and you can Edit the stylesheet or edit the stylesheet's properties.
+</p>
+<h3> <span class="mw-headline" id="Add_Stylesheet"> Add Stylesheet </span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/f/f3/ACP_Themes_Add_Stylesheet.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/f/f3/ACP_Themes_Add_Stylesheet.png/180px-ACP_Themes_Add_Stylesheet.png" width="180" height="115" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/f/f3/ACP_Themes_Add_Stylesheet.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Add Stylesheet</div></div></div>
+<p>You can add a stylesheet from the Edit Theme page by selecting the "Add Stylesheet" button near the top of the page.
+</p>
+<dl><dt>File Name&#160;</dt><dd> The file name for this stylesheet. This typically ends with <b>.css</b>
+</dd><dt>Attached to&#160;</dt><dd> Stylesheets can either be attached <i>Globally</i> (to all files) or to specific files. Select "Specific files" and then click on "Add another" if you wish to specify specific files for this stylesheet. For each file you specify, you can either have the stylesheet attached to the file globally or to specific actions. To attach the stylesheet to specific actions within the page, select "Specific actions" and then enter the actions, separated by a comma.
+</dd><dt>Import from&#160;</dt><dd> You can either import the content for the new stylesheet from another existing stylesheet within the theme or write the content directly for this stylesheet.
+</dd></dl>
+<p>Click "Save Stylesheet" when you are ready to add the stylesheet to the theme.
+</p>
+<h3> <span class="mw-headline" id="Editing_a_Stylesheet"> Editing a Stylesheet </span></h3>
+<p>When you edit a stylesheet, the Simple Mode is loaded first. From here, you can either continue to edit in Simple Mode, or switch to Advanced Mode, where you will be able to edit the stylesheet's raw CSS.
+</p>
+<h4> <span class="mw-headline" id="Simple_Mode"> Simple Mode </span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/4/43/ACP_Themes_Edit_Stylesheet_Simple.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/4/43/ACP_Themes_Edit_Stylesheet_Simple.png/180px-ACP_Themes_Edit_Stylesheet_Simple.png" width="180" height="142" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/4/43/ACP_Themes_Edit_Stylesheet_Simple.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Themes</div></div></div>
+<p>Simple mode is the default stylesheet editing mode, and allows you to edit stylesheets quickly, in a mode similar to the theme editor in MyBB 1.2 and earlier.
+</p><p>Above the editing table, there is a selector that allows you to select the CSS element you wish to edit. If you have not yet saved your changes for the element you are currently editing, you will be prompted to do so.
+</p><p>When you are editing a CSS element, you are able to edit the background, color, width, font family, font size, font style (italics), font weight (bold), and text decoration (underline, strikethrough, etc) attributes. You can edit all other attributes in the large text area to the right.
+</p><p><b><a href="#Using_Simple_Mode">More information on using Simple Mode</a></b> 
+</p>
+<h4> <span class="mw-headline" id="Advanced_Mode"> Advanced Mode </span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/a/af/ACP_Themes_Edit_Stylesheet_Advanced.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/a/af/ACP_Themes_Edit_Stylesheet_Advanced.png/180px-ACP_Themes_Edit_Stylesheet_Advanced.png" width="180" height="147" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/a/af/ACP_Themes_Edit_Stylesheet_Advanced.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Themes</div></div></div>
+<p>Advanced mode allows you to edit the CSS directly, in raw form. Advanced mode also can be used to add new CSS elements to your stylesheets. Advanced mode will also be loaded by default when the MyBB parser cannot handle the stylesheet in simple mode.
+</p><p>You can learn the basics of Cascading Style Sheets (CSS) at <a rel="nofollow" class="external text" href="http://www.w3schools.com/css">W3Schools</a>.
+</p>
+<h4> <span class="mw-headline" id="Default_Elements_in_global.css"> Default Elements in global.css </span></h4>
+<div style="background: #FFF6BF;border: 1px solid #FFD324;margin: 10px auto;padding: 10px;"><b>This article or section is outdated.</b>
+<dl><dd> Parts of this article or section have been written for MyBB version 1.4 and is no longer up to date. 
+</dd></dl>
+<i>Contributors: Please update the article to reflect the current MyBB version, and remove this template when finished.</i></div>
+<p><br />
+</p>
+<dl><dt>body&#160;</dt><dd> <b>Body:</b> General body of the page.
+</dd><dt>a:link&#160;</dt><dd> Default, unvisited link
+</dd><dt>a:visited&#160;</dt><dd> Default, visited link
+</dd><dt>a:hover, a:active&#160;</dt><dd> Default link being hovered over / clicked on
+</dd><dt>#container&#160;</dt><dd> <b>Page Container:</b> The container that contains all the other elements. This is the white box that contains the entire page, by default.
+</dd><dt>#content&#160;</dt><dd> <b>Content Container:</b> Box that contents page content.
+</dd><dt>.menu ul&#160;</dt><dd> <b>Top Links Menu:</b> The links in the menu: Search, Members List, Calendar, Help
+</dd><dt>.menu ul a:link&#160;</dt><dd> Unvisited link in the top links menu
+</dd><dt>.menu ul a:visited&#160;</dt><dd> Visited link in the top links menu
+</dd><dt>.menu ul a:hover, .menu ul a:active&#160;</dt><dd> Link being hovered over / clicked on in the top links menu
+</dd><dt>#panel&#160;</dt><dd> <b>Welcome Panel:</b> The gray box (by default) that contains the "Welcome back, Username," last visit, current time, buddy list, etc.
+</dd><dt>table&#160;</dt><dd> <b>Tables:</b> Usually sets the font within tables
+</dd><dt>.tborder&#160;</dt><dd> <b>Table Border:</b> Specifies border (and any other attributes) for any tables using this class.
+</dd><dt>.thead&#160;</dt><dd> <b>Table Headers:</b> Header class for most tables, such as the blue bars (by default) on the forum home that contains the category name for each category table.
+</dd><dt>.thead a:link&#160;</dt><dd> Unvisited links in the table headers
+</dd><dt>.thead a:visited&#160;</dt><dd> Visited links in the table headers
+</dd><dt>.thead a:hover, .thead a:active&#160;</dt><dd> Links being hovered over / clicked on in the table headers
+</dd><dt>.tcat&#160;</dt><dd> <b>Table Subheaders:</b> Subheader class for most tables, such as the light blue bar (by default) beneath the table header saying "Forum," "Threads," "Posts," and "Last Post" for each category on the forum home.
+</dd><dt>.tcat a:link&#160;</dt><dd> Unvisited links in the table subheaders
+</dd><dt>.tcat a:visited&#160;</dt><dd> Visited links in the table subheaders
+</dd><dt>.tcat a:hover, .tcat a:active&#160;</dt><dd> Links that are being hovered over / clicked on in the table subheaders
+</dd><dt>.trow1&#160;</dt><dd> <b>Alternating Table Row 1:</b> Used in conjunction with .trow2 (Alternating Table Row 2) for the alternating colored rows seen on the forum list on the forum home and thread list inside forums.
+</dd><dt>.trow2&#160;</dt><dd> <b>Alternating Table Row 2:</b> Used in conjuction with .trow1 (Alternating Table Row 1).
+</dd><dt>.trow_shaded&#160;</dt><dd> <b>Shaded Table Row:</b> Typically used to highlight unapproved threads/posts.
+</dd><dt>.trow_selected td&#160;</dt><dd> <b>Selected Table Row:</b> Typically used for inline moderation to highlight selected threads or posts.
+</dd><dt>.trow_sep&#160;</dt><dd> <b>Table Row Separator:</b> Separates announcements, important threads, and normal threads on thread listing.
+</dd><dt>.tfoot&#160;</dt><dd> <b>Table Footers:</b> Used for the information bar at the bottom of a table, such as the bar at the bottom of the thread listing or at at the bottom of a thread.
+</dd><dt>.tfoot a:link&#160;</dt><dd> Unvisited links in the table footers
+</dd><dt>.tfoot a:visited&#160;</dt><dd> Visited links in the table footers
+</dd><dt>.tfoot a:hover, .tfoot a:active&#160;</dt><dd> Links that are being hovered over / clicked on in the table footers
+</dd><dt>.bottommenu&#160;</dt><dd> <b>Bottom Links Menu:</b> Container for the links used in the forum footer, such as "Contact Us," "Lite (Archive) Mode," "RSS Syndication," and language selection (when enabled).
+</dd><dt>.navigation&#160;</dt><dd> <b>Navigation Breadcrumb:</b> Text that shows where you are inside the forum, such as "Forum / My Category / My Forum / My Thread / New Reply"
+</dd><dt>.navigation a:link&#160;</dt><dd> Unvisited links within the navigation breadcrumb
+</dd><dt>.navigation a:visited&#160;</dt><dd> Visited links within the navigation breadcrumb
+</dd><dt>.navigation a:hover, .navigation a:active&#160;</dt><dd> Links being hovered over / clicked on within the navigation breadcrumb
+</dd><dt>.navigation .active&#160;</dt><dd> <b>Active Breadcrumb Item:</b> The active element in the navigation breadcrumb, such as the text "New Reply" in the following example: "Forum / My Category / My Forum / My Thread / New Reply"
+</dd><dt>.smalltext&#160;</dt><dd> <b>Small Text:</b> Defines the styling of small text.
+</dd><dt>.largetext&#160;</dt><dd> <b>Large Text:</b> Defines the styling of large text.
+</dd><dt>input.textbox&#160;</dt><dd> <b>Text Input Boxes:</b> Smaller text boxes (only one line)
+</dd><dt>textarea&#160;</dt><dd> <b>Text areas:</b> Larger textboxes (multiple lines), such as those on the new thread or new reply page.
+</dd><dt>select&#160;</dt><dd> <b>Select boxes:</b> Drop down select boxes.
+</dd><dt>.editor&#160;</dt><dd> <b>Message Editor:</b> The box surrounding the message editor.
+</dd><dt>.editor_control_bar&#160;</dt><dd> <b>Editor Control Bar:</b> The control bar that appears below the quick reply box when you have posts selected through multi-quote, the new reply/new thread page when you have posts selected through multi-quote, and beneath the quick edit text area, where you can either save or cancel your edits.
+</dd><dt>.autocomplete&#160;</dt><dd> <b>Auto Complete Popup Window:</b> The styling for the auto complete / auto suggest popup that appears when you are typing a username for private messages, buddy/ignore list, searches, etc.
+</dd><dt>.autocomplete_selected&#160;</dt><dd> <b>Auto Complete Selected Result:</b> The currently selected result in the auto complete window. This is either the most likely result or the one you are hovering over.
+</dd><dt>.popup_menu&#160;</dt><dd> <b>Popup Menu:</b> The popup menu itself.
+</dd><dt>.popup_menu .popup_item&#160;</dt><dd> <b>Popup Items:</b> Individual menu items when not hovered over.
+</dd><dt>.popup_menu .popup_item:hover&#160;</dt><dd> <b>Hovered Items:</b> Menu items that are currently being hovered over.
+</dd><dt>.trow_reputation_positive&#160;</dt><dd> <b>Positive Reputation Row:</b> The row used on the reputation page when a positive reputation is given.
+</dd><dt>.trow_reputation_negative&#160;</dt><dd> <b>Negative Reputation Row:</b> The row used on the reputation page when a negative reputation is given.
+</dd><dt>.reputation_positive&#160;</dt><dd> <b>Positive Reputation Count:</b> The reputation count used throughout the board (in the profile and in posts), used to signify a positive reputation count.
+</dd><dt>.reputation_neutral&#160;</dt><dd> <b>Neutral Reputation Count:</b> Same as above, but used to signify a <i>neutral</i> reputation count.
+</dd><dt>.reputation_negative&#160;</dt><dd> <b>Negative Reputation Count:</b> Same as above, but used to signify a <i>negative</i> reputation count.
+</dd><dt>.invalid_field&#160;</dt><dd> <b>Invalid Field:</b> For forms using AJAX error checking, the styling of a text box whose contents do not meet the requirements for that field.
+</dd><dt>.valid_field&#160;</dt><dd> <b>Valid Field:</b> For forms using AJAX error checking, the styling of a text box whose contents do meet the requirements for that field.
+</dd><dt>.validation_error&#160;</dt><dd> <b>Validation Error Message:</b> The error message for fields in AJAX error checking that are invalid.
+</dd><dt>.validation_success&#160;</dt><dd> <b>Validation Success Message:</b> The success message for certain fields in AJAX error checking that are valid.
+</dd><dt>.validation_loading&#160;</dt><dd> <b>Validation Loading Message:</b> The message used in AJAX error checking to signify that the field is currently being checked.
+</dd><dt>img&#160;</dt><dd> Images
+</dd><dt>.clear&#160;</dt><dd> Used to prevent floating elements on both the left and right side of an object.
+</dd><dt>.hidden&#160;</dt><dd> Used to hide objects.
+</dd><dt>.float_left&#160;</dt><dd> Used to float objects to the left.
+</dd><dt>.float_right&#160;</dt><dd> Used to float objects to the right.
+</dd><dt>.menu ul&#160;</dt><dd> Allows the top links menu to be vertical.
+</dd><dt>.menu li&#160;</dt><dd> Allows the top links menu to be vertical.
+</dd><dt>.menu img&#160;</dt><dd> Sets up images in the top links menu to be displayed correctly.
+</dd><dt>#panel .links&#160;</dt><dd> Places the "Open Buddy List" link on the right-hand side.
+</dd><dt>.expcolimage&#160;</dt><dd> Styles the exand/collapse image, putting it to the right of table headers/subheaders.
+</dd><dt>img.attachment&#160;</dt><dd> Styles images that are attachments.
+</dd><dt>hr&#160;</dt><dd> Vertical line styling
+</dd><dt>#copyright&#160;</dt><dd> Styling for the board copyright
+</dd><dt>#debug&#160;</dt><dd> Styling for the board debug information
+</dd><dt>blockquote&#160;</dt><dd> <b>Quote Container:</b> Styles the quote container
+</dd><dt>blockquote cite&#160;</dt><dd> <b>Quote Title:</b> Styles the quote container title
+</dd><dt>.codeblock&#160;</dt><dd> <b>Code Container:</b> Styles the container for the Code and PHP MyCodes.
+</dd><dt>.codeblock .title&#160;</dt><dd> <b>Code Container Title:</b> Styles the title for the Code and PHP MyCode container
+</dd><dt>.codeblock code&#160;</dt><dd> <b>Code:</b> Styles the code in the Code and PHP MyCode containers
+</dd><dt>.subforumicon&#160;</dt><dd> Styles the subforum icon
+</dd><dt>.separator&#160;</dt><dd> Separates elements
+</dd><dt>form&#160;</dt><dd> Styles HTML's <i>form</i> element
+</dd><dt>.popup_menu .popup_item_container&#160;</dt><dd> Additional popup menu styling
+</dd><dt>.popup_menu .popup_item&#160;</dt><dd> Additional popup menu container and item styling
+</dd><dt>.autocomplete&#160;</dt><dd> Additional autocomplete styling
+</dd><dt>.subject_new&#160;</dt><dd> Styling for new threads and Private Messages
+</dd><dt>.highlight&#160;</dt><dd> Highlights search terms in posts
+</dd><dt>.pm_alert&#160;</dt><dd> Alert for new private messages
+</dd><dt>.red_alert&#160;</dt><dd> Banned alert (red)
+</dd><dt>.high_warning&#160;</dt><dd> <b>High Warning Level:</b> Used for warning level used throughout the board, signifying a high warning level
+</dd><dt>.moderate_warning&#160;</dt><dd> <b>Moderate Warning Level:</b> Same as above, but for a <i>moderate</i> warning level
+</dd><dt>.low_warning&#160;</dt><dd> <b>Low Warning Level:</b> Same as above, but for a <i>low</i> warning level
+</dd><dt>div.error&#160;</dt><dd> <b>Inline Errors:</b> Container for the inline errors.
+</dd><dt>div.error p&#160;</dt><dd> <b>Inline Error Text:</b> Text in the inline errors container.
+</dd><dt>div.error p em&#160;</dt><dd> <b>Inline Error Title:</b> Title text in the inline errors container.
+</dd><dt>div.error.ul&#160;</dt><dd> <b>Inline Error Listing:</b> Lists the errors in the inline error container
+</dd><dt>.online&#160;</dt><dd> <b>User is Online:</b> Signifies a user is online (green text).
+</dd><dt>.offline&#160;</dt><dd> <b>User is Offline:</b> Signifies a user is offline (gray text).
+</dd><dt>.pagination&#160;</dt><dd> Multi-page pagination
+</dd><dt>.tfoot .pagination, .tcat .pagination&#160;</dt><dd> Styling for multiple pages inside the table footers and table subheaders
+</dd><dt>.pagination .pages&#160;</dt><dd> Multi-page pagination label
+</dd><dt>.pagniation .pagination_current, .pagination a&#160;</dt><dd> Multi-page pagination item styling
+</dd><dt>.pagination a&#160;</dt><dd> Links in the multi-page pagination
+</dd><dt>.pagination .pagination_current&#160;</dt><dd> The current page in multi-page pagination
+</dd><dt>.pagination a:hover&#160;</dt><dd> Page being hovered over in multi-page pagination
+</dd><dt>.thread_legend, .thread_legend dd&#160;</dt><dd> Thread legend margins/padding
+</dd><dt>.thread_legend dd&#160;</dt><dd> Thread legend text
+</dd><dt>.thread_legend img&#160;</dt><dd> Thread legend images
+</dd><dt>.forum_legend, .forum_legend dt, .forum_legend dd&#160;</dt><dd> Forum legend margins/padding
+</dd><dt>.forum_legend dd&#160;</dt><dd> Forum legend text
+</dd><dt>.forum_legend dt&#160;</dt><dd> Forum legend images
+</dd><dt>.success_message&#160;</dt><dd> AJAX inline success message
+</dd><dt>.error_message&#160;</dt><dd> AJAX inline error message
+</dd><dt>.post_body&#160;</dt><dd> Styling for post body
+</dd><dt>.post_content&#160;</dt><dd> Styling for post content
+</dd></dl>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/d/d3/ACP_Themes_Edit_Stylesheet_Properties.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/d/d3/ACP_Themes_Edit_Stylesheet_Properties.png/180px-ACP_Themes_Edit_Stylesheet_Properties.png" width="180" height="152" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/d/d3/ACP_Themes_Edit_Stylesheet_Properties.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Edit Stylesheet Properties</div></div></div>
+<h3> <span class="mw-headline" id="Editing_Stylesheet_Properties"> Editing Stylesheet Properties </span></h3>
+<dl><dt>File Name&#160;</dt><dd> The file name for this stylesheet. This typically ends with <b>.css</b> 
+</dd><dt>Attached to&#160;</dt><dd> Stylesheets can either be attached Globally (to all files) or to specific files. Select "Specific files" and then click on "Add another" if you wish to specify specific files for this stylesheet. For each file you specify, you can either have the stylesheet attached to the file globally or to specific actions. To attach the stylesheet to specific actions within the page, select "Specific actions" and then enter the actions, separated by a comma.
+</dd></dl>
+<h2> <span class="mw-headline" id="Edit_Theme_Properties"> Edit Theme Properties </span></h2>
+<p>The Edit Theme Properties table is directly below the stylesheets listing.
+</p>
+<dl><dt>Name&#160;</dt><dd> Name for the theme.
+</dd><dt>Parent Theme&#160;</dt><dd> The theme this theme should be a child of. Stylesheets are inherited from the parent theme when this theme doesn't have modified stylesheets.
+</dd><dt>Allowed User Groups&#160;</dt><dd> User groups allowed to use this theme. 'All User Groups' overrides any other selection. Holding down the CTRL key allows you to select more than one user group.
+</dd><dt>Template Set&#160;</dt><dd> <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Template set</a> the theme should use. The template set defines the HTML markup for this theme.
+</dd><dt>Editor Style&#160;</dt><dd> The style used for the MyCode editor in this theme.
+</dd><dt>Image Directory&#160;</dt><dd> Root directory for the images used in this theme, without the trailing slash. <i>Note: This only specifies the directory for images used in the templates, <b>not</b> in the stylesheets.</i>
+</dd><dt>Board Logo&#160;</dt><dd> Location of the board logo used in the theme.
+</dd><dt>Table Spacing&#160;</dt><dd> Width of inner padding of table cells, in pixels. This is HTML's <i>cellpadding</i> attribute of the <i>table</i> tag.
+</dd><dt>Inner Table Border Width&#160;</dt><dd> Amount of padding between each table cell, in pixels. This is HTML's <i>cellspacing</i> attribute of the <i>table</i> tag.
+</dd></dl>
+<h1> <span class="mw-headline" id="Export_Theme"> Export Theme </span></h1>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/7/73/ACP_Themes_Export.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/7/73/ACP_Themes_Export.png/180px-ACP_Themes_Export.png" width="180" height="96" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/7/73/ACP_Themes_Export.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Export Themes</div></div></div>
+<p>To export a theme, either select "Export Theme" in the options menu for a theme from the base themes page, or select "Export Theme" while editing a theme.
+</p>
+<dl><dt>Include custom only&#160;</dt><dd> Should only custom stylesheets be included? If set to <i>yes</i>, only stylesheets that are customized and not inherited will be included. If set to <i>no,</i> all stylesheets, regardless of inheritance, will be included.
+</dd><dt>Include templates&#160;</dt><dd> Should the customized templates be included with the exported theme? If set to <i>yes</i>, customized templates will be included. If set to <i>no</i>, no templates will be included.
+</dd></dl>
+<h1> <span class="mw-headline" id="Create_New_Theme"> Create New Theme </span></h1>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/4/4b/ACP_Themes_Create.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/4/4b/ACP_Themes_Create.png/180px-ACP_Themes_Create.png" width="180" height="96" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/4/4b/ACP_Themes_Create.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Create New Theme</div></div></div>
+<p>Creating a new theme can be done by selecting "Create New Theme" from the themes base page.
+</p>
+<dl><dt>Name&#160;</dt><dd> Name for the new theme.
+</dd><dt>Parent Theme&#160;</dt><dd> Theme to inherit all stylesheets and properties from until customized.
+</dd></dl>
+<h1> <span class="mw-headline" id="Using_Simple_Mode"> Using Simple Mode </span></h1>
+<p>Simple mode is where most stylesheet editing will be done. Basic information on Simple mode can be found <a href="#Simple_Mode">above</a>.
+</p>
+<h2> <span class="mw-headline" id="Primary_CSS_Attributes"> Primary CSS Attributes </span></h2>
+<p>Any of these attributes can be left blank.
+</p>
+<h3> <span class="mw-headline" id="Background"> Background </span></h3>
+<p>Here you can specify the background for the selected class. This is a very important part of editing the theme, for example, if you'd like to add the image for the background of a certain class, you will use:
+</p>
+<pre>#026CB1 url(images/thead_bg.gif)</pre>
+<p>The <i>#026CB1</i> is a background color for when the image is not available.
+</p><p>The <i>url(images/thead_bg.gif)</i> is used to display the image.  There are some other attributes that will aid you working with the background image, such as:
+</p>
+<dl><dt>repeat-x&#160;</dt><dd> This will repeat the image horizontally
+</dd><dt>repeat-y&#160;</dt><dd> This will repeat the image vertically
+</dd><dt>no-repeat&#160;</dt><dd> The image will only be displayed once, not repeated
+</dd><dt>top, center, bottom, value&#160;</dt><dd> This will set the vertical position of this image
+</dd><dt>left, center, right, value&#160;</dt><dd> This will set the horizontal position of the image
+</dd></dl>
+<p>An example of this is:
+</p>
+<pre>#026CB1 url(images/thead_bg.gif) top left repeat-x</pre>
+<p>This code is the background of the <i>.thead</i> class. This will make the background color <i>#026CB1</i>, the background image <i>images/thead_bg.gif</i>, position the image at the top left, and will make the image repeat horizontally.
+</p>
+<h3> <span class="mw-headline" id="Color"> Color </span></h3>
+<p>The color of the font used in this class. An example of this, for <i>.thead</i>, would be <i>#FFF</i> (white).
+</p>
+<h3> <span class="mw-headline" id="Width"> Width </span></h3>
+<p>The width of the element, which can be in pixels, percentages, or <i>ems</i>. Pixels are exact, percentages are ranged, and <i>ems</i> are based on the browser's font size specification. For example, the width of <i>#container</i> is <i>95%</i> by default.
+</p>
+<h3> <span class="mw-headline" id="Font_Family"> Font Family </span></h3>
+<p>The font used in this class. Listing more than one class allows for "fallback" fonts. This means that when the first font is not available on a user's computer, it will use the second font listed. MyBB's default font family specification is <i>Verdana, Arial, Sans-Serif</i>.
+</p>
+<h3> <span class="mw-headline" id="Font_Size"> Font Size </span></h3>
+<p>The size of fonts in this class. 
+</p>
+<h3> <span class="mw-headline" id="Font_Style"> Font Style </span></h3>
+<p>The style of the font. This includes:
+</p>
+<dl><dt>normal&#160;</dt><dd> Normal, default style
+</dd><dt>italic&#160;</dt><dd> <i>In italics</i>
+</dd><dt>oblique&#160;</dt><dd> <span style="font-style: oblique;">Oblique</span>
+</dd></dl>
+<h3> <span class="mw-headline" id="Font_Weight"> Font Weight </span></h3>
+<p>The thickness of the font, such as bold. This includes:
+</p>
+<dl><dt>normal&#160;</dt><dd> Normal, default style
+</dd><dt>bold&#160;</dt><dd> <b>Bold</b>
+</dd><dt>bolder&#160;</dt><dd> <span style="font-weight: bolder;">Thicker characters</span>
+</dd><dt>lighter&#160;</dt><dd> <span style="font-weight: lighter;">Lighter characters</span>
+</dd><dt>Value&#160;</dt><dd> 100-900, 400 being normal and 700 bold. This allows you to specify a value for the weight.
+</dd></dl>
+<h3> <span class="mw-headline" id="Text_Decoration"> Text Decoration </span></h3>
+<p>This allows you to underline, strikethrough, etc. this class. This includes:
+</p>
+<dl><dt>none&#160;</dt><dd> Default, normal text
+</dd><dt>underline&#160;</dt><dd> <span style="text-decoration: underline;">Line under the text</span>
+</dd><dt>overline&#160;</dt><dd> <span style="text-decoration: overline;">Line over the text</span>
+</dd><dt>line-through&#160;</dt><dd> <span style="text-decoration: line-through">Line through the text</span>
+</dd><dt>blink&#160;</dt><dd> <span style="text-decoration: blink;">Blinking text</span>
+</dd></dl>
+<h2> <span class="mw-headline" id="Extra_CSS_Attributes"> Extra CSS Attributes </span></h2>
+<p>Anything not available in the default input fields can be edited here. For example, this is used in <i>#container</i>:
+</p>
+<pre>border: 1px solid #e4e4e4;
+margin: auto auto;
+padding: 20px;
+text-align: left;</pre>
+<p>This text area uses basic CSS. More information on CSS can be found at <a rel="nofollow" class="external text" href="http://www.w3schools.com/css/default.asp">W3Schools</a>.
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html#Dashboard" title="Admin CP Home">Dashboard</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Preferences" title="Admin CP Home">Preferences</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Version_Check" title="Admin CP Home">Version Check</a> - <a href="{{ site.url }}/Admin_CP_Home.html#MyBB_Credits" title="Admin CP Home">MyBB Credits</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Config_Settings.html" title="Admin CP Config Settings">Settings</a> - <a href="{{ site.url }}/Admin_CP_Config_Banning.html" title="Admin CP Config Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Config_Profile_Fields.html" title="Admin CP Config Profile Fields">Custom Profile Fields</a> - <a href="{{ site.url }}/Admin_CP_Config_Smilies.html" title="Admin CP Config Smilies">Smilies</a> - <a href="{{ site.url }}/Admin_CP_Config_Word_Filters.html" title="Admin CP Config Word Filters">Word Filters</a> - <a href="{{ site.url }}/Admin_CP_Config_MyCode.html" title="Admin CP Config MyCode">MyCode</a> - <a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Languages</a> - <a href="{{ site.url }}/Admin_CP_Config_Post_Icons.html" title="Admin CP Config Post Icons">Post Icons</a> - <a href="{{ site.url }}/Admin_CP_Config_Help_Docs.html" title="Admin CP Config Help Docs">Help Documents</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugins</a> - <a href="{{ site.url }}/Admin_CP_Config_Attachments.html" title="Admin CP Config Attachments">Attachment Types</a> - <a href="{{ site.url }}/Admin_CP_Config_Mod_Tools.html" title="Admin CP Config Mod Tools">Moderator Tools</a> - <a href="{{ site.url }}/Admin_CP_Config_Spiders.html" title="Admin CP Config Spiders">Spiders/Bots</a> - <a href="{{ site.url }}/Admin_CP_Config_Calendars.html" title="Admin CP Config Calendars">Calendars</a> - <a href="{{ site.url }}/Admin_CP_Config_Warning_System.html" title="Admin CP Config Warning System">Warning System</a> - <a href="{{ site.url }}/Admin_CP_Config_Thread_Prefixes.html" title="Admin CP Config Thread Prefixes">Thread Prefixes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Forum_Management.html" title="Admin CP Forum Management">Forum Management</a> - <a href="{{ site.url }}/Admin_CP_Forum_Announcements.html" title="Admin CP Forum Announcements">Forum Announcements</a> - <a href="{{ site.url }}/Admin_CP_Moderation_Queue.html" title="Admin CP Moderation Queue">Moderation Queue</a> - <a href="{{ site.url }}/Admin_CP_Forum_Attachments.html" title="Admin CP Forum Attachments">Attachments</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Users.html" title="Admin CP Users">Users</a> - <a href="{{ site.url }}/Admin_CP_Groups.html" title="Admin CP Groups">Groups</a> - <a href="{{ site.url }}/Admin_CP_User_Titles.html" title="Admin CP User Titles">User Titles</a> - <a href="{{ site.url }}/Admin_CP_User_Banning.html" title="Admin CP User Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Admin_Perms.html" title="Admin CP Admin Perms">Admin Permissions</a> - <a href="{{ site.url }}/Admin_CP_Mass_Mail.html" title="Admin CP Mass Mail">Mass Mail</a> - <a href="{{ site.url }}/Admin_CP_Group_Promotions.html" title="Admin CP Group Promotions">Group Promotions</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><strong class="selflink">Themes</strong> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_System_Health.html" title="Admin CP System Health">System Health</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Cache_Manager" title="Admin CP Tools">Cache Manager</a> - <a href="{{ site.url }}/Admin_CP_Task_Manager.html" title="Admin CP Task Manager">Task Manager</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Recount_and_Rebuild" title="Admin CP Tools">Recount and Rebuild</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#PHP_Info" title="Admin CP Tools">PHP Info</a> - <a href="{{ site.url }}/Admin_CP_Backups.html" title="Admin CP Backups">Database Backups</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Optimize_Database" title="Admin CP Tools">Optimize Database</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#File_Verification" title="Admin CP Tools">File Verification</a> - <a href="{{ site.url }}/Admin_CP_Admin_Logs.html" title="Admin CP Admin Logs">Administrator Log</a> - <a href="{{ site.url }}/Admin_CP_Mod_Logs.html" title="Admin CP Mod Logs">Moderator Log</a> - <a href="{{ site.url }}/Admin_CP_User_Email_Logs.html" title="Admin CP User Email Logs">User Email Log</a> - <a href="{{ site.url }}/Admin_CP_System_Mail_Logs.html" title="Admin CP System Mail Logs">System Mail Log</a> - <a href="{{ site.url }}/Admin_CP_User_Warning_Logs.html" title="Admin CP User Warning Logs">User Warning Log</a> - <a href="{{ site.url }}/Admin_CP_Statistics.html" title="Admin CP Statistics">Statistics</a>
+</td></tr></table>
+</div>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Customization.html" title="Customization">MyBB Customization</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Templates_and_Themes.html" title="Templates and Themes">Templates/Themes</a></b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Authoring_Templates_and_Themes.html" title="Authoring Templates and Themes">Authoring</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Template Management</a> - <strong class="selflink">Theme Management</strong> - <a rel="nofollow" class="external text" href="http://mods.mybb.com/themes">User-created</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Plugins.html" title="Plugins">Plugins</a></b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Authoring_Plugins.html" title="Authoring Plugins">Authoring</a> - <a href="{{ site.url }}/MyBB_Plugin_Hooks.html" title="MyBB Plugin Hooks">Plugin Hooks</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugin Management</a> - <a rel="nofollow" class="external text" href="http://mods.mybb.com/mods">User-created</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Translations.html" title="Translations">Translations</a></b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Language Management</a> - <a rel="nofollow" class="external text" href="http://community.mybb.com/thread-114917.html">Download</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Links</b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a rel="nofollow" class="external text" href="http://mods.mybb.com/">MyBB Mods</a>
+</td></tr></table>
+</div>
+
+
+
+
