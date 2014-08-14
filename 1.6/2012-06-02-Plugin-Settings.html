@@ -1,10 +1,11 @@
 ---
-layout: post
+layout: page
 title: Plugin Settings
 permalink: Plugin_Settings.html
 category: Plugins
 ---
-<p>Here is how to add settings to your plugins.
+
+<p>Here is how to add settings to your plugins.
 </p><p><br />
 </p>
 
@@ -74,7 +75,7 @@ three=Option Three', // This will be an selectbox with the option to choose Defa
 		'gid'			=&gt; intval($gid)
 	);
 	$db-&gt;insert_query('settings', $myplugin_setting);
-	
+
 
 	// This updates the ./inc/settings.php file.
 	rebuild_settings();
@@ -90,7 +91,7 @@ function myplugin_uninstall()
 	$db-&gt;write_query(&quot;DELETE FROM &quot;.TABLE_PREFIX.&quot;settings WHERE name IN ('myplugin_setting1','myplugin_setting2','myplugin_setting3','myplugin_setting4')&quot;);
 
 	$db-&gt;write_query(&quot;DELETE FROM &quot;.TABLE_PREFIX.&quot;settinggroups WHERE name = 'myplugin'&quot;);
-	rebuild_settings(); 
+	rebuild_settings();
 }
 </pre>
 <p><br />

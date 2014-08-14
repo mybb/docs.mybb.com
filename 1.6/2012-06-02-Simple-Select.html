@@ -1,10 +1,11 @@
 ---
-layout: post
+layout: page
 title: Simple Select
 permalink: Simple_Select.html
 category: Other Topics
 ---
-<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#.24db-.3Esimple_select"><span class="tocnumber">1</span> <span class="toctext">$db-&gt;simple_select</span></a>
 <ul>
@@ -50,24 +51,24 @@ category: Other Topics
 
 global $db;
 
-$query = $db-&gt;simple_select(&quot;settings&quot;, &quot;*&quot;, 
-&quot;name='boardclosed_reason'&quot;, array(&quot;order_by&quot; =&gt; 'name', 
+$query = $db-&gt;simple_select(&quot;settings&quot;, &quot;*&quot;,
+&quot;name='boardclosed_reason'&quot;, array(&quot;order_by&quot; =&gt; 'name',
 &quot;order_dir&quot; =&gt; 'DESC', &quot;limit&quot; =&gt; 1));
 
 $settings = $db-&gt;fetch_array($query);
 
-/* 
+/*
 Outputs:
 	Array
 	(
 		[sid] =&gt; 6
 		[name] =&gt; boardclosed_reason
 		[title] =&gt; Board Closed Reason
-		[description] =&gt; If your forum is closed, you can set a 
- message here that your visitors will be able to see when they visit 
+		[description] =&gt; If your forum is closed, you can set a
+ message here that your visitors will be able to see when they visit
  your forums.
 		[optionscode] =&gt; textarea
-		[value] =&gt; These forums are currently closed for maintenance. 
+		[value] =&gt; These forums are currently closed for maintenance.
  Please check back later.
 		[disporder] =&gt; 2
 		[gid] =&gt; 2

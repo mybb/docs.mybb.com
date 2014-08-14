@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Unknown location
 permalink: Help-Unknown_location.html
 category: General Help
@@ -26,12 +26,12 @@ category: General Help
 </p><p>If your host is not able to upgrade MyltiByte or if you wish to fix the problem temporarily you can simply open your ./inc/functions_online.php file and find:
 </p>
 <pre>
-$filename = my_substr($split_loc[0], -my_strpos(strrev($split_loc[0]), &quot;/&quot;)); 
+$filename = my_substr($split_loc[0], -my_strpos(strrev($split_loc[0]), &quot;/&quot;));
 </pre>
 <p>and replace it with:
 </p>
 <pre>
-$filename = substr($split_loc[0], -my_strpos(strrev($split_loc[0]), &quot;/&quot;)); 
+$filename = substr($split_loc[0], -my_strpos(strrev($split_loc[0]), &quot;/&quot;));
 </pre>
 <p>Please note, the temporary patch <b>will not</b> be applied to the official MyBB download or considered a bug in MyBB or fixed in any future maintenance release. It is a bug in the MultiByte PHP extension. We strongly encourage our users to keep their servers up-to-date, or otherwise encourage their hosts to keep their servers up-to-date.
 </p>

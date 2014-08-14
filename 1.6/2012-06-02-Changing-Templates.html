@@ -1,10 +1,11 @@
 ---
-layout: post
+layout: page
 title: Changing Templates
 permalink: Changing_Templates.html
 category: Templates
 ---
-<p>On this page, you will find how to make template edits in plugins.
+
+<p>On this page, you will find how to make template edits in plugins.
 </p>
 
 <p>Here is how to make a basic template edit.  For this example, we are going to edit the index template and add the variable {$randomvar} after the board statistics.
@@ -18,7 +19,7 @@ find_replace_templatesets(
 		&quot;index&quot;,
 		'#'.preg_quote('{$boardstats}').'#',
 		'{$boardstats}{$randomvar}'
-	);		
+	);
 }
 </pre>
 
@@ -33,7 +34,7 @@ find_replace_templatesets(
 		&quot;index&quot;,
 		'#'.preg_quote('{$randomvar}').'#',
 		''
-	);		
+	);
 }
 </pre>
 

@@ -1,10 +1,11 @@
 ---
-layout: post
+layout: page
 title: Authoring Modules
 permalink: Authoring_Modules.html
 category: Other Topics
 ---
-<p><b>As of MyBB 1.2.x, modules have been deprecated.  Please use the <a href="{{ site.url }}/Plugins.html" title="Plugins">plugin system</a></b>
+
+<p><b>As of MyBB 1.2.x, modules have been deprecated.  Please use the <a href="{{ site.url }}/Plugins.html" title="Plugins">plugin system</a></b>
 </p>
 <table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
 <ul>
@@ -54,11 +55,11 @@ function pluginname_install()
 		'module'	=&gt; 'modulename',
 		'status'	=&gt; 1,
 	);
-	
+
 	$db-&gt;insert_query(TABLE_PREFIX.'emods', $install_module);
 
 	if ($db-&gt;num_rows($db-&gt;query(&quot;SHOW COLUMNS FROM `&quot;.TABLE_PREFIX.&quot;adminoptions` LIKE 'modulename'&quot;)) == 0)
-	{ 
+	{
 		$db-&gt;query(&quot;ALTER TABLE `&quot;.TABLE_PREFIX.&quot;adminoptions` ADD `modulename` CHAR(3) NOT NULL&quot;);
 	}
 
@@ -67,7 +68,7 @@ function pluginname_install()
         echo &quot;&lt;script language=\&quot;JavaScript\&quot;&gt; parent.nav.location.href = \&quot;./index.php?action=navigation\&quot;; &lt;/script&gt;&quot;;
 
         cpredirect('eMods.php', $lang-&gt;mod_installed);
-	
+
 }
 
 // This function runs when the plugin is deactivated.
@@ -77,8 +78,8 @@ function modulename_uninstall()
 
 	$db-&gt;query(&quot;DELETE FROM &quot;.TABLE_PREFIX.&quot;emods WHERE module='modulename'&quot;);
 
-	if ($db-&gt;num_rows($db-&gt;query(&quot;SHOW COLUMNS FROM `&quot;.TABLE_PREFIX.&quot;adminoptions` LIKE 'modulename'&quot;);) == 1) 
-	{ 
+	if ($db-&gt;num_rows($db-&gt;query(&quot;SHOW COLUMNS FROM `&quot;.TABLE_PREFIX.&quot;adminoptions` LIKE 'modulename'&quot;);) == 1)
+	{
 		$db-&gt;query(&quot;ALTER TABLE `&quot;.TABLE_PREFIX.&quot;adminoptions` DROP COLUMN `modulename`&quot;);
 	}
 

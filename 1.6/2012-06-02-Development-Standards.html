@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Development Standards
 permalink: Development_Standards.html
 category: Development
@@ -187,7 +187,7 @@ require_once MYBB_ROOT.&quot;inc/functions.php&quot;; // Language construct - sh
 </li><li> The function does not contain a true/false return value. In this case, the return value of the function should be the variable or false in the case of an error.
 </li></ul>
 <h2> <span class="mw-headline" id="Class_Declarations"> Class Declarations </span></h2>
-<p>Class names should be as descriptive as possible. Avoid using abbreviations where possible. Class names should begin with an uppercase character and words should be separated by an underscore.  The brace must always be written on the line underneath the class name (“one true brace” form). 
+<p>Class names should be as descriptive as possible. Avoid using abbreviations where possible. Class names should begin with an uppercase character and words should be separated by an underscore.  The brace must always be written on the line underneath the class name (“one true brace” form).
 </p><p>Every class must have a documentation block that conforms to the PHPDocumentator standard (covered below).
 </p>
 <pre>
@@ -267,7 +267,7 @@ class Thread_Search
 	 * @access private
 	 */
 	private $db;
-	
+
 	/**
 	 * Get a list of threads with the specified name.
 	 *

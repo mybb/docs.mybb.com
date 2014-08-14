@@ -1,10 +1,11 @@
 ---
-layout: post
+layout: page
 title: Fetch Field
 permalink: Fetch_Field.html
 category: Other Topics
 ---
-<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#.24db-.3Efetch_field"><span class="tocnumber">1</span> <span class="toctext">$db-&gt;fetch_field</span></a>
 <ul>
@@ -29,7 +30,7 @@ category: Other Topics
 
 <p>query
 </p>
-<pre>The query resource id that is being evaluated. This result comes from a call 
+<pre>The query resource id that is being evaluated. This result comes from a call
 to $db-&gt;query().
 </pre>
 <p>field
@@ -38,13 +39,13 @@ to $db-&gt;query().
 </pre>
 <p>row
 </p>
-<pre>The row number from the result that's being retrieved. Row numbers start at 0. 
+<pre>The row number from the result that's being retrieved. Row numbers start at 0.
 </pre>
 <p><br />
 </p>
-<pre>It can be the field's offset, the field's name, or the field's table dot 
-field name (tablename.fieldname). If the column name has been aliased 
-('select foo as bar from...'), use the alias instead of the column name. If 
+<pre>It can be the field's offset, the field's name, or the field's table dot
+field name (tablename.fieldname). If the column name has been aliased
+('select foo as bar from...'), use the alias instead of the column name. If
 undefined, the first field is retrieved.
 </pre>
 
@@ -55,7 +56,7 @@ undefined, the first field is retrieved.
 </p>
 <pre>
 
-$query = $db-&gt;simple_select(&quot;settings&quot;, &quot;*&quot;, 
+$query = $db-&gt;simple_select(&quot;settings&quot;, &quot;*&quot;,
 &quot;name='boardclosed_reason'&quot;);
 
 $title = $db-&gt;fetch_field($query, &quot;title&quot;);
@@ -64,7 +65,7 @@ echo $title;
 
 </pre>
 
-<pre>Note: Calls to $db-&gt;fetch_field() should not be mixed with calls to other 
+<pre>Note: Calls to $db-&gt;fetch_field() should not be mixed with calls to other
 functions that deal with the result set.
 </pre>
 
