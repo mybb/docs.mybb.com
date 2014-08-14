@@ -4,7 +4,7 @@ title:  "Templates"
 categories: [plugins]
 ---
 
-## Templates and passing values to a template
+## Passing values to a template
 
 Most plugins require some changes to the front end of the site, typically to display some extra information.
 
@@ -17,7 +17,8 @@ Usually you'd replace the string with itself plus your variable, for example:
 
 ```php
 require_once MYBB_ROOT."/inc/adminfunctions_templates.php";
-	find_replace_templatesets(
+
+find_replace_templatesets(
     "index",
     "#" . preg_quote('<body>') . "#i",
     '<body>{$myVar}'
@@ -40,6 +41,7 @@ An alternative solution is to modify an existing global variable, for example yo
 
 ```php
 global $user;
+
 $user['favorite_colour'] = 'Blue';
 ```
 ### Creating your own templates
@@ -52,6 +54,7 @@ Templates are usually created in your `_install()` function, they can be created
 global $db;
 
 $template = '<strong>{$hello_world}</strong>';
+
 $insert_array = array(
     'title' => 'hello_world_template',
     'template' => $db->escape_string($template),
@@ -61,15 +64,12 @@ $insert_array = array(
 );
 
 $db->insert_query('templates', $insert_array);
-
 ```
 
 The template can be uninstalled using:
 
 ```php
-
 $db->delete_query("templates", "title = 'hello_world_template'");
-
 ```
 
 Once your plugin has been installed you should now be able to see the template you created under global templates.
@@ -77,11 +77,10 @@ Once your plugin has been installed you should now be able to see the template y
 To replace a variable you inserted into another template with your custom template you must do the following from your hook function:
 
 ```php
-
 global $templates, $myVar;
+
 $hello_world = 'foobar';
 eval('$myVar  = "' . $templates->get('hello_world_template') . '";');
-
 ```
 
 Note that `$hello_world` does not have to be global, yet it's passed to your custom template.
@@ -120,7 +119,6 @@ function my_action()
         // Using the misc_help template for the page wrapper
         eval("\$page = \"".$templates->get("misc_help")."\";");
         output_page($page);
-
     }
 }
 ```
