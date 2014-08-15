@@ -21,8 +21,8 @@ Information: This occurs when the file `inc/config.php` is incorrectly configure
 
 **Error Type:** *MyBB Error (43)*
 
-**Error Message:** The install directory (`install/`) still exists on your server and is not locked. To access MyBB please either remove this directory or create an empty file in it called *lock*.
-Information: This occurs when, as the error says your *install* folder is still present, or has not been locked. To solve this error, either completely delete the `install/` folder, or create an empty file in it called *lock*. MyBB requires you to remove or lock this folder, so nobody can run the installation or upgrade script, and corrupt or erase your database with it.
+**Error Message:** The install directory (`install/`) still exists on your server and is not locked. To access MyBB please either remove this directory or create an empty file in it called `lock`.
+Information: This occurs when, as the error says your `install` folder is still present, or has not been locked. To solve this error, either completely delete the `install/` folder, or create an empty file in it called `lock`. MyBB requires you to remove or lock this folder, so nobody can run the installation or upgrade script, and corrupt or erase your database with it.
 
 ## MyBB Error (42)
 
@@ -36,7 +36,7 @@ Information: This occurs when you are attempting to do a major upgrade, for exam
 **Error Type:** *MyBB Error (44)*
 
 **Error Message:** MyBB was unable to load the SQL extension. Please contact the MyBB Group for support. MyBB Website
-**Information:** This occurs when the database type is incorrect in `inc/config.php`. To fix this, open `inc/config.php` and check the entry for `$config['database']['type']`. A common issue is having *mysql* instead of *mysqli*, or having *mysqli* instead of *mysql*. If you do not know what needs to be here, contact your host provider.
+**Information:** This occurs when the database type is incorrect in `inc/config.php`. To fix this, open `inc/config.php` and check the entry for `$config['database']['type']`. A common issue is having `mysql` instead of `mysqli`, or having `mysqli` instead of `mysql`. If you do not know what needs to be here, contact your host provider.
 
 # SQL Errors
 
@@ -90,6 +90,7 @@ Information: This occurs when you are attempting to do a major upgrade, for exam
 
 **Information:** *This is an issue with the connection to your database, your host will have to solve this issue for you.
 
+# SQLite Error 1
 
 **Database:** *SQLite*
 
@@ -115,23 +116,26 @@ Information: This occurs when you are attempting to do a major upgrade, for exam
 
 **SQL Error:** *1054 - Unknown column 'loginattempts' in 'field list'*
 
-**Query:** *SELECT loginattempts FROM mybb_users WHERE LOWER(username)='username' LIMIT 1*
+**Query:** `SELECT loginattempts FROM mybb_users WHERE LOWER(username)='username' LIMIT 1`
 
 **Information:** Note: this fix does not apply to all *unknown column* errors, it is specifically for the query in the image (with a different username/table prefix etc of course). Please do not suggest this fix when someone has any other *unknown column* error.
-This occurs when you are using MySQL and you attempt to upgrade from 1.4.3 to 1.4.4, after you upload all the new files, but do not run the upgrade script. In 1.4.4, a new column, *loginattempts*, was added to the users table for a new security feature. The error shows as the 1.4.4 `member.php` file is trying to find the *loginattempts* column in a 1.4.3 database, where it doesn't exist. To fix this issue, go to `install/upgrade.php` and choose 1.4.2/1.4.3 from the list.
+
+This occurs when you are using MySQL and you attempt to upgrade from 1.4.3 to 1.4.4, after you upload all the new files, but do not run the upgrade script. In 1.4.4, a new column, `loginattempts`, was added to the users table for a new security feature. The error shows as the 1.4.4 `member.php` file is trying to find the `loginattempts` column in a 1.4.3 database, where it doesn't exist. To fix this issue, go to `install/upgrade.php` and choose 1.4.2/1.4.3 from the list.
 
 # Other Error Messages
 
 ## Error Message: *Error*
 
-The installer is currently locked, please remove *lock* from the install directory to continue
-Information: This happens when you try to run the installation or upgrade script, but your `install/` folder is locked. Simply remove the *lock* file from the `install/` folder to continue.
+The installer is currently locked, please remove `lock` from the install directory to continue
+Information: This happens when you try to run the installation or upgrade script, but your `install/` folder is locked. Simply remove the `lock` file from the `install/` folder to continue.
 
 ## Error Message: *Forbidden*
 
-You don't have permission to access `/admin/index.php` on this server.
+You don't have permission to access `admin/index.php` on this server.
 
-Information: This is nearly always a problem with *mod_security*. *mod_security* is an extension to Apache that is used for security. In MyBB 1.4, *mod_security* treats the way the URLs are set out in the ACP as a security threat, so it will deny you access. For information on how to prevent this, see the Wiki page for *mod_security*. If nothing here works, contact your host provider and ask them to whitelist your domain or hosting account against *mod_security* - basically so that it doesn't affect you anymore.
+Information: This is nearly always a problem with *mod_security*. *mod_security* is an Apache extension that is used for security. In MyBB 1.4, *mod_security* treats the way the URLs are set out in the ACP as a security threat, so it will deny you access.
+
+You should contact your host provider and ask them to whitelist your domain or hosting account against *mod_security* - basically so that it doesn't affect you anymore.
 
 ## Catchable Fatal Error (4096)
 
