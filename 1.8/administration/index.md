@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Administration"
-categories: [administration]
+categories: []
 ---
 
 {% include category.html %}

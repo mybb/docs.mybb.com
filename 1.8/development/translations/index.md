@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Translations Development"
-categories: [translations]
+categories: []
 ---
 
 This document contains instructions on how to translate MyBB into another language and serves as a guide for new translators.

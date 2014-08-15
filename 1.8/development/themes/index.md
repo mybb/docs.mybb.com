@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Themes"
-categories: [themes]
+categories: []
 ---
 
 Authoring themes is similar to creating websites. It will require knowledge of HTML and CSS, as well as an understanding of MyBB's internal variables.
