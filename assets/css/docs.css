@@ -66,8 +66,7 @@ article#docs_page .toc {
     margin: 10px;
     border-spacing: 0px;
     padding: 10px;
-	width: 400px;
-    min-width: 400px;
+  	width: auto;
 	float: right;
 }
 article#docs_page .toc:empty {
