@@ -6,7 +6,7 @@ categories: [plugins]
 
 The database class provides a wrapper of most common functions used for database access, and also others which simplify common queries. All queries performed with the database through the database abstraction layer can be analyzed for the execution time and further optimization.
 
-## `$db->query`>
+## `$db->query`
 
 Executes an SQL query with your database. Note that the `write_query` method is now preferred.
 
