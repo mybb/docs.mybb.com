@@ -1,0 +1,132 @@
+---
+layout: page
+title: Information for new developers
+permalink: Development-Information_for_new_developers.html
+category: Development
+---
+
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Welcome"><span class="tocnumber">1</span> <span class="toctext">Welcome</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Software"><span class="tocnumber">1.1</span> <span class="toctext">Software</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Editors_and_IDEs"><span class="tocnumber">1.1.1</span> <span class="toctext">Editors and IDEs</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Subversion_clients"><span class="tocnumber">1.1.2</span> <span class="toctext">Subversion clients</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Subversion_Access"><span class="tocnumber">1.1.3</span> <span class="toctext">Subversion Access</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Fixing_Bugs.2FImplementing_Features"><span class="tocnumber">1.2</span> <span class="toctext">Fixing Bugs/Implementing Features</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Introduction"><span class="tocnumber">1.2.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Creating_the_ticket"><span class="tocnumber">1.2.2</span> <span class="toctext">Creating the ticket</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Choosing_a_branch_to_fix"><span class="tocnumber">1.2.3</span> <span class="toctext">Choosing a branch to fix</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Making_the_commit"><span class="tocnumber">1.2.4</span> <span class="toctext">Making the commit</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#After_making_the_commit"><span class="tocnumber">1.2.5</span> <span class="toctext"><b>After making the commit</b></span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Conclusion"><span class="tocnumber">1.3</span> <span class="toctext">Conclusion</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Welcome">Welcome</span></h1>
+<p>Welcome to the MyBB "Info for new Developers" setup and procedures document. This document is to get new staff members up to speed about procedures on development, and give potential staff members a taste of what is required.
+</p>
+<h2> <span class="mw-headline" id="Software">Software</span></h2>
+<p>You may use whatever software you want to edit the code. Here are some we recommend:
+</p>
+<h3> <span class="mw-headline" id="Editors_and_IDEs">Editors and IDEs</span></h3>
+<p>The following text editors are recommended whilst working on MyBB.
+</p>
+<ul><li> EditPlus (Windows)
+</li><li> PHPEdit (Windows)
+</li><li> TextMate (Mac)
+</li><li> Notepad++ (Windows)
+</li></ul>
+<p>Here are some other IDEs for PHP:
+</p>
+<ul><li> PHPEclipse - Repackage of Eclipse with PHP editing tools.
+</li><li> NetBeans PHP - Repackage of NetBeans with PHP editing tools.
+</li></ul>
+<p><i>Note:</i> Your editor will need to be configured to match the <a href="{{ site.url }}/Development_Standards.html" title="Development Standards">MyBB Development Standards</a> requirements.
+</p>
+<h3> <span class="mw-headline" id="Subversion_clients">Subversion clients</span></h3>
+<ul><li> TortoiseSVN (Windows) - Tightly integrates with Windows Explorer (<i>recommended</i>)
+</li><li> RapidSVN (Windows / Linux / Mac) - Cross platform SVN client
+</li><li> SvnX (Mac) - Runs under Mac OS X
+</li></ul>
+<h3> <span class="mw-headline" id="Subversion_Access">Subversion Access</span></h3>
+<p>For MyBB development we use a subversion repository which allows us to work on the code independent of other users then commit our changes.
+The repository URLs:
+</p>
+<ul><li> 'MyBB': <a rel="nofollow" class="external free" href="http://dev.mybb.com/svn/mybb/">http://dev.mybb.com/svn/mybb/</a>
+</li><li> 'Merge System': <a rel="nofollow" class="external free" href="http://dev.mybb.com/svn/mybb-import/">http://dev.mybb.com/svn/mybb-import/</a>
+</li><li> 'MyBB Modifications': <a rel="nofollow" class="external free" href="http://dev.mybb.com/svn/mybb-modifications/">http://dev.mybb.com/svn/mybb-modifications/</a>
+</li></ul>
+<h2> <span class="mw-headline" id="Fixing_Bugs.2FImplementing_Features">Fixing Bugs/Implementing Features</span></h2>
+<h3> <span class="mw-headline" id="Introduction">Introduction</span></h3>
+<p>This section's purpose is to outline the procedure for fixing MyBB Bugs found or reported in a separate location outside of the development site. This procedure may also apply to beta's or internal fixes.
+</p>
+<h3> <span class="mw-headline" id="Creating_the_ticket"> Creating the ticket </span></h3>
+<p>Whenever there is a bug in the code, a ticket needs to be created for it. This is so we can keep track of changes, and the reasons for those changes in our development tracker. You may create a new issue <a rel="nofollow" class="external text" href="http://dev.mybb.com/projects/mybb/issues/new">here</a> and you may view a current list of tickets <a rel="nofollow" class="external text" href="http://dev.mybb.com/projects/mybb/issues">here</a>. You may use the "Custom queries" or search criteria to narrow down ticket results to specific criteria.
+</p><p>When you are creating the ticket, include the following details:
+</p>
+<ul><li> <b>Tracker:</b> Bug or Feature (<i>note: only Management or Lead's may create "Feature" tickets</i>)
+</li><li> <b>Subject:</b> Title of the ticket - Should relate to the problem or feature
+</li><li> <b>Description:</b> Description of the ticket - Should relate to the problem of feature
+</li><li> <b>Status:</b> Set to <i>Assigned</i>
+</li><li> <b>Priority:</b> The only option is "Normal"
+</li><li> <b>Assigned to:</b> Set to the developer that will be working on the ticket. Leave blank if you do not know.
+</li><li> <b>Category:</b> The category in which this ticket falls under. If it doesn't fit in a specific category choose <i>Other</i>
+</li><li> <b>Target Version:</b> The version in which this ticket will show up in. Leave blank if you do not know.
+</li></ul>
+<p>Once you have done that you may submit the ticket.
+</p>
+<h3> <span class="mw-headline" id="Choosing_a_branch_to_fix"> Choosing a branch to fix </span></h3>
+<p>If you are fixing bugs in the development code or latest release, you will need to fix the bug in the 'trunk' folder in SVN.
+If you are fixing bugs for older releases or branches, you will need to fix them in the appropriate version in the 'branches' folder in SVN.
+</p><p><i>Example:</i> If you are fixing a bug for MyBB 1.6 (the current public version) fix it in the trunk AND the branch. (/branches/1.6-stable/ and /trunk/). If you are fixing a bug in a development version, fix it only in the trunk.
+</p><p><b>Note:</b> There is no /trunk/ version of MyBB in the public repository as MyBB 2.0 is still being developed on a private repository.
+</p><p>When you make a fix to the code always <b>test</b> it, under any circumstance.
+</p>
+<h3> <span class="mw-headline" id="Making_the_commit"> Making the commit </span></h3>
+<p>This is the last part to fixing a bug or implementing a new feature. When you make a commit you need to include a ticket in the message. It should follow this format:
+</p><p>For bug fixes:
+</p>
+<pre>
+Fixes ''title_of_ticket'' (fixes ''#ticket_number'')
+</pre>
+<p>For bug fixes work-in-progress:
+</p>
+<pre>
+WIP ''title_of_ticket'' (wip ''#ticket_number'')
+</pre>
+<p>For features work-in-progress:
+</p>
+<pre>
+Feature ''title_of_ticket'' (WIP ''#ticket_number'')
+</pre>
+<p>For completed features:
+</p>
+<pre>
+Feature ''title_of_ticket'' (completed ''#ticket_number'')
+</pre>
+<p>This is so changes and the reason for those changes can be tracked and linked to specific commits. In addition, this allows us to put together a change log for releases.
+</p><p><b>Hint:</b> Take time to double check the file for any problems or debug code you may have accidentally left in.
+</p><p>Once you have gone through these steps, commit it!
+</p><p><i>Note: If you are still unsure or confused, please view some examples on the <a rel="nofollow" class="external text" href="http://dev.mybb.com">MyBB Development site</a></i> or ask for clarification from a seasoned staff member.
+</p>
+<h3> <span class="mw-headline" id="After_making_the_commit"> <b>After making the commit</b> </span></h3>
+<p>There are a few things you should consider after making a commit. Tickets will only update themselves in relation to commits descriptions, on a scheduled cron job, or otherwise if you directly visit <a rel="nofollow" class="external text" href="http://dev.mybb.com/projects/mybb/repository">this page</a>. It is generally a good idea to keep tickets as in-sync as possible, so visit the <a rel="nofollow" class="external text" href="http://dev.mybb.com/projects/mybb/repository">repository page</a> reguarly and check the commits while your at it for possible errors.
+</p><p><i>Note:</i> If you just committed a "work in progress" feature, visit the Repository page so the changes take effect on the ticket and then update the following fields on that ticket:
+</p><p>% Done: Change to the estimated percentage of completion.
+</p>
+<h2> <span class="mw-headline" id="Conclusion"> Conclusion </span></h2>
+<p>If you follow all these steps to the 'T', you will do just fine as a developer. More information can be found on development standards and other related pages at the wiki <a href="{{ site.url }}/Development.html" title="Development">Development</a> page.
+</p><p><br style="clear:both" />
+</p>
+
+
+
+

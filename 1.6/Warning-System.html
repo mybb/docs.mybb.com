@@ -1,0 +1,119 @@
+---
+layout: page
+title: Warning System
+permalink: Warning_System.html
+category: Other Topics
+---
+
+<p>The MyBB Warning System allows for easy warning of users for various offenses, and allows for automatic punishments to be given based on the warning level. There are various <a href="{{ site.url }}/Admin_CP_Board_Settings.html#Warning_System" title="Admin CP Board Settings">board settings</a> regarding the warning system. Also, there is a <a href="{{ site.url }}/Admin_CP_Config_Warning_System.html" title="Admin CP Config Warning System">section in the Admin CP</a> for configuration of the warning system - including both warning types and warning levels (actions that occur at a certain percentage).
+</p><p>If enabled in the board settings in the Admin CP, a user will be able to see their warning level in their profile and will be able to view their recent warnings from their User CP. More information on the warning log in the User CP can be found in the <a href="{{ site.url }}/User_CP.html#Warnings" title="User CP">User CP article</a>.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Warning_a_User"><span class="tocnumber">1</span> <span class="toctext">Warning a User</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Warning_Log"><span class="tocnumber">2</span> <span class="toctext">Warning Log</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Warning_Details"><span class="tocnumber">3</span> <span class="toctext">Warning Details</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Revoke_this_Warning"><span class="tocnumber">3.1</span> <span class="toctext">Revoke this Warning</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#The_warning_has_been_revoked"><span class="tocnumber">3.2</span> <span class="toctext">The warning has been revoked</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Warning_a_User"> Warning a User </span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/e/e8/Warning_Warn.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/e/e8/Warning_Warn.png/180px-Warning_Warn.png" width="180" height="227" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/e/e8/Warning_Warn.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Warn a User</div></div></div>
+<p>You can either warn a user from their profile or from a post of theirs. To warn a user from their profile, go to the user's profile and next to "Warning Level" select "Warn." To warn a user from a post of theirs, click on the "Warn" button at the far right of the options bar. Both of these take you to the warning page; however, if you warn a user from a post of theirs, the post will be included in the Warning Log.
+</p><p>On the page, you will see the following:
+</p>
+<dl><dt>Username&#160;</dt><dd> The username of the user you are warning, and a link to their profile.
+</dd><dt>Post&#160;</dt><dd> If you are warning a user from a post of theirs, a link to the post will be shown, with the title of the post.
+</dd><dt>Administrative Notes&#160;</dt><dd> Here you can enter notes regarding why this user was warned, only for users who can warn other users to see.
+</dd><dt>Warning Type&#160;</dt><dd> The type or reason for warning this user. The user will see this field. This can either be one of the <a href="{{ site.url }}/Admin_CP_Config_Warning_System.html#Warning_Types" title="Admin CP Config Warning System">administrative-set warning types</a> or a custom reason. Each warning type also lists the number of points that will be added to the user's warning level. When selecting an administrative-set warning type, the user's new warning level will be displayed, and any actions that will result of the warning will be listed (<a href="{{ site.url }}/Admin_CP_Config_Warning_System.html#Warning_Levels" title="Admin CP Config Warning System">warning levels</a>). If you select to enter a custom reason, you must enter in the reason, the number of points to be awarded, and when the warning will expire, choosing either a number of hours, days, weeks, months, or never.
+</dd><dt>Notify User&#160;</dt><dd> If you wish to send the user a private message alongside with the warning, select the checkbox "Send this user a private message notifying them of this warning." A form will be loaded allowing you to enter in a subject for the private message and a message. A MyCode editor is shown for the message, and the smilies are also shown to the left.
+</dd></dl>
+<p>Select "Warn User" to add the warning and to, if chosen, send the private message to the user.
+</p>
+<h2> <span class="mw-headline" id="Warning_Log"> Warning Log </span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/0/06/Warning_Log.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/0/06/Warning_Log.png/180px-Warning_Log.png" width="180" height="34" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/0/06/Warning_Log.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Warning Log</div></div></div>
+<p>From the user's postbit and profile, you will see the user's warning level. Clicking on this takes you a page listing all of their warnings (the user's warning log). Warnings can either be active or expired (they are separated in this listing). For each warning, you see the warning type/reason, the post the user was warned for (if applicable), the date issued, when the warning will expire (if ever, and if it has not already expired), who issued the warning, and will be given a link to view more information on the warning.
+</p>
+<h2> <span class="mw-headline" id="Warning_Details"> Warning Details </span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/f/fc/Warning_View.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/f/fc/Warning_View.png/180px-Warning_View.png" width="180" height="76" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/f/fc/Warning_View.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Warning Details</div></div></div>
+<p>Clicking on "View" for a warning from the warning log takes you to a page that lists all of the information about the warning. This includes:
+</p>
+<dl><dt>Username&#160;</dt><dd> The name of the user who was warned
+</dd><dt>Warning&#160;</dt><dd> The warning type / reason, and the number of points the warning was worth
+</dd><dt>Date Issued&#160;</dt><dd> The date and time the warning was issued
+</dd><dt>Issued By&#160;</dt><dd> The user who warned this user
+</dd><dt>Expires&#160;</dt><dd> The date and time the warning will expire. If the warning has already expired, you will be told so, and will be shown the date and time the warning expired in parentheses.
+</dd><dt>Administrative Notes&#160;</dt><dd> These are the notes the warner added when warning the user, to not be displayed to the warned user.
+</dd></dl>
+<h3> <span class="mw-headline" id="Revoke_this_Warning"> Revoke this Warning </span></h3>
+<p>You may also opt to revoke the warning, which will essentially expire the warning early, making it no longer count toward the user's warning level. However, this will <i>not</i> remove any bans or suspensions that were imposed as a result of the warning.
+</p><p>To revoke the warning, you must enter in a reason. The reason should explain why the warning is being revoked early.
+</p><p>There is no way to permanently remove all traces of a warning from the front end of the forum. After a user has been warned, the warning will remain on record, regardless of whether or not it counts towards the user's warning level.
+</p>
+<h3> <span class="mw-headline" id="The_warning_has_been_revoked"> The warning has been revoked </span></h3>
+<p>If the warning has been revoked, a separate table will be displayed saying so. This will include the following information:
+</p>
+<dl><dt>Revoked by&#160;</dt><dd> The user who revoked the warning
+</dd><dt>Date Revoked&#160;</dt><dd> The date and time the warning was revoked
+</dd><dt>Reason&#160;</dt><dd> The reason entered at the time the warning was revoked by the user who revoked the warning.
+</dd></dl>
+<div style="clear:both;border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Documentation.html" title="Documentation">MyBB Documentation</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Front_End.html" title="Front End">Front End</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Index_Page.html" title="Index Page">Index Page</a> - <a href="{{ site.url }}/Portal.html" title="Portal">Portal</a> - <a href="{{ site.url }}/Forum_Display.html" title="Forum Display">Forum Display</a> - <a href="{{ site.url }}/Thread_Display.html" title="Thread Display">Thread Display</a> - <a href="{{ site.url }}/Posting.html" title="Posting">Posting Threads and Replies</a> - <a href="{{ site.url }}/Searching.html" title="Searching">Searching</a> - <a href="{{ site.url }}/User_CP.html" title="User CP">User CP</a> - <a href="{{ site.url }}/Member_Profile.html" title="Member Profile">Member Profile</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <a href="{{ site.url }}/Calendar.html" title="Calendar">Calendar</a> - <a href="{{ site.url }}/Member_List.html" title="Member List">Member List</a> - <a href="{{ site.url }}/Help_Docs.html" title="Help Docs">Help Docs</a> - <a href="{{ site.url }}/Who_Is_Online.html" title="Who Is Online">Who Is Online</a> - <a href="{{ site.url }}/{{ site.url }}/Lite_Archive_Mode.html" title="Lite (Archive) Mode">Lite (Archive) Mode</a> - <a href="{{ site.url }}/Forum_Team.html" title="Forum Team">Forum Team</a> - <a href="{{ site.url }}/Statistics.html" title="Statistics">Statistics</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/Miscellaneous_Front_End.html" title="Miscellaneous Front End">Miscellaneous</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Moderating_Options.html" title="Moderating Options">Moderation</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Moderating_Options.html#Normal_Thread_Moderation" title="Moderating Options">Standard Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Thread_Moderation" title="Moderating Options">Inline Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Post_Moderation" title="Moderating Options">Inline Post Moderation</a> - <strong class="selflink">Warning System</strong>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Mod CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Home</a> - <a href="{{ site.url }}/Mod_CP_Forums_Posts.html" title="Mod CP Forums Posts">Forums and Posts</a> - <a href="{{ site.url }}/Mod_CP_Users.html" title="Mod CP Users">Users</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a> - <a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a> - <a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a> - <a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a> - <a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a> - <a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Templates &amp; Themes</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Images.html" title="Images">Images</a> - <a href="{{ site.url }}/Postbit.html" title="Postbit">Postbit</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a> - <a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Developer</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Database_Methods.html" title="Database Methods">Database Methods</a> - <a href="{{ site.url }}/Database_Tables.html" title="Database Tables">Database Tables</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Miscellaneous</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Cookies.html" title="Cookies">Cookies</a> - <a href="{{ site.url }}/UTF8_Setup.html" title="UTF8 Setup">UTF8 Setup</a> - <a href="{{ site.url }}/Admin_CP_Board_Settings.html" title="Admin CP Board Settings">Default Settings</a>
+</td></tr></table>
+</div>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Features.html" title="Features">MyBB Features</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td><a href="{{ site.url }}/{{ site.url }}/Lite_Archive_Mode.html" title="Lite (Archive) Mode">Archive Mode</a> - <a href="{{ site.url }}/Attachments.html" title="Attachments">Attachments</a> - <a href="{{ site.url }}/Multiquote.html" title="Multiquote">Multiquote</a> - <a href="{{ site.url }}/MyCode.html" title="MyCode">MyCode</a> - <a href="{{ site.url }}/Polls.html" title="Polls">Polls</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <a href="{{ site.url }}/Reputation.html" title="Reputation">Reputation</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/SEF_URLS.html" title="SEF URLS">Search Engine Friendly URLs</a> - <a href="{{ site.url }}/Smilies.html" title="Smilies">Smilies</a> - <a href="{{ site.url }}/Subscriptions.html" title="Subscriptions">Subscriptions</a> - <a href="{{ site.url }}/User_Groups.html" title="User Groups">User Groups</a> - <a href="{{ site.url }}/Referrers.html" title="Referrers">User Referrals</a> - <strong class="selflink">Warning System</strong>
+</td></tr></table>
+<div style="text-align: center;"><i>This is obviously not the complete feature list.  See <a href="{{ site.url }}/Features.html" title="Features">Features</a>.</i></div>
+</div>
+
+
+
+

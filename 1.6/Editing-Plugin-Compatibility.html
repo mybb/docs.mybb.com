@@ -1,0 +1,23 @@
+---
+layout: page
+title: Editing Plugin Compatibility
+permalink: Editing_Plugin_Compatibility.html
+category: Plugins
+---
+
+<p>To edit a plugin's compatibility, open up the plugin's main file (in inc/plugins).  For example, if you are editing the default MyBB Hello World plugin, it the plugin filename would be inc/plugins/hello.php.
+</p><p>Go into the plugin and look around for a line that looks like this:
+</p>
+<pre>
+		&quot;compatibility&quot; =&gt; &quot;14*&quot;
+</pre>
+<p>Replace it with
+</p>
+<pre>
+		&quot;compatibility&quot; =&gt; &quot;*&quot;
+</pre>
+<p>While this will allow you to activate the plugin, it is not guaranteed the plugin will work with MyBB 1.6.  Some functions it calls may no longer be in use, or it may not work for other reasons.
+</p>
+
+
+

@@ -1,0 +1,19 @@
+---
+layout: page
+title: Settings.php Permission Denied
+permalink: Help-Settingsphp_Permission_Denied.html
+category: General Help
+---
+
+<p>The error occurs when you try to save settings or possibly when activating/deactivating plugins:
+</p>
+<dl><dd> Warning: fopen(./inc/settings.php): Failed to open stream: Permission denied in /path/to/mybb/admin/settings.php on line X.
+</dd><dd> Warning: fwrite(): supplied argument is not a valid stream resource in /path/to/mybb/admin/settings.php on line X+1.
+</dd><dd> Warning: fclose(): supplied argument is not a valid stream resource in /path/to/mybb/admin/settings.php on line X+2.
+</dd></dl>
+<p>Solution:
+<a href="{{ site.url }}/HowTo_Chmod.html" title="HowTo Chmod">CHMOD</a> the <a href="Inc/settings.php" title="Inc/settings.php">inc/settings.php</a> file to 666 (in other words, make it so that the web server can write to inc/settings.php)
+</p>
+
+
+

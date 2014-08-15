@@ -1,0 +1,183 @@
+---
+layout: page
+title: Templates
+permalink: Admin_CP_Templates.html
+category: Admin CP
+---
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/f/f3/ACP_Templates.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/f/f3/ACP_Templates.png/180px-ACP_Templates.png" width="180" height="76" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/f/f3/ACP_Templates.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Templates</div></div></div>
+<p>Templates are all of the pieces that make up the layout of your board, using HTML. Templates are stored in the database.
+</p><p>The base page in the templates section displays all of your template sets. Each theme has a template set that it uses, however, multiple themes can use the same template set. Every template set contains all of the templates that make up your forum's layout.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Global_Templates"><span class="tocnumber">1</span> <span class="toctext">Global Templates</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Managing_your_templates"><span class="tocnumber">2</span> <span class="toctext">Managing your templates</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Template_Groups"><span class="tocnumber">2.1</span> <span class="toctext">Template Groups</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Editing_Templates"><span class="tocnumber">2.2</span> <span class="toctext">Editing Templates</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Difference_Report"><span class="tocnumber">2.3</span> <span class="toctext">Difference Report</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Reverting_Templates"><span class="tocnumber">2.4</span> <span class="toctext">Reverting Templates</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Deleting_Templates"><span class="tocnumber">2.5</span> <span class="toctext">Deleting Templates</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Add_Set"><span class="tocnumber">3</span> <span class="toctext">Add Set</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Add_Template"><span class="tocnumber">4</span> <span class="toctext">Add Template</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Search.2FReplace"><span class="tocnumber">5</span> <span class="toctext">Search/Replace</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Find_Updated"><span class="tocnumber">6</span> <span class="toctext">Find Updated</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Global_Templates"> Global Templates </span></h1>
+<p>Global templates are used by all themes, and usually are used for plugins and the like. They are helpful for templates that are needed in all themes.
+</p>
+<h1> <span class="mw-headline" id="Managing_your_templates"> Managing your templates </span></h1>
+<p>When you expand a template set, you are presented with a page listing all of the groups of templates within that template set. All templates have a group. Expanding a group shows the templates within that group, and can be done by choosing "Expand" under controls or by clicking on the template group's name.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/1/1d/ACP_Templates_Expand.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/1/1d/ACP_Templates_Expand.png/180px-ACP_Templates_Expand.png" width="180" height="253" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/1/1d/ACP_Templates_Expand.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Template Set</div></div></div>
+<h2> <span class="mw-headline" id="Template_Groups"> Template Groups </span></h2>
+<p>There are many template groups in each template set. They are:
+</p>
+<dl><dt>Calendar Templates&#160;</dt><dd> The Calendar section
+</dd><dt>Edit Post Templates&#160;</dt><dd> The edit post page.
+</dd><dt>Error Message Templates</dt><dd> All error messages that exist in MyBB.
+</dd><dt>Footer Templates&#160;</dt><dd> Templates for the footer area of the forum layout, including footer links and copyright.
+</dd><dt>Forum Bit Templates</dt><dd> The forum name and description, post indicator, number of threads, latest post info, etc. seen on pages such as the index page.
+</dd><dt>Forum Display Templates</dt><dd> The forum display page, also known as the thread listing.
+</dd><dt>Forum Jump Templates&#160;</dt><dd> The forum jump drop-down found on many of the pages in MyBB.
+</dd><dt>Global Templates&#160;</dt><dd> Templates that apply to all pages.
+</dd><dt>Header Templates&#160;</dt><dd> The header area of the forum layout, including logo, top links, and welcome block.
+</dd><dt>Index Page Templates&#160;</dt><dd> The default index page (the main page).
+</dd><dt>Manage Group Templates&#160;</dt><dd> The templates for the pages in the User CP allowing group leaders to manage their group.
+</dd><dt>Member List Templates&#160;</dt><dd> The list of members of your forum.
+</dd><dt>Member Templates&#160;</dt><dd> Member pages, such as the profile, login, register, activate, email user, and reset password pages.
+</dd><dt>Miscellaneous Templates&#160;</dt><dd> Templates for the <i>misc.php</i> file, including help documents and the smilies listing.
+</dd><dt>Moderation Templates&#160;</dt><dd> The inline and standard moderation templates used throughout the forum.
+</dd><dt>Moderator Control Panel Templates&#160;</dt><dd> Templates for the Mod CP.
+</dd><dt>Multipage Pagination Templates&#160;</dt><dd> The links used throughout to navigate through listings with more than one page of results.
+</dd><dt>Navigation Templates&#160;</dt><dd> The navigation bar telling you where in the forum you are (for instance, "Your Forums  / User Control Panel"). This is also the breadcrumb.
+</dd><dt>New Reply Templates&#160;</dt><dd> The new reply page.
+</dd><dt>New Thread Templates&#160;</dt><dd> The new thread page.
+</dd><dt>PHP Templates&#160;</dt><dd> Templates for the PHP warnings.
+</dd><dt>Poll Templates&#160;</dt><dd> Templates for polls on your forum.
+</dd><dt>Portal Templates&#160;</dt><dd> The forum portal.
+</dd><dt>Post Bit Templates&#160;</dt><dd> The templates for each individual post.
+</dd><dt>Post Templates&#160;</dt><dd> Attachments for the posting page that are available on all post pages, including attachments, CAPTCHA, drafts, and subscriptions.
+</dd><dt>Print Thread Templates&#160;</dt><dd> The page allowing you to print threads.
+</dd><dt>Private Messaging Templates&#160;</dt><dd> The private messaging portion of the User CP.
+</dd><dt>Redirect Templates&#160;</dt><dd> The friendly redirect pages on your forum.
+</dd><dt>Report Templates&#160;</dt><dd> The "Report This Post" feature.
+</dd><dt>Reputation Templates&#160;</dt><dd> The reputation system.
+</dd><dt>Search Templates&#160;</dt><dd> The search feature, allowing you to search for posts and threads.
+</dd><dt>Show Forum Team Templates&#160;</dt><dd> Templates for the Forum Team page.
+</dd><dt>Show Thread Templates&#160;</dt><dd> The show thread page, listing the various posts in each thread.
+</dd><dt>Smilie Inserter Templates&#160;</dt><dd> The inserter for smilies on the post pages.
+</dd><dt>Statistics Templates&#160;</dt><dd> The Forum Statistics page.
+</dd><dt>User Control Panel Templates&#160;</dt><dd> The User Control Panel.
+</dd><dt>Warning System Templates&#160;</dt><dd> Templates for the forum warning system.
+</dd><dt>Who's Online Templates&#160;</dt><dd> The "Who's Online" pages, including the Who's Online Now and Who Was Online Today pages.
+</dd><dt>XMLHTTP Templates&#160;</dt><dd> Templates for the AJAX features on your forum.
+</dd><dt>Ungroup Templates&#160;</dt><dd> Other miscellaneous templates that do not need a group, as well as your own custom templates.
+</dd></dl>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/2/28/ACP_Templates_Edit.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/2/28/ACP_Templates_Edit.png/180px-ACP_Templates_Edit.png" width="180" height="183" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/2/28/ACP_Templates_Edit.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Edit Template</div></div></div>
+<h2> <span class="mw-headline" id="Editing_Templates"> Editing Templates </span></h2>
+<p>You can edit templates by clicking on their name in the listing or by selecting "Full Edit" in the Options drop-down. You can <b>only</b> use <b>HTML</b> in templates. PHP is not parsed in templates. The only PHP values accepted are scalar and hash values such as <i>{$myvalue}</i> or <i>{$myvalue['myhash']}</i> Also you may want to try out, "PHP in Templates and Template Conditionals", This plugin will allow you to use PHP in templates, as well as shortcut template conditionals and some shortcut string functions, <a rel="nofollow" class="external free" href="http://community.mybb.com/thread-31860.html">http://community.mybb.com/thread-31860.html</a>
+</p><p>The template editor uses Codepress to allow for line numbering, easy tabbing, and coloring of certain values, just like a normal HTML editor.
+</p><p>You can choose to either save and continue editing your template or save and return to the listing.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/5/58/ACP_Templates_Diff.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/5/58/ACP_Templates_Diff.png/180px-ACP_Templates_Diff.png" width="180" height="109" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/5/58/ACP_Templates_Diff.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Difference Report</div></div></div>
+<h2> <span class="mw-headline" id="Difference_Report"> Difference Report </span></h2>
+<p>After a template has been edited, you can choose to show a template difference analysis, which will compare your current template with the default template. You can access the difference report for an edited template by choosing "Diff Report" in the template's Options drop-down menu.
+</p>
+<h2> <span class="mw-headline" id="Reverting_Templates"> Reverting Templates </span></h2>
+<p>You can revert edited templates by selecting "Revert to Original" in the Options drop-down menu for that template. You can only revert templates that have already been edited.
+</p>
+<h2> <span class="mw-headline" id="Deleting_Templates"> Deleting Templates </span></h2>
+<p>You can only delete custom templates, and not those that are included with MyBB by default. You delete a template by choosing "Delete Template" from the template's Options drop-down menu.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/2/2c/ACP_Templates_Add_Set.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/2/2c/ACP_Templates_Add_Set.png/180px-ACP_Templates_Add_Set.png" width="180" height="78" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/2/2c/ACP_Templates_Add_Set.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Add Template Set</div></div></div>
+<h1> <span class="mw-headline" id="Add_Set"> Add Set </span></h1>
+<p>You can add a new template set based off of the default MyBB templates from the "Add Set" link. All that is required is a title for the template set. In order for the template set to be used, you must have a theme that has this template set selected.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/7/76/ACP_Templates_Add_Template.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/7/76/ACP_Templates_Add_Template.png/180px-ACP_Templates_Add_Template.png" width="180" height="183" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/7/76/ACP_Templates_Add_Template.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Add Template</div></div></div>
+<h1> <span class="mw-headline" id="Add_Template"> Add Template </span></h1>
+<p>You can add a single template to any template set from the "Add Template" link. You must set a template name, the template set it should be located in, and the content for the template. You can then choose to save and continue editing the template or save and return to the listing for the template set you choose for this template.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/8/88/ACP_Templates_Search.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/8/88/ACP_Templates_Search.png/180px-ACP_Templates_Search.png" width="180" height="178" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/8/88/ACP_Templates_Search.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Templates &amp; Style: Search and Replace Templates</div></div></div>
+<h1> <span class="mw-headline" id="Search.2FReplace"> Search/Replace </span></h1>
+<p>You can either choose to search for a snippet of code (and optionally replace it with another snippet of code), or search for templates by the template title.
+</p><p><i><b>Be aware:</b> There is <b>NO</b> confirmation before replacing code. Any templates found with the code snippet you enter will have that code replaced with the replacement snippet you entered.</i>
+</p>
+<h1> <span class="mw-headline" id="Find_Updated"> Find Updated </span></h1>
+<p>From release to release, there are often changed templates. If a template has not been edited, it will automatically be updated to the latest template during the upgrade process. However, edited templates will have to be updated via the "Find Updated Templates" feature.
+</p><p>Your are provided a listing of all templates, from all template sets, that are different than the latest templates. You can choose to edit, revert, or perform a difference analysis for each of these templates.
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html#Dashboard" title="Admin CP Home">Dashboard</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Preferences" title="Admin CP Home">Preferences</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Version_Check" title="Admin CP Home">Version Check</a> - <a href="{{ site.url }}/Admin_CP_Home.html#MyBB_Credits" title="Admin CP Home">MyBB Credits</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Config_Settings.html" title="Admin CP Config Settings">Settings</a> - <a href="{{ site.url }}/Admin_CP_Config_Banning.html" title="Admin CP Config Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Config_Profile_Fields.html" title="Admin CP Config Profile Fields">Custom Profile Fields</a> - <a href="{{ site.url }}/Admin_CP_Config_Smilies.html" title="Admin CP Config Smilies">Smilies</a> - <a href="{{ site.url }}/Admin_CP_Config_Word_Filters.html" title="Admin CP Config Word Filters">Word Filters</a> - <a href="{{ site.url }}/Admin_CP_Config_MyCode.html" title="Admin CP Config MyCode">MyCode</a> - <a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Languages</a> - <a href="{{ site.url }}/Admin_CP_Config_Post_Icons.html" title="Admin CP Config Post Icons">Post Icons</a> - <a href="{{ site.url }}/Admin_CP_Config_Help_Docs.html" title="Admin CP Config Help Docs">Help Documents</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugins</a> - <a href="{{ site.url }}/Admin_CP_Config_Attachments.html" title="Admin CP Config Attachments">Attachment Types</a> - <a href="{{ site.url }}/Admin_CP_Config_Mod_Tools.html" title="Admin CP Config Mod Tools">Moderator Tools</a> - <a href="{{ site.url }}/Admin_CP_Config_Spiders.html" title="Admin CP Config Spiders">Spiders/Bots</a> - <a href="{{ site.url }}/Admin_CP_Config_Calendars.html" title="Admin CP Config Calendars">Calendars</a> - <a href="{{ site.url }}/Admin_CP_Config_Warning_System.html" title="Admin CP Config Warning System">Warning System</a> - <a href="{{ site.url }}/Admin_CP_Config_Thread_Prefixes.html" title="Admin CP Config Thread Prefixes">Thread Prefixes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Forum_Management.html" title="Admin CP Forum Management">Forum Management</a> - <a href="{{ site.url }}/Admin_CP_Forum_Announcements.html" title="Admin CP Forum Announcements">Forum Announcements</a> - <a href="{{ site.url }}/Admin_CP_Moderation_Queue.html" title="Admin CP Moderation Queue">Moderation Queue</a> - <a href="{{ site.url }}/Admin_CP_Forum_Attachments.html" title="Admin CP Forum Attachments">Attachments</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Users.html" title="Admin CP Users">Users</a> - <a href="{{ site.url }}/Admin_CP_Groups.html" title="Admin CP Groups">Groups</a> - <a href="{{ site.url }}/Admin_CP_User_Titles.html" title="Admin CP User Titles">User Titles</a> - <a href="{{ site.url }}/Admin_CP_User_Banning.html" title="Admin CP User Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Admin_Perms.html" title="Admin CP Admin Perms">Admin Permissions</a> - <a href="{{ site.url }}/Admin_CP_Mass_Mail.html" title="Admin CP Mass Mail">Mass Mail</a> - <a href="{{ site.url }}/Admin_CP_Group_Promotions.html" title="Admin CP Group Promotions">Group Promotions</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a> - <strong class="selflink">Templates</strong>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_System_Health.html" title="Admin CP System Health">System Health</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Cache_Manager" title="Admin CP Tools">Cache Manager</a> - <a href="{{ site.url }}/Admin_CP_Task_Manager.html" title="Admin CP Task Manager">Task Manager</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Recount_and_Rebuild" title="Admin CP Tools">Recount and Rebuild</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#PHP_Info" title="Admin CP Tools">PHP Info</a> - <a href="{{ site.url }}/Admin_CP_Backups.html" title="Admin CP Backups">Database Backups</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Optimize_Database" title="Admin CP Tools">Optimize Database</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#File_Verification" title="Admin CP Tools">File Verification</a> - <a href="{{ site.url }}/Admin_CP_Admin_Logs.html" title="Admin CP Admin Logs">Administrator Log</a> - <a href="{{ site.url }}/Admin_CP_Mod_Logs.html" title="Admin CP Mod Logs">Moderator Log</a> - <a href="{{ site.url }}/Admin_CP_User_Email_Logs.html" title="Admin CP User Email Logs">User Email Log</a> - <a href="{{ site.url }}/Admin_CP_System_Mail_Logs.html" title="Admin CP System Mail Logs">System Mail Log</a> - <a href="{{ site.url }}/Admin_CP_User_Warning_Logs.html" title="Admin CP User Warning Logs">User Warning Log</a> - <a href="{{ site.url }}/Admin_CP_Statistics.html" title="Admin CP Statistics">Statistics</a>
+</td></tr></table>
+</div>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Customization.html" title="Customization">MyBB Customization</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Templates_and_Themes.html" title="Templates and Themes">Templates/Themes</a></b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Authoring_Templates_and_Themes.html" title="Authoring Templates and Themes">Authoring</a> - <strong class="selflink">Template Management</strong> - <a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Theme Management</a> - <a rel="nofollow" class="external text" href="http://mods.mybb.com/themes">User-created</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Plugins.html" title="Plugins">Plugins</a></b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Authoring_Plugins.html" title="Authoring Plugins">Authoring</a> - <a href="{{ site.url }}/MyBB_Plugin_Hooks.html" title="MyBB Plugin Hooks">Plugin Hooks</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugin Management</a> - <a rel="nofollow" class="external text" href="http://mods.mybb.com/mods">User-created</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Translations.html" title="Translations">Translations</a></b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Language Management</a> - <a rel="nofollow" class="external text" href="http://community.mybb.com/thread-114917.html">Download</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Links</b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a rel="nofollow" class="external text" href="http://mods.mybb.com/">MyBB Mods</a>
+</td></tr></table>
+</div>
+
+
+
+

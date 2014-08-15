@@ -1,0 +1,98 @@
+---
+layout: page
+title: System Health
+permalink: Admin_CP_System_Health.html
+category: Admin CP
+---
+
+<p>The System Health page allows you to view the more technical statistics regarding your board. You also have access to the UTF-8 converter, which can convert existing database tables from another encoding to UTF-8.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#System_Health_Statistics"><span class="tocnumber">1</span> <span class="toctext">System Health Statistics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Stats"><span class="tocnumber">1.1</span> <span class="toctext">Stats</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Next_3_Tasks"><span class="tocnumber">1.2</span> <span class="toctext">Next 3 Tasks</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Existing_Database_Backups"><span class="tocnumber">1.3</span> <span class="toctext">Existing Database Backups</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#CHMOD_Files_.26_Directories"><span class="tocnumber">1.4</span> <span class="toctext">CHMOD Files &amp; Directories</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#UTF-8_Conversion"><span class="tocnumber">2</span> <span class="toctext">UTF-8 Conversion</span></a></li>
+</ul>
+</td></tr></table>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/b/be/ACP_Tools_Health.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/b/be/ACP_Tools_Health.png/180px-ACP_Tools_Health.png" width="180" height="176" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/b/be/ACP_Tools_Health.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Tools &amp; Maintenance: System Health</div></div></div>
+
+<dl><dt>Total Database Size&#160;</dt><dd> The total size of your MySQL, PostgreSQL, or SQLite database.
+</dd><dt>Total Cache Size&#160;</dt><dd> The total size of your board's cache.
+</dd><dt>Max Upload / POST Size&#160;</dt><dd> The first value is the maximum size that your server allows for files that will be uploaded to be. The second value is the maximum size that your server allows POST queries to be.
+</dd><dt>Attachment Space Used&#160;</dt><dd> The amount of space used for attachments on your board.
+</dd><dt>Estimated Attachment Bandwidth Usage&#160;</dt><dd> The estimated amount of bandwidth used overall by users downloading attachments.
+</dd><dt>Average Attachment Size&#160;</dt><dd> The attachment space used divided by the number of attachments, thus representing the "average" attachment size.
+</dd></dl>
+
+<p>This table shows the next 3 tasks that will be run, without repeating tasks (that is, if the same task will be run more than once in the next 3 tasks, only the first time will be shown).
+</p><p>The task name and the date and time the task will run is listed.
+</p>
+
+<p>This table shows the last 3 existing database backups stored on your server. It includes the name, a link to the download, and the date and time of the backup.
+</p>
+
+<p>This table has a listing of all files and directories that should be CHMODed for your forum to function properly. If all files are CHMODed correctly, a success message will be displayed above the table. If one or more files are not CHMODed correctly, an error message will be displayed above the table.
+</p><p>The table includes a name for the file or directory (its use), the location of the file or directory relative to the root folder for your forum, and whether or not each file is writable. The required files and directories are:
+</p>
+<ul><li> Configuration File (./inc/config.php)
+</li><li> Settings File (./inc/settings.php)
+</li><li> File Uploads Directory (./uploads)
+</li><li> Avatar Uploads Directory (./uploads/avatars)
+</li><li> Language Files (./inc/languages)
+</li><li> Backups Directory (./admin/backups)
+</li></ul>
+
+<p>The UTF-8 Conversion page shows a listing of all of the tables in your forum database, and whether or not they are already UTF-8 or if they still need to be converted. Those that need to be converted have a link ("Convert Now") to let you convert the table.
+</p><p>You will then confirm this action, and then be taken to a page that will convert the database table. You will automatically be redirected back to the UTF-8 listing when it is done being converted.
+</p><p>If all of your database tables are already using UTF-8, you will be taken back to the System Health page with a message telling you so.
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html#Dashboard" title="Admin CP Home">Dashboard</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Preferences" title="Admin CP Home">Preferences</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Version_Check" title="Admin CP Home">Version Check</a> - <a href="{{ site.url }}/Admin_CP_Home.html#MyBB_Credits" title="Admin CP Home">MyBB Credits</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Config_Settings.html" title="Admin CP Config Settings">Settings</a> - <a href="{{ site.url }}/Admin_CP_Config_Banning.html" title="Admin CP Config Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Config_Profile_Fields.html" title="Admin CP Config Profile Fields">Custom Profile Fields</a> - <a href="{{ site.url }}/Admin_CP_Config_Smilies.html" title="Admin CP Config Smilies">Smilies</a> - <a href="{{ site.url }}/Admin_CP_Config_Word_Filters.html" title="Admin CP Config Word Filters">Word Filters</a> - <a href="{{ site.url }}/Admin_CP_Config_MyCode.html" title="Admin CP Config MyCode">MyCode</a> - <a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Languages</a> - <a href="{{ site.url }}/Admin_CP_Config_Post_Icons.html" title="Admin CP Config Post Icons">Post Icons</a> - <a href="{{ site.url }}/Admin_CP_Config_Help_Docs.html" title="Admin CP Config Help Docs">Help Documents</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugins</a> - <a href="{{ site.url }}/Admin_CP_Config_Attachments.html" title="Admin CP Config Attachments">Attachment Types</a> - <a href="{{ site.url }}/Admin_CP_Config_Mod_Tools.html" title="Admin CP Config Mod Tools">Moderator Tools</a> - <a href="{{ site.url }}/Admin_CP_Config_Spiders.html" title="Admin CP Config Spiders">Spiders/Bots</a> - <a href="{{ site.url }}/Admin_CP_Config_Calendars.html" title="Admin CP Config Calendars">Calendars</a> - <a href="{{ site.url }}/Admin_CP_Config_Warning_System.html" title="Admin CP Config Warning System">Warning System</a> - <a href="{{ site.url }}/Admin_CP_Config_Thread_Prefixes.html" title="Admin CP Config Thread Prefixes">Thread Prefixes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Forum_Management.html" title="Admin CP Forum Management">Forum Management</a> - <a href="{{ site.url }}/Admin_CP_Forum_Announcements.html" title="Admin CP Forum Announcements">Forum Announcements</a> - <a href="{{ site.url }}/Admin_CP_Moderation_Queue.html" title="Admin CP Moderation Queue">Moderation Queue</a> - <a href="{{ site.url }}/Admin_CP_Forum_Attachments.html" title="Admin CP Forum Attachments">Attachments</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Users.html" title="Admin CP Users">Users</a> - <a href="{{ site.url }}/Admin_CP_Groups.html" title="Admin CP Groups">Groups</a> - <a href="{{ site.url }}/Admin_CP_User_Titles.html" title="Admin CP User Titles">User Titles</a> - <a href="{{ site.url }}/Admin_CP_User_Banning.html" title="Admin CP User Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Admin_Perms.html" title="Admin CP Admin Perms">Admin Permissions</a> - <a href="{{ site.url }}/Admin_CP_Mass_Mail.html" title="Admin CP Mass Mail">Mass Mail</a> - <a href="{{ site.url }}/Admin_CP_Group_Promotions.html" title="Admin CP Group Promotions">Group Promotions</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><strong class="selflink">System Health</strong> - <a href="{{ site.url }}/Admin_CP_Tools.html#Cache_Manager" title="Admin CP Tools">Cache Manager</a> - <a href="{{ site.url }}/Admin_CP_Task_Manager.html" title="Admin CP Task Manager">Task Manager</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Recount_and_Rebuild" title="Admin CP Tools">Recount and Rebuild</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#PHP_Info" title="Admin CP Tools">PHP Info</a> - <a href="{{ site.url }}/Admin_CP_Backups.html" title="Admin CP Backups">Database Backups</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Optimize_Database" title="Admin CP Tools">Optimize Database</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#File_Verification" title="Admin CP Tools">File Verification</a> - <a href="{{ site.url }}/Admin_CP_Admin_Logs.html" title="Admin CP Admin Logs">Administrator Log</a> - <a href="{{ site.url }}/Admin_CP_Mod_Logs.html" title="Admin CP Mod Logs">Moderator Log</a> - <a href="{{ site.url }}/Admin_CP_User_Email_Logs.html" title="Admin CP User Email Logs">User Email Log</a> - <a href="{{ site.url }}/Admin_CP_System_Mail_Logs.html" title="Admin CP System Mail Logs">System Mail Log</a> - <a href="{{ site.url }}/Admin_CP_User_Warning_Logs.html" title="Admin CP User Warning Logs">User Warning Log</a> - <a href="{{ site.url }}/Admin_CP_Statistics.html" title="Admin CP Statistics">Statistics</a>
+</td></tr></table>
+</div>
+
+
+
+

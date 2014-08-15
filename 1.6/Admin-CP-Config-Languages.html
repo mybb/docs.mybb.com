@@ -1,0 +1,117 @@
+---
+layout: page
+title: Config Languages
+permalink: Admin_CP_Config_Languages.html
+category: Admin CP
+---
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/a/a6/ACP_Config_Languages.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/a/a6/ACP_Config_Languages.png/180px-ACP_Config_Languages.png" width="180" height="61" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/a/a6/ACP_Config_Languages.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Configuration: Languages</div></div></div>
+<p>From MyBB's Admin CP, you can manage all of the files of any language you have installed on your board, as long as the language files on your board are <a href="{{ site.url }}/CHMOD_Files.html" title="CHMOD Files">CHMODed</a> correctly. You can edit the properties of a language, edit the language variables, or edit with another (or the same) language.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#File_Listing"><span class="tocnumber">1</span> <span class="toctext">File Listing</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Edit_Language_Variables"><span class="tocnumber">2</span> <span class="toctext">Edit Language Variables</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Edit_With_Another_Language"><span class="tocnumber">3</span> <span class="toctext">Edit With Another Language</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Edit_Language_Properties"><span class="tocnumber">4</span> <span class="toctext">Edit Language Properties</span></a></li>
+</ul>
+</td></tr></table>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/3/32/ACP_Config_LangFiles.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/3/32/ACP_Config_LangFiles.png/180px-ACP_Config_LangFiles.png" width="180" height="530" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/3/32/ACP_Config_LangFiles.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Configuration: Language Files Listing</div></div></div>
+<p>When you choose to Edit Language Variables or to Edit with another language, you will be displayed a list of all of the front end and Admin CP files that are stored for that language. These are separated into two tables, Front End and Admin CP, for maximum usability.
+</p><p>You can then select "Edit" for any language file, which will bring up the appropriate page, depending on whether or not you are editing the language file with another language.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/0/0d/ACP_Config_EditLang.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/0/0d/ACP_Config_EditLang.png/180px-ACP_Config_EditLang.png" width="180" height="132" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/0/0d/ACP_Config_EditLang.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Configuration: Edit Language Variables</div></div></div>
+<p>This method allows you to edit the language variables directly, without reference to another language. All that will be shown is the string name (the text used to reference this language string) and the contents of the string (editable, what will be returned when the language string is used). When you have finished making the changes to the language file, select "Save Language File," which will return you to the file listing page.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/7/73/ACP_Config_EditLangWith.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/7/73/ACP_Config_EditLangWith.png/180px-ACP_Config_EditLangWith.png" width="180" height="132" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/7/73/ACP_Config_EditLangWith.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Configuration: Edit Language Variables with another language</div></div></div>
+<p>In the options menu for a language, you will see, for instance, "Edit With English (American)." This allows you to edit the language files with the contents of the other language also displayed, allowing for easy translation. There will be one option for each language in the menu, substituting "English (American)" with the name of the language itself. Note that you can edit a language with the same language, meaning, for instance, you can edit English (American) with English (American) - the current contents of the language file will be displayed in addition to the field you are editing.
+</p><p>When editing a file, you will see the string from the other language on the left, with the one you are editing on the right. At the top of each column is the name of the language that is being shown. You can see the language string name (the text used to reference this language string) in both columns, as well as the differing contents fields. It should be noted that only the language you are editing can be edited; the language you are referencing (the one you are "editing with") cannot be edited from this page; it is only there for reference.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/9/96/ACP_Config_LangProperties.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/9/96/ACP_Config_LangProperties.png/180px-ACP_Config_LangProperties.png" width="180" height="113" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/9/96/ACP_Config_LangProperties.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Configuration: Edit Language Properties</div></div></div>
+<dl><dt>Friendly Name&#160;</dt><dd> Name of language
+</dd><dt>Language in &lt;html&gt; tag&#160;</dt><dd> The language inside the &lt;html&gt; tag for the forum. This is so the browser can appropriately recognize what language is being used.
+</dd><dt>Character Set&#160;</dt><dd> The set of characters that should be used for this language.
+</dd><dt>Right-to-Left&#160;</dt><dd> Is this a right-to-left (RTL) language?
+</dd><dt>Contains Admin CP language variables&#160;</dt><dd> Does this language contain variables for the Admin CP?
+</dd></dl>
+<p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html#Dashboard" title="Admin CP Home">Dashboard</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Preferences" title="Admin CP Home">Preferences</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Version_Check" title="Admin CP Home">Version Check</a> - <a href="{{ site.url }}/Admin_CP_Home.html#MyBB_Credits" title="Admin CP Home">MyBB Credits</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Config_Settings.html" title="Admin CP Config Settings">Settings</a> - <a href="{{ site.url }}/Admin_CP_Config_Banning.html" title="Admin CP Config Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Config_Profile_Fields.html" title="Admin CP Config Profile Fields">Custom Profile Fields</a> - <a href="{{ site.url }}/Admin_CP_Config_Smilies.html" title="Admin CP Config Smilies">Smilies</a> - <a href="{{ site.url }}/Admin_CP_Config_Word_Filters.html" title="Admin CP Config Word Filters">Word Filters</a> - <a href="{{ site.url }}/Admin_CP_Config_MyCode.html" title="Admin CP Config MyCode">MyCode</a> - <strong class="selflink">Languages</strong> - <a href="{{ site.url }}/Admin_CP_Config_Post_Icons.html" title="Admin CP Config Post Icons">Post Icons</a> - <a href="{{ site.url }}/Admin_CP_Config_Help_Docs.html" title="Admin CP Config Help Docs">Help Documents</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugins</a> - <a href="{{ site.url }}/Admin_CP_Config_Attachments.html" title="Admin CP Config Attachments">Attachment Types</a> - <a href="{{ site.url }}/Admin_CP_Config_Mod_Tools.html" title="Admin CP Config Mod Tools">Moderator Tools</a> - <a href="{{ site.url }}/Admin_CP_Config_Spiders.html" title="Admin CP Config Spiders">Spiders/Bots</a> - <a href="{{ site.url }}/Admin_CP_Config_Calendars.html" title="Admin CP Config Calendars">Calendars</a> - <a href="{{ site.url }}/Admin_CP_Config_Warning_System.html" title="Admin CP Config Warning System">Warning System</a> - <a href="{{ site.url }}/Admin_CP_Config_Thread_Prefixes.html" title="Admin CP Config Thread Prefixes">Thread Prefixes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Forum_Management.html" title="Admin CP Forum Management">Forum Management</a> - <a href="{{ site.url }}/Admin_CP_Forum_Announcements.html" title="Admin CP Forum Announcements">Forum Announcements</a> - <a href="{{ site.url }}/Admin_CP_Moderation_Queue.html" title="Admin CP Moderation Queue">Moderation Queue</a> - <a href="{{ site.url }}/Admin_CP_Forum_Attachments.html" title="Admin CP Forum Attachments">Attachments</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Users.html" title="Admin CP Users">Users</a> - <a href="{{ site.url }}/Admin_CP_Groups.html" title="Admin CP Groups">Groups</a> - <a href="{{ site.url }}/Admin_CP_User_Titles.html" title="Admin CP User Titles">User Titles</a> - <a href="{{ site.url }}/Admin_CP_User_Banning.html" title="Admin CP User Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Admin_Perms.html" title="Admin CP Admin Perms">Admin Permissions</a> - <a href="{{ site.url }}/Admin_CP_Mass_Mail.html" title="Admin CP Mass Mail">Mass Mail</a> - <a href="{{ site.url }}/Admin_CP_Group_Promotions.html" title="Admin CP Group Promotions">Group Promotions</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_System_Health.html" title="Admin CP System Health">System Health</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Cache_Manager" title="Admin CP Tools">Cache Manager</a> - <a href="{{ site.url }}/Admin_CP_Task_Manager.html" title="Admin CP Task Manager">Task Manager</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Recount_and_Rebuild" title="Admin CP Tools">Recount and Rebuild</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#PHP_Info" title="Admin CP Tools">PHP Info</a> - <a href="{{ site.url }}/Admin_CP_Backups.html" title="Admin CP Backups">Database Backups</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Optimize_Database" title="Admin CP Tools">Optimize Database</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#File_Verification" title="Admin CP Tools">File Verification</a> - <a href="{{ site.url }}/Admin_CP_Admin_Logs.html" title="Admin CP Admin Logs">Administrator Log</a> - <a href="{{ site.url }}/Admin_CP_Mod_Logs.html" title="Admin CP Mod Logs">Moderator Log</a> - <a href="{{ site.url }}/Admin_CP_User_Email_Logs.html" title="Admin CP User Email Logs">User Email Log</a> - <a href="{{ site.url }}/Admin_CP_System_Mail_Logs.html" title="Admin CP System Mail Logs">System Mail Log</a> - <a href="{{ site.url }}/Admin_CP_User_Warning_Logs.html" title="Admin CP User Warning Logs">User Warning Log</a> - <a href="{{ site.url }}/Admin_CP_Statistics.html" title="Admin CP Statistics">Statistics</a>
+</td></tr></table>
+</div>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Customization.html" title="Customization">MyBB Customization</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Templates_and_Themes.html" title="Templates and Themes">Templates/Themes</a></b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Authoring_Templates_and_Themes.html" title="Authoring Templates and Themes">Authoring</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Template Management</a> - <a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Theme Management</a> - <a rel="nofollow" class="external text" href="http://mods.mybb.com/themes">User-created</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Plugins.html" title="Plugins">Plugins</a></b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Authoring_Plugins.html" title="Authoring Plugins">Authoring</a> - <a href="{{ site.url }}/MyBB_Plugin_Hooks.html" title="MyBB Plugin Hooks">Plugin Hooks</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugin Management</a> - <a rel="nofollow" class="external text" href="http://mods.mybb.com/mods">User-created</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Translations.html" title="Translations">Translations</a></b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><strong class="selflink">Language Management</strong> - <a rel="nofollow" class="external text" href="http://community.mybb.com/thread-114917.html">Download</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Links</b>
+</td>
+<td style="vertical-align: middle; width: 75%;"><a rel="nofollow" class="external text" href="http://mods.mybb.com/">MyBB Mods</a>
+</td></tr></table>
+</div>
+
+
+
+

@@ -1,0 +1,203 @@
+---
+layout: page
+title: Cookies
+permalink: Cookies.html
+category: Other Topics
+---
+
+<p><b>Problems with cookies?</b>
+If users of your forum are experiencing problems such as not being able to login, chances are your cookie settings are not set correctly.  Please see the <a href="#Examples">examples</a> to find your cookie settings, then change them in <b>Admin CP &gt; Configuration &gt; Settings &gt; General Configuration</b>.  The rest of this page is a general description of the usage of cookies in MyBB.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Cookie_Settings"><span class="tocnumber">1</span> <span class="toctext">Cookie Settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Introduction"><span class="tocnumber">1.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#MyBB_Cookie_Settings"><span class="tocnumber">1.2</span> <span class="toctext">MyBB Cookie Settings</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Cookie_Domain"><span class="tocnumber">1.2.1</span> <span class="toctext">Cookie Domain</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Cookie_Path"><span class="tocnumber">1.2.2</span> <span class="toctext">Cookie Path</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Cookie_Prefix"><span class="tocnumber">1.2.3</span> <span class="toctext">Cookie Prefix</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Examples"><span class="tocnumber">1.3</span> <span class="toctext">Examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#The_Cookie_List"><span class="tocnumber">2</span> <span class="toctext">The Cookie List</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#acploginattempts"><span class="tocnumber">2.1</span> <span class="toctext">acploginattempts</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#adminsid"><span class="tocnumber">2.2</span> <span class="toctext">adminsid</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#loginattempts"><span class="tocnumber">2.3</span> <span class="toctext">loginattempts</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#mybb"><span class="tocnumber">2.4</span> <span class="toctext">mybb</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#mybb.5Blastvisit.5D"><span class="tocnumber">2.4.1</span> <span class="toctext">mybb[lastvisit]</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#mybb.5Blastactive.5D"><span class="tocnumber">2.4.2</span> <span class="toctext">mybb[lastactive]</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#mybbuser"><span class="tocnumber">2.5</span> <span class="toctext">mybbuser</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#collapsed"><span class="tocnumber">2.6</span> <span class="toctext">collapsed</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#inlinemod"><span class="tocnumber">2.7</span> <span class="toctext">inlinemod_</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#sid"><span class="tocnumber">2.8</span> <span class="toctext">sid</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+<h1><span class="mw-headline" id="Cookie Settings"> Cookie Settings </span></h1>
+
+<h2><span class="mw-headline" id="Introduction"> Introduction </span></h2>
+<p><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a> are important in MyBB to identify and to verify logged-in users, and to store inline-moderation selections, among other bits of data.
+</p>
+
+<p>Cookies are important in MyBB to identify and verify logged-in users, and store inline-moderation selections.  Incorrect cookie settings are the leading cause of login/logout problems on forums.  If you or your users are having problems logging into the <a href="{{ site.url }}/Front_End.html" title="Front End">Front End</a> of your board, see if the cookie settings are the culprit before posting your support request on the forum.
+</p>
+
+<h2><span class="mw-headline" id="MyBB_Cookie_Settings"> MyBB Cookie Settings </span></h2>
+<p>MyBB has three inherent settings related to cookies:
+</p>
+<ul><li>Cookie Domain
+</li><li>Cookie Path
+</li><li>Cookie Prefix
+</li></ul>
+
+<h3><span class="mw-headline" id="Cookie_Domain"> Cookie Domain </span></h3>
+<p>This is the domain or subdomain that contains your forum.  Usually a period/dot (".") is placed in front of this domain/subdomain in order to include all of its subdomains
+</p>
+
+<h3><span class="mw-headline" id="Cookie_Path"> Cookie Path </span></h3>
+<p>This is the path from the root of your domain to your forum directory.  The starting slash and ending slash should be included.
+</p>
+
+<h3><span class="mw-headline" id="Cookie_Prefix"> Cookie Prefix </span></h3>
+<p>This is a prefix to all cookies used by your forum, to further prevent any conflicts with other installations of MyBB on the same domain or conflicts with other softwares.
+</p>
+
+<h2><span class="mw-headline" id="Examples"> Examples </span></h2>
+<table>
+<tr>
+<th> Forum URL
+</th>
+<th> Cookie Domain
+</th>
+<th> Cookie Path
+</th></tr>
+<tr>
+<td>http://www.myforum.com/
+</td>
+<td>.myforum.com
+</td>
+<td>/
+</td></tr>
+<tr>
+<td>http://www.mysite.com/myforum/
+</td>
+<td>.mysite.com
+</td>
+<td>/myforum/
+</td></tr>
+<tr>
+<td>http://coolforum.coolsite.com/wow/
+</td>
+<td>.coolforum.coolsite.com -OR- .coolsite.com
+</td>
+<td>/wow/
+</td></tr></table>
+
+<h1><span class="mw-headline" id="The Cookie List"> The Cookie List </span></h1>
+<p>The following is a list of the cookies that MyBB sets, and a note about each one:
+</p>
+
+<h2><span class="mw-headline" id="acploginattempts"> acploginattempts </span></h2>
+<p>Stores the number of ACP login attempts a user has had.
+</p>
+
+<h2><span class="mw-headline" id="adminsid"> adminsid </span></h2>
+<p>Stores the current admin's Admin Session ID.
+</p>
+
+<h2><span class="mw-headline" id="loginattempts"> loginattempts </span></h2>
+<p>Stores the number of login attempts a user has had.
+</p>
+
+<h2><span class="mw-headline" id="mybb"> mybb </span></h2>
+<p>The mybb cookie is actually an array of cookies:
+</p>
+
+<h3><span class="mw-headline" id="mybb.5Blastvisit.5D"> mybb[lastvisit] </span></h3>
+<p>This cookie stores the last time of visit in the UNIX timestamp format.
+</p>
+
+<h3><span class="mw-headline" id="mybb.5Blastactive.5D"> mybb[lastactive] </span></h3>
+<p>This cookie stores the last time that a forum page has been loaded, in the UNIX timestamp format.
+</p>
+
+<h2><span class="mw-headline" id="mybbuser"> mybbuser </span></h2>
+<p>This cookie stores the login information for the <a href="{{ site.url }}/Front_End.html" title="Front End">Front End</a>, and is set when a user logs in, and is removed when the user logs out.  The UID and the login key are stored in this cookie.
+</p>
+
+<h2><span class="mw-headline" id="collapsed"> collapsed </span></h2>
+<p>This cookie keeps track of which categories and boxes have been collapsed (as opposed to being expanded by default).
+</p>
+
+<h2><span class="mw-headline" id="inlinemod_"> inlinemod_ </span></h2>
+<p>There are two kinds of inline moderating cookies: forum and thread and they are named as follows:
+</p>
+<ul><li>inlinemod_forum<i>fid</i>
+</li><li>inlinemod_thread<i>tid</i>
+</li></ul>
+<p><i>fid</i> is replaced with the forum ID and <i>tid</i> is replaced with the thread ID.
+</p><p>The contents are a pipe-delimited and pipe-enclosed list of thread IDs or post IDs which have been checked for inline moderation.
+</p>
+
+<h2><span class="mw-headline" id="sid"> sid </span></h2>
+<p>The current user's Session ID.
+</p>
+<div style="clear:both;border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Documentation.html" title="Documentation">MyBB Documentation</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Front_End.html" title="Front End">Front End</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Index_Page.html" title="Index Page">Index Page</a> - <a href="{{ site.url }}/Portal.html" title="Portal">Portal</a> - <a href="{{ site.url }}/Forum_Display.html" title="Forum Display">Forum Display</a> - <a href="{{ site.url }}/Thread_Display.html" title="Thread Display">Thread Display</a> - <a href="{{ site.url }}/Posting.html" title="Posting">Posting Threads and Replies</a> - <a href="{{ site.url }}/Searching.html" title="Searching">Searching</a> - <a href="{{ site.url }}/User_CP.html" title="User CP">User CP</a> - <a href="{{ site.url }}/Member_Profile.html" title="Member Profile">Member Profile</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <a href="{{ site.url }}/Calendar.html" title="Calendar">Calendar</a> - <a href="{{ site.url }}/Member_List.html" title="Member List">Member List</a> - <a href="{{ site.url }}/Help_Docs.html" title="Help Docs">Help Docs</a> - <a href="{{ site.url }}/Who_Is_Online.html" title="Who Is Online">Who Is Online</a> - <a href="{{ site.url }}/Lite_Archive_Mode.html" title="Lite (Archive) Mode">Lite (Archive) Mode</a> - <a href="{{ site.url }}/Forum_Team.html" title="Forum Team">Forum Team</a> - <a href="{{ site.url }}/Statistics.html" title="Statistics">Statistics</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/Miscellaneous_Front_End.html" title="Miscellaneous Front End">Miscellaneous</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Moderating_Options.html" title="Moderating Options">Moderation</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Moderating_Options.html#Normal_Thread_Moderation" title="Moderating Options">Standard Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Thread_Moderation" title="Moderating Options">Inline Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Post_Moderation" title="Moderating Options">Inline Post Moderation</a> - <a href="{{ site.url }}/Warning_System.html" title="Warning System">Warning System</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Mod CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Home</a> - <a href="{{ site.url }}/Mod_CP_Forums_Posts.html" title="Mod CP Forums Posts">Forums and Posts</a> - <a href="{{ site.url }}/Mod_CP_Users.html" title="Mod CP Users">Users</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a> - <a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a> - <a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a> - <a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a> - <a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a> - <a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Templates &amp; Themes</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Images.html" title="Images">Images</a> - <a href="{{ site.url }}/Postbit.html" title="Postbit">Postbit</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a> - <a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Developer</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Database_Methods.html" title="Database Methods">Database Methods</a> - <a href="{{ site.url }}/Database_Tables.html" title="Database Tables">Database Tables</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Miscellaneous</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><strong class="selflink">Cookies</strong> - <a href="{{ site.url }}/UTF8_Setup.html" title="UTF8 Setup">UTF8 Setup</a> - <a href="{{ site.url }}/Admin_CP_Board_Settings.html" title="Admin CP Board Settings">Default Settings</a>
+</td></tr></table>
+</div>
+
+
+
+
