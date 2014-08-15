@@ -21,16 +21,16 @@ Used to perform a simple select query (with no joins) on a table.
 It receives four parameters:
 
 <dl>
-    <dt>`table`</dt>
+    <dt>table</dt>
     <dd>The table name to be queried.</dd>
 
-    <dt>`field`(s)</dt>
+    <dt>field(s)</dt>
     <dd>Comma delimited list of fields to be selected.</dd>
 
-    <dt>`conditions`</dt>
+    <dt>conditions</dt>
     <dd>SQL formatted list of conditions to be matched.</dd>
 
-    <dt>`options`</dt>
+    <dt>options</dt>
     <dd>List of options: order by, order direction, limit, limit start. Returns a resource on success, or false on error.</dd>
 </dl>
 
