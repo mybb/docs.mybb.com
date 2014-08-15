@@ -141,12 +141,12 @@ This error occurs when you upgrade your forum from MyBB 1.6.4 or older to MyBB 1
 
 2. Find:
 
-```html
-{$captcha}
-```
+    ```html
+    {$captcha}
+    ```
 
 3. Replace it with:
 
-```html
-{$hiddencaptcha}
-```
+    ```html
+    {$hiddencaptcha}
+    ```
