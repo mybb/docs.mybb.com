@@ -1,5 +1,5 @@
 ---
 layout: page
-title:  "Convert to MyBB"
+title:  "Convert"
 categories: [install]
 ---
