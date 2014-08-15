@@ -4,15 +4,14 @@ title:  "Templates"
 categories: [plugins]
 ---
 
-## Passing values to a template
+## Editing Templates
 
 Most plugins require some changes to the front end of the site, typically to display some extra information.
-
-Implementing this in a plugin requires two steps, firstly a variable is inserted into a template during the plugin activation, then a value is passed to the template at runtime.
 
 ### Modifying templates to add a variable
 
 A variable can easily be inserted into a template using the `find_replace_templatesets()` function, which looks for a string and replaces it in a given template.
+
 Usually you'd replace the string with itself plus your variable, for example:
 
 ```php
@@ -20,35 +19,40 @@ require_once MYBB_ROOT."/inc/adminfunctions_templates.php";
 
 find_replace_templatesets(
     "index",
-    "#" . preg_quote('<body>') . "#i",
+    "#" . preg_quote('') . "#i",
     '<body>{$myVar}'
 );
 ```
-This would insert `{$myVar}` after `{$post['user_details']}` in the `postbit` template.
+
+This would insert `{$myVar}` after `<body>` in the `index` template.
+
 **It is important to make sure the string you search for is unlikely to change between templates**, otherwise users will have to manually edit their templates to insert the variable if the string doesn't exist in their template.
 
-### Passing simple values to a template
+### Passing Simple Values to a Template
 
 Global variables can be accessed from templates, so the easiest way to access a variable in your hook function from a template is to make it global:
 
 ```php
 global $myVar;
+
 $myVar = 'Hello World!';
 ```
-This will insert "Hello World!" where the `{$myVar}` variable is in the template. `$myVal` could of course be any value, such as one dynamically generated or from a database query.
 
-An alternative solution is to modify an existing global variable, for example you could insert `{$user['favorite_colour']}` into a template, then do the following in your hook function:
+This will insert **Hello World!** where the `{$myVar}` variable is in the template. `$myVar` can, of course, be any value, such as one dynamically generated or from a database query.
+
+An alternative solution is to modify an existing global variable such as `$user`. For example, you could insert `{$user['favorite_colour']}` into a template, then do the following in your hook function:
 
 ```php
 global $user;
 
 $user['favorite_colour'] = 'Blue';
 ```
-### Creating your own templates
+
+## Creating Your Own Templates
 
 If you want to insert a whole block of HTML rather than a simple value then you probably want to create your own template.
 
-Templates are usually created in your `_install()` function, they can be created like this:
+Templates are usually created in your `_install()` function. They can be created like this:
 
 ```php
 global $db;
@@ -66,7 +70,7 @@ $insert_array = array(
 $db->insert_query('templates', $insert_array);
 ```
 
-The template can be uninstalled using:
+The template can be deleted in your `_uninstall()` function using:
 
 ```php
 $db->delete_query("templates", "title = 'hello_world_template'");
@@ -91,14 +95,13 @@ If all has worked correctly you should see the following at the top of your inde
 <strong>Hello World</strong>
 ```
 
-## Creating a new page / action
+## Creating a New Page / Action
 
-### Using misc.php
+### Using `misc.php`
 
-An easy way to add a custom page via a plugin is to use the `misc_start` hook, such as this:
+An easy way to add a custom page via a plugin is to use the `misc_start` hook.
 
 ```php
-// With your other hooks
 $plugins->add_hook('misc_start', 'my_action');
 
 // In the body of your plugin
@@ -124,13 +127,14 @@ function my_action()
 ```
 
 This should create a page nicely wrapped in the template header and footer, accessible by navigating to `misc.php?action=myaction`.
+
 You can of course add your own page template instead of using `misc_help`.
 
-### Using a separate file
+### Using a Separate File
 
 If your custom page has a lot of functionality you may prefer to use a separate file, such as `my_plugin.php` which would be placed in the root MyBB directory.
 
-The process is basically the same except you'd put your functionality in the file rather than in a hook function:
+The process is basically the same except you'd put your functionality in the `my_plugin.php` file rather than in a hook function:
 
 ```php
 <?php
@@ -156,29 +160,4 @@ output_page($page);
 ?>
 ```
 
-You can of course access this by navigating to `my_plugin.php`, you can also use a `$mybb->get_input('action')` switch statement to serve several actions from your custom page.
-
-### Serving AJAX requests
-
-If you need to respond to AJAX requests you can use the `xmlhttp` hook:
-
-```php
-// With your other hooks
-$plugins->add_hook('xmlhttp', 'ajax_action');
-
-// In the body of your plugin
-function ajax_action()
-{
-    global $mybb, $charset;
-
-    if($mybb->get_input('action') == 'my_ajax')
-    {
-        header("Content-type: application/json; charset={$charset}");
-        $data = array('hello' => 'world');
-        echo json_encode($data);
-        exit;
-    }
-}
-```
-
-This will output a JSON encoded response of the `$data` array when accessing `xmlhttp.php?action=my_ajax`.
+You can access this by navigating to `my_plugin.php`, you can also run a switch statement on `$mybb->get_input('action')` to serve several actions from your custom page.
