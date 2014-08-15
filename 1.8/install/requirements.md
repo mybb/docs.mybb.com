@@ -25,5 +25,5 @@ MyBB 1.6 supports PHP >= 5.0.
 
 Although not required, to take full advantage of MyBB's capabilities we highly recommend:
 
-- PHP 5.4
-- MySQL 5.5
+- PHP 5.5
+- MySQL 5.6
