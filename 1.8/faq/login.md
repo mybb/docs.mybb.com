@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Cannot Login"
+title:  "Login Problems"
 categories: [faq]
 ---
 
