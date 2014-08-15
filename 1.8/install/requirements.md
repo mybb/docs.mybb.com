@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Installation Requirements"
+title:  "Requirements"
 categories: [install]
 ---
 
@@ -21,9 +21,9 @@ The following PHP extensions are also needed:
 
 MyBB 1.6 supports PHP >= 5.0.
 
-## Recommendations
+# Recommendations
 
-Although not required, to take full advantage of MyBB's capabilities we highly recommend:
+Although not required, we highly recommend:
 
-- PHP 5.4
+- PHP 5.5
 - MySQL 5.5
