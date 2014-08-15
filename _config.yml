@@ -4,5 +4,5 @@ redcarpet:
   extensions: ["no_intra_emphasis", "tables", "with_toc_data", "autolink"]
 pygments:  true
 permalink: pretty
-baseurl:   //mybb.github.io/docs.mybb.com
-mainsiteurl: //mybb.github.io/mybb.com
+baseurl:   //docs.mybb.com
+mainsiteurl: //www.mybb.com
