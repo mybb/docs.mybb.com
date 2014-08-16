@@ -34,5 +34,5 @@ $(document).ready(function() {
       window.location.hash = ''
     })
   }
-  output.hide().html(html).show('slow');
+  output.hide().html(html).show();
 });
