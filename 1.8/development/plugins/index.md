@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Plugins"
-categories: []
+categories: [plugins]
 ---
 
 Plugins allow you to easily extend or modify MyBB in a modular way, such that changes can easily be activated, deactivated, installed or uninstalled.
