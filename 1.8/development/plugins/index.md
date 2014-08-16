@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Plugins"
+title:  "Plugin Basics"
 categories: [plugins]
 ---
 
