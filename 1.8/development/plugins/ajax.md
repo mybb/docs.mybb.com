@@ -8,7 +8,7 @@ categories: [plugins]
 
 If you need to respond to AJAX requests you can use the `xmlhttp` hook:
 
-{% highlight php %}
+{% highlight php startinline %}
 // With your other hooks
 $plugins->add_hook('xmlhttp', 'ajax_action');
 
