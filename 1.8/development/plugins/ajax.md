@@ -8,7 +8,7 @@ categories: [plugins]
 
 If you need to respond to AJAX requests you can use the `xmlhttp` hook:
 
-{% highlight php startinline %}
+```
 // With your other hooks
 $plugins->add_hook('xmlhttp', 'ajax_action');
 
@@ -25,6 +25,6 @@ function ajax_action()
         exit;
     }
 }
-{% endhighlight %}
+```
 
 This will output a JSON encoded response of the `$data` array when accessing `xmlhttp.php?action=my_ajax`.
