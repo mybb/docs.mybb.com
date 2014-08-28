@@ -10,7 +10,6 @@ categories: [mods]
 
 ### For Downloaders
 
-#### Main Page
 As a user you're simply looking to download something: a plugin, a theme, an icon set, perhaps a language pack or just some other resource that you may find interesting.
 
 For that reason, you can quickly navigate from the menu to one of the 5 main categories:
