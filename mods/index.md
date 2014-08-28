@@ -1,0 +1,35 @@
+---
+layout: page
+title:  "Mods Site"
+categories: [mods]
+---
+
+## Mods Site Documentation
+
+Since the release of MyBB 1.8, we've switched from our olds mods site to a new platform we've developed.
+We classify our users into three types: downloaders, project owners and contributors. Downloaders are users who use the mods site only to download what they're looking for; Project owners are those who start the project and actively maintain it. Contributors help out project owners with the development of their projects.
+
+#### Projects
+Basically anything on the mods site is a project, being it a theme, a plugin or an icon set. Each project has an owner/author which starts the project.
+The author may invite collaborators to the project, which may upload builds and use/manage the bug tracker. To put it simple, the mods site allows for whole teams to work on projects, rather than a single individual.
+
+#### Builds
+A build is a ZIP file containing the project files. A build has one of two possible status: dev or stable.
+All builds are set to dev by default and they may be requested for Stable status by the project owner/author (contributors cannot change the status of builds) at a later point. If the project owner/author is an Approved Developer, the build is automatically set to Stable, otherwise it must go through an approval process ran by the MyBB team.
+
+#### Approved Developers
+Approved developers are developers/designers/contributors that have proven themselves to be trustworthy of their capabilities, which leads us to skip approval processes for them, allowing for faster releases of updates to their projects.
+
+Any username with the following format is an approved developer:
+[![Approved Developer](/assets/images/mods/approved_developer.png)](/assets/images/mods/approved_developer.png)
+
+#### Main Page
+When you first reach the mods site page you're faced with some information about its content but what leads you to all the places is the menu and the quick search bar.
+   
+By placing the mouse over the Menu, you will see quite a few options to select from.
+   
+
+The items that are of interest to all types of users are the following:
+* Search - allows users to do an advanced search through the mods site.
+* Most Popular Downloads - shows the most popular projects and the most recommended projects.
+* Vulnerable Submissions - if a project has been reported as vulnerable, we will mark it as vulnerable internally and it will show up on this page to inform everyone about it.
