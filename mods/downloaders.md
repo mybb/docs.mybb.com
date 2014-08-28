@@ -6,6 +6,8 @@ categories: [mods]
 
 ## Mods Site Documentation
 
+[Main Page](http://docs.mybb.com/mods)
+
 ### For Downloaders
 
 As a user you're simply looking to download something: a plugin, a theme, an icon set, perhaps a language pack or just some other resource that you may find interesting.
