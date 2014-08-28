@@ -9,7 +9,9 @@ categories: [mods]
 Since the release of MyBB 1.8, we've switched from our olds mods site to a new platform we've developed.
 We classify our users into three types:
 * Downloaders - users who use the mods site only to download what they're looking for. [Click here to find out more.](http://docs.mybb.com/mods/downloaders)
+
 * Project owners are those who start the project and actively maintain it. [Click here to find out more.](http://docs.mybb.com/mods/owners)
+
 * Contributors help out project owners with the development of their projects. [Click here to find out more.](http://docs.mybb.com/mods/contributors)
 
 Below you can find an overall description of the system.
