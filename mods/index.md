@@ -7,7 +7,12 @@ categories: [mods]
 ## Mods Site Documentation
 
 Since the release of MyBB 1.8, we've switched from our olds mods site to a new platform we've developed.
-We classify our users into three types: downloaders, project owners and contributors. Downloaders are users who use the mods site only to download what they're looking for; Project owners are those who start the project and actively maintain it. Contributors help out project owners with the development of their projects.
+We classify our users into three types:
+* Downloaders - users who use the mods site only to download what they're looking for. [Click here to find out more.](http://docs.mybb.com/mods/downloaders)
+* Project owners are those who start the project and actively maintain it. [Click here to find out more.](http://docs.mybb.com/mods/owners)
+* Contributors help out project owners with the development of their projects. [Click here to find out more.](http://docs.mybb.com/mods/contributors)
+
+Below you can find an overall description of the system.
 
 #### Projects
 Basically anything on the mods site is a project, being it a theme, a plugin or an icon set. Each project has an owner/author which starts the project.
@@ -25,9 +30,9 @@ Any username with the following format is an approved developer:
 
 #### Main Page
 When you first reach the mods site page you're faced with some information about its content but what leads you to all the places is the menu and the quick search bar.
-   
+[![Menu and Search](/assets/images/mods/index1.png)](/assets/images/mods/index1.png)
 By placing the mouse over the Menu, you will see quite a few options to select from.
-   
+[![Menu Options](/assets/images/mods/index2.png)](/assets/images/mods/index2.png)
 
 The items that are of interest to all types of users are the following:
 * Search - allows users to do an advanced search through the mods site.
