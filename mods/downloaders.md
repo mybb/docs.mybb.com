@@ -65,6 +65,8 @@ On the right side, you can see the following options:
 - Translations (translations posted by contributors or the project owner)
 
 
+If the owner of the project set a PayPal e-mail for donations, you will see a Donate button on the right as well.
+
 
 #### Download
 This page allows you to download the most recent stable build.
