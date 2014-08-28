@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Downloaders - Mods Site"
+title:  "Downloaders"
 categories: [mods]
 ---
 
