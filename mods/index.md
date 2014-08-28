@@ -8,6 +8,7 @@ categories: [mods]
 
 Since the release of MyBB 1.8, we've switched from our olds mods site to a new platform we've developed.
 We classify our users into three types:
+
 * Downloaders - users who use the mods site only to download what they're looking for. [Click here to find out more.](http://docs.mybb.com/mods/downloaders)
 
 * Project owners are those who start the project and actively maintain it. [Click here to find out more.](http://docs.mybb.com/mods/owners)
@@ -41,6 +42,9 @@ By placing the mouse over the Menu, you will see quite a few options to select f
 [![Menu Options](/assets/images/mods/index2.png)](/assets/images/mods/index2.png)
 
 The items that are of interest to all types of users are the following:
+
 * Search - allows users to do an advanced search through the mods site.
+
 * Most Popular Downloads - shows the most popular projects and the most recommended projects.
+
 * Vulnerable Submissions - if a project has been reported as vulnerable, we will mark it as vulnerable internally and it will show up on this page to inform everyone about it.
