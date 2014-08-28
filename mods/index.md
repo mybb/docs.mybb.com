@@ -26,12 +26,16 @@ All builds are set to dev by default and they may be requested for Stable status
 Approved developers are developers/designers/contributors that have proven themselves to be trustworthy of their capabilities, which leads us to skip approval processes for them, allowing for faster releases of updates to their projects.
 
 Any username with the following format is an approved developer:
+
 [![Approved Developer](/assets/images/mods/approved_developer.png)](/assets/images/mods/approved_developer.png)
 
 #### Main Page
 When you first reach the mods site page you're faced with some information about its content but what leads you to all the places is the menu and the quick search bar.
+
 [![Menu and Search](/assets/images/mods/index1.png)](/assets/images/mods/index1.png)
+
 By placing the mouse over the Menu, you will see quite a few options to select from.
+
 [![Menu Options](/assets/images/mods/index2.png)](/assets/images/mods/index2.png)
 
 The items that are of interest to all types of users are the following:
