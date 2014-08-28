@@ -66,3 +66,5 @@ On the right side, you can see the following options:
 This page allows you to download the most recent stable build.
 
 [![Project Page](/assets/images/mods/downloaders3.png)](/assets/images/mods/downloaders3.png)
+
+You can view the changes made in this build by extending the Changes section. Before downloading, you must accept the license by ticking the checkbox.
