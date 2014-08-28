@@ -59,7 +59,12 @@ On the right side, you can see the following options:
 
 - Support (either the support link entered by the project author or a link to the support forum on the MyBB Community)
 
+- Bug Tracker (you will see this option if it's been enabled by the project author)
+
+- Suggestions (you will see this option if it's been enabled by the project author)
+
 - Translations (translations posted by contributors or the project owner)
+
 
 
 #### Download
