@@ -73,3 +73,21 @@ This page allows you to download the most recent stable build.
 [![Project Page](/assets/images/mods/downloaders3.png)](/assets/images/mods/downloaders3.png)
 
 You can view the changes made in this build by extending the Changes section. Before downloading, you must accept the license by ticking the checkbox.
+
+
+#### Bug Tracker
+
+This page is only available to downloaders if the project owner set it like that (by default it's turned off for everyone).
+
+From here you can post bugs that you found, search for others and reply to them.
+
+[![Project Page](/assets/images/mods/downloaders4.png)](/assets/images/mods/downloaders4.png)
+
+
+#### Suggestions
+
+This page is only available to downloaders if the project owner set it like that (by default it's turned off for everyone).
+
+From here you can post suggestions that you find useful and browse suggestions posted by other users. 
+
+[![Project Page](/assets/images/mods/downloaders5.png)](/assets/images/mods/downloaders5.png)
