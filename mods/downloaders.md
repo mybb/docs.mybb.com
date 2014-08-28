@@ -27,20 +27,42 @@ For that reason, you can quickly navigate from the menu to one of the 5 main cat
 
 Each main category has sub-categories, each with filtering options.
 
+
 #### Browsing a category
 
 [![Browsing and Filtering](/assets/images/mods/downloaders1.png)](/assets/images/mods/downloaders1.png)
 
 Placing the mouse over one of the project boxes quickly allows you to download the latest **stable** build and view how many times the project has been recommended.
+
 Clicking the project names directs you towards the project page, on which you can see detailed information: full description, previews, license, suggestions, bugs, etc.
+
 
 #### Viewing a Project
 
 When you visit a project page, here's how it looks like:
 
-[![Project Page](/assets/images/mods/downloaders1.png)](/assets/images/mods/downloaders2.png)
+[![Project Page](/assets/images/mods/downloaders2.png)](/assets/images/mods/downloaders2.png)
 
 You can expand and collapse the Information, Previews and License sections to view/hide their content.
+
 On the right side, you can see the following options:
 
--
+- Download (download page)
+
+- License (expands the license section)
+
+- Change Logs (page where the changes for each build are displayed)
+
+- Report (where you can report a project)
+
+- Recommend (allows you to recommend projects)
+
+- Support (either the support link entered by the project author or a link to the support forum on the MyBB Community)
+
+- Translations (translations posted by contributors or the project owner)
+
+
+#### Download
+This page allows you to download the most recent stable build.
+
+[![Project Page](/assets/images/mods/downloaders3.png)](/assets/images/mods/downloaders3.png)
