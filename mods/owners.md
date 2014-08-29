@@ -61,3 +61,9 @@ This is where you can edit all your project's details (actually you can edit mor
 [![Edit Project](/assets/images/mods/owners9.png)](/assets/images/mods/owners9.png)
 
 As you can see, there are many options for you configure.
+
+#### Manage Collaborators
+
+If you wish to invite someone to help you out with the project; Or if you want to remove someone from your collaborators list, you came to the right place.
+
+[![Manage Collaborators](/assets/images/mods/owners10.png)](/assets/images/mods/owners10.png)
