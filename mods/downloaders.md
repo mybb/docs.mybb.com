@@ -60,7 +60,7 @@ On the right side, you can see the following options:
 
 - Suggestions (you will see this option if it's been enabled by the project author)
 
-- Translations (translations posted by contributors or the project owner)
+- Translations (translations posted by collaborators or the project owner)
 
 
 If the owner of the project set a PayPal e-mail for donations, you will see a Donate button on the right as well.

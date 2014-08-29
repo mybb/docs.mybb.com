@@ -13,7 +13,7 @@ We classify our users into three types:
 
 * Project owners are those who start the project and actively maintain it. [Click here to find out more.](http://docs.mybb.com/mods/owners)
 
-* Contributors help out project owners with the development of their projects. [Click here to find out more.](http://docs.mybb.com/mods/contributors)
+* Collaborators help out project owners with the development of their projects. [Click here to find out more.](http://docs.mybb.com/mods/collaborators)
 
 Below you can find an overall description of the system.
 
@@ -23,10 +23,10 @@ The author may invite collaborators to the project, which may upload builds and 
 
 #### Builds
 A build is a ZIP file containing the project files. A build has one of two possible status: dev or stable.
-All builds are set to dev by default and they may be requested for Stable status by the project owner/author (contributors cannot change the status of builds) at a later point. If the project owner/author is an Approved Developer, the build is automatically set to Stable, otherwise it must go through an approval process ran by the MyBB team.
+All builds are set to dev by default and they may be requested for Stable status by the project owner/author (collaborators cannot change the status of builds) at a later point. If the project owner/author is an Approved Developer, the build is automatically set to Stable, otherwise it must go through an approval process ran by the MyBB team.
 
 #### Approved Developers
-Approved developers are developers/designers/contributors that have proven themselves to be trustworthy of their capabilities, which leads us to skip approval processes for them, allowing for faster releases of updates to their projects.
+Approved developers are developers/designers/collaborators that have proven themselves to be trustworthy of their capabilities, which leads us to skip approval processes for them, allowing for faster releases of updates to their projects.
 
 Any username with the following format is an approved developer:
 

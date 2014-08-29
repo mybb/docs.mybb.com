@@ -16,7 +16,7 @@ You want to start your project or you want to manage your projects. You do that 
 
 [![Control Panel 2](/assets/images/mods/owners2.png)](/assets/images/mods/owners2.png)
 
-You can see your projects and the projects you are involved in (as a contributor) as well as any pending project invitations sent to you.
+You can see your projects and the projects you are involved in (as a collaborator) as well as any pending project invitations sent to you.
 
 
 #### Start a Project
