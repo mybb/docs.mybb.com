@@ -4,13 +4,11 @@ title:  "Project Owners - Mods Site"
 categories: [mods]
 ---
 
-## Mods Site Documentation
+## Mods Site Documentation - Project Owners
 
 [Main Page](http://docs.mybb.com/mods)
 
-### For Project Owners
-
-#### Control Panel
+### Control Panel
 
 You want to start your project or you want to manage your projects. You do that from the Control Panel:
 
@@ -21,7 +19,7 @@ You want to start your project or you want to manage your projects. You do that 
 You can see your projects and the projects you are involved in (as a contributor) as well as any pending project invitations sent to you.
 
 
-##### Start a Project
+#### Start a Project
 
 If you wish to start a project, you must click New Project to expand the project options.
 
@@ -31,13 +29,13 @@ All fields are required, so you will need to fill them all. You are also asked t
 
 The build is considered a 'development' build so you will need to request for it to be changed to 'stable' at a later point.
 
-##### Manage Projects
+#### Manage Projects
 
 On this page you can see a list of all projects you are in involed in and the projects you own.
 
 [![Start Project](/assets/images/mods/owners5.png)](/assets/images/mods/owners5.png)
 
-##### Manage Invitations
+#### Manage Invitations
 
 If you want to manage the invitations you sent to other users or the invitations that were sent to you, this is where you can do that.
 You can also send invitations from this page.
