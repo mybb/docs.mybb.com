@@ -41,3 +41,23 @@ If you want to manage the invitations you sent to other users or the invitations
 You can also send invitations from this page.
 
 [![Start Project](/assets/images/mods/owners4.png)](/assets/images/mods/owners4.png)
+
+### Viewing a Project
+
+As the owner of a project, this is what a project of yours will look like when you view its page:
+
+[![View Project](/assets/images/mods/owners6.png)](/assets/images/mods/owners6.png)
+
+On the right side of the page you can find the links to the pages where you can manage your project's details, collaborators, previews, translations and more importantly, builds.
+
+#### Edit Project
+
+This is where you can edit all your project's details (actually you can edit more here than you can enter when creating the project).
+
+[![Edit Project](/assets/images/mods/owners7.png)](/assets/images/mods/owners7.png)
+
+[![Edit Project](/assets/images/mods/owners8.png)](/assets/images/mods/owners8.png)
+
+[![Edit Project](/assets/images/mods/owners9.png)](/assets/images/mods/owners9.png)
+
+As you can see, there are many options for you configure.
