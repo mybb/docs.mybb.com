@@ -28,6 +28,8 @@ All builds are set to dev by default and they may be requested for Stable status
 #### Approved Developers
 Approved developers are developers/designers/collaborators that have proven themselves to be trustworthy of their capabilities, which leads us to skip approval processes for them, allowing for faster releases of updates to their projects.
 
+You can open a request to become an Approved Developer in [Private Inquiries](http://community.mybb.com/forum-135.html).
+
 Any username with the following format is an approved developer:
 
 [![Approved Developer](/assets/images/mods/approved_developer.png)](/assets/images/mods/approved_developer.png)
