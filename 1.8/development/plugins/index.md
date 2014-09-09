@@ -176,7 +176,7 @@ For example, this would test if the current user is an Admin:
  function do_something()
  {
     global $mybb;
-    if($mybb->usergroup['isadmin'] == 1)
+    if($mybb->usergroup['cancp'] == 1)
     {
         // Admin only
     } else {
