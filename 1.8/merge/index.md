@@ -4,10 +4,11 @@ title:  "Merge System"
 categories: [merge]
 ---
 
-The MyBB Merge System allows for easy merging of an existing forum (be it MyBB or another forum software) into a MyBB <b>1.6.x</b> forum. The Merge System automatically converts the data from the other forum software (if applicable) into a MyBB-friendly format.
+The MyBB Merge System allows for easy merging of an existing forum (be it MyBB or another forum software) into a MyBB <b>1.8</b> forum. The Merge System automatically converts the data from the other forum software (if applicable) into a MyBB-friendly format.
 **Only the 1.8 Merge System is supported, all other versions aren't supported anymore.**
 
 The following forum software are supported by the MyBB Merge System:
+
 - bbPress
 - FluxBB
 - Invision Power Board 3
