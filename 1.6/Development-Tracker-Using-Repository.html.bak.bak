@@ -1,0 +1,64 @@
+---
+layout: page
+title: Using Repository
+permalink: Development_Tracker-Using_Repository.html
+---
+
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Using_the_Repository"><span class="tocnumber">1</span> <span class="toctext">Using the Repository</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Browsing_the_Repository"><span class="tocnumber">1.1</span> <span class="toctext">Browsing the Repository</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Branches"><span class="tocnumber">1.1.1</span> <span class="toctext">Branches</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Tags"><span class="tocnumber">1.1.2</span> <span class="toctext">Tags</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Commits_.26_Revisions"><span class="tocnumber">1.1.3</span> <span class="toctext">Commits &amp; Revisions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Downloading_the_Repository"><span class="tocnumber">1.2</span> <span class="toctext">Downloading the Repository</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Support"><span class="tocnumber">1.3</span> <span class="toctext">Support</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+<p>In our tracker we have a direct link to our repository - this is where all of the cutting edge development is stored and is available for everyone to look and download.
+</p><p>When you click on the "Repository" tab, you'll see a list of folders at the top and a list of revisions towards the bottom of the page. Using both of these, you can view changes to files and even download them so you can fix a problematic bug you're experiencing on your forum between official releases.
+</p><p><b>WARNING</b> - using the repository for the latest MyBB source code can be dangerous. There may be part-fixed issues or security issues that will affect your forum if you use it incorrectly.
+</p>
+
+<p>When browsing the repository, there are two main places to go - Branches and Tags.
+</p>
+
+<p>The Branches folder of the repository holds the development code for 1.4 (1.4-stable) and 1.6 (1.6-stable). Contrary to their folder names, the code in these folders <b>is not</b> stable. It is where the Development Team work to prepare the next releases of MyBB.
+</p><p>When viewing a branch, you're able to see when each file was last updated, who the last author was and the comment it was updated with. You can see even more detail when you click on a file name - from here you can see each change that was made to it by viewing the differences between them. You're also able to download a copy of the updated file using the controls above the revision list, alongside View, Annotate and History.
+</p>
+
+<p>The Tags folder contains the history of MyBB releases. The code here <i>is</i> stable, however it is there purely for contained version controlled stages of MyBB.
+</p><p>The benefit of the tags folder is that future releases may be tagged weeks in advance of an actual release. While we don't encourage people to use it, if you're up for bug testing it, then feel free to copy it from the repository and let us know what you find.
+</p>
+
+<p>When we commit changes to the repository to create revisions, we can look back at these and see the changes between new and old coding. You can find revisions while viewing the repository or if they are associated to an issue, they'll appear in the issue's history. You can view a revision by clicking on its revision number.
+</p><p>When viewing a revision, they'll be a list of added, modified, copied, renamed or deleted files associated with it. Next to each modified file will be a <b>diff</b> link - this will take you to a difference comparison where you can view which lines in the code was changed for that file. Clicking on the file name will show you the options mentioned in the Branches section above.
+</p>
+
+<p>Please remember that downloading the development code for MyBB can be dangerous. There may be unfixed and even security issues still in it.
+</p><p>To download the repository please see our information regarding <a href="{{ site.url }}/Development.html#GitHub_Access" title="Development">GitHub Access</a>. <b>Remember</b> that we do not support forums that are using development code.
+</p>
+
+<p>If you require support for the repository, please create a new thread in the <a rel="nofollow" class="external text" href="http://community.mybb.com/forum-68.html">Plugin Development Forum</a>
+</p><p><br />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Development.html" title="Development">MyBB Development</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Development_Tracker.html" title="Development Tracker">Tracker</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="Development_Tracker-Viewing_Issues.html" title="Viewing Issues">Viewing Issues</a> - <a href="Development_Tracker-Reporting_Issues.html" title="Reporting Issues">Reporting a New Issue</a> - <a href="Development_Tracker-Working_on_Issues" title="Working on Issues">Working on an Issue</a> - <strong class="selflink">Using the Repository</strong>
+</td></tr></table>
+</div>
+
+
+
+

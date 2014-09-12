@@ -1,0 +1,43 @@
+---
+layout: page
+title: Plugins:The Hook System
+permalink: Plugins-The_Hook_System.html
+---
+
+<p>MyBB has places in its code where your plugin can "hook" into. There are two types of hooks used in MyBB: hooks without arguments, and hooks with arguments.
+</p><p>First, <b>hooks without arguments</b> are the most simplest kind. They appear as:
+</p>
+<pre>
+	$plugins-&gt;run_hooks(&quot;global_end&quot;);
+</pre>
+<p>This hook name is "global_end" (found in global.php). To use this hook in your plugin, add this code at the top of your plugin, before the <b>_info</b> function and after the security check.
+</p>
+<pre>
+	$plugins-&gt;add_hook(&quot;global_end&quot;, &quot;foo_functionname&quot;);
+</pre>
+<p>The general structure is the hook name, and then the function name you want to run when it comes to that point in the code.
+</p><p>For example, when <b>global_end</b> is run during the loading of a page, the <b>foo_functionname function</b> is also run at the same time. This means you can insert your own code to do pretty much whatever you like - hook functions can be made up of any PHP code.
+</p><p><i>Advanced Usage</i>
+Most users can skip this part. The add_hook method can also accept two optional parameters: priority and file.
+</p>
+<pre>
+	$plugins-&gt;add_hook(&quot;global_end&quot;, &quot;foo_functionname&quot;, 5, &quot;anotherfile.php&quot;);
+</pre>
+<p>The priority takes into effect if there are two or more functions that are associated with a hook. A lesser value in the priority parameter will mean the function will be executed before the other function(s) with a higher value priority (for example, a priority "0" will execute before "10"). The default priority is 10. Usually you will not need to use this parameter unless you have two plugins that conflict with each other on one hook.
+</p><p>The filename in the file parameter will be "included-once" when the hook is run, before the function is executed.
+</p><p><b>Hooks with arguments</b> are seen like this:
+</p>
+<pre>
+	$contents = $plugins-&gt;run_hooks(&quot;pre_output_page&quot;, $contents);
+</pre>
+<p>In this example, the $contents variable is an argument for the pre_output_page hook, and so the function declaration for this hook must include this argument like this:
+</p>
+<pre>
+	function foo_functionname ($contents)
+</pre>
+<p>The return value of the hooks is placed back into $contents. This means at the end of your plugin function you must return $contents back, or else $contents will be empty. Otherwise, these hooks work the same as the hooks without arguments.
+</p><p>However, one must use caution and proper security practices when using hooks that contain arguments. This is due to the ability for other plugins to alter the arguments prior to your plugin being run. Plugin authors should never rely on the argument contents being safe before using them, type casting and escaping variables before using them should be a standard practice.
+</p>
+
+
+

@@ -1,0 +1,168 @@
+---
+layout: page
+title: Database Tables
+permalink: Database_Tables.html
+---
+
+<p>The following table lists all database tables created with a standard MyBB installation, and links to a page on each table that describes the structure and format of each table.
+</p>
+<center><b>Table Names</b></center>
+<center>
+<table border="1" style="width: 30px;">
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_adminlog.html" title="Database_Tables: mybb_adminlog">mybb_adminlog</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_adminoptions.html" title="Database_Tables: mybb_adminoptions">mybb_adminoptions</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_adminsessions.html" title="Database_Tables: mybb_adminsessions">mybb_adminsessions</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_adminviews.html" title="Database_Tables: mybb_adminviews">mybb_adminviews</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_announcements.html" title="Database_Tables: mybb_announcements">mybb_announcements</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_attachments.html" title="Database_Tables: mybb_attachments">mybb_attachments</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_attachtypes.html" title="Database_Tables: mybb_attachtypes">mybb_attachtypes</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_awaitingactivation.html" title="Database_Tables: mybb_awaitingactivation">mybb_awaitingactivation</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_badwords.html" title="Database_Tables: mybb_badwords">mybb_badwords</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_banfilters.html" title="Database_Tables: mybb_banfilters">mybb_banfilters</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_banned.html" title="Database_Tables: mybb_banned">mybb_banned</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_calendarpermissions.html" title="Database_Tables: mybb_calendarpermissions">mybb_calendarpermissions</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_calendars.html" title="Database_Tables: mybb_calendars">mybb_calendars</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_captcha.html" title="Database_Tables: mybb_captcha">mybb_captcha</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_datacache.html" title="Database_Tables: mybb_datacache">mybb_datacache</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_delayedmoderation.html" title="Database_Tables: mybb_delayedmoderation">mybb_delayedmoderation</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_events.html" title="Database_Tables: mybb_events">mybb_events</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_forumpermissions.html" title="Database_Tables: mybb_forumpermissions">mybb_forumpermissions</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_forums.html" title="Database_Tables: mybb_forums">mybb_forums</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_forumsread.html" title="Database_Tables: mybb_forumsread">mybb_forumsread</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_forumsubscriptions.html" title="Database_Tables: mybb_forumsubscriptions">mybb_forumsubscriptions</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_groupleaders.html" title="Database_Tables: mybb_groupleaders">mybb_groupleaders</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_helpdocs.html" title="Database_Tables: mybb_helpdocs">mybb_helpdocs</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_helpsections.html" title="Database_Tables: mybb_helpsections">mybb_helpsections</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_icons.html" title="Database_Tables: mybb_icons">mybb_icons</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_joinrequests.html" title="Database_Tables: mybb_joinrequests">mybb_joinrequests</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_mailerrors.html" title="Database_Tables: mybb_mailerrors">mybb_mailerrors</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_maillogs.html" title="Database_Tables: mybb_maillogs">mybb_maillogs</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_mailqueue.html" title="Database_Tables: mybb_mailqueue">mybb_mailqueue</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_massemails.html" title="Database_Tables: mybb_massemails">mybb_massemails</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_moderatorlog.html" title="Database_Tables: mybb_moderatorlog">mybb_moderatorlog</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_moderators.html" title="Database_Tables: mybb_moderators">mybb_moderators</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_modtools.html" title="Database_Tables: mybb_modtools">mybb_modtools</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_mycode.html" title="Database_Tables: mybb_mycode">mybb_mycode</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_polls.html" title="Database_Tables: mybb_polls">mybb_polls</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_pollvotes.html" title="Database_Tables: mybb_pollvotes">mybb_pollvotes</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_posts.html" title="Database_Tables: mybb_posts">mybb_posts</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_privatemessages.html" title="Database_Tables: mybb_privatemessages">mybb_privatemessages</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_profilefields" title="Database_Tables: mybb_profilefields">mybb_profilefields</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_promotionlogs" title="Database_Tables: mybb_promotionlogs">mybb_promotionlogs</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_promotions.html" title="Database_Tables: mybb_promotions">mybb_promotions</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_reportedposts.html" title="Database_Tables: mybb_reportedposts">mybb_reportedposts</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_reputation.html" title="Database_Tables: mybb_reputation">mybb_reputation</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_searchlog.html" title="Database_Tables: mybb_searchlog">mybb_searchlog</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_sessions.html" title="Database_Tables: mybb_sessions">mybb_sessions</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_settinggroups.html" title="Database_Tables: mybb_settinggroups">mybb_settinggroups</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_settings.html" title="Database_Tables: mybb_settings">mybb_settings</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_smilies.html" title="Database_Tables: mybb_smilies">mybb_smilies</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_spiders.html" title="Database_Tables: mybb_spiders">mybb_spiders</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_stats.html" title="Database_Tables: mybb_stats">mybb_stats</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_tasklog.html" title="Database_Tables: mybb_tasklog">mybb_tasklog</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_tasks.html" title="Database_Tables: mybb_tasks">mybb_tasks</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_templategroups.html" title="Database_Tables: mybb_templategroups">mybb_templategroups</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_templates.html" title="Database_Tables: mybb_templates">mybb_templates</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_templatesets.html" title="Database_Tables: mybb_templatesets">mybb_templatesets</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_themes.html" title="Database_Tables: mybb_themes">mybb_themes</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_themestylesheets.html" title="Database_Tables: mybb_themestylesheets">mybb_themestylesheets</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_threadprefixes.html" title="Database_Tables: mybb_threadprefixes">mybb_threadprefixes</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_threadratings.html" title="Database_Tables: mybb_threadratings">mybb_threadratings</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_threads.html" title="Database_Tables: mybb_threads">mybb_threads</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_threadsread.html" title="Database_Tables: mybb_threadsread">mybb_threadsread</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_threadsubscriptions.html" title="Database_Tables: mybb_threadsubscriptions">mybb_threadsubscriptions</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_threadviews.html" title="Database_Tables: mybb_threadviews">mybb_threadviews</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_userfields.html" title="Database_Tables: mybb_userfields">mybb_userfields</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_usergroups.html" title="Database_Tables: mybb_usergroups">mybb_usergroups</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_users.html" title="Database_Tables: mybb_users">mybb_users</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_usertitles.html" title="Database_Tables: mybb_usertitles">mybb_usertitles</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_warninglevels.html" title="Database_Tables: mybb_warninglevels">mybb_warninglevels</a>
+</td></tr>
+<tr>
+<td><a href="{{ site.url }}/Database_Tables-mybb_warnings.html" title="Database_Tables: mybb_warnings">mybb_warnings</a></td>
+<td><a href="{{ site.url }}/Database_Tables-mybb_warningtypes.html" title="Database_Tables: mybb_warningtypes">mybb_warningtypes</a>
+</td></tr>
+</table>
+</center>
+<div style="clear:both;border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Documentation.html" title="Documentation">MyBB Documentation</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Front_End.html" title="Front End">Front End</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Index_Page.html" title="Index Page">Index Page</a> - <a href="{{ site.url }}/Portal.html" title="Portal">Portal</a> - <a href="{{ site.url }}/Forum_Display.html" title="Forum Display">Forum Display</a> - <a href="{{ site.url }}/Thread_Display.html" title="Thread Display">Thread Display</a> - <a href="{{ site.url }}/Posting.html" title="Posting">Posting Threads and Replies</a> - <a href="{{ site.url }}/Searching.html" title="Searching">Searching</a> - <a href="{{ site.url }}/User_CP.html" title="User CP">User CP</a> - <a href="{{ site.url }}/Member_Profile.html" title="Member Profile">Member Profile</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <a href="{{ site.url }}/Calendar.html" title="Calendar">Calendar</a> - <a href="{{ site.url }}/Member_List.html" title="Member List">Member List</a> - <a href="{{ site.url }}/Help_Docs.html" title="Help Docs">Help Docs</a> - <a href="{{ site.url }}/Who_Is_Online.html" title="Who Is Online">Who Is Online</a> - <a href="{{ site.url }}/{{ site.url }}/Lite_Archive_Mode.html" title="Lite (Archive) Mode">Lite (Archive) Mode</a> - <a href="{{ site.url }}/Forum_Team.html" title="Forum Team">Forum Team</a> - <a href="{{ site.url }}/Statistics.html" title="Statistics">Statistics</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/Miscellaneous_Front_End.html" title="Miscellaneous Front End">Miscellaneous</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Moderating_Options.html" title="Moderating Options">Moderation</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Moderating_Options.html#Normal_Thread_Moderation" title="Moderating Options">Standard Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Thread_Moderation" title="Moderating Options">Inline Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Post_Moderation" title="Moderating Options">Inline Post Moderation</a> - <a href="{{ site.url }}/Warning_System.html" title="Warning System">Warning System</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Mod CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Home</a> - <a href="{{ site.url }}/Mod_CP_Forums_Posts.html" title="Mod CP Forums Posts">Forums and Posts</a> - <a href="{{ site.url }}/Mod_CP_Users.html" title="Mod CP Users">Users</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a> - <a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a> - <a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a> - <a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a> - <a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a> - <a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Templates &amp; Themes</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Images.html" title="Images">Images</a> - <a href="{{ site.url }}/Postbit.html" title="Postbit">Postbit</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a> - <a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Developer</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Database_Methods.html" title="Database Methods">Database Methods</a> - <strong class="selflink">Database Tables</strong>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Miscellaneous</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Cookies.html" title="Cookies">Cookies</a> - <a href="{{ site.url }}/UTF8_Setup.html" title="UTF8 Setup">UTF8 Setup</a> - <a href="{{ site.url }}/Admin_CP_Board_Settings.html" title="Admin CP Board Settings">Default Settings</a>
+</td></tr></table>
+</div>
+
+
+
+

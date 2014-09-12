@@ -1,0 +1,19 @@
+---
+layout: page
+title: Gzip
+permalink: Help-Gzip.html
+---
+
+<p>Gzip is a compression tool used on servers to compress webpages before they are sent to the user in an attempt to save bandwidth. Unfortunately Gzip isn't available on all servers and because it is turned on by default in MyBB 1.2 and above, it can cause functionality problems.
+</p>
+
+<p>If after installing MyBB you go to your forum index and you see a blank page, or a page of garbled text, chances are your server doesn't support Gzip and it needs to be turned off in MyBB for your forum to function correctly.
+</p>
+
+<p>To turn of Gzip, log in to your forum's Admin CP. The Admin CP can be found at "<i>your-forum-directory</i>/admin/", you will need to use the username and password you set up for your Admin account during the MyBB installation to access this area.
+</p><p><b>For MyBB 1.2.x and below</b>, go to "Board Settings &gt; Change &gt; Server and Optimization Options" and set "Use GZip Page Compression?" to "No". Once you have done that, click on "Submit Changes" at the bottom of the page to save the new settings.
+</p><p><b>For MyBB 1.4.x and above</b>, navigate to Configuration &gt; Settings &gt; Server and Optimization Options, and set "Use GZip Page Compression?" to "No." Once you have done that, click on "Save Settings" at the bottom of the page to save the new settings.
+</p>
+
+
+

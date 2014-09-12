@@ -1,0 +1,332 @@
+---
+layout: page
+title: Users
+permalink: Admin_CP_Users.html
+---
+
+<p>The Users section of the Admin CP allows you to manage the user accounts on your forum, as well as view statistics related to these accounts, such as IP addresses and attachments.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Browse_Users"><span class="tocnumber">1</span> <span class="toctext">Browse Users</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Views"><span class="tocnumber">1.1</span> <span class="toctext">Views</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Managing_Views"><span class="tocnumber">1.1.1</span> <span class="toctext">Managing Views</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Create_.2F_Edit_View"><span class="tocnumber">1.1.2</span> <span class="toctext">Create / Edit View</span></a>
+<ul>
+<li class="toclevel-4 tocsection-5"><a href="#Fields_to_Show"><span class="tocnumber">1.1.2.1</span> <span class="toctext">Fields to Show</span></a></li>
+<li class="toclevel-4 tocsection-6"><a href="#Find_users_where..."><span class="tocnumber">1.1.2.2</span> <span class="toctext">Find users where...</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Find_Users"><span class="tocnumber">2</span> <span class="toctext">Find Users</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Display_Options"><span class="tocnumber">2.1</span> <span class="toctext">Display Options</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Results"><span class="tocnumber">2.2</span> <span class="toctext">Results</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Editing_a_User.27s_Profile_and_Settings"><span class="tocnumber">3</span> <span class="toctext">Editing a User's Profile and Settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Overview"><span class="tocnumber">3.1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Profile"><span class="tocnumber">3.2</span> <span class="toctext">Profile</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Required_Information"><span class="tocnumber">3.2.1</span> <span class="toctext">Required Information</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Optional_Information"><span class="tocnumber">3.2.2</span> <span class="toctext">Optional Information</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#Account_Settings"><span class="tocnumber">3.3</span> <span class="toctext">Account Settings</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Login.2C_Cookies_.26_Privacy"><span class="tocnumber">3.3.1</span> <span class="toctext">Login, Cookies &amp; Privacy</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Messaging_.26_Notification"><span class="tocnumber">3.3.2</span> <span class="toctext">Messaging &amp; Notification</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Date_.26_Time_Options"><span class="tocnumber">3.3.3</span> <span class="toctext">Date &amp; Time Options</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Forum_Display_Options"><span class="tocnumber">3.3.4</span> <span class="toctext">Forum Display Options</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Thread_View_Options"><span class="tocnumber">3.3.5</span> <span class="toctext">Thread View Options</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Other_Options"><span class="tocnumber">3.3.6</span> <span class="toctext">Other Options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-22"><a href="#Signature"><span class="tocnumber">3.4</span> <span class="toctext">Signature</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Avatar"><span class="tocnumber">3.5</span> <span class="toctext">Avatar</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Referred_Users"><span class="tocnumber">4</span> <span class="toctext">Referred Users</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Show_IP_Addresses"><span class="tocnumber">5</span> <span class="toctext">Show IP Addresses</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#Show_Attachments"><span class="tocnumber">6</span> <span class="toctext">Show Attachments</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Create_New_User"><span class="tocnumber">7</span> <span class="toctext">Create New User</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#Merge_Users"><span class="tocnumber">8</span> <span class="toctext">Merge Users</span></a></li>
+</ul>
+</td></tr></table>
+
+<div style="background: #FFF6BF;border: 1px solid #FFD324;margin: 10px auto;padding: 10px;"><b>This article or section is outdated.</b>
+<dl><dd> Parts of this article or section have been written for MyBB version 1.4 and is no longer up to date.
+</dd></dl>
+<i>Contributors: Please update the article to reflect the current MyBB version, and remove this template when finished.</i></div><div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/3/34/ACP_User_Browse.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/3/34/ACP_User_Browse.png/180px-ACP_User_Browse.png" width="180" height="91" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/3/34/ACP_User_Browse.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Browse Users</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/8/8f/ACP_User_Browse_Table.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/8/8f/ACP_User_Browse_Table.png/180px-ACP_User_Browse_Table.png" width="180" height="86" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/8/8f/ACP_User_Browse_Table.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Browse Users, in table format</div></div></div>
+<p>This page allows you to view all users using administrator-created <a href="#Views">Views</a>, which are essentially saved searches. Browsing Users in the Admin CP is, essentially, an administrator-oriented member list.
+</p><p>You can further narrow the view by using the quick search at the top of the Browse Users table.
+</p>
+
+<p>Views allow you to browse users based on preset search fields, specified by you or other administrators. Access a view by selecting the view from the Views drop down at the top of the Browse Users table. The view you are currently using is displayed in the Browse Users table title, in parentheses. You can manage views by selecting "Manage Views" under the views drop down at the top of the Browse Users table.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/4/4d/ACP_User_Views.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/4/4d/ACP_User_Views.png/180px-ACP_User_Views.png" width="180" height="87" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/4/4d/ACP_User_Views.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: User Views</div></div></div>
+<p>From the View Manager, you can see all views that are visible to you. These include default views (All Users), public views that are visible to all administrators, and private views which are only visible to yourself. You can edit all views other than the default views.
+</p><p>If there is more than one view, you can set a view that is not already the default as default. However, <b>it is recommended that you leave All Users as the default view</b> - otherwise, your results when finding users will be affected by the search fields used by the view.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/e/ea/ACP_User_AddView.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/e/ea/ACP_User_AddView.png/180px-ACP_User_AddView.png" width="180" height="392" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/e/ea/ACP_User_AddView.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Create New View</div></div></div>
+<dl><dt>Title&#160;</dt><dd> Name of view to be created
+</dd><dt>Visibility&#160;</dt><dd> If the view is private, you are the only one who will be able to use this view. If the view is public, all administrators will be able to edit and make use of this view.
+</dd><dt>Set as Default View&#160;</dt><dd> Should this view be the view displayed when first visiting the Browse Users page? There can only be one default view.
+</dd><dt>Sort results by&#160;</dt><dd> How should these results be sorted? Options include: Username (name of user), Registration Date (date and time user registered on the board), Last Active (date and time user was last active), Post Count (number of posts this user has made), Reputation (current reputation count), Warning Level (warning percentage) in ascending (A-Z, 0-9) or descending (Z-A, 9-0) order.
+</dd><dt>Results per page</dt><dd> Number of results to display on each page.
+</dd><dt>Display results as</dt><dd> Which layout should be used to display the results? Table view is the classic view making use of a table with columns to show users, whereas business cards display users in a business-card-like layout, with information for each user inside the card.
+</dd></dl>
+<h4><span class="editsection">[<a href="http://localhost/mediawiki/index.php?title=Admin_CP_Users&amp;action=edit&amp;section=5" title="Edit section: Fields to Show">edit</a>]</span> <span class="mw-headline" id="Fields_to_Show"> Fields to Show </span></h4>
+<p>The fields to show in this view. If you have javascript enabled, you drag the fields you would like to be shown from "Disabled" to "Enabled." If javascript is not enabled, you simply select those you would like to display. You can also reorder the fields that you have enabled by dragging and dropping them in place.
+</p>
+<dl><dt>Avatar&#160;</dt><dd> The image chosen by the user to depict them on the forums.
+</dd><dt>Username&#160;</dt><dd> Unique name chosen by the user to differentiate them from other users
+</dd><dt>Email&#160;</dt><dd> The email address the user registered with
+</dd><dt>Primary Group&#160;</dt><dd> The primary group the user is in
+</dd><dt>Additional Groups&#160;</dt><dd> Any secondary groups the user is in
+</dd><dt>Registered&#160;</dt><dd> Date and time the user registered
+</dd><dt>Last Active&#160;</dt><dd> Date and time the user was last active
+</dd><dt>Post Count&#160;</dt><dd> Number of posts the user has on the forum
+</dd><dt>Reputation&#160;</dt><dd> The user's current reputation count.
+</dd><dt>Warning Level&#160;</dt><dd> The user's current warning percentage.
+</dd><dt>Registration IP&#160;</dt><dd> The IP address the user registered with
+</dd><dt>Last known IP address matches&#160;</dt><dd> The last known IP addresses used by the user
+</dd><dt>Controls&#160;</dt><dd> The controls drop down for the user that allows you to manage their account
+</dd></dl>
+<h4><span class="editsection">[<a href="http://localhost/mediawiki/index.php?title=Admin_CP_Users&amp;action=edit&amp;section=6" title="Edit section: Find users where...">edit</a>]</span> <span class="mw-headline" id="Find_users_where..."> Find users where... </span></h4>
+<p>This allows you to enter the search fields you would like to search for with this view. These fields are identical to the search fields used when <a href="#Find_Users">finding users</a>.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/4/41/ACP_User_Find.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/4/41/ACP_User_Find.png/180px-ACP_User_Find.png" width="180" height="308" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/4/41/ACP_User_Find.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Find Users</div></div></div>
+<p>No fields are required. Like searching for users, the less fields filled in, the broader your results will be, the more fields filled in, the narrower your results will be.
+</p><p>Below are the fields that you can fill in.
+</p>
+<dl><dt>Username contains
+</dt><dt>Email address contains
+</dt><dt>Is member of one or more of these groups&#160;</dt><dd> This includes both the primary user group and secondary user groups.
+</dd><dt>Website contains
+</dt><dt>ICQ number contains
+</dt><dt>AIM handle contains
+</dt><dt>Yahoo! Messenger handle contains
+</dt><dt>MSN Messenger handle contains
+</dt><dt>Signature contains
+</dt><dt>Custom user title contains
+</dt><dt>Post count is&#160;</dt><dd> The post count can be greater than, exactly, or less than the number entered, depending on your selection.
+</dd><dt>Registration IP matches&#160;</dt><dd> Does the registration IP address match the IP address entered? * denotes a wildcard - a full IP address must be entered, even if it contains wildcards.
+</dd><dt>Last known IP address matches&#160;</dt><dd> Does the last known IP address match the IP address entered? * denotes a wildcard - a full IP address must be entered, even if it contains wildcards.
+</dd><dt>Has posted with the IP address&#160;</dt><dd> Does the IP address entered match one of the IP addresses this user has used to post? * denotes a wildcard - a full IP address must be entered, even if it contains wildcards.
+</dd></dl>
+<h4><span class="editsection">[<a href="http://localhost/mediawiki/index.php?title=Admin_CP_Users&amp;action=edit&amp;section=8" title="Edit section: Display Options">edit</a>]</span> <span class="mw-headline" id="Display_Options"> Display Options </span></h4>
+<dl><dt>Sort results by&#160;</dt><dd> How should these results be sorted? Options include: Username (name of user), Registration Date (date and time user registered on the board), Last Active (date and time user was last active), Post Count (number of posts this user has made), Reputation (current reputation count), Warning Level (warning percentage) in ascending (A-Z, 0-9) or descending (Z-A, 9-0) order.
+</dd><dt>Results per page</dt><dd> Number of results to display on each page.
+</dd><dt>Display results as</dt><dd> Which layout should be used to display the results? Table view is the classic view making use of a table with columns to show users, whereas business cards display users in a business-card-like layout, with information for each user inside the card.
+</dd></dl>
+
+<p>The results are displayed using the default view (you cannot change the view while searching). It displays the fields that are shown when using that view, and <i>also further limits the search by any other specifications made by that view</i>. If you do not specify any Display Options when finding users, it also makes use of the display options of the view.
+</p><p>For more information on views, see <a href="#Views">Views</a>.
+</p><p>If Controls are enabled for this view, you will be able to:
+</p>
+<dl><dt>Edit Profile &amp; Settings&#160;</dt><dd> This will allow you to edit the user's profile and settings.
+</dd><dt>Ban User&#160;</dt><dd> This will allow you to ban the user from access to the forums.
+</dd><dt>Delete User&#160;</dt><dd> This will allow you to delete the user permanently from the forums.
+</dd><dt>Show Referred Users&#160;</dt><dd> This will allow you to view the users this user has referred.
+</dd><dt>Show IP Addresses&#160;</dt><dd> This will display the user's registration IP address, the last known IP address, and any IP addresses this user has posted with.
+</dd><dt>Show Attachments&#160;</dt><dd> This will provide a listing of all attachments this user has uploaded.
+</dd></dl>
+
+<div style="background: #FFF6BF;border: 1px solid #FFD324;margin: 10px auto;padding: 10px;"><b>This article or section is outdated.</b>
+<dl><dd> Parts of this article or section have been written for MyBB version 1.4 and is no longer up to date.
+</dd></dl>
+<i>Contributors: Please update the article to reflect the current MyBB version, and remove this template when finished.</i></div>
+<p><br />
+</p><p>When editing a user, all information and controls are divided within five tabs: Overview, Profile, Account Settings, Signature, and Avatar.
+</p><p>To save any changes, click on "Save User" at the bottom of each tab. Note: You do not have to save the user after changing a setting in each tab. Saving the user in <i>any</i> tab will save everything changed from <i>any other</i> tab.
+</p><p>Remember: Most profile fields, all account settings, signature, and avatar can be changed by the user from their <a href="{{ site.url }}/User_CP.html" title="User CP">User_CP</a>.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/c/cd/ACP_User_Edit_Overview.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/c/cd/ACP_User_Edit_Overview.png/180px-ACP_User_Edit_Overview.png" width="180" height="106" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/c/cd/ACP_User_Edit_Overview.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Edit User, Overview</div></div></div>
+<p>The overview tab includes basic information about the user.
+</p>
+<dl><dt>Email Address&#160;</dt><dd> The email address associated with this account
+</dd><dt>Registration date&#160;</dt><dd> The date and time this account was registered
+</dd><dt>Posts&#160;</dt><dd> Accumulated posts on the forum
+</dd><dt>Posts per day&#160;</dt><dd> The average number of posts the user has made per day (User's post count divided by number of days registered)
+</dd><dt>Percent of posts&#160;</dt><dd> The percentage of posts on the forum that were made by this user (User's post count divided by total number of posts on the forum)
+</dd><dt>Registration IP&#160;</dt><dd> The IP address used when the user registered
+</dd><dt>Last Active&#160;</dt><dd> The last day and time the user was active
+</dd><dt>Local Time&#160;</dt><dd> The current time for the user based on their time zone and their Daylight Savings Time setting
+</dd><dt>Age&#160;</dt><dd> Age based on the user's specified date of birthday, if specified
+</dd><dt>Reputation&#160;</dt><dd> The user's reputation count
+</dd><dt>Warning Level&#160;</dt><dd> The user's warning level
+</dd><dt>Last known IP address matches&#160;</dt><dd> The IP address this user last used
+</dd></dl>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/4/4e/ACP_User_Edit_Profile.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/4/4e/ACP_User_Edit_Profile.png/180px-ACP_User_Edit_Profile.png" width="180" height="335" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/4/4e/ACP_User_Edit_Profile.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Edit User, Profile</div></div></div>
+<p>The profile tab allows you to modify the user's profile information.
+</p>
+
+<dl><dt>Username&#160;</dt><dd> The user's current username. To change the user's username, change the text in the box.
+</dd><dt>New Password&#160;</dt><dd> If you wish to change the user's password, enter the new password in this field. Note: <b>Confirm New Password</b> must also be filled in to change the user's password.
+</dd><dt>Email Address&#160;</dt><dd> The current email address associated with this account.
+</dd><dt>Primary User Group&#160;</dt><dd> The user's main user group.
+</dd><dt>Additional User Groups&#160;</dt><dd> Additional user groups that add additional permissions / features for the user
+</dd><dt>Display User Group&#160;</dt><dd> The user group this user appears to be a member of on the front end. Select "Use Primary User Group" to show the primary user group they are a member of.
+</dd><dt>Post Count&#160;</dt><dd> The number of posts this user has accumulated.
+</dd></dl>
+
+<dl><dt>Custom User Title&#160;</dt><dd> The user's custom user title, if they have access to the feature. If no user title is entered, the group user title or the user title based on post count (see <a href="http://localhost/mediawiki/index.php?title=Admin_CP_Users_User_Titles&amp;action=edit&amp;redlink=1" class="new" title="Admin CP Users User Titles (page does not exist)">Admin_CP_Users_User_Titles</a>).
+</dd><dt>Website&#160;</dt><dd> The URL to the user's favorite website
+</dd><dt>ICQ Number&#160;</dt><dd> ICQ Instant Messenger number
+</dd><dt>AIM Handle&#160;</dt><dd> AOL Insant Messenger handle
+</dd><dt>Yahoo! Messenger Handle Yahoo! Messenger instant messaging handle
+</dt><dt>MSN Messenger Handle&#160;</dt><dd> Windows Live Messenger or MSN Messenger instant messaging handle
+</dd><dt>Sex&#160;</dt><dd> The user's gender, if specified
+</dd><dt>Location&#160;</dt><dd> The user's current location
+</dd><dt>Bio&#160;</dt><dd> A biography for the user telling a bit about themselves.
+</dd></dl>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/9/9b/ACP_User_Edit_Settings.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/9/9b/ACP_User_Edit_Settings.png/180px-ACP_User_Edit_Settings.png" width="180" height="277" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/9/9b/ACP_User_Edit_Settings.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Edit User, Account Settings</div></div></div>
+<p>The account settings tab allows you to change the user's settings for your board.
+</p>
+
+<dl><dt>Hide from the Who's Online list&#160;</dt><dd> Hide the user from the Who's Online list (making them invisible). They will still be shown to user groups who can see invisible users.
+</dd><dt>Remember login details for future visits&#160;</dt><dd> Should the user have to login each time they visit the forums?
+</dd></dl>
+
+<dl><dt>Receive emails from administrators&#160;</dt><dd> Should the user receive Mass Mailings sent out by the administrator
+</dd><dt>Hide email address from other members&#160;</dt><dd> Should users be able to email this user?
+</dd><dt>Receive private messages from other users&#160;</dt><dd> Should the user be able to receive private messages?
+</dd><dt>Alert with notice when new private message is received&#160;</dt><dd> Should the user receive a notice when an unread private message is in their inbox?
+</dd><dt>Notify by email when new private message is received&#160;</dt><dd> Should the user receive an email when they receive a new private message?
+</dd><dt>Default thread subscription mode&#160;</dt><dd> Should they be subscribed to threads instantly after replying to them? (Options: "Do not subscribe," "No email notification," and "Instant email notification")
+</dd></dl>
+
+<dl><dt>Date Format&#160;</dt><dd> How should dates be formatted?
+</dd><dt>Time Format&#160;</dt><dd> How should times be formatted?
+</dd><dt>Time Zone&#160;</dt><dd> What time zone should times be displayed as?
+</dd><dt>Daylight Savings Time correction&#160;</dt><dd> Should DST settings be detected automatically, always use DST correction, or never use DST correction?
+</dd></dl>
+
+<dl><dt>Threads Per Page&#160;</dt><dd> How many threads should be displayed per page?
+</dd><dt>Default Thread Age View&#160;</dt><dd> How recent should displayed threads be?
+</dd></dl>
+
+<dl><dt>Display users' signatures in their posts&#160;</dt><dd> Should signatures be displayed in posts?
+</dd><dt>Display users' avatars in their posts&#160;</dt><dd> Should avatars be displayed in posts?
+</dd></dl>
+<p>'Show the quick reply box at the bottom of the thread view&#160;: Should quick reply be enabled for this user?
+</p>
+<dl><dt>Posts Per Page&#160;</dt><dd> The number of posts to be displayed per page.
+</dd><dt>Default Thread View Mode&#160;</dt><dd> Should posts be displayed in linear mode or threaded mode?
+</dd></dl>
+
+<dl><dt>Show friendly redirection pages&#160;</dt><dd> Should the redirect pages be displayed?
+</dd><dt>Show MyCode formatting options on posting pages&#160;</dt><dd> Should the MyCode editor and smilie selector be displayed on posting pages?
+</dd><dt>Theme&#160;</dt><dd> What theme should the forum be displayed in?
+</dd><dt>Board Language&#160;</dt><dd> What forum language should be used?
+</dd></dl>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/7/73/ACP_User_Edit_Signature.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/7/73/ACP_User_Edit_Signature.png/180px-ACP_User_Edit_Signature.png" width="180" height="116" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/7/73/ACP_User_Edit_Signature.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Edit User, Signature</div></div></div>
+<p>In the signature tab, you can edit the user's signature using a full MyCode editor. You can also enable their signature in all posts, disable their signature in all posts, or keep all posts as-is.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/8/8f/ACP_User_Edit_Avatar.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/8/8f/ACP_User_Edit_Avatar.png/180px-ACP_User_Edit_Avatar.png" width="180" height="204" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/8/8f/ACP_User_Edit_Avatar.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Edit User, Avatar</div></div></div>
+<p>From the avatar tab, you can see the user's current avatar, and choose to remove the current avatar. You can also upload an avatar from your computer, link to an avatar online, or select an avatar from an avatar gallery.
+</p>
+
+<p>The referred users page returns a listing of all users a user has referred. That is, any user that has entered the selected user's username while registering will be listed. The results listing is similar to that of the <a href="#Results">Find User Results</a>.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/4/4e/ACP_User_IPs.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/4/4e/ACP_User_IPs.png/180px-ACP_User_IPs.png" width="180" height="104" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/4/4e/ACP_User_IPs.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Show IP Addresses</div></div></div>
+<p>From the show IP address page, you see the registration IP, the last known IP address, and all IP addresses that the user has posted with. The registration IP and the last known IP address are displayed at the top, and are labeled as such. All other IP addresses are post IPs.
+</p><p>For each IP address, you can show all users that have posted with that IP, show all users who have registered with that IP, and you can ban that IP.
+</p>
+
+<p>The show attachments page returns a listing of all attachments this user has uploaded.
+</p><p>See <a href="{{ site.url }}/Admin_CP_Forum_Attachments.html" title="Admin CP Forum Attachments">Finding Attachments</a> for more information.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/e/e7/ACP_User_Create.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/e/e7/ACP_User_Create.png/180px-ACP_User_Create.png" width="180" height="165" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/e/e7/ACP_User_Create.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Create New User</div></div></div>
+<p>The create new user page allows you to create a user without registering it on the front end. All that can be filled in while registering is the required information for registration; any other information can be edited after creating the user.
+</p><p>The following information is required:
+</p>
+<dl><dt>Username&#160;</dt><dd> Name for the user
+</dd><dt>Password&#160;</dt><dd> Password used for this user to login
+</dd><dt>Confirm Password&#160;</dt><dd> Re-enter the password
+</dd><dt>Email Address&#160;</dt><dd> Email address that will be associated with this account
+</dd><dt>Primary User Group&#160;</dt><dd> The user's main user group.
+</dd><dt>Additional User Groups&#160;</dt><dd> Additional user groups that add additional permissions / features for the user
+</dd><dt>Display User Group&#160;</dt><dd> The user group this user will appear to be a member of on the front end. Select "Use Primary User Group" to show the primary user group they will be a member of.
+</dd></dl>
+<p>After creating the user, you will be taken to the edit user page, allowing you to change any other options for that user.
+</p>
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/0/0a/ACP_User_Merge.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/0/0a/ACP_User_Merge.png/180px-ACP_User_Merge.png" width="180" height="103" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/0/0a/ACP_User_Merge.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Users &amp; Groups: Merge Users</div></div></div>
+<p>From the merge users page, you can merge two users together, including:
+</p>
+<ul><li> Posts
+</li><li> Threads
+</li><li> Private Messages
+</li><li> Calendar Events
+</li><li> Post Count
+</li><li> Buddy List
+</li></ul>
+<p>There are two accounts you must specify when merging users:
+</p>
+<dl><dt>Source Account&#160;</dt><dd> This is the account that will be merged from. <b>After the merge process, this account will be <i>removed</i>.</b>
+</dd><dt>Destination Account&#160;</dt><dd> This is the account that will be merged into and will <b>remain</b> after the merge.
+</dd></dl>
+<p><b>Remember, this process <i>cannot</i> be undone.</b>
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html#Dashboard" title="Admin CP Home">Dashboard</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Preferences" title="Admin CP Home">Preferences</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Version_Check" title="Admin CP Home">Version Check</a> - <a href="{{ site.url }}/Admin_CP_Home.html#MyBB_Credits" title="Admin CP Home">MyBB Credits</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Config_Settings.html" title="Admin CP Config Settings">Settings</a> - <a href="{{ site.url }}/Admin_CP_Config_Banning.html" title="Admin CP Config Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Config_Profile_Fields.html" title="Admin CP Config Profile Fields">Custom Profile Fields</a> - <a href="{{ site.url }}/Admin_CP_Config_Smilies.html" title="Admin CP Config Smilies">Smilies</a> - <a href="{{ site.url }}/Admin_CP_Config_Word_Filters.html" title="Admin CP Config Word Filters">Word Filters</a> - <a href="{{ site.url }}/Admin_CP_Config_MyCode.html" title="Admin CP Config MyCode">MyCode</a> - <a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Languages</a> - <a href="{{ site.url }}/Admin_CP_Config_Post_Icons.html" title="Admin CP Config Post Icons">Post Icons</a> - <a href="{{ site.url }}/Admin_CP_Config_Help_Docs.html" title="Admin CP Config Help Docs">Help Documents</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugins</a> - <a href="{{ site.url }}/Admin_CP_Config_Attachments.html" title="Admin CP Config Attachments">Attachment Types</a> - <a href="{{ site.url }}/Admin_CP_Config_Mod_Tools.html" title="Admin CP Config Mod Tools">Moderator Tools</a> - <a href="{{ site.url }}/Admin_CP_Config_Spiders.html" title="Admin CP Config Spiders">Spiders/Bots</a> - <a href="{{ site.url }}/Admin_CP_Config_Calendars.html" title="Admin CP Config Calendars">Calendars</a> - <a href="{{ site.url }}/Admin_CP_Config_Warning_System.html" title="Admin CP Config Warning System">Warning System</a> - <a href="{{ site.url }}/Admin_CP_Config_Thread_Prefixes.html" title="Admin CP Config Thread Prefixes">Thread Prefixes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Forum_Management.html" title="Admin CP Forum Management">Forum Management</a> - <a href="{{ site.url }}/Admin_CP_Forum_Announcements.html" title="Admin CP Forum Announcements">Forum Announcements</a> - <a href="{{ site.url }}/Admin_CP_Moderation_Queue.html" title="Admin CP Moderation Queue">Moderation Queue</a> - <a href="{{ site.url }}/Admin_CP_Forum_Attachments.html" title="Admin CP Forum Attachments">Attachments</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><strong class="selflink">Users</strong> - <a href="{{ site.url }}/Admin_CP_Groups.html" title="Admin CP Groups">Groups</a> - <a href="{{ site.url }}/Admin_CP_User_Titles.html" title="Admin CP User Titles">User Titles</a> - <a href="{{ site.url }}/Admin_CP_User_Banning.html" title="Admin CP User Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Admin_Perms.html" title="Admin CP Admin Perms">Admin Permissions</a> - <a href="{{ site.url }}/Admin_CP_Mass_Mail.html" title="Admin CP Mass Mail">Mass Mail</a> - <a href="{{ site.url }}/Admin_CP_Group_Promotions.html" title="Admin CP Group Promotions">Group Promotions</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_System_Health.html" title="Admin CP System Health">System Health</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Cache_Manager" title="Admin CP Tools">Cache Manager</a> - <a href="{{ site.url }}/Admin_CP_Task_Manager.html" title="Admin CP Task Manager">Task Manager</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Recount_and_Rebuild" title="Admin CP Tools">Recount and Rebuild</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#PHP_Info" title="Admin CP Tools">PHP Info</a> - <a href="{{ site.url }}/Admin_CP_Backups.html" title="Admin CP Backups">Database Backups</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Optimize_Database" title="Admin CP Tools">Optimize Database</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#File_Verification" title="Admin CP Tools">File Verification</a> - <a href="{{ site.url }}/Admin_CP_Admin_Logs.html" title="Admin CP Admin Logs">Administrator Log</a> - <a href="{{ site.url }}/Admin_CP_Mod_Logs.html" title="Admin CP Mod Logs">Moderator Log</a> - <a href="{{ site.url }}/Admin_CP_User_Email_Logs.html" title="Admin CP User Email Logs">User Email Log</a> - <a href="{{ site.url }}/Admin_CP_System_Mail_Logs.html" title="Admin CP System Mail Logs">System Mail Log</a> - <a href="{{ site.url }}/Admin_CP_User_Warning_Logs.html" title="Admin CP User Warning Logs">User Warning Log</a> - <a href="{{ site.url }}/Admin_CP_Statistics.html" title="Admin CP Statistics">Statistics</a>
+</td></tr></table>
+</div>
+
+
+
+

@@ -1,0 +1,115 @@
+---
+layout: page
+title: Config
+permalink: Admin_CP_Config.html
+---
+
+<p>The Configuration tab contains all the configuration of your forum on a global level.
+</p>
+
+<p>All of the various general board settings for all of the various features on your board.
+<b><a href="{{ site.url }}/Admin_CP_Config_Settings.html" title="Admin CP Config Settings">Read the full document &#187;</a></b>
+</p>
+
+<p>The location of banned IP addresses, disallowed usernames, and disallowed email addresses.
+<b><a href="{{ site.url }}/Admin_CP_Config_Banning.html" title="Admin CP Config Banning">Read the full document &#187;</a></b>
+</p>
+
+<p>Custom profile fields allow you to create your own fields, both required and optional, for your members to fill in.
+<b><a href="{{ site.url }}/Admin_CP_Config_Profile_Fields.html" title="Admin CP Config Profile Fields">Read the full document &#187;</a></b>
+</p>
+
+<p>Add, edit, or delete the smilies (also known as emoticons) for your forum, including "Mass Edit," allowing you to edit all smilies at once.
+<b><a href="{{ site.url }}/Admin_CP_Config_Smilies.html" title="Admin CP Config Smilies">Read the full document &#187;</a></b>
+</p>
+
+<p>Word filters replace one word or phrase with another, also commonly called a "bad word filter."
+<b><a href="{{ site.url }}/Admin_CP_Config_Word_Filters.html" title="Admin CP Config Word Filters">Read the full document &#187;</a></b>
+</p>
+
+<p>Custom MyCode allows you to create your own MyCode using your own custom regular expressions. There is also a MyCode tester allowing you to test your custom MyCode before saving when adding or editing.
+<b><a href="{{ site.url }}/Admin_CP_Config_MyCode.html" title="Admin CP Config MyCode">Read the full document &#187;</a></b>
+</p>
+
+<p>There are various language packs available to translate your MyBB forum into another language. This section allows you to edit the language strings in each of these packs.
+<b><a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Read the full document &#187;</a></b>
+</p>
+
+<p>Post icons can be set to enhance the subject of the post and differ it further from other posts or threads.
+<b><a href="{{ site.url }}/Admin_CP_Config_Post_Icons.html" title="Admin CP Config Post Icons">Read the full document &#187;</a></b>
+</p>
+
+<p>You can modify the default help documents on your forum, as well as add your own. Help documents are found under "Help" on the <a href="{{ site.url }}/Front_End.html" title="Front End">front end</a>.
+<b><a href="{{ site.url }}/Admin_CP_Config_Help_Docs.html" title="Admin CP Config Help Docs">Read the full document &#187;</a></b>
+</p>
+
+<p>Plugins use hooks throughout the code that allow them to run snippets of code to add new features without making any code modications.
+<b><a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Read the full document &#187;</a></b>
+</p>
+
+<p>Attachment types are the various file types that are allowed to be uploaded to your forum via the attachments system.
+<b><a href="{{ site.url }}/Admin_CP_Config_Attachments.html" title="Admin CP Config Attachments">Read the full document &#187;</a></b>
+</p>
+
+<p>Custom moderator tools allow you to combine the various moderator functions of your forum into a single tool.
+<b><a href="{{ site.url }}/Admin_CP_Config_Mod_Tools.html" title="Admin CP Config Mod Tools">Read the full document &#187;</a></b>
+</p>
+
+<p>MyBB allows you to set custom themes, languages, or forum permissions for the spiders and bots that visit your forum based on their user agent.
+<b><a href="{{ site.url }}/Admin_CP_Config_Spiders.html" title="Admin CP Config Spiders">Read the full document &#187;</a></b>
+</p>
+
+<p>Your forum can have multiple calendars on it. This section allows you to manage the settings and permissions for your forum's calendars.
+<b><a href="{{ site.url }}/Admin_CP_Config_Calendars.html" title="Admin CP Config Calendars">Read the full document &#187;</a></b>
+</p>
+
+<p>MyBB's warning system allows you to warn users and have actions automatically taken when users reach certain levels. You can configure pre-set warning types (reasons to be warned) and the "warning levels" (the actions that happen when users reach a certain level).
+<b><a href="{{ site.url }}/Admin_CP_Config_Warning_System.html" title="Admin CP Config Warning System">Read the full document &#187;</a></b>
+</p>
+
+<p>Thread prefixes allow you to define prefixes that users can assign to their threads. Prefixes can be configured to only be accessible in certain forums or certain user groups.
+<b><a href="{{ site.url }}/Admin_CP_Config_Thread_Prefixes.html" title="Admin CP Config Thread Prefixes">Read the full document &#187;</a></b>
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html#Dashboard" title="Admin CP Home">Dashboard</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Preferences" title="Admin CP Home">Preferences</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Version_Check" title="Admin CP Home">Version Check</a> - <a href="{{ site.url }}/Admin_CP_Home.html#MyBB_Credits" title="Admin CP Home">MyBB Credits</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><strong class="selflink">Configuration</strong></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Config_Settings.html" title="Admin CP Config Settings">Settings</a> - <a href="{{ site.url }}/Admin_CP_Config_Banning.html" title="Admin CP Config Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Config_Profile_Fields.html" title="Admin CP Config Profile Fields">Custom Profile Fields</a> - <a href="{{ site.url }}/Admin_CP_Config_Smilies.html" title="Admin CP Config Smilies">Smilies</a> - <a href="{{ site.url }}/Admin_CP_Config_Word_Filters.html" title="Admin CP Config Word Filters">Word Filters</a> - <a href="{{ site.url }}/Admin_CP_Config_MyCode.html" title="Admin CP Config MyCode">MyCode</a> - <a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Languages</a> - <a href="{{ site.url }}/Admin_CP_Config_Post_Icons.html" title="Admin CP Config Post Icons">Post Icons</a> - <a href="{{ site.url }}/Admin_CP_Config_Help_Docs.html" title="Admin CP Config Help Docs">Help Documents</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugins</a> - <a href="{{ site.url }}/Admin_CP_Config_Attachments.html" title="Admin CP Config Attachments">Attachment Types</a> - <a href="{{ site.url }}/Admin_CP_Config_Mod_Tools.html" title="Admin CP Config Mod Tools">Moderator Tools</a> - <a href="{{ site.url }}/Admin_CP_Config_Spiders.html" title="Admin CP Config Spiders">Spiders/Bots</a> - <a href="{{ site.url }}/Admin_CP_Config_Calendars.html" title="Admin CP Config Calendars">Calendars</a> - <a href="{{ site.url }}/Admin_CP_Config_Warning_System.html" title="Admin CP Config Warning System">Warning System</a> - <a href="{{ site.url }}/Admin_CP_Config_Thread_Prefixes.html" title="Admin CP Config Thread Prefixes">Thread Prefixes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Forum_Management.html" title="Admin CP Forum Management">Forum Management</a> - <a href="{{ site.url }}/Admin_CP_Forum_Announcements.html" title="Admin CP Forum Announcements">Forum Announcements</a> - <a href="{{ site.url }}/Admin_CP_Moderation_Queue.html" title="Admin CP Moderation Queue">Moderation Queue</a> - <a href="{{ site.url }}/Admin_CP_Forum_Attachments.html" title="Admin CP Forum Attachments">Attachments</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Users.html" title="Admin CP Users">Users</a> - <a href="{{ site.url }}/Admin_CP_Groups.html" title="Admin CP Groups">Groups</a> - <a href="{{ site.url }}/Admin_CP_User_Titles.html" title="Admin CP User Titles">User Titles</a> - <a href="{{ site.url }}/Admin_CP_User_Banning.html" title="Admin CP User Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Admin_Perms.html" title="Admin CP Admin Perms">Admin Permissions</a> - <a href="{{ site.url }}/Admin_CP_Mass_Mail.html" title="Admin CP Mass Mail">Mass Mail</a> - <a href="{{ site.url }}/Admin_CP_Group_Promotions.html" title="Admin CP Group Promotions">Group Promotions</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_System_Health.html" title="Admin CP System Health">System Health</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Cache_Manager" title="Admin CP Tools">Cache Manager</a> - <a href="{{ site.url }}/Admin_CP_Task_Manager.html" title="Admin CP Task Manager">Task Manager</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Recount_and_Rebuild" title="Admin CP Tools">Recount and Rebuild</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#PHP_Info" title="Admin CP Tools">PHP Info</a> - <a href="{{ site.url }}/Admin_CP_Backups.html" title="Admin CP Backups">Database Backups</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Optimize_Database" title="Admin CP Tools">Optimize Database</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#File_Verification" title="Admin CP Tools">File Verification</a> - <a href="{{ site.url }}/Admin_CP_Admin_Logs.html" title="Admin CP Admin Logs">Administrator Log</a> - <a href="{{ site.url }}/Admin_CP_Mod_Logs.html" title="Admin CP Mod Logs">Moderator Log</a> - <a href="{{ site.url }}/Admin_CP_User_Email_Logs.html" title="Admin CP User Email Logs">User Email Log</a> - <a href="{{ site.url }}/Admin_CP_System_Mail_Logs.html" title="Admin CP System Mail Logs">System Mail Log</a> - <a href="{{ site.url }}/Admin_CP_User_Warning_Logs.html" title="Admin CP User Warning Logs">User Warning Log</a> - <a href="{{ site.url }}/Admin_CP_Statistics.html" title="Admin CP Statistics">Statistics</a>
+</td></tr></table>
+</div>
+
+
+
+

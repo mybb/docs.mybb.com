@@ -1,0 +1,254 @@
+---
+layout: page
+title: Forum Management
+permalink: Admin_CP_Forum_Management.html
+---
+
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/f/f5/ACP_Forum_Management.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/f/f5/ACP_Forum_Management.png/180px-ACP_Forum_Management.png" width="180" height="116" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/f/f5/ACP_Forum_Management.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Forum &amp; Posts: Forum Management</div></div></div>
+<p>The Forum Management section of the Admin CP allows you to manage all of the forums on your board. It allows you to control all permissions and settings for all forums.
+</p><p>From the home listing page, you see a 3-tiered listing of your forums: the primary categories, the forums within those categories, and the subforums within this forums. To see anything deeper, you can click on the name of a forum, which will show all child forums within that forum. From the listing page, you can manage the display order of all of the categories, forums, and first-level sub forums.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#View_Forum"><span class="tocnumber">1</span> <span class="toctext">View Forum</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Sub_Forums"><span class="tocnumber">1.1</span> <span class="toctext">Sub Forums</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Permissions"><span class="tocnumber">1.2</span> <span class="toctext">Permissions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Quick_Permissions"><span class="tocnumber">1.2.1</span> <span class="toctext">Quick Permissions</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Full_Permissions"><span class="tocnumber">1.2.2</span> <span class="toctext">Full Permissions</span></a>
+<ul>
+<li class="toclevel-4 tocsection-6"><a href="#Viewing"><span class="tocnumber">1.2.2.1</span> <span class="toctext">Viewing</span></a></li>
+<li class="toclevel-4 tocsection-7"><a href="#Posting.2FRating"><span class="tocnumber">1.2.2.2</span> <span class="toctext">Posting/Rating</span></a></li>
+<li class="toclevel-4 tocsection-8"><a href="#Editing"><span class="tocnumber">1.2.2.3</span> <span class="toctext">Editing</span></a></li>
+<li class="toclevel-4 tocsection-9"><a href="#Polls"><span class="tocnumber">1.2.2.4</span> <span class="toctext">Polls</span></a></li>
+<li class="toclevel-4 tocsection-10"><a href="#Miscellaneous"><span class="tocnumber">1.2.2.5</span> <span class="toctext">Miscellaneous</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Moderators"><span class="tocnumber">1.3</span> <span class="toctext">Moderators</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Adding_a_New_Moderator"><span class="tocnumber">1.3.1</span> <span class="toctext">Adding a New Moderator</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Add_New_Forum_.2F_Add_Child_Forum_.2F_Edit_Forum_Settings"><span class="tocnumber">2</span> <span class="toctext">Add New Forum / Add Child Forum / Edit Forum Settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#General_Settings"><span class="tocnumber">2.1</span> <span class="toctext">General Settings</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Additional_Forum_Options"><span class="tocnumber">2.2</span> <span class="toctext">Additional Forum Options</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Access_Options"><span class="tocnumber">2.2.1</span> <span class="toctext">Access Options</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Moderation_Options"><span class="tocnumber">2.2.2</span> <span class="toctext">Moderation Options</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Style_Options"><span class="tocnumber">2.2.3</span> <span class="toctext">Style Options</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Forum_Rules"><span class="tocnumber">2.2.4</span> <span class="toctext">Forum Rules</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Default_View_Options"><span class="tocnumber">2.2.5</span> <span class="toctext">Default View Options</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Miscellaneous_Options"><span class="tocnumber">2.2.6</span> <span class="toctext">Miscellaneous Options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-22"><a href="#Permissions_2"><span class="tocnumber">2.3</span> <span class="toctext">Permissions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#Copy_Forum"><span class="tocnumber">3</span> <span class="toctext">Copy Forum</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#General_Settings_2"><span class="tocnumber">3.1</span> <span class="toctext">General Settings</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#New_Forum_Settings"><span class="tocnumber">3.2</span> <span class="toctext">New Forum Settings</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+<p>The View Forum page provides access to all permissions and settings for that particular forum, and shows all child forums/sub forums in that forum. From here, you have access to edit the forum settings, add a child forum, or copy the forum settings and/or permissions to another, or new, forum.
+</p><p>You can also manage the sub forums, permissions, and moderators from this page through the javascript "sub-tabs," which change content without reloading the page. On the view forum page, these are the "Sub Forums," "Permissions," and "Moderators" tabs.
+</p><p>The base view forum page is the sub forums page.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/c/cd/ACP_Forum_Subforums.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/c/cd/ACP_Forum_Subforums.png/180px-ACP_Forum_Subforums.png" width="180" height="88" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/c/cd/ACP_Forum_Subforums.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Forum &amp; Posts: View Forum's Subforums</div></div></div>
+
+<p>Sub forums shows a view similar to that of the home listing page, showing the forums, their sub forums, and then sub forums within those. You can also manage the display orders for these forums, and access the same options as those on the home listing page.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/b/b7/ACP_Forum_Permissions.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/b/b7/ACP_Forum_Permissions.png/180px-ACP_Forum_Permissions.png" width="180" height="160" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/b/b7/ACP_Forum_Permissions.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Forum &amp; Posts: Forum Permissions</div></div></div>
+
+<div style="background: #FFF6BF;border: 1px solid #FFD324;margin: 10px auto;padding: 10px;"><b>This article or section is outdated.</b>
+<dl><dd> Parts of this article or section have been written for MyBB version 1.4 and is no longer up to date.
+</dd></dl>
+<i>Contributors: Please update the article to reflect the current MyBB version, and remove this template when finished.</i></div>
+<p><br />
+In this tab, you see a quick permissions table, with options to edit the full permissions for that user group. This allows you to edit permissions quickly, or go in-depth and manage all of the permissions for each user group, all from the same location.
+</p>
+
+<p>Quick permissions allow you to quickly edit the basic forum permissions for all user groups. You can set quick permissions when adding a forum or edit them when editing a forum's settings, in addition to managing them from the View Forum page.
+</p>
+<dl><dt>Can View&#160;</dt><dd> Can the group see the forum? If this is disabled, all other permissions do not need to be set.
+</dd><dt>Can Post Threads&#160;</dt><dd> Can the group post new threads in the forum?
+</dd><dt>Can Post Replies&#160;</dt><dd> Can the group post replies in existing threads in the forum?
+</dd><dt>Can Post Polls&#160;</dt><dd> Can the group post polls in the forum?
+</dd><dt>Can Upload Attachments&#160;</dt><dd> Should the group be allowed to upload file attachments in this forum?
+</dd><dt>All&#160;</dt><dd> This will select all permissions, setting all to "Yes"
+</dd></dl>
+<p>You can also "Use Group Default," which will use the standard permissions from the user group's settings.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/9/98/ACP_Forum_FullPermissions.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/9/98/ACP_Forum_FullPermissions.png/180px-ACP_Forum_FullPermissions.png" width="180" height="184" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/9/98/ACP_Forum_FullPermissions.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Forum &amp; Posts: Full Permissions</div></div></div>
+
+<p>On the Permissions view from View Forum, you will also see a Controls column, allowing you to set the full permissions (Set Permissions) or edit existing full permissions (Edit Permissions). This will take you a page that offers all permissions for each forum, not just the most commonly used permissions.
+</p>
+<dl><dt>Use Permissions&#160;</dt><dd> Selecting "Use user group permissions or inherit from parent forums" will use any inherited permissions, be it from the parent forum, or user group. Selecting "Use custom permissions (below)" will allow you to set the permissions for this group for this forum only.
+</dd></dl>
+<h4><span class="editsection">[<a href="http://localhost/mediawiki/index.php?title=Admin_CP_Forum_Management&amp;action=edit&amp;section=6" title="Edit section: Viewing">edit</a>]</span> <span class="mw-headline" id="Viewing"> Viewing </span></h4>
+<dl><dt>Can view forum&#160;</dt><dd> Should users of this group be able to view this forum?
+</dd><dt>Can view threads within forum&#160;</dt><dd> Should users of this group be able to view the threads within this forum? If set to No, they will be able to see the thread listing, but will not be able to view the thread itself.
+</dd><dt>Can download attachments&#160;</dt><dd> Should users of this group be able to download attachments posted in this forum?
+</dd></dl>
+<h4><span class="editsection">[<a href="http://localhost/mediawiki/index.php?title=Admin_CP_Forum_Management&amp;action=edit&amp;section=7" title="Edit section: Posting/Rating">edit</a>]</span> <span class="mw-headline" id="Posting.2FRating"> Posting/Rating </span></h4>
+<dl><dt>Can post threads&#160;</dt><dd> Should users of this group be able to post threads in this forum?
+</dd><dt>Can post replies&#160;</dt><dd> Should users of this group be able to post replies in this forum?
+</dd><dt>Can post attachments&#160;</dt><dd> Should users of this group be able to upload attachments in this forum?
+</dd><dt>Can rate threads&#160;</dt><dd> Should users of this group be able to rate threads in this forum?
+</dd></dl>
+<h4><span class="editsection">[<a href="http://localhost/mediawiki/index.php?title=Admin_CP_Forum_Management&amp;action=edit&amp;section=8" title="Edit section: Editing">edit</a>]</span> <span class="mw-headline" id="Editing"> Editing </span></h4>
+<dl><dt>Can edit own posts&#160;</dt><dd> Should users of this group be able to edit their own posts in this forum?
+</dd><dt>Can delete own posts&#160;</dt><dd> Should users of this group be able to delete their own posts in this forum?
+</dd><dt>Can delete own threads&#160;</dt><dd> Should users of this group be able to delete their own threads in this forum?
+</dd><dt>can edit own attachments&#160;</dt><dd> Should users of this group be able to remove their attachments after posting them in this forum?
+</dd></dl>
+<h4><span class="editsection">[<a href="http://localhost/mediawiki/index.php?title=Admin_CP_Forum_Management&amp;action=edit&amp;section=9" title="Edit section: Polls">edit</a>]</span> <span class="mw-headline" id="Polls"> Polls </span></h4>
+<dl><dt>Can post polls&#160;</dt><dd> Should users of this group be able to post polls in this forum?
+</dd><dt>Can vote in polls&#160;</dt><dd> Should users of this group be able to participate (vote) in polls in this forum?
+</dd></dl>
+<h4><span class="editsection">[<a href="http://localhost/mediawiki/index.php?title=Admin_CP_Forum_Management&amp;action=edit&amp;section=10" title="Edit section: Miscellaneous">edit</a>]</span> <span class="mw-headline" id="Miscellaneous"> Miscellaneous </span></h4>
+<dl><dt>Can search forum&#160;</dt><dd> Should users of this group be able to search for posts or threads in this forum?
+</dd></dl>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/0/02/ACP_Forum_Moderators.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/0/02/ACP_Forum_Moderators.png/180px-ACP_Forum_Moderators.png" width="180" height="102" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/0/02/ACP_Forum_Moderators.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Forum &amp; Posts: Forum Moderators</div></div></div>
+
+<p>In this tab, you can manage the moderators for this forum. You will see a listing of all moderators in that forum, you can edit each moderator's permissions, and add a new moderator.
+</p>
+
+<p>First, enter the username of the moderator you would like to add at the bottom of the moderators tab on the View Forum page. Then, select "Add Moderator." The moderator will be added with default permissions, and you will be taken to a page allowing you to edit the moderator, setting permissions if other than the default. If the default permissions are fine, you can leave this page without saving.
+</p>
+<dl><dt>Can edit posts&#160;</dt><dd> Should this moderator be able to edit other users' posts in the forums they moderate?
+</dd><dt>Can delete posts&#160;</dt><dd> Should this moderator be able to delete other users' posts in the forums they moderate?
+</dd><dt>Can view IPs&#160;</dt><dd> Should this moderator be able to view IPs of users in the forums they moderate?
+</dd><dt>Can open/close threads&#160;</dt><dd> Should this moderator be able to open or close threads in the forums they moderate?
+</dd><dt>Can manage threads (split, move, copy, merge)&#160;</dt><dd> Should this moderator be able to manage threads, including split, move, copy and merge, in the forums they moderate?
+</dd><dt>Can move threads to another forum this user doesn't moderate&#160;</dt><dd> Should this moderator be able to move threads to a forum that they do not moderate (checked), or should they only be able to move threads to forums they moderate (unchecked).
+</dd></dl>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/e/e4/ACP_Forum_Add.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/e/e4/ACP_Forum_Add.png/180px-ACP_Forum_Add.png" width="180" height="468" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/e/e4/ACP_Forum_Add.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Forum &amp; Posts: Add New Forum, with all options shown</div></div></div>
+
+
+<dl><dt>Create a&#160;</dt><dd> Should the forum you create be a forum that users can post in or a category that contains forums?
+</dd><dt>Title&#160;</dt><dd> Name for the forum
+</dd><dt>Description&#160;</dt><dd> Description of the forum to be shown in the forums listings
+</dd><dt>Parent Forum&#160;</dt><dd> Forum this forum should be placed in. If top level category (not sub category), select "None"
+</dd><dt>Display Order&#160;</dt><dd> Display order in relation to other forums in its parent forum (if top level category, in relation to other top level categories).
+</dd></dl>
+
+<p>When adding a forum, the additional forum options are hidden by default, but can be expanded by selecting "Show Additional Options" above the quick permissions, and can be hidden again by selecting "Hide Additional Options." When editing a forum, all options are displayed.
+</p>
+<dl><dt>Forum Link&#160;</dt><dd> This allows you to make this forum a link to another website, rather than a forum you can post in.
+</dd><dt>Forum Password&#160;</dt><dd> To protect the forum further, you can password-protect it.
+</dd></dl>
+
+<dl><dt>Forum is Active&#160;</dt><dd> Should the forum be shown to users?
+</dd><dt>Forum is Open&#160;</dt><dd> Should the forum be open for posting? If unchecked, the forum will be "locked" to all posts, regardless of permissions.
+</dd></dl>
+
+<dl><dt>Moderate New Posts&#160;</dt><dd> Should new posts in this forum be added to the moderation queue?
+</dd><dt>Moderate New Threads&#160;</dt><dd> Should new threads in this forum be added to the moderation queue?
+</dd><dt>Moderate New Attachments&#160;</dt><dd> Should new attachments in this forum be added to the moderation queue?
+</dd><dt>Moderate After Edit&#160;</dt><dd> After editing a post, should it be added to the moderation queue?
+</dd></dl>
+
+<dl><dt>Override User's Selected Style&#160;</dt><dd> Should the selected theme for this forum override the theme the user has selected?
+</dd><dt>Forum-Specific Style&#160;</dt><dd> If other than default, should the forum have a different style/theme?
+</dd></dl>
+
+<dl><dt>Display Method</dt><dd> Should forum rules be shown, and if yes, should they be shown inline or as a link?
+</dd><dt>Title&#160;</dt><dd> If forum rules will be shown, what should the title be?
+</dd><dt>Rules&#160;</dt><dd> If forum rules will be shown, what should they be?
+</dd></dl>
+
+<dl><dt>Default Date Cut&#160;</dt><dd>  What should the default date limit be when viewing forums? Options: Board Default, Last Day, Last 5 Days, Last 10 Days, Last 20 Days, Last 50 Days, Last 75 Days, Last 100 Days, Last Year, The beginning (show all)
+</dd><dt>Default Sort By&#160;</dt><dd> What should the threads be sorted by, by default? Options: Board Default, Thread Subject, Last Post Time, Thread Starter, Thread Creation Time, Thread Rating, Number of Replies, Number of Views
+</dd><dt>Default Sort Order</dt><dd> What should the default sort order be in this forum? Options: Board Default, Ascending (A-Z, 0-9), Descending (Z-A, 9-0)
+</dd></dl>
+
+<dl><dt>Allow HTML&#160;</dt><dd> Should HTML be allowed in posts in this forum? Javascript is automatically removed.
+</dd><dt>Allow MyCode&#160;</dt><dd> Should MyCode be allowed in posts in this forum?
+</dd><dt>Allow Smilies&#160;</dt><dd> Should smilies be shown in posts in this forum?
+</dd><dt>Allow [img] code&#160;</dt><dd> Should images be shown in posts in this forum?
+</dd><dt>Allow Post Icons&#160;</dt><dd> Should post icons be allowed to be used in posts in this forum?
+</dd><dt>Allow Thread Ratings&#160;</dt><dd> Should users be allowed to rate threads (where permissions allow) in this forum?
+</dd><dt>Show in Forum Jump&#160;</dt><dd> Should this forum be shown in the forum jump?
+</dd><dt>Make posts in this forum count towards user post counts&#160;</dt><dd> Should posts in this forum count towards users' post counts? Posts will always count towards the board total, regardless of this setting. If editing this setting, post counts will need to be recounted through Recount &amp; Rebuild to reflect the change.
+</dd></dl>
+
+<div style="background: #FFF6BF;border: 1px solid #FFD324;margin: 10px auto;padding: 10px;"><b>This article or section is outdated.</b>
+<dl><dd> Parts of this article or section have been written for MyBB version 1.4 and is no longer up to date.
+</dd></dl>
+<i>Contributors: Please update the article to reflect the current MyBB version, and remove this template when finished.</i></div>
+<p><br />
+You can manage the quick permissions for a forum from the edit forum page. For more information on quick permissions, see <a href="#Permissions">Permissions</a> above.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/0/05/ACP_Forum_Copy.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/0/05/ACP_Forum_Copy.png/180px-ACP_Forum_Copy.png" width="180" height="213" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/0/05/ACP_Forum_Copy.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Forum &amp; Posts: Copy Forum</div></div></div>
+
+<p>You can copy forum settings or forum permissions to another forum, be it an existing forum or a new forum. You can choose to copy a forum from the Options drop down from the forum listing page, or from the View Forum page.
+</p>
+
+<dl><dt>Source Forum&#160;</dt><dd> What forum should the settings and/or permissions be copied from?
+</dd><dt>Destination Forum&#160;</dt><dd> What forum should the settings and/or permissions be copied to? To copy to an existing forum, select the forum. To copy to a new forum, select "Copy to new forum"
+</dd><dt>Copy Forum Settings and Properties&#160;</dt><dd> Should the forum settings and properties be copied? This does not copy posts, just forum settings.
+</dd><dt>Copy User Group Permissions&#160;</dt><dd> Should forum permissions be copied? If yes, select the user groups to be copied. If no, do not select any user groups.
+</dd></dl>
+
+<p>If copying to a new forum, there are additional settings you must fill out.
+</p>
+<dl><dt>Create a&#160;</dt><dd> Should the forum you create be a forum that users can post in or a category that contains forums?
+</dd><dt>Title&#160;</dt><dd> Name for the forum
+</dd><dt>Description&#160;</dt><dd> Description of the forum to be shown in the forums listings
+</dd><dt>Parent Forum&#160;</dt><dd> Forum this forum should be placed in. If top level category (not sub category), select "None"
+</dd></dl>
+<p><br />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html#Dashboard" title="Admin CP Home">Dashboard</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Preferences" title="Admin CP Home">Preferences</a> - <a href="{{ site.url }}/Admin_CP_Home.html#Version_Check" title="Admin CP Home">Version Check</a> - <a href="{{ site.url }}/Admin_CP_Home.html#MyBB_Credits" title="Admin CP Home">MyBB Credits</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Config_Settings.html" title="Admin CP Config Settings">Settings</a> - <a href="{{ site.url }}/Admin_CP_Config_Banning.html" title="Admin CP Config Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Config_Profile_Fields.html" title="Admin CP Config Profile Fields">Custom Profile Fields</a> - <a href="{{ site.url }}/Admin_CP_Config_Smilies.html" title="Admin CP Config Smilies">Smilies</a> - <a href="{{ site.url }}/Admin_CP_Config_Word_Filters.html" title="Admin CP Config Word Filters">Word Filters</a> - <a href="{{ site.url }}/Admin_CP_Config_MyCode.html" title="Admin CP Config MyCode">MyCode</a> - <a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Languages</a> - <a href="{{ site.url }}/Admin_CP_Config_Post_Icons.html" title="Admin CP Config Post Icons">Post Icons</a> - <a href="{{ site.url }}/Admin_CP_Config_Help_Docs.html" title="Admin CP Config Help Docs">Help Documents</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugins</a> - <a href="{{ site.url }}/Admin_CP_Config_Attachments.html" title="Admin CP Config Attachments">Attachment Types</a> - <a href="{{ site.url }}/Admin_CP_Config_Mod_Tools.html" title="Admin CP Config Mod Tools">Moderator Tools</a> - <a href="{{ site.url }}/Admin_CP_Config_Spiders.html" title="Admin CP Config Spiders">Spiders/Bots</a> - <a href="{{ site.url }}/Admin_CP_Config_Calendars.html" title="Admin CP Config Calendars">Calendars</a> - <a href="{{ site.url }}/Admin_CP_Config_Warning_System.html" title="Admin CP Config Warning System">Warning System</a> - <a href="{{ site.url }}/Admin_CP_Config_Thread_Prefixes.html" title="Admin CP Config Thread Prefixes">Thread Prefixes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><strong class="selflink">Forum Management</strong> - <a href="{{ site.url }}/Admin_CP_Forum_Announcements.html" title="Admin CP Forum Announcements">Forum Announcements</a> - <a href="{{ site.url }}/Admin_CP_Moderation_Queue.html" title="Admin CP Moderation Queue">Moderation Queue</a> - <a href="{{ site.url }}/Admin_CP_Forum_Attachments.html" title="Admin CP Forum Attachments">Attachments</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Users.html" title="Admin CP Users">Users</a> - <a href="{{ site.url }}/Admin_CP_Groups.html" title="Admin CP Groups">Groups</a> - <a href="{{ site.url }}/Admin_CP_User_Titles.html" title="Admin CP User Titles">User Titles</a> - <a href="{{ site.url }}/Admin_CP_User_Banning.html" title="Admin CP User Banning">Banning</a> - <a href="{{ site.url }}/Admin_CP_Admin_Perms.html" title="Admin CP Admin Perms">Admin Permissions</a> - <a href="{{ site.url }}/Admin_CP_Mass_Mail.html" title="Admin CP Mass Mail">Mass Mail</a> - <a href="{{ site.url }}/Admin_CP_Group_Promotions.html" title="Admin CP Group Promotions">Group Promotions</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_System_Health.html" title="Admin CP System Health">System Health</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Cache_Manager" title="Admin CP Tools">Cache Manager</a> - <a href="{{ site.url }}/Admin_CP_Task_Manager.html" title="Admin CP Task Manager">Task Manager</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Recount_and_Rebuild" title="Admin CP Tools">Recount and Rebuild</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#PHP_Info" title="Admin CP Tools">PHP Info</a> - <a href="{{ site.url }}/Admin_CP_Backups.html" title="Admin CP Backups">Database Backups</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#Optimize_Database" title="Admin CP Tools">Optimize Database</a> - <a href="{{ site.url }}/Admin_CP_Tools.html#File_Verification" title="Admin CP Tools">File Verification</a> - <a href="{{ site.url }}/Admin_CP_Admin_Logs.html" title="Admin CP Admin Logs">Administrator Log</a> - <a href="{{ site.url }}/Admin_CP_Mod_Logs.html" title="Admin CP Mod Logs">Moderator Log</a> - <a href="{{ site.url }}/Admin_CP_User_Email_Logs.html" title="Admin CP User Email Logs">User Email Log</a> - <a href="{{ site.url }}/Admin_CP_System_Mail_Logs.html" title="Admin CP System Mail Logs">System Mail Log</a> - <a href="{{ site.url }}/Admin_CP_User_Warning_Logs.html" title="Admin CP User Warning Logs">User Warning Log</a> - <a href="{{ site.url }}/Admin_CP_Statistics.html" title="Admin CP Statistics">Statistics</a>
+</td></tr></table>
+</div>
+
+
+
+

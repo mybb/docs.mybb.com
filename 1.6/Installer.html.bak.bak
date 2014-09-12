@@ -1,0 +1,212 @@
+---
+layout: page
+title: Installer
+permalink: Installer.html
+---
+
+<div style="float:right; border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px; margin-left: 15px;">
+<div style="text-align: center; font-size: 110%; margin-bottom: 5px;"><b><a href="{{ site.url }}/Installing.html" title="Installing">Installation Guide</a></b></div>
+<div style="border: 1px solid #ddd; background: #fff; padding: 5px; font-size: 90%;">
+<b>Preparation</b><ol style="margin: 0;">
+<li><a href="{{ site.url }}/Upload_Files.html" title="Upload Files">Uploading Files</a></li>
+<li><a href="{{ site.url }}/CHMOD_Files.html" title="CHMOD Files">CHMOD Files</a></li></ol>
+<b>Installer</b><ol start="3" style="margin: 0;">
+<li><a href="{{ site.url }}/Installer.html#Welcome" title="Installer">Welcome</a></li>
+<li><a href="{{ site.url }}/Installer.html#License_Agreement" title="Installer">License Agreement</a></li>
+<li><a href="{{ site.url }}/Installer.html#Requirements_Check" title="Installer">Requirements Check</a></li>
+<li><a href="{{ site.url }}/Installer.html#Database_Configuration" title="Installer">Database Configuration</a></li>
+<li><a href="{{ site.url }}/Installer.html#Table_Creation" title="Installer">Table Creation</a></li>
+<li><a href="{{ site.url }}/Installer.html#Data_Insertion" title="Installer">Data Insertion</a></li>
+<li><a href="{{ site.url }}/Installer.html#Theme_Installation" title="Installer">Theme Installation</a></li>
+<li><a href="{{ site.url }}/Installer.html#Board_Configuration" title="Installer">Board Configuration</a></li>
+<li><a href="{{ site.url }}/Installer.html#Administrator_User" title="Installer">Administrator User</a></li>
+<li><a href="{{ site.url }}/Installer.html#Finish_Setup" title="Installer">Finish Setup</a></li></ol>
+</div>
+</div>
+<p>This page outlines the pages of the MyBB installer.  The pages that require user input are on separate pages with more details.
+</p><p>The installer is found in the "install" directory within the MyBB folder.  For example, if your forum is located at: <a rel="nofollow" class="external free" href="http://www.example.com/forum/">http://www.example.com/forum/</a> , you will find your installer at <a rel="nofollow" class="external free" href="http://www.example.com/forum/install/">http://www.example.com/forum/install/</a>.  If you are unable to find the installer, please recheck that you have uploaded your files in the correct location (consult your web host to check).
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/2/29/Install_welcome.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/2/29/Install_welcome.png/180px-Install_welcome.png" width="180" height="113" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/2/29/Install_welcome.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Installer: Welcome</div></div></div>
+<h2> <span class="mw-headline" id="Welcome"> Welcome </span></h2>
+<p>This page welcomes you to the installer. All you need to do on this page is click the "Next" button.
+<br style="clear:both" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="text-align: left;"> <b><a href="{{ site.url }}/CHMOD_Files.html" title="CHMOD Files">&#171; CHMOD Files</a></b>
+</td>
+<td style="text-align: right;"><b><a href="#License_Agreement">License Agreement &#187;</a></b>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/d/d3/Install_license.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/d/d3/Install_license.png/180px-Install_license.png" width="180" height="156" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/d/d3/Install_license.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Installer: License Agreement</div></div></div>
+<h2> <span class="mw-headline" id="License_Agreement"> License Agreement </span></h2>
+<p>You must read and agree to the <a href="{{ site.url }}/License.html" title="License">license agreement</a> before you can install MyBB. You must adhere to the license agreement at all times while the board is installed. After reading the agreement, click the "Next" button on this page.
+<br style="clear:both" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="text-align: left;"> <b><a href="#Welcome">&#171; Welcome</a></b>
+</td>
+<td style="text-align: right;"><b><a href="#Requirements_Check">Requirements Check &#187;</a></b>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/f/fa/Install_requirements.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/f/fa/Install_requirements.png/180px-Install_requirements.png" width="180" height="149" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/f/fa/Install_requirements.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Installer: Requirements Check</div></div></div>
+<h2> <span class="mw-headline" id="Requirements_Check"> Requirements Check </span></h2>
+<p>This page checks that your server meets the <a href="{{ site.url }}/Requirements.html" title="Requirements">requirements</a> for running MyBB. If it does not, you will be notified on this page. If everything is working correctly, all you need to do is click on the "Next" button on this page.
+<br style="clear:both" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="text-align: left;"> <b><a href="#License_Agreement">&#171; License Agreement</a></b>
+</td>
+<td style="text-align: right;"><b><a href="#Database_Configuration">Database Configuration &#187;</a></b>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/1/1e/Install_database.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/1/1e/Install_database.png/180px-Install_database.png" width="180" height="155" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/1/1e/Install_database.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Installer: Database Configuration</div></div></div>
+<h2> <span class="mw-headline" id="Database_Configuration"> Database Configuration </span></h2>
+<p>This page is for the configuration of your database. If you have javascript enabled, only fields relevant to your selected engine will be displayed. Below is an explanation of each field:
+</p>
+<dl><dt>Database Engine</dt><dd> This is the engine that you wish to use. At most, the options available will be MySQL, MySQL Improved, SQLite 3, or PgSQL. Most likely, there is only MySQL or something similar, so this should be the right choice for you. If you have the option between MySQL and MySQL Improved, usually the Improved is the better choice.
+</dd><dt>Database Host</dt><dd> This is the server where the database is. Unless told otherwise by your host, this should be localhost. <i>This option is not necessary for SQLite installations.</i>
+</dd><dt>Database Username</dt><dd> This is the username you created or you use to access your database for MyBB. <i>This option is not necessary for SQLite installations.</i>
+</dd><dt>Database Password</dt><dd> This is the password for the database username that you entered. <i>This option is not necessary for SQLite installations.</i>
+</dd><dt>Database Name</dt><dd> This is the name of the database that you would like MyBB to install to. <i>This option is not necessary for SQLite installations.</i>
+</dd><dt>Database Path&#160;</dt><dd> This is the path where you want to save the SQLite file. <i>This option is only necessary if you have selected '</i><b>SQLite 3</b>
+</dd><dt>Table Prefix</dt><dd> This is the prefix for the tables in the database. Unless you already have a MyBB installation in the database you entered with the prefix mybb_, you should leave this how it is. If you do already have a MyBB installation in the database, you should change it to something else.
+</dd></dl>
+<p>Once you have entered the details <b>correctly</b>, you should click on the "Next" button on the page. If the installer cannot access the database, you will be told so, meaning you did not enter one (or more) of the details correctly.
+</p><p>If you are having trouble with this step, contact your webhost to see what is the correct host/username/password to use.  This usually can be found in your host's control panel (eg. cPanel, Ensim, DirectAdmin, Plesk) or by contacting your web host's support.
+<br style="clear:both" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="text-align: left;"> <b><a href="{{ site.url }}/Installer.html#Requirements_Check" title="Installer">&#171; Requirements Check</a></b>
+</td>
+<td style="text-align: right;"><b><a href="{{ site.url }}/Installer.html#Table_Creation" title="Installer">Table Creation &#187;</a></b>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/1/1b/Install_tables.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/1/1b/Install_tables.png/180px-Install_tables.png" width="180" height="305" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/1/1b/Install_tables.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Installer: Table Creation</div></div></div>
+<h2> <span class="mw-headline" id="Table_Creation"> Table Creation </span></h2>
+<p>In this step, the database tables are inserted.  No user input is needed on this page, so click the "Next" button when it appears. This page may take several moments to load, so please be patient while it does and inserts the database tables.
+<br style="clear:both" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="text-align: left;"> <b><a href="#Database_Configuration">&#171; Database Configuration</a></b>
+</td>
+<td style="text-align: right;"><b><a href="#Data_Insertion">Data Insertion &#187;</a></b>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/8/8d/Install_data.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/8/8d/Install_data.png/180px-Install_data.png" width="180" height="79" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/8/8d/Install_data.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Installer: Data Insertion</div></div></div>
+<h2> <span class="mw-headline" id="Data_Insertion"> Data Insertion </span></h2>
+<p>In this step, the default data is inserted into the database tables created above. No user input is needed on this page, so click the "Next" button when it appears.
+<br style="clear:both" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="text-align: left;"> <b><a href="#Table_Creation">&#171; Table Creation</a></b>
+</td>
+<td style="text-align: right;"><b><a href="#Theme_Installation">Theme Installation &#187;</a></b>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/3/32/Install_theme.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/3/32/Install_theme.png/180px-Install_theme.png" width="180" height="79" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/3/32/Install_theme.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Installer: Theme Installation</div></div></div>
+<h2> <span class="mw-headline" id="Theme_Installation"> Theme Installation </span></h2>
+<p>The theme data is loaded into the forum at this point.  No user input is needed on this page, so click the "Next" button when it appears.
+<br style="clear:both" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="text-align: left;"> <b><a href="#Data_Insertion">&#171; Data Insertion</a></b>
+</td>
+<td style="text-align: right;"><b><a href="#Board_Configuration">Board Configuration &#187;</a></b>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/f/fe/Install_board.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/f/fe/Install_board.png/180px-Install_board.png" width="180" height="166" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/f/fe/Install_board.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Installer: Board Configuration</div></div></div>
+<h2> <span class="mw-headline" id="Board_Configuration"> Board Configuration </span></h2>
+<p>These are <a href="{{ site.url }}/Admin_CP_Board_Settings.html" title="Admin CP Board Settings">settings</a> that are critical to running your board. MyBB tries to fill these settings with the correct value; however, you should double check to make sure these settings are set properly.
+</p>
+<dl><dt>Forum Name</dt><dd> This is the name of the forums that you are installing. By default, it is "Forums"
+</dd><dt>Forum URL</dt><dd> This is the URL to your forums. This should be filled in automatically, but it is always good to make sure that the URL is correct. <span style="color:red">Remember that there should <b>not</b> be a trailing slash</span>
+</dd><dt>Website Name</dt><dd> This is the name of your website (if you have one). This setting is for the "Your Website" link at the bottom of the forums. The name is simply the text that you wish to use for the your website link.
+</dd><dt>Website URL</dt><dd> This is the URL to your website (if you have one). If you do not have a website, you can either leave it blank or enter your forums URL.
+</dd><dt>Cookie Domain</dt><dd> This is the domain for the cookie to be set to. <i>In versions 1.4 and later, this field is pre-filled with the appropriate data.</i> (See <a href="{{ site.url }}/Cookies.html" title="Cookies">Cookies</a>)
+</dd><dt>Cookie Path</dt><dd> This is the path for the cookie to be set to. If you have more than one MyBB installation on the domain, it is recommended that you change this to the path to your forum (for instance, <b>/forums/</b>). <i>In versions 1.4 and later, this field is pre-filled with the appropriate data.</i> (See <a href="{{ site.url }}/Cookies.html" title="Cookies">Cookies</a>)
+</dd><dt>Contact Email</dt><dd> This is your email address that your members can contact you by via the "Contact Us" link at the bottom of your forum. This is also the forum webmaster's email that will be used when the forum sends emails.
+</dd></dl>
+<p><br style="clear:both" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="text-align: left;"> <b><a href="#Theme_Installation">&#171; Installation Guide</a></b>
+</td>
+<td style="text-align: right;"><b><a href="#Administrator_User">Administrator User &#187;</a></b>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/4/4a/Install_admin.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/4/4a/Install_admin.png/180px-Install_admin.png" width="180" height="157" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/4/4a/Install_admin.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Installer: Administrator User</div></div></div>
+<h2> <span class="mw-headline" id="Administrator_User"> Administrator User </span></h2>
+<p>The administrator account is the first account on your forum (identified by the user ID #1).  This account has permissions to all sections in the Admin Control Panel.
+</p>
+<dl><dt>Username</dt><dd> This is the username of the administrator account that you are creating.
+</dd><dt>Password and Retype Password</dt><dd> This is the password for the administrator account. Be sure to type it in correctly in both fields.
+</dd><dt>Email Address</dt><dd> This is the email address that the administrator account will be created with.
+</dd></dl>
+<p><br style="clear:both" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="text-align: left;"> <b><a href="#Board_Configuration">&#171; Board Configuration</a></b>
+</td>
+<td style="text-align: right;"><b><a href="#Finish_Setup">Finish Setup &#187;</a></b>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/9/95/Install_finish.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/9/95/Install_finish.png/180px-Install_finish.png" width="180" height="148" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/9/95/Install_finish.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Installer: Finish Setup</div></div></div>
+<h2> <span class="mw-headline" id="Finishing_Setup"> Finishing Setup </span></h2>
+<p><b>Congratulations!</b>  If you have reached this page, then you have successfully installed your MyBB. You should remove the /install/ directory from your server now, to prevent anyone else from running the installation again.  MyBB will not run unless the installer is locked, or removed.
+</p><p>If you simply wish to lock your MyBB install directory, simply create a new file in the install directory called <b>lock</b>, which will disallow access to the installer/upgrader while it exists.
+<br style="clear:both" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; background: #fff;">
+<tr>
+<td style="text-align: left;"> <b><a href="#Administrator_User">&#171; Administrator User</a></b>
+</td>
+<td style="text-align: right;"><b><a href="{{ site.url }}/Installing.html" title="Installing">Installation Guide Start &#187;</a></b>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+
+
+

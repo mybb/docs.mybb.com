@@ -1,0 +1,236 @@
+---
+layout: page
+title: Database Constants
+permalink: Database_Constants.html
+---
+
+<p>The database class provides a wrapper of most common functions used for database access, and also others which simplify common queries.  All queries performed with the database through the database abstraction layer can be analyzed for the execution time and further optimization.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Available_Methods"><span class="tocnumber">1</span> <span class="toctext">Available Methods</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Commonly_Used"><span class="tocnumber">1.1</span> <span class="toctext">Commonly Used</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#.24db-.3Equery"><span class="tocnumber">1.1.1</span> <span class="toctext">$db-&gt;query</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#.24db-.3Ewrite_query"><span class="tocnumber">1.1.2</span> <span class="toctext">$db-&gt;write_query</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#.24db-.3Esimple_select"><span class="tocnumber">1.1.3</span> <span class="toctext">$db-&gt;simple_select</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#.24db-.3Efetch_array"><span class="tocnumber">1.1.4</span> <span class="toctext">$db-&gt;fetch_array</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#.24db-.3Efetch_field"><span class="tocnumber">1.1.5</span> <span class="toctext">$db-&gt;fetch_field</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#.24db-.3Enum_rows"><span class="tocnumber">1.1.6</span> <span class="toctext">$db-&gt;num_rows</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#.24db-.3Einsert_id"><span class="tocnumber">1.1.7</span> <span class="toctext">$db-&gt;insert_id</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#.24db-.3Einsert_query"><span class="tocnumber">1.1.8</span> <span class="toctext">$db-&gt;insert_query</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#.24db-.3Eupdate_query"><span class="tocnumber">1.1.9</span> <span class="toctext">$db-&gt;update_query</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#.24db-.3Edelete_query"><span class="tocnumber">1.1.10</span> <span class="toctext">$db-&gt;delete_query</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#.24db-.3Eescape_string"><span class="tocnumber">1.1.11</span> <span class="toctext">$db-&gt;escape_string</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Others"><span class="tocnumber">1.2</span> <span class="toctext">Others</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#.24db-.3Econnect"><span class="tocnumber">1.2.1</span> <span class="toctext">$db-&gt;connect</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#.24db-.3Eselect_db"><span class="tocnumber">1.2.2</span> <span class="toctext">$db-&gt;select_db</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#.24db-.3Eexplain_query"><span class="tocnumber">1.2.3</span> <span class="toctext">$db-&gt;explain_query</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#.24db-.3Edata_seek"><span class="tocnumber">1.2.4</span> <span class="toctext">$db-&gt;data_seek</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#.24db-.3Eclose"><span class="tocnumber">1.2.5</span> <span class="toctext">$db-&gt;close</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#.24db-.3Eerrno"><span class="tocnumber">1.2.6</span> <span class="toctext">$db-&gt;errno</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#.24db-.3Eerror"><span class="tocnumber">1.2.7</span> <span class="toctext">$db-&gt;error</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#.24db-.3Edberror"><span class="tocnumber">1.2.8</span> <span class="toctext">$db-&gt;dberror</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#.24db-.3Eaffected_rows"><span class="tocnumber">1.2.9</span> <span class="toctext">$db-&gt;affected_rows</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#.24db-.3Enum_fields"><span class="tocnumber">1.2.10</span> <span class="toctext">$db-&gt;num_fields</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#.24db-.3Elist_tables"><span class="tocnumber">1.2.11</span> <span class="toctext">$db-&gt;list_tables</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#.24db-.3Etable_exists"><span class="tocnumber">1.2.12</span> <span class="toctext">$db-&gt;table_exists</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#.24db-.3Efield_exists"><span class="tocnumber">1.2.13</span> <span class="toctext">$db-&gt;field_exists</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#.24db-.3Eshutdown_query"><span class="tocnumber">1.2.14</span> <span class="toctext">$db-&gt;shutdown_query</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#.24db-.3Eselect_query"><span class="tocnumber">1.2.15</span> <span class="toctext">$db-&gt;select_query</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="#.24db-.3Eget_version"><span class="tocnumber">1.2.16</span> <span class="toctext">$db-&gt;get_version</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#.24db-.3Eoptimize_table"><span class="tocnumber">1.2.17</span> <span class="toctext">$db-&gt;optimize_table</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#.24db-.3Eanalyze_table"><span class="tocnumber">1.2.18</span> <span class="toctext">$db-&gt;analyze_table</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#.24db-.3Eshow_create_table"><span class="tocnumber">1.2.19</span> <span class="toctext">$db-&gt;show_create_table</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#.24db-.3Eshow_fields_from"><span class="tocnumber">1.2.20</span> <span class="toctext">$db-&gt;show_fields_from</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#.24db-.3Eis_fulltext"><span class="tocnumber">1.2.21</span> <span class="toctext">$db-&gt;is_fulltext</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#.24db-.3Esupports_fulltext"><span class="tocnumber">1.2.22</span> <span class="toctext">$db-&gt;supports_fulltext</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="#.24db-.3Esupports_fulltext_boolean"><span class="tocnumber">1.2.23</span> <span class="toctext">$db-&gt;supports_fulltext_boolean</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#.24db-.3Ecreate_fulltext_index"><span class="tocnumber">1.2.24</span> <span class="toctext">$db-&gt;create_fulltext_index</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#.24db-.3Edrop_index"><span class="tocnumber">1.2.25</span> <span class="toctext">$db-&gt;drop_index</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+
+
+
+<p>Executes an SQL query with your database. Notice that the write_query method is now preferred.
+</p>
+
+<p>Similar to the query method, except write_query executes the query on the slave database in case you happen to have a multi-database server setup. Write_query is now preferred over query. For more information, see the following post from Pirata Nervo: <a rel="nofollow" class="external free" href="http://community.mybb.com/post-559029.html#pid559029">http://community.mybb.com/post-559029.html#pid559029</a>
+</p>
+
+<p>See <a href="{{ site.url }}/Simple_Select.html" title="Simple Select">Simple Select</a>.
+</p>
+
+<p>Returns an array of values for the first row (can be iterated through with a while statement)
+</p><p>Example:<br />
+<br />
+$query=$db-&gt;query("SELECT * FROM Table [WHERE Field='Value']");<br />
+while($result=$db-&gt;fetch_array($query))<br />
+{<br />
+&#160;&#160;&#160;$data1=$result['FieldName1'];<br />
+&#160;&#160;&#160;$data2=$result['FieldName2'];<br />
+&#160;&#160;(etc.)<br />
+}<br />
+</p>
+
+<p>See <a href="{{ site.url }}/Fetch_Field.html" title="Fetch Field">Fetch_Field</a>.
+</p>
+
+<p>Returns the number of rows in the query
+</p>
+
+<p>Returns the insert id (The id of the primary key) of the insert query just run
+</p>
+
+<p>Runs an insert query on a table in a database.
+Receive two parameters:
+</p>
+<ol><li> string - The table name to perform the query on.
+</li><li> array - An array of fields and their values.
+</li></ol>
+<p>Build an insert query from the array and executes the query using <a rel="nofollow" class="external text" href="http://wiki.mybb.com/index.php/Database_Methods#.24db-.3Equery">$db-&gt;query</a>
+</p>
+
+<p>Runs an update query on a table in a database. <br />
+parameters: ('table name', 'update array', 'conditional')
+</p>
+
+<p>Used to perform a delete query on a table in a database
+</p>
+
+<p>Replaces addslashes, escapes data before being used in a query
+</p>
+
+
+<p>Connects a new database.
+</p>
+
+<p>Selects the database for the current MySQL Session
+</p>
+
+<p>Helps to explain queries run from on database from the current session for debugging purposes.
+</p>
+
+<p>Moves the internal pointer to the specified column
+</p>
+
+<p>Closes the connection to the currently open database
+</p>
+
+<p>Returns the error number (if any) of the specified query resource
+</p>
+
+<p>Returns the error string (if any) of the specified query resource
+</p>
+
+<p>Outputs an error message (if any) of the specified query resource
+</p>
+
+<p>Returns the amount of affected rows from a "write" query
+</p>
+
+<p>Returns the number of fields of the specified query resource
+</p>
+
+<p>Returns the tables in the current open database
+</p>
+
+<p>Returns true if the specified table exists
+</p>
+
+<p>Returns true if the specified field exists
+</p>
+
+<p>Runs a query thats performed when php is done parsing the file
+</p>
+
+<p>Runs a complex query (join queries). (Note: Depreciated in MyBB 1.4)
+</p>
+
+<p>Returns the version number of the database server being used
+</p>
+
+<p>Runs an optimize query on a table
+</p>
+
+<p>Runs an analyze query on a table
+</p>
+
+<p>Return the "create table" command for a specific table.
+</p>
+
+<p>Show the "show fields from" command for a specific table.
+</p>
+
+<p>Returns whether or not the table contains a fulltext index.
+</p>
+
+<p>Returns whether or not this database engine supports fulltext indexing.
+</p>
+
+<p>Returns whether or not this database engine supports boolean fulltext matching.
+</p>
+
+<p>Creates a fulltext index on the specified column in the specified table with optional index name.
+</p>
+
+<p>Drop an index with the specified name from the specified table
+</p><p><br />
+</p>
+<div style="clear:both;border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Documentation.html" title="Documentation">MyBB Documentation</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Front_End.html" title="Front End">Front End</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Index_Page.html" title="Index Page">Index Page</a> - <a href="{{ site.url }}/Portal.html" title="Portal">Portal</a> - <a href="{{ site.url }}/Forum_Display.html" title="Forum Display">Forum Display</a> - <a href="{{ site.url }}/Thread_Display.html" title="Thread Display">Thread Display</a> - <a href="{{ site.url }}/Posting.html" title="Posting">Posting Threads and Replies</a> - <a href="{{ site.url }}/Searching.html" title="Searching">Searching</a> - <a href="{{ site.url }}/User_CP.html" title="User CP">User CP</a> - <a href="{{ site.url }}/Member_Profile.html" title="Member Profile">Member Profile</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <a href="{{ site.url }}/Calendar.html" title="Calendar">Calendar</a> - <a href="{{ site.url }}/Member_List.html" title="Member List">Member List</a> - <a href="{{ site.url }}/Help_Docs.html" title="Help Docs">Help Docs</a> - <a href="{{ site.url }}/Who_Is_Online.html" title="Who Is Online">Who Is Online</a> - <a href="{{ site.url }}/Lite_Archive_Mode.html" title="Lite (Archive) Mode">Lite (Archive) Mode</a> - <a href="{{ site.url }}/Forum_Team.html" title="Forum Team">Forum Team</a> - <a href="{{ site.url }}/Statistics.html" title="Statistics">Statistics</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/Miscellaneous_Front_End.html" title="Miscellaneous Frontend">Miscellaneous</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Moderating_Options.html" title="Moderating Options">Moderation</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Moderating_Options.html#Normal_Thread_Moderation" title="Moderating Options">Standard Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Thread_Moderation" title="Moderating Options">Inline Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Post_Moderation" title="Moderating Options">Inline Post Moderation</a> - <a href="{{ site.url }}/Warning_System.html" title="Warning System">Warning System</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Mod CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Home</a> - <a href="{{ site.url }}/Mod_CP_Forums_Posts.html" title="Mod CP Forums Posts">Forums and Posts</a> - <a href="{{ site.url }}/Mod_CP_Users.html" title="Mod CP Users">Users</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a> - <a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a> - <a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a> - <a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a> - <a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a> - <a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Templates &amp; Themes</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Images.html" title="Images">Images</a> - <a href="{{ site.url }}/Postbit.html" title="Postbit">Postbit</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a> - <a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Developer</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><strong class="selflink">Database Methods</strong> - <a href="{{ site.url }}/Database_Tables.html" title="Database Tables">Database Tables</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Miscellaneous</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Cookies.html" title="Cookies">Cookies</a> - <a href="{{ site.url }}/UTF8_Setup.html" title="UTF8 Setup">UTF8 Setup</a> - <a href="{{ site.url }}/Admin_CP_Board_Settings.html" title="Admin CP Board Settings">Default Settings</a>
+</td></tr></table>
+</div>
+
+
+

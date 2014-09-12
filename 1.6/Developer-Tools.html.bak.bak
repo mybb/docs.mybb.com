@@ -1,0 +1,23 @@
+---
+layout: page
+title: Developer Tools
+permalink: Developer_Tools.html
+---
+
+<div style="padding: 0.5em; background: #fff; border: 1px solid #ddd; border-top: 0; margin-bottom: 10px;">
+<ul><li> <a href="{{ site.url }}/Database_Methods.html" title="Database Methods">Database Methods</a>
+<ul><li> <a href="{{ site.url }}/Fetch_Field.html" title="Fetch Field">$db-&gt;fetch_field</a>
+</li><li> <a href="{{ site.url }}/Simple_Select.html" title="Simple Select">$db-&gt;simple_select</a>
+</li></ul>
+</li><li> <a href="{{ site.url }}/Database_Tables.html" title="Database Tables">Database Tables</a>
+</li><li> Development Kits
+<ul><li> <a rel="nofollow" class="external text" href="http://community.mybb.com/thread-5273.html">Graphics Development Kit (GDK)</a>
+<ul><li> <a rel="nofollow" class="external text" href="http://mybb.com/download/14/zip">Download GDK</a>
+</li></ul>
+</li></ul>
+</li></ul>
+</div>
+
+
+
+

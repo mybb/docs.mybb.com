@@ -1,0 +1,128 @@
+---
+layout: page
+title: Features
+permalink: Features.html
+---
+
+<p>Below is a brief outline of some of the highlightable features within a standard installation of MyBB.
+</p>
+<div style="width: 100%; position: relative; clear: both;">
+<div style="width:47%; float:left; display: inline; padding: 6px; margin: 7px 0; background-color: #fefefe; border: 1px solid darkslateblue;">
+
+<ul><li> Unlimited Amounts of Members, Forums, Posts, and Threads
+</li><li> FullText Search Engine (MySQL Versions 4 and over)
+</li><li> Database Table Prefixes
+</li><li> Customizable Administrator Control Panel
+</li><li> Coded in PHP
+</li></ul>
+</div>
+<div style="width:47%; float:right; display: inline; padding: 6px; margin: 7px 0; background-color: #efefef; border: 1px solid darkslateblue;">
+
+<ul><li> Choose a Different Color Scheme, or create your own!
+</li><li> <a href="{{ site.url }}/Admin_CP.html#CP_Preferences" title="Admin CP">Personal Administrative Notepad</a>
+</li><li> <a href="{{ site.url }}/Admin_CP_Board_Settings.html" title="Admin CP Board Settings">Fully Customizable Board via Admin Options</a>
+</li><li> Add, Modify, or Delete your own Admin Options
+</li><li> Make <a href="{{ site.url }}/Admin_CP_Forum_Management.html#Forum_Announcements" title="Admin CP Forum Management">Announcements</a> that show at the top of one or all forums
+</li><li> Add unlimited numbers of <a href="{{ site.url }}/Admin_CP_Forum_Management.html" title="Admin CP Forum Management">Forums</a>
+</li><li> Set different <a href="{{ site.url }}/Admin_CP_Forum_Management.html#Permissions" title="Admin CP Forum Management">usergroup permissions for each forum</a>
+</li><li> <a href="{{ site.url }}/Admin_CP_Moderation_Queue.html" title="Admin CP Moderation Queue">Moderate</a> Threads, Posts, and Attachments
+</li><li> Add Your Own <a href="{{ site.url }}/Admin_CP_Message_Filters.html#Smilie_Manager" title="Admin CP Message Filters" class="mw-redirect">Smilies</a>
+</li><li> Add Your Own <a href="{{ site.url }}/Admin_CP_Post_Icons.html" title="Admin CP Post Icons" class="mw-redirect">Post Icons</a>
+</li><li> Fully Customize your board with different <a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">themes</a> or different colors
+</li><li> Modify the look of your boards via the <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Template System</a>
+</li><li> <a href="{{ site.url }}/Admin_CP_Users.html#Create_New_User" title="Admin CP Users">Add users</a> instantly
+</li><li> <a href="{{ site.url }}/Admin_CP_Users.html#Search_For_Users" title="Admin CP Users">Search</a> through users
+</li><li> <a href="{{ site.url }}/Admin_CP_Users.html#Merge_Users" title="Admin CP Users">Merge</a> Users
+</li><li> <a href="{{ site.url }}/Admin_CP_Users.html#Mass_Email" title="Admin CP Users">Mass Email</a> Users
+</li><li> <a href="{{ site.url }}/Admin_CP_Users.html#Banning" title="Admin CP Users">Ban</a> Users
+</li><li> Add <a href="{{ site.url }}/Admin_CP_Users.html#Custom_Profile_Fields" title="Admin CP Users">Custom Profile Fields</a>
+</li><li> Add more <a href="{{ site.url }}/Admin_CP_Usergroups.html" title="Admin CP Usergroups" class="mw-redirect">Usergroups</a>
+</li><li> Choose what your <a href="{{ site.url }}/Admin_CP_Users.html#Admin_Permissions" title="Admin CP Users">administrators can do</a>
+</li><li> Add custom <a href="{{ site.url }}/Admin_CP_Users.html#User_Titles" title="Admin CP Users">user titles</a> by certain conditions
+</li><li> Prune Members
+</li><li> Prune Threads
+</li><li> <a href="{{ site.url }}/Admin_CP_Attachments.html#Attachments_Manager" title="Admin CP Attachments" class="mw-redirect">Find Attachments</a>
+</li><li> <a href="{{ site.url }}/Admin_CP_Attachments.html#Adding_Attachment_Types" title="Admin CP Attachments" class="mw-redirect">Add attachment types</a>
+</li><li> <a href="{{ site.url }}/Admin_CP_Statistics_And_Logging.html" title="Admin CP Statistics And Logging" class="mw-redirect">Administrator and Moderator Logs</a>
+</li><li> Make Custom <a href="{{ site.url }}/Admin_CP_Help_Docs.html" title="Admin CP Help Docs" class="mw-redirect">F.A.Q. Docs</a>
+</li><li> Run <a href="{{ site.url }}/Admin_CP_Maintenance.html#DB_Maintenance" title="Admin CP Maintenance" class="mw-redirect">Database Maintenence</a>
+</li><li> <a href="{{ site.url }}/Admin_CP_Maintenance.html#Recount_Stats" title="Admin CP Maintenance" class="mw-redirect">Recount Forum Statistics</a>
+</li></ul>
+</div>
+<div style="width:47%; float:left; display: inline; padding: 6px; margin: 7px 0; background-color: #fefefe; border: 1px solid darkslateblue;">
+
+<ul><li> Custom profiles and settings per user.
+</li><li> Complete <a href="{{ site.url }}/User_CP.html" title="User CP">User Control Panel</a>
+</li><li> Completely <a href="{{ site.url }}/Admin_CP_Users.html#Custom_Profile_Fields" title="Admin CP Users">customised profile fields</a>, allowing the creation of more.
+</li><li> Advanced <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messaging</a> system with tracking and multiple folders.
+</li></ul>
+</div>
+<div style="width:47%; float:left; display: inline; padding: 6px; margin: 7px 0; background-color: #fefefe; border: 1px solid darkslateblue;">
+
+<ul><li> Ability to <a href="{{ site.url }}/Attachments.html" title="Attachments">attach</a> multiple files per post.
+</li><li> Thumbnail generation for attached images.
+</li><li> Clickable <a href="{{ site.url }}/Smilies.html" title="Smilies">smilies</a> and <a href="{{ site.url }}/MyCode.html" title="MyCode">MyCode</a>
+</li><li> Thread review in <a href="{{ site.url }}/Posting.html#Full_Reply" title="Posting">Full Reply</a>
+</li><li> <a href="{{ site.url }}/Moderating_Options.html" title="Moderating Options">Quick moderation operations</a> for moderators.
+</li><li> <a href="{{ site.url }}/Subscriptions.html" title="Subscriptions">Email notification of new posts</a>
+</li><li> Creation of <a href="{{ site.url }}/Polls.html" title="Polls">polls</a> with multiple options per thread.
+</li></ul>
+</div>
+<div style="width:47%; float:left; display: inline; padding: 6px; margin: 7px 0; background-color: #fefefe; border: 1px solid darkslateblue;">
+
+<ul><li> Threaded or Linear Thread Viewing Modes
+</li><li> View Printable Version of any thread.
+</li><li> <a href="{{ site.url }}/Subscriptions.html" title="Subscriptions">Subscribe to Threads</a>
+</li><li> Send Threads to Friends
+</li><li> <a href="{{ site.url }}/Posting.html#Quick_Reply" title="Posting">Quick Reply Box</a>
+</li><li> Report Posts to Moderators
+</li></ul>
+</div>
+<div style="width:47%; float:right; display: inline; padding: 6px; margin: 7px 0; background-color: #efefef; border: 1px solid darkslateblue;">
+
+<ul><li> <a href="{{ site.url }}/Who_Is_Online.html" title="Who Is Online">Who's Online List</a>
+</li><li> Fully Customizable F.A.Q.
+</li><li> <a href="{{ site.url }}/Forum_Team.html" title="Forum Team">List of the Forum Moderation Staff</a>
+</li><li> <a href="{{ site.url }}/Member_List.html" title="Member List">Members List</a>
+</li><li> <a href="{{ site.url }}/Statistics.html" title="Statistics">Forum Statistics Page</a>
+</li><li> <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a>
+</li></ul>
+<ul><li> A great experience!
+</li></ul>
+</div>
+<div style="width:47%; float:left; display: inline; padding: 6px; margin: 7px 0; background-color: #fefefe; border: 1px solid darkslateblue;">
+
+<ul><li> Customisable moderators and moderator permissions per forum.
+</li><li> Extensive logging of all actions performed
+</li><li> Open/Close/Stick/Unstick threads
+</li><li> Move or Copy threads
+</li><li> Delete selected posts from within threads
+</li><li> Split and merge threads
+</li><li> Merge selected posts together
+</li><li> <a href="{{ site.url }}/Admin_CP_Moderator_Toolbox.html" title="Admin CP Moderator Toolbox" class="mw-redirect">Custom moderating tools set by the administrator</a>
+</li></ul>
+</div>
+</div>
+<p><br style="clear: both;" />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Introduction.html" title="Introduction">About MyBB</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td><a href="{{ site.url }}/MyBB.html" title="MyBB">What is MyBB?</a> - <a href="{{ site.url }}/License.html" title="License">License</a> - <strong class="selflink">Features</strong> - <a href="{{ site.url }}/Requirements.html" title="Requirements">Requirements</a> - <a href="{{ site.url }}/Installing.html" title="Installing">Installing</a> - <a href="{{ site.url }}/Upgrading.html" title="Upgrading">Upgrading</a> - <a href="{{ site.url }}/MyBB_Team.html" title="MyBB Team">MyBB Team</a>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><strong class="selflink">MyBB Features</strong></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td><a href="{{ site.url }}/{{ site.url }}/Lite_Archive_Mode.html" title="Lite (Archive) Mode">Archive Mode</a> - <a href="{{ site.url }}/Attachments.html" title="Attachments">Attachments</a> - <a href="{{ site.url }}/Multiquote.html" title="Multiquote">Multiquote</a> - <a href="{{ site.url }}/MyCode.html" title="MyCode">MyCode</a> - <a href="{{ site.url }}/Polls.html" title="Polls">Polls</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <a href="{{ site.url }}/Reputation.html" title="Reputation">Reputation</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/SEF_URLS.html" title="SEF URLS">Search Engine Friendly URLs</a> - <a href="{{ site.url }}/Smilies.html" title="Smilies">Smilies</a> - <a href="{{ site.url }}/Subscriptions.html" title="Subscriptions">Subscriptions</a> - <a href="{{ site.url }}/User_Groups.html" title="User Groups">User Groups</a> - <a href="{{ site.url }}/Referrers.html" title="Referrers">User Referrals</a> - <a href="{{ site.url }}/Warning_System.html" title="Warning System">Warning System</a>
+</td></tr></table>
+<div style="text-align: center;"><i>This is obviously not the complete feature list.  See <strong class="selflink">Features</strong>.</i></div>
+</div>
+
+
+
+

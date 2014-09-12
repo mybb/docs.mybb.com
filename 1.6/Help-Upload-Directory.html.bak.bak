@@ -1,0 +1,34 @@
+---
+layout: page
+title: Upload Directory
+permalink: Help-Upload_Directory.html
+---
+
+<p>When uploading your forum data to your webserver, you may have accidentally uploaded the actual "Upload" directory instead of just uploading the contents of that directory. While there is nothing wrong with this, it does give you a strange looking URL, and on Linux webservers, can cause unexpected 404 errors due to the directory name having an uppercase U, and most users typing URLs in pure lowercase.
+</p><p>This page will guide you through removing this extra directory from your forum URL; there are two sections:
+</p>
+<ul><li> The first is for if you have not yet installed MyBB.
+</li><li> The second is for if you have installed MyBB, but would now like to remove the directory.
+</li></ul>
+
+<p>Since your MyBB forum has not yet been installed, the process for removing the directory is simple:
+</p>
+<ol><li> Using your FTP client, select the contents of the "Upload" directory you uploaded previously.
+</li><li> With the contents selected, drag this selection onto the directory you want the contents to appear in, generally  this will be the directory above the "Upload" directory.
+</li><li> Just wait for the files to move and then delete the now empty "Upload" directory from your webserver.
+</li><li> You can now proceed to install your MyBB forum.
+</li></ol>
+
+<p>Because your MyBB forum has been installed, there are a few extra steps that must be completed. The process is still relatively simple:
+</p>
+<ol><li> Go to your forum's Admin Control Panel and set your "Board Closed" setting to "Yes".
+</li><li> Using your FTP client, select the contents of the "Upload" directory you uploaded previously.
+</li><li> With the contents selected, drag this selection onto the directory you want the contents to appear in, generally  this will be the directory above the "Upload" directory.
+</li><li> Wait for the files to move and then delete the now empty "Upload" directory from your webserver.
+</li><li> With this done, go back to your forum's Admin Control Panel (using your new URL - your old URL without the "Upload" part) and set your "Board URL" to reflect the new url. You may also have to change your cookie settings depending on how they were previously set-up.
+</li><li> With that done you can now set your forum's "Board Closed" setting back to "No".
+</li></ol>
+
+
+
+

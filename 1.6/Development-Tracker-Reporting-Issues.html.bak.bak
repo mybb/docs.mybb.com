@@ -1,0 +1,36 @@
+---
+layout: page
+title: Reporting Issues
+permalink: Development_Tracker-Reporting_Issues.html
+---
+
+<p>When you've found an issue with MyBB, head over to the development site, log in and then click on the "New Issue" tab.
+</p><p>There are lots of options that you can select here, but you'll only need a few of them. Here are a few guidelines about what to do when you report a new issue.
+</p>
+<ul><li> Enter a descriptive subject for the issue. Try not to be vague or too ambitious - creating an issue such as <i>Javascript issue</i> isn't great, but writing <i>Javascript issue when creating a new user</i> is pretty much ideal. Writing <i>Javascript issue line 264 general.js in the acp when creating a new user</i> is a bit too much detail(!). The best subject title will describe the problem in a short sentence.
+</li></ul>
+<ul><li> When entering the description of your problem, try to give us as much information as you can. If you can remember how you found the issue (<i>reproduction steps</i>) then please include that too. There is a file upload box too where you can add screenshots if you can. <br /><br />If your problem includes an error message, whether it's something on screen or an SQL error, then please include that too.
+</li></ul>
+<ul><li> The next step is to select a category for the issue. This is normally where you found the problem. Select an area from the list, and if it isn't there, put it as <i>other</i>.
+</li></ul>
+<ul><li> Set the <i>Reproducibility</i> - tell us how often you find this problem.
+</li></ul>
+<ul><li> Set the <i>Reported In MyBB Version</i> - tell us which version of MyBB this problem affects. It affects all versions, select the latest one.
+</li></ul>
+<p>That's all there is to it. Please <b>do not set assignee or target versions</b>, start or due dates and estimated time as these are for the MyBB Team to choose from. Setting these by yourself can mess around with our roadmaps and targets!
+</p><p>If you can provide more details, such as browser, PHP details and database information then please include it - especially if there is an javascript, PHP warning or SQL error in your problem.
+</p><p><br />
+</p>
+<div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Development.html" title="Development">MyBB Development</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Development_Tracker.html" title="Development Tracker">Tracker</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="Development_Tracker-Viewing_Issues" title="Viewing Issues">Viewing Issues</a> - <strong class="selflink">Reporting a New Issue</strong> - <a href="Development_Tracker-Working_on_Issues.html" title="Working on Issues">Working on an Issue</a> - <a href="Development_Tracker-Using_Repository.html" title="Using Repository">Using the Repository</a>
+</td></tr></table>
+</div>
+
+
+
+

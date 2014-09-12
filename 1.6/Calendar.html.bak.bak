@@ -1,0 +1,133 @@
+---
+layout: page
+title: Calendar
+permalink: Calendar.html
+---
+
+<p>The MyBB Calendar allows for multiple calendars featuring various permissions and settings, each of which can have events added to. By default, only one calendar is included. The MyBB Calendar also features multiple views - a monthly, weekly, and daily view, as well as a mini-calendar on the weekly view.
+</p><p>At the bottom of most pages in the calendar, there is a form allowing you to jump to a certain month (in a certain year) and a form allowing you to jump to another calendar (if there is more than one). There are also links allowing you to add a public or private event, if you have the permission.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Main_Page_.28Month_View.29"><span class="tocnumber">1</span> <span class="toctext">Main Page (Month View)</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Week_View"><span class="tocnumber">2</span> <span class="toctext">Week View</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Day_View"><span class="tocnumber">3</span> <span class="toctext">Day View</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Event_View"><span class="tocnumber">4</span> <span class="toctext">Event View</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Adding_.2F_Editing_an_Event"><span class="tocnumber">5</span> <span class="toctext">Adding / Editing an Event</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Event_Date"><span class="tocnumber">5.1</span> <span class="toctext">Event Date</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Main_Page_.28Month_View.29"> Main Page (Month View) </span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/1/15/Calendar.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/1/15/Calendar.png/180px-Calendar.png" width="180" height="201" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/1/15/Calendar.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Monthly View</div></div></div>
+<p>The main page shows you a basic calendar (month, days of the month and week, etc.). If there are events for the day, they will be displayed inside that day's box, along with the number of birthdays on that day (if any, and if enabled). Clicking on the event's name shows you the full event. Clicking on the date (the day of the month) shows you a page listing the birthdays on that day and the events on that day.
+</p><p>Clicking on the <b>&#187;</b> at the left of each row takes you to the week view for that week. See <a href="#Weekly_View">below</a> for more information on the week view.
+</p>
+<h2> <span class="mw-headline" id="Week_View"> Week View </span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/0/09/Calendar_week.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/0/09/Calendar_week.png/180px-Calendar_week.png" width="180" height="130" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/0/09/Calendar_week.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Weekly View</div></div></div>
+<p>The week view shows each day, and all of the events for that day, as well as the number of birthdays on that day (if enabled). For each event, the time span on that day is also given. If you are viewing the current week, the current day is highlighted.
+</p><p>Above the days of the week, the month and year is given. If a new month starts during the week, the first month is listed at the top, and the second month is listed where it begins.
+</p><p>On the right hand side of the weekly view is a mini-calendar for the current month(s). See <a href="#Mini_Calendar">below</a> for more information on the mini calendar.
+</p>
+<h2> <span class="mw-headline" id="Day_View"> Day View </span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/a/aa/Calendar_day.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/a/aa/Calendar_day.png/180px-Calendar_day.png" width="180" height="77" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/a/aa/Calendar_day.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Daily View</div></div></div>
+<p>When viewing a day, you are shown the birthdays (if enabled) and events for the day, if there are any. If there are no events, you are given the option to post an event on that day. Clicking on the "Add Public Event" and "Add Private Event" links at the bottom of the page take you to the Add Event page, with the day you are viewing selected.
+</p><p>If there are events on the selected day, the event is displayed similarly to the Event View page.
+</p>
+<h2> <span class="mw-headline" id="Event_View"> Event View </span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/f/f6/Calendar_event.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/f/f6/Calendar_event.png/180px-Calendar_event.png" width="180" height="65" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/f/f6/Calendar_event.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Event View</div></div></div>
+<p>The event view page displays a specific event. There are several parts to the event view page. These include:
+</p>
+<dl><dt>Name&#160;</dt><dd> The name of the event is displayed at the top of the event.
+</dd><dt>Date range&#160;</dt><dd> Beneath the name is the date range. This can either be a single day or include a start and end dates.
+</dd><dt>Author information&#160;</dt><dd> The username and user title of the poster is displayed below the date range, to the left.
+</dd><dt>Repeating of the event&#160;</dt><dd> Information on how the event repeats is displayed to the right hand side of the author information, if applicable.
+</dd><dt>Moderation Options&#160;</dt><dd> Moderation options, including the option of Moving the event to another calendar or the Unapproving / Approving the event, are displayed above the repetition information, if the user has moderation permissions.
+</dd><dt>Message&#160;</dt><dd> The message is the central part of the event view, and is displayed below the author information.
+</dd><dt>Options&#160;</dt><dd> You can choose to edit or delete the event, if you have the permissions, from the bottoms at the bottom of the event view.
+</dd></dl>
+<h2> <span class="mw-headline" id="Adding_.2F_Editing_an_Event"> Adding / Editing an Event </span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/b/b0/Calendar_add.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/b/b0/Calendar_add.png/180px-Calendar_add.png" width="180" height="123" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/b/b0/Calendar_add.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Add event</div></div></div>
+<p>The add event page is the same for both public and private events, except when adding private events, the "Private" checkbox at the bottom of the form must be checked.
+</p>
+<dl><dt>Event Name&#160;</dt><dd> A name for the event.
+</dd><dt>Calendar&#160;</dt><dd> The calendar this event will be posted in.
+</dd><dt>Event Date&#160;</dt><dd> The day(s) of the event. See <a href="#Event_Date">below</a> for detailed information.
+</dd><dt>Event Details&#160;</dt><dd> The details of the event.
+</dd><dt>Options&#160;</dt><dd> Will this event be a private event (only you can see it)? If so, select the "Private" checkbox.
+</dd></dl>
+<h3> <span class="mw-headline" id="Event_Date"> Event Date </span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/7/71/Calendar_add_ranged.png" class="image"><img alt="" src="{{ site.url }}/images/thumb/7/71/Calendar_add_ranged.png/180px-Calendar_add_ranged.png" width="180" height="35" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/7/71/Calendar_add_ranged.png" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Ranged or recurring options</div></div></div>
+<p>If the event will be a single day event, select "Single Day Event" and select the day it will occur.
+</p><p>To make the event a ranged or recurring event, select "Ranged or recurring event." This will present a range of options.
+</p>
+<ul><li> <b>Starts</b> is the date and time the event will begin.
+</li><li> <b>Finishes</b> is the date and time the event will end.
+</li><li> Beneath this is the time zone these times correspond to, and therefore the time zone the event occurs in. You can also choose to ignore the time zone, and present the times using the viewer's time zone.
+</li><li> <b>Repeats</b> provides repetition options. You can either choose to have the event:
+<ul><li> Not repeat ("<b>Does not repeat</b>")
+</li><li> <b>Repeat daily</b>
+<ul><li> Select how often the event will repeat. Repeating an event every one day will have it occur every day. ("Repeats every ___ day(s)")
+</li></ul>
+</li><li> <b>Repeat every weekday (Mon-Fri)</b>
+</li><li> <b>Weekly</b>
+<ul><li> Select how often the event will repeat ("Repeats every ___ week(s)")
+</li><li> Select the days the event will repeat on (you may choose more than one, just one, or all)
+</li></ul>
+</li><li> <b>Repeat monthly</b>
+<ul><li> Select whether to have the event repeat on a set day every so many months, or repeat on the first, second, third, fourth, or last weekday every so many months
+</li></ul>
+</li><li> <b>Repeat yearly</b>
+<ul><li> Select whether to have the event repeat on a set day, in a set month, every so many years, or repeat on the first, second, third, fourth, or last weekday of a set month every so many years.
+</li></ul>
+</li></ul>
+</li></ul>
+<div style="clear:both;border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Documentation.html" title="Documentation">MyBB Documentation</a></b></div>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Front_End.html" title="Front End">Front End</a></b></td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Index_Page.html" title="Index Page">Index Page</a> - <a href="{{ site.url }}/Portal.html" title="Portal">Portal</a> - <a href="{{ site.url }}/Forum_Display.html" title="Forum Display">Forum Display</a> - <a href="{{ site.url }}/Thread_Display.html" title="Thread Display">Thread Display</a> - <a href="{{ site.url }}/Posting.html" title="Posting">Posting Threads and Replies</a> - <a href="{{ site.url }}/Searching.html" title="Searching">Searching</a> - <a href="{{ site.url }}/User_CP.html" title="User CP">User CP</a> - <a href="{{ site.url }}/Member_Profile.html" title="Member Profile">Member Profile</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <strong class="selflink">Calendar</strong> - <a href="{{ site.url }}/Member_List.html" title="Member List">Member List</a> - <a href="{{ site.url }}/Help_Docs.html" title="Help Docs">Help Docs</a> - <a href="{{ site.url }}/Who_Is_Online.html" title="Who Is Online">Who Is Online</a> - <a href="{{ site.url }}/Lite_Archive_Mode.html" title="Lite (Archive) Mode">Lite (Archive) Mode</a> - <a href="{{ site.url }}/Forum_Team.html" title="Forum Team">Forum Team</a> - <a href="{{ site.url }}/Statistics.html" title="Statistics">Statistics</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/Miscellaneous_Front_End.html" title="Miscellaneous Frontend">Miscellaneous</a></td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Moderating_Options.html" title="Moderating Options">Moderation</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Moderating_Options.html#Normal_Thread_Moderation" title="Moderating Options">Standard Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Thread_Moderation" title="Moderating Options">Inline Thread Moderation</a> - <a href="{{ site.url }}/Moderating_Options.html#Inline_Post_Moderation" title="Moderating Options">Inline Post Moderation</a> - <a href="{{ site.url }}/Warning_System.html" title="Warning System">Warning System</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Mod CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Mod_CP.html" title="Mod CP">Home</a> - <a href="{{ site.url }}/Mod_CP_Forums_Posts.html" title="Mod CP Forums Posts">Forums and Posts</a> - <a href="{{ site.url }}/Mod_CP_Users.html" title="Mod CP Users">Users</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Admin_CP.html" title="Admin CP">Admin CP</a></b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Admin_CP_Home.html" title="Admin CP Home">Home</a> - <a href="{{ site.url }}/Admin_CP_Config.html" title="Admin CP Config">Configuration</a> - <a href="{{ site.url }}/Admin_CP_Forums_Posts.html" title="Admin CP Forums Posts">Forums &amp; Posts</a> - <a href="{{ site.url }}/Admin_CP_Users_Groups.html" title="Admin CP Users Groups">Users &amp; Groups</a> - <a href="{{ site.url }}/Admin_CP_Templates_Style.html" title="Admin CP Templates Style">Templates &amp; Style</a> - <a href="{{ site.url }}/Admin_CP_Tools.html" title="Admin CP Tools">Tools &amp; Maintenance</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Templates &amp; Themes</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Images.html" title="Images">Images</a> - <a href="{{ site.url }}/Postbit.html" title="Postbit">Postbit</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Templates</a> - <a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Themes</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Developer</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Database_Methods.html" title="Database Methods">Database Methods</a> - <a href="{{ site.url }}/Database_Tables.html" title="Database Tables">Database Tables</a>
+</td></tr></table>
+<table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
+<tr>
+<td style="vertical-align: middle; font-size: 14px;"><b>Miscellaneous</b>
+</td>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Cookies.html" title="Cookies">Cookies</a> - <a href="{{ site.url }}/UTF8_Setup.html" title="UTF8 Setup">UTF8 Setup</a> - <a href="{{ site.url }}/Admin_CP_Board_Settings.html" title="Admin CP Board Settings">Default Settings</a>
+</td></tr></table>
+</div>
+
+
+
+
