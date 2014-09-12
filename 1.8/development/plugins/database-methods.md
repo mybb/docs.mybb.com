@@ -31,7 +31,7 @@ It receives four parameters:
     <dd>SQL formatted list of conditions to be matched.</dd>
 
     <dt>options</dt>
-    <dd>List of options: order by, order direction, limit, limit start. Returns a resource on success, or false on error.</dd>
+    <dd>List of options: group by, order by, order direction, limit, limit start. Returns a resource on success, or false on error.</dd>
 </dl>
 
 ### Example
