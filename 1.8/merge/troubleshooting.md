@@ -12,9 +12,7 @@ Add the following code to your `httpd.conf` and restart Apache:
 
 ```
 <IfModule mpm_winnt_module>
-
    ThreadStackSize 8*1024*1024
-
 </IfModule>
 ```
 

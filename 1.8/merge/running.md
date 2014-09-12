@@ -28,7 +28,7 @@ Backup your MyBB database now, before you do anything else. Then run the merge s
 Before you run the merge system, please close/lock both forums. This is to prevent content and users from being added or removed while you're running the system. This is for your own safety. Once again, please backup the MyBB database before beginning as well. Just in case.
 
 # Running the Merge System Wizard
-If you're experiencing any problems you could reference the [Troubleshooting Page](troubleshooting).
+If you're experiencing any problems you can reference the [Troubleshooting Page](troubleshooting).
 
 -- To Be Added --
 
