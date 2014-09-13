@@ -22,4 +22,4 @@ Open `merge/index.php` and search for: `define("SKIP_ENCODING_DETECTION", 0);` a
 # Attachment Permissions are wrong
 This is most likely caused by a `.htaccess` file which denies access to the attachment directory.
 
--- HowTo find the file --
+Normally the `.htaccess` is located either directly in the attachment directory or in the root of your old file. After you renamed the file you can reload the merge system.

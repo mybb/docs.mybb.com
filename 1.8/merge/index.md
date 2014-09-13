@@ -28,4 +28,4 @@ The MyBB Merge System uses "modules" to take you through the conversion process.
 
 The modules that are included for each forum software vary based on what that forum supports in comparison to MyBB. For instance, not all software have a "calendar" feature, so only those that do have a module that transfers over the calendar events.
 
-See also [Running the merge System](running).
+See also [Running the merge System]({{ site.baseurl }}/merge/running).
