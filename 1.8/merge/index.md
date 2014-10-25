@@ -19,6 +19,7 @@ The following forum software are supported by the MyBB Merge System:
 - SMF 1
 - SMF 2
 - Vanilla
+- vBulletin 3
 - vBulletin 4
 - WoltLab Burning Board 3
 - WoltLab Burning Board 4
