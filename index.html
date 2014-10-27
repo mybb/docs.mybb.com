@@ -11,58 +11,60 @@ categories: [page]
 		</div>
 	</header>
 	<div class="page wrapper">
-		<section>
-			<h1>MyBB 1.8 Documentation</h1>
-
+		<div style="width: 48%; float: left;">
 			<section>
-				<h2>Installation</h2>
-				{% include category.html category="install" %}
+				<h1>MyBB 1.8 Documentation</h1>
 
-				<h2>Merge System</h2>
-				{% include category.html category="merge" %}
+				<section>
+					<h2>Installation</h2>
+					{% include category.html category="install" %}
+
+					<h2>Merge System</h2>
+					{% include category.html category="merge" %}
+				</section>
+
+				<section>
+					<h2>FAQ</h2>
+					{% include category.html category="faq" %}
+				</section>
+
+				<section>
+					<h2>Administration</h2>
+					{% include category.html category="administration" %}
+
+					<h3>Security</h3>
+					{% include category.html category="security" %}
+				</section>
 			</section>
-
 			<section>
-				<h2>Development</h2>
+				<h1>MyBB 1.6 Documentation</h1>
+				
+				<a href="{{ site.baseurl }}/1.6/">View old documentation for 1.6</a>
+			</section>
+		</div>
+		<div style="width: 48%; float: right;">
+			<section>
+				<h1>MyBB Development</h1>
 				{% include category.html category="development" %}
 
-				<h3>Plugins</h3>
+				<h2>Plugin Development</h2>
 				{% include category.html category="plugins" %}
 
-				<h3>Themes</h3>
+				<h2>Theme Development</h2>
 				{% include category.html category="themes" %}
 
-				<h3>Translations</h3>
+				<h2>Translations</h2>
 				{% include category.html category="translations" %}
 				
 				<a name="mods-guide"></a>
-				<h3>Modifications Website</h3>
+				<h2>Modifications Website</h2>
 				{% include category.html category="mods" %}
-			</section>
+			</section>			
 
 			<section>
-				<h2>FAQ</h2>
-				{% include category.html category="faq" %}
+				<h1>MyBB Versions</h1>
+				{% include category.html category="versions" %}
 			</section>
-
-			<section>
-				<h2>Administration</h2>
-				{% include category.html category="administration" %}
-
-				<h3>Security</h3>
-				{% include category.html category="security" %}
-			</section>
-		</section>
-
-		<section>
-			<h1>Versions</h1>
-			{% include category.html category="versions" %}
-		</section>
-
-		<section>
-			<h1>MyBB 1.6 Documentation</h1>
-			
-			<a href="{{ site.baseurl }}/1.6/">View old documentation for 1.6</a>
-		</section>
+		</div>
 	</div>
 </article>
