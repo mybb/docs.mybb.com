@@ -17,6 +17,7 @@ List of all database tables created with a standard MyBB installation that descr
 - mybb_badwords
 - mybb_banfilters
 - mybb_banned
+- mybb_buddyrequests
 - mybb_calendarpermissions
 - mybb_calendars
 - mybb_captcha
@@ -47,13 +48,16 @@ List of all database tables created with a standard MyBB installation that descr
 - mybb_profilefields
 - mybb_promotionlogs
 - mybb_promotions
-- mybb_reportedposts
+- mybb_questions
+- mybb_questionsessions
+- mybb_reportedcontent
 - mybb_reputation
 - mybb_searchlog
 - mybb_sessions
 - mybb_settinggroups
 - mybb_settings
 - mybb_smilies
+- mybb_spamlog
 - mybb_spiders
 - mybb_stats
 - mybb_tasklog
