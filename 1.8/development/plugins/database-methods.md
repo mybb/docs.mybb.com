@@ -145,9 +145,16 @@ Runs an update query on a table in a database.
 
 It receives three parameters:
 
-* the table name
-* an update array
-* the `WHERE` clause
+<dl>
+    <dt>table<dt>
+    <dd>The table name</dd>
+
+    <dt>array</dt>
+    <dd>an update array</dd>
+    
+    <dt>where<dt>
+    <dd>The sql where clause.</dd>
+</dl>
 
 ## `$db->delete_query`
 
