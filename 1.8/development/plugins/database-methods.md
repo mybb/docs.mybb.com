@@ -87,11 +87,29 @@ while($result = $db->fetch_array($query))
 
 ## `$db->fetch_field`
 
-See Fetch_Field.
+Returns the value of the field specified from the resource query.  Receives three parameters:
+
+<dl>
+    <dt>resource</dt>
+    <dd>The resource query.</dd>
+    
+    <dt>field</dt>
+    <dd>The field name to retrieve.</dd>
+    
+    <dt>row</dt>
+    <dd>The row number to get the data from.  Default is current row.</dd>
+</dl>
 
 ## `$db->num_rows`
 
-Returns the number of rows in the query
+Returns the number of rows in the query.  Receives one parameter:
+
+<dl>
+    <dt>resource</dt>
+    <dd>The resource query.</dd>
+</dl>
+
+It is preferable to use a count query then do $db->fetch_field to get this value.
 
 ## `$db->insert_id`
 
@@ -109,6 +127,17 @@ Runs an insert query on a table in a database. Receives two parameters:
     <dd>An array of fields and their values.</dd>
 </dl>
 
+## `$db->insert_query_multiple`
+
+Runs an insert query on a table in the database.  Multiple rows can be inserted with one query. Receives two parameters:
+
+<dl>
+    <dt>string</dt>
+    <dd>The table name to perform the query on.</dd>
+    
+    <dt>array</dt>
+    <dd>A multidimensional array of fields and values.  Each array key for the individual arrays must be the same, even if blank.
+
 ## `$db->update_query`
 
 Runs an update query on a table in a database.
@@ -121,7 +150,18 @@ It receives three parameters:
 
 ## `$db->delete_query`
 
-Used to perform a delete query on a table in a database.
+Used to perform a delete query on a table in a database.  Receives three parameters:
+
+<dl>
+    <dt>string</dt>
+    <dd>The name of the table.</dd>
+    
+    <dt>string</dt>
+    <dd>The where clause.</dd>
+    
+    <dt>limit</dt>
+    <dd>The maximum amount of rows to be deleted.  Default is unlimited.</dd>
+</dl>
 
 ## `$db->escape_string`
 
@@ -141,7 +181,15 @@ Helps to explain queries run from on database from the current session for debug
 
 ## `$db->data_seek`
 
-Moves the internal pointer to the specified column.
+Moves the internal pointer to the specified row.  Receives two parameters:
+
+<dl>
+    <dt>resource</dt>
+    <dd>The resource query.</dd>
+    
+    <dt>int</dt>
+    <dd>The row to move the internal pointer to.</dd>
+</dl>
 
 ## `$db->close`
 
