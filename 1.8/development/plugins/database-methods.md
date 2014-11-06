@@ -137,6 +137,7 @@ Runs an insert query on a table in the database.  Multiple rows can be inserted 
     
     <dt>array</dt>
     <dd>A multidimensional array of fields and values.  Each array key for the individual arrays must be the same, even if blank.
+</dl>
 
 ## `$db->update_query`
 
@@ -153,10 +154,10 @@ It receives three parameters:
 Used to perform a delete query on a table in a database.  Receives three parameters:
 
 <dl>
-    <dt>string</dt>
+    <dt>table</dt>
     <dd>The name of the table.</dd>
     
-    <dt>string</dt>
+    <dt>where</dt>
     <dd>The where clause.</dd>
     
     <dt>limit</dt>
