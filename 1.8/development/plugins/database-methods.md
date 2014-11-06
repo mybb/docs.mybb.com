@@ -136,7 +136,7 @@ Runs an insert query on a table in the database.  Multiple rows can be inserted 
     <dd>The table name to perform the query on.</dd>
     
     <dt>array</dt>
-    <dd>A multidimensional array of fields and values.  Each array key for the individual arrays must be the same, even if blank.
+    <dd>A multidimensional array of fields and values.  Each array key for the individual arrays must be the same, even if blank.</dd>
 </dl>
 
 ## `$db->update_query`
