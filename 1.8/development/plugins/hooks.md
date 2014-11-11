@@ -20,22 +20,22 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>admin_form_output_submit_wrapper</td>
 		<td>$buttons</td>
-		<td>837</td>
+		<td>849</td>
 	</tr>
 	<tr>
 		<td>admin_form_end</td>
 		<td>$this</td>
-		<td>862</td>
+		<td>874</td>
 	</tr>
 	<tr>
 		<td>admin_formcontainer_output_row</td>
 		<td>$pluginargs</td>
-		<td>929</td>
+		<td>941</td>
 	</tr>
 	<tr>
 		<td>admin_formcontainer_end</td>
 		<td>$hook</td>
-		<td>1031</td>
+		<td>1043</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> admin/inc/class_page.php</th>
@@ -533,9 +533,19 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 		<td>Line</td>
 	</tr>
 	<tr>
+		<td>admin_config_menu</td>
+		<td>$sub_menu</td>
+		<td>40</td>
+	</tr>
+	<tr>
 		<td>admin_config_action_handler</td>
 		<td>$actions</td>
 		<td>73</td>
+	</tr>
+	<tr>
+		<td>admin_config_permissions</td>
+		<td>$admin_permissions</td>
+		<td>111</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> admin/modules/config/mycode.php</th>
@@ -1120,67 +1130,67 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>admin_config_warning_add_level_commit</td>
 		<td></td>
-		<td>92</td>
+		<td>97</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_edit_level</td>
 		<td></td>
-		<td>213</td>
+		<td>218</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_edit_level_commit</td>
 		<td></td>
-		<td>254</td>
+		<td>264</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_delete_level</td>
 		<td></td>
-		<td>415</td>
+		<td>425</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_delete_level_commit</td>
 		<td></td>
-		<td>422</td>
+		<td>432</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_add_type</td>
 		<td></td>
-		<td>438</td>
+		<td>448</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_add_type_commit</td>
 		<td></td>
-		<td>462</td>
+		<td>472</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_edit_type</td>
 		<td></td>
-		<td>526</td>
+		<td>536</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_edit_type_commit</td>
 		<td></td>
-		<td>548</td>
+		<td>558</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_delete_type</td>
 		<td></td>
-		<td>628</td>
+		<td>638</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_delete_type_commit</td>
 		<td></td>
-		<td>635</td>
+		<td>645</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_levels</td>
 		<td></td>
-		<td>651</td>
+		<td>661</td>
 	</tr>
 	<tr>
 		<td>admin_config_warning_start</td>
 		<td></td>
-		<td>721</td>
+		<td>731</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> admin/modules/forum/announcements.php</th>
@@ -1473,9 +1483,19 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 		<td>Line</td>
 	</tr>
 	<tr>
+		<td>admin_forum_menu</td>
+		<td>$sub_menu</td>
+		<td>27</td>
+	</tr>
+	<tr>
 		<td>admin_forum_action_handler</td>
 		<td>$actions</td>
 		<td>47</td>
+	</tr>
+	<tr>
+		<td>admin_forum_permissions</td>
+		<td>$admin_permissions</td>
+		<td>72</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> admin/modules/home/credits.php</th>
@@ -1542,9 +1562,19 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 		<td>Line</td>
 	</tr>
 	<tr>
+		<td>admin_home_menu</td>
+		<td>$sub_menu</td>
+		<td>26</td>
+	</tr>
+	<tr>
 		<td>admin_home_action_handler</td>
 		<td>$actions</td>
 		<td>55</td>
+	</tr>
+	<tr>
+		<td>admin_home_menu_quick_access</td>
+		<td>$sub_menu</td>
+		<td>68</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> admin/modules/home/preferences.php</th>
@@ -1578,9 +1608,19 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 		<td>Line</td>
 	</tr>
 	<tr>
+		<td>admin_style_menu</td>
+		<td>$sub_menu</td>
+		<td>25</td>
+	</tr>
+	<tr>
 		<td>admin_style_action_handler</td>
 		<td>$actions</td>
 		<td>42</td>
+	</tr>
+	<tr>
+		<td>admin_style_permissions</td>
+		<td>$admin_permissions</td>
+		<td>65</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> admin/modules/style/templates.php</th>
@@ -1921,6 +1961,11 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 		<td></td>
 		<td>155</td>
 	</tr>
+	<tr>
+		<td>admin_tools_get_admin_log_action</td>
+		<td>$plugin_array</td>
+		<td>550</td>
+	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> admin/modules/tools/backupdb.php</th>
 	</tr>
@@ -2173,9 +2218,24 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 		<td>Line</td>
 	</tr>
 	<tr>
+		<td>admin_tools_menu</td>
+		<td>$sub_menu</td>
+		<td>31</td>
+	</tr>
+	<tr>
 		<td>admin_tools_action_handler</td>
 		<td>$actions</td>
 		<td>62</td>
+	</tr>
+	<tr>
+		<td>admin_tools_menu_logs</td>
+		<td>$sub_menu</td>
+		<td>73</td>
+	</tr>
+	<tr>
+		<td>admin_tools_permissions</td>
+		<td>$admin_permissions</td>
+		<td>118</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> admin/modules/tools/optimizedb.php</th>
@@ -2970,9 +3030,19 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 		<td>Line</td>
 	</tr>
 	<tr>
+		<td>admin_user_menu</td>
+		<td>$sub_menu</td>
+		<td>30</td>
+	</tr>
+	<tr>
 		<td>admin_user_action_handler</td>
 		<td>$actions</td>
 		<td>52</td>
+	</tr>
+	<tr>
+		<td>admin_user_permissions</td>
+		<td>$admin_permissions</td>
+		<td>80</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> admin/modules/user/titles.php</th>
@@ -3247,7 +3317,7 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>attachment_end</td>
 		<td></td>
-		<td>93</td>
+		<td>99</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> calendar.php</th>
@@ -3403,12 +3473,12 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>contact_do_end</td>
 		<td></td>
-		<td>220</td>
+		<td>223</td>
 	</tr>
 	<tr>
 		<td>contact_end</td>
 		<td></td>
-		<td>281</td>
+		<td>284</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> css.php</th>
@@ -3530,7 +3600,7 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>global_end</td>
 		<td></td>
-		<td>1017</td>
+		<td>1027</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> inc/class_moderation.php</th>
@@ -3598,87 +3668,87 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>class_moderation_merge_posts</td>
 		<td>$arguments</td>
-		<td>926</td>
+		<td>945</td>
 	</tr>
 	<tr>
 		<td>class_moderation_move_thread_redirect</td>
 		<td>$arguments</td>
-		<td>1022</td>
+		<td>1045</td>
 	</tr>
 	<tr>
 		<td>class_moderation_copy_thread</td>
 		<td>$arguments</td>
-		<td>1112</td>
+		<td>1135</td>
 	</tr>
 	<tr>
 		<td>class_moderation_move_simple</td>
 		<td>$arguments</td>
-		<td>1229</td>
+		<td>1252</td>
 	</tr>
 	<tr>
 		<td>class_moderation_merge_threads</td>
 		<td>$arguments</td>
-		<td>1489</td>
+		<td>1525</td>
 	</tr>
 	<tr>
 		<td>class_moderation_split_posts</td>
 		<td>$arguments</td>
-		<td>2005</td>
+		<td>2128</td>
 	</tr>
 	<tr>
 		<td>class_moderation_move_threads</td>
 		<td>$arguments</td>
-		<td>2241</td>
+		<td>2364</td>
 	</tr>
 	<tr>
 		<td>class_moderation_approve_posts</td>
 		<td>$pids</td>
-		<td>2400</td>
+		<td>2523</td>
 	</tr>
 	<tr>
 		<td>class_moderation_unapprove_posts</td>
 		<td>$pids</td>
-		<td>2568</td>
+		<td>2691</td>
 	</tr>
 	<tr>
 		<td>class_moderation_change_thread_subject</td>
 		<td>$arguments</td>
-		<td>2652</td>
+		<td>2775</td>
 	</tr>
 	<tr>
 		<td>class_moderation_expire_thread</td>
 		<td>$arguments</td>
-		<td>2681</td>
+		<td>2804</td>
 	</tr>
 	<tr>
 		<td>class_moderation_remove_thread_subscriptions</td>
 		<td>$arguments</td>
-		<td>2988</td>
+		<td>3111</td>
 	</tr>
 	<tr>
 		<td>class_moderation_apply_thread_prefix</td>
 		<td>$arguments</td>
-		<td>3023</td>
+		<td>3146</td>
 	</tr>
 	<tr>
 		<td>class_moderation_soft_delete_posts</td>
 		<td>$pids</td>
-		<td>3156</td>
+		<td>3279</td>
 	</tr>
 	<tr>
 		<td>class_moderation_restore_posts</td>
 		<td>$pids</td>
-		<td>3307</td>
+		<td>3430</td>
 	</tr>
 	<tr>
 		<td>class_moderation_restore_threads</td>
 		<td>$tids</td>
-		<td>3457</td>
+		<td>3580</td>
 	</tr>
 	<tr>
 		<td>class_moderation_soft_delete_threads</td>
 		<td>$tids</td>
-		<td>3610</td>
+		<td>3733</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> inc/class_parser.php</th>
@@ -4000,9 +4070,29 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 		<td>841</td>
 	</tr>
 	<tr>
+		<td>redirect</td>
+		<td>$redirect_args</td>
+		<td>910</td>
+	</tr>
+	<tr>
+		<td>mycode_add_codebuttons</td>
+		<td>$editor_lang_strings</td>
+		<td>2867</td>
+	</tr>
+	<tr>
+		<td>get_ip</td>
+		<td>$ip_array</td>
+		<td>3595</td>
+	</tr>
+	<tr>
 		<td>mark_reports</td>
 		<td>$arguments</td>
-		<td>4256</td>
+		<td>4272</td>
+	</tr>
+	<tr>
+		<td>functions_fetch_ban_times</td>
+		<td>$ban_times</td>
+		<td>6721</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> inc/functions_forumlist.php</th>
@@ -4016,6 +4106,24 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 		<td>build_forumbits_forum</td>
 		<td>$forum</td>
 		<td>60</td>
+	</tr>
+	<tr class="file">
+		<th colspan="3" class="tcat"><strong>File: </strong> inc/functions_online.php</th>
+	</tr>
+	<tr class="heading">
+		<td>Hook</td>
+		<td>Params</td>
+		<td>Line</td>
+	</tr>
+	<tr>
+		<td>fetch_wol_activity_end</td>
+		<td>$user_activity</td>
+		<td>561</td>
+	</tr>
+	<tr>
+		<td>build_friendly_wol_location_end</td>
+		<td>$plugin_array</td>
+		<td>1102</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> inc/functions_post.php</th>
@@ -4044,6 +4152,19 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 		<td>postbit</td>
 		<td>$post</td>
 		<td>781</td>
+	</tr>
+	<tr class="file">
+		<th colspan="3" class="tcat"><strong>File: </strong> inc/functions_posting.php</th>
+	</tr>
+	<tr class="heading">
+		<td>Hook</td>
+		<td>Params</td>
+		<td>Line</td>
+	</tr>
+	<tr>
+		<td>parse_quoted_message</td>
+		<td>$quoted_post</td>
+		<td>209</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> inc/functions_upload.php</th>
@@ -4366,202 +4487,202 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>member_do_register_end</td>
 		<td></td>
-		<td>386</td>
+		<td>391</td>
 	</tr>
 	<tr>
 		<td>member_do_register_end</td>
 		<td></td>
-		<td>420</td>
+		<td>425</td>
 	</tr>
 	<tr>
 		<td>member_do_register_end</td>
 		<td></td>
-		<td>444</td>
+		<td>449</td>
 	</tr>
 	<tr>
 		<td>member_do_register_end</td>
 		<td></td>
-		<td>532</td>
+		<td>537</td>
 	</tr>
 	<tr>
 		<td>member_do_register_end</td>
 		<td></td>
-		<td>646</td>
+		<td>651</td>
 	</tr>
 	<tr>
 		<td>member_do_register_end</td>
 		<td></td>
-		<td>654</td>
+		<td>659</td>
 	</tr>
 	<tr>
 		<td>member_coppa_form</td>
 		<td></td>
-		<td>668</td>
+		<td>673</td>
 	</tr>
 	<tr>
 		<td>member_register_coppa</td>
 		<td></td>
-		<td>737</td>
+		<td>742</td>
 	</tr>
 	<tr>
 		<td>member_register_agreement</td>
 		<td></td>
-		<td>761</td>
+		<td>766</td>
 	</tr>
 	<tr>
 		<td>member_register_start</td>
 		<td></td>
-		<td>768</td>
+		<td>773</td>
 	</tr>
 	<tr>
 		<td>member_register_end</td>
 		<td></td>
-		<td>1264</td>
+		<td>1269</td>
 	</tr>
 	<tr>
 		<td>member_activate_start</td>
 		<td></td>
-		<td>1273</td>
+		<td>1278</td>
 	</tr>
 	<tr>
 		<td>member_activate_emailupdated</td>
 		<td></td>
-		<td>1339</td>
+		<td>1344</td>
 	</tr>
 	<tr>
 		<td>member_activate_emailactivated</td>
 		<td></td>
-		<td>1349</td>
+		<td>1354</td>
 	</tr>
 	<tr>
 		<td>member_activate_accountactivated</td>
 		<td></td>
-		<td>1355</td>
+		<td>1360</td>
 	</tr>
 	<tr>
 		<td>member_activate_form</td>
 		<td></td>
-		<td>1362</td>
+		<td>1367</td>
 	</tr>
 	<tr>
 		<td>member_resendactivation</td>
 		<td></td>
-		<td>1378</td>
+		<td>1383</td>
 	</tr>
 	<tr>
 		<td>member_resendactivation_end</td>
 		<td></td>
-		<td>1397</td>
+		<td>1402</td>
 	</tr>
 	<tr>
 		<td>member_do_resendactivation_start</td>
 		<td></td>
-		<td>1405</td>
+		<td>1410</td>
 	</tr>
 	<tr>
 		<td>member_do_resendactivation_end</td>
 		<td></td>
-		<td>1468</td>
+		<td>1473</td>
 	</tr>
 	<tr>
 		<td>member_lostpw</td>
 		<td></td>
-		<td>1476</td>
+		<td>1481</td>
 	</tr>
 	<tr>
 		<td>member_do_lostpw_start</td>
 		<td></td>
-		<td>1484</td>
+		<td>1489</td>
 	</tr>
 	<tr>
 		<td>member_do_lostpw_end</td>
 		<td></td>
-		<td>1530</td>
+		<td>1535</td>
 	</tr>
 	<tr>
 		<td>member_resetpassword_start</td>
 		<td></td>
-		<td>1537</td>
+		<td>1542</td>
 	</tr>
 	<tr>
 		<td>member_resetpassword_process</td>
 		<td></td>
-		<td>1595</td>
+		<td>1600</td>
 	</tr>
 	<tr>
 		<td>member_resetpassword_reset</td>
 		<td></td>
-		<td>1601</td>
+		<td>1606</td>
 	</tr>
 	<tr>
 		<td>member_resetpassword_form</td>
 		<td></td>
-		<td>1607</td>
+		<td>1612</td>
 	</tr>
 	<tr>
 		<td>member_do_login_start</td>
 		<td></td>
-		<td>1641</td>
+		<td>1646</td>
 	</tr>
 	<tr>
 		<td>member_do_login_end</td>
 		<td></td>
-		<td>1704</td>
+		<td>1709</td>
 	</tr>
 	<tr>
 		<td>member_do_login_end</td>
-		<td></td>
-		<td>1727</td>
-	</tr>
-	<tr>
-		<td>member_login</td>
 		<td></td>
 		<td>1732</td>
 	</tr>
 	<tr>
+		<td>member_login</td>
+		<td></td>
+		<td>1737</td>
+	</tr>
+	<tr>
 		<td>member_login_end</td>
 		<td></td>
-		<td>1820</td>
+		<td>1825</td>
 	</tr>
 	<tr>
 		<td>member_logout_start</td>
 		<td></td>
-		<td>1828</td>
+		<td>1833</td>
 	</tr>
 	<tr>
 		<td>member_logout_end</td>
 		<td></td>
-		<td>1857</td>
+		<td>1862</td>
 	</tr>
 	<tr>
 		<td>member_profile_start</td>
 		<td></td>
-		<td>1889</td>
+		<td>1894</td>
 	</tr>
 	<tr>
 		<td>member_profile_end</td>
 		<td></td>
-		<td>2676</td>
+		<td>2681</td>
 	</tr>
 	<tr>
 		<td>member_do_emailuser_start</td>
 		<td></td>
-		<td>2687</td>
+		<td>2692</td>
 	</tr>
 	<tr>
 		<td>member_do_emailuser_end</td>
 		<td></td>
-		<td>2842</td>
+		<td>2847</td>
 	</tr>
 	<tr>
 		<td>member_emailuser_start</td>
 		<td></td>
-		<td>2854</td>
+		<td>2859</td>
 	</tr>
 	<tr>
 		<td>member_emailuser_end</td>
 		<td></td>
-		<td>2990</td>
+		<td>2995</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> memberlist.php</th>
@@ -4950,32 +5071,32 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>modcp_do_banuser_end</td>
 		<td></td>
-		<td>4216</td>
+		<td>4215</td>
 	</tr>
 	<tr>
 		<td>modcp_banuser_start</td>
 		<td></td>
-		<td>4253</td>
+		<td>4252</td>
 	</tr>
 	<tr>
 		<td>modcp_banuser_end</td>
 		<td></td>
-		<td>4383</td>
+		<td>4382</td>
 	</tr>
 	<tr>
 		<td>modcp_do_modnotes_start</td>
 		<td></td>
-		<td>4394</td>
+		<td>4393</td>
 	</tr>
 	<tr>
 		<td>modcp_do_modnotes_end</td>
 		<td></td>
-		<td>4402</td>
+		<td>4401</td>
 	</tr>
 	<tr>
 		<td>modcp_end</td>
 		<td></td>
-		<td>4709</td>
+		<td>4708</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> moderation.php</th>
@@ -5116,17 +5237,17 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>newreply_do_newreply_end</td>
 		<td></td>
-		<td>603</td>
+		<td>607</td>
 	</tr>
 	<tr>
 		<td>newreply_start</td>
 		<td></td>
-		<td>740</td>
+		<td>744</td>
 	</tr>
 	<tr>
 		<td>newreply_end</td>
 		<td></td>
-		<td>1518</td>
+		<td>1522</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> newthread.php</th>
@@ -5144,17 +5265,17 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>newthread_do_newthread_end</td>
 		<td></td>
-		<td>496</td>
+		<td>500</td>
 	</tr>
 	<tr>
 		<td>newthread_start</td>
 		<td></td>
-		<td>509</td>
+		<td>513</td>
 	</tr>
 	<tr>
 		<td>newthread_end</td>
 		<td></td>
-		<td>1147</td>
+		<td>1151</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> online.php</th>
@@ -5845,7 +5966,7 @@ The following list was generated using [MyBB Hook Finder](https://github.com/eua
 	<tr>
 		<td>showthread_end</td>
 		<td></td>
-		<td>1502</td>
+		<td>1515</td>
 	</tr>
 	<tr class="file">
 		<th colspan="3" class="tcat"><strong>File: </strong> stats.php</th>
