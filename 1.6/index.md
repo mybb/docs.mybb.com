@@ -4,4 +4,4 @@ title: "1.6 Documentation"
 categories: [page]
 ---
 
-{% include category.html category="16" %}
+{% include category.html category="mybb16" %}
