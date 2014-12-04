@@ -14,7 +14,7 @@ categories: ["mybb16"]
 </li></ul>
 <dl><dd> php the/file/system/path/to/task.php x
 </dd></dl>
-<ul><li> Make sure the task is <b>disabled</b> in the <a href="{{ site.url }}/Admin_CP_Task_Manager.html" title="Admin CP Task Manager">Admin CP</a>. Enabling it via the Task interface in the Admin CP only tells MyBB to execute it via its own scheduling system. Having the task enabled and running it via a cron job would cause an overlap. The task, if called from a cron job, will run regardless of the status of it in the ACP as this only applies to MyBB's own systems.
+<ul><li> Make sure the task is <b>disabled</b> in the <a href="{{ site.baseurl }}/1.6/Admin_CP_Task_Manager.html" title="Admin CP Task Manager">Admin CP</a>. Enabling it via the Task interface in the Admin CP only tells MyBB to execute it via its own scheduling system. Having the task enabled and running it via a cron job would cause an overlap. The task, if called from a cron job, will run regardless of the status of it in the ACP as this only applies to MyBB's own systems.
 </li></ul>
 <p>You can also test the cron job by using PHP's CLI interface via the same way you set it up for the cron job. An example of this:
 </p>
