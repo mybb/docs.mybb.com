@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Plugins
+categories: ["mybb16"]
 ---
 
 <p>MyBB has a unique and easy-to-use plugin system that allows you to extend the functionality of your MyBB with ease.
@@ -14,10 +15,10 @@ title: Plugins
 </ul>
 </td></tr></table>
 <h2> <span class="mw-headline" id="What_are_plugins.3F"> What are plugins? </span></h2>
-<p>Plugins are basically custom PHP functions that are executed at a certain point in the MyBB code called a <i>hook</i>.  These hooks are located at various points throughout the script (see <a href="{{ site.url }}/MyBB_Plugin_Hooks.html" title="MyBB Plugin Hooks">MyBB Plugin Hooks</a>).
+<p>Plugins are basically custom PHP functions that are executed at a certain point in the MyBB code called a <i>hook</i>.  These hooks are located at various points throughout the script (see <a href="{{ site.baseurl }}/1.6/MyBB-Plugin-Hooks/" title="MyBB Plugin Hooks">MyBB Plugin Hooks</a>).
 </p>
 <h2> <span class="mw-headline" id="How_do_plugins_work.3F"> How do plugins work? </span></h2>
-<p>When you activate a plugin, its codename (the first part of its filename before .php) is cached in the <a href="{{ site.url }}/Admin_CP_Maintenance.html#plugins" title="Admin CP Maintenance" class="mw-redirect">plugins cache</a>.
+<p>When you activate a plugin, its codename (the first part of its filename before .php) is cached in the <a href="{{ site.baseurl }}/1.6/Admin-CP-Maintenance/#plugins" title="Admin CP Maintenance" class="mw-redirect">plugins cache</a>.
 </p><p>All the active plugins are 'included' at the start of each page.  (Thus, if you have many plugins installed, the speed of your forum may decrease slightly, depending on the nature of your plugins).  The hooks that each plugin uses is stored in memory.
 </p><p>When a hook is 'run' when a page is being executed, the array mentioned earlier is searched to see if there are functions from the plugins loaded earlier associated with this hook.  If there are, each function is executed.
 </p>
@@ -25,34 +26,34 @@ title: Plugins
 <p>Here is how to install and activate a plugin.  Please note that different plugins may need you to do additional modifications or procedures.  Check the plugin's documentation for those specific information.
 </p>
 <ol><li> Upload the plugin file (which should be in the format: pluginname.php) to the folder: inc/plugins/.  It is imperative that you do not change the filename from the one that was distributed by the plugin author.
-</li><li> Login to your Admin CP, and click on "<a href="{{ site.url }}/Admin_CP_Plugin_Manager.html" title="Admin CP Plugin Manager" class="mw-redirect">Plugin Manager</a>" in the Settings category of the menu.
+</li><li> Login to your Admin CP, and click on "<a href="{{ site.baseurl }}/1.6/Admin-CP-Plugin-Manager/" title="Admin CP Plugin Manager" class="mw-redirect">Plugin Manager</a>" in the Settings category of the menu.
 </li><li> Find the plugin that you uploaded, and click "Activate"
 </li><li> If all goes well, you should be redirected back to the plugin manager and the button will now say "Deactivate"
 </li></ol>
 <h2> <span class="mw-headline" id="See_Also"> See Also </span></h2>
-<ul><li> Visit <a href="{{ site.url }}/User_Created_Plugins.html" title="User Created Plugins">User Created Plugins</a> for a list of plugins available for download.
+<ul><li> Visit <a href="{{ site.baseurl }}/1.6/User-Created-Plugins/" title="User Created Plugins">User Created Plugins</a> for a list of plugins available for download.
 </li></ul>
 <p><br />
 </p>
 <div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
-<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.url }}/Customization.html" title="Customization">MyBB Customization</a></b></div>
+<div style="text-align: center; font-size: 18px; margin-bottom: 5px;"><b><a href="{{ site.baseurl }}/1.6/Customization/" title="Customization">MyBB Customization</a></b></div>
 <table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
 <tr>
-<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Templates_and_Themes.html" title="Templates and Themes">Templates/Themes</a></b>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.baseurl }}/1.6/Templates-and-Themes/" title="Templates and Themes">Templates/Themes</a></b>
 </td>
-<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Authoring_Templates_and_Themes.html" title="Authoring Templates and Themes">Authoring</a> - <a href="{{ site.url }}/Admin_CP_Templates.html" title="Admin CP Templates">Template Management</a> - <a href="{{ site.url }}/Admin_CP_Themes.html" title="Admin CP Themes">Theme Management</a> - <a rel="nofollow" class="external text" href="http://mods.mybb.com/themes">User-created</a>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.baseurl }}/1.6/Authoring-Templates-and-Themes/" title="Authoring Templates and Themes">Authoring</a> - <a href="{{ site.baseurl }}/1.6/Admin-CP-Templates/" title="Admin CP Templates">Template Management</a> - <a href="{{ site.baseurl }}/1.6/Admin-CP-Themes/" title="Admin CP Themes">Theme Management</a> - <a rel="nofollow" class="external text" href="http://mods.mybb.com/themes">User-created</a>
 </td></tr></table>
 <table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
 <tr>
 <td style="vertical-align: middle; font-size: 14px;"><b><strong class="selflink">Plugins</strong></b>
 </td>
-<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Authoring_Plugins.html" title="Authoring Plugins">Authoring</a> - <a href="{{ site.url }}/MyBB_Plugin_Hooks.html" title="MyBB Plugin Hooks">Plugin Hooks</a> - <a href="{{ site.url }}/Admin_CP_Config_Plugins.html" title="Admin CP Config Plugins">Plugin Management</a> - <a rel="nofollow" class="external text" href="http://mods.mybb.com/mods">User-created</a>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.baseurl }}/1.6/Authoring-Plugins/" title="Authoring Plugins">Authoring</a> - <a href="{{ site.baseurl }}/1.6/MyBB-Plugin-Hooks/" title="MyBB Plugin Hooks">Plugin Hooks</a> - <a href="{{ site.baseurl }}/1.6/Admin-CP-Config-Plugins/" title="Admin CP Config Plugins">Plugin Management</a> - <a rel="nofollow" class="external text" href="http://mods.mybb.com/mods">User-created</a>
 </td></tr></table>
 <table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
 <tr>
-<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Translations.html" title="Translations">Translations</a></b>
+<td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.baseurl }}/1.6/Translations/" title="Translations">Translations</a></b>
 </td>
-<td style="vertical-align: middle; width: 75%;"><a href="{{ site.url }}/Admin_CP_Config_Languages.html" title="Admin CP Config Languages">Language Management</a> - <a rel="nofollow" class="external text" href="http://community.mybb.com/thread-114917.html">Download</a>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.baseurl }}/1.6/Admin-CP-Config-Languages/" title="Admin CP Config Languages">Language Management</a> - <a rel="nofollow" class="external text" href="http://community.mybb.com/thread-114917.html">Download</a>
 </td></tr></table>
 <table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
 <tr>
