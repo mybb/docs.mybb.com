@@ -62,7 +62,8 @@ Download links are provided on this page for older versions for non-production-s
 
 | Version Number | Release Date | Release type | Availabilty |
 | :------------: | ------------ | ------------ | :---------: |
-| [1.8.2](1802) *`Latest`* | 13 November 2014 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1802.zip) |
+| [1.8.3](1803) *`Latest`* | 20 November 2014 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1803.zip) |
+| [1.8.2](1802) | 13 November 2014 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1802.zip) |
 | [1.8.1](1801) | 23 October 2014 | Maintenance Release | [Download](http://resources.mybb.com/downloads/mybb_1801.zip) |
 | [1.8.0](1800) | 1 September 2014 | Major Release | [Download](http://resources.mybb.com/downloads/mybb_1800.zip) |
 
@@ -70,6 +71,7 @@ Download links are provided on this page for older versions for non-production-s
 
 | Version Number | Release Date | Release type | Availabilty |
 | :------------: | ------------ | ------------ | :---------: |
+| [1.6.16](1616) | 20 November 2014 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1616.zip) |
 | [1.6.15](1615) | 4 August 2014 | Maintenance and Security Release | [Download](http://www.mybb.com/download/162) |
 | [1.6.14](1614) | 30 June 2014 | Maintenance and Security Release | [Download](http://www.mybb.com/download/161) |
 | [1.6.13](1613) | 26 April 2014 | Maintenance and Security Release | [Download](http://www.mybb.com/download/160) |
