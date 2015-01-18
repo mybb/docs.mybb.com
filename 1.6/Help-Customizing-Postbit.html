@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Customizing postbit
+categories: ["mybb16_faq"]
 ---
 
-<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.url }}/images/f/fa/Postbit.PNG" class="image"><img alt="" src="{{ site.url }}/images/thumb/f/fa/Postbit.PNG/180px-Postbit.PNG" width="180" height="47" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.url }}/images/f/fa/Postbit.PNG" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>A postbit</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="{{ site.baseurl }}/assets/images/1.6/f/fa/Postbit.PNG" class="image"><img alt="" src="{{ site.baseurl }}/assets/images/1.6/thumb/f/fa/Postbit.PNG/180px-Postbit.PNG" width="180" height="47" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="{{ site.baseurl }}/assets/images/1.6/f/fa/Postbit.PNG" class="internal" title="Enlarge"><img src="/mediawiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>A postbit</div></div></div>
 <table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
@@ -24,7 +25,7 @@ title: Customizing postbit
 </td></tr></table>
 <h1> <span class="mw-headline" id="Introduction"> Introduction </span></h1>
 <h2> <span class="mw-headline" id="MyBB_1.4.x"> MyBB 1.4.x </span></h2>
-<p>The <a href="{{ site.url }}/Postbit.html" title="Postbit">Postbit</a> user information is located in the following templates:
+<p>The <a href="{{ site.baseurl }}/1.6/Postbit/" title="Postbit">Postbit</a> user information is located in the following templates:
 </p>
 <ul><li> <b>postbit</b> - contains the basic layout of the Postbit, and some user information for the horizontal postbit
 </li><li> <b>postbit_classic</b> - contains the basic layout of the vertical postbit, and some user information
@@ -107,7 +108,7 @@ title: Customizing postbit
 </p><p>See the sections on $post and $mybb below to find out what other variables can be used.
 </p>
 <h2> <span class="mw-headline" id="MyBB_1.2.x"> MyBB 1.2.x </span></h2>
-<p>The <a href="{{ site.url }}/Postbit.html" title="Postbit">Postbit</a> user information is located in templates <b>postbit_author_guest</b> for posts made by guests and deleted users, and <b>postbit_author_user</b> for registered users.  You can edit these by going to <b>Admin CP --&gt; Templates --&gt; Modify / Delete --&gt; *expand your template set* --&gt; Postbit Templates --&gt; postbit_author_*</b>
+<p>The <a href="{{ site.baseurl }}/1.6/Postbit/" title="Postbit">Postbit</a> user information is located in templates <b>postbit_author_guest</b> for posts made by guests and deleted users, and <b>postbit_author_user</b> for registered users.  You can edit these by going to <b>Admin CP --&gt; Templates --&gt; Modify / Delete --&gt; *expand your template set* --&gt; Postbit Templates --&gt; postbit_author_*</b>
 </p><p>By default, postbit_author_user contains the following information about a user:
 </p>
 <table>
@@ -132,7 +133,7 @@ title: Customizing postbit
 <td><span style="font-family: Courier, monospace">{$post['userstars']}</span>
 </td></tr>
 <tr>
-<th>Group Image
+<th>Group image
 </th>
 <td><span style="font-family: Courier, monospace">{$post['groupimage']}</span>
 </td></tr>

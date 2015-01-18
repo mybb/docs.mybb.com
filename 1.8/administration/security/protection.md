@@ -38,7 +38,7 @@ Afterwards you should go to Admin CP > Tools & Maintenance > Cache Manager > for
 
 ## Hide the Version Number
 
-Displaying which MyBB version you're running is essentially the same as yelling "hey, I'm running this specific version, which contains these specific vulnerabilities". It's an open invitation to hackers. If you're running on the latest version, it's probably nothing to worry about, but there is simply no point in displaying it. To hide it go to Admin CP > Configuration > Settings > General Configuration > Show Version Numbers > Off.
+Displaying which MyBB version you're running is essentially the same as yelling "hey, I'm running this specific version, which contains these specific vulnerabilities". It's an open invitation to hackers. If you're running on the latest version, it's probably nothing to worry about, but there is simply no point in displaying it. To hide it go to Admin CP > Configuration > Settings > Site Details > Show Version Numbers > Off.
 
 ## Keep Plugins to a Minimum
 
