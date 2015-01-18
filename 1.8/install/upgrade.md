@@ -10,7 +10,7 @@ Before you upgrade, you should always read the announcement blog post properly b
 
 1. First, you may want to shut down your forum. Doing this means that no one will interrupt the upgrade process accidentally. Please remember that switching the forum by using the **Board Online/Offline** setting is **not** recommended. The best method is to use a `.htaccess` restriction on your forum's root folder so that no one can access the front-end. There are various tutorials that help you do this and some hosts even provide simple tools to do this.
 
-2. Secondly, you should back up your files and database and store them in a safe place. Just in case something goes wrong, you can restore the backup and start again. You can back up the database using the [MyBB Admin CP or your database management software](../administration/backups).
+2. Secondly, you should back up your files and database and store them in a safe place. Just in case something goes wrong, you can restore the backup and start again. You can back up the database using the [MyBB Admin CP or your database management software](/1.8/administration/backups).
 
 3. You must deactivate (or disable) all of your plugins. This is because it is likely they will need to be updated to work on the new version and can cause problems if they are left active.
 

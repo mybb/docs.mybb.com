@@ -82,7 +82,7 @@ If you would like more information about the GNU LGPL license and what it means 
 
 ### Requirements Check
 
-This page checks that your server meets the [requirements](/install/requirements) for running MyBB. If it does not, you will be notified on this page. If everything is working correctly, all you need to do is click on the **Next** button on this page.
+This page checks that your server meets the [requirements](/1.8/install/requirements) for running MyBB. If it does not, you will be notified on this page. If everything is working correctly, all you need to do is click on the **Next** button on this page.
 
 [![Requirements screen](/assets/images/install/requirements.jpg)](/assets/images/install/requirements.jpg)
 
