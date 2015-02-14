@@ -310,8 +310,13 @@ The following setting field type (aka. optionscode) values are supported:
 * yesno : A boolean yes/no control
 * onoff : A boolean on/off control
 * select : A select box (in the format select followed by <key>=<value> with one per newline)
+* forumselect : A built-in radio + select box to select forums
+* groupselect : A built-in radio + select box to select groups
 * radio : A set of radio buttons (in the format select followed by <key>=<value> with one per newline)
 * checkbox : A boolean checkbox field
+* language : A language selection box
+* adminlanguage : An ACP language select
+* cpstyle : A theme selector
 
 If you were to install the plugin you'd now see your new settings group and settings group in the "Configuration" tab of the ACP.
 
