@@ -60,9 +60,9 @@ Download links are provided on this page for older versions for non-production-s
 
 #### 1.8.x
 
-| Version Number | Release Date | Release type | Availabilty |
+| Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
-| [1.8.4](1.8.4) *`Latest`* | 15 February 2015 | Feature, Security, Maintenance | [Download](http://resources.mybb.com/downloads/mybb_1804.zip)
+| [1.8.4](1.8.4) *`Latest`* | 15 February 2015 | Feature, Security, and Maintenance Release | [Download](http://resources.mybb.com/downloads/mybb_1804.zip)
 | [1.8.3](1.8.3) | 20 November 2014 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1803.zip) |
 | [1.8.2](1.8.2) | 13 November 2014 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1802.zip) |
 | [1.8.1](1.8.1) | 23 October 2014 | Maintenance Release | [Download](http://resources.mybb.com/downloads/mybb_1801.zip) |
@@ -92,7 +92,7 @@ Download links are provided on this page for older versions for non-production-s
 
 #### 1.4.x
 
-| Version Number | Release Date | Release type | Availabilty |
+| Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
 | [1.4.16](1416) | 17 April 2011 | Security release | [Download](http://www.mybb.com/download/138) |
 | [1.4.15](1415) | 22 February 2011 | Maintenance release | [Download](http://www.mybb.com/download/132/zip) |
@@ -114,7 +114,7 @@ Download links are provided on this page for older versions for non-production-s
 
 #### 1.2.x
 
-| Version Number | Release Date | Release type | Availabilty |
+| Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
 | [1.2.14](1214) | 18 July 2008 | Security and Maintenance release | [Download](http://www.mybb.com/download/71/zip) |
 | [1.2.13](1213) | 21 May 2008 | Security vulnerability patch | [Download](http://www.mybb.com/download/70/zip) |
@@ -135,7 +135,7 @@ Download links are provided on this page for older versions for non-production-s
 
 #### 1.1.x and 1.0x
 
-| Version Number | Release Date | Release type | Availabilty |
+| Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
 | [1.1.8](118) | 30 August 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/42/zip) |
 | [1.1.7](117) | 27 July 2006 | Security vulnerability patch | [Download](http://www.mybb.com/download/41/zip) |
@@ -154,7 +154,7 @@ Download links are provided on this page for older versions for non-production-s
 
 #### Preview Releases
 
-| Version Number | Release Date | Release type | Availabilty |
+| Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
 | [PR2](pr-2) `Sec.Update` | 1 November 2005 | Security vulnerability patch | [Download](http://www.mybb.com/download/12/zip) |
 | [PR2](pr-2) `Rev.686` | 3 September 2005 | Maintenance release | - |
@@ -163,7 +163,7 @@ Download links are provided on this page for older versions for non-production-s
 
 #### Pre-1.0 (Release Candidate/Beta) series
 
-| Version Number | Release Date | Release type | Availabilty |
+| Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
 | [RC4](rc4) | 4 October 2004 | (Release Candidate 4) | - |
 | [RC3](rc3) | 10 July 2004 | (Release Candidate 3) | - |
