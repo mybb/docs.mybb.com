@@ -70,7 +70,7 @@ Download links are provided on this page for older versions for non-production-s
 
 #### 1.6.x
 
-| Version Number | Release Date | Release type | Availabilty |
+| Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
 | [1.6.16](1.6.16) | 20 November 2014 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1616.zip) |
 | [1.6.15](1.6.15) | 4 August 2014 | Maintenance and Security Release | [Download](http://resources.mybb.com/downloads/mybb_1615.zip) |
