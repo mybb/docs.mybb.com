@@ -157,4 +157,4 @@ We hope you never have to go through the "recovery" steps in this guide. What yo
 
 # New Security Measures
 
-Your forum is safe, but you shouldn't stop here. You should take new security measures immediately to prevent this from happening again. See [Protecting Your MyBB Forum](http://docs.mybb.com/1.8/administration/protection).
+Your forum is safe, but you shouldn't stop here. You should take new security measures immediately to prevent this from happening again. See [Protecting Your MyBB Forum](http://docs.mybb.com/1.8/administration/security/protection).
