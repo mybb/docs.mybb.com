@@ -54,7 +54,7 @@ Download links are provided on this page for older versions for non-production-s
 
 #### *2.0.x*
 
-[2.0.0](200) *`In planning`*
+[2.0.0](2.0.0) *`In planning`*
 
 ### Version 1 series
 
