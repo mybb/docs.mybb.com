@@ -29,17 +29,17 @@ Scanning your computer with your antivirus' own tools is also a good idea and in
 
 ### Secure Your Online Accounts
 
-Once your computer is safe it is highly recommended to reset all of your passwords. Literally. Your admin account might be safe, but the attack could have originated from a hacker gaining access to your email account, thus being able to request a password reset. Having one weak password might compromise everything related to it, therefore it is very important to use **secure passwords** on all of your online accounts, specifically those related to your website (i.e. FTP, SSH, database, email). A good password can take a human hacker [580 million years to crack](http://www.blogussion.com/blogging-tips/580-million-years-hacker/), or up to 59 years for a supercomputer. Isn't that the kind of security you want?
+Once your computer is safe it is highly recommended to reset all of your passwords - every single one. Your admin account might be safe, but the attack could have originated from a hacker gaining access to your email account, thus being able to request a password reset. Having one weak password might compromise everything related to it, therefore it is very important to use **secure passwords** on all of your online accounts, specifically those related to your website (i.e. FTP, SSH, database, email). A good password can take a human hacker [580 million years to crack](http://www.blogussion.com/blogging-tips/580-million-years-hacker/), or up to 59 years for a supercomputer. Isn't that the kind of security you want?
 
-Using safe passwords, however, may not be enough. What if someone else gets their hands on it? It is important to store your passwords in a secure place. Writing them on a piece of paper or a txt file is not good enough. We recommend that you use a password manager program such as [KeePass](http://keepass.info/) or [LastPass](https://lastpass.com/) - both of which feature very powerful password generators as well.
+Using safe passwords, however, may not be enough. What if someone else gets their hands on it? It is important to store your passwords in a secure place. Writing them on a piece of paper or a txt file is not good enough. We recommend that you use a password manager program, such as [KeePass](http://keepass.info/) or [LastPass](https://lastpass.com/), both of which feature very powerful password generators as well.
 
-**Use two factor authentication wherever possible**, especially if you use the same password in multiple places (which admittedly you shouldn't). Two factor authentication helps reducing your vulnerability to weak passwords, key logging, password reuse, phishing and brute force because it means your account can't be accessed even if your password is compromised. If you have a Google account consider [enabling two factor authentication](http://googleblog.blogspot.com.au/2011/02/advanced-sign-in-security-for-your.html).
+**Use two factor authentication wherever possible**, especially if you use the same password in multiple places (which you shouldn't). Two factor authentication helps reduce your vulnerability to weak passwords, key logging, password reuse, phishing and brute force because it means your account can't be accessed even if your password is compromised. If you have a Google Account, consider [enabling two factor authentication](http://googleblog.blogspot.com.au/2011/02/advanced-sign-in-security-for-your.html).
 
 ### Restore Your Admin Account
 
 Having audited your computer and reset all your passwords, the first thing you want to do is to check if you have access to the Admin CP and the server. After all, you can't do anything if the hacker kicked you out of the administrator group or changed your permissions.
 
-First let's check if the default administrator group actually has permission to access the Admin CP. To do so run the following SQL query.
+First let's check if the default administrator group actually has permission to access the Admin CP. To do so, run the following SQL query.
 
 	UPDATE `mybb_usergroups` SET `cancp`= '1' WHERE `gid` = '4';
 
@@ -47,7 +47,7 @@ And to make sure your account is in the administrator group, run the following S
 
 	UPDATE `mybb_users` SET usergroup = '4' WHERE uid = 'X';
 
-Next, you want to open the `inc/config.php` file in a text editor. Find the code below within that file and make sure your uid is within quotes. If you have multiple administrators you can separate them with a comma. It is recommended to stick with your uid only for now though.
+Next, you want to open the `inc/config.php` file in a text editor. Find the code below within that file and make sure your uid is within quotes. If you have multiple administrators, you can separate them with a comma. It is recommended to stick with your uid only for now though.
 
 	$config['super_admins'] = '1';
 
@@ -97,7 +97,7 @@ Right now no one can access your website or the MyBB backend, but you should qui
 
 Lastly you should quickly go through your templates, since they are a way to inject malicious JavaScript code into your forum. If possible, delete your current theme and install a fresh copy of it. If you hired a designer to create a custom theme and don't have a copy of it at the moment, contact them for one.
 
-However, if you made a lot of modifications and don't have a backup, then you'll have to go through the templates and look for suspicious code. Common templates for malicious code insertion are the `header`, `footer`, and `headerinclude`, as they are loaded globally. It is also recommended to check the `index` and `forumdisplay` templates. An easy way to do this is to click on the Options button next to a template name and select Diff Report. The code highlighted in red is what differs from the default template, and also what you should be looking at. Look specifically for code within a `<script>` tag. Not all of it is malicious, but this filters down the options. If you don't know what to look for, don't be afraid to [ask for help](http://community.mybb.com/forum-153.html).
+However, if you made a lot of modifications and don't have a backup, then you'll have to go through the templates and look for suspicious code. Common templates for malicious code insertion are the `header`, `footer`, and `headerinclude`, as they are loaded globally. It is also recommended to check the `index` and `forumdisplay` templates. An easy way to do this is to click on the Options button next to a template name and select Diff Report. The code highlighted in red is what differs from the default template, and also what you should be looking at. Look specifically for code within a `<script>` tag. Not all of it is malicious, but this filters down the options. If you don't know what to look for, don't be afraid to [ask for help](http://community.mybb.com/forum-176.html).
 
 ## New Security Measures
 
@@ -139,7 +139,7 @@ Displaying which MyBB version you're running is essentially the same as yelling 
 
 ### Keep Plugins to a Minimum
 
-The more plugins you have installed, the more code can hackers exploit. Most plugins are fairly secure, but if one of them has a vulnerability, hackers can take advantage of it to get access to your forum. And for that simple reason it is highly recommended to keep the number of plugins to a minimum and only install those that you really need. It's also worth considering the popularity and the author of the plugin. Having that said, to improve your forum's security, we still recommend having a look at our list of [security plugins](http://community.mybb.com/thread-109872.html).
+The more plugins you have installed, the more code hackers can exploit. Most plugins are fairly secure, but if one of them has a vulnerability, hackers can take advantage of it to get access to your forum. And for that simple reason it is highly recommended to keep the number of plugins to a minimum and only install those that you really need. It's also worth considering the popularity and the author of the plugin. Having that said, to improve your forum's security, we still recommend having a look at our list of [security plugins](http://community.mybb.com/thread-109872.html).
 
 ### Secure Other Software
 
@@ -151,7 +151,7 @@ None of this stuff matters if a hacker gets access to your database and drops al
 
 ## Final Words
 
-Even if you had the world's most advanced security system, if the person in control of it does something wrong, then all work is in vain. Always keep an eye on what you install and run on your computer, make sure your passwords are safe, ensure your forum is properly patched, and never try to do anything that would expose any "flaws" to others. If you and your fellow administrators do your job properly, your website will certainly be much safer. And to be prepared at all times, make backups, frequently, and you will thank yourself in the long run.
+Even if you had the world's most advanced security system, if the person in control of it does something wrong, then all work is in vain. Always keep an eye on what you install and run on your computer, make sure your passwords are safe, ensure your forum is properly patched, and never try to do anything that would expose any "flaws" to others. If you and your fellow administrators do your job properly, your website will certainly be much safer. And to be prepared at all times, make backups frequently, and you will thank yourself in the long run.
 
 We hope you never have to go through the "recovery" steps in this guide. What you should follow are the preparation steps - if you are prepared, it makes you a much less viable target.
 
