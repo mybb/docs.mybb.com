@@ -18,7 +18,7 @@ There have 2 types of templates. It's Global templates, wich are used by all the
 
 Global templates are used in all styles. They are usually plugin templates and the like.
 
-### themes Templates
+### Themes Templates
 
 This templates are used by themes at your forum. Usually, every each theme have it's own templates as they can be changed for each theme.
 
@@ -55,7 +55,7 @@ Template sets and their purpose can be figured out when you see template, but be
     Templates used by whole header visible at all pages: logo, PMs, quick search, header links for portal, memberlist etc. And welcome block (welcome message, user cp...)
 ##### Index Page Templates
     Things shown on index page like statistics, who is online, birthdays, Who is online memberlist...
-##### Manage Group Tmeplates
+##### Manage Group Templates
 <<<<<<< HEAD
     Template for managing groups, adding users, leaders, join requests, removing users...
 ##### Member List Templates
