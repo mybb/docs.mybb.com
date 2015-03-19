@@ -33,26 +33,26 @@ There are few templates in each tamplate set.
 
 Template sets and their purpose can be figured out when you see template, but below, it will be explained:
 
-Annoucement Templates
+#### Annoucement Templates
     Templates for view annoucements and editing them
-Calendar Templates
+#### Calendar Templates
     Templates used by calendar. Templates for view calendar, adding events, calendar mod options, calendar jump options and other calendar options.
-Edit Post Templates
+#### Edit Post Templates
     Templates for edit post page, delete post, disable smilies, reason of edit.
-Error Message Templates
+#### Error Message Templates
     Error pages (nopermission page, attach error...)
-Footer Templates
+#### Footer Templates
     footer templates and footer links like contact us, dropdowns at bottom like theme or language select
-Forum Bit Templates
+#### Forum Bit Templates
     Templates for display forums at forums page. From status icon, forum name, deciptom, moderators, threads and posts count, last post...
-Forum Display Templates
+#### Forum Display Templates
     Everything what you see in forums like annoucements, threads, new threads, orders, forum passwords, rules, search forum, **threads list**, threads rating, subforums, forum inline moderation tools, sticky threads, thread icons...
-Forum Jump Templates
+#### Forum Jump Templates
     Forum jump dropdown wich can be found on many pages of your site.
-Global templates
+#### Global templates
     Templates applied at all pages like warnings, moderation notices, join requests, new PMs, alerts.
-Header Templates
+#### Header Templates
     Templates used by whole header visible at all pages: logo, PMs, quick search, header links for portal, memberlist etc. And welcome block (welcome message, user cp...)
-Index Page Templates
+#### Index Page Templates
     Things shown on index page like statistics, who is online, birthdays, Who is online memberlist...
-Manage Group Tmeplates
+#### Manage Group Tmeplates
