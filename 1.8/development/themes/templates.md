@@ -33,7 +33,7 @@ There are few templates in each tamplate set.
 
 Template sets and their purpose can be figured out when you see template, but below, it will be explained:
 
-###### Annoucement Templates
+##### Annoucement Templates
 Templates for view annoucements and editing them
 #### Calendar Templates
     Templates used by calendar. Templates for view calendar, adding events, calendar mod options, calendar jump options and other calendar options.
