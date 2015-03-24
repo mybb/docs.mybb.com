@@ -10,7 +10,7 @@ Many MyBB software users report their MyBB editor is missing due to various reas
 Before we start, we need to be sure that the MyBB editor is actually enabled on your account and for the entire
 board.
 
-To enable mycode editor for entire board: Go to Admin CP -> Configuration -> Settings -> Clickable Smilies and BB Code -> Clickable MyCode Editor` and tick **ON**
+To enable mycode editor for entire board: Go to `Admin CP -> Configuration -> Settings -> Clickable Smilies and BB Code -> Clickable MyCode Editor` and tick **ON**
 
 If the above setting is on but you still can't see the mycode editor **but** everyone else can then most likely you don't have it enabled through your User CP.
 
