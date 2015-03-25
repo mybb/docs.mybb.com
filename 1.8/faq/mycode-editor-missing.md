@@ -35,13 +35,13 @@ Go to `Admin CP -> Templates & Styles -> Themes -> <Your theme> -> Editor style`
 
 ### 3rd Solution
 
-Reupload `sceditor` folder in `.jscripts/sceditor`.
+Reupload `sceditor` folder to `.jscripts/sceditor`.
 
 ### 4th Solution
 
 Go to `Admin CP -> Templates & Styles -> Templates -> <Your theme> -> New Thread Templates -> newthread` and `Admin CP -> Templates & Styles -> Templates -> <Your theme> -> New Reply Templates -> newreply`.
 
-Make sure you have code `{$codebuttons}` Right after `<textarea id="message" name="message" rows="20" cols="70" tabindex="2" >{$message}</textarea>` in newreply template, and right after `<textarea name="message" id="message" rows="20" cols="70" tabindex="2">{$message}</textarea>` in newthread template.
+Make sure you have code `{$codebuttons}` Right after `<textarea id="message" name="message" rows="20" cols="70" tabindex="2" >{$message}</textarea>` in newreply template and right after `<textarea name="message" id="message" rows="20" cols="70" tabindex="2">{$message}</textarea>` in newthread template.
 
 ### 5th Solution
 
