@@ -35,7 +35,7 @@ Go to `Admin CP -> Templates & Styles -> Themes -> <Your theme> -> Editor style`
 
 ### 3rd Solution
 
-Reupload `sceditor` folder to `.jscripts/sceditor`.
+Reupload `sceditor` folder to `jscripts/sceditor`.
 
 ### 4th Solution
 
