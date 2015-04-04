@@ -87,7 +87,7 @@ These are the modules that you ran during the merge (Users, Threads, Posts, etc)
 ### Counter Information
 These are the amount of users, threads, posts, etc that were converted to your new forum.
 ### Board Title
-This is simply the title of the forum your importing from. This helps us weed out duplicates.
+This is simply the title of the forum you're importing from. This helps us weed out duplicates.
 ### IP Address
 This is the IP Address of your computer which also helps us weed out duplicates.
 
