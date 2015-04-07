@@ -6,7 +6,7 @@ MyBB 2.0 is the next generation of the MyBB forum software.  It is currently in 
 <li>SEO URLs</li>
 <li>CSS based buttons</li>
 <li>API</li>
-<li>Converstaion PMs</li>
+<li>Conversation PMs</li>
 <li>Responsive theme</li>
 <li>Redesigned User CP</li>
 </ul>
