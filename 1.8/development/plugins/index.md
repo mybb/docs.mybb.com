@@ -39,6 +39,7 @@ function myplugin_info()
 		"authorsite"	=> "",
 		"version"		=> "1.0",
 		"guid" 			=> "",
+		"codename"		=> "",
 		"compatibility" => "*"
 	);
 }
@@ -86,8 +87,16 @@ Returns an array of information about the plugin:
  * author: The name of the author of the plugin
  * authorsite: The URL to the website of the author (Optional)
  * version: The version number of the plugin
- * guid: Unique ID issued by the MyBB Mods site for version checking
+ * guid: Unique ID issued by the MyBB Mods site for version checking (Obsolete, prefer codename)
+ * codename: Unique codename of the plugin in the mods section
  * compatibility: A CSV list of MyBB versions supported. Ex, "121,123", "12*". Wildcards supported.
+
+#### N.B.
+The _codename_ is the same as the plugin name used to prefix the functions. A good way to have it is to use the following code:
+
+```php
+$codename = str_replace('.php', '', basename(__FILE__));
+```
 
 ### `_install()`
 
@@ -306,6 +315,7 @@ rebuild_settings();
 The following setting field type (aka. optionscode) values are supported:
 
 * text : A regular text box
+* numeric : A numeric field
 * textarea : A larger text box
 * yesno : A boolean yes/no control
 * onoff : A boolean on/off control
