@@ -12,7 +12,7 @@ Before we start, we need to be sure that the MyBB editor is actually enabled on 
 
 To enable the MyCode editor for the entire board: Go to `Admin CP -> Configuration -> Settings -> Clickable Smilies and BB Code -> Clickable MyCode Editor` and tick **ON**
 
-If the above setting is on but you still can't see the mycode editor **but** everyone else can, then you most likely don't have it enabled through your User CP.
+If the above setting is on but you still can't see the MyCode editor **but** everyone else can, then you most likely don't have it enabled through your User CP.
 
 To enable it in your User CP, go to `User CP -> Edit Options -> Other Options` and tick **"Show the MyCode formatting options on the posting pages."**
 
