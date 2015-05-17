@@ -10,4 +10,7 @@ MyBB has one of the most advanced plugin systems found in bulletin boards today.
 ## How to upload plugins
 Most plugins will come with their own documentation on where the files included should go! If the mod does not come with documentation and contains a single php file then that file should be uploaded to `MyBB Root Folder/inc/plugins`.
 
-If you then browse to `Admin Control Panel -> Configuration -> Plugins` you will see the plugin that you have recently uploaded listed, proceed by clicking the Activate or Activate and Install Button.
+If you then browse to `Admin Control Panel -> Configuration -> Plugins` you will see the plugin that you have recently uploaded listed, proceed by clicking the Activate or Activate and Install Button as shown below:
+
+## How to uninstall plugins
+Uninstalling plugins has never been so easy! Simply navigate to `Admin Control Panel -> Configuration -> Plugins` and you will see either a Deactivate or an Uninstall button click whichever one appears and your plugin will be uninstalled.
