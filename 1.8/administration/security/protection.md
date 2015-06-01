@@ -14,6 +14,8 @@ The Admin CP is the most powerful tool in MyBB. If anyone gains access to it, th
 
 Now your real Admin CP directory should look something like `Svt06wbowXgMVvFmkFaz` (which you should bookmark or take note of) and the fake Admin CP will be located at `admin` (which will record the details of anyone who tries to access it). To finalize, [you should password protect your real Admin CP with HTTP Basic Auth](http://www.mybbsecurity.net/topic-protecting-the-admin-cp-with-http-basic-auth). Additionally you can add an [extra PIN number in the Admin CP login form](http://www.mybbsecurity.net/topic-add-secret-pin-to-acp-login), but having to go through all of these steps might be a little troublesome if you just want to do some quick edits.
 
+**Nota Bene**: if you change the Admin CP directory and add plugin using it after, you will have to rename the directory in the plugin source before uploading it.
+
 ## Administrator Accounts
 
 No matter how hard you try to secure the Admin CP, if people other than yourself have access to it then it really is a risk. You should only allow Admin CP access to people you know well and trust. Do not randomly allow a user of your forum to access it, even if he promises you to install a bunch of cool plugins or themes. Administrators should be selected carefully and reviewed thoroughly. Be **very careful** in who you trust access to the Admin CP to. If you trust no one, then perhaps you're better off as an administrator. In fact, if you don't need help with webmaster or admin tasks it really is best to remain the only administrator.
