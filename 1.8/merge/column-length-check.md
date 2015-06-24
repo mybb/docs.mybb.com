@@ -4,7 +4,8 @@ title:  "Column Length Check"
 categories: [merge]
 ---
 
-**Note:** If you haven't got any errors after the database configuration module, you can safely ignore this page.
+**Note:** If you haven't got a similar error after the database configuration module, you can safely ignore this page.
+[![Error Page](/assets/images/merge/column_length_error.png)](/assets/images/merge/column_length_error.png)
 
 # What's causing the error?
 
