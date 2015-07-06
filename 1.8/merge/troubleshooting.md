@@ -21,7 +21,7 @@ Open `merge/index.php` and search for:
 {% highlight php startinline %}
 define("SKIP_ENCODING_DETECTION", 0);
 {% endhighlight %}
-Replace the `"0"` with a `"1"`.
+Replace the `0` with a `1`.
 
 # Attachment Permissions are Wrong
 This is most likely caused by a `.htaccess` file that denies access to the attachment directory.
