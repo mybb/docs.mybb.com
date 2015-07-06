@@ -22,14 +22,14 @@ Information: This occurs when the file `inc/config.php` is incorrectly configure
 **Error Type:** *MyBB Error (43)*
 
 **Error Message:** The install directory (`install/`) still exists on your server and is not locked. To access MyBB please either remove this directory or create an empty file in it called `lock`.
-Information: This occurs when, as the error says your `install` folder is still present, or has not been locked. To solve this error, either completely delete the `install/` folder, or create an empty file in it called `lock`. MyBB requires you to remove or lock this folder, so nobody can run the installation or upgrade script, and corrupt or erase your database with it.
+Information: This occurs when your `install` folder is still present, or has not been locked. To solve this error, either completely delete the `install` folder, or create an empty file called `lock` inside the folder. MyBB requires you to remove or lock this folder so that nobody can run the installation or upgrade script and corrupt or erase your database with it.
 
 ## MyBB Error (42)
 
 **Error Type:** *MyBB Error (42)*
 
 **Error Message:** Your board has not yet been upgraded. Please do so before attempting to browse it.
-Information: This occurs when you are attempting to do a major upgrade, for example 1.2.x to 1.4.x, and after upload the new files, you do not run the upgrade script. To fix this, go to `install/upgrade.php` and choose your old version from the list.
+Information: This occurs when you are attempting to do a major upgrade (e.g. 1.6.x to 1.8.x) and do not run the upgrade script after uploading the new files. To fix this, go to `install/upgrade.php` and choose your old version from the list and follow the directions given by the upgrader..
 
 ## MyBB Error (44)
 
@@ -139,18 +139,14 @@ You should contact your host provider and ask them to whitelist your domain or h
 
 ## Catchable Fatal Error (4096)
 
-This error occurs when you upgrade your forum from MyBB 1.6.4 or older to MyBB 1.6.5 or newer. The *member_register* template has to be updated.
+This error occurs when you upgrade your forum from MyBB 1.6.4 or older to MyBB 1.6.5 or newer, or when you install a theme that was not updated properly. The *member_register* template has to be updated.
 
 1. Go to **Admin CP > Templates > Your Theme's Template Set > Member Templates > member_register**.
 
 2. Find:
 
-    ```html
-    {$captcha}
-    ```
+    `{$captcha}`
 
 3. Replace it with:
-
-    ```html
-    {$hiddencaptcha}
-    ```
+    
+    `{$hiddencaptcha}`
