@@ -6,16 +6,19 @@ categories: [faq]
 
 # Mail Issues
 
-If you or your users are having problems with receiving mail from your server, please follow these steps before posting a support request so that we can more quickly pinpoint the problem.
+If you or your users are having problems receiving mail from your forum, please follow these steps before posting a support request so that we can more quickly pinpoint the problem.
 
-First please check that the mail has not been sent into the junk/spam mail folder.
+First, check that the mail has not been sent into the junk/spam mail folder. Mail could land in the junk folder due to a variety of reasons, such as your host's server being blacklisted for previous sendings of spam (usually by a bad customer).
+
+## Testing PHP Mail
 
 MyBB relies on the [PHP Mail function](http://php.net/manual/en/function.mail.php) to send its mail. Thus, it is important that the PHP mail function is working.
 
 **Test script:**
 
-Please create a new `.php` file with this content:
+Create a new `.php` file with this content:
 
+{% highlight php %}
     <?php 
      error_reporting(E_ALL); 
        $to = 'your.email@address.com'; 
@@ -28,24 +31,32 @@ Please create a new `.php` file with this content:
         echo 'PHP could not send the mail'; 
        } 
     ?>
-  
-Replace *your.email@address.com* with your email address. Upload this file to your webserver and run it with your browser.
+{% endhighlight %}
 
-It should say **Mail was sent by PHP** and there should not be any other errors that show up.
+Replace `your.email@address.com` with your email address. Upload this file to your webserver and browse to it in order to run the test.
 
-Some webhosts have various restrictions on PHP mail. Some hosts require that the **From** address be a mailbox address on their server. Other hosts may disable the mail function completely. Please ask your webhost if there are any special restrictions they have on sending mail via PHP.
+It should say `Mail was sent by PHP` and there should not be any errors displayed.
 
-If your webhost has restricted that only mails from there own domain is allowed, try to edit the file `inc/functions.php`. Look for:
+## Host Restrictions
 
+Some webhosts place restrictions on PHP mail. For example, some require that the `From` address be an address configured on their server; other hosts may disable the PHP mail function completely.Check with your webhost if there are any restrictions in place for sending mail via PHP.
+
+If your webhost only allows sites to send mail from their own domain, edit the file `inc/functions.php` to try a workaround fix.
+
+Find:
+{% highlight php startinline%}
     mail($to, $subject, $message, $headers);
-    
-and include above: 
+{% endhighlight %} 
+ 
+Add before:
+{% highlight php startinline %}
+    ini_set("sendmail_from", "forum@YOURDOMAIN.com"); 
+{% endhighight %}
 
-    ini_set("sendmail_from", " forum@YOURDOMAIN.com "); 
-    
-Then it should look like this:
-
-    ini_set("sendmail_from", " forum@YOURDOMAIN.com "); 
+The final result of the edit should be:
+{%highight php startinline %}
+    ini_set("sendmail_from", "forum@YOURDOMAIN.com"); 
     mail($to, $subject, $message, $headers);
-    
-*YOURDOMAIN* must be replaced by the domain where the forum is hosted.
+{% endhighlight %}
+
+`YOURDOMAIN` in the above code must be replaced by the domain where the forum is hosted.
