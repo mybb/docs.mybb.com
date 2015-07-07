@@ -53,7 +53,7 @@ UPDATE `mybb_users` SET usergroup = '4' WHERE uid = 'X';
 
 Next, you want to open the `inc/config.php` file in a text editor. Find the code below within that file and make sure your uid is within quotes. If you have multiple administrators, you can separate them with a comma. It is recommended to stick with your uid only for now though.
 
-{% highlight sql %}
+{% highlight php startinline %}
 $config['super_admins'] = '1';
 {% endhighlight %}
 
