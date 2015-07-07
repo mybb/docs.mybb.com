@@ -41,19 +41,27 @@ Having audited your computer and reset all your passwords, the first thing you w
 
 First let's check if the default administrator group actually has permission to access the Admin CP. To do so, run the following SQL query.
 
-	UPDATE `mybb_usergroups` SET `cancp`= '1' WHERE `gid` = '4';
+{% highlight sql %}
+UPDATE `mybb_usergroups` SET `cancp`= '1' WHERE `gid` = '4';
+{% endhighlight %}
 
 And to make sure your account is in the administrator group, run the following SQL query. Replace `X` with your uid.
 
-	UPDATE `mybb_users` SET usergroup = '4' WHERE uid = 'X';
+{% highlight sql %}
+UPDATE `mybb_users` SET usergroup = '4' WHERE uid = 'X';
+{% endhighlight %}
 
 Next, you want to open the `inc/config.php` file in a text editor. Find the code below within that file and make sure your uid is within quotes. If you have multiple administrators, you can separate them with a comma. It is recommended to stick with your uid only for now though.
 
-	$config['super_admins'] = '1';
+{% highlight sql %}
+$config['super_admins'] = '1';
+{% endhighlight %}
 
 Finally, to reset your password, in case the hacker changed it too, run the following SQL query. Remember to replace `X` with your uid and `example` with the desired new password.
 
-	UPDATE `mybb_users` SET `password` = md5('example'), `salt` = '' WHERE `uid` = 'X';
+{% highlight sql %}
+UPDATE `mybb_users` SET `password` = md5('example'), `salt` = '' WHERE `uid` = 'X';
+{% endhighlight %}
 
 ### Restrict Access to the Forum
 
@@ -61,19 +69,21 @@ Great! Your admin account is fully restored and all your passwords were reset. N
 
 You should close the forum using the global switch in settings. Go to Admin CP > Configuration > Board Online / Offline > Board Closed > Yes.
 
-That will prevent the hacker from acessing the front-end, but the website itself is still accessible. If he planted an exploit somewhere else, he might be able to use it. So what you should do now is disallow all visitors, except yourself, from accessing your website. Place the following code in your root `.htaccess` file. Replace `127.0.0.1` with your IP address.
+That will prevent the hacker from acessing the front-end, but the website itself is still accessible. If he planted an exploit somewhere else, he might be able to use it. So what you should do now is disallow all visitors, except yourself, from accessing your website. Place the following code in your root `.htaccess` file. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
 
-	Order deny,allow
-	Deny from all
-	Allow from 127.0.0.1
+{% highlight apacheconf %}
+Order deny,allow
+Deny from all
+Allow from 127.0.0.1
+{% endhighlight %}
 
 If you find yourself unable to access your website during this process, it is possible that you have a dynamic IP, in which case you will have to repeat the above procedure whenever your IP changes.
 
 ### Check the Logs
 
-To have a better understanding of what happened and what actions were performed we recommend that you take a little time to go through the logs and review them. To do that go to Admin CP > Tools & Maintenance > Logs > Administrator Log. You might be surprised at what you can find. Obviously logs can be deleted, so if the hacker deleted them you are out of luck.
+To have a better understanding of what happened and what actions were performed, take a little time to go through the logs and review them. To do that, go to `Admin CP > Tools & Maintenance > Logs > Administrator Log`. You might be surprised by what you can find in the logs. These logs can be deleted, so if the hacker deleted them you are out of luck.
 
-But this is just MyBB's side. In addition to that we also recommend that you check your web server's error logs. These are by far much more useful. If you don't know where to find the web server error logs or how to interpret them, please get in touch with your web host. They should be able to fill you in on the attack.
+But this is just MyBB's side. In addition to checking MyBB's logs, we also recommend that you check your web server's error logs. These are much more useful and detailed. If you don't know where to find the web server error logs, or don't know how to interpret them, get in touch with your web host, who should be able to fill you in on the attack.
 
 ## Secure the Forum
 
@@ -81,23 +91,23 @@ But this is just MyBB's side. In addition to that we also recommend that you che
 
 To ensure that your MyBB installation is clean and no extra files have been added, you should delete all your files and upload a fresh copy of the latest version of MyBB. You only really need to backup your `inc/config.php` file. And even that should be double checked against the [default structure of the file](http://docs.mybb.com/Incconfigphp.html). Pay attention to your database details specifically, as well as your admin directory, super admins, etc.
 
-If you have a lot of plugins, images, language packs or custom modifications you should create a full backup and upload these things later on. Note that it is possible that a vulnerability lies within these files, so make sure to review them carefully. In the future consider using the [Patches](http://mods.mybb.com/view/patches) plugin to edit all of the core files. This makes it supremely easy to restore patches when you're upgrading or replacing files.
+If you have a lot of plugins, images, language packs or custom modifications, you should create a full backup and upload these things later on. Note that it is possible that a vulnerability lies within these files, so make sure to review them carefully. In the future consider using the [Patches](http://mods.mybb.com/view/patches) plugin to edit all of the core files. This makes it incredibly easy to restore patches when you're upgrading or replacing files.
 
-Deleting the files and re-uploading a fresh copy of MyBB also has the benefit of updating to the latest code. If you were running an older version of MyBB - which is why most forums get hacked - you will now be running on code free of any known vulnerabilities. Please note that to complete the upgrade, you need to point your browser to `install/upgrade.php` and run the upgrade script. You only need to do this if you were not running on the latest version.
+Deleting the files and re-uploading a fresh copy of MyBB also has the benefit of updating to the latest code. If you were running an older version of MyBB - which is why most forums get hacked - you will now be running on code free of any known vulnerabilities. To upgrade your forum, if it wasn't the latest version, follow the [Upgrade](http://docs.mybb.com/1.8/install/upgrade/) documentation.
 
 ### Check CHMOD Permissions
 
-If certain files or folders have unnecessary permissions you may be up against a security risk. They should only have the permissions required by MyBB to run. There is no recommended set of permissions specifically. It varies from server to server, because they are configured differently. For more information read our docs on [CHMOD permissions](http://docs.mybb.com/CHMOD_Files.html) or contact your web host for their recommendations.
+If certain files or folders have unnecessary permissions, you may be up against a security risk. Files and folders should only have the permissions required by MyBB to run. There is no specific recommended set of permissions. It varies from server to server, because they are configured differently. For more information, read the Docs page on [CHMOD permissions](http://docs.mybb.com/CHMOD_Files.html) or contact your web host for their recommendations.
 
 ### Check New Users
 
-Right now no one can access your website or the MyBB backend, but you should quickly head over to the Admin CP and check all users that joined around the time of the attack. It is possible that the hacker created a new admin account and set the display usergroup to a normal user (thus being hidden). To see all the users with admin permissions and manage them go to Admin CP > Users & Groups > Admin Permissions. It's also worth checking changes to admin permissions and other things.
+If you're following along step-by-step, no one can access your website or the MyBB backend, but you should quickly head over to the Admin CP and check all users that joined around the time of the attack. It is possible that the hacker created a new admin account and set the display usergroup to a normal user (thus being hidden). To see all the users with admin permissions and manage them go to Admin CP > Users & Groups > Admin Permissions. It's also worth checking changes to admin permissions and other things.
 
 ### Check Templates for Malicious Code
 
-Lastly you should quickly go through your templates, since they are a way to inject malicious JavaScript code into your forum. If possible, delete your current theme and install a fresh copy of it. If you hired a designer to create a custom theme and don't have a copy of it at the moment, contact them for one.
+Finally, you should quickly go through your templates, since they are a way to inject malicious JavaScript code into your forum. If possible, delete your current theme and install a fresh copy of it. If you hired a designer to create a custom theme and don't have a copy of it at the moment, contact them for one.
 
-However, if you made a lot of modifications and don't have a backup, then you'll have to go through the templates and look for suspicious code. Common templates for malicious code insertion are the `header`, `footer`, and `headerinclude`, as they are loaded globally. It is also recommended to check the `index` and `forumdisplay` templates. An easy way to do this is to click on the Options button next to a template name and select Diff Report. The code highlighted in red is what differs from the default template, and also what you should be looking at. Look specifically for code within a `<script>` tag. Not all of it is malicious, but this filters down the options. If you don't know what to look for, don't be afraid to [ask for help](http://community.mybb.com/forum-176.html).
+However, if you made a lot of modifications and don't have a backup, then you'll have to go through the templates and look for suspicious code. Common templates for malicious code insertion are the `header`, `footer`, and `headerinclude`, as they are loaded globally. It is also recommended to check the `index`, `forumdisplay`, and `showthread` templates. An easy way to do this is to click on the Options button next to a template name and select Diff Report. The code highlighted in red is what differs from the default template, and also what you should be looking at. Look specifically for code within a `<script>` tag. Not all of it is malicious, but this filters down the options. If you don't know what to look for, don't be afraid to [ask for help](http://community.mybb.com/forum-176.html).
 
 ## New Security Measures
 
@@ -129,13 +139,15 @@ Changing your table prefix can prove to be helpful in certain cases. If a hacker
 
 Allowing HTML to be used in posts is a terrible, terrible idea. That is why MyBB does not allow it by default. Unless you are absolutely certain that you want to use it (in which case you should install [HTML Purifier](http://mods.mybb.com/view/htmlpurifier)) it should be disabled on all forums. To do this quickly, run the following SQL query.
 
-	UPDATE `mybb_forums` SET `allowhtml` = '0';
+{% highlight sql %}
+UPDATE `mybb_forums` SET `allowhtml` = '0';
+{% endhighlight %}
 
 Afterwards you should go to Admin CP > Tools & Maintenance > Cache Manager > forums > Rebuild Cache to make sure this change is cached and is applied immediately.
 
 ### Hide the Version Number
 
-Displaying which MyBB version you're running is essentially the same as yelling "hey, I'm running this specific version, which contains these specific vulnerabilities". It's an open invitation to hackers. If you're running on the latest version, it's probably nothing to worry about, but there is simply no point in displaying it. To hide it go to Admin CP > Configuration > Settings > General Configuration > Show Version Numbers > Off.
+Displaying which MyBB version you're running is essentially the same as yelling "Hey, I'm running this specific version, which contains these specific vulnerabilities, hack me!". It's an open invitation to hackers. If you're running on the latest version, it's probably nothing to worry about, but there is simply no point in displaying it. To hide it go to Admin CP > Configuration > Settings > General Configuration > Show Version Numbers > Off.
 
 ### Keep Plugins to a Minimum
 
@@ -155,6 +167,6 @@ Even if you had the world's most advanced security system, if the person in cont
 
 We hope you never have to go through the "recovery" steps in this guide. What you should follow are the preparation steps - if you are prepared, it makes you a much less viable target.
 
-# New Security Measures
+## New Security Measures
 
 Your forum is safe, but you shouldn't stop here. You should take new security measures immediately to prevent this from happening again. See [Protecting Your MyBB Forum](http://docs.mybb.com/1.8/administration/security/protection).
