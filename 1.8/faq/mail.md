@@ -51,7 +51,7 @@ Find:
 Add before:
 {% highlight php startinline %}
     ini_set("sendmail_from", "forum@YOURDOMAIN.com"); 
-{% endhighight %}
+{% endhighlight %}
 
 The final result of the edit should be:
 {%highight php startinline %}
