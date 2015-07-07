@@ -54,7 +54,7 @@ Add before:
 {% endhighlight %}
 
 The final result of the edit should be:
-{%highight php startinline %}
+{%highlight php startinline %}
     ini_set("sendmail_from", "forum@YOURDOMAIN.com"); 
     mail($to, $subject, $message, $headers);
 {% endhighlight %}
