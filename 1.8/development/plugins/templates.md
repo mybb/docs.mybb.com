@@ -8,13 +8,13 @@ categories: [plugins]
 
 Most plugins require some changes to the front end of the site, typically to display some extra information.
 
-### Modifying templates to add a variable
+### Modifying Templates to Add a Variable
 
 A variable can easily be inserted into a template using the `find_replace_templatesets()` function, which looks for a string and replaces it in a given template.
 
-Usually you'd replace the string with itself plus your variable, for example:
+For this purpose, you usually replace the string with itself plus your variable, for example:
 
-```php
+{% highlight php startinline %}
 require_once MYBB_ROOT."/inc/adminfunctions_templates.php";
 
 find_replace_templatesets(
@@ -22,7 +22,7 @@ find_replace_templatesets(
     "#" . preg_quote('') . "#i",
     '<body>{$myVar}'
 );
-```
+{% endhighlight %}
 
 This would insert `{$myVar}` after `<body>` in the `index` template.
 
@@ -32,29 +32,30 @@ This would insert `{$myVar}` after `<body>` in the `index` template.
 
 Global variables can be accessed from templates, so the easiest way to access a variable in your hook function from a template is to make it global:
 
-```php
+{% highlight php startinline %}
 global $myVar;
 
 $myVar = 'Hello World!';
-```
+{% endhighlight %}
 
 This will insert **Hello World!** where the `{$myVar}` variable is in the template. `$myVar` can, of course, be any value, such as one dynamically generated or from a database query.
 
 An alternative solution is to modify an existing global variable such as `$user`. For example, you could insert `{$user['favorite_colour']}` into a template, then do the following in your hook function:
 
-```php
+{% highlight php startinline %}
 global $user;
 
 $user['favorite_colour'] = 'Blue';
 ```
+{% endhighlight %}
 
 ## Creating Your Own Templates
 
-If you want to insert a whole block of HTML rather than a simple value then you probably want to create your own template.
+If you want to insert a whole block of HTML rather than a simple value, it's generally better to create your own template.
 
-Templates are usually created in your `_install()` function. They can be created like this:
+Templates are usually created in the `_install()` function. They can be created like this:
 
-```php
+{% highlight php startinline %}
 global $db;
 
 $template = '<strong>{$hello_world}</strong>';
@@ -68,24 +69,24 @@ $insert_array = array(
 );
 
 $db->insert_query('templates', $insert_array);
-```
+{% endhighlight %}
 
 The template can be deleted in your `_uninstall()` function using:
 
-```php
+{% highlight php startinline %}
 $db->delete_query("templates", "title = 'hello_world_template'");
-```
+{% endhighlight %}
 
-Once your plugin has been installed you should now be able to see the template you created under global templates.
+Once your plugin has been installed, you should now be able to see the template you created in your Admin CP under `Templates & Style > Templates > Global Templates`.
 
-To replace a variable you inserted into another template with your custom template you must do the following from your hook function:
+To replace a variable inserted into another template with your custom template you must do the following from your hook function:
 
-```php
+{% highlight php startinline %}
 global $templates, $myVar;
 
 $hello_world = 'foobar';
 eval('$myVar  = "' . $templates->get('hello_world_template') . '";');
-```
+{% endhighlight %}
 
 Note that `$hello_world` does not have to be global, yet it's passed to your custom template.
 
@@ -101,7 +102,7 @@ If all has worked correctly you should see the following at the top of your inde
 
 An easy way to add a custom page via a plugin is to use the `misc_start` hook.
 
-```php
+{% highlight php startinline %}
 $plugins->add_hook('misc_start', 'my_action');
 
 // In the body of your plugin
@@ -124,7 +125,7 @@ function my_action()
         output_page($page);
     }
 }
-```
+{% endhighlight %}
 
 This should create a page nicely wrapped in the template header and footer, accessible by navigating to `misc.php?action=myaction`.
 
@@ -132,9 +133,9 @@ You can of course add your own page template instead of using `misc_help`.
 
 ### Using a Separate File
 
-If your custom page has a lot of functionality you may prefer to use a separate file, such as `my_plugin.php` which would be placed in the root MyBB directory.
+If your custom page has a lot of functionality, you may prefer to use a separate file, such as `my_plugin.php`, placed in the root MyBB directory.
 
-The process is basically the same except you'd put your functionality in the `my_plugin.php` file rather than in a hook function:
+The process is almost the same, except you put your functionality in the `my_plugin.php` file rather than in a hook function:
 
 ```php
 <?php
@@ -160,4 +161,4 @@ output_page($page);
 ?>
 ```
 
-You can access this by navigating to `my_plugin.php`, you can also run a switch statement on `$mybb->get_input('action')` to serve several actions from your custom page.
+You can access this by navigating to `my_plugin.php`. You can also run a switch statement on `$mybb->get_input('action')` to serve several actions from your custom page.
