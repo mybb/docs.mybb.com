@@ -54,7 +54,7 @@ echo "</pre>";
 
 ### Output
 
-{% highlight php startinline}
+{% highlight php startinline %}
 Array
 (
     [sid] => 6
