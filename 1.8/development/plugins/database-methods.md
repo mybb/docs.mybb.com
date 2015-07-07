@@ -36,7 +36,7 @@ It receives four parameters:
 
 ### Example
 
-```php
+{% highlight php startinline %}
 global $db;
 
 $query = $db->simple_select("settings", "*", "name='boardclosed_reason'", array(
@@ -50,11 +50,11 @@ $settings = $db->fetch_array($query);
 echo "<pre>";
 print_r($settings);
 echo "</pre>";
-```
+{% endhighlight %}
 
 ### Output
 
-```php
+{% highlight php startinline}
 Array
 (
     [sid] => 6
@@ -66,7 +66,7 @@ Array
     [disporder] => 2
     [gid] => 2
 )
-```
+{% endhighlight %}
 
 ## `$db->fetch_array`
 
@@ -74,7 +74,7 @@ Returns an array of values for the first row (can be iterated through with a whi
 
 ### Example
 
-```php
+{% highlight php startinline %}
 $query = $db->query("SELECT * FROM table WHERE field='value'");
 
 while($result = $db->fetch_array($query))
@@ -83,7 +83,7 @@ while($result = $db->fetch_array($query))
     $data2 = $result['FieldName2'];
     // ...
 }
-```
+{% endhighlight %}
 
 ## `$db->fetch_field`
 
