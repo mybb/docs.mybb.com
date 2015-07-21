@@ -90,7 +90,7 @@ Download links are provided on this page for older versions for non-production-s
 | [1.6.3](163) | 17 April 2011 | Security Release |  -  |
 | [1.6.2](162) | 22 February 2011 | Security and Maintenance Release |  -  |
 | [1.6.1](161) | 15 December 2010 | Security and Maintenance Release |  -  |
-| [1.6.0](160) | 3 August 2010 | Major Release | [ -  |
+| [1.6.0](160) | 3 August 2010 | Major Release |  -  |
 
 #### 1.4.x
 
