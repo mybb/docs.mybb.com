@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "AJAX"
+title:  "Using AJAX"
 categories: [plugins]
 ---
 
