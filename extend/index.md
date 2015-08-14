@@ -1,25 +1,25 @@
 ---
 layout: page
-title:  "Mods Site"
-categories: [mods]
+title:  "Extend Site"
+categories: [extend]
 ---
 
-## Mods Site Documentation
+## Extend Site Documentation
 
-Since the release of MyBB 1.8, we've switched from our olds mods site to a new platform we've developed.
+Since the release of MyBB 1.8, we've switched from our olds Extend site to a new platform we've developed.
 We classify our users into three types:
 
-* Downloaders - users who use the mods site only to download what they're looking for. [Click here to find out more.](http://docs.mybb.com/mods/downloaders)
+* Downloaders - users who use the Extend site only to download what they're looking for. [Click here to find out more.](http://docs.mybb.com/extend/browsing-downloading-from-extend)
 
-* Project owners are those who start the project and actively maintain it. [Click here to find out more.](http://docs.mybb.com/mods/owners)
+* Project owners are those who start the project and actively maintain it. [Click here to find out more.](http://docs.mybb.com/extend/owning-managing-projects)
 
-* Collaborators help out project owners with the development of their projects. [Click here to find out more.](http://docs.mybb.com/mods/collaborators)
+* Collaborators help out project owners with the development of their projects. [Click here to find out more.](http://docs.mybb.com/extend/contributing-to-projects)
 
 Below you can find an overall description of the system.
 
 #### Projects
-Basically anything on the mods site is a project, being it a theme, a plugin or an icon set. Each project has an owner/author which starts the project.
-The author may invite collaborators to the project, which may upload builds and use/manage the bug tracker. To put it simple, the mods site allows for whole teams to work on projects, rather than a single individual.
+Basically anything on the Extend site is a project, being it a theme, a plugin or an icon set. Each project has an owner/author which starts the project.
+The author may invite collaborators to the project, which may upload builds and use/manage the bug tracker. To put it simple, the Extend site allows for whole teams to work on projects, rather than a single individual.
 
 #### Builds
 A build is a ZIP file containing the project files. A build has one of two possible status: dev or stable.
@@ -35,7 +35,7 @@ Any username with the following format is an approved developer:
 [![Approved Developer](/assets/images/mods/approved_developer.png)](/assets/images/mods/approved_developer.png)
 
 #### Main Page
-When you first reach the mods site page you're faced with some information about its content but what leads you to all the places is the menu and the quick search bar.
+When you first reach the Extend site page you're faced with some information about its content but what leads you to all the places is the menu and the quick search bar.
 
 [![Menu and Search](/assets/images/mods/index1.png)](/assets/images/mods/index1.png)
 
@@ -45,7 +45,7 @@ By placing the mouse over the Menu, you will see quite a few options to select f
 
 The items that are of interest to all types of users are the following:
 
-* Search - allows users to do an advanced search through the mods site.
+* Search - allows users to do an advanced search through the Extend site.
 
 * Most Popular Downloads - shows the most popular projects and the most recommended projects.
 

@@ -1,10 +1,10 @@
 ---
 layout: page
-title:  "Downloaders - Mods Site"
-categories: [mods]
+title:  "Browsing and Downloading"
+categories: [extend]
 ---
 
-## Mods Site Documentation - Downloaders
+## Extend Site Documentation - Downloaders
 
 [Main Page](http://docs.mybb.com/mods)
 

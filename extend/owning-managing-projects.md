@@ -1,12 +1,12 @@
 ---
 layout: page
-title:  "Project Owners - Mods Site"
-categories: [mods]
+title:  "Owning and Managing Projects"
+categories: [extend]
 ---
 
-## Mods Site Documentation - Project Owners
+## Extend Site Documentation - Project Owners
 
-[Main Page](http://docs.mybb.com/mods)
+[Main Page](http://docs.mybb.com/extend)
 
 ### Control Panel
 
