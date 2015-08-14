@@ -12,7 +12,7 @@ Each board comes with a default MyBB theme. It is recommended to **not** delete 
 
 ## Finding Themes
 
-Themes can be found at the MyBB Mods site (Extend) - [MyBB Mods - Themes](http://community.mybb.com/mods.php?action=browse&category=themes).
+Themes can be found at the MyBB Extend site (Extend) - [MyBB Mods - Themes](http://community.mybb.com/mods.php?action=browse&category=themes).
 
 Themes discussion, relases, requests and support can be found at [MyBB Community Forums - Themes](http://community.mybb.com/forum-103.html).
 

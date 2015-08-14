@@ -21,9 +21,9 @@ Uninstalling plugins has never been so easy! Simply navigate to `Admin Control P
 
 Note: When clicking `Uninstall`, database information stored by the plugin is often deleted. `Deactivate` usually just stops the plugin from displaying information and running on pages. It is important to know this distinction, as not knowing it could result in data loss.
 
-If uninstalling the plugin permanantly, you should then delete all the files that you uploaded for this plugin to ensure that it is no longer part of your MyBB Installation. To find out what files the plugin included, download a new copy of the plugin from the [Mods site](http://community.mybb.com/mods.php).
+If uninstalling the plugin permanantly, you should then delete all the files that you uploaded for this plugin to ensure that it is no longer part of your MyBB Installation. To find out what files the plugin included, download a new copy of the plugin from the [Extend site](http://community.mybb.com/mods.php).
 
 ## Reporting a Plugin
-If you find that the plugin you are using contains a security exploit or any other severe issues which will affect other users (*please note that this does not include bugs or glitches that only affect the way the plugin operates*), browse to the [MyBB Mods site](http://community.mybb.com/mods.php), and browse to the plugin which you wish to report and click the Report link on the right and side and include as much detail as you can.
+If you find that the plugin you are using contains a security exploit or any other severe issues which will affect other users (*please note that this does not include bugs or glitches that only affect the way the plugin operates*), browse to the [MyBB Extend site](http://community.mybb.com/mods.php), and browse to the plugin which you wish to report and click the Report link on the right and side and include as much detail as you can.
 
 It is vital that you report the plugin, as it will ensure that any other MyBB sites do not encounter the same vulnerability or issue that you have.

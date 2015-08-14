@@ -86,7 +86,7 @@ Returns an array of information about the plugin:
  * author: The name of the author of the plugin
  * authorsite: The URL to the website of the author (Optional)
  * version: The version number of the plugin
- * guid: Unique ID issued by the MyBB Mods site for version checking (Obsolete, prefer codename)
+ * guid: Unique ID issued by the MyBB Extend site for version checking (Obsolete, prefer codename)
  * codename: Unique codename of the plugin in the mods section
  * compatibility: A CSV list of MyBB versions supported. Ex, "121,123", "12*". Wildcards supported.
 
