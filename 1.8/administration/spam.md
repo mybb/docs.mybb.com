@@ -37,11 +37,11 @@ In `Admin CP > Configuration > Login and Registration Options`, a "Hidden CAPTCH
 
 In `Admin CP > Configuration > General Configuration`, a visual CAPTCHA challenge can be configured from a variety of options.
 
-+ No CAPTCHA, in which the visual CAPTCHA challenge is disabled. This is not recommended, as disabling the CAPTCHA Images makes it much easier for automated systems to post spam.
-+ MyBB Default CAPTCHA, in which a PHP GD captcha is generated. This can often be passed by automated systems and usually should not be used.
-+ reCAPTCHA, which displays a "ReCAPTCHA" challenge; signup is required at [Google's ReCAPTCHA site](http://www.google.com/recaptcha/intro/index.html) to get the Public and Private keys that must be configured.
-+ Are You A Human, which displays an interactive minigame that the user must complete, often with their mouse. Signup is required at the [Are You A Human PlayThru website](http://portal.areyouahuman.com/signup/basic) to receive the Publisher and Scoring keys that must be configured in MyBB.
-+ NoCAPTCHA reCAPTCHA, which displays the latest version of reCAPTCHA, in which a user simply clicks a checkbox to continue, or as a fallback must complete a simple picture-selection challenge; signup is required at [Google's ReCAPTCHA site](http://www.google.com/recaptcha/intro/index.html) to get the Public and Private keys that must be configured.
++ **No CAPTCHA**, in which the visual CAPTCHA challenge is disabled. This is not recommended, as disabling the CAPTCHA Images makes it much easier for automated systems to post spam.
++ **MyBB Default CAPTCHA**, in which a PHP GD captcha is generated. This can often be passed by automated systems and usually should not be used.
++ **reCAPTCHA**, which displays a "ReCAPTCHA" challenge; signup is required at [Google's ReCAPTCHA site](http://www.google.com/recaptcha/intro/index.html) to get the Public and Private keys that must be configured.
++ **Are You A Human**, which displays an interactive minigame that the user must complete, often with their mouse. Signup is required at the [Are You A Human PlayThru website](http://portal.areyouahuman.com/signup/basic) to receive the Publisher and Scoring keys that must be configured in MyBB.
++ **NoCAPTCHA reCAPTCHA**, which displays the latest version of reCAPTCHA, in which a user simply clicks a checkbox to continue, or as a fallback must complete a simple picture-selection challenge; signup is required at [Google's ReCAPTCHA site](http://www.google.com/recaptcha/intro/index.html) to get the Public and Private keys that must be configured.
 
 ### Stop Forum Spam
 
@@ -57,4 +57,4 @@ Moderating a user's first post is a semi-intrusive but surefire way to stop spam
 
 ## If a Spammer Gets Through, Purge Them!
 
-Sometimes, despite relentless efforts, spammers will get through your countermeasures. If they haven't posted too much yet, the Purge Spammer feature (inspired by [MattRogowski's Goodbye Spammer for 1.6](http://mods.mybb.com/view/goodbye-spammer)) makes it easy to instantly undo the damage that has been done. Just go to one of the spammer's posts, and click the "Purge Spammer" button in the postbit, and all of their content (posts, threads, PMs, signature, website, etc.) will be deleted and the entire user can be either deleted or banned. These settings can be configured in `Admin CP > Configuration > Purge Spammer`.
+Sometimes, despite relentless efforts, spammers will get through your countermeasures. If they haven't posted too much yet, the Purge Spammer feature (inspired by [MattRogowski's Goodbye Spammer for 1.6](http://mods.mybb.com/view/goodbye-spammer)) makes it easy to instantly undo the damage that has been done. Just go to one of the spammer's posts, and click the **Purge Spammer** button in the postbit, and all of their content (posts, threads, PMs, signature, website, etc.) will be deleted and the entire user can be either deleted or banned. These settings can be configured in `Admin CP > Configuration > Purge Spammer`.
