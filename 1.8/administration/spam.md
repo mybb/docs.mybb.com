@@ -55,6 +55,6 @@ Spam by cheaply-paid humans is becoming increasingly common, and this method unf
 
 Moderating a user's first post is a semi-intrusive but surefire way to stop spammers in your community. Even if a human spammer gets past the registration, their first post (and any until the first is approved) will go into the moderation queue, where a moderator can verify the content of the post to see if it looks like spam. Ad Bakker of the MyBB Community Forums created a [plugin for 1.8](http://community.mybb.com/thread-173075-post-1171321.html#pid1171321) that can be used to perform this action. Alternatively, the Group Promotions feature of MyBB can be leveraged to do something very similar without the plugin.
 
-## If a Spammer Gets Through, Purge Them!
+# If a Spammer Gets Through, Purge Them!
 
 Sometimes, despite relentless efforts, spammers will get through your countermeasures. If they haven't posted too much yet, the Purge Spammer feature (inspired by [MattRogowski's Goodbye Spammer for 1.6](http://mods.mybb.com/view/goodbye-spammer)) makes it easy to instantly undo the damage that has been done. Just go to one of the spammer's posts, and click the **Purge Spammer** button in the postbit, and all of their content (posts, threads, PMs, signature, website, etc.) will be deleted and the entire user can be either deleted or banned. These settings can be configured in `Admin CP > Configuration > Purge Spammer`.
