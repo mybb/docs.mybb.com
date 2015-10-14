@@ -25,4 +25,10 @@ The following apps can be used as Two-Factor-Authentication Apps. Note that this
 		<td><a href="https://itunes.apple.com/gb/app/authy/id494168017?mt=8&uo=4" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"></a></td>
 		<td>-</td>
 	</tr>
+	<tr>
+		<th>Microsoft Authenticator</th>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="https://www.microsoft.com/en-us/store/apps/authenticator/9wzdncrfj3rj"><img src="/images/windows-store.png" alt="Windows Store" /></a></td>
+	</tr>
 </table>
