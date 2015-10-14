@@ -29,6 +29,6 @@ The following apps can be used as Two-Factor-Authentication Apps. Note that this
 		<th>Microsoft Authenticator</th>
 		<td>-</td>
 		<td>-</td>
-		<td><a href="https://www.microsoft.com/en-us/store/apps/authenticator/9wzdncrfj3rj"><img src="/images/1.8/windows-store.png" alt="Windows Store" /></a></td>
+		<td><a href="https://www.microsoft.com/en-us/store/apps/authenticator/9wzdncrfj3rj"><img src="/assets/images/1.8/windows-store.png" alt="Windows Store" /></a></td>
 	</tr>
 </table>
