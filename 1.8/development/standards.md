@@ -133,7 +133,7 @@ Should be written as:
 
 {% highlight php startinline %}
 $result = $db->query(“SELECT * FROM table”);
-$row = $db->fetch_array($query);
+$row = $db->fetch_array($result);
 
 if($row && $example == 1)
 {
