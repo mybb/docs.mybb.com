@@ -26,67 +26,73 @@ When finished with one of the instruction sets below, browse to your Admin CP ag
 
 Similar to Apache, but with the cPanel UI on shared hosts.
 
-+ Search for the `Directory Privacy` menu item (icon: blue folder with lock)
-+ Select the directory you wish to protect (your Admin CP directory)
-+ **Check** the `Password protect this directory.` checkbox.
-+ Fill out the given form with a username and strong password (>85 score)
-+ Click `Save`.
+- Search for the `Directory Privacy` menu item (icon: blue folder with lock)
+- Select the directory you wish to protect (your Admin CP directory)
+- **Check** the `Password protect this directory.` checkbox.
+- Fill out the given form with a username and strong password (>85 score)
+- Click `Save`.
 
 ## Apache Basic Auth Configuration (with or without SSH)
 
 Requirements:
-+ SSH access to site
-    + If not available, use [DynamicDrive's generator tool](http://www.tools.dynamicdrive.com/password/) and upload the files, as if you followed the directions below to create them.
-+ Apache configured to allow .htaccess files to override configuration values
+- SSH access to site
+    - If not available, use [DynamicDrive's generator tool](http://www.tools.dynamicdrive.com/password/) and upload the files, as if you followed the directions below to create them.
+- Apache configured to allow .htaccess files to override configuration values
 
 First, create a new file in the Admin CP directory named .htaccess. Apache will interpret the file as a local configuration file in the directory and any subdirectories inside of it.
 
-+ Open the `.htaccess` file
-+ **ADD**:
+- Open the `.htaccess` file
+- **ADD**:
         AuthUserFile /path/to/.htpasswd
         AuthGroupFile /dev/null
         AuthName Restricted
         AuthType Basic
         require valid-user
-+ Run shell command:
+- Run shell command:
         htpasswd -c -b /path/to/.htpasswd desired_username desired_secure_password
-    + **NOTE:** Replace `/path/to/.htpasswd` in both places with the respective file location.
+    - **NOTE:** Replace `/path/to/.htpasswd` in both places with the respective file location.
 
 ## Nginx Basic Auth Configuration (with SSH)
 
 Requirements:
-+ SSH access to site configuration file
+
+- SSH access to site configuration file
 
 Let's begin:
-+ Open your nginx site configuration file.
-+ Within the `server` block, **ADD**
-        location /path/to/ACP {
+
+- Open your nginx site configuration file.
+- Within the `server` block, **ADD**
+
+		location /path/to/ACP {
         auth_basic           "Restricted";
         auth_basic_user_file /path/to/.htpasswd;
         }
-+ Run shell command:
-        htpasswd -c -b /path/to/.htpasswd desired_username desired_secure_password
-   + If the command is not found, install the `apache2-utils`, `httpd-utils`, or similar package for your Linux distribution.  
 
-   + **NOTE:** Replace `/path/to/.htpasswd` in both places with the respective file location.
+- Run shell command:
+
+		htpasswd -c -b /path/to/.htpasswd desired_username desired_secure_password
+
+	- If the command is not found, install the `apache2-utils`, `httpd-utils`, or similar package for your Linux distribution.  
+
+   - **NOTE:** Replace `/path/to/.htpasswd` in both places with the respective file location.
 
 # Configuring an Admin CP PIN
 
 With MyBB 1.8, an Admin Control Panel "Secret PIN" setting was added to the core, inspired by a popular community tutorial. To enable the PIN:
 
-+ Open `inc/config.php`
+- Open `inc/config.php`
 
-+ **FIND** or **ADD**:
+- **FIND** or **ADD**:
 
-{% highlight php startinline %}
-$config['secret_pin']
-{% endhighlight %}
+	{% highlight php startinline %}
+	$config['secret_pin']
+	{% endhighlight %}
 
-+ Set the variable to a value, such as `'S0me p1n'`.
+- Set the variable to a value, such as `'S0me p1n'`.
 
-+ **DONE**
+- **DONE**
 
-Example:
+**Example:**
 
 {% highlight php startinline %}
 $config['secret_pin'] = 'S0me p1n';
@@ -104,8 +110,9 @@ Permissions for each Administrator can be configured at `Admin CP > Users & Grou
 If you have multiple administrators, assign specific roles to apply a "divide and conquer" strategy across your administrators.
 
 Examples:
-+ If one is strong in design, give them access to Templates and Style ACP features, but not settings, users, or system tools. They shouldn't need them for design tasks, and if they do, they can ask someone else to perform those actions.
-+ Perhaps another admin is great with managing community members. Give them access to Users and Groups, but nothing more.
+
+- If one is strong in design, give them access to Templates and Style ACP features, but not settings, users, or system tools. They shouldn't need them for design tasks, and if they do, they can ask someone else to perform those actions.
+- Perhaps another admin is great with managing community members. Give them access to Users and Groups, but nothing more.
 
 The more features you give to each administrator, the more power you grant to each of them over your community and its security.
 

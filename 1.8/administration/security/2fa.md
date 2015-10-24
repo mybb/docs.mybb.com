@@ -37,4 +37,4 @@ The following apps can be used as Two-Factor Authentication Apps. Note that this
 
 # Troubleshooting
 
-+ Verify that the server and authenticator device are in the same timezone. The codes are dependent upon time, within a 30 second time span.
+- Verify that the server and authenticator device are in the same timezone. The codes are dependent upon time, within a 30 second time span.
