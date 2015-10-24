@@ -43,13 +43,14 @@ First, create a new file in the Admin CP directory named .htaccess. Apache will 
 
 - Open the `.htaccess` file
 - **ADD**:
-        AuthUserFile /path/to/.htpasswd
-        AuthGroupFile /dev/null
-        AuthName Restricted
-        AuthType Basic
-        require valid-user
-- Run shell command:
-        htpasswd -c -b /path/to/.htpasswd desired_username desired_secure_password
+```
+AuthUserFile /path/to/.htpasswd
+AuthGroupFile /dev/null
+AuthName Restricted
+AuthType Basic
+require valid-user
+```
+- Run shell command: `htpasswd -c -b /path/to/.htpasswd desired_username desired_secure_password`
     - **NOTE:** Replace `/path/to/.htpasswd` in both places with the respective file location.
 
 ## Nginx Basic Auth Configuration (with SSH)
@@ -62,34 +63,27 @@ Let's begin:
 
 - Open your nginx site configuration file.
 - Within the `server` block, **ADD**
-
-		location /path/to/ACP {
-        auth_basic           "Restricted";
-        auth_basic_user_file /path/to/.htpasswd;
-        }
-
-- Run shell command:
-
-		htpasswd -c -b /path/to/.htpasswd desired_username desired_secure_password
-
+```
+location /path/to/ACP {
+auth_basic           "Restricted";
+auth_basic_user_file /path/to/.htpasswd;
+}
+```
+- Run shell command: `htpasswd -c -b /path/to/.htpasswd desired_username desired_secure_password`
 	- If the command is not found, install the `apache2-utils`, `httpd-utils`, or similar package for your Linux distribution.  
-
-   - **NOTE:** Replace `/path/to/.htpasswd` in both places with the respective file location.
+	- **NOTE:** Replace `/path/to/.htpasswd` in both places with the respective file location.
 
 # Configuring an Admin CP PIN
 
 With MyBB 1.8, an Admin Control Panel "Secret PIN" setting was added to the core, inspired by a popular community tutorial. To enable the PIN:
 
 - Open `inc/config.php`
-
 - **FIND** or **ADD**:
 
 	{% highlight php startinline %}
 	$config['secret_pin']
 	{% endhighlight %}
-
 - Set the variable to a value, such as `'S0me p1n'`.
-
 - **DONE**
 
 **Example:**
