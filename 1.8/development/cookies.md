@@ -70,14 +70,56 @@ The following is a list of the cookies that MyBB sets, and a note about each one
 	<dt>acploginattempts</dt>
 	<dd>Stores the number of ACP login attempts a user has had.</dd>
 
-	<dt>acploginattempts</dt>
+	<dt>acp_view</dt>
+	<dd>Stores the admin's preferred view when inline editing users in the ACP.</dd>
+
+	<dt>adminsid</dt>
 	<dd>Stores the current admin's Admin Session ID.</dd>
+
+	<dt>collapsed</dt>
+	<dd>This cookie keeps track of which categories and boxes have been collapsed (as opposed to being expanded by default).</dd>
+
+	<dt>coppadob</dt>
+	<dd>Stores user date of birth to submit with registration.</dd>
+
+	<dt>coppauser</dt>
+	<dd>Stores whether the user is a COPPA user or not.</dd>
+
+	<dt>failedlogin</dt>
+	<dd>If the user has exceed the maximum login attempts, failedlogin stores the time (UNIX timestamp) of the failure.</dd>
+
+	<dt>forumpass[$fid]</dt>
+	<dd>Stores a version of the forum password for $fid when a user has entered it correctly, to avoid prompting the user for a password more often than required.</dd>
+
+	<dt>inlinemod_</dt>
+	<dd>
+		There are multiple kinds of inline moderating cookies: forum, thread, and user, including:
+
+		<ul>
+			<li>inlinemod_forumfid</li>
+			<li>inlinemod_threadtid</li>
+			<li>inlinemod_useracp - for storing users to inline-edit in the Admin CP</li>
+		</ul>
+
+		fid is replaced with the forum ID and tid is replaced with the thread ID.
+
+		The contents are a pipe-delimited and pipe-enclosed list of thread IDs or post IDs which have been checked for inline moderation.
+	</dd>
 
 	<dt>loginattempts</dt>
 	<dd>Stores the number of login attempts a user has had.</dd>
 
+	<dt>multiquote</dt>
+	<dd></dd>
+
 	<dt>mybb</dt>
 	<dd>The mybb cookie is actually an array of cookies:</dd>
+
+	<dt>mybb[announcements]</dt>
+	<dd>Stores read annoucement IDs.</dd>
+
+	<dt>mybb[forumread]</dt>
+	<dd>Stores forums the user has read.</dd>
 
 	<dt>mybb[lastvisit]</dt>
 	<dd>This cookie stores the last time of visit in the UNIX timestamp format.</dd>
@@ -85,25 +127,29 @@ The following is a list of the cookies that MyBB sets, and a note about each one
 	<dt>mybb[lastactive]</dt>
 	<dd>This cookie stores the last time that a forum page has been loaded, in the UNIX timestamp format.</dd>
 
+	<dt>mybb[threadread]</dt>
+	<dd>Stores threads read by the user.</dd>
+
+	<dt>mybb[readallforums]</dt>
+	<dd>Stores if the user has read all forums. Updated with mybb[lastvisit] in inc/functions_indicators.php.</dd>
+
+	<dt>mybb[referrer]</dt>
+	<dd></dd>
+
+	<dt>mybblang</dt>
+	<dd>Stores the language preference of a guest.</dd>
+
+	<dt>mybbratethread[{$tid}]</dt>
+	<dd>Stores the user's rating of thread $tid.</dd>
+
+	<dt>mybbtheme</dt>
+	<dd>Stores the theme preference of a guest.</dd>
+
 	<dt>mybbuser</dt>
 	<dd>This cookie stores the login information for the Front End, and is set when a user logs in, and is removed when the user logs out. The UID and the login key are stored in this cookie.</dd>
 
-	<dt>collapsed</dt>
-	<dd>This cookie keeps track of which categories and boxes have been collapsed (as opposed to being expanded by default).</dd>
-
-	<dt>inlinemod_</dt>
-	<dd>
-		There are two kinds of inline moderating cookies: forum and thread and they are named as follows:
-
-		<ul>
-			<li>inlinemod_forumfid</li>
-			<li>inlinemod_threadtid</li>
-		</ul>
-
-		fid is replaced with the forum ID and tid is replaced with the thread ID.
-
-		The contents are a pipe-delimited and pipe-enclosed list of thread IDs or post IDs which have been checked for inline moderation.
-	</dd>
+	<dt>pollvotes[$pid]</dt>
+	<dd>Stores a guest's vote on poll $pid.</dd>
 
 	<dt>sid</dt>
 	<dd>The current user's Session ID.</dd>

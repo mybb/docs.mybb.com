@@ -17,7 +17,7 @@ This means that your Logout link doesn't contain an SID and since MyBB 1.2.8, th
  1. The board has been updated to a newer version of MyBB but some template information hasn't been updated.
  2. You are using a template designed for a version of MyBB older than 1.2.8 and as such, the logout link is also missing the SID component.
 
-A fix for both these issues can be found by following the instructions [here](http://community.mybb.com/showthread.php?tid=25210&pid=177101#pid177101) to manually update your templates' Logout link to contain the SID. Note: You will need to do this for every theme that you use on your forum which does not currently contain an SID link.
+A fix for both of these issues can be found by following the instructions [here](http://community.mybb.com/showthread.php?tid=25210&pid=177101#pid177101) to manually update your templates' Logout link to contain the SID. Note: You will need to do this for every theme that you use on your forum which does not currently contain an SID link.
 
 If after making the above changes you are still unable to logout and are running MyBB 1.2.10. Please try the following:
 
@@ -25,6 +25,6 @@ The third reason could relate to your cookie settings. Either, the Cookie settin
 
 Or, you have some cookies remaining from a previous session (when the Cookie settings were different) and also a set of cookies for this session (with the new cookie settings). In this case, MyBB will clear your new cookies, but not the old ones so you will appear unable to logout.
 
-Please see [Cannot login](cant-login) or [Cookies](../miscellaneous/cookies) to find your correct cookie settings.
+Please see [Login Problems](/1.8/faq/login/) or [Cookies](/1.8/development/cookies/) to find your correct cookie settings.
 
 In both situations, the best solution is to clear the cookies in your browser.

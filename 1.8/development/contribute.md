@@ -60,29 +60,50 @@ When reviewing a commit, if the entire file looks as though it has changed (and 
 
 While all team members are able to contribute directly with the repositories, SQA are still required to confirm the work fixes the issue/no issues arise from the feature. An issue therefore may have several labels/statuses throughout development
 
-The basic status is **Open** or **Closed**. GitHub provides an easy to use UI to differentiate between these statuses with tabs at the top of the issue list. In the terminology, a *developer* may be a member of the Development Team, a member of the MyBB Group or a 3rd party contributor who is not a member of either Team or Group. The *reporter* is the person(s) who originally reported the issue.
+The basic status is **Open** or **Closed**. GitHub provides an easy to use UI to differentiate between these statuses with tabs at the top of the issue list. In the terminology, a *developer* may be a member of the Development Team, a member of the MyBB Group, or a 3rd party contributor who is not a member of either Team or Group. The *reporter* is the person(s) who originally reported the issue.
 
 An **Open** issue describes a problem that is yet to be fixed by a developer. These may have the following labels:
 
 <dl>
-    <dt>Confirmed</dt>
+    <dt>s:confirmed</dt>
     <dd>The issue has been confirmed as being a valid problem with MyBB and contains enough evidence for a developer to work on a fix.</dd>
 
-    <dt>Feedback</dt>
+    <dt>s:feedback</dt>
     <dd>
         The issue may not contain enough evidence of a valid problem, or difficult to reproduce, and requires more input from the reporter.
 
         The issue may have been fixed by a developer but may not have actually solved the problem/causes further problems/contains code that doesn't match the Development Standards.
     </dd>
+
+    <dt>s:in-progress</dt>
+    <dd>The issue is being worked on by someone.</dd>
+
+    <dt>s:deferred</dt>
+    <dd>The issue should be fixed in the future, but is not a current priority and may or may not be fixed in the near future.</dd>
+
+    <dt>p:immediate</dt>
+    <dd>The issue demands an immediate fix because it affects all or nearly all MyBB users and may cause serious errors or functionality bugs that make the software difficult to use.</dd>
+
+    <dt>p:urgent</dt>
+    <dd>The issue is confirmed to affect many MyBB users and affects the software in a severe way, such as a security or data loss risk, or frequent server errors.</dd>
+
+    <dt>p:high</dt>
+    <dd>The issue is of high importance and necessitates a timely fix.</dd>
+
+    <dt>p:normal</dt>
+    <dd>The issue is of typical importance, neither more nor less important than the average report.</dd>
+
+    <dt>p:low</dt>
+    <dd>The issue is a minor bug that doesn't affect the function of MyBB often, or does so in a very minor way that is not significant.</dd>
 </dl>
 
 A **Closed** issue may have different labels depending on the outcome of the initial investigation:
 
 <dl>
-    <dt>Approved</dt>
+    <dt>s:fixed</dt>
     <dd>The issue has been fixed by a developer and the fix is confirmed as solving the problem by an SQA Team member.</dd>
 
-    <dt>Rejected</dt>
+    <dt>s:rejected</dt>
     <dd>
         The issue is a duplicate of an already reported issue
         The issue was not a valid issue with MyBB

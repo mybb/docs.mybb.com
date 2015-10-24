@@ -30,7 +30,7 @@ Trailing whitespace on the end of lines or end of files is not permitted. Most t
 
 ### PHP Code Demarcation
 
-Short PHP open and close tags (`<? ?>` or `<?= ?>`) are not permitted. To delimit PHP code, the full `<?php ?>` tags must be used as this is the most portable way to include PHP code on differing PHP configurations.
+Short PHP open and close tags (`<? ?>` or `<?= ?>`) are not permitted. Additionally, **no** PHP closing tags should be used.
 
 ### Strings
 
@@ -231,6 +231,8 @@ When increasing or decreasing the value of a variable, the arithmetic operator (
 
 - Use of ternary operators
   - Use the full if-else syntax with curly braces
+
+- Use of PHP closing tags
 
 ### Type Juggling
 

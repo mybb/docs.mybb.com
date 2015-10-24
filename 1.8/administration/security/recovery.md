@@ -16,16 +16,24 @@ First things first: secure your computer. It is possible that you downloaded som
 
 However if you don't have another computer lying around or other people to help you then you will have to take care of it right now. If you're using Windows we urge you to run tools like:
 
-- [Spybot - Search & Destroy](http://www.safer-networking.org/en/spybotsd/index.html)
+- [HitmanPro 3](http://www.surfright.nl/en/hitmanpro)
+	+ Somewhat similar to HijackThis. Scans the computer for virus activities or suspicous files that have the characteristics of malware.
+- [Kaspersky Virus Removal Tool](http://www.kaspersky.com/antivirus-removal-tool)
+	+ Tool to help remove common malware infections, if detected.
 - [Malwarebytes](http://www.malwarebytes.org/)
+	+ Popular, trusted free solution for malware scanning. Quick definition updates and rigorous detections for more than plain malware.
 - [HiJackThis](http://www.filehippo.com/download_hijackthis/)
+	+ Tool that generates a report about system settings and files commonly modified by malware.
 
-Scanning your computer with your antivirus' own tools is also a good idea and installing a firewall. We recommend the following:
+Scanning your computer with your antivirus' own tools is also a good idea and installing a firewall. We recommend one of the following:
 
 - [Microsoft Security Essentials](http://windows.microsoft.com/MSE)
 - [AntiVir](http://www.avira.com/en/avira-free-antivirus)
+	+ Standard antimalware software. Not especially great, but it is usually good enough.
 - [Comodo Internet Security](http://www.comodo.com/home/internet-security/free-internet-security.php)
+	+ Standard antimalware software. Not especially great, but it is usually good enough.
 - [ZoneAlarm](http://www.zonealarm.com/)
+	+ Inbound intrusion detection system and firewall that is highly customizable, allowing the user to specify what applications can create outbound network connections.
 
 ### Secure Your Online Accounts
 
