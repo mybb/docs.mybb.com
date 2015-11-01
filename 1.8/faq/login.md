@@ -8,7 +8,7 @@ categories: [faq]
 
 Most of the time this is a problem with your cookie settings being incorrect or inadequate. For more information about MyBB's cookies, read [Cookies](/1.8/development/cookies/).
 
-Your cookie settings can be found in: **Admin CP** > **Configuration** > **Settings** > **General Configuration**. The two settings are *Cookie Domain* and *Cookie Path*.
+Your cookie settings can be found in: **Admin CP** > **Configuration** > **Settings** > **Site Details**. The two settings are *Cookie Domain* and *Cookie Path*.
 
 By default, MyBB suggests Cookie Domain to be blank, and Cookie Path to be **/**. Although this theoretically will work, in many cases it is inadequate.
 
