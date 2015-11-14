@@ -395,7 +395,7 @@ $db->update_query('table', $updated_record, "condition1='".$db->escape_string('t
 Delete queries should be performed using the `delete_query()` method. This method takes the table name, and optionally any conditions that must be matched (`WHERE` clause). The conditions *must* be escaped using the `escape_string()` method, as mentioned below. Example use is as follows:
 
 {% highlight php startinline %}
-$db->delete_query('table', "condition1='".$db->escape_string('Value1')."'");
+$db->delete_query('table', 'condition1=value1');
 {% endhighlight %}
 
 ### Sanitization
