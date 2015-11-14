@@ -380,22 +380,28 @@ $db->insert_query('table', $new_record);
 
 Update queries follow a similar structure to insert queries, but use `update_query()` instead. This method takes a table name, an associative array of values to update, and optionally any conditions that must be matched (the `WHERE` clause of an update query).
 
-Values *must* be escaped and any conditions need to be explicitly escaped using the `escape_string()` method. Example use is as follows:
+Values *must* be escaped using the `escape_string()` method. Example use is as follows:
 
 {% highlight php startinline %}
 $updated_record = array(
     "column" => $db->escape_string('Value')
 );
+{% endhighlight %}
 
-$db->update_query('table', $updated_record, "condition1='".$db->escape_string('test')."'");
+Depending on the type of conditions it might also be required to use the `escape_string()` method, as mentioned above. However this would not be true for most cases. Both methods are shown here:
+
+{% highlight php startinline %}
+$db->update_query('table', $updated_record, "condition1='".$db->escape_string('randomvalue')."'");
+
+$db->update_query('table', $updated_record, "condition1=$randomvalue");
 {% endhighlight %}
 
 ### Delete Queries
 
-Delete queries should be performed using the `delete_query()` method. This method takes the table name, and optionally any conditions that must be matched (`WHERE` clause). The conditions *must* be escaped using the `escape_string()` method, as mentioned below. Example use is as follows:
+Delete queries should be performed using the `delete_query()` method. This method takes the table name, and optionally any conditions that must be matched (`WHERE` clause).  Example use is as follows:
 
 {% highlight php startinline %}
-$db->delete_query('table', 'condition1=value1');
+$db->delete_query('table', 'condition1=test');
 {% endhighlight %}
 
 ### Sanitization
