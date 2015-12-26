@@ -93,5 +93,4 @@ An alternative solution is to modify an existing global variable such as `$user`
 global $user;
 
 $user['favorite_colour'] = 'Blue';
-```
 {% endhighlight %}
