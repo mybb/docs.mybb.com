@@ -35,6 +35,12 @@ The following apps can be used as Two-Factor Authentication Apps. Note that this
 	</tr>
 </table>
 
+# Setup and Configuration
+
+Log into the MyBB Admin Control Panel, then navigate to the `Preferences` page of the `Home` tab. An option, titled `Two-Factor Authentication` will be available. Check the box, then click `Save Personal Notes & Preferences`. A QR code will be presented to you when the page reloads. Scan that QR code with your authenticator app, and then the required setup is complete.
+
+**In case you lose your device or authenticator app in the future**, make sure to save your backup codes in a safe place. They can be used if you no longer have the authenticator app for any reason. Note that the codes are regenerated every time the backup codes page is viewed, so you can only view them once. Viewing the page again will invalidate all old codes and generate a new set. As a result, it is strongly recommended to keep your backup codes in a safe place!
+
 # Troubleshooting
 
 - Verify that the server and authenticator device are in the same timezone. The codes are dependent upon time, within a 30 second time span.
