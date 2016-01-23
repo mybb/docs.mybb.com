@@ -12,7 +12,7 @@ We've broken down the installation into many smaller steps. Don't worry if it lo
 * Having trouble with MyBB? The support at the [MyBB Community Forums](http://community.mybb.com/) is free and available to anyone using MyBB, supported by the [volunteer team](http://www.mybb.com/about/team/), and other members of the community!
 * MyBB is easily customizable to suit your site's needs and looks.
 * Best of all, MyBB is [released under the GNU Lesser GPL licence](http://www.mybb.com/about/license), and therefore it's [entirely free](http://www.gnu.org/philosophy/free-sw.html)! No forced advertisements, no cost, no sign-ups, no forced email subscriptions!
-* You will require a web host to run your forum
+* You will require a web host to run your forum.
 * Your web host must satisfy a few basic requirements for MyBB to run properly.
 
 ## Preparation
