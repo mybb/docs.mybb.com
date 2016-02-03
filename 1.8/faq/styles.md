@@ -14,7 +14,7 @@ To fix this edit the `inc/settings.php` file and find the `$settings['bburl']` l
 
 Change the value to the correct URL, such as `$settings['bburl'] = "http://notmysite.com";` to `$settings['bburl'] = "http://mysite.com";`.
 
-Next, log into your Admin Control Panel > Configuration > General Configuration and update your Board URL here too.
+Next, log into your Admin Control Panel > Configuration > Site Details and update your Board URL here too.
 
 # My Admin CP has no styles / looks broken
 
