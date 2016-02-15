@@ -6,7 +6,7 @@ categories: [extend]
 
 ## Extend Site Documentation
 
-[Main Page](http://docs.mybb.com/extend)
+[Main Page](https://docs.mybb.com/extend)
 
 ### For Project Contributors
 

@@ -13,7 +13,7 @@ Contributing is easy:
 
 ### Basics
 
-Use the [standard Markdown syntax](http://daringfireball.net/projects/markdown/syntax). Only use HTML if there's no Markdown equivalent (e.g. tables).
+Use the [standard Markdown syntax](https://daringfireball.net/projects/markdown/syntax). Only use HTML if there's no Markdown equivalent (e.g. tables).
 
 Use proper English grammar.
 
@@ -27,14 +27,14 @@ Only use inline code and code blocks to markup actual code, file contents or fil
 
 ### YAML Front Matter
 
-Indent the values of the [YAML Front Matter](http://jekyllrb.com/docs/frontmatter/) so that they align with each other.
+Indent the values of the [YAML Front Matter](https://jekyllrb.com/docs/frontmatter/) so that they align with each other.
 
 ### Headings
 
-Capitalize the words in heading titles according to the [MLA](http://www.mla.org/) format, e.g. `Uploading the Language Files`.
+Capitalize the words in heading titles according to the [MLA](https://www.mla.org/) format, e.g. `Uploading the Language Files`.
 
 Add a newline after the heading.
 
 ### Links
 
-When linking to internal pages use relative links, e.g. `[Using FTP](http://docs.mybb.com/install/ftp)` should be `[Using FTP](install/ftp)`.
+When linking to internal pages use relative links, e.g. `[Using FTP](https://docs.mybb.com/install/ftp)` should be `[Using FTP](install/ftp)`.

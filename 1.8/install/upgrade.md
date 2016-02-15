@@ -22,7 +22,7 @@ There are two different methods of upgrading your forum: full upgrades and a cha
 
 If your current version is more than one point below the newest version, you need to make a full upgrade. For example, if you're using 1.6.1 and the newest version is 1.6.4, then you need a full upgrade. The same applies if you're using 1.6.x and you're upgrading to 1.8.x. You need to use the latest version of the software.
 
-[Download the latest version](http://mybb.com/download/).
+[Download the latest version](https://www.mybb.com/download/).
 
 #### Changed Files Upgrade
 
