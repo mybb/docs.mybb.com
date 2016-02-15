@@ -6,7 +6,7 @@ categories: [development]
 
 ## Introduction
 
-[Cookies](http://en.wikipedia.org/wiki/HTTP_cookie) are important in MyBB to identify and verify logged-in users, and store inline-moderation selections. Incorrect cookie settings are the leading cause of login/logout problems on forums. If you or your users are having problems logging into the Front End of your board, see if the cookie settings are the culprit before posting your support request on the forum.
+[Cookies](https://en.wikipedia.org/wiki/HTTP_cookie) are important in MyBB to identify and verify logged-in users, and store inline-moderation selections. Incorrect cookie settings are the leading cause of login/logout problems on forums. If you or your users are having problems logging into the Front End of your board, see if the cookie settings are the culprit before posting your support request on the forum.
 
 ## MyBB Cookie Settings
 

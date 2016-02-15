@@ -62,28 +62,28 @@ Download links are provided on this page for older versions for non-production-s
 
 | Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
-| [1.8.6](1.8.6) *`Latest`* | 7 September 2015 | Security and Maintenance Release | [Download](http://resources.mybb.com/downloads/mybb_1806.zip) |
-| [1.8.5](1.8.5) | 27 May 2015 | Security and Maintenance Release | [Download](http://resources.mybb.com/downloads/mybb_1805.zip) |
-| [1.8.4](1.8.4) | 15 February 2015 | Feature Update, Security and Maintenance Release | [Download](http://resources.mybb.com/downloads/mybb_1804.zip) |
-| [1.8.3](1.8.3) | 20 November 2014 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1803.zip) |
-| [1.8.2](1.8.2) | 13 November 2014 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1802.zip) |
-| [1.8.1](1.8.1) | 23 October 2014 | Maintenance Release | [Download](http://resources.mybb.com/downloads/mybb_1801.zip) |
-| [1.8.0](1.8.0) | 1 September 2014 | Major Release | [Download](http://resources.mybb.com/downloads/mybb_1800.zip) |
+| [1.8.6](1.8.6) *`Latest`* | 7 September 2015 | Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1806.zip) |
+| [1.8.5](1.8.5) | 27 May 2015 | Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1805.zip) |
+| [1.8.4](1.8.4) | 15 February 2015 | Feature Update, Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1804.zip) |
+| [1.8.3](1.8.3) | 20 November 2014 | Security Release | [Download](https://resources.mybb.com/downloads/mybb_1803.zip) |
+| [1.8.2](1.8.2) | 13 November 2014 | Security Release | [Download](https://resources.mybb.com/downloads/mybb_1802.zip) |
+| [1.8.1](1.8.1) | 23 October 2014 | Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1801.zip) |
+| [1.8.0](1.8.0) | 1 September 2014 | Major Release | [Download](https://resources.mybb.com/downloads/mybb_1800.zip) |
 
 #### 1.6.x
 
 | Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
-| [1.6.18](1.6.18) | 7 September 2015 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1618.zip) |
-| [1.6.17](1.6.17) | 27 May 2015 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1617.zip) |
-| [1.6.16](1.6.16) | 20 November 2014 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1616.zip) |
-| [1.6.15](1.6.15) | 4 August 2014 | Maintenance and Security Release | [Download](http://resources.mybb.com/downloads/mybb_1615.zip) |
-| [1.6.14](1.6.14) | 30 June 2014 | Maintenance and Security Release | [Download](http://resources.mybb.com/downloads/mybb_1614.zip) |
-| [1.6.13](1.6.13) | 26 April 2014 | Maintenance and Security Release | [Download](http://resources.mybb.com/downloads/mybb_1613.zip) |
-| [1.6.12](1.6.12) | 30 December 2013 | Maintenance and Security Release | [Download](http://resources.mybb.com/downloads/mybb_1612.zip) |
-| [1.6.11](1.6.11) | 8 October 2013 | Maintenance and Security Release | [Download](http://resources.mybb.com/downloads/mybb_1611.zip) |
-| [1.6.10](1.6.10) | 22 April 2013 | Maintenance and Security Release | [Download](http://resources.mybb.com/downloads/mybb_1610.zip) |
-| [1.6.9](169) | 15 December 2012 | Security Release | [Download](http://resources.mybb.com/downloads/mybb_1609.zip) |
+| [1.6.18](1.6.18) | 7 September 2015 | Security Release | [Download](https://resources.mybb.com/downloads/mybb_1618.zip) |
+| [1.6.17](1.6.17) | 27 May 2015 | Security Release | [Download](https://resources.mybb.com/downloads/mybb_1617.zip) |
+| [1.6.16](1.6.16) | 20 November 2014 | Security Release | [Download](https://resources.mybb.com/downloads/mybb_1616.zip) |
+| [1.6.15](1.6.15) | 4 August 2014 | Maintenance and Security Release | [Download](https://resources.mybb.com/downloads/mybb_1615.zip) |
+| [1.6.14](1.6.14) | 30 June 2014 | Maintenance and Security Release | [Download](https://resources.mybb.com/downloads/mybb_1614.zip) |
+| [1.6.13](1.6.13) | 26 April 2014 | Maintenance and Security Release | [Download](https://resources.mybb.com/downloads/mybb_1613.zip) |
+| [1.6.12](1.6.12) | 30 December 2013 | Maintenance and Security Release | [Download](https://resources.mybb.com/downloads/mybb_1612.zip) |
+| [1.6.11](1.6.11) | 8 October 2013 | Maintenance and Security Release | [Download](https://resources.mybb.com/downloads/mybb_1611.zip) |
+| [1.6.10](1.6.10) | 22 April 2013 | Maintenance and Security Release | [Download](https://resources.mybb.com/downloads/mybb_1610.zip) |
+| [1.6.9](169) | 15 December 2012 | Security Release | [Download](https://resources.mybb.com/downloads/mybb_1609.zip) |
 | [1.6.8](168) | 27 May 2012 | Maintenance Release |  -  |
 | [1.6.7](167) | 1 April 2012 | Feature Update, Security and Maintenance Release |  - |
 | [1.6.6](166) | 10 February 2012 | Security Release |  -  |

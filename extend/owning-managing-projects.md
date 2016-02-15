@@ -6,7 +6,7 @@ categories: [extend]
 
 ## Extend Site Documentation - Project Owners
 
-[Main Page](http://docs.mybb.com/extend)
+[Main Page](https://docs.mybb.com/extend)
 
 ### Control Panel
 
@@ -31,7 +31,7 @@ The build is considered a 'development' build so you will need to request for it
 
 #### Manage Projects
 
-On this page you can see a list of all projects you are in involed in and the projects you own.
+On this page you can see a list of all projects you are involved in and the projects you own.
 
 [![Start Project](/assets/images/mods/owners5.png)](/assets/images/mods/owners5.png)
 

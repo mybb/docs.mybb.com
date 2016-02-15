@@ -120,7 +120,7 @@ Changing your table prefix can prove to be helpful in certain cases. If a hacker
 
 ## Disallow HTML in Posts
 
-Allowing HTML to be used in posts is a terrible, terrible idea. That is why MyBB does not allow it by default. Unless you are absolutely certain that you want to use it (in which case you should install [HTML Purifier](http://mods.mybb.com/view/htmlpurifier)), it should be disabled on all forums. To do this quickly, run the following SQL query.
+Allowing HTML to be used in posts is a terrible, terrible idea. That is why MyBB does not allow it by default. Unless you are absolutely certain that you want to use it (in which case you should install [HTML Purifier](https://mods.mybb.com/view/htmlpurifier)), it should be disabled on all forums. To do this quickly, run the following SQL query.
 
 {% highlight sql %}
 UPDATE `mybb_forums` SET `allowhtml` = '0';

@@ -9,11 +9,11 @@ categories: [extend]
 Since the release of MyBB 1.8, we've switched from our olds Extend site to a new platform we've developed.
 We classify our users into three types:
 
-* Downloaders - users who use the Extend site only to download what they're looking for. [Click here to find out more.](http://docs.mybb.com/extend/browsing-downloading-from-extend)
+* Downloaders - users who use the Extend site only to download what they're looking for. [Click here to find out more.](https://docs.mybb.com/extend/browsing-downloading-from-extend)
 
-* Project owners are those who start the project and actively maintain it. [Click here to find out more.](http://docs.mybb.com/extend/owning-managing-projects)
+* Project owners are those who start the project and actively maintain it. [Click here to find out more.](https://docs.mybb.com/extend/owning-managing-projects)
 
-* Collaborators help out project owners with the development of their projects. [Click here to find out more.](http://docs.mybb.com/extend/contributing-to-projects)
+* Collaborators help out project owners with the development of their projects. [Click here to find out more.](https://docs.mybb.com/extend/contributing-to-projects)
 
 Below you can find an overall description of the system.
 

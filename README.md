@@ -1,4 +1,4 @@
-[![MyBB](https://raw.github.com/mybb/mybb/feature/images/logo.png "MyBB")](http://mybb.com "MyBB")
+[![MyBB](https://raw.github.com/mybb/mybb/feature/images/logo.png "MyBB")](https://www.mybb.com "MyBB")
 # MyBB Documentation
 
 The MyBB documentation.

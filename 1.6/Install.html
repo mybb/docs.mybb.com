@@ -38,7 +38,7 @@ categories: ["mybb16_install"]
 </li></ul>
 
 
-<p>First, download the latest MyBB package from the <a rel="nofollow" class="external text" href="http://www.mybb.com/">MyBB website</a>, on the <a rel="nofollow" class="external text" href="http://www.mybb.com/downloads/">downloads page</a>. After downloading the zip file, unzip/decompress the file. On Windows, if you right click on the file, there should be an option similar to "Unzip," referring to the file (if you have WinZIP, WinRAR, or a similar program installed, do as instructed by the creators of the software). Unzip the contents of the file to a folder within the same folder that the zip is in, such as a folder called "mybb".
+<p>First, download the latest MyBB package from the <a rel="nofollow" class="external text" href="https://www.mybb.com/">MyBB website</a>, on the <a rel="nofollow" class="external text" href="https://www.mybb.com/downloads/">downloads page</a>. After downloading the zip file, unzip/decompress the file. On Windows, if you right click on the file, there should be an option similar to "Unzip," referring to the file (if you have WinZIP, WinRAR, or a similar program installed, do as instructed by the creators of the software). Unzip the contents of the file to a folder within the same folder that the zip is in, such as a folder called "mybb".
 </p><p>Once the unzipping process is complete, you will need to upload the files to your server, which is discussed in the next section of the install guide.
 </p>
 
@@ -69,13 +69,13 @@ categories: ["mybb16_install"]
 </li><li> <i>unzip, mv, rm, and chmod</i> - These are all required, and should all be present already on any *NIX based server.
 </li></ul>
 
-<pre>wget --content-disposition http://www.mybb.com/download/latest -O mybb.zip &amp;&amp; unzip mybb.zip &quot;Upload/*&quot; &amp;&amp; mv Upload/* . &amp;&amp; rm -Rf Upload mybb.zip &amp;&amp; mv inc/config.default.php inc/config.php &amp;&amp; chmod -R 0777 cache uploads inc/settings.php inc/config.php</pre>
+<pre>wget --content-disposition https://www.mybb.com/download/latest -O mybb.zip &amp;&amp; unzip mybb.zip &quot;Upload/*&quot; &amp;&amp; mv Upload/* . &amp;&amp; rm -Rf Upload mybb.zip &amp;&amp; mv inc/config.default.php inc/config.php &amp;&amp; chmod -R 0777 cache uploads inc/settings.php inc/config.php</pre>
 
-<pre>aria2c http://www.mybb.com/download/latest -o mybb.zip &amp;&amp; unzip mybb.zip &quot;Upload/*&quot; &amp;&amp; mv Upload/* . &amp;&amp; rm -Rf Upload mybb.zip &amp;&amp; mv inc/config.default.php inc/config.php &amp;&amp; chmod -R 0777 cache uploads inc/settings.php inc/config.php</pre>
+<pre>aria2c https://www.mybb.com/download/latest -o mybb.zip &amp;&amp; unzip mybb.zip &quot;Upload/*&quot; &amp;&amp; mv Upload/* . &amp;&amp; rm -Rf Upload mybb.zip &amp;&amp; mv inc/config.default.php inc/config.php &amp;&amp; chmod -R 0777 cache uploads inc/settings.php inc/config.php</pre>
 
-<pre>curl http://www.mybb.com/download/latest -o mybb.zip &amp;&amp; unzip mybb.zip &quot;Upload/*&quot; &amp;&amp; mv Upload/* . &amp;&amp; rm -Rf Upload mybb.zip &amp;&amp; mv inc/config.default.php inc/config.php &amp;&amp; chmod -R 0777 cache uploads inc/settings.php inc/config.php</pre>
+<pre>curl https://www.mybb.com/download/latest -o mybb.zip &amp;&amp; unzip mybb.zip &quot;Upload/*&quot; &amp;&amp; mv Upload/* . &amp;&amp; rm -Rf Upload mybb.zip &amp;&amp; mv inc/config.default.php inc/config.php &amp;&amp; chmod -R 0777 cache uploads inc/settings.php inc/config.php</pre>
 
-<pre>lynx -crawl -dump http://www.mybb.com/download/latest &gt; mybb.zip &amp;&amp; unzip mybb.zip &quot;Upload/*&quot; &amp;&amp; mv Upload/* . &amp;&amp; rm -Rf Upload mybb.zip &amp;&amp; mv inc/config.default.php inc/config.php &amp;&amp; chmod -R 0777 cache uploads inc/settings.php inc/config.php</pre>
+<pre>lynx -crawl -dump https://www.mybb.com/download/latest &gt; mybb.zip &amp;&amp; unzip mybb.zip &quot;Upload/*&quot; &amp;&amp; mv Upload/* . &amp;&amp; rm -Rf Upload mybb.zip &amp;&amp; mv inc/config.default.php inc/config.php &amp;&amp; chmod -R 0777 cache uploads inc/settings.php inc/config.php</pre>
 <p><br style="clear:both" />
 </p>
 <div style="border: 1px solid #ddd; background-color: #f5f5f5; padding: 5px; margin: 5px;">
@@ -97,6 +97,3 @@ categories: ["mybb16_install"]
 </div>
 <p><br />
 </p>
-
-
-
