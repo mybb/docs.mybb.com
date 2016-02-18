@@ -1,9 +1,9 @@
 name:      MyBB Documentation
-markdown:  redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "tables", "with_toc_data", "autolink"]
+markdown:  kramdown
+kramdown:
+  input: GFM
 pygments:  true
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 baseurl:   //docs.mybb.com
 mainsiteurl: //www.mybb.com
