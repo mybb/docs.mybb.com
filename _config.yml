@@ -2,7 +2,6 @@ name:      MyBB Documentation
 markdown:  kramdown
 kramdown:
   input: GFM
-pygments:  true
 highlighter: rouge
 permalink: pretty
 baseurl:   //docs.mybb.com
