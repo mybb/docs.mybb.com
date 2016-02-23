@@ -6,7 +6,7 @@ categories: [extend]
 
 ## Extend Site Documentation - Project Owners
 
-[Main Page](https://docs.mybb.com/extend)
+[Main Page]({{ site.baseurl }}/extend)
 
 ### Control Panel
 
