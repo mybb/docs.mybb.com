@@ -17,7 +17,7 @@ Themes can be found at the MyBB Extend site (Extend) - [MyBB Mods - Themes](http
 Themes discussion, relases, requests and support can be found at [MyBB Community Forums - Themes](http://community.mybb.com/forum-103.html).
 
 You can also find MyBB themes at lot of other sites on the internet, but be sure that that themes are 1.8.x version compatible.
-For 1.6 Themes check [MyBB 1.6 Documentation](https://docs.mybb.com/1.6/), or directly [MyBB 1.6 Themes](https://docs.mybb.com/1.6/Admin-CP-Themes/).
+For 1.6 Themes check [MyBB 1.6 Documentation]({{ site.baseurl }}/1.6/), or directly [MyBB 1.6 Themes]({{ site.baseurl }}/1.6/Admin-CP-Themes/).
 
 ## Installing themes
 

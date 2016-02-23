@@ -6,7 +6,7 @@ categories: [extend]
 
 ## Extend Site Documentation
 
-[Main Page](https://docs.mybb.com/extend)
+[Main Page]({{ site.baseurl }}/extend)
 
 ### For Project Contributors
 

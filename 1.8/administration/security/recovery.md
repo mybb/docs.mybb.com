@@ -97,15 +97,15 @@ But this is just MyBB's side. In addition to checking MyBB's logs, we also recom
 
 ### Replace All the Files
 
-To ensure that your MyBB installation is clean and no extra files have been added, you should delete all your files and upload a fresh copy of the latest version of MyBB. You only really need to backup your `inc/config.php` file. And even that should be double checked against the [default structure of the file](https://docs.mybb.com/Incconfigphp.html). Pay attention to your database details specifically, as well as your admin directory, super admins, etc.
+To ensure that your MyBB installation is clean and no extra files have been added, you should delete all your files and upload a fresh copy of the latest version of MyBB. You only really need to backup your `inc/config.php` file. And even that should be double checked against the [default structure of the file]({{ site.baseurl }}/Incconfigphp.html). Pay attention to your database details specifically, as well as your admin directory, super admins, etc.
 
 If you have a lot of plugins, images, language packs or custom modifications, you should create a full backup and upload these things later on. Note that it is possible that a vulnerability lies within these files, so make sure to review them carefully. In the future consider using the [Patches](https://mods.mybb.com/view/patches) plugin to edit all of the core files. This makes it incredibly easy to restore patches when you're upgrading or replacing files.
 
-Deleting the files and re-uploading a fresh copy of MyBB also has the benefit of updating to the latest code. If you were running an older version of MyBB - which is why most forums get hacked - you will now be running on code free of any known vulnerabilities. To upgrade your forum, if it wasn't the latest version, follow the [Upgrade](https://docs.mybb.com/1.8/install/upgrade/) documentation.
+Deleting the files and re-uploading a fresh copy of MyBB also has the benefit of updating to the latest code. If you were running an older version of MyBB - which is why most forums get hacked - you will now be running on code free of any known vulnerabilities. To upgrade your forum, if it wasn't the latest version, follow the [Upgrade]({{ site.baseurl }}/1.8/install/upgrade/) documentation.
 
 ### Check CHMOD Permissions
 
-If certain files or folders have unnecessary permissions, you may be up against a security risk. Files and folders should only have the permissions required by MyBB to run. There is no specific recommended set of permissions. It varies from server to server, because they are configured differently. For more information, read the Docs page on [CHMOD permissions](https://docs.mybb.com/CHMOD_Files.html) or contact your web host for their recommendations.
+If certain files or folders have unnecessary permissions, you may be up against a security risk. Files and folders should only have the permissions required by MyBB to run. There is no specific recommended set of permissions. It varies from server to server, because they are configured differently. For more information, read the Docs page on [CHMOD permissions]({{ site.baseurl }}/CHMOD_Files.html) or contact your web host for their recommendations.
 
 ### Check New Users
 
@@ -177,4 +177,4 @@ We hope you never have to go through the "recovery" steps in this guide. What yo
 
 ## New Security Measures
 
-Your forum is safe, but you shouldn't stop here. You should take new security measures immediately to prevent this from happening again. See [Protecting Your MyBB Forum](https://docs.mybb.com/1.8/administration/security/protection).
+Your forum is safe, but you shouldn't stop here. You should take new security measures immediately to prevent this from happening again. See [Protecting Your MyBB Forum]({{ site.baseurl }}/1.8/administration/security/protection).
