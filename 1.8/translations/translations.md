@@ -10,7 +10,7 @@ Each board comes with the English language pack by default. It is recommended th
 
 ### Finding Translations
 
-The complete translations that have been submitted to the MyBB Group are listed on the [MyBB Mods website](http://mods.mybb.com) and can also be found in the [Translation Releases](http://community.mybb.com/forum-169.html) forum.
+The complete translations that have been submitted to the MyBB Group are listed on the [MyBB Mods website](https://mods.mybb.com) and can also be found in the [Translation Releases](http://community.mybb.com/forum-169.html) forum.
 
 More discussions about translations may be found in the [Translation Discussion and Development](http://community.mybb.com/forum-21.html) forum.
 

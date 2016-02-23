@@ -28,7 +28,7 @@ Configuring SEF URLs for an nginx server requires some knowledge of editing a mu
 
 1. Edit the configuration for the virtual host that serves your MyBB community, then add the following to the `location /` block, ensuring that occurrences of `MyBB` below are replaced with the directory of your MyBB installation, if necessary:
 
-	```nginx
+	```
 	rewrite ^/MyBB/forum-([0-9]+)\.html$ /MyBB/forumdisplay.php?fid=$1;
 	rewrite ^/MyBB/forum-([0-9]+)-page-([0-9]+)\.html$ /MyBB/forumdisplay.php?fid=$1&page=$2;
 	rewrite ^/MyBB/thread-([0-9]+)\.html$ /MyBB/showthread.php?tid=$1;
