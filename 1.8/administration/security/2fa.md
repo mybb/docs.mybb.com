@@ -18,13 +18,13 @@ The following apps can be used as Two-Factor Authentication Apps. Note that this
 	<tr>
 		<th>Google Authenticator</th>
 		<td><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2"><img src="/assets/images/1.8/google-play-badge.png" alt="Get Google Authenticator on Google Play" /></a></td>
-		<td><a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8" target="itunes_store"><img src="https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" /></a></td>
+		<td><a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8" target="itunes_store"><img src="/assets/images/1.8/app-store.png" alt="Download on the App Store" /></a></td>
 		<td>-</td>
 	</tr>
 	<tr>
 		<th>Authy</th>
 		<td><a href="https://play.google.com/store/apps/details?id=com.authy.authy"><img src="/assets/images/1.8/google-play-badge.png" alt="Get Authy on Google Play" />></a></td>
-		<td><a href="https://itunes.apple.com/us/app/authy/id494168017?mt=8&uo=4" target="itunes_store"><img src="https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" /></a></td>
+		<td><a href="https://itunes.apple.com/us/app/authy/id494168017?mt=8&uo=4" target="itunes_store"><img src="/assets/images/1.8/app-store.png" alt="Download on the App Store" /></a></td>
 		<td>-</td>
 	</tr>
 	<tr>
