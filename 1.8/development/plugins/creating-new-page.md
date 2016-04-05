@@ -14,7 +14,7 @@ Using misc.php allows you to add custom "pages" without creating a new PHP file 
 
 An easy way to add a custom page via a plugin is to use the `misc_start` hook.
 
-{% highlight php startinline %}
+```php
 $plugins->add_hook('misc_start', 'my_action');
 
 // In the body of your plugin
@@ -37,7 +37,7 @@ function my_action()
         output_page($page);
     }
 }
-{% endhighlight %}
+```
 
 This should create a page nicely wrapped in the template header and footer, accessible by navigating to `misc.php?action=myaction`.
 

@@ -72,7 +72,7 @@ function myplugin_deactivate()
 
 **The functions listed above _must_ be prefixed with the name of the plugin file.** Therefore you should replace `myplugin` with the name of your plugin file, for example `myplugin_info` should be called `foobar_info` if your plugin file was named `foobar.php`.
 
-The `_info()` function is the only required function. However, you should ensure any changes made by install or activate are reversed in uninstall or deactivate, respectively. For example, if you create a table in _install() you should remove that table in _uninstall().
+The `_info()` function is the only required function. However, you should ensure any changes made by install or activate are reversed in uninstall or deactivate, respectively. For example, if you create a table in \_install() you should remove that table in \_uninstall().
 
 Complete the body of the functions in your plugin file as required:
 
@@ -93,15 +93,15 @@ Returns an array of information about the plugin:
 #### N.B.
 The _codename_ is the same as the plugin name used to prefix the functions. A good way to have it is to use the following code:
 
-{% highlight php startinline %}
+```php
 $codename = str_replace('.php', '', basename(__FILE__));
-{% endhighlight %}
+```
 
 ### `_install()`
 
 Called whenever a plugin is installed by clicking the "Install" button in the plugin manager.
 
-If no install routine exists, the install button is not shown in the Admin CP and it is assumed that any work will be performed in the _activate() routine.
+If no install routine exists, the install button is not shown in the Admin CP and it is assumed that any work will be performed in the \_activate() routine.
 
 It is common to create required tables, fields and settings in this function.
 
@@ -113,7 +113,7 @@ This should return TRUE if the plugin is installed (by checking tables, fields e
 
 It is common to use the existence of a table or setting created in the `_install()` function to determine whether the plugin is installed or not. Below is a common implementation, assuming a table called `my_plugin` is created:
 
-{% highlight php startinline %}
+```php
 function myplugin_is_installed()
 {
     global $db;
@@ -123,7 +123,7 @@ function myplugin_is_installed()
     }
     return false;
 }
-{% endhighlight %}
+```
 
 ### `_uninstall()`
 
@@ -136,14 +136,14 @@ Called whenever a plugin is activated via the Admin CP. This should essentially 
 ### `_deactivate`
 
 Called whenever a plugin is deactivated. This should essentially "hide" the plugin from view by removing templates/template changes etc.
-It should not, however, remove any information such as tables, fields etc.; that should be handled by an _uninstall routine.
-When a plugin is uninstalled, this routine will also be called before _uninstall() if the plugin is active.
+It should not, however, remove any information such as tables, fields etc.; that should be handled by an \_uninstall routine.
+When a plugin is uninstalled, this routine will also be called before \_uninstall() if the plugin is active.
 
 ## Plugin Hooks
 
 For your plugin to actually work, you need to "hook" your code into MyBB. This can be done in many places throughout MyBB code.
 
-You can find a list of hooks [here](hooks). Alternatively you can run the following command on a *nix system in a MyBB directory:
+You can find a list of hooks [here](hooks). Alternatively you can run the following command on a \*nix system in a MyBB directory:
 
 `grep -inr '$plugins->run_hooks' ./`
 
@@ -151,9 +151,9 @@ You can find a list of hooks [here](hooks). Alternatively you can run the follow
 
 First add the hook by putting the following code above the `_info()` function near the top of your plugin file:
 
-{% highlight php startinline %}
+```php
 $plugins->add_hook('<hook name>', '<function name>');
-{% endhighlight %}
+```
 
 Where `<hook name>` is the name of the hook you wish to use, and `<function name>` is the name of a function in your plugin that will be run every time this hook is called.
 
@@ -161,26 +161,26 @@ Where `<hook name>` is the name of the hook you wish to use, and `<function name
 
 Here is an example which used the `index_start` hook and calls the `do_something()` function:
 
-{% highlight php startinline %}
+```php
 $plugins->add_hook('index_start', 'do_something');
-{% endhighlight %}
+```
 
 Now you can implement the function you specified. This function must be either in your plugin file or included by your plugin.
 
 For example, if you defined the following function in this plugin file it would be called every time `index_start` is called:
 
-{% highlight php startinline%}
+```php
 function do_something()
 {
     // Do whatever you want here
 }
-{% endhighlight %}
+```
 
 To achieve most things, you'll need to interact with the MyBB global variables such as `$mybb`, `$user`, `$db`, etc.
 
 For example, this would test if the current user is an Admin:
 
-{% highlight php startinline %}
+```php
 function do_something()
 {
     global $mybb;
@@ -193,7 +193,7 @@ function do_something()
         // Everyone else
     }
 }
-{% endhighlight %}
+```
 
 ### Hooks with Arguments
 
@@ -202,14 +202,14 @@ In some cases, you must also return that value (which your plugin may have modif
 
 Here is an example of two hooks:
 
-{% highlight php startinline %}
+```php
 $plugins->add_hook("pre_output_page", "hello_world");
 $plugins->add_hook("postbit", "hello_world_postbit");
-{% endhighlight %}
+```
 
 And two associated plugin functions, the first modifies the content of `$content` and returns it, the second modifies a value passed by reference.
 
-{% highlight php startinline %}
+```php
 function hello_world($page)
 {
 	// This will add Hello World to the top of pages
@@ -226,7 +226,7 @@ function hello_world_postbit(&$post)
 	// This will add Hello World to the top of all posts
 	$post['message'] = '<strong>Hello world!</strong><br />' . $post['message'];
 }
-{% endhighlight %}
+```
 
 You'll need to check the context where the hook is called to determine whether it is necessary to return the argument back, or whether it should be modified by reference.
 
@@ -236,12 +236,12 @@ There are two other optional arguments which can be passed to `$plugins->add_hoo
 
 For example:
 
-{% highlight php startinline %}
+```php
 $plugins->add_hook('<hook name>', '<function name>', '<priority>', '<file>');
 
 // With values
 $plugins->add_hook('index_start', 'do_something', 5, 'anotherfile.php');
-{% endhighlight %}
+```
 
 The `<priority>` takes into account if there are two or more functions that are associated with a hook. A lesser value in the priority parameter will mean the function will be executed before the other function(s) with a higher value priority (for example, a priority `0` will execute before `10`). The default priority is `10`. Usually you will not need to use this parameter unless you have two plugins that conflict with each other on one hook.
 
@@ -258,7 +258,7 @@ Settings are usually added and removed in the `_install()` and `_uninstall()` me
 
 To create settings you must first create a setting group and get its ID:
 
-{% highlight php startinline %}
+```php
 global $db, $mybb;
 
 $setting_group = array(
@@ -270,11 +270,11 @@ $setting_group = array(
 );
 
 $gid = $db->insert_query("settinggroups", $setting_group);
-{% endhighlight %}
+```
 
 Now you can add some settings to the group:
 
-{% highlight php startinline %}
+```php
 $setting_array = array(
     // A text setting
     'fav_colour' => array(
@@ -312,7 +312,7 @@ foreach($setting_array as $name => $setting)
 
 // Don't forget this!
 rebuild_settings();
-{% endhighlight %}
+```
 
 The following setting field type (aka. optionscode) values are supported:
 
@@ -343,7 +343,7 @@ If you add settings in your `_install()` function you must also remove them in y
 
 Here is an example of removing the above settings:
 
-{% highlight php startinline %}
+```php
 global $db;
 
 $db->delete_query('settings', "name IN ('fav_colour','green_good','enable_lasers')");
@@ -351,13 +351,13 @@ $db->delete_query('settinggroups', "name = 'mysettinggroup'");
 
 // Don't forget this
 rebuild_settings();
-{% endhighlight %}
+```
 
 ### Using Settings for `_is_installed()`
 
 You may wish to use one of your settings to implement the `_is_installed()` function; here is an example:
 
-{% highlight php startinline %}
+```php
 
 global $mybb;
 if(isset($mybb->settings['green_good']))
@@ -366,4 +366,4 @@ if(isset($mybb->settings['green_good']))
 }
 
 return false;
-{% endhighlight %}
+```

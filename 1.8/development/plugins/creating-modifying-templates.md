@@ -10,7 +10,7 @@ If you want to insert a whole block of HTML rather than a simple value, it's gen
 
 Templates are usually created in the `_install()` function. They can be created like this:
 
-{% highlight php startinline %}
+```php
 global $db;
 
 $template = '<strong>{$hello_world}</strong>';
@@ -24,24 +24,24 @@ $insert_array = array(
 );
 
 $db->insert_query('templates', $insert_array);
-{% endhighlight %}
+```
 
 The template can be deleted in your `_uninstall()` function using:
 
-{% highlight php startinline %}
+```php
 $db->delete_query("templates", "title = 'hello_world_template'");
-{% endhighlight %}
+```
 
 Once your plugin has been installed, you should now be able to see the template you created in your Admin CP under `Templates & Style > Templates > Global Templates`.
 
 To replace a variable inserted into another template with your custom template you must do the following from your hook function:
 
-{% highlight php startinline %}
+```php
 global $templates, $myVar;
 
 $hello_world = 'foobar';
 eval('$myVar  = "' . $templates->get('hello_world_template') . '";');
-{% endhighlight %}
+```
 
 Note that `$hello_world` does not have to be global, yet it's passed to your custom template.
 
@@ -61,7 +61,7 @@ A variable can easily be inserted into a template using the `find_replace_templa
 
 For this purpose, you usually replace the string with itself plus your variable, for example:
 
-{% highlight php startinline %}
+```php
 require_once MYBB_ROOT."/inc/adminfunctions_templates.php";
 
 find_replace_templatesets(
@@ -69,7 +69,7 @@ find_replace_templatesets(
     "#" . preg_quote('') . "#i",
     '<body>{$myVar}'
 );
-{% endhighlight %}
+```
 
 This would insert `{$myVar}` after `<body>` in the `index` template.
 
@@ -79,18 +79,18 @@ This would insert `{$myVar}` after `<body>` in the `index` template.
 
 Global variables can be accessed from templates, so the easiest way to access a variable in your hook function from a template is to make it global:
 
-{% highlight php startinline %}
+```php
 global $myVar;
 
 $myVar = 'Hello World!';
-{% endhighlight %}
+```
 
 This will insert **Hello World!** where the `{$myVar}` variable is in the template. `$myVar` can, of course, be any value, such as one dynamically generated or from a database query.
 
 An alternative solution is to modify an existing global variable such as `$user`. For example, you could insert `{$user['favorite_colour']}` into a template, then do the following in your hook function:
 
-{% highlight php startinline %}
+```php
 global $user;
 
 $user['favorite_colour'] = 'Blue';
-{% endhighlight %}
+```

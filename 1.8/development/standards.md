@@ -36,30 +36,30 @@ Short PHP open and close tags (`<? ?>` or `<?= ?>`) are not permitted. Additiona
 
 When a string is literal (contains no variable substitutions), the apostrophe or ‘single quote’ must be used to demarcate the string:
 
-{% highlight php startinline %}
+```php
 $a = 'Example String';
-{% endhighlight %}
+```
 
 When a literal string itself contains apostrophes, it is permitted to demarcate the string with quotation marks or “double quotes”. This is especially encouraged for SQL statements:
 
-{% highlight php startinline %}
+```php
 $query = "SELECT id, name FROM people WHERE name='Joe Bloggs'";
-{% endhighlight %}
+```
 
 Variable substitution is permitted in strings using either of the following forms:
 
-{% highlight php startinline %}
+```php
 $example = "Hello ".$name.", welcome back";
 $example = 'Hello '.$name.', welcome back!';
 $example = "Hello {$name}, welcome back!";
-{% endhighlight %}
+```
 
 String concatenation should be performed by terminating the string with a period (`.`). To help improve readability, if concatenation is required in a large string, it’s recommended to separate it in to appended variables:
 
-{% highlight php startinline %}
+```php
 $example = 'Hello';
 $example .= $name;
-{% endhighlight %}
+```
 
 ### Variables
 
@@ -67,14 +67,14 @@ Variable names may only contain alphanumeric characters. To promote variable rea
 
 For class member variables, the variable declaration must be prefixed as either public, private or protected. Declaration as var, is discouraged. Examples include:
 
-{% highlight php startinline %}
+```php
 $var = "example";
 
 class Example {
     private $sample_variable = true;
     public $example_variable_name = 'sample';
 }
-{% endhighlight %}
+```
 
 Verbosity is encouraged. Variable names should clearly describe what they contain. Terse variable names such as `$i` and `$n` are discouraged for anything other than small loop contexts. The use of variables such as `$tmp` and `$temp` are also not permitted.
 
@@ -82,7 +82,7 @@ Verbosity is encouraged. Variable names should clearly describe what they contai
 
 Array item declarations should each be on their own new line and indented to promote readability in the block.
 
-{% highlight php startinline %}
+```php
 $array = array(
     "item"  => "value",
     "item2" => array(
@@ -90,7 +90,7 @@ $array = array(
         2
     )
 );
-{% endhighlight %}
+```
 
 ### Control Structures
 
@@ -98,7 +98,7 @@ Control structures include `if`, `for`, `while`, and `switch` statements. Curly 
 
 Within a control structure, operators must be separated by spaces for readability. The opening brace must be written on its own line directly under the conditional. The closing brace is also written on its own line. Any content within braces must be indented.
 
-{% highlight php startinline %}
+```php
 if($example != "sample")
 {
     $example = "sample";
@@ -106,32 +106,32 @@ if($example != "sample")
 else {
     $example = "test";
 }
-{% endhighlight %}
+```
 
 Control structures should be kept as simple as possible and large nested if structures should also be avoided. An alternative to using an `else` would be to return before the if statement.
 
 Example switch statement:
 
-{% highlight php startinline%}
+{% highlight php%}
 switch($example) {
     case "example":
         $example = "sample";
         break;
 }
-{% endhighlight %}
+```
 
 For the sake of code simplicity, variable assignment in conditionals is also not supported. The variable should be assigned out of the conditional and the conditional simply check the variable value. For example:
 
-{% highlight php startinline %}
+```php
 if(($result = $db->query("SELECT * FROM table")) && ($row = $db->fetch_array($result)) && $example == 1)
 {
     // Example
 }
-{% endhighlight %}
+```
 
 Should be written as:
 
-{% highlight php startinline %}
+```php
 $result = $db->query(“SELECT * FROM table”);
 $row = $db->fetch_array($result);
 
@@ -139,7 +139,7 @@ if($row && $example == 1)
 {
     // Example
 }
-{% endhighlight %}
+```
 
 ### Functions and Methods
 
@@ -156,18 +156,18 @@ Function names should start with a verb describing the action that is being perf
 
 When calling a function, arguments should be separated by spaces:
 
-{% highlight php startinline %}
+```php
 $example = get_thread($terms, $argument2);
 $threads->get_threads($terms, $argument3);
-{% endhighlight %}
+```
 
 When including/requiring files, the language construct should be used, instead of the function.
 
-{% highlight php startinline %}
+```php
 require_once(MYBB_ROOT."inc/functions.php"); // Function (Don't use)
 
 require_once MYBB_ROOT."inc/functions.php"; // Language construct (Use)
-{% endhighlight %}
+```
 
 ### Passing by Reference
 
@@ -182,11 +182,11 @@ Class names should be as descriptive as possible. Avoid using abbreviations wher
 
 Every class must have a documentation block that conforms to the PHPDocumentor standard (covered below).
 
-{% highlight php startinline %}
+```php
 class Plugin_System {
     private $example;
 }
-{% endhighlight %}
+```
 
 ### Constants
 
@@ -238,12 +238,12 @@ When increasing or decreasing the value of a variable, the arithmetic operator (
 
 To convert a variable's type you should use type casting.
 
-{% highlight php startinline %}
+```php
 $foo = '5';
 $bar = (int)$foo;
 
 $baz = (string)5;
-{% endhighlight %}
+```
 
 **Do not** use `settype()`, `intval()`, `strval()`, or similar functions.
 
@@ -253,15 +253,15 @@ Before any data is output to the browser that has had the possibility of user-ma
 
 For example, if you are expecting an integer, you may typecast the item to that format:
 
-{% highlight php startinline %}
+```php
 $variable = (int)$variable;
-{% endhighlight %}
+```
 
 For other kinds of data, such as a thread name, where the value is user-generated text, it should be sanitized using the `htmlspecialchars_uni()` function, which will replace unwanted characters with their HTML entity equivalents:
 
-{% highlight php startinline %}
+```php
 $variable = htmlspecialchars_uni($variable);
-{% endhighlight %}
+```
 
 ### PHPDocumentor Standards
 
@@ -271,11 +271,11 @@ Preceding every function, class or method declaration, there should be an associ
 
 Each line of the PHPDoc comment must contain an asterisk that sits below the previous asterisk.
 
-{% highlight php startinline %}
+```php
 /**
  *
  */
-{% endhighlight %}
+```
 
 #### Class Member Variables
 
@@ -313,7 +313,7 @@ For example:
 
 A complete example is shown below.
 
-{% highlight php startinline %}
+```php
 /**
  * A class for searching for threads in the database.
  */
@@ -337,7 +337,7 @@ class Thread_Search
         // ...
     }
 }
-{% endhighlight %}
+```
 
 ## Database Standards
 
@@ -345,36 +345,36 @@ class Thread_Search
 
 Database queries should be broken up over multiple lines to promote code readability. Reserved words such as `SELECT`, `WHERE` and `ORDER BY` should be written in uppercase characters. Table and column names may be lowercase. All variable values must be enclosed within quotes. Each query should start on a new line, indented from the variable above to also promote readability. An example is shown below.
 
-{% highlight php startinline %}
+```php
 $query = " SELECT * FROM test ";
 $query = "SELECT t1.column1, t2.column2 FROM table1 t1 LEFT JOIN table2 t2 ON (t1.column1=t2.column2) ORDER BY t1.column1 ASC; ";
-{% endhighlight %}
+```
 
 ### Simple Select Queries
 
 Database select queries which do not require any joins, advanced grouping, or other functionality can use `simple_select()`. This method takes a table name, the rows to be returned, a where clause, and an array of ordering and limiting options. Example use is as follows:
 
-{% highlight php startinline %}
+```php
 $query = $db->simple_select("table", "*", "id='123'", array(
     'order_by' => 'column2',
     'order_dir' => 'DESC',
     'limit_start' => 0,
     'limit' => 5
 ));
-{% endhighlight %}
+```
 
 ### Insert Queries
 
 Database insert queries should be performed using the `insert_query()` method. This method takes both a table name and an associative array of values to be inserted. Values *must* be escaped using the `escape_string` method. Example use is as follows:
 
-{% highlight php startinline %}
+```php
 $new_record = array(
     "column" => $db->escape_string('test'),
     "column2" => 1
 );
 
 $db->insert_query('table', $new_record);
-{% endhighlight %}
+```
 
 ### Update Queries
 
@@ -382,21 +382,21 @@ Update queries follow a similar structure to insert queries, but use `update_que
 
 Values *must* be escaped and any conditions need to be explicitly escaped using the `escape_string()` method. Example use is as follows:
 
-{% highlight php startinline %}
+```php
 $updated_record = array(
     "column" => $db->escape_string('Value')
 );
 
 $db->update_query('table', $updated_record, "condition1='".$db->escape_string('test')."'");
-{% endhighlight %}
+```
 
 ### Delete Queries
 
 Delete queries should be performed using the `delete_query()` method. This method takes the table name, and optionally any conditions that must be matched (`WHERE` clause). The conditions *must* be escaped using the `escape_string()` method, as mentioned below. Example use is as follows:
 
-{% highlight php startinline %}
+```php
 $db->delete_query('table', 'condition1=value1');
-{% endhighlight %}
+```
 
 ### Sanitization
 

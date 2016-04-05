@@ -10,17 +10,17 @@ This is caused by Apache's Stack Size, you can either increase the Stack Size or
 ## Increasing the Stack Size
 Add the following code to your `httpd.conf` and restart Apache:
 
-{% highlight apacheconf %}
+```apacheconf
 <IfModule mpm_winnt_module>
    ThreadStackSize 8*1024*1024
 </IfModule>
-{% endhighlight %}
+```
 
 ## Disabling the Function
 Open `merge/index.php` and search for:
-{% highlight php startinline %}
+```php
 define("SKIP_ENCODING_DETECTION", 0);
-{% endhighlight %}
+```
 Replace the `0` with a `1`.
 
 # Attachment Permissions are Wrong

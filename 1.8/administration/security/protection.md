@@ -80,17 +80,17 @@ With MyBB 1.8, an Admin Control Panel "Secret PIN" setting was added to the core
 - Open `inc/config.php`
 - **FIND** or **ADD**:
 
-	{% highlight php startinline %}
+	```php
 	$config['secret_pin']
-	{% endhighlight %}
+	```
 - Set the variable to a value, such as `'S0me p1n'`.
 - **DONE**
 
 **Example:**
 
-{% highlight php startinline %}
+```php
 $config['secret_pin'] = 'S0me p1n';
-{% endhighlight %}
+```
 
 ## Administrator Accounts
 
@@ -122,9 +122,9 @@ Changing your table prefix can prove to be helpful in certain cases. If a hacker
 
 Allowing HTML to be used in posts is a terrible, terrible idea. That is why MyBB does not allow it by default. Unless you are absolutely certain that you want to use it (in which case you should install [HTML Purifier](https://mods.mybb.com/view/htmlpurifier)), it should be disabled on all forums. To do this quickly, run the following SQL query.
 
-{% highlight sql %}
+```sql
 UPDATE `mybb_forums` SET `allowhtml` = '0';
-{% endhighlight %}
+```
 
 Afterwards you should go to Admin CP > Tools & Maintenance > Cache Manager > forums > Rebuild Cache to make sure this change is cached and is applied immediately.
 

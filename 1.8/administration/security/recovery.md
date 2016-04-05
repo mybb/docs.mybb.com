@@ -49,27 +49,27 @@ Having audited your computer and reset all your passwords, the first thing you w
 
 First let's check if the default administrator group actually has permission to access the Admin CP. To do so, run the following SQL query.
 
-{% highlight sql %}
+```sql
 UPDATE `mybb_usergroups` SET `cancp`= '1' WHERE `gid` = '4';
-{% endhighlight %}
+```
 
 And to make sure your account is in the administrator group, run the following SQL query. Replace `X` with your uid.
 
-{% highlight sql %}
+```sql
 UPDATE `mybb_users` SET usergroup = '4' WHERE uid = 'X';
-{% endhighlight %}
+```
 
 Next, you want to open the `inc/config.php` file in a text editor. Find the code below within that file and make sure your uid is within quotes. If you have multiple administrators, you can separate them with a comma. It is recommended to stick with your uid only for now though.
 
-{% highlight php startinline %}
+```php
 $config['super_admins'] = '1';
-{% endhighlight %}
+```
 
 Finally, to reset your password, in case the hacker changed it too, run the following SQL query. Remember to replace `X` with your uid and `example` with the desired new password.
 
-{% highlight sql %}
+```sql
 UPDATE `mybb_users` SET `password` = md5('example'), `salt` = '' WHERE `uid` = 'X';
-{% endhighlight %}
+```
 
 ### Restrict Access to the Forum
 
@@ -79,11 +79,11 @@ You should close the forum using the global switch in settings. Go to Admin CP >
 
 That will prevent the hacker from acessing the front-end, but the website itself is still accessible. If he planted an exploit somewhere else, he might be able to use it. So what you should do now is disallow all visitors, except yourself, from accessing your website. Place the following code in your root `.htaccess` file. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
 
-{% highlight apacheconf %}
+```apacheconf
 Order deny,allow
 Deny from all
 Allow from 127.0.0.1
-{% endhighlight %}
+```
 
 If you find yourself unable to access your website during this process, it is possible that you have a dynamic IP, in which case you will have to repeat the above procedure whenever your IP changes.
 
@@ -147,9 +147,9 @@ Changing your table prefix can prove to be helpful in certain cases. If a hacker
 
 Allowing HTML to be used in posts is a terrible, terrible idea. That is why MyBB does not allow it by default. Unless you are absolutely certain that you want to use it (in which case you should install [HTML Purifier](https://mods.mybb.com/view/htmlpurifier)) it should be disabled on all forums. To do this quickly, run the following SQL query.
 
-{% highlight sql %}
+```sql
 UPDATE `mybb_forums` SET `allowhtml` = '0';
-{% endhighlight %}
+```
 
 Afterwards you should go to Admin CP > Tools & Maintenance > Cache Manager > forums > Rebuild Cache to make sure this change is cached and is applied immediately.
 

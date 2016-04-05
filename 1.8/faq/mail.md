@@ -18,7 +18,7 @@ MyBB relies on the [PHP Mail function](http://php.net/manual/en/function.mail.ph
 
 Create a new `.php` file with this content:
 
-{% highlight php %}
+```php
     <?php 
      error_reporting(E_ALL); 
        $to = 'your.email@address.com'; 
@@ -31,7 +31,7 @@ Create a new `.php` file with this content:
         echo 'PHP could not send the mail'; 
        } 
     ?>
-{% endhighlight %}
+```
 
 Replace `your.email@address.com` with your email address. Upload this file to your webserver and browse to it in order to run the test.
 
@@ -44,19 +44,19 @@ Some webhosts place restrictions on PHP mail. For example, some require that the
 If your webhost only allows sites to send mail from their own domain, edit the file `inc/functions.php` to try a workaround fix.
 
 Find:
-{% highlight php startinline%}
+{% highlight php%}
     mail($to, $subject, $message, $headers);
-{% endhighlight %} 
+``` 
  
 Add before:
-{% highlight php startinline %}
+```php
     ini_set("sendmail_from", "forum@YOURDOMAIN.com"); 
-{% endhighlight %}
+```
 
 The final result of the edit should be:
-{%highlight php startinline %}
+{%highlight php %}
     ini_set("sendmail_from", "forum@YOURDOMAIN.com"); 
     mail($to, $subject, $message, $headers);
-{% endhighlight %}
+```
 
 `YOURDOMAIN` in the above code must be replaced by the domain where the forum is hosted.

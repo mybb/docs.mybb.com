@@ -36,7 +36,7 @@ It receives four parameters:
 
 ### Example
 
-{% highlight php startinline %}
+```php
 global $db;
 
 $query = $db->simple_select("settings", "*", "name='boardclosed_reason'", array(
@@ -50,11 +50,11 @@ $settings = $db->fetch_array($query);
 echo "<pre>";
 print_r($settings);
 echo "</pre>";
-{% endhighlight %}
+```
 
 ### Output
 
-{% highlight php startinline %}
+``php
 Array
 (
     [sid] => 6
@@ -66,7 +66,7 @@ Array
     [disporder] => 2
     [gid] => 2
 )
-{% endhighlight %}
+```
 
 ## `$db->fetch_array`
 
@@ -74,7 +74,7 @@ Returns an array of values for the first row (can be iterated through with a whi
 
 ### Example
 
-{% highlight php startinline %}
+```php
 $query = $db->query("SELECT * FROM table WHERE field='value'");
 
 while($result = $db->fetch_array($query))
@@ -83,7 +83,7 @@ while($result = $db->fetch_array($query))
     $data2 = $result['FieldName2'];
     // ...
 }
-{% endhighlight %}
+```
 
 ## `$db->fetch_field`
 
@@ -92,10 +92,10 @@ Returns the value of the field specified from the resource query.  Receives thre
 <dl>
     <dt>resource</dt>
     <dd>The resource query.</dd>
-    
+
     <dt>field</dt>
     <dd>The field name to retrieve.</dd>
-    
+
     <dt>row</dt>
     <dd>The row number to get the data from.  Default is current row.</dd>
 </dl>
@@ -134,7 +134,7 @@ Runs an insert query on a table in the database.  Multiple rows can be inserted 
 <dl>
     <dt>string</dt>
     <dd>The table name to perform the query on.</dd>
-    
+
     <dt>array</dt>
     <dd>A multidimensional array of fields and values.  Each array key for the individual arrays must be the same, even if blank.</dd>
 </dl>
@@ -151,7 +151,7 @@ It receives three parameters:
 
     <dt>array</dt>
     <dd>an update array</dd>
-    
+
     <dt>where<dt>
     <dd>The sql where clause.</dd>
 </dl>
@@ -163,10 +163,10 @@ Used to perform a delete query on a table in a database.  Receives three paramet
 <dl>
     <dt>table</dt>
     <dd>The name of the table.</dd>
-    
+
     <dt>where</dt>
     <dd>The where clause.</dd>
-    
+
     <dt>limit</dt>
     <dd>The maximum amount of rows to be deleted.  Default is unlimited.</dd>
 </dl>
@@ -194,7 +194,7 @@ Moves the internal pointer to the specified row.  Receives two parameters:
 <dl>
     <dt>resource</dt>
     <dd>The resource query.</dd>
-    
+
     <dt>int</dt>
     <dd>The row to move the internal pointer to.</dd>
 </dl>
