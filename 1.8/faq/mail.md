@@ -44,7 +44,7 @@ Some webhosts place restrictions on PHP mail. For example, some require that the
 If your webhost only allows sites to send mail from their own domain, edit the file `inc/functions.php` to try a workaround fix.
 
 Find:
-{% highlight php%}
+```php
     mail($to, $subject, $message, $headers);
 ``` 
  
@@ -54,7 +54,7 @@ Add before:
 ```
 
 The final result of the edit should be:
-{%highlight php %}
+```php
     ini_set("sendmail_from", "forum@YOURDOMAIN.com"); 
     mail($to, $subject, $message, $headers);
 ```

@@ -112,7 +112,7 @@ Control structures should be kept as simple as possible and large nested if stru
 
 Example switch statement:
 
-{% highlight php%}
+```php
 switch($example) {
     case "example":
         $example = "sample";
