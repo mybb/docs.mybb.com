@@ -146,7 +146,7 @@ Runs an update query on a table in a database.
 It receives three parameters:
 
 <dl>
-    <dt>table<dt>
+    <dt>table</dt>
     <dd>The table name</dd>
 
     <dt>array</dt>
@@ -237,11 +237,7 @@ Returns true if the specified field exists.
 
 ## `$db->shutdown_query`
 
-Runs a query thats performed when php is done parsing the file.
-
-## `$db->select_query`
-
-Runs a complex query (join queries). (Note: Depreciated in MyBB 1.4).
+Runs a query thats performed when PHP is done parsing the file.
 
 ## `$db->get_version`
 
