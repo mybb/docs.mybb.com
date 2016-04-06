@@ -152,7 +152,7 @@ It receives three parameters:
     <dt>array</dt>
     <dd>an update array</dd>
 
-    <dt>where<dt>
+    <dt>where</dt>
     <dd>The sql where clause.</dd>
 </dl>
 
