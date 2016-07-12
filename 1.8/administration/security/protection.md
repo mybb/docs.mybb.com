@@ -10,7 +10,7 @@ One thing we cannot stress enough is to always have your MyBB installation up to
 
 ## Fine Tuning the Admin CP
 
-The Admin CP is the most powerful tool in MyBB. If anyone gains access to it, they can easily deface your forum and get complete control over it. It is therefore important to guarantee that only you or your administrators can access it. For starters you should [rename your Admin CP directory and hide all links to it](http://www.mybbsecurity.net/topic-renaming-the-administrator-directory). Once you have done that it is a good idea to install [Admin CP Honeypot](http://community.mybb.com/thread-94406.html). This will take your previous Admin CP location and install a fake Admin CP, which will record the IP of anyone who tries to login to it and email you a small report.
+The Admin CP is the most powerful tool in MyBB. If anyone gains access to it, they can easily deface your forum and get complete control over it. It is therefore important to guarantee that only you or your administrators can access it. For starters you should rename your Admin CP directory and hide all links to it. Once you have done that it is a good idea to install [Admin CP Honeypot](http://community.mybb.com/thread-94406.html). This will take your previous Admin CP location and install a fake Admin CP, which will record the IP of anyone who tries to login to it and email you a small report.
 
 Now your real Admin CP directory should look something like `Svt06wbowXgMVvFmkFaz` (which you should bookmark or take note of) and the fake Admin CP will be located at `admin` (which will record the details of anyone who tries to access it). To finalize, [you should password protect your real Admin CP with HTTP Basic Auth](#Protect_the_Admin_CP_with_HTTP_Basic_Auth). Additionally you can enable the Admin CP PIN, which was added in 1.8, but having to go through all of these steps might be a little troublesome if you just want to do some quick edits.
 
@@ -112,7 +112,7 @@ The more features you give to each administrator, the more power you grant to ea
 
 ## Protect the `inc` Directory
 
-The `inc` directory in your MyBB installation should not be accessible to the end user at all. It contains sensitive information such as your database details (`inc/config.php`). Even though it is almost impossible for hackers to access that data, it's always a good idea to have an extra layer of protection. The `inc` directory doesn't need to be publicly available, so protect it completely by [disallowing access to the `inc` directory](http://www.mybbsecurity.net/topic-protecting-the-inc-directory).
+The `inc` directory in your MyBB installation should not be accessible to the end user at all. It contains sensitive information such as your database details (`inc/config.php`). Even though it is almost impossible for hackers to access that data, it's always a good idea to have an extra layer of protection. The `inc` directory doesn't need to be publicly available, so protect it completely by disallowing access to the `inc` directory.
 
 ## Change the Default Table Prefix
 
@@ -120,7 +120,7 @@ Changing your table prefix can prove to be helpful in certain cases. If a hacker
 
 ## Disallow HTML in Posts
 
-Allowing HTML to be used in posts is a terrible, terrible idea. That is why MyBB does not allow it by default. Unless you are absolutely certain that you want to use it (in which case you should install [HTML Purifier](https://mods.mybb.com/view/htmlpurifier)), it should be disabled on all forums. To do this quickly, run the following SQL query.
+Allowing HTML to be used in posts is a terrible, terrible idea. That is why MyBB does not allow it by default. Unless you are absolutely certain that you want to use it, it should be disabled on all forums. To do this quickly, run the following SQL query.
 
 ```sql
 UPDATE `mybb_forums` SET `allowhtml` = '0';
