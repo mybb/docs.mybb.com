@@ -21,7 +21,7 @@ We've broken down the installation into many smaller steps. Don't worry if it lo
 
 1. First, download the latest MyBB package from the [MyBB downloads page](https://www.mybb.com/download)
 2. After downloading the zip file, unzip/decompress the file.
-    * On Windows you can either use the [built in utility](http://windows.microsoft.com/en-au/windows-vista/compress-and-uncompress-files-zip-files) or an application such as [7-zip](http://www.7-zip.org/)
+    * On Windows you can either use the [built in utility](https://support.microsoft.com/en-gb/help/14200/windows-compress-uncompress-zip-files) or an application such as [7-zip](http://www.7-zip.org/)
     * On *nix systems you can run `unzip mybb-package-name.zip`
 
 ### Uploading Files
