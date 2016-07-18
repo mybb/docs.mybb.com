@@ -11,7 +11,7 @@ categories: [merge]
 
 # Initial Preparation
 ## Downloading the Merge System Package
-First, you need to download the Merge System package from the [MyBB website]({{ site.mainsiteurl }}/download/merge-system/). After downloading the zip file, you need to unzip the file. If you right click on the file, there should be an option similar that inludes the words "Unzip," referring to the file (if you have WinZIP, WinRAR, or a similar program installed, do as instructed by the creators of the software). Unzip the contents of the file to a folder within the same folder that the zip is in, such as a folder called "mybb" or "merge"
+First, you need to download the Merge System package from the [MyBB website](https://www.mybb.com/download/merge-system/). After downloading the zip file, you need to unzip the file. If you right click on the file, there should be an option similar that inludes the words "Unzip," referring to the file (if you have WinZIP, WinRAR, or a similar program installed, do as instructed by the creators of the software). Unzip the contents of the file to a folder within the same folder that the zip is in, such as a folder called "mybb" or "merge"
 
 ## Uploading the Files
 With the files extracted from the MyBB package, upload the 'merge' directory from the package to your existing installation of MyBB's folder. **You must keep the files inside the 'merge' directory.**
