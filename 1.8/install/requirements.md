@@ -14,10 +14,10 @@ MyBB 1.8 and the Merge System 1.8 have a few minimum system requirements:
 
 The following PHP extensions are also needed:
 
-- [SimpleXML](http://php.net/manual/en/book.simplexml.php)
-- [mbstring](http://php.net/manual/en/book.mbstring.php)
-- [gd](http://php.net/manual/en/book.image.php)
-- [The respective vendor specific database PHP extension](http://php.net/manual/en/refs.database.php)
+- [SimpleXML](https://secure.php.net/manual/en/book.simplexml.php)
+- [mbstring](https://secure.php.net/manual/en/book.mbstring.php)
+- [gd](https://secure.php.net/manual/en/book.image.php)
+- [The respective vendor specific database PHP extension](https://secure.php.net/manual/en/refs.database.php)
 
 MyBB 1.6 supports PHP >= 5.0.
 
