@@ -13,7 +13,7 @@ We've broken down the installation into many smaller steps. Don't worry if it lo
 * MyBB is easily customizable to suit your site's needs and looks.
 * Best of all, MyBB is [released under the GNU Lesser GPL licence](https://www.mybb.com/about/license), and therefore it's [entirely free](http://www.gnu.org/philosophy/free-sw.html)! No forced advertisements, no cost, no sign-ups, no forced email subscriptions!
 * You will require a web host to run your forum.
-* Your web host must satisfy a few basic requirements for MyBB to run properly.
+* Your web host must satisfy a few [basic requirements](http://docs.mybb.com/1.8/install/requirements/) for MyBB to run properly.
 
 ## Preparation
 
@@ -58,7 +58,7 @@ If you are using FileZilla you can right click on a file or directory and click 
 
 #### Windows Systems
 
-On Windows systems you will need to follow [these instructions](http://technet.microsoft.com/en-us/library/bb727008.aspx). In general the files and directories listed above require **Full modify** permissions.
+On Windows systems you will need to follow [these instructions](https://technet.microsoft.com/en-us/library/bb727008.aspx). In general the files and directories listed above require **Full modify** permissions.
 
 ## Installer
 
@@ -76,7 +76,7 @@ All you need to do is click **Next** on this page.
 
 You must read and agree to the [license agreement](https://www.mybb.com/about/license) before you can install MyBB. You must adhere to the license agreement at all times while the board is installed. After reading the agreement, click the **Next** button on this page.
 
-If you would like more information about the GNU LGPL license and what it means for you [consult the GNU website](http://www.gnu.org/licenses/lgpl.html).
+If you would like more information about the GNU LGPL license and what it means for you [consult the GNU website](https://www.gnu.org/licenses/lgpl.html).
 
 [![License screen](/assets/images/install/license.jpg)](/assets/images/install/license.jpg)
 
