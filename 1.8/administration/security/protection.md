@@ -14,7 +14,7 @@ The Admin CP is the most powerful tool in MyBB. If anyone gains access to it, th
 
 Now your real Admin CP directory should look something like `Svt06wbowXgMVvFmkFaz` (which you should bookmark or take note of) and the fake Admin CP will be located at `admin` (which will record the details of anyone who tries to access it). To finalize, [you should password protect your real Admin CP with HTTP Basic Auth](#Protect_the_Admin_CP_with_HTTP_Basic_Auth). Additionally you can enable the Admin CP PIN, which was added in 1.8, but having to go through all of these steps might be a little troublesome if you just want to do some quick edits.
 
-**Nota Bene**: if you change the Admin CP directory and add plugin using it after, you will have to rename the directory in the plugin source before uploading it.
+**Note**: If you change the Admin CP directory and add any plugins that use it after, you will have to rename the directory in the plugin before uploading it.
 
 # Protect the Admin CP with HTTP Basic Auth
 
@@ -116,7 +116,7 @@ The `inc` directory in your MyBB installation should not be accessible to the en
 
 ## Change the Default Table Prefix
 
-Changing your table prefix can prove to be helpful in certain cases. If a hacker manages to run an SQL query, he can easily destroy your forum completely. But if they don't know what your table prefix is (and therefore don't have a table name to query) it would slow them down. Consider [changing your table prefix](http://www.mybbsecurity.net/topic-security-through-obscurity-changing-the-default-table-prefix).
+Changing your table prefix can prove to be helpful in certain cases. If a hacker manages to run an SQL query, he can easily destroy your forum completely. But if they don't know what your table prefix is (and therefore don't have a table name to query) it would slow them down.
 
 ## Disallow HTML in Posts
 
