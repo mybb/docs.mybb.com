@@ -12,7 +12,7 @@ First, check that the mail has not been sent into the junk/spam mail folder. Mai
 
 ## Testing PHP Mail
 
-MyBB relies on the [PHP Mail function](http://php.net/manual/en/function.mail.php) to send its mail. Thus, it is important that the PHP mail function is working.
+MyBB relies on the [PHP Mail function](https://secure.php.net/manual/en/function.mail.php) to send its mail. Thus, it is important that the PHP mail function is working.
 
 **Test script:**
 
