@@ -39,9 +39,8 @@ In `Admin CP > Configuration > General Configuration`, a visual CAPTCHA challeng
 
 + **No CAPTCHA**, in which the visual CAPTCHA challenge is disabled. This is not recommended, as disabling the CAPTCHA Images makes it much easier for automated systems to post spam.
 + **MyBB Default CAPTCHA**, in which a PHP GD captcha is generated. This can often be passed by automated systems and usually should not be used.
-+ **reCAPTCHA**, which displays a "ReCAPTCHA" challenge; signup is required at [Google's ReCAPTCHA site](http://www.google.com/recaptcha/intro/index.html) to get the Public and Private keys that must be configured.
-+ **Are You A Human**, which displays an interactive minigame that the user must complete, often with their mouse. Signup is required at the [Are You A Human PlayThru website](http://portal.areyouahuman.com/signup/basic) to receive the Publisher and Scoring keys that must be configured in MyBB.
-+ **NoCAPTCHA reCAPTCHA**, which displays the latest version of reCAPTCHA, in which a user simply clicks a checkbox to continue, or as a fallback must complete a simple picture-selection challenge; signup is required at [Google's ReCAPTCHA site](http://www.google.com/recaptcha/intro/index.html) to get the Public and Private keys that must be configured.
++ **reCAPTCHA**, which displays a "ReCAPTCHA" challenge; signup is required at [Google's ReCAPTCHA site](https://www.google.com/recaptcha/intro/index.html) to get the Public and Private keys that must be configured.
++ **NoCAPTCHA reCAPTCHA**, which displays the latest version of reCAPTCHA, in which a user simply clicks a checkbox to continue, or as a fallback must complete a simple picture-selection challenge; signup is required at [Google's ReCAPTCHA site](https://www.google.com/recaptcha/intro/index.html to get the Public and Private keys that must be configured.
 
 ### Stop Forum Spam
 
