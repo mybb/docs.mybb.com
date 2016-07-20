@@ -30,7 +30,7 @@ This is how ours was configured:
 The resource type should be of "pull" type and the origin should be the subdomain we configured earlier (s.mybbstuff.com in my case). You can use any CDN hostname that you desire - most CDN providers will actually give you a subdomain of theirs if you do not wish to configure CNAME DNS records and such. I chose to use cdn.mybbstuff.com just because it looks good.
 
 # Setting up MyBB to use the CDN
-Now that our CDN is configured, it�s time to change our MyBB settings to make use of it.
+Now that our CDN is configured, it's time to change our MyBB settings to make use of it.
 Log into your Admin Control Panel and select Configuration > Settings > Server and Optimization Options.
 You will see the CDN settings near the bottom of the page, and can change the settings to suit your needs. In the case of this tutorial, our settings looked like this:
 - Use a CDN?: Yes
