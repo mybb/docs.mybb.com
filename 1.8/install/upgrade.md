@@ -12,7 +12,7 @@ Before you upgrade, you should always read the announcement blog post properly b
 
 2. Secondly, you should back up your files and database and store them in a safe place. Just in case something goes wrong, you can restore the backup and start again. You can back up the database using the [MyBB Admin CP or your database management software](/1.8/administration/backups).
 
-3. You must deactivate (or disable) all of your plugins. This is because it is likely they will need to be updated to work on the new version and can cause problems if they are left active.  You can deactivate (or disable) your plugins by going to ** Admin CP > Board Settings > General Configuration** and changing "Disable All Plugins" to Yes.
+3. You must deactivate (or disable) all of your plugins. This is because it is likely they will need to be updated to work on the new version and can cause problems if they are left active.
 
 ### Downloading the Correct Upgrade Package
 
