@@ -20,28 +20,29 @@ However if you don't have another computer lying around or other people to help 
 	+ Somewhat similar to HijackThis. Scans the computer for virus activities or suspicous files that have the characteristics of malware.
 - [Kaspersky Virus Removal Tool](http://www.kaspersky.com/antivirus-removal-tool)
 	+ Tool to help remove common malware infections, if detected.
-- [Malwarebytes](http://www.malwarebytes.org/)
+- [Malwarebytes](https://www.malwarebytes.com/)
 	+ Popular, trusted free solution for malware scanning. Quick definition updates and rigorous detections for more than plain malware.
-- [HiJackThis](http://www.filehippo.com/download_hijackthis/)
+- [HiJackThis](https://sourceforge.net/projects/hjt/)
 	+ Tool that generates a report about system settings and files commonly modified by malware.
 
-Scanning your computer with your antivirus' own tools is also a good idea and installing a firewall. We recommend one of the following:
+Scanning your computer with your own antivirus tools is also a good idea and installing a firewall. We recommend one of the following:
 
-- [Microsoft Security Essentials](http://windows.microsoft.com/MSE)
-- [AntiVir](http://www.avira.com/en/avira-free-antivirus)
+- [Microsoft Security Essentials](https://www.microsoft.com/en-us/download/details.aspx?id=5201)
+	+ Simple, lightweight protection, but not a great malware detection rate. Windows 7 or Windows Vista only (its features were built into Windows 8+).
+- [Avira Free AntiVirus](https://www.avira.com/en/antivirus)
 	+ Standard antimalware software. Not especially great, but it is usually good enough.
-- [Comodo Internet Security](http://www.comodo.com/home/internet-security/free-internet-security.php)
+- [Comodo Internet Security](https://www.comodo.com/home/internet-security/free-internet-security.php)
 	+ Standard antimalware software. Not especially great, but it is usually good enough.
-- [ZoneAlarm](http://www.zonealarm.com/)
+- [ZoneAlarm](https://www.zonealarm.com/)
 	+ Inbound intrusion detection system and firewall that is highly customizable, allowing the user to specify what applications can create outbound network connections.
 
 ### Secure Your Online Accounts
 
-Once your computer is safe it is highly recommended to reset all of your passwords - every single one. Your admin account might be safe, but the attack could have originated from a hacker gaining access to your email account, thus being able to request a password reset. Having one weak password might compromise everything related to it, therefore it is very important to use **secure passwords** on all of your online accounts, specifically those related to your website (i.e. FTP, SSH, database, email). A good password can take a human hacker [580 million years to crack](http://www.blogussion.com/blogging-tips/580-million-years-hacker/), or up to 59 years for a supercomputer. Isn't that the kind of security you want?
+Once your computer is safe it is highly recommended to reset all of your passwords - every single one. Your admin account might be safe, but the attack could have originated from a hacker gaining access to your email account, thus being able to request a password reset. Having one weak password might compromise everything related to it, therefore it is very important to use a **secure passwords** on all of your online accounts, specifically those related to your website (i.e. FTP, SSH, database, email). A good password can take a human hacker 580 million years to crack, due to how the math of probability works when a greater variety of characters (uppercase, lowercase, numeric, symbols) are used. You can see an example of how the math works with Gibson Research Corporation's [Password Haystacks](https://www.grc.com/haystack.htm) project (don't enter any password you intend to use; that would just be bad form).
 
 Using safe passwords, however, may not be enough. What if someone else gets their hands on it? It is important to store your passwords in a secure place. Writing them on a piece of paper or a txt file is not good enough. We recommend that you use a password manager program, such as [KeePass](http://keepass.info/) or [LastPass](https://lastpass.com/), both of which feature very powerful password generators as well.
 
-**Use two factor authentication wherever possible**, especially if you use the same password in multiple places (which you shouldn't). Two factor authentication helps reduce your vulnerability to weak passwords, key logging, password reuse, phishing and brute force because it means your account can't be accessed even if your password is compromised. If you have a Google Account, consider [enabling two factor authentication](http://googleblog.blogspot.com.au/2011/02/advanced-sign-in-security-for-your.html).
+**Use two factor authentication wherever possible**, especially if you use the same password in multiple places (which you shouldn't). Two factor authentication helps reduce your vulnerability to weak passwords, key logging, password reuse, phishing and brute force because it means your account can't be accessed even if your password is compromised. If you have a Google Account, consider [enabling two factor authentication](https://googleblog.blogspot.com.au/2011/02/advanced-sign-in-security-for-your.html).
 
 ### Restore Your Admin Account
 
@@ -77,9 +78,9 @@ Great! Your admin account is fully restored and all your passwords were reset. N
 
 You should close the forum using the global switch in settings. Go to Admin CP > Configuration > Board Online / Offline > Board Closed > Yes.
 
-That will prevent the hacker from acessing the front-end, but the website itself is still accessible. If he planted an exploit somewhere else, he might be able to use it. So what you should do now is disallow all visitors, except yourself, from accessing your website. Place the following code in your root `.htaccess` file. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
+That will prevent the hacker from accessing the front-end, but the website itself is still accessible. If he planted an exploit somewhere else, he might be able to use it. So what you should do now is disallow all visitors, except yourself, from accessing your website. Place the following code in your root `.htaccess` file. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
 
-```apacheconf
+```apache
 Order deny,allow
 Deny from all
 Allow from 127.0.0.1
@@ -123,11 +124,100 @@ However, if you made a lot of modifications and don't have a backup, then you'll
 
 Your forum is safe, but you shouldn't stop here. You should take new security measures immediately to prevent this from happening again. One thing we cannot stress enough is to always have your MyBB installation up to date. If you are running an older version, you are open to security vulnerabilities that were already fixed. MyBB takes security very seriously. Whenever a security vulnerability is reported it is patched very quickly and a new release is sent out. You should never skip upgrading, as you will be opening yourself to a security risk that hackers can easily take advantage of.
 
-### Fine Tuning the Admin CP
+### Protecting the Admin CP
 
-The Admin CP is the most powerful tool in MyBB. If anyone gains access to it, they can easily deface your forum and get complete control over it. It is therefore important to guarantee that only you or your administrators can access it. For starters you should [rename your Admin CP directory and hide all links to it](http://www.mybbsecurity.net/topic-renaming-the-administrator-directory). Once you have done that it is a good idea to install [Admin CP Honeypot](http://community.mybb.com/thread-94406.html). This will take your previous Admin CP location and install a fake Admin CP, which will record the IP of anyone who tries to login to it and email you a small report.
+The Admin CP is the most powerful tool in MyBB. If anyone gains access to it, they can easily deface your forum and get complete control over it. It is therefore important to guarantee that only you or your administrators can access it.
 
-Now your real Admin CP directory should look something like `Svt06wbowXgMVvFmkFaz` (which you should bookmark or take note of) and the fake Admin CP will be located at `admin` (which will record the details of anyone who tries to access it). To finalize, [you should password protect your real Admin CP with HTTP Basic Auth](http://www.mybbsecurity.net/topic-protecting-the-admin-cp-with-http-basic-auth). Additionally you can add an [extra PIN number in the Admin CP login form](http://www.mybbsecurity.net/topic-add-secret-pin-to-acp-login), but having to go through all of these steps might be a little troublesome if you just want to do some quick edits.
+#### Renaming the Admin CP Directory
+
+As a starting point, you should rename the Admin CP directory. To do this:
+
+- Rename the `admin` directory from `admin` to something random, such as `d8e8fca2dc0f896` (pick your own random value!). Create a bookmark in your browser if it helps.
+- Open `./inc/config.php` in a text editor
+	+ Find:
+	```php
+	$config['admin_dir'] = 'admin';
+	```
+	+ Replace `admin` with the random value you just used (`d8e8fca2dc0f896` in this example).
+
+Confirm that the rename was completed successfully by browsing to your Admin CP and logging in.
+
+#### Hiding Admin CP Links
+
+In addition to renaming the Admin CP directory, it may also be useful to disable links to the Admin CP on the frontend of your forum. While this isn't the greatest form of protection, it can be helpful if there's any risk of you or another administrator browsing the forum frontend on an untrusted internet connection. An attacker could theoretically find your Admin CP URL just by examining the link printed in the forum header and begin an attack.
+
+To disable display of all Admin CP links on the frontend of your forum:
+
+- Open `./inc/config.php` in a text editor
+	+ Find:
+	```php
+	$config['hide_admin_links'] = 0;
+	```
+	+ Change the value from `0` to `1`.
+
+#### Installing an Admin CP Honeypot
+
+Once you have done that it is a good idea to install [Admin CP Honeypot](http://community.mybb.com/thread-94406.html). This will take your previous Admin CP location and install a fake Admin CP, which will record the IP of anyone who tries to login to it and email you a small report.
+
+Now your real Admin CP directory should look something like `d8e8fca2dc0f896` (which you should bookmark or take note of) and the fake Admin CP will be located at `admin` (which will record the details of anyone who tries to access it).
+
+#### Password-Protect the Admin Directory
+
+An additional measure to protect the Admin CP from attackers is to enable HTTP Basic Authentication (also known as auth_basic or .htpasswd protection). The procedure for doing this varies, depending on the HTTP server being used to serve your forum.
+
+##### For cPanel Users (Easy Version)
+
+1. Log into your cPanel and click on the Password Protect Directories option found under Security.
+2. Choose Web Root, if prompted (you may also need to select Show Hidden Files)
+3. Click on the name of the directory that you wish to password protect.
+4. Check the box for Password protect this directory.
+5. Fill in Name the protected directory field. This will be the message shown to visitors when they try to login and can be anything you like.
+6. Click on the Save button below.
+7. Click Go Back.
+8. Fill in a Username and Password at the bottom of the page, and click Add/modify authorized user.
+
+##### For Apache Users (cPanel/VPS/Dedicated Server)
+
+To enable HTTP Basic Authentication on a server running Apache 2.4:
+- Install the `apache2-utils` (Debian/Ubuntu) or `httpd-tools` (RHEL/CentOS 7) package, which contains the `htpasswd` utility, to help generate the .htpasswd credentials file.
+- Run the following shell command: `sudo htpasswd -c /path/to/htpasswd/file desired_username`
+	+ A sane place to put this file is somewhere like `/etc/apache2/.htpasswd`, but there is great flexibility in this. Just make sure to keep the file out of the web root, because improper server configuration could lead to an attacker being able to download the file.
+	+ You will be prompted for a password, which will be stored in hashed form in `/path/to/htpasswd/file`
+	+ **If adding another user to a previously-created file, do not include the `-c` flag**. Doing so will overwrite the file, removing the credentials already configured.
+- Create or edit a `.htaccess` file in your Admin CP directory.
+	+ Add
+	```apacheconf
+	AuthType Basic
+	AuthName "AUTHENTICATION_MESSAGE_BROWSERS_WILL_DISPLAY"
+	AuthUserFile "/path/to/htpasswd/file"
+	Require valid-user
+	```
+
+Upon navigating to the Admin CP, your browser should prompt you for a username and password.
+
+##### For Nginx Users (VPS/Dedicated Server)
+
+To enable HTTP Basic Authentication on a server running Nginx:
+- Install the `apache2-utils` (Debian/Ubuntu) or `httpd-tools` (RHEL/CentOS 7) package, which contains the `htpasswd` utility, to help generate the .htpasswd credentials file.
+- Run the following shell command: `sudo htpasswd -c /path/to/htpasswd/file desired_username`
+	+ A sane place to put this file is somewhere like `/etc/nginx/.htpasswd`, but there is great flexibility in this. Just make sure to keep the file out of the web root, because improper server configuration could lead to an attacker being able to download the file.
+	+ You will be prompted for a password, which will be stored in hashed form in `/path/to/htpasswd/file`
+	+ **If adding another user to a previously-created file, do not include the `-c` flag**. Doing so will overwrite the file, removing the credentials already configured.
+- Edit the Nginx configuration file that contains the server declaration for your forum. This varies depending on your server's configuration.
+	+ Inside the `server {` block
+		+ Add
+		```nginxconf
+		location /your/admin/directory {
+			auth_basic "YOUR_AUTHENTICATION_MESSAGE";
+			auth_basic_user_file /path/to/htpasswd/file;
+		}
+		```
+
+Upon navigating to the Admin CP, your browser should prompt you for a username and password.
+
+#### Configuring a Two-Factor Authentication (2FA)
+
+[*See more information here*](/1.8/administration/security/2fa)
 
 ### Administrator Accounts
 
@@ -137,11 +227,55 @@ However, if you need help as an administrator permissions should be limited as m
 
 ### Protect the `inc` Directory
 
-The `inc` directory in your MyBB installation is something that should not be accessible to the end user at all. It contains sensitive information such as your database details (`inc/config.php`). And even though it is almost impossible for hackers to access that data, it's always a good idea to make things extra difficult to access. And the `inc` directory certainly doesn't need to be publicly available. You should therefore protect it completely by [disallowing access to the `inc` directory](http://www.mybbsecurity.net/topic-protecting-the-inc-directory).
+The `inc` directory in your MyBB installation contains sensitive information, such as database details, and plugin files. All files in this directory should have code that prevents them from being directly accessed. However, an attacker can still tell if the file exists and gain information based on that. To protect against this, you can deny all access by users to the directory, since they should never need it. This won't impact your forum's function at all because it accesses the files a different way.
 
-### Change the Default Table Prefix
+##### For cPanel or Apache Users
 
-Changing your table prefix can prove to be helpful in certain cases. If a hacker manages to run an SQL query, he can easily destroy your forum completely. But if for some reason he doesn't know what your table prefix is (and therefore doesn't have a table name to query) it would certainly slow him down. Having that said, consider [changing your table prefix](http://www.mybbsecurity.net/topic-security-through-obscurity-changing-the-default-table-prefix).
+Create a `.htaccess` file in the `inc` directory. Inside it, add:
+```apacheconf
+# Only if using Apache 2.4
+Require all denied
+
+# Only if using Apache 2.2
+Order deny,allow
+Deny from all
+```
+
+##### For Nginx Users (VPS/Dedicated)
+
+In the server block for your forum, add:
+```nginx
+location /inc {
+	deny all;
+	return 404;
+}
+```
+
+### Change the Default Table Prefix (MySQL)
+
+Changing your table prefix can prove to be helpful in certain cases. If a hacker manages to run an SQL query, he can easily destroy your forum completely. But if for some reason he doesn't know what your table prefix is (and therefore doesn't have a table name to query) it would certainly slow him down. With that in mind, consider changing your database prefix, as explained below.
+
+**REMEMBER:** Before making any changes to your database, [perform a database backup](/1.8/administration/backups) so that if something goes wrong, it will be trivial to recover your data.
+
+#### phpMyAdmin
+
+1. Select all of the MyBB tables (at the bottom), click the dropdown and select "Replace table prefix".
+2. In the from box, type in mybb (or whatever your old prefix was, ignoring the underscore); in the to box, type in your new prefix.
+
+#### Manual SQL
+
+Using the MySQL command line, execute this script:
+
+```sql
+SET @database   = "mybb";
+SET @old_prefix = "mybb";
+SET @new_prefix = "mybb123232"; -- Example new prefix
+
+SELECT concat("RENAME TABLE ",TABLE_NAME," TO ",replace(TABLE_NAME, @old_prefix, @new_prefix),';') AS "SQL"
+FROM information_schema.TABLES WHERE TABLE_SCHEMA = @database;
+```
+
+The output will be a list of SQL statements that can be run from the command line or using any other database management program, such as phpMyAdmin.
 
 ### Disallow HTML in Posts
 
@@ -175,6 +309,6 @@ Even if you had the world's most advanced security system, if the person in cont
 
 We hope you never have to go through the "recovery" steps in this guide. What you should follow are the preparation steps - if you are prepared, it makes you a much less viable target.
 
-## New Security Measures
+## Future Security Measures
 
-Your forum is safe, but you shouldn't stop here. You should take new security measures immediately to prevent this from happening again. See [Protecting Your MyBB Forum]({{ site.baseurl }}/1.8/administration/security/protection).
+Your forum is safe, but you shouldn't stop here. You should take new security measures immediately to prevent this from happening again. See [Protecting Your MyBB Forum](/1.8/administration/security/protection).
