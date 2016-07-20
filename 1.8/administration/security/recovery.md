@@ -190,6 +190,7 @@ To enable HTTP Basic Authentication on a server running Apache 2.4:
 	+ **If adding another user to a previously-created file, do not include the `-c` flag**. Doing so will overwrite the file, removing the credentials already configured.
 - Create or edit a `.htaccess` file in your Admin CP directory.
 	+ Add
+
         ```apache
         AuthType Basic
         AuthName "AUTHENTICATION_MESSAGE_BROWSERS_WILL_DISPLAY"
