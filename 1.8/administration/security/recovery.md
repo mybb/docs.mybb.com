@@ -135,9 +135,11 @@ As a starting point, you should rename the Admin CP directory. To do this:
 - Rename the `admin` directory from `admin` to something random, such as `d8e8fca2dc0f896` (pick your own random value!). Create a bookmark in your browser if it helps.
 - Open `./inc/config.php` in a text editor
 	+ Find:
-	```php
-	$config['admin_dir'] = 'admin';
-	```
+
+        ```php
+        $config['admin_dir'] = 'admin';
+        ```
+
 	+ Replace `admin` with the random value you just used (`d8e8fca2dc0f896` in this example).
 
 Confirm that the rename was completed successfully by browsing to your Admin CP and logging in.
@@ -150,9 +152,11 @@ To disable display of all Admin CP links on the frontend of your forum:
 
 - Open `./inc/config.php` in a text editor
 	+ Find:
-	```php
-	$config['hide_admin_links'] = 0;
-	```
+
+        ```php
+        $config['hide_admin_links'] = 0;
+        ```
+
 	+ Change the value from `0` to `1`.
 
 #### Installing an Admin CP Honeypot
@@ -186,12 +190,12 @@ To enable HTTP Basic Authentication on a server running Apache 2.4:
 	+ **If adding another user to a previously-created file, do not include the `-c` flag**. Doing so will overwrite the file, removing the credentials already configured.
 - Create or edit a `.htaccess` file in your Admin CP directory.
 	+ Add
-	```apache
-	AuthType Basic
-	AuthName "AUTHENTICATION_MESSAGE_BROWSERS_WILL_DISPLAY"
-	AuthUserFile "/path/to/htpasswd/file"
-	Require valid-user
-	```
+        ```apache
+        AuthType Basic
+        AuthName "AUTHENTICATION_MESSAGE_BROWSERS_WILL_DISPLAY"
+        AuthUserFile "/path/to/htpasswd/file"
+        Require valid-user
+        ```
 
 Upon navigating to the Admin CP, your browser should prompt you for a username and password.
 
@@ -206,12 +210,13 @@ To enable HTTP Basic Authentication on a server running Nginx:
 - Edit the Nginx configuration file that contains the server declaration for your forum. This varies depending on your server's configuration.
 	+ Inside the `server {` block
 		+ Add
-		```nginx configuration file
-		location /your/admin/directory {
-			auth_basic "YOUR_AUTHENTICATION_MESSAGE";
-			auth_basic_user_file /path/to/htpasswd/file;
-		}
-		```
+
+            ```nginx
+            location /your/admin/directory {
+            auth_basic "YOUR_AUTHENTICATION_MESSAGE";
+            auth_basic_user_file /path/to/htpasswd/file;
+            }
+            ```
 
 Upon navigating to the Admin CP, your browser should prompt you for a username and password.
 
