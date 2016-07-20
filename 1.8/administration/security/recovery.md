@@ -186,7 +186,7 @@ To enable HTTP Basic Authentication on a server running Apache 2.4:
 	+ **If adding another user to a previously-created file, do not include the `-c` flag**. Doing so will overwrite the file, removing the credentials already configured.
 - Create or edit a `.htaccess` file in your Admin CP directory.
 	+ Add
-	```apacheconf
+	```apache
 	AuthType Basic
 	AuthName "AUTHENTICATION_MESSAGE_BROWSERS_WILL_DISPLAY"
 	AuthUserFile "/path/to/htpasswd/file"
@@ -206,7 +206,7 @@ To enable HTTP Basic Authentication on a server running Nginx:
 - Edit the Nginx configuration file that contains the server declaration for your forum. This varies depending on your server's configuration.
 	+ Inside the `server {` block
 		+ Add
-		```nginxconf
+		```nginx configuration file
 		location /your/admin/directory {
 			auth_basic "YOUR_AUTHENTICATION_MESSAGE";
 			auth_basic_user_file /path/to/htpasswd/file;
@@ -232,7 +232,7 @@ The `inc` directory in your MyBB installation contains sensitive information, su
 ##### For cPanel or Apache Users
 
 Create a `.htaccess` file in the `inc` directory. Inside it, add:
-```apacheconf
+```apache
 # Only if using Apache 2.4
 Require all denied
 
