@@ -12,10 +12,17 @@ Before you upgrade, you should always read the announcement blog post properly b
 
 To restrict access to your forum except from your IP address, you need to place the following code in your root `.htaccess` file. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
 
+Apache 2.2:
 ```apache
 Order deny,allow
 Deny from all
 Allow from 127.0.0.1
+```
+
+Apache 2.4:
+```apache
+Require all denied
+Require ip 1.2.3.4
 ```
 
 If you find yourself unable to access your website during this process, it is possible that you have a dynamic IP, in which case you will have to repeat the above procedure whenever your IP changes.
