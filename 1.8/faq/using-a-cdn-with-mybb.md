@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Using a CDN with MyBB"
+title: "Using a CDN with MyBB"
 categories: [faq]
 ---
 
