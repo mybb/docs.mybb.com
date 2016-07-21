@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Task Manager"
+categories: [administration]
+---
+
 The task manager section in the Admin CP allows you to manage the scheduled tasks that are run on your forum. Scheduled tasks are run at the specified time(s), on the specified day(s), in the specified month(s). Tasks run specified PHP files located in the inc/tasks directory.
 
 The task listing page displays the name of the task, its description, the time of the next run, and whether or not it is enabled. From the task listing page, you can choose to edit the task, enable/disable the task, delete the task, or run the task. 
