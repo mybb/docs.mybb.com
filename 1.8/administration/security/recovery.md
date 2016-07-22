@@ -80,7 +80,7 @@ You should close the forum using the global switch in settings. Go to Admin CP >
 
 That will prevent the hacker from accessing the front-end, but the website itself is still accessible. If he planted an exploit somewhere else, he might be able to use it. So what you should do now is disallow all visitors, except yourself, from accessing your website. Place the following code in your root `.htaccess` file. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
 
-```apache
+```apacheconf
 Order deny,allow
 Deny from all
 Allow from 127.0.0.1
@@ -191,7 +191,7 @@ To enable HTTP Basic Authentication on a server running Apache 2.4:
 - Create or edit a `.htaccess` file in your Admin CP directory.
 	+ Add
 
-        ```apache
+        ```apacheconf
         AuthType Basic
         AuthName "AUTHENTICATION_MESSAGE_BROWSERS_WILL_DISPLAY"
         AuthUserFile "/path/to/htpasswd/file"
@@ -238,7 +238,7 @@ The `inc` directory in your MyBB installation contains sensitive information, su
 ##### For cPanel or Apache Users
 
 Create a `.htaccess` file in the `inc` directory. Inside it, add:
-```apache
+```apacheconf
 # Only if using Apache 2.4
 Require all denied
 
