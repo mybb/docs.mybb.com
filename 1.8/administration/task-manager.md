@@ -13,13 +13,13 @@ The task listing page displays the name of the task, its description, the time o
 <dl>
   <dt>Title</dt> 
   <dd>Name for the task.</dd>
-    
+  
   <dt>Short Description</dt> 
   <dd>A short description explaining the purpose of this task.</dd> 
-    
+  
   <dt>Task File</dt> 
   <dd>The file located in the inc/tasks directory that will be run when this task is run. You are provided a select list of the tasks located in the directory.</dd> 
-    
+  
   <dt>Time: Minutes</dt> 
   <dd>The minutes of the hour (between 0 and 59) this task should be run. Use an asterisk (*) to have the task run every minute.</dd> 
 
