@@ -11,7 +11,7 @@ The task listing page displays the name of the task, its description, the time o
 ## Add New Task
 
 <dl>
-  <dt>**Title**</dt> 
+  <dt><b>Title</b></dt> 
   <dd>Name for the task.</dd>
   
   <dt>**Short Description**</dt> 
