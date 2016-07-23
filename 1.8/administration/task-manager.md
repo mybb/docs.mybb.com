@@ -36,7 +36,7 @@ The task listing page displays the name of the task, its description, the time o
   <dd>The months this task should be run. Select "Every Month" to have this task run every month (this will override any other selections for this setting). Hold down CTRL to select multiple months.</dd> 
 
   <dt>Enable Logging?</dt> 
-  <dd>Should logging be enabled for this task?<dd> 
+  <dd>Should logging be enabled for this task?</dd> 
 
   <dt>Task enabled?</dt> 
   <dd>Should this task be enabled (be run at the times specified)?</dd>
