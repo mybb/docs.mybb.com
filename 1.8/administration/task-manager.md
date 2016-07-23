@@ -14,31 +14,31 @@ The task listing page displays the name of the task, its description, the time o
   <dt><b>Title</b></dt> 
   <dd>Name for the task.</dd>
   
-  <dt>**Short Description**</dt> 
+  <dt><b>Short Description</b></dt> 
   <dd>A short description explaining the purpose of this task.</dd> 
   
-  <dt>**Task File**</dt> 
+  <dt><b>Task File</b></dt> 
   <dd>The file located in the inc/tasks directory that will be run when this task is run. You are provided a select list of the tasks located in the directory.</dd> 
   
-  <dt>**Time: Minutes**</dt> 
+  <dt><b>Time: Minutes</b></dt> 
   <dd>The minutes of the hour (between 0 and 59) this task should be run. Use an asterisk (*) to have the task run every minute.</dd> 
 
-  <dt>**Time: Hours**</dt> 
+  <dt><b>Time: Hours</b></dt> 
   <dd>The hours of the day (between 0 and 23) this task should be run. Use an asterisk (*) to have the task run every hour.</dd> 
 
-  <dt>**Time: Days of Month**</dt> 
+  <dt><b>Time: Days of Month</b></dt> 
   <dd>The days of the month (between 1 and 31) this task should be run. Use an asterisk (*) to have the task run every day, or if you wish to specify weekdays for this task to be run.</dd> 
 
-  <dt>**Time: Weekdays**</dt> 
+  <dt><b>Time: Weekdays</b></dt> 
   <dd>The days of the week this task should be run. Select "Every Weekday" to have it run every day of the week (this will override any other selections for this setting). Hold down CTRL to select multiple days.</dd> 
 
-  <dt>**Time: Months**</dt> 
+  <dt><b>Time: Months</b></dt> 
   <dd>The months this task should be run. Select "Every Month" to have this task run every month (this will override any other selections for this setting). Hold down CTRL to select multiple months.</dd> 
 
-  <dt>**Enable Logging?**</dt> 
+  <dt><b>Enable Logging?</b></dt> 
   <dd>Should logging be enabled for this task?</dd> 
 
-  <dt>**Task enabled?**</dt> 
+  <dt><b>Task enabled?</b></dt> 
   <dd>Should this task be enabled (be run at the times specified)?</dd>
 </dl>
 
