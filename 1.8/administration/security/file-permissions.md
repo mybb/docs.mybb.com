@@ -19,7 +19,7 @@ These files need a chmod of 777:
 * `./uploads/avatars/`
 * `./admin/backups/ (optional)`
 
-For increased security, you can change the file permissions of the './inc/config.php' file to 644 or 444 after mybb is installed and configured correctly.
+For increased security, you can change the file permissions of the `./inc/config.php` file to 644 or 444 after mybb is installed and configured correctly.
 
 
 ## Chmod with *nix systems
