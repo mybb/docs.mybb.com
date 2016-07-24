@@ -7,17 +7,19 @@ categories: [security]
 Certain file permissions are required for MyBB to function correctly. Once you've uploaded your files, you will need to set the permissions on certain files and directories to allow PHP to write to and execute from them.
 
 These files need a chmod of 666:
-* `./inc/settings.php`
-* `./inc/config.php (you must rename config.default.php to config.php first)`
-* `./inc/languages/your_language/all files (optional)`
-* `./inc/languages/your_language/admin/all files (optional)`
+
+*  `./inc/settings.php`
+*  `./inc/config.php (you must rename config.default.php to config.php first)`
+*  `./inc/languages/your_language/all files (optional)`
+*  `./inc/languages/your_language/admin/all files (optional)`
 
 These files need a chmod of 777:
-* `./cache/`
-* `./cache/themes/`
-* `./uploads/`
-* `./uploads/avatars/`
-* `./admin/backups/ (optional)`
+
+*  `./cache/`
+*  `./cache/themes/`
+*  `./uploads/`
+*  `./uploads/avatars/`
+*  `./admin/backups/ (optional)`
 
 For increased security, you can change the file permissions of the `./inc/config.php` file to 644 or 444 after mybb is installed and configured correctly.
 
