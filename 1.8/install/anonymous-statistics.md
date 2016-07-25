@@ -4,7 +4,7 @@ title: "Anonymous Statistics"
 categories: [install]
 ---
 
-During the installation or upgrade of your MyBB forum, you have the option to send anonymous statistics about your server back to us, so we can gather important information on our users. This is so we can see what the most common settings and setups are, and whether a planned feature would cause issues with a lot of users' hosts, or may be completely incompatible.
+During the [installation](http://docs.mybb.com/1.8/install/) or [upgrade](http://docs.mybb.com/1.8/install/upgrade/) of your MyBB forum, you have the option to send anonymous statistics about your server back to us, so we can gather important information on our users. This is so we can see what the most common settings and setups are, and whether a planned feature would cause issues with a lot of users' hosts, or may be completely incompatible.
 
 Here's what we're collecting:
 
