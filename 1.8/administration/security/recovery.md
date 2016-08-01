@@ -80,7 +80,7 @@ You should close the forum using the global switch in settings. Go to Admin CP >
 
 That will prevent the hacker from accessing the front-end, but the website itself is still accessible. If he planted an exploit somewhere else, he might be able to use it. So what you should do now is disallow all visitors, except yourself, from accessing your website. Place the following code in your root `.htaccess` file. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
 
-```apache
+```
 Order deny,allow
 Deny from all
 Allow from 127.0.0.1
@@ -135,9 +135,11 @@ As a starting point, you should rename the Admin CP directory. To do this:
 - Rename the `admin` directory from `admin` to something random, such as `d8e8fca2dc0f896` (pick your own random value!). Create a bookmark in your browser if it helps.
 - Open `./inc/config.php` in a text editor
 	+ Find:
-	```php
-	$config['admin_dir'] = 'admin';
-	```
+
+        ```php
+        $config['admin_dir'] = 'admin';
+        ```
+
 	+ Replace `admin` with the random value you just used (`d8e8fca2dc0f896` in this example).
 
 Confirm that the rename was completed successfully by browsing to your Admin CP and logging in.
@@ -150,9 +152,11 @@ To disable display of all Admin CP links on the frontend of your forum:
 
 - Open `./inc/config.php` in a text editor
 	+ Find:
-	```php
-	$config['hide_admin_links'] = 0;
-	```
+
+        ```php
+        $config['hide_admin_links'] = 0;
+        ```
+
 	+ Change the value from `0` to `1`.
 
 #### Installing an Admin CP Honeypot
@@ -179,39 +183,42 @@ An additional measure to protect the Admin CP from attackers is to enable HTTP B
 ##### For Apache Users (cPanel/VPS/Dedicated Server)
 
 To enable HTTP Basic Authentication on a server running Apache 2.4:
+
 - Install the `apache2-utils` (Debian/Ubuntu) or `httpd-tools` (RHEL/CentOS 7) package, which contains the `htpasswd` utility, to help generate the .htpasswd credentials file.
 - Run the following shell command: `sudo htpasswd -c /path/to/htpasswd/file desired_username`
-	+ A sane place to put this file is somewhere like `/etc/apache2/.htpasswd`, but there is great flexibility in this. Just make sure to keep the file out of the web root, because improper server configuration could lead to an attacker being able to download the file.
-	+ You will be prompted for a password, which will be stored in hashed form in `/path/to/htpasswd/file`
-	+ **If adding another user to a previously-created file, do not include the `-c` flag**. Doing so will overwrite the file, removing the credentials already configured.
+	- A sane place to put this file is somewhere like `/etc/apache2/.htpasswd`, but there is great flexibility in this. Just make sure to keep the file out of the web root, because improper server configuration could lead to an attacker being able to download the file.
+	- You will be prompted for a password, which will be stored in hashed form in `/path/to/htpasswd/file`
+	- **If adding another user to a previously-created file, do not include the `-c` flag**. Doing so will overwrite the file, removing the credentials already configured.
 - Create or edit a `.htaccess` file in your Admin CP directory.
-	+ Add
-	```apacheconf
-	AuthType Basic
-	AuthName "AUTHENTICATION_MESSAGE_BROWSERS_WILL_DISPLAY"
-	AuthUserFile "/path/to/htpasswd/file"
-	Require valid-user
-	```
+	- Add
+
+      ```
+      AuthType Basic
+      AuthName "AUTHENTICATION_MESSAGE_BROWSERS_WILL_DISPLAY"
+      AuthUserFile "/path/to/htpasswd/file"
+      Require valid-user
+      ```
 
 Upon navigating to the Admin CP, your browser should prompt you for a username and password.
 
 ##### For Nginx Users (VPS/Dedicated Server)
 
 To enable HTTP Basic Authentication on a server running Nginx:
+
 - Install the `apache2-utils` (Debian/Ubuntu) or `httpd-tools` (RHEL/CentOS 7) package, which contains the `htpasswd` utility, to help generate the .htpasswd credentials file.
 - Run the following shell command: `sudo htpasswd -c /path/to/htpasswd/file desired_username`
-	+ A sane place to put this file is somewhere like `/etc/nginx/.htpasswd`, but there is great flexibility in this. Just make sure to keep the file out of the web root, because improper server configuration could lead to an attacker being able to download the file.
-	+ You will be prompted for a password, which will be stored in hashed form in `/path/to/htpasswd/file`
-	+ **If adding another user to a previously-created file, do not include the `-c` flag**. Doing so will overwrite the file, removing the credentials already configured.
+	- A sane place to put this file is somewhere like `/etc/nginx/.htpasswd`, but there is great flexibility in this. Just make sure to keep the file out of the web root, because improper server configuration could lead to an attacker being able to download the file.
+	- You will be prompted for a password, which will be stored in hashed form in `/path/to/htpasswd/file`
+	- **If adding another user to a previously-created file, do not include the `-c` flag**. Doing so will overwrite the file, removing the credentials already configured.
 - Edit the Nginx configuration file that contains the server declaration for your forum. This varies depending on your server's configuration.
-	+ Inside the `server {` block
-		+ Add
-		```nginxconf
-		location /your/admin/directory {
-			auth_basic "YOUR_AUTHENTICATION_MESSAGE";
-			auth_basic_user_file /path/to/htpasswd/file;
-		}
-		```
+	- Inside the `server {` block add
+
+      ```
+      location /your/admin/directory {
+      auth_basic "YOUR_AUTHENTICATION_MESSAGE";
+      auth_basic_user_file /path/to/htpasswd/file;
+      }
+      ```
 
 Upon navigating to the Admin CP, your browser should prompt you for a username and password.
 
@@ -232,7 +239,8 @@ The `inc` directory in your MyBB installation contains sensitive information, su
 ##### For cPanel or Apache Users
 
 Create a `.htaccess` file in the `inc` directory. Inside it, add:
-```apacheconf
+
+```
 # Only if using Apache 2.4
 Require all denied
 
@@ -244,7 +252,7 @@ Deny from all
 ##### For Nginx Users (VPS/Dedicated)
 
 In the server block for your forum, add:
-```nginx
+```
 location /inc {
 	deny all;
 	return 404;

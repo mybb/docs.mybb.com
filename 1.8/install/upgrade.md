@@ -8,11 +8,30 @@ categories: [install]
 
 Before you upgrade, you should always read the announcement blog post properly before starting. The new version's changes will clearly be explained and provide an insight into how difficult the upgrade will be.
 
-1. First, you may want to shut down your forum. Doing this means that no one will interrupt the upgrade process accidentally. Please remember that switching the forum by using the **Board Online/Offline** setting is **not** recommended. The best method is to use a `.htaccess` restriction on your forum's root folder so that no one can access the front-end. There are various tutorials that help you do this and some hosts even provide simple tools to do this.
+1. First, you may want to shut down your forum. Doing this means that no one will interrupt the upgrade process accidentally. Please remember that switching the forum off by using the **Board Online/Offline** setting is **not** recommended. The best method is to use a `.htaccess` restriction on your forum's root folder so that no one can access the front-end. 
+
+To restrict access to your forum except from your IP address, you need to place the following code in your root `.htaccess` file. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
+
+Apache 2.2:
+
+```
+Order deny,allow
+Deny from all
+Allow from 127.0.0.1
+```
+
+Apache 2.4:
+
+```
+Require all denied
+Require ip 1.2.3.4
+```
+
+If you find yourself unable to access your website during this process, it is possible that you have a dynamic IP, in which case you will have to repeat the above procedure whenever your IP changes.
 
 2. Secondly, you should back up your files and database and store them in a safe place. Just in case something goes wrong, you can restore the backup and start again. You can back up the database using the [MyBB Admin CP or your database management software](/1.8/administration/backups).
 
-3. You must deactivate (or disable) all of your plugins. This is because it is likely they will need to be updated to work on the new version and can cause problems if they are left active.
+3. You must deactivate (or disable) all of your plugins. This is because it is likely they will need to be updated to work on the new version and can cause problems if they are left active.  You can deactivate (or disable) your plugins by going to  **Admin CP > Board Settings > General Configuration** and changing "Disable All Plugins" to Yes.
 
 ### Downloading the Correct Upgrade Package
 
