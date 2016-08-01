@@ -11,7 +11,7 @@ Note: Please find the set-up installation guide for MyBB here: http://docs.mybb.
 
 # Access denied for user
 Getting an error like this?:
-![alt text](https://gyazo.com/0a96164ea30ad8513a7553a98ad036ac "Access Denied database")
+![alt text](http://puu.sh/qmmNw/60de3ed946.png "Access Denied database")
 
 This means that your configuration is wrong! Don't worry though, this is easy to fix. 
 First - lets find out our username and password.
