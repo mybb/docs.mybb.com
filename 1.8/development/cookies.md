@@ -62,7 +62,7 @@ This is a prefix to all cookies used by your forum, to further prevent any confl
 	</tr>
 </table>
 
-[This tool](/tools/cookie-settings/) can help generate valid cookie settings.
+[This tool](/tools/cookie-settings) can help generate valid cookie settings.
 
 ## The Cookie List
 
