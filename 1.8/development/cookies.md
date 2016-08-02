@@ -62,6 +62,8 @@ This is a prefix to all cookies used by your forum, to further prevent any confl
 	</tr>
 </table>
 
+[This tool](/tools/cookie-settings/) can help generate valid cookie settings.
+
 ## The Cookie List
 
 The following is a list of the cookies that MyBB sets, and a note about each one:
