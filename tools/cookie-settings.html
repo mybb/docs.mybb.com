@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Cookie Generator - {{ site.name }}</title>
+	<meta name="viewport" content="width=device-width" />
+	<meta name="author" content="MyBB Group" />
+	<meta name="description" content="The official documentation for MyBB, a free and open source PHP and MySQL forum software system." />
+	<link rel="stylesheet" href="{{ site.mainsiteurl }}/assets/css/syntax.css" />
+	<link rel="stylesheet" href="{{ site.mainsiteurl }}/assets/css/screen.css" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/docs.css" />
+</head>
+<body>
+	<div id="container">
+		<header id="pageHeader">
+			<div class="wrapper">
+				<nav id="logoLink">
+					<a href="{{ site.mainsiteurl }}/">Go to MyBB homepage</a>
+				</nav>
+
+				<div id="siteSearch">
+					<form method="get" action="https://www.google.com/search">
+					<span class="searchContainer">
+						<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="docs.mybb.com">
+						<label for="qWidget">
+							<input name="q" id="qWidget" type="search" class="searchField inputText" placeholder="Search Documentation" />
+						</label>
+						<input id="submit" type="submit" value="Find" class="searchSubmit inputSubmit" />
+					</span>
+					</form>
+				</div>
+
+				<nav id="mainMenu">
+					<ul>
+						<li><a href="{{ site.mainsiteurl }}">Home</a></li>
+						<li><a href="{{ site.mainsiteurl }}/features">Features</a></li>
+						<li><a href="{{ site.mainsiteurl }}/download">Download</a></li>
+						<li><a href="http://community.mybb.com" title="Community">Community</a></li>
+						<li><a href="{{ site.mainsiteurl }}/get-involved" title="Get Involved">Get Involved</a></li>
+						<li><a href="http://community.mybb.com/mods.php" title="Extend">Extend</a></li>
+						<li class="selected"><a href="{{ site.baseurl }}/" title="Docs">Docs</a></li>
+						<li><a href="https://blog.mybb.com" title="Blog">Blog</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div id="main" role="main">
+			<article id="docs_page">
+	      <header id="mainFeature">
+		      <div class="wrapper">
+		      	<h1><a href="{{ site.baseurl }}/">MyBB Documentation</a> &rsaquo;</h1>
+			      <h2>{{ page.title }}</h2>
+		      </div>
+	      </header>
+  	    <div class="page wrapper">
+  		    <script async src="//jsfiddle.net/hf5n0c8g/2/embed/result/"></script>
+  		    <p>
+  			    <a href="https://github.com/mybb/docs.mybb.com/blob/gh-pages/{{ page.path }}" title="Contribute to this article on GitHub">Edit on GitHub</a>
+  		    </p>
+  	    </div>
+      </article>
+		</div>
+		<footer>
+			<div class="wrapper">
+					<small>Copyright &copy; {{ site.time | date: '%Y' }} MyBB Group</small>
+					<ul>
+						<li><a href="{{ site.mainsiteurl }}">Home</a></li>
+						<li><a href="{{ site.mainsiteurl }}/about">About MyBB</a></li>
+						<li><a href="{{ site.mainsiteurl }}/download">Download MyBB</a></li>
+						<li><a href="{{ site.mainsiteurl }}/support">Support</a></li>
+						<li><a href="{{ site.mainsiteurl }}/about/license">License Agreement</a></li>
+					<li><a href="{{ site.mainsiteurl }}/contact">Contact MyBB Group</a></li>
+				</ul>
+			</div>
+		</footer>
+	</div> <!--! end of #container -->
+
+	<script src="{{ site.mainsiteurl }}/assets/js/libs/modernizr-2.0.6.min.js"></script>
+
+	<!-- InstantClick -->
+	<script src="{{ site.mainsiteurl }}/assets/js/instantclick.min.js" data-no-instant></script>
+	<script data-no-instant>InstantClick.init();</script>
+
+	</body>
+</html>
