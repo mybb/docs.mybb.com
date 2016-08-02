@@ -12,7 +12,7 @@ Your cookie settings can be found in: **Admin CP** > **Configuration** > **Setti
 
 By default, MyBB suggests Cookie Domain to be blank, and Cookie Path to be **/**. Although this theoretically will work, in many cases it is inadequate.
 
-You can use [this tool](/tools/cookie-settings/) to generate appropriate cookie settings, but here are some examples of what valid cookie settings look like:
+You can use [this tool](/tools/cookie-settings) to generate appropriate cookie settings, but here are some examples of what valid cookie settings look like:
 
 <table>
 	<tr>
