@@ -124,7 +124,7 @@ Deleting the files and re-uploading a fresh copy of MyBB also has the benefit of
 
 ### Check CHMOD Permissions
 
-If certain files or folders have unnecessary permissions, you may be up against a security risk. Files and folders should only have the permissions required by MyBB to run. There is no specific recommended set of permissions. It varies from server to server, because they are configured differently. For more information, read the Docs page on [CHMOD permissions]({{ site.baseurl }}/CHMOD_Files.html) or contact your web host for their recommendations.
+If certain files or folders have unnecessary permissions, you may be up against a security risk. Files and folders should only have the permissions required by MyBB to run. There is no specific recommended set of permissions. It varies from server to server, because they are configured differently. For more information, read the Docs page on [CHMOD permissions](http://docs.mybb.com/1.8/administration/security/file-permissions/) or contact your web host for their recommendations.
 
 ### Check New Users
 
