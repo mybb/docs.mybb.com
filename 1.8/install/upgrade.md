@@ -10,7 +10,7 @@ Before you upgrade, you should always read the announcement blog post properly b
 
 1. First, you may want to shut down your forum. Doing this means that no one will interrupt the upgrade process accidentally. Please remember that switching the forum off by using the **Board Online/Offline** setting is **not** recommended. The best method is to use a `.htaccess` restriction on your forum's root folder so that no one can access the front-end. 
 
-To restrict access to your forum except from your IP address, you need to place the following code in your root `.htaccess` file. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
+To restrict access to your forum except from your IP address, you need to place the following code your root `.htaccess` file if you're using apache or in the location block of your site's config file if you're using nginx. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
 
 Apache 2.2:
 
@@ -24,7 +24,16 @@ Apache 2.4:
 
 ```
 Require all denied
-Require ip 1.2.3.4
+Require ip 127.0.0.1
+```
+
+Nginx:
+
+```
+location / {
+    allow 127.0.0.1;
+    deny  all;
+}
 ```
 
 If you find yourself unable to access your website during this process, it is possible that you have a dynamic IP, in which case you will have to repeat the above procedure whenever your IP changes.
