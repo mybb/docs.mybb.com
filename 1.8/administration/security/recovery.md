@@ -78,12 +78,30 @@ Great! Your admin account is fully restored and all your passwords were reset. N
 
 You should close the forum using the global switch in settings. Go to Admin CP > Configuration > Board Online / Offline > Board Closed > Yes.
 
-That will prevent the hacker from accessing the front-end, but the website itself is still accessible. If he planted an exploit somewhere else, he might be able to use it. So what you should do now is disallow all visitors, except yourself, from accessing your website. Place the following code in your root `.htaccess` file. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
+That will prevent the hacker from accessing the front-end, but the website itself is still accessible. If he planted an exploit somewhere else, he might be able to use it. So what you should do now is disallow all visitors, except yourself, from accessing your website. Place the following code in your root `.htaccess` file if you're using apache or inside your site's configuration file location block if you're using nginx. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
+
+Apache 2.2:
 
 ```
 Order deny,allow
 Deny from all
 Allow from 127.0.0.1
+```
+
+Apache 2.4:
+
+```
+Require all denied
+Require ip 127.0.0.1
+```
+
+Nginx:
+
+```
+location / {
+    allow 127.0.0.1;
+    deny  all;
+}
 ```
 
 If you find yourself unable to access your website during this process, it is possible that you have a dynamic IP, in which case you will have to repeat the above procedure whenever your IP changes.
