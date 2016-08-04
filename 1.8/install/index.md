@@ -28,7 +28,7 @@ We've broken down the installation into many smaller steps. Don't worry if it lo
 
 In the archive you extracted earlier there will be two directories: Documentation and Upload. The Documentation directory contains useful information, however you need not upload it to your server. The Upload directory contains the various files needed to run the MyBB software on your host.
 
-Next, you will need to upload the **contents** of the `Upload/` directory to either your website root directory (sometimes called `www`, `htdocs` or `httpdocs`), or a subdirectory of of your root directory (such as <root>/forums or <root>/community).
+Next, you will need to upload the **contents** of the `Upload/` directory to either your website root directory (sometimes called `www`, `htdocs` or `httpdocs`), or a subdirectory of your root directory (such as <root>/forums or <root>/community). It is not recommended that you upload the entire `Upload` directory as it can lead to confusion when accessing your forum.
 
 The process of uploading your files will depend on your hosting configuration, but FTP is the most common method. [FileZilla](https://filezilla-project.org/) is a free FTP client suitable for uploading MyBB.
 
