@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "UTF8 Setup"
+title: "UTF-8 Setup"
 categories: [administration]
 ---
 
@@ -9,10 +9,9 @@ UTF-8 which is rapidly becoming the Unicode standard for many webmasters. Howeve
 
 The following changes are to be made in `inc/config.php`. At this time you should download that file and open it in an appropriate text editor.
 
-1. Look for the following lines in `inc/config.php`. If they do not exist go to "Adding the code". Otherwise go to "Fixing the code"
+1. Look for the following lines in `inc/config.php`: 
 
-2. Add the following lines right before ?> (located at the end of the file)
-
+```
 /**
  * Database Encoding
  *  If you wish to set an encoding for MyBB uncomment
@@ -20,18 +19,19 @@ The following changes are to be made in `inc/config.php`. At this time you shoul
  *  the current value to the mysql charset:
  *  http://dev.mysql.com/doc/refman/5.1/en/charset-mysql.html
  */
+ ```
 
-$config['database']['encoding'] = 'utf8';
+```$config['database']['encoding'] = 'utf8';```
 
 2. Find the following line
 
-// $config['database']['encoding'] = 'utf8';
+``// $config['database']['encoding'] = 'utf8';``
 
 And replace it with
 
-$config['database']['encoding'] = 'utf8';
+```$config['database']['encoding'] = 'utf8';```
 
-Save the file and upload it to your server, replacing the old inc/config.php. Now that's done, you can continue to run the UTF-8 tools in the ACP.
+Save the file and upload it to your server, replacing the old `inc/config.php`. Now that's done, you can continue to run the UTF-8 tools in the ACP.
 
 
-Please note that once you've converted to UTF-8 there is no supported way to undo this process. 
+**Please note that once you've converted to UTF-8 there is no supported way to undo this process.** 
