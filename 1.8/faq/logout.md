@@ -17,7 +17,7 @@ This means that your Logout link doesn't contain an SID and since MyBB 1.2.8, th
  1. The board has been updated to a newer version of MyBB but some template information hasn't been updated.
  2. You are using a template designed for a version of MyBB older than 1.2.8 and as such, the logout link is also missing the SID component.
 
-A fix for both of these issues can be found by following the instructions [here](http://community.mybb.com/showthread.php?tid=25210&pid=177101#pid177101) to manually update your templates' Logout link to contain the SID. Note: You will need to do this for every theme that you use on your forum which does not currently contain an SID link.
+A fix for both of these issues can be found by following the instructions [here](https://community.mybb.com/showthread.php?tid=25210&pid=177101#pid177101) to manually update your templates' Logout link to contain the SID. Note: You will need to do this for every theme that you use on your forum which does not currently contain an SID link.
 
 If after making the above changes you are still unable to logout and are running MyBB 1.2.10. Please try the following:
 

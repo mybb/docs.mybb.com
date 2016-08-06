@@ -82,7 +82,7 @@ Once you've downloaded the correct upgrade package for you, it's time to do the 
 
 4. If the blog post announcement mentions that there are language changes and you've either customised your English language pack (the default pack) or installed a custom language pack, then perform the following:
 
-	1. Check to see if the language pack you're using has already been updated in the [Translation Releases Forum](http://community.mybb.com/forum-169.html). Download and install any updates you need.
+	1. Check to see if the language pack you're using has already been updated in the [Translation Releases Forum](https://community.mybb.com/forum-169.html). Download and install any updates you need.
 
 	2. If you have made customisations to the packs yourself, or you manage a language pack for MyBB, then read through the blog post announcement for a list of changes to the language packs and apply the changes as necessary.
 
@@ -90,6 +90,6 @@ Once you've downloaded the correct upgrade package for you, it's time to do the 
 
 ## Conclusion
 
-If you run into any problems at any point of the upgrade process, visit the [Community Forum](http://community.mybb.com/) for help.
+If you run into any problems at any point of the upgrade process, visit the [Community Forum](https://community.mybb.com/) for help.
 
 Otherwise, *congratulations*! You've just upgraded your forum!

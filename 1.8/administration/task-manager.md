@@ -50,7 +50,7 @@ Logs older than 30 days are automatically deleted.
 
 ## Weekly Backups
 
-The "Weekly Backup" task can be used to periodically back up your MyBB database, but its use is recommended only for small boards, because [it might slow down the board](http://community.mybb.com/thread-98163.html) when it takes its time to complete. If you have it running as a task but notice the board is slow when the backup task is running, then use a cron job instead. Below is an example for MySQL. 
+The "Weekly Backup" task can be used to periodically back up your MyBB database, but its use is recommended only for small boards, because [it might slow down the board](https://community.mybb.com/thread-98163.html) when it takes its time to complete. If you have it running as a task but notice the board is slow when the backup task is running, then use a cron job instead. Below is an example for MySQL. 
 
 Create a shell script named, for example, `~/forum_backup.sh`:
 
@@ -58,7 +58,7 @@ Create a shell script named, for example, `~/forum_backup.sh`:
 now=`date +%Y-%m-%dT%H-%M` ; mysqldump -u <MYBB_USER> --password=<MYBB_PASSWORD> --skip-opt --add-drop-table --complete-insert --create-options --disable-keys=FALSE --extended-insert=FALSE --lock-tables --skip-set-charset --skip-comments --dump-date <MYBB_DBNAME> > $now.sql ; zip -m $now.zip $now.sql
 ```
 
-These parameters configure the mysqldump to be very close to the format of the [backups generated via Admin CP](http://docs.mybb.com/1.8/administration/backups/). In particular, one INSERT per line vs. multi-value INSERTs allow for easier visual comparison of dumps using [visual diff tools](https://en.wikipedia.org/wiki/Diff_utility). 
+These parameters configure the mysqldump to be very close to the format of the [backups generated via Admin CP](https://docs.mybb.com/1.8/administration/backups/). In particular, one INSERT per line vs. multi-value INSERTs allow for easier visual comparison of dumps using [visual diff tools](https://en.wikipedia.org/wiki/Diff_utility). 
 
 To create a cron job for automatically executing that backup, run: 
 

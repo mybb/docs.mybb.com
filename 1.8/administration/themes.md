@@ -12,9 +12,9 @@ Each board comes with a default MyBB theme. It is recommended to **not** delete 
 
 ## Finding Themes
 
-Themes can be found at the MyBB Extend site (Extend) - [MyBB Mods - Themes](http://community.mybb.com/mods.php?action=browse&category=themes).
+Themes can be found at the MyBB Extend site (Extend) - [MyBB Mods - Themes](https://community.mybb.com/mods.php?action=browse&category=themes).
 
-Themes discussion, relases, requests and support can be found at [MyBB Community Forums - Themes](http://community.mybb.com/forum-103.html).
+Themes discussion, relases, requests and support can be found at [MyBB Community Forums - Themes](https://community.mybb.com/forum-103.html).
 
 You can also find MyBB themes at lot of other sites on the internet, but be sure that that themes are 1.8.x version compatible.
 For 1.6 Themes check [MyBB 1.6 Documentation]({{ site.baseurl }}/1.6/), or directly [MyBB 1.6 Themes]({{ site.baseurl }}/1.6/Admin-CP-Themes/).
@@ -37,4 +37,4 @@ Under `Import from` choose `Local file` -> Search and upload your `.xml` file (f
 
 You may need to check the `Ignore version compatiblity` option so you can upload it. And click **Import theme** to finish.
 
-A tutorial with images can be found here: [Theme installation](http://community.mybb.com/thread-163256.html).
+A tutorial with images can be found here: [Theme installation](https://community.mybb.com/thread-163256.html).

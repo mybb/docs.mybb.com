@@ -6,7 +6,7 @@ categories: [faq]
 
 MyBB setup is made to be as simple as possible. However, database connection issues may arise during installation, or later after installation. This article will explain some of the most common database connection errors and suggest ways to resolve the issue causing them.
 
-**Note: If needed, the MyBB installation guide for MyBB can be found here: http://docs.mybb.com/1.8/install/**
+**Note: If needed, the MyBB installation guide for MyBB can be found here: https://docs.mybb.com/1.8/install/**
 
 # Access denied for user
 Getting an error like this?:
@@ -82,9 +82,9 @@ Missing a table? First, consider a few key things:
 
 If the missing table is a core table, you should be asking yourself what you were doing. If you were installing a clean copy of MyBB, then try to drop your database and rebuild it with the provided installer.
 
-If you were updating, you should follow the guidance in the [upgrade guide](http://docs.mybb.com/1.8/install/upgrade/).
+If you were updating, you should follow the guidance in the [upgrade guide](https://docs.mybb.com/1.8/install/upgrade/).
 
-If you were merging an old database to yours, then you can check the [merge troubleshooting](http://docs.mybb.com/1.8/merge/troubleshooting/) document for troubleshooting steps.
+If you were merging an old database to yours, then you can check the [merge troubleshooting](https://docs.mybb.com/1.8/merge/troubleshooting/) document for troubleshooting steps.
 
 ## If the table is from a plugin
 

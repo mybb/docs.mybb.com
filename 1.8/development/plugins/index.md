@@ -8,7 +8,7 @@ Plugins allow you to easily extend or modify MyBB in a modular way, so that chan
 You can also safely replace the core MyBB files during upgrades without fear of losing your modifications. Therefore, it is strongly recommended that any changes to the default MyBB functionality are made via the plugin system, rather than modifying files.
 
 Developing plugins requires a sound knowledge of PHP, SQL and enough knowledge of MyBB to navigate the core files so that you can find answers in the source code.
-If you need help, post in the [Plugin Development section](http://community.mybb.com/forum-68.html) of the MyBB Community Forums for assistance from the community.
+If you need help, post in the [Plugin Development section](https://community.mybb.com/forum-68.html) of the MyBB Community Forums for assistance from the community.
 
 ## Plugin Basics
 

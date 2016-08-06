@@ -4,5 +4,5 @@ kramdown:
   input: GFM
 highlighter: rouge
 permalink: pretty
-baseurl:   //docs.mybb.com
-mainsiteurl: //www.mybb.com
+baseurl:   https://docs.mybb.com
+mainsiteurl: https://mybb.com

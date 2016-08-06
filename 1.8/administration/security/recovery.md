@@ -124,7 +124,7 @@ Deleting the files and re-uploading a fresh copy of MyBB also has the benefit of
 
 ### Check CHMOD Permissions
 
-If certain files or folders have unnecessary permissions, you may be up against a security risk. Files and folders should only have the permissions required by MyBB to run. There is no specific recommended set of permissions. It varies from server to server, because they are configured differently. For more information, read the Docs page on [CHMOD permissions](http://docs.mybb.com/1.8/administration/security/file-permissions/) or contact your web host for their recommendations.
+If certain files or folders have unnecessary permissions, you may be up against a security risk. Files and folders should only have the permissions required by MyBB to run. There is no specific recommended set of permissions. It varies from server to server, because they are configured differently. For more information, read the Docs page on [CHMOD permissions](https://docs.mybb.com/1.8/administration/security/file-permissions/) or contact your web host for their recommendations.
 
 ### Check New Users
 
@@ -134,7 +134,7 @@ If you're following along step-by-step, no one can access your website or the My
 
 Finally, you should quickly go through your templates, since they are a way to inject malicious JavaScript code into your forum. If possible, delete your current theme and install a fresh copy of it. If you hired a designer to create a custom theme and don't have a copy of it at the moment, contact them for one.
 
-However, if you made a lot of modifications and don't have a backup, then you'll have to go through the templates and look for suspicious code. Common templates for malicious code insertion are the `header`, `footer`, and `headerinclude`, as they are loaded globally. It is also recommended to check the `index`, `forumdisplay`, and `showthread` templates. An easy way to do this is to click on the Options button next to a template name and select Diff Report. The code highlighted in red is what differs from the default template, and also what you should be looking at. Look specifically for code within a `<script>` tag. Not all of it is malicious, but this filters down the options. If you don't know what to look for, don't be afraid to [ask for help](http://community.mybb.com/forum-176.html).
+However, if you made a lot of modifications and don't have a backup, then you'll have to go through the templates and look for suspicious code. Common templates for malicious code insertion are the `header`, `footer`, and `headerinclude`, as they are loaded globally. It is also recommended to check the `index`, `forumdisplay`, and `showthread` templates. An easy way to do this is to click on the Options button next to a template name and select Diff Report. The code highlighted in red is what differs from the default template, and also what you should be looking at. Look specifically for code within a `<script>` tag. Not all of it is malicious, but this filters down the options. If you don't know what to look for, don't be afraid to [ask for help](https://community.mybb.com/forum-176.html).
 
 ## New Security Measures
 
@@ -179,7 +179,7 @@ To disable display of all Admin CP links on the frontend of your forum:
 
 #### Installing an Admin CP Honeypot
 
-Once you have done that it is a good idea to install [Admin CP Honeypot](http://community.mybb.com/thread-94406.html). This will take your previous Admin CP location and install a fake Admin CP, which will record the IP of anyone who tries to login to it and email you a small report.
+Once you have done that it is a good idea to install [Admin CP Honeypot](https://community.mybb.com/thread-94406.html). This will take your previous Admin CP location and install a fake Admin CP, which will record the IP of anyone who tries to login to it and email you a small report.
 
 Now your real Admin CP directory should look something like `d8e8fca2dc0f896` (which you should bookmark or take note of) and the fake Admin CP will be located at `admin` (which will record the details of anyone who tries to access it).
 
@@ -319,7 +319,7 @@ Displaying which MyBB version you're running is essentially the same as yelling 
 
 ### Keep Plugins to a Minimum
 
-The more plugins you have installed, the more code hackers can exploit. Most plugins are fairly secure, but if one of them has a vulnerability, hackers can take advantage of it to get access to your forum. And for that simple reason it is highly recommended to keep the number of plugins to a minimum and only install those that you really need. It's also worth considering the popularity and the author of the plugin. Having that said, to improve your forum's security, we still recommend having a look at our list of [security plugins](http://community.mybb.com/thread-109872.html).
+The more plugins you have installed, the more code hackers can exploit. Most plugins are fairly secure, but if one of them has a vulnerability, hackers can take advantage of it to get access to your forum. And for that simple reason it is highly recommended to keep the number of plugins to a minimum and only install those that you really need. It's also worth considering the popularity and the author of the plugin. Having that said, to improve your forum's security, we still recommend having a look at our list of [security plugins](https://community.mybb.com/thread-109872.html).
 
 ### Secure Other Software
 
@@ -327,7 +327,7 @@ Similarly, if you have other software like WordPress or Drupal installed on your
 
 ### Backup Regularly
 
-None of this stuff matters if a hacker gets access to your database and drops all tables. He probably shouldn't have gotten that far provided that you have secure passwords and all, but if he did and you don't have a backup, you are essentially screwed. You will have to start over. That is why making backups of all your files and your database is **extremely important**. If the task is enabled in Admin CP > Tools & Maintenance > Task Manager, MyBB will backup your forum's database to the `backups` directory. In most cases this is not ideal, as hackers can easily destroy the backups. For a more sophisticated and complete backup solution, refer to the backup section in our list of [security tutorials](http://community.mybb.com/thread-109872.html).
+None of this stuff matters if a hacker gets access to your database and drops all tables. He probably shouldn't have gotten that far provided that you have secure passwords and all, but if he did and you don't have a backup, you are essentially screwed. You will have to start over. That is why making backups of all your files and your database is **extremely important**. If the task is enabled in Admin CP > Tools & Maintenance > Task Manager, MyBB will backup your forum's database to the `backups` directory. In most cases this is not ideal, as hackers can easily destroy the backups. For a more sophisticated and complete backup solution, refer to the backup section in our list of [security tutorials](https://community.mybb.com/thread-109872.html).
 
 ## Final Words
 

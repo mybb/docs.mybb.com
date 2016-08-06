@@ -52,7 +52,7 @@ Spam by cheaply-paid humans is becoming increasingly common, and this method unf
 
 ### Moderate First Posts
 
-Moderating a user's first post is a semi-intrusive but surefire way to stop spammers in your community. Even if a human spammer gets past the registration, their first post (and any until the first is approved) will go into the moderation queue, where a moderator can verify the content of the post to see if it looks like spam. Ad Bakker of the MyBB Community Forums created a [plugin for 1.8](http://community.mybb.com/thread-173075-post-1171321.html#pid1171321) that can be used to perform this action. Alternatively, the Group Promotions feature of MyBB can be leveraged to do something very similar without the plugin.
+Moderating a user's first post is a semi-intrusive but surefire way to stop spammers in your community. Even if a human spammer gets past the registration, their first post (and any until the first is approved) will go into the moderation queue, where a moderator can verify the content of the post to see if it looks like spam. Ad Bakker of the MyBB Community Forums created a [plugin for 1.8](https://community.mybb.com/thread-173075-post-1171321.html#pid1171321) that can be used to perform this action. Alternatively, the Group Promotions feature of MyBB can be leveraged to do something very similar without the plugin.
 
 # If a Spammer Gets Through, Purge Them!
 

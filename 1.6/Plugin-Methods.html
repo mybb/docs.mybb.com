@@ -33,7 +33,7 @@ categories: ["mybb16_plugins"]
 </p>
 
 <p>Some of these objects may be available or not, depending on what hook your plugin code is run by. For example, <code>$forum</code> is available only in <code>build_forumbits_forum</code> hooks, if it wsa passed as a parameter.
-</p><p>To explore the properties of an object, use the PHP function <a rel="nofollow" class="external text" href="http://php.net/manual/en/function.print-r.php">print_r</a>.
+</p><p>To explore the properties of an object, use the PHP function <a rel="nofollow" class="external text" href="https://secure.php.net/manual/en/function.print-r.php">print_r</a>.
 </p>
 
 <p>MyBB uses the $db variable to perform various database functions. These range from writing to deleting queries. For a full list of available methods, see the <a href="{{ site.baseurl }}/1.6/Database-Methods/" title="Database Methods">Database Methods</a> page.
@@ -60,14 +60,14 @@ function foo_dosomethingcool()
 		}
 }
 </pre>
-<p>So basically, if this function is used then it will load the "foobar.lang.php" language file and if a user is logged in, it will return the <i>isloggedin</i> text. If not, it will return the <i>isnotloggedin</i> text. We can also use the <a rel="nofollow" class="external text" href="http://php.net/sprintf/">PHP Sprintf function</a> in the $lang variable too. This lets us format a certain language string in the way we want to. For example, a language variable of
+<p>So basically, if this function is used then it will load the "foobar.lang.php" language file and if a user is logged in, it will return the <i>isloggedin</i> text. If not, it will return the <i>isnotloggedin</i> text. We can also use the <a rel="nofollow" class="external text" href="https://secure.php.net/sprintf/">PHP Sprintf function</a> in the $lang variable too. This lets us format a certain language string in the way we want to. For example, a language variable of
 </p>
 <pre>$l['welcome_back'] = &quot;&lt;strong&gt;Welcome back, {1}&lt;/strong&gt;. You last visited: {2}&quot;;</pre>
 <p>We can format this string by using $lang-&gt;sprintf:
 </p>
 <pre>$lang-&gt;welcome_back = $lang-&gt;sprintf($lang-&gt;welcome_back, $mybb-&gt;user['username'], $lastvisit);</pre>
 <p>$mybb-&gt;user['username'] will replace the {1}, and $lastvisit (the time of the user's last visit) will replace the {2}. That means the string will read: <i>Welcome back, <b>User</b>. You last visited: Yesterday, 12:32pm</i> (for example).
-</p><p>If you're stuck with language settings, you can get help at the <a rel="nofollow" class="external text" href="http://community.mybb.com/forum-72.html">MyBB Community Forum</a>.
+</p><p>If you're stuck with language settings, you can get help at the <a rel="nofollow" class="external text" href="https://community.mybb.com/forum-72.html">MyBB Community Forum</a>.
 </p>
 
 <p>The $mybb object can be used (amoung other things) to access cookies, user and usergroup details and settings.
@@ -129,7 +129,7 @@ eval(&quot;\$string_our_plugin_exports = \&quot;&quot;.$templates-&gt;get(&quot;
 <tr>
 <td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.baseurl }}/1.6/Translations/" title="Translations">Translations</a></b>
 </td>
-<td style="vertical-align: middle; width: 75%;"><a href="{{ site.baseurl }}/1.6/Admin-CP-Config-Languages/" title="Admin CP Config Languages">Language Management</a> - <a rel="nofollow" class="external text" href="http://community.mybb.com/thread-114917.html">Download</a>
+<td style="vertical-align: middle; width: 75%;"><a href="{{ site.baseurl }}/1.6/Admin-CP-Config-Languages/" title="Admin CP Config Languages">Language Management</a> - <a rel="nofollow" class="external text" href="https://community.mybb.com/thread-114917.html">Download</a>
 </td></tr></table>
 <table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
 <tr>

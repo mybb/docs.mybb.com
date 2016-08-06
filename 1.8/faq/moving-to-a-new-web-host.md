@@ -4,11 +4,11 @@ title: "Moving to a New Web Host"
 categories: [faq]
 ---
 
-This guide will explain the general process to move your MyBB installation to a new web host with minimal complications or downtime. Thank you to [Inferno](http://community.mybb.com/user-12365.html) of the MyBB Community Forums for creating [the thread](http://community.mybb.com/thread-27771.html) that aided in the creation of this guide.
+This guide will explain the general process to move your MyBB installation to a new web host with minimal complications or downtime. Thank you to [Inferno](https://community.mybb.com/user-12365.html) of the MyBB Community Forums for creating [the thread](https://community.mybb.com/thread-27771.html) that aided in the creation of this guide.
 
 There are three main "sections" of the migration process: backups/export of data, uploading of data to the new host, and domain transfer.
 
-If you encounter issues with following this transfer process, [create a support thread in the MyBB Community Forums](http://community.mybb.com/newthread.php?fid=176) or contact your new web host for assistance (and link them to this documentation!).
+If you encounter issues with following this transfer process, [create a support thread in the MyBB Community Forums](https://community.mybb.com/newthread.php?fid=176) or contact your new web host for assistance (and link them to this documentation!).
 
 # Backup/Export Data
 
@@ -36,6 +36,6 @@ In many cases, your new web host will help transfer your domain and point it to 
 
 # Completing the Transfer
 
-8. Your domain should hopefully be pointed to the new host at this point, and your forum should behave exactly as it did on your old host. If it doesn't, [create a support thread in the MyBB Community Forums](http://community.mybb.com/newthread.php?fid=176), or contact your new web host for assistance, providing them with a link to this documentation.
+8. Your domain should hopefully be pointed to the new host at this point, and your forum should behave exactly as it did on your old host. If it doesn't, [create a support thread in the MyBB Community Forums](https://community.mybb.com/newthread.php?fid=176), or contact your new web host for assistance, providing them with a link to this documentation.
 
 9. Re-open your board by following Steps 1-2 of [Backup/Export Data](#backup-export-data), but opening the board instead of closing it.

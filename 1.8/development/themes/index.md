@@ -149,4 +149,4 @@ For example, a sample table may look like this:
 </table>
 ```
 
-See [MyBB 1.4 CSS Guide](http://community.mybb.com/thread-33809.html) for a visual diagram of CSS classes and ids for the main MyBB pages.
+See [MyBB 1.4 CSS Guide](https://community.mybb.com/thread-33809.html) for a visual diagram of CSS classes and ids for the main MyBB pages.
