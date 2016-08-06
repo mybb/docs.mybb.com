@@ -19,6 +19,11 @@
 	<link rel="stylesheet" href="{{ site.mainsiteurl }}/assets/css/syntax.css" />
 	<link rel="stylesheet" href="{{ site.mainsiteurl }}/assets/css/screen.css" />
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/docs.css" />
+	<script>
+		if ((window.location.host == "docs.mybb.com") && (window.location.protocol != "https:")) {
+			window.location.protocol = "https";
+		}
+	</script>
 </head>
 <body>
 	<div id="container">
