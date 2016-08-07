@@ -10,7 +10,8 @@ UTF-8 has rapidly become the web standard for character encoding, supporting the
 
 The following change needs to be made in `inc/config.php`. Download the file from the server and open it in an appropriate text editor, or you edit it on-server if you have the means to do so.
 
-1. Look for the following lines in `inc/config.php`: 
+1. Look for the following lines in `inc/config.php`:
+
     ```php
     /**
     * Database Encoding
@@ -19,16 +20,18 @@ The following change needs to be made in `inc/config.php`. Download the file fro
     *  the current value to the mysql charset:
     *  http://dev.mysql.com/doc/refman/5.1/en/charset-mysql.html
     */
-
-// $config['database']['encoding'] = 'utf8';
- ```
+    
+    // $config['database']['encoding'] = 'utf8';
+    ```
 
 2. Replace the following:
 
     ```php
     // $config['database']['encoding'] = 'utf8';
     ```
+
 with:
+
     ```php
     $config['database']['encoding'] = 'utf8';
     ```
