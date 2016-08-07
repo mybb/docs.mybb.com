@@ -6,7 +6,7 @@ categories: [extend]
 
 ## Extend Site Documentation - Downloaders
 
-[Main Page]({{ site.baseurl }}/mods)
+[Main Page](https://community.mybb.com/mods.php)
 
 As a user you're simply looking to download something: a plugin, a theme, an icon set, perhaps a language pack or just some other resource that you may find interesting.
 
