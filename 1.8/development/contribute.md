@@ -21,9 +21,9 @@ If you already know what you're doing, contributing to one of our repositories i
 
 If you haven't worked with Git or GitHub before we recommend learning about it from the following resources:
 
-- [Official Git Documentation](http://git-scm.com/documentation)
+- [Official Git Documentation](https://git-scm.com/documentation)
 - [GitHub Bootcamp](https://help.github.com/categories/54/articles)
-- [Try Git: Code School](http://try.github.io)
+- [Try Git: Code School](https://try.github.io)
 
 The MyBB Team are not here to help you with problems with Git or GitHub. We expect you to have an understanding of this process if you are contributing.
 
