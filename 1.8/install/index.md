@@ -11,7 +11,7 @@ We've broken down the installation into many smaller steps. Don't worry if it lo
 * MyBB comes with the [features](https://www.mybb.com/features) that one would expect from a bulletin board software, as well as some unique features not found elsewhere.
 * Having trouble with MyBB? The support at the [MyBB Community Forums](https://community.mybb.com/) is free and available to anyone using MyBB, supported by the [volunteer team](https://www.mybb.com/about/team/), and other members of the community!
 * MyBB is easily customizable to suit your site's needs and looks.
-* Best of all, MyBB is [released under the GNU Lesser GPL licence](https://www.mybb.com/about/license), and therefore it's [entirely free](http://www.gnu.org/philosophy/free-sw.html)! No forced advertisements, no cost, no sign-ups, no forced email subscriptions!
+* Best of all, MyBB is [released under the GNU Lesser GPL licence](https://www.mybb.com/about/license), and therefore it's [entirely free](https://www.gnu.org/philosophy/free-sw.html)! No forced advertisements, no cost, no sign-ups, no forced email subscriptions!
 * You will require a web host to run your forum.
 * Your web host must satisfy a few [basic requirements](https://docs.mybb.com/1.8/install/requirements/) for MyBB to run properly.
 
