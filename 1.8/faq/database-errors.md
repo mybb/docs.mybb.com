@@ -10,16 +10,16 @@ MyBB setup is made to be as simple as possible. However, database connection iss
 
 # Access denied for user
 Getting an error like this?:
-![MySQL Error 1045 - Access denied for user with password](http://puu.sh/qmmNw/60de3ed946.png "Access Denied database")
+![MySQL Error 1045 - Access denied for user with password](/assets/images/faq/dberrors-1045-MySQL-access-denied.png "Access Denied database")
 
-This means that your configuration is wrong! Don't worry though, this is easy to fix. 
+This means that your configuration is wrong! Don't worry though, this is easy to fix.
 First - lets find out our username and password.
 
 If you're on a shared hosting environment that uses cPanel, log in to cPanel and select your database configuration.
-![cPanel UI to create new database user](http://puu.sh/qmkpY/2c24c1ec6f.png "cPanel database account")
+![cPanel UI to create new database user](/assets/images/faq/dberrors-cpanel-create-db-user.png "cPanel database account")
 
 Create a username and password, and then assign this user to the database MyBB will use:
-![cPanel UI to add user to database](http://puu.sh/qmkvf/d9763cebab.png "Assign user to database")
+![cPanel UI to add user to database](/assets/images/faq/dberrors-cpanel-add-user-to-db.png "Assign user to database")
 
 Now that you have assigned a user to your database, we need to change the MyBB configuration to reflect this.
 

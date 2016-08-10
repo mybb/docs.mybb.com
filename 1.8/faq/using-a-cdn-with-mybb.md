@@ -23,7 +23,7 @@ Once these files are copied over, you should now be able to access stylesheets f
 
 Once you have signed up for an account with your provider you will need to set up a zone or package.
 This is how ours was configured:
-![alt text](http://i.imgur.com/50yMHzS.png "MyBB CDN settings")
+![alt text](/assets/images/1.8/cdn-config.png "MyBB CDN settings")
 
 The resource type should be of "pull" type and the origin should be the subdomain we configured earlier (s.mybbstuff.com in my case). You can use any CDN hostname that you desire - most CDN providers will actually give you a subdomain of theirs if you do not wish to configure CNAME DNS records and such. I chose to use cdn.mybbstuff.com just because it looks good.
 
