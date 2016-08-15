@@ -85,3 +85,26 @@ article#docs_page .back-to-top {
   margin-left:5px;
   cursor:pointer;
 }
+
+.edit-page {
+	margin-top: 30px;
+	border-top: 1px solid #ddd;
+	padding-top: 15px;
+
+	.fa {
+		margin-right: 10px;
+	}
+
+	.edit-page-link {
+		color: #666;
+		text-decoration: none;
+		// border-radius: 4px;
+		padding: 5px 10px;
+		// display: inline-block;
+		// border: 1px solid #ccc;
+
+		&:hover, &:active {
+			color: #ff7500;
+		}
+	}
+}
