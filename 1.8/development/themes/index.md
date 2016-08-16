@@ -14,6 +14,8 @@ Once there click **Expand** to view the various template groups.
 
 To edit a template, click its name. Templates you have edited will appear in a different color. You can restore the original version of a template by clicking **Revert To Original**.
 
+[More information on template development &rarr;]({{ site.baseurl }}/1.8/development/themes/templates/)
+
 # Structure
 
 The MyBB template system doesn't have a simple hierarchical structure; templates can't include other templates. This makes following the structure of a page somewhat difficult. For example, if you start from the index page (the index template), you'll see that it uses a few variables:

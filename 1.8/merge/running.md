@@ -2,6 +2,7 @@
 layout: page
 title:  "Running the Merge System"
 categories: [merge]
+order: 1
 ---
 
 **The latest publicly released version of the MyBB Merge System only imports to MyBB 1.8.**

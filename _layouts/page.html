@@ -9,7 +9,9 @@ layout: default
 		</div>
 	</header>
 	<div class="page wrapper">
+		{% if page.toc != false %}
 		<div class="toc"></div>
+		{% endif %}
 
 		{{ content }}
 

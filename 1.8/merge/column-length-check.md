@@ -2,6 +2,7 @@
 layout: page
 title:  "Column Length Check"
 categories: [merge]
+order: 3
 ---
 
 **Note:** If you haven't got a similar error after the database configuration module, you can safely ignore this page.

@@ -1,0 +1,18 @@
+<ul class="category-list">
+	{% assign i = 0 %}
+	{% if include.sort == 'order' %}
+		{% assign sorted_pages = site.pages | sort:"order" %}
+	{% else %}
+		{% assign sorted_pages = site.pages | sort:"name" %}
+	{% endif %}
+	{% for catpage in sorted_pages %}
+		{% for pc in catpage.categories %}
+		{% if pc == include.category %}
+			<li class="category-list__item">
+				<h3 class="category-list__item__title"><a href="{{ site.baseurl }}{{ catpage.url }}" class="category-list__item__link">{{ catpage.title }}</a></h3>
+				{% if catpage.description != "" %}<p class="category-list__item__description">{{ catpage.description }}</p>{% endif %}
+			</li>
+		{% endif %}
+		{% endfor %}
+	{% endfor %}
+</ul>

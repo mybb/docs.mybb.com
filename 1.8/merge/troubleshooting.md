@@ -2,6 +2,7 @@
 layout: page
 title:  "Troubleshooting"
 categories: [merge]
+order: 2
 ---
 
 # Website not reachable

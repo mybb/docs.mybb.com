@@ -2,6 +2,7 @@
 layout: page
 title:  "Login Problems"
 categories: [faq]
+description: "Resolve issues with logging in to your forum."
 ---
 
 # Unable to Log In

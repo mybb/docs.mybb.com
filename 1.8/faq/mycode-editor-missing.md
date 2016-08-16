@@ -2,6 +2,7 @@
 layout: page
 title:  "Missing MyCode (BBCode) Editor"
 categories: [faq]
+description: "Common solutions for when the MyBB editor is not showing."
 ---
 
 ## About Missing MyCode (BBCode) Editor Bug

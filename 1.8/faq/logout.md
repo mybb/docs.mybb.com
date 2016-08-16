@@ -2,6 +2,7 @@
 layout: page
 title:  "Cannot Logout"
 categories: [faq]
+description: "Resolve issues with logging out from your forum."
 ---
 
 # Unable to logout

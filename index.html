@@ -12,60 +12,61 @@ categories: [page]
 		</div>
 	</header>
 	<div class="page wrapper">
-		<div style="width: 48%; float: left;">
-			<section>
-				<h1>MyBB 1.8 Documentation</h1>
-
-				<section>
-					<h2>Installation</h2>
-					{% include category.html category="install" %}
-
-					<h2>Merge System</h2>
-					{% include category.html category="merge" %}
-				</section>
-
-				<section>
-					<h2>FAQ</h2>
-					{% include category.html category="faq" %}
-				</section>
-
-				<section>
-					<h2>Administration</h2>
-					{% include category.html category="administration" %}
-
-					<h3>Security</h3>
-					{% include category.html category="security" %}
-				</section>
-			</section>
-			<section>
-				<h1>MyBB 1.6 Documentation</h1>
-
-				<a href="{{ site.baseurl }}/1.6/">View old documentation for 1.6</a>
-			</section>
-		</div>
-		<div style="width: 48%; float: right;">
-			<section>
-				<h1>MyBB Development</h1>
-				{% include category.html category="development" %}
-
-				<h2>Plugin Development</h2>
-				{% include category.html category="plugins" %}
-
-				<h2>Theme Development</h2>
-				{% include category.html category="themes" %}
-
-				<h2>Translations</h2>
-				{% include category.html category="translations" %}
-
-				<a name="mods-guide"></a>
-				<h2>Extend Website</h2>
-				{% include category.html category="extend" %}
-			</section>
-
-			<section>
-				<h1>MyBB Versions</h1>
-				{% include category.html category="versions" %}
-			</section>
+		<div class="jump clearfix">
+			<div class="jump__tile">
+				<a href="{{ site.baseurl }}/1.8/install/" class="jump__tile__link">
+					<i class="jump__tile__icon fa fa-book"></i>
+					<span class="jump__tile__title">Install MyBB</span>
+				</a>
+			</div>
+			<div class="jump__tile">
+				<a href="{{ site.baseurl }}/1.8/faq/" class="jump__tile__link">
+					<i class="jump__tile__icon fa fa-question-circle"></i>
+					<span class="jump__tile__title">Common Issues</span>
+				</a>
+			</div>
+			<div class="jump__tile">
+				<a href="{{ site.baseurl }}/1.8/merge/" class="jump__tile__link">
+					<i class="jump__tile__icon fa fa-exchange"></i>
+					<span class="jump__tile__title">Merge System</span>
+				</a>
+			</div>
+			<div class="jump__tile">
+				<a href="{{ site.baseurl }}/1.8/install/upgrade/" class="jump__tile__link">
+					<i class="jump__tile__icon fa fa-cloud-upload"></i>
+					<span class="jump__tile__title">Upgrade MyBB</span>
+				</a>
+			</div>
+			<div class="jump__tile">
+				<a href="{{ site.baseurl }}/1.8/administration/" class="jump__tile__link">
+					<i class="jump__tile__icon fa fa-cog"></i>
+					<span class="jump__tile__title">Administration</span>
+				</a>
+			</div>
+			<div class="jump__tile">
+				<a href="{{ site.baseurl }}/1.8/administration/security/" class="jump__tile__link">
+					<i class="jump__tile__icon fa fa-lock"></i>
+					<span class="jump__tile__title">Security</span>
+				</a>
+			</div>
+			<div class="jump__tile">
+				<a href="{{ site.baseurl }}/1.8/development/plugins/" class="jump__tile__link">
+					<i class="jump__tile__icon fa fa-wrench"></i>
+					<span class="jump__tile__title">Plugin Development</span>
+				</a>
+			</div>
+			<div class="jump__tile">
+				<a href="{{ site.baseurl }}/1.8/development/themes/" class="jump__tile__link">
+					<i class="jump__tile__icon fa fa-paint-brush"></i>
+					<span class="jump__tile__title">Theme Development</span>
+				</a>
+			</div>
+			<div class="jump__tile">
+				<a href="{{ site.baseurl }}/contents/" class="jump__tile__link">
+					<i class="jump__tile__icon fa fa-file-text"></i>
+					<span class="jump__tile__title">All Docs</span>
+				</a>
+			</div>
 		</div>
 	</div>
 </article>

@@ -2,6 +2,7 @@
 layout: page
 title: "Moving to a New Web Host"
 categories: [faq]
+description: "Guide on moving your MyBB installation to a new web host."
 ---
 
 This guide will explain the general process to move your MyBB installation to a new web host with minimal complications or downtime. Thank you to [Inferno](https://community.mybb.com/user-12365.html) of the MyBB Community Forums for creating [the thread](https://community.mybb.com/thread-27771.html) that aided in the creation of this guide.

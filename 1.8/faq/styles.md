@@ -2,6 +2,7 @@
 layout: page
 title:  "Broken Styles"
 categories: [faq]
+description: "Fixes for when the styles are not working on your forum or your Admin CP."
 ---
 
 # My site has no styles / looks broken

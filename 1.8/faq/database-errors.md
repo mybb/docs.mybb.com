@@ -2,6 +2,7 @@
 layout: page
 title: "Fixing Database Errors"
 categories: [faq]
+description: "Explains some of the most common database connection errors and suggests ways to resolve the issue causing them."
 ---
 
 MyBB setup is made to be as simple as possible. However, database connection issues may arise during installation, or later after installation. This article will explain some of the most common database connection errors and suggest ways to resolve the issue causing them.

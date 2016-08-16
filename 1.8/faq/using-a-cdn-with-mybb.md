@@ -2,6 +2,7 @@
 layout: page
 title: "Using a CDN with MyBB"
 categories: [faq]
+description: "Guide on setting up MyBB to pull static files from the CDN of your choice."
 ---
 
 MyBB 1.8 brings built-in CDN compatibility to MyBB for the first time. This feature allows the loading of static files such as JavaScript, CSS, and images from a CDN of your choice. In this tutorial, we will guide you through the basic setup steps.

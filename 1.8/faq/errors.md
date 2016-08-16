@@ -2,6 +2,7 @@
 layout: page
 title:  "Error Messages"
 categories: [faq]
+description: "Common MyBB error messages and how to fix them."
 ---
 
 # Introduction
@@ -149,5 +150,5 @@ This error occurs when you upgrade your forum from MyBB 1.6.4 or older to MyBB 1
     `{$captcha}`
 
 3. Replace it with:
-    
+
     `{$hiddencaptcha}`

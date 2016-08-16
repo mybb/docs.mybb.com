@@ -2,6 +2,7 @@
 layout: page
 title:  "Mail Issues"
 categories: [faq]
+description: "Resolve issues with receiving mail sent from your forum."
 ---
 
 # Mail Issues
@@ -19,17 +20,17 @@ MyBB relies on the [PHP Mail function](https://secure.php.net/manual/en/function
 Create a new `.php` file with this content:
 
 ```php
-    <?php 
-     error_reporting(E_ALL); 
-       $to = 'your.email@address.com'; 
-       if(mail($to, 'Testing mail', 'This is a mailing test to see if PHP mail works.')) 
-       { 
-        echo 'Mail was sent by PHP'; 
-       } 
-       else 
-       { 
-        echo 'PHP could not send the mail'; 
-       } 
+    <?php
+     error_reporting(E_ALL);
+       $to = 'your.email@address.com';
+       if(mail($to, 'Testing mail', 'This is a mailing test to see if PHP mail works.'))
+       {
+        echo 'Mail was sent by PHP';
+       }
+       else
+       {
+        echo 'PHP could not send the mail';
+       }
     ?>
 ```
 
@@ -46,16 +47,16 @@ If your webhost only allows sites to send mail from their own domain, edit the f
 Find:
 ```php
     mail($to, $subject, $message, $headers);
-``` 
- 
+```
+
 Add before:
 ```php
-    ini_set("sendmail_from", "forum@YOURDOMAIN.com"); 
+    ini_set("sendmail_from", "forum@YOURDOMAIN.com");
 ```
 
 The final result of the edit should be:
 ```php
-    ini_set("sendmail_from", "forum@YOURDOMAIN.com"); 
+    ini_set("sendmail_from", "forum@YOURDOMAIN.com");
     mail($to, $subject, $message, $headers);
 ```
 
