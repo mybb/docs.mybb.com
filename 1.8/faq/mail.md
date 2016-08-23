@@ -30,6 +30,7 @@ Create a new `.php` file with this content:
        else
        {
         echo 'PHP could not send the mail';
+        print_r(error_get_last());
        }
     ?>
 ```
