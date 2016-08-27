@@ -3,6 +3,9 @@ layout: page
 title:  "Mail Issues"
 categories: [faq]
 description: "Resolve issues with receiving mail sent from your forum."
+
+redirect_from:
+- /Help-Mail.html
 ---
 
 # Mail Issues

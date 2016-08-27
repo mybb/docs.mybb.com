@@ -2,6 +2,9 @@
 layout: page
 title:  "Upgrade"
 categories: [install]
+
+redirect_from:
+- /Upgrading.html
 ---
 
 ## Preparing for your Upgrade

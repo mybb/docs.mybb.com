@@ -3,6 +3,9 @@ layout: page
 title:  "Login Problems"
 categories: [faq]
 description: "Resolve issues with logging in to your forum."
+
+redirect_from:
+- /Help-Cannot_login.html
 ---
 
 # Unable to Log In
