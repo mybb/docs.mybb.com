@@ -27,7 +27,7 @@ If you encounter issues with following this transfer process, [create a support 
 
 5. Create a new database and user on the new host. Change the database configuration variables in `./inc/config.php` to the values appropriate for your new host.
 
-6. Using a tool such as phpMyAdmin, browse to the blank database on your new host, and import the data exported in Step 2 of [Backup/Export Data](#backup-export-data).
+6. Using a tool such as phpMyAdmin, browse to the blank database on your new host, and import the data exported in Step 3 of [Backup/Export Data](#backup-export-data).
 
 7. Using an FTP client, upload **ALL** of your forum's files to the new web host.
 
