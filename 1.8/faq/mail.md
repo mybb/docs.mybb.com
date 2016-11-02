@@ -50,7 +50,14 @@ If your webhost only allows sites to send mail from their own domain, edit the f
 
 Find:
 ```php
-    mail($to, $subject, $message, $headers);
+	if($mybb->safemode)
+    {
+        $sent = @mail($this->to, $this->subject, $this->message, trim($this->headers));
+    }
+    else
+    {
+        $sent = @mail($this->to, $this->subject, $this->message, trim($this->headers), $this->additional_parameters);
+    }
 ```
 
 Add before:
@@ -61,7 +68,14 @@ Add before:
 The final result of the edit should be:
 ```php
     ini_set("sendmail_from", "forum@YOURDOMAIN.com");
-    mail($to, $subject, $message, $headers);
+    if($mybb->safemode)
+    {
+        $sent = @mail($this->to, $this->subject, $this->message, trim($this->headers));
+    }
+    else
+    {
+        $sent = @mail($this->to, $this->subject, $this->message, trim($this->headers), $this->additional_parameters);
+    }
 ```
 
 `YOURDOMAIN` in the above code must be replaced by the domain where the forum is hosted.
