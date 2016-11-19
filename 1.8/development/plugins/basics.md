@@ -143,7 +143,7 @@ When a plugin is uninstalled, this routine will also be called before \_uninstal
 
 For your plugin to actually work, you need to "hook" your code into MyBB. This can be done in many places throughout MyBB code.
 
-You can find a list of hooks [here](hooks). Alternatively you can run the following command on a \*nix system in a MyBB directory:
+You can find a list of hooks [here](https://docs.mybb.com/1.8/development/plugins/hooks/). Alternatively you can run the following command on a \*nix system in a MyBB directory:
 
 `grep -inr '$plugins->run_hooks' ./`
 
