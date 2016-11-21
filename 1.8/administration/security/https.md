@@ -88,16 +88,18 @@ You can notify your forum's users that images and videos will be displayed if th
 It's possible to keep displaying all content securely, regardless of the protocol used with a <i>resource proxy</i>. Instead of pointing browsers to original URLs (that your forum users provide), the content can be served from your own server that first fetches it from the original server and then forwards it to the end user &mdash; always over HTTPS.
 
 This will require a resource proxy script, best if running on a server other than your forum's (you will need a VPS or a dedicated server):
- - <a href="https://github.com/atmos/camo">github.com/atmos/camo</a> for NodeJS,
- - <a href="https://github.com/ankane/camo">github.com/ankane/camo</a> for Ruby
+
+- <a href="https://github.com/atmos/camo">github.com/atmos/camo</a> for NodeJS,
+- <a href="https://github.com/ankane/camo">github.com/ankane/camo</a> for Ruby
 
 After setting up a resource proxy, configure the mentioned plugin by setting <i>Image proxy</i> to <strong><i>On</i></strong> and configure the remaining settings. An example configuration for the <i>atmos/camo</i> implementation:
- - <i>Image proxy URL scheme</i>: `{PROXY_URL}{DIGEST}/{URL}`
- - <i>Image proxy URL</i>: `https://camo-url.example.com/`
- - <i>Image proxy key</i>: `0x24FEEDFACEDEADBEEFCAFE`
- - <i>Image proxy digest algorithm</i>: `sha1`
- - <i>Image proxy forwarded URL protocol</i>: <i>No changes</i>
- - <i>Image proxy forwarded URL encoding</i>: <i>Hex encoding</i>
+
+- <i>Image proxy URL scheme</i>: `{PROXY_URL}{DIGEST}/{URL}`
+- <i>Image proxy URL</i>: `https://camo-url.example.com/`
+- <i>Image proxy key</i>: `0x24FEEDFACEDEADBEEFCAFE`
+- <i>Image proxy digest algorithm</i>: `sha1`
+- <i>Image proxy forwarded URL protocol</i>: <i>No changes</i>
+- <i>Image proxy forwarded URL encoding</i>: <i>Hex encoding</i>
 
  This can vary with each implementation &mdash; if you're having problems, consult the script's documentation or <a href="https://community.mybb.com/forum-179.html">create a support thread</a>.
 
@@ -127,24 +129,31 @@ Additional headers, added to every response from your server, can contain direct
 Another important, though requiring further <a href="https://report-uri.io/home/generate">fine-tuning</a> header is `Content-Security-Policy` containing definitions of allowed sources for specified types of content and how it can be included on the website. It heavily relies on the forum's configuration and some rules are not possible (e.g. MyBB requires inline scripts to be allowed).
 
 **Adding headers to server responses**
+
 - On <strong>Apache</strong> servers, make sure the `mod_headers` module is enabled and add each header in a separate line to the <i>.htaccess</i> file or your <i>VirtualHost</i> file:
+
   ```
   Header always set HeaderName "headerValue"
   ```
+
   replacing <i>HeaderName</i> and <i>headerValue</i> with intended values. <a href="https://httpd.apache.org/docs/current/mod/mod_headers.html">mod_headers documentation &rarr;</a>
+
 - On <strong>nginx</strong> servers, make sure the `ngx_http_headers_module` module is enabled and add each header in a separate line to the <i>location</i> block:
+
   ```
   add_header HeaderName headerValue;
   ```
+
   replacing <i>HeaderName</i> and <i>headerValue</i> with intended values. <a href="https://nginx.org/en/docs/http/ngx_http_headers_module.html">ngx_http_headers_module documentation &rarr;</a>
 
 # Verifying & monitoring
- - Most modern browsers will display detailed warnings in the webmaster tools' Console when mixed content is detected.
- - Your websites can be checked using external tools:
-   - <a href="https://observatory.mozilla.org/">observatory.mozilla.org</a>
-   - <a href="https://securityheaders.io/">securityheaders.io</a>
-   - <a href="https://www.ssllabs.com/ssltest/">ssllabs.com/ssltest/</a>
 
- - <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Using_CSP_violation_reports">CSP violation reports</a> can be used with <a href="https://report-uri.io/">report-uri.io</a> to log all events breaking the rules set by the Content Security Policy header, such as attempts to load insecure content.
+- Most modern browsers will display detailed warnings in the webmaster tools' Console when mixed content is detected.
+- Your websites can be checked using external tools:
+  - <a href="https://observatory.mozilla.org/">observatory.mozilla.org</a>
+  - <a href="https://securityheaders.io/">securityheaders.io</a>
+  - <a href="https://www.ssllabs.com/ssltest/">ssllabs.com/ssltest/</a>
+
+- <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Using_CSP_violation_reports">CSP violation reports</a> can be used with <a href="https://report-uri.io/">report-uri.io</a> to log all events breaking the rules set by the Content Security Policy header, such as attempts to load insecure content.
 
 We offer support and validation of HTTPS setups on the <a href="https://community.mybb.com/forum-179.html">Community forums</a>.
