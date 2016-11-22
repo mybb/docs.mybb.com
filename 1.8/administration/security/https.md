@@ -5,18 +5,18 @@ categories: [security]
 ---
 
 # Security and privacy with TLS
-<strong>TLS</strong> (<i>Transport Layer Security</i>; previously SSL, <i>Secure Sockets Layer</i>) is a set of cryptographic protocols providing encrypted connections over a computer network. The protocol used for accessing web pages, HTTP, wrapped in TLS is known as <strong>HTTPS</strong> (<i>Hypertext Transfer Protocol <u>Secure</u></i>) and is becoming the standard in the modern web &mdash; more than half of web page visits are using HTTPS.
+<strong>TLS</strong> (<i>Transport Layer Security</i>; previously SSL, <i>Secure Sockets Layer</i>) is a set of cryptographic protocols providing encrypted connections over a computer network. The protocol used for accessing web pages, HTTP, wrapped in TLS is known as <strong>HTTPS</strong> (<i>Hypertext Transfer Protocol <u>Secure</u></i>) and is becoming the standard of the modern web &mdash; more than half of web page impressions are served using HTTPS.
 
-TLS certificates provided by <i>certificate authorities</i> (CAs) are used for asymmetric encryption, where web browsers request the public key for a particular website to encrypt information that can be decrypted with the corresponding private key known only to the destination server, eliminating the possibility of anyone being able to read the data itself even if the whole communication is being intercepted. This communication results in establishing a shared key for symmetric encryption for optimal performance, where the encryption and decryption is being done using the same secret.
+TLS certificates issued by <i>certificate authorities</i> (CAs) are used for asymmetric encryption, where web browsers request the public key for a particular website to encrypt information that can be decrypted with the corresponding private key known only to the destination server, eliminating the possibility of anyone being able to read the data itself even if the whole communication is being intercepted. This results in establishing a shared key for symmetric encryption, where the encryption and decryption is being done using the same secret for optimal performance.
 
-Most web sites and forums exchange sensitive information like passwords, IP addresses and personally identifiable information protected by law in most countries &mdash; not having all the connections to your web site can result in disclosure of such data in cases as simple as using public internet hotspots, which is the reason major web browsers start delivering warnings to users if the connection is not properly secured. Modern web server software allows administrators to set up HTTPS without significant performance or compatibility drawbacks and we <strong>strongly</strong> recommend board administrators upgrade their boards to support HTTPS and enforce it.
+Most web sites and forums exchange sensitive information like passwords, IP addresses and personally identifiable information protected by law in most countries &mdash; not having all of your web site's connections secured can result in disclosure of such data in cases as simple as using public internet hotspots, which is the reason major web browsers have started delivering warnings to users when the connection security can be questioned. Modern web server software allows administrators to set up HTTPS without significant performance or compatibility drawbacks and we <strong>strongly</strong> recommend board administrators upgrade their boards to support HTTPS and enforce it.
 
 # Obtaining a TLS certificate &amp; configuring the server
-The TLS certificate for a public website needs to be issued by a certificate authority trusted by major web browsers that validates the ownership of the domain first. Certificates can be obtained from CAs directly as well as domain and web hosting providers &mdash; it's possible that your host contains such offers or that it's already included in your package.
+The TLS certificate for a public website needs to be issued by a certificate authority trusted by major web browsers, validating the ownership of a domain. Certificates can be obtained from CAs directly as well as domain and web hosting providers &mdash; it's possible that your host contains such offers or that it's already included in your package.
 
-It's also possible to use <a href="https://letsencrypt.org/">Let's Encrypt</a>, an automated CA providing free certificates with comparable level of security and tools that make the setup and certificate renewal process easier. Simply refer to <a href="https://certbot.eff.org/">certbot.eff.org</a> for installation instructions and make yourself familiar with its <a href="https://certbot.eff.org/docs/using.html">usage guide</a>.
+It's also possible to use <a href="https://letsencrypt.org/">Let's Encrypt</a>, an automated CA providing free certificates with comparable level of security and tools that make the setup and certificate renewal process easier &mdash; refer to <a href="https://certbot.eff.org/">certbot.eff.org</a> for installation instructions and make yourself familiar with its <a href="https://certbot.eff.org/docs/using.html">usage guide</a>.
 
-If you're configuring your server on your own, you need to follow <a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">common recommendations</a> of modern protocols and ciphers.
+If you're configuring a server on your own, you need to follow <a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">common recommendations</a> of modern protocols and ciphers.
 
 ## Reverse proxies
 If your websites take advantage of reverse proxies (such as Amazon CloudFront or Cloudflare) you should set up both connections (between your users and the proxy server as well as between the proxy server and the origin server) to use HTTPS. For example, Cloudflare provides <a href="https://blog.cloudflare.com/cloudflare-ca-encryption-origin/">Origin CA</a> certificates that can be installed on your server to be able to communicate with Cloudflare securely; you can also use certificates provided by Let's Encrypt. Remeber to instruct the proxy server to always use secure connections on both sides.
@@ -80,8 +80,8 @@ As long as users provide HTTPS-based URLs to these elements browsers will render
 
 This can be aided by installing <a href="https://community.mybb.com/mods.php?action=view&pid=450"><strong>DVZ Secure Content</strong></a>, a MyBB 1.8.x plugin with two operating modes described below.
 
-### Blocking insecure elements
-A simple and straightforward way to make your forums work properly under HTTPS is blocking all elements pointed to using `http://` &mdash; simply make sure the <i>Filter non-HTTPS MyCode images</i> and <i>Block non-HTTPS avatars</i> are set to <strong>On</strong> under <strong><i>Configuration &rarr; Settings &rarr; DVZ Secure Content</i></strong>.
+### Blocking insecure resources
+A simple and straightforward way to make your forums work properly under HTTPS is blocking all elements pointed to using `http://` &mdash; simply make sure the <i>Filter non-HTTPS MyCode images</i> and <i>Block non-HTTPS avatars</i> settings are set to <strong>On</strong> under <strong><i>Configuration &rarr; Settings &rarr; DVZ Secure Content</i></strong>.
 You can notify your forum's users that images and videos will be displayed if they provide `https://` URLs.
 
 ### Proxying insecure resources
@@ -111,7 +111,7 @@ Proxying all remote resources has positive impact on your forum users' privacy b
 After configuring your setup, use the plugin's tools available on <strong><i>Configuration &rarr; Plugins</i></strong> to secure the video widget templates and avatars &mdash; all <i>Security overview</i> indicators should read <i>Yes</i> (with the exception of <i>All remote resources proxied</i>, if you didn't decide to use a resource proxy).
 
 ## Custom MyCode
-If your board takes advantage of custom MyCode tags, review the <i>Replacement</i> codes and make sure they don't load external content over insecure the protocol.
+If your board takes advantage of custom MyCode tags, review the <i>Replacement</i> codes and make sure they don't load external content over the unsecured protocol.
 
 # Security headers
 Additional headers, added to every response from your server, can contain directives instructing browsers to react to security-related events in a desired fashion. You can find a more detailed list <a href="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project#tab=Headers">here</a>.
@@ -121,12 +121,12 @@ Additional headers, added to every response from your server, can contain direct
 | Header name | Suggested value for MyBB | Description |
 | - | - | - |
 | `Strict-Transport-Security` | `max-age=31536000; includeSubDomains; preload` | Prevents the browser from downgrading connections to your website to plaintext HTTP until the `max-age` time has elapsed. If `includeSubDomains` is specified, the rule applies to all subdomains. The `preload` part instructs that this rule can be hardcoded into web browsers (<a href="https://hstspreload.appspot.com/">read more</a>). Include only if your forum is working correctly under HTTPS (you can set the `max-age` to lower periods of time and increase it afterwards). |
-| `Content-Security-Policy` | `upgrade-insecure-requests; default-src https:` | Instructs the browser to upgrade protocols of included HTTP resources to HTTPS. | 
+| `Content-Security-Policy` | `upgrade-insecure-requests; default-src https:` | Instructs the browser to upgrade protocols of included HTTP resources to HTTPS and to block unsecured elements. | 
 | `X-Frame-Options` | `deny` | Improves the protection against clickjacking by preventing the website from being displayed in frames. |
 | `X-XSS-Protection` | `1; mode=block` | Enables the browser's XSS filter. |
 | `X-Content-Type-Options` | `nosniff` | Intructs the browser to interpret filetypes according to the content type header. |
 
-Another important, though requiring further <a href="https://report-uri.io/home/generate">fine-tuning</a> header is `Content-Security-Policy` containing definitions of allowed sources for specified types of content and how it can be included on the website. It heavily relies on the forum's configuration and some rules are not possible (e.g. MyBB requires inline scripts to be allowed).
+The `Content-Security-Policy` can be further <a href="https://report-uri.io/home/generate">fine-tuned</a> to contain definitions of allowed sources for specified types of content and how it can be included on the website. It heavily relies on the forum's configuration and some rules are not possible (e.g. MyBB requires inline scripts to be allowed).
 
 **Adding headers to server responses**
 
