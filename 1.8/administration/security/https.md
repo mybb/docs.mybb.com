@@ -32,11 +32,13 @@ Once your forum works properly under the new protocol, you can set up your serve
 - <strong>Apache</strong> servers:
 
   First, add the following line in the <strong>.htaccess</strong> file in your forum's main directory or your <i>VirtualHost</i> file if it's not already present:
+
   ```
   RewriteEngine On
   ```
 
   Following the statement, insert a rule that will redirect the traffic changing the protocol under the condition that it's not HTTPS:
+
   ```
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
