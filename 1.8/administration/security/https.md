@@ -45,10 +45,12 @@ Once your forum works properly under the new protocol, you can set up your serve
   ```
 
   Alternatively, if you use a reverse proxy and the connection between the proxy and your server doesn't happen over HTTPS (which is highly discouraged), you might need your server to check the value of the `X-Forwarded-Proto` header (supplied by the reverse proxy) instead:
+
   ```
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   ```
+
   Make sure this is the first redirect rule and the protocol redirection is always the first one that's performed.
 
 - <strong>nginx</strong> servers:
