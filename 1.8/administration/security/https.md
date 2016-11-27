@@ -150,6 +150,10 @@ The `Content-Security-Policy` can be further <a href="https://report-uri.io/home
 
   replacing <i>HeaderName</i> and <i>headerValue</i> with intended values. <a href="https://nginx.org/en/docs/http/ngx_http_headers_module.html">ngx_http_headers_module documentation &rarr;</a>
 
+# _Secure_ cookies
+
+Once HTTPS is configured, browsers should be informed that cookies (which contain sensitive information) should only be sent over a secure connection: set the <strong>Secure Cookie Flag</strong> setting under <strong><i>Configuration &rarr; Site Details</i></strong> to <strong>Yes</strong> (available on MyBB 1.8.9 and up).
+
 # Verifying & monitoring
 
 - Most modern browsers will display detailed warnings in the webmaster tools' Console when mixed content is detected.
