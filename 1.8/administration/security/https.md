@@ -14,9 +14,14 @@ Most web sites and forums exchange sensitive information like passwords, IP addr
 # Obtaining a TLS certificate &amp; configuring the server
 The TLS certificate for a public website needs to be issued by a certificate authority trusted by major web browsers, validating the ownership of a domain. Certificates can be obtained from CAs directly as well as domain and web hosting providers &mdash; it's possible that your host contains such offers or that it's already included in your package.
 
-It's also possible to use <a href="https://letsencrypt.org/">Let's Encrypt</a>, an automated CA providing free certificates with comparable level of security and tools that make the setup and certificate renewal process easier &mdash; refer to <a href="https://certbot.eff.org/">certbot.eff.org</a> for installation instructions and make yourself familiar with its <a href="https://certbot.eff.org/docs/using.html">usage guide</a>.
+Configuring the web server to present a valid certificate depends on the operating system and platform &mdash; refer to external resources:
+ - <a href="https://www.digicert.com/ssl-certificate-installation.htm">How to Install an SSL Certificate (digicert.com)</a> or
+ - <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/795/69/how-to-install-ssl-certificates">How to install SSL certificates (namecheap.com)</a>
 
+and select the software you're using.
 If you're configuring a server on your own, you need to follow <a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">common recommendations</a> of modern protocols and ciphers.
+
+It's also possible to use <a href="https://letsencrypt.org/">Let's Encrypt</a>, an automated CA providing free certificates with comparable level of security and tools that make the setup and certificate renewal process easier &mdash; refer to <a href="https://certbot.eff.org/">certbot.eff.org</a> for installation instructions and make yourself familiar with its <a href="https://certbot.eff.org/docs/using.html">usage guide</a>.
 
 ## Reverse proxies
 If your websites take advantage of reverse proxies (such as Amazon CloudFront or Cloudflare) you should set up both connections (between your users and the proxy server as well as between the proxy server and the origin server) to use HTTPS. For example, Cloudflare provides <a href="https://blog.cloudflare.com/cloudflare-ca-encryption-origin/">Origin CA</a> certificates that can be installed on your server to be able to communicate with Cloudflare securely; you can also use certificates provided by Let's Encrypt. Remeber to instruct the proxy server to always use secure connections on both sides.
@@ -153,6 +158,19 @@ The `Content-Security-Policy` can be further <a href="https://report-uri.io/home
 # _Secure_ cookies
 
 Once HTTPS is configured, browsers should be informed that cookies (which contain sensitive information) should only be sent over a secure connection: set the <strong>Secure Cookie Flag</strong> setting under <strong><i>Configuration &rarr; Site Details</i></strong> to <strong>Yes</strong> (available on MyBB 1.8.9 and up).
+
+# Subresource Integrity
+If your board takes advantage of resources (such as CSS or JavaScript files) stored on remote servers like CDN providers, it's a good idea to use <strong>Subresource Integrity</strong> (SRI). This feature allows to check file checksums before they are run by the browser and therefore protects the original website if files have been modified, potentially by a malicious party.
+
+SRI can be implemented be including the `integrity="..."` attribute in `<link>` and `<script>` elements, e.g.:
+
+```
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+```
+
+You can generate SRI checksums (hashes) on <a href="https://www.srihash.org/">srihash.org</a>. Each time the file content is changed, the corresponding checksum needs to be updated as well for browsers to load it correctly.
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Learn more &rarr;</a>
 
 # Verifying & monitoring
 
