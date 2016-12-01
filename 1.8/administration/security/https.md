@@ -15,8 +15,9 @@ Most web sites and forums exchange sensitive information like passwords, IP addr
 The TLS certificate for a public website needs to be issued by a certificate authority trusted by major web browsers, validating the ownership of a domain. Certificates can be obtained from CAs directly as well as domain and web hosting providers &mdash; it's possible that your host contains such offers or that it's already included in your package.
 
 Configuring the web server to present a valid certificate depends on the operating system and platform &mdash; refer to external resources:
- - <a href="https://www.digicert.com/ssl-certificate-installation.htm">How to Install an SSL Certificate (digicert.com)</a> or
- - <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/795/69/how-to-install-ssl-certificates">How to install SSL certificates (namecheap.com)</a>
+
+- <a href="https://www.digicert.com/ssl-certificate-installation.htm">How to Install an SSL Certificate (digicert.com)</a> or
+- <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/795/69/how-to-install-ssl-certificates">How to install SSL certificates (namecheap.com)</a>
 
 and select the software you're using.
 If you're configuring a server on your own, you need to follow <a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">common recommendations</a> of modern protocols and ciphers.
