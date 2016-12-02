@@ -163,7 +163,7 @@ Once HTTPS is configured, browsers should be informed that cookies (which contai
 # Subresource Integrity
 If your board takes advantage of resources (such as CSS or JavaScript files) stored on remote servers like CDN providers, it's a good idea to use <strong>Subresource Integrity</strong> (SRI). This feature allows to check file checksums before they are run by the browser and therefore protects the original website if files have been modified, potentially by a malicious party.
 
-SRI can be implemented be including the `integrity="..."` attribute in `<link>` and `<script>` elements, e.g.:
+SRI can be implemented by including the `integrity="..."` attribute in `<link>` and `<script>` elements, e.g.:
 
 ```
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
