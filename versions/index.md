@@ -122,7 +122,7 @@ Download links are provided on this page for older versions for non-production-s
 
 | Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
-| [1.2.14](1214) | 18 July 2008 | Security and Maintenance release |  -  |
+| [1.2.14](https://community.mybb.com/thread-33865.html) | 18 July 2008 | Security and Maintenance release |  -  |
 | [1.2.13](https://community.mybb.com/thread-31666.html) | 21 May 2008 | Security vulnerability patch |  -  |
 | [1.2.12](https://community.mybb.com/thread-27675.html) | 20 January 2008 | Security and Maintenance release |  -  |
 | [1.2.11](https://community.mybb.com/thread-27227.html) | 8 January 2008 | Security vulnerability patch |  -  |
