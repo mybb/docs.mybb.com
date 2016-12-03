@@ -86,85 +86,85 @@ Download links are provided on this page for older versions for non-production-s
 | [1.6.11](1.6.11) | 8 October 2013 | Maintenance and Security Release | [Download](https://resources.mybb.com/downloads/mybb_1611.zip) |
 | [1.6.10](1.6.10) | 22 April 2013 | Maintenance and Security Release | [Download](https://resources.mybb.com/downloads/mybb_1610.zip) |
 | [1.6.9](169) | 15 December 2012 | Security Release | [Download](https://resources.mybb.com/downloads/mybb_1609.zip) |
-| [1.6.8](168) | 27 May 2012 | Maintenance Release |  -  |
-| [1.6.7](167) | 1 April 2012 | Feature Update, Security and Maintenance Release |  - |
-| [1.6.6](166) | 10 February 2012 | Security Release |  -  |
-| [1.6.5](165) | 25 November 2011 | Feature Update, Security and Maintenance Release |  -  |
-| [1.6.4](164) | 26 July 2011 | Feature Update, Security and Maintenance Release |  -  |
-| [1.6.3](163) | 17 April 2011 | Security Release |  -  |
-| [1.6.2](162) | 22 February 2011 | Security and Maintenance Release |  -  |
-| [1.6.1](161) | 15 December 2010 | Security and Maintenance Release |  -  |
-| [1.6.0](160) | 3 August 2010 | Major Release |  -  |
+| [1.6.8](https://blog.mybb.com/2012/05/27/mybb-1-6-8-released-maintenance-release/) | 27 May 2012 | Maintenance Release |  -  |
+| [1.6.7](https://blog.mybb.com/2012/04/01/mybb-1-6-7-update-1-8-development/) | 1 April 2012 | Feature Update, Security and Maintenance Release |  - |
+| [1.6.6](https://blog.mybb.com/2012/02/10/mybb-1-6-6-security-release/) | 10 February 2012 | Security Release |  -  |
+| [1.6.5](https://blog.mybb.com/2011/11/25/mybb-1-6-5-released-feature-update-security-maintenance-release/) | 25 November 2011 | Feature Update, Security and Maintenance Release |  -  |
+| [1.6.4](https://blog.mybb.com/2011/07/26/mybb-1-6-4-released-feature-update-security-maintenance-release/) | 26 July 2011 | Feature Update, Security and Maintenance Release |  -  |
+| [1.6.3](https://blog.mybb.com/2011/04/17/mybb-1-6-3-and-1-4-16-security-update/) | 17 April 2011 | Security Release |  -  |
+| [1.6.2](https://blog.mybb.com/2011/02/22/mybb-1-6-2-and-1-4-15-security-update/) | 22 February 2011 | Security and Maintenance Release |  -  |
+| [1.6.1](https://blog.mybb.com/2010/12/15/mybb-1-6-1-release-1-4-14-update/) | 15 December 2010 | Security and Maintenance Release |  -  |
+| [1.6.0](https://blog.mybb.com/2010/08/03/mybb-1-6-released/) | 3 August 2010 | Major Release |  -  |
 
 #### 1.4.x
 
 | Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
-| [1.4.16](1416) | 17 April 2011 | Security release |  -  |
-| [1.4.15](1415) | 22 February 2011 | Maintenance release |  -  |
-| [1.4.14](1414) | 2 August 2010 | Maintenance release |  -  |
-| [1.4.13](1413) | 19 April 2010 | Security patch release |  -  |
-| [1.4.12](1412) | 13 April 2010 | Security and Maintenance release |  -  |
-| [1.4.11](1411) | 29 December 2009 | Minor patch and security release |  -  |
-| [1.4.10](1410) | 1 December 2009 | Maintenance release |  -  |
-| [1.4.9](149) | 21 September 2009 | Security release |  -  |
-| [1.4.8](148) | 26 June 2009 | Security and Maintenance release |  -  |
-| [1.4.7](147) | 15 June 2009 | Security release |  -  |
-| [1.4.6](146) | 3 May 2009 | Security release |  -  |
-| [1.4.5](145) | 19 April 2009 | Security and Maintenance release |  -  |
-| [1.4.4](144) | 27 November 2008 | Security and Maintenance release |  -  |
-| [1.4.3](143) | 29 October 2008 | Security vulnerability patch |  -  |
-| [1.4.2](142) | 17 September 2008 | Security and Maintenance release |  -  |
-| [1.4.1](141) | 17 August 2008 | Security and Maintenance release |  -  |
-| [1.4.0](140) | 3 August 2008 | Major Release  |  -  |
+| [1.4.16](https://blog.mybb.com/2011/04/17/mybb-1-6-3-and-1-4-16-security-update/) | 17 April 2011 | Security release |  -  |
+| [1.4.15](https://blog.mybb.com/2011/02/22/mybb-1-6-2-and-1-4-15-security-update/) | 22 February 2011 | Maintenance release |  -  |
+| [1.4.14](https://blog.mybb.com/2010/12/15/mybb-1-6-1-release-1-4-14-update/) | 2 August 2010 | Maintenance release |  -  |
+| [1.4.13](https://blog.mybb.com/2010/04/19/mybb-1-4-13-released-security-patches-to-mybb-1-4-12/) | 19 April 2010 | Security patch release |  -  |
+| [1.4.12](https://blog.mybb.com/2010/04/13/mybb-1-4-12-released-security-maintenance-update/) | 13 April 2010 | Security and Maintenance release |  -  |
+| [1.4.11](https://blog.mybb.com/2009/12/29/mybb-1-4-11-released-minor-patch-security-update/) | 29 December 2009 | Minor patch and security release |  -  |
+| [1.4.10](https://blog.mybb.com/2009/12/01/mybb-1-4-10-released-maintenance-release/) | 1 December 2009 | Maintenance release |  -  |
+| [1.4.9](https://blog.mybb.com/2009/09/21/mybb-1-4-9-released-security-update/) | 21 September 2009 | Security release |  -  |
+| [1.4.8](https://community.mybb.com/thread-51952.html) | 26 June 2009 | Security and Maintenance release |  -  |
+| [1.4.7](https://community.mybb.com/thread-51349.html) | 15 June 2009 | Security release |  -  |
+| [1.4.6](https://community.mybb.com/thread-49231.html) | 3 May 2009 | Security release |  -  |
+| [1.4.5](https://community.mybb.com/thread-48484.html) | 19 April 2009 | Security and Maintenance release |  -  |
+| [1.4.4](https://community.mybb.com/thread-41036.html) | 27 November 2008 | Security and Maintenance release |  -  |
+| [1.4.3](https://community.mybb.com/thread-39705.html) | 29 October 2008 | Security vulnerability patch |  -  |
+| [1.4.2](https://community.mybb.com/thread-37792.html) | 17 September 2008 | Security and Maintenance release |  -  |
+| [1.4.1](https://community.mybb.com/thread-36022.html) | 17 August 2008 | Security and Maintenance release |  -  |
+| [1.4.0](https://community.mybb.com/thread-34565.html) | 3 August 2008 | Major Release  |  -  |
 
 #### 1.2.x
 
 | Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
 | [1.2.14](1214) | 18 July 2008 | Security and Maintenance release |  -  |
-| [1.2.13](1213) | 21 May 2008 | Security vulnerability patch |  -  |
-| [1.2.12](1212) | 20 January 2008 | Security and Maintenance release |  -  |
-| [1.2.11](1211) | 8 January 2008 | Security vulnerability patch |  -  |
-| [1.2.10](1210) | 1 December 2007 | Maintenance Release |  -  |
-| [1.2.9](129) | 10 July 2007 | Security vulnerability patch |  -  |
-| [1.2.8](128) | 28 June 2007 | Maintenance and Security vulnerability patch |  -  |
-| [1.2.7](127) | 15 May 2007 | Maintenance and Security vulnerability patch |  -  |
-| [1.2.6](126) | 25 April 2007 | Security vulnerability patch |  -  |
-| [1.2.5](125) | 13 April 2007 | Security vulnerability patch |  -  |
-| [1.2.4](124) | 4 April 2007 | Security vulnerability patch |  -  |
-| [1.2.3](123) | 14 February 2007 | Maintenance and Security vulnerability patch |  -  |
-| [1.2.2](122) | 1 December 2006 | Maintenance and Security vulnerability patch |  -  |
-| [1.2.1](121) | 26 November 2006 | Small security update.  Version number unchanged. |  -  |
-| [1.2.1](121) | 27 September 2006 | Maintenance and Security vulnerability patch |  -  |
-| [1.2.0](120) | 2 September 2006 | Major Release |  -  |
+| [1.2.13](https://community.mybb.com/thread-31666.html) | 21 May 2008 | Security vulnerability patch |  -  |
+| [1.2.12](https://community.mybb.com/thread-27675.html) | 20 January 2008 | Security and Maintenance release |  -  |
+| [1.2.11](https://community.mybb.com/thread-27227.html) | 8 January 2008 | Security vulnerability patch |  -  |
+| [1.2.10](https://community.mybb.com/thread-26083.html) | 1 December 2007 | Maintenance Release |  -  |
+| [1.2.9](https://community.mybb.com/thread-20910.html) | 10 July 2007 | Security vulnerability patch |  -  |
+| [1.2.8](https://community.mybb.com/thread-20463.html) | 28 June 2007 | Maintenance and Security vulnerability patch |  -  |
+| [1.2.7](https://community.mybb.com/thread-19241.html) | 15 May 2007 | Maintenance and Security vulnerability patch |  -  |
+| [1.2.6](https://community.mybb.com/thread-18632.html) | 25 April 2007 | Security vulnerability patch |  -  |
+| [1.2.5](https://community.mybb.com/thread-18301.html) | 13 April 2007 | Security vulnerability patch |  -  |
+| [1.2.4](https://community.mybb.com/thread-18002.html) | 4 April 2007 | Security vulnerability patch |  -  |
+| [1.2.3](https://community.mybb.com/thread-16273.html) | 14 February 2007 | Maintenance and Security vulnerability patch |  -  |
+| [1.2.2](https://community.mybb.com/thread-14181.html) | 1 December 2006 | Maintenance and Security vulnerability patch |  -  |
+| [1.2.1](https://community.mybb.com/thread-14090.html) | 26 November 2006 | Small security update.  Version number unchanged. |  -  |
+| [1.2.1](https://community.mybb.com/thread-12705.html) | 27 September 2006 | Maintenance and Security vulnerability patch |  -  |
+| [1.2.0](https://community.mybb.com/thread-11781.html) | 2 September 2006 | Major Release |  -  |
 
 #### 1.1.x and 1.0x
 
 | Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
-| [1.1.8](118) | 30 August 2006 | Security vulnerability patch |  -  |
-| [1.1.7](117) | 27 July 2006 | Security vulnerability patch |  -  |
-| [1.1.6](116) | 25 July 2006 | Security vulnerability patch |  -  |
-| [1.1.5](115) | 27 June 2006 | Security vulnerability patch |  -  |
-| [1.1.4](114) | 22 June 2006 | Security vulnerability patch |  -  |
-| [1.1.3](113) | 10 June 2006 | Security vulnerability patch |  -  |
-| [1.1.2](112) | 6 May 2006 | Security vulnerability patch |  -  |
-| [1.1.1](111) | 14 April 2006 | Security vulnerability patch |  -  |
-| [1.1.0](110) | 8 March 2006 | Also known as 1.1 or 1.10 - Security and bug fixes |  -  |
-| [1.0.4](104) | 15 February 2006 | Security vulnerability patch |  -  |
-| [1.0.3](103) | 31 January 2006 | Security vulnerability patch |  -  |
-| [1.0.2](102) | 11 January 2006 | Security vulnerability patch (Originally released on 7 January 2006) |  -  |
-| [1.0.1](101) | 28 December 2005 | Security vulnerability patch |  -  |
-| [1.0.0](100) | 9 December 2005 | Major release | - |
+| [1.1.8](https://community.mybb.com/thread-11697.html) | 30 August 2006 | Security vulnerability patch |  -  |
+| [1.1.7](https://community.mybb.com/thread-10853.html) | 27 July 2006 | Security vulnerability patch |  -  |
+| [1.1.6](https://community.mybb.com/thread-10555.html) | 25 July 2006 | Security vulnerability patch |  -  |
+| [1.1.5](https://community.mybb.com/thread-10115.html) | 27 June 2006 | Security vulnerability patch |  -  |
+| [1.1.4](https://community.mybb.com/thread-9955.html) | 22 June 2006 | Security vulnerability patch |  -  |
+| [1.1.3](https://community.mybb.com/thread-9622.html) | 10 June 2006 | Security vulnerability patch |  -  |
+| [1.1.2](https://community.mybb.com/thread-8733.html) | 6 May 2006 | Security vulnerability patch |  -  |
+| [1.1.1](https://community.mybb.com/thread-8232.html) | 14 April 2006 | Security vulnerability patch |  -  |
+| [1.1.0](https://community.mybb.com/thread-7368.html) | 8 March 2006 | Also known as 1.1 or 1.10 - Security and bug fixes |  -  |
+| [1.0.4](https://community.mybb.com/thread-6777.html) | 15 February 2006 | Security vulnerability patch |  -  |
+| [1.0.3](https://community.mybb.com/thread-6418.html) | 31 January 2006 | Security vulnerability patch |  -  |
+| [1.0.2](https://community.mybb.com/thread-5852.html) | 11 January 2006 | Security vulnerability patch (Originally released on 7 January 2006) |  -  |
+| [1.0.1](https://community.mybb.com/thread-5633.html) | 28 December 2005 | Security vulnerability patch |  -  |
+| [1.0.0](https://community.mybb.com/thread-5184.html) | 9 December 2005 | Major release | - |
 
 #### Preview Releases
 
 | Version Number | Release Date | Release type | Availability |
 | :------------: | ------------ | ------------ | :---------: |
-| [PR2](pr-2) `Sec.Update` | 1 November 2005 | Security vulnerability patch |  -  |
-| [PR2](pr-2) `Rev.686` | 3 September 2005 | Maintenance release | - |
-| [PR2](pr-2) | 30 August 2005 | Major release (presented major improvements since RC4) | - |
+| [PR2](https://community.mybb.com/thread-4507.html) `Sec.Update` | 1 November 2005 | Security vulnerability patch |  -  |
+| [PR2](https://community.mybb.com/thread-3633.html) `Rev.686` | 3 September 2005 | Maintenance release | - |
+| [PR2](https://community.mybb.com/thread-3528.html) | 30 August 2005 | Major release (presented major improvements since RC4) | - |
 | [PR1](pr-1) | March 2005 | Private beta release | - |
 
 #### Pre-1.0 (Release Candidate/Beta) series
