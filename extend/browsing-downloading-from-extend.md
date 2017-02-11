@@ -35,7 +35,7 @@ For each projects you can view the cover and this informations:
 
 - Small Description
 
-- Starts
+- Stars
 
 - Downloads
 
@@ -57,7 +57,7 @@ Under description there are 4 buttons:
 
 - Download (download page)
 
-- Star (allows you to reccommend projects)
+- Star (allows you to recommend projects)
 
 - Get Support (either the support link entered by the project author or a link to the support forum on the MyBB Community)
 
