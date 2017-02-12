@@ -29,7 +29,7 @@ When you visit a category page, here's how it looks like:
 
 [![Browsing and Filtering](/assets/images/extend/downloaders1.png)](/assets/images/extend/downloaders1.png)
 
-For each projects you can view the cover and this informations:
+For each project you can view the cover and the following information:
 
 - Title
 
@@ -75,7 +75,7 @@ Under this buttons there is a tab with the following links:
 
 - License (where you can see the license of the project)
 
-On the right side, you can see the latest build and a Donate button if the owner of the project set a PayPal e-mail for donations.
+On the right side, you can see the latest build and a Donate button if the owner of the project has set a PayPal e-mail for donations.
 
 
 #### Download
