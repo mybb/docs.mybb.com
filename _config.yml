@@ -4,7 +4,7 @@ kramdown:
   input: GFM
 highlighter: rouge
 permalink: pretty
-baseurl:   https://docs.mybb.com
+baseurl: ""
 mainsiteurl: https://mybb.com
 
 gems:
