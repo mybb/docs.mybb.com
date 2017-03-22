@@ -96,10 +96,10 @@ $user['favorite_colour'] = 'Blue';
 ```
 
 ## Caching Templates
-Don't forget to cache the template. This is important for pages with big load and prevent the database server from extra querys.
+Don't forget to cache the template. This is important for pages with big load and prevent the database server from extra queries.
 
 ### Caching a template
-An simple way to cache an template only at the place where it's needed, is to use the `THIS_SCRIPT` definition.
+A simple way to cache an template only at the place where it's needed is to use the `THIS_SCRIPT` definition.
 For example, the template is needed in the postbit. Then we can load it in the showthreads.php.
 ```php
 if(THIS_SCRIPT == 'showthread.php')
@@ -126,14 +126,14 @@ if(THIS_SCRIPT == 'member.php')
 }
 ```
 
-### Testing if the template get cached
+### Testing if the template gets cached
 You can simply test if the templates get cached correctly or not. Open the page where they should get cached and add a `?debug&debug=1` or `&debug&debug=1` to the url into the browser.
-Now you see the `MyBB Debug Information` page. The first table called `Page Generation Statistics` contain a row with the template cache information. 
+Now you see the `MyBB Debug Information` page. The first table called `Page Generation Statistics` contains a row with the template cache information. 
 
-#### There is an template that not get cached:
+#### If a template does not get cached
 `No. Templates Used: 90 (89 Cached / 1 Manually Loaded)`
-This means there is 1 template that need an extra select query to the database to get loaded. At the botton you see the `Template Statistics` and now can control wich templates get not cached. All template names in `Templates Requiring Additional Calls (Not Cached at Startup) - 1 Total` are not cached, so you should correct your code.
+This means there is 1 template that needs an extra select query to the database to get loaded. At the botton you see the `Template Statistics` and now can control which templates don't get cached. All template names in `Templates Requiring Additional Calls (Not Cached at Startup) - 1 Total` are not cached, so you should correct your code.
 
-#### If you do all right and the templates get cached at tho correct place it looks similar to:
+#### How to determine if templates are being cached correctly
 `No. Templates Used: 90 (90 Cached / 0 Manually Loaded)`
 Your template is now listed in the correct `Template Statistics` table.
