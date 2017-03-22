@@ -54,7 +54,7 @@ echo "</pre>";
 
 ### Output
 
-``php
+```php
 Array
 (
     [sid] => 6
@@ -105,7 +105,7 @@ Returns the value of the field specified from the resource query.  Receives thre
 Returns the number of rows in the query.  Receives one parameter:
 
 <dl>
-    <dt>resource</dt>
+    <dt>query</dt>
     <dd>The resource query.</dd>
 </dl>
 
@@ -120,7 +120,7 @@ Returns the insert id (The id of the primary key) of the insert query just run.
 Runs an insert query on a table in a database. Receives two parameters:
 
 <dl>
-    <dt>string</dt>
+    <dt>table</dt>
     <dd>The table name to perform the query on.</dd>
 
     <dt>array</dt>
@@ -132,7 +132,7 @@ Runs an insert query on a table in a database. Receives two parameters:
 Runs an insert query on a table in the database.  Multiple rows can be inserted with one query. Receives two parameters:
 
 <dl>
-    <dt>string</dt>
+    <dt>table</dt>
     <dd>The table name to perform the query on.</dd>
 
     <dt>array</dt>
@@ -141,19 +141,23 @@ Runs an insert query on a table in the database.  Multiple rows can be inserted 
 
 ## `$db->update_query`
 
-Runs an update query on a table in a database.
-
-It receives three parameters:
+Runs an update query on a table in a database.  It receives five parameters:
 
 <dl>
     <dt>table</dt>
-    <dd>The table name</dd>
+    <dd>The table name.</dd>
 
     <dt>array</dt>
-    <dd>an update array</dd>
+    <dd>An array of fields and their values.</dd>
 
     <dt>where</dt>
-    <dd>The sql where clause.</dd>
+    <dd>The SQL where clause.</dd>
+
+    <dt>limit</dt>
+    <dd>An optional limit clause.</dd>
+
+    <dt>no_quote</dt>
+    <dd>An option to quote incoming values of the array.</dd>
 </dl>
 
 ## `$db->delete_query`
@@ -175,27 +179,53 @@ Used to perform a delete query on a table in a database.  Receives three paramet
 
 Replaces addslashes, escapes data before being used in a query.
 
+## `$db->free_result`
+
+Frees the resources of an SQL query.  Receives one parameters:
+
+<dl>
+    <dt>query</dt>
+    <dd>The query to destroy.</dd>
+</dl>
+
+## `$db->escape_string_like`
+
+Escapse a string used within a like command.  Receives one parameters:
+
+<dl>
+    <dt>string</dt>
+    <dd>The string to be escaped.</dd>
+</dl>
+
 ## `$db->connect`
 
 Connects a new database.
 
 ## `$db->select_db`
 
-Selects the database for the current MySQL Session
+Selects the database for the current SQL Session.
 
 ## `$db->explain_query`
 
-Helps to explain queries run from on database from the current session for debugging purposes.
+Helps to explain queries run from on database from the current session for debugging purposes.  Receives two parameters:
+
+<dl>
+    <dt>string</dt>
+    <dd>The query SQL.</dd>
+
+    <dt>qtime</dt>
+    <dd>The time it took to perform the query.</dd>
+</dl>
 
 ## `$db->data_seek`
 
 Moves the internal pointer to the specified row.  Receives two parameters:
 
 <dl>
-    <dt>resource</dt>
+    <dt>query</dt>
     <dd>The resource query.</dd>
 
-    <dt>int</dt>
+    <dt>row</dt>
     <dd>The row to move the internal pointer to.</dd>
 </dl>
 
@@ -207,9 +237,18 @@ Closes the connection to the currently open database.
 
 Returns the error number (if any) of the specified query resource.
 
+## `$db->error_string`
+
+Return the error string (if any) of the specified query resource.
+
 ## `$db->error`
 
-Returns the error string (if any) of the specified query resource.
+Output a database error.  Receives one parameter:
+
+<dl>
+    <dt>string</dt>
+    <dd>The string to present as an error.</dd>
+</dl>
 
 ## `$db->dberror`
 
@@ -229,11 +268,25 @@ Returns the tables in the current open database.
 
 ## `$db->table_exists`
 
-Returns true if the specified table exists.
+Returns true if the specified table exists.  Receives one parameter:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+</dl>
 
 ## `$db->field_exists`
 
-Returns true if the specified field exists.
+Returns true if the specified field exists.  Receives two parameters:
+
+<dl>
+    <dt>field</dt>
+    <dd>The field name.</dd>
+
+    <dt>table</dt>
+    <dd>The table name.</dd>
+</dl>
+
 
 ## `$db->shutdown_query`
 
@@ -245,60 +298,264 @@ Returns the version number of the database server being used.
 
 ## `$db->optimize_table`
 
-Runs an optimize query on a table.
+Runs an optimize query on a table.  Receives one parameter:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+</dl>
 
 ## `$db->analyze_table`
 
-Runs an analyze query on a table.
+Runs an analyze query on a table.  Receives one parameter:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+</dl>
 
 ## `$db->show_create_table`
 
-Return the "create table" command for a specific table.
+Return the "create table" command for a specific table.  Receives one parameter:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+</dl>
 
 ## `$db->show_fields_from`
 
-Show the "show fields from" command for a specific table.
+Show the "show fields from" command for a specific table.  Receives one parameter:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+</dl>
 
 ## `$db->is_fulltext`
 
-Returns whether or not the table contains a fulltext index.
+Returns whether or not the table contains a fulltext index.  Receives two parameters:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+
+    <dt>index</dt>
+    <dd>Optionally specify the name of the index.</dd>
+</dl>
 
 ## `$db->supports_fulltext`
 
-Returns whether or not this database engine supports fulltext indexing.
+Returns whether or not this database engine supports fulltext indexing.  Receives one parameter:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+</dl>
 
 ## `$db->supports_fulltext_boolean`
 
-Returns whether or not this database engine supports boolean fulltext matching.
+Returns whether or not this database engine supports boolean fulltext matching.  Receives one parameter:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+</dl>
+
+## `$db->index_exists`
+
+Checks to see if an index exists on a specified table.  Receives two parameters:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+
+    <dt>index</dt>
+    <dd>The name of the index.</dd>
+</dl>
 
 ## `$db->create_fulltext_index`
 
-Creates a fulltext index on the specified column in the specified table with optional index name.
+Creates a fulltext index on the specified column in the specified table with optional index name.  Receives three parameters:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+
+    <dt>column</dt>
+    <dd>Name of the column to be indexed.</dd>
+
+    <dt>name</dt>
+    <dd>Optional index name.</dd>
+</dl>
 
 ## `$db->drop_index`
 
-Drop an index with the specified name from the specified table.
+Drop an index with the specified name from the specified table.  Receives two parameters:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+
+    <dt>index</dt>
+    <dd>The name of the index.</dd>
+</dl>
 
 ## `$db->add_column`
 
-Adds a new column to the specified table.
+Adds a new column to the specified table.  Receives three parameters:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+
+    <dt>column</dt>
+    <dd>The column name.</dd>
+
+    <dt>definition</dt>
+    <dd>The new column definition.</dd>
+</dl>
 
 ## `$db->modify_column`
 
-Changes the definition of the specified column in the specified table.
+Changes the definition of the specified column in the specified table.  Receives three parameters:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+
+    <dt>column</dt>
+    <dd>The column name.</dd>
+
+    <dt>definition</dt>
+    <dd>The new column definition.</dd>
+</dl>
 
 ## `$db->rename_column`
 
-Renames the specified column.
+Renames the specified column.  Receives four parameters:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+
+    <dt>old_column</dt>
+    <dd>The old column name.</dd>
+
+    <dt>new_column</dt>
+    <dd>The new column name.</dd>
+
+    <dt>definition</dt>
+    <dd>The new column definition.</dd>
+</dl>
 
 ## `$db->drop_column`
 
-Drops the specified column from the specified table.
+Drops the specified column from the specified table.  Receives two parameters:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+
+    <dt>column</dt>
+    <dd>The column name.</dd>
+</dl>
 
 ## `$db->rename_table`
 
-Renames the specified table.
+Renames the specified table.  Receives three parameters:
+
+<dl>
+    <dt>old_table</dt>
+    <dd>The old table name.</dd>
+
+    <dt>new_table</dt>
+    <dd>The new table name.</dd>
+
+    <dt>table_prefix</dt>
+    <dd>Add table prefix to query. Defaults to true.</dd>
+</dl>
 
 ## `$db->drop_table`
 
-Drops the specified table.
+Drops the specified table.  Receives three parameters:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+
+    <dt>hard</dt>
+    <dd>Option to perform a hard drop (does not check to see if table exists). Defaults to false.</dd>
+
+    <dt>table_prefix</dt>
+    <dd>Add table prefix to query. Defaults to true.</dd>
+</dl>
+
+## `$db->replace_query`
+
+Replaces the current contents of table with new values.  Receives two parameters:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name.</dd>
+
+    <dt>replacements</dt>
+    <dd>An array of fields and their new values.</dd>
+</dl>
+
+## `$db->set_table_prefix`
+
+Sets the table prefix used by the simple select, insert, update and delete functions.  Receives one parameter:
+
+<dl>
+    <dt>prefix</dt>
+    <dd>The new table prefix.</dd>
+</dl>
+
+## `$db->fetch_size`
+
+Fetched the total size of all mysql tables or a specific table.  Receives one parameter:
+
+<dl>
+    <dt>table</dt>
+    <dd>The table name (optional).</dd>
+</dl>
+
+## `$db->fetch_db_charsets`
+
+Fetch a list of database character sets this DBMS supports.
+
+## `$db->fetch_charset_collation`
+
+Fetch a database collation for a particular database character set.  Receives one parameter:
+
+<dl>
+    <dt>charset</dt>
+    <dd>The database character set.</dd>
+</dl>
+
+## `$db->build_create_table_collation`
+
+Fetch a character set/collation string for use with CREATE TABLE statements. Uses current DB encoding.
+
+## `$db->get_execution_time`
+
+Time how long it takes for a particular piece of code to run. Place calls above & below the block of code.
+
+## `$db->escape_binary`
+
+Escapes a binary database fields (such as IP addresses).  Receives one parameter:
+
+<dl>
+    <dt>string</dt>
+    <dd>The binary value.</dd>
+</dl>
+
+## `$db->unescape_binary`
+
+Unescape binary data.  Receives one parameter:
+
+<dl>
+    <dt>string</dt>
+    <dd>The binary value.</dd>
+</dl>
