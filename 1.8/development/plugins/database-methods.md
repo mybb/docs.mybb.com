@@ -177,11 +177,16 @@ Used to perform a delete query on a table in a database.  Receives three paramet
 
 ## `$db->escape_string`
 
-Replaces addslashes, escapes data before being used in a query.
+Replaces addslashes, escapes data before being used in a query according to the SQL escape format for the database being used.  Receives one parameter:
+
+<dl>
+    <dt>string</dt>
+    <dd>The string to be escaped.</dd>
+</dl>
 
 ## `$db->free_result`
 
-Frees the resources of an SQL query.  Receives one parameters:
+Frees the resources of an SQL query.  Receives one parameter:
 
 <dl>
     <dt>query</dt>
@@ -190,7 +195,7 @@ Frees the resources of an SQL query.  Receives one parameters:
 
 ## `$db->escape_string_like`
 
-Escapse a string used within a like command.  Receives one parameters:
+Escapse a string used within a like command.  Receives one parameter:
 
 <dl>
     <dt>string</dt>
@@ -203,7 +208,12 @@ Connects a new database.
 
 ## `$db->select_db`
 
-Selects the database for the current SQL Session.
+Selects the database for the current SQL session.  Receives one parameter:
+
+<dl>
+    <dt>database</dt>
+    <dd>The database name.</dd>
+</dl>
 
 ## `$db->explain_query`
 
@@ -239,7 +249,7 @@ Returns the error number (if any) of the specified query resource.
 
 ## `$db->error_string`
 
-Return the error string (if any) of the specified query resource.
+Returns the error string (if any) of the specified query resource.
 
 ## `$db->error`
 
@@ -250,21 +260,31 @@ Output a database error.  Receives one parameter:
     <dd>The string to present as an error.</dd>
 </dl>
 
-## `$db->dberror`
-
-Outputs an error message (if any) of the specified query resource.
-
 ## `$db->affected_rows`
 
 Returns the amount of affected rows from a "write" query.
 
 ## `$db->num_fields`
 
-Returns the number of fields of the specified query resource.
+Returns the number of fields of the specified query resource.  Receives one parameter:
+
+<dl>
+    <dt>query</dt>
+    <dd>The query data.</dd>
+</dl>
+
 
 ## `$db->list_tables`
 
-Returns the tables in the current open database.
+Returns the tables in the current open database.  Receives two parameters:
+
+<dl>
+    <dt>database</dt>
+    <dd>The database name.</dd>
+
+    <dt>prefix</dt>
+    <dd>Prefix of the table (optional).</dd>
+</dl>
 
 ## `$db->table_exists`
 
@@ -287,10 +307,17 @@ Returns true if the specified field exists.  Receives two parameters:
     <dd>The table name.</dd>
 </dl>
 
-
 ## `$db->shutdown_query`
 
-Runs a query thats performed when PHP is done parsing the file.
+Runs a query thats performed when PHP is done parsing the file.  Receives two parameters:
+
+<dl>
+    <dt>query</dt>
+    <dd>The query data.</dd>
+
+    <dt>name</dt>
+    <dd>An optional name for the query.</dd>
+</dl>
 
 ## `$db->get_version`
 
