@@ -46,11 +46,11 @@ It should say `Mail was sent by PHP` and there should not be any errors displaye
 
 Some webhosts place restrictions on PHP mail. For example, some require that the `From` address be an address configured on their server; other hosts may disable the PHP mail function completely.Check with your webhost if there are any restrictions in place for sending mail via PHP.
 
-If your webhost only allows sites to send mail from their own domain, edit the file `inc/functions.php` to try a workaround fix.
+If your webhost only allows sites to send mail from their own domain, edit the file `inc/mailhandlers/php.php` to try a workaround fix.
 
 Find:
 ```php
-    mail($to, $subject, $message, $headers);
+    $mail = new PhpMail();
 ```
 
 Add before:
@@ -61,7 +61,7 @@ Add before:
 The final result of the edit should be:
 ```php
     ini_set("sendmail_from", "forum@YOURDOMAIN.com");
-    mail($to, $subject, $message, $headers);
+    $mail = new PhpMail();
 ```
 
 `YOURDOMAIN` in the above code must be replaced by the domain where the forum is hosted.
