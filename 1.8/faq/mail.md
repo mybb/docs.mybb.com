@@ -25,7 +25,7 @@ Create a new `.php` file with this content:
 ```php
     <?php
      error_reporting(E_ALL);
-       $to = 'your.email@address.com';
+       $to = 'YOUR_EMAIL_ADDRESS';
        if(mail($to, 'Testing mail', 'This is a mailing test to see if PHP mail works.'))
        {
         echo 'Mail was sent by PHP';
@@ -38,7 +38,7 @@ Create a new `.php` file with this content:
     ?>
 ```
 
-Replace `your.email@address.com` with your email address. Upload this file to your webserver and browse to it in order to run the test.
+Replace `YOUR_EMAIL_ADDRESS` with your email address. Upload this file to your webserver and browse to it in order to run the test.
 
 It should say `Mail was sent by PHP` and there should not be any errors displayed.
 
@@ -55,13 +55,13 @@ Find:
 
 Add before:
 ```php
-    ini_set("sendmail_from", "forum@YOURDOMAIN.com");
+    ini_set("sendmail_from", "forum-AT-YOURDOMAIN.com");
 ```
 
 The final result of the edit should be:
 ```php
-    ini_set("sendmail_from", "forum@YOURDOMAIN.com");
+    ini_set("sendmail_from", "forum-AT-YOURDOMAIN.com");
     mail($to, $subject, $message, $headers);
 ```
 
-`YOURDOMAIN` in the above code must be replaced by the domain where the forum is hosted.
+`-AT-YOURDOMAIN` in the above code must be replaced by `@` followed by the domain where the forum is hosted.
