@@ -38,7 +38,7 @@ Here you can write the text that you wish to be shown as the custom User Title.
 
 ##### Minimum Posts
 
-Here you can write the minimum number of posts requied before the user will be assigned a Custom User Title.
+Here you can write the minimum number of posts required before the user will be assigned a Custom User Title.
 
 ##### Number of Stars
 
