@@ -53,6 +53,41 @@ require valid-user
 - Run shell command: `htpasswd -c -b /path/to/.htpasswd desired_username desired_secure_password`
     - **NOTE:** Replace `/path/to/.htpasswd` in both places with the respective file location.
 
+## Apache Basic Auth Configuration (with SSH)
+```
+sudo apt-get install apache2 apache2-utils
+sudo htpasswd -c /etc/apache2/.htpasswd {YOUR USERNAME HERE}
+```
+### MAKE SURE YOUR 000.DEFAULT.CONF FILE LOOKS LIKE THIS
+```
+sudo nano /etc/apache2/sites-enabled/000-default.conf
+```
+```
+<VirtualHost *:80>
+    ServerAdmin YOUREMAIL@HERE
+    DocumentRoot /var/www/html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    
+    <Directory "/var/www/[FOLDER-NAME}/{ADMIN-DIR}">
+        AuthType Basic
+        AuthName "Restricted Content"
+        AuthUserFile /etc/apache2/.htpasswd
+        Require valid-user
+    </Directory>
+</VirtualHost>
+```
+`sudo service apache2 restart`
+### MAKE SURE YOUR APACHE2.CONF FILE LOOKS LIKE THIS
+`sudo nano /etc/apache2/apache2.conf`
+```
+<Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+```
+`sudo service apache2 restart`
 ## Nginx Basic Auth Configuration (with SSH)
 
 Requirements:
