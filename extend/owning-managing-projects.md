@@ -16,9 +16,6 @@ You want to start your project or you want to manage your projects. You do that 
 
 [![Control Panel 2](/assets/images/mods/owners2.png)](/assets/images/mods/owners2.png)
 
-You can see your projects and the projects you are involved in (as a collaborator) as well as any pending project invitations sent to you.
-
-
 #### Start a Project
 
 If you wish to start a project, you must click New Project to expand the project options.
@@ -48,7 +45,7 @@ As the owner of a project, this is what a project of yours will look like when y
 
 [![View Project](/assets/images/mods/owners6.png)](/assets/images/mods/owners6.png)
 
-On the right side of the page you can find the links to the pages where you can manage your project's details, collaborators, previews, translations and more importantly, builds.
+On the right side of the page you can find the links to the pages where you can manage your project's details, collaborators, previews and more importantly, builds.
 
 #### Edit Project
 
@@ -60,10 +57,24 @@ This is where you can edit all your project's details (actually you can edit mor
 
 [![Edit Project](/assets/images/mods/owners9.png)](/assets/images/mods/owners9.png)
 
+[![Edit Project](/assets/images/mods/owners10.png)](/assets/images/mods/owners10.png)
+
 As you can see, there are many options for you configure.
 
 #### Manage Collaborators
 
 If you wish to invite someone to help you out with the project; Or if you want to remove someone from your collaborators list, you came to the right place.
 
-[![Manage Collaborators](/assets/images/mods/owners10.png)](/assets/images/mods/owners10.png)
+[![Manage Collaborators](/assets/images/mods/owners11.png)](/assets/images/mods/owners11.png)
+
+#### Manage Previews
+
+To make a project stand out more we recommend previews of the project itself. As a project owner you can add these from your testing, you can also set a project cover photo.
+
+[![Manage Previews](/assets/images/mods/owners12.png)](/assets/images/mods/owners12.png)
+
+#### Manage Builds
+
+Developers over time may update their project in which we compensate by allowing for this on the entend website. Project owners can also submit their build for review from the team.
+
+[![Manage Builds](/assets/images/mods/owners13.png)](/assets/images/mods/owners13.png)
