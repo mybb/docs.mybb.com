@@ -53,22 +53,25 @@ To determine which variable to use for which template just view the template you
 
 Here's a list of a few variables used:
 
-<dl>
-    <dt>`$mybb->user`</dt>
-    <dd>Contains the data of the user currently viewing the page. e.g. $mybb->user['postnum'] shows the user his post count.</dd>
+- `$mybb->user`
 
-    <dt>`$post`</dt>
-    <dd>Same functionality as $mybb->user, however, it's only used in the postbit templates. It shows the user who authored the post info, and also contains the post subject and message.</dd>
+Contains the data of the user currently viewing the page. e.g. `$mybb->user['postnum']` shows the user his post count.
 
-    <dt>`$users`</dt>
-    <dd>Again, same as $mybb->user but used in many other template to show the users info who's in that row.</dd>
+- `$post`
 
-    <dt>`$user`</dt>
-    <dd>Same as $users except more page specific, rather than row specific</dd>
+Same functionality as `$mybb->user`, however, it's only used in the postbit templates. It shows the user who authored the post info, and also contains the post subject and message.
 
-    <dt>`$theme`</dt>
-    <dd>This variable is used inside HTML (such as table, tr, and td tags) to define theme specific attributes related to the current users theme of choice.</dd>
-</dl>
+ - `$users`
+ 
+Again, same as `$mybb->user` but used in many other template to show the users info who's in that row.
+
+ - `$user`
+ 
+Same as `$users` except more page specific, rather than row specific
+
+ - `$theme`
+ 
+This variable is used inside HTML (such as table, tr, and td tags) to define theme specific attributes related to the current users theme of choice.
 
 There are many more variables but it would be a huge long list. Also, not all variables work on all templates.
 
@@ -100,31 +103,37 @@ The Theme Editor also includes an Additional CSS field, where you can add your o
 
 Tables are used extensively in MyBB 1.x (MyBB was designed back in the day, before CSS-based layouts became the norm). There are many CSS classes that are used to style different parts of these tables.
 
-<dl>
-    <dt>`.thead`</dt>
-    <dd>This is used for Table Headers, to display them properly using CSS.</dd>
+- `.thead`
 
-    <dt>`.tcat`</dt>
-    <dd>Used to properly display Table Sub Headers using CSS.</dd>
+This is used for Table Headers, to display them properly using CSS.
 
-    <dt>`.trow1`</dt>
-    <dd>This uses the first Alternating Table Row used by pages that show rows of information.</dd>
+- `.tcat`
+	
+Used to properly display Table Sub Headers using CSS.
 
-    <dt>`.trow2`</dt>
-    <dd>This is the same as trow1 except it uses the second Alternating Table Row.</dd>
+- `.trow1`
+	
+This uses the first Alternating Table Row used by pages that show rows of information.
 
-    <dt>`.tfoot`</dt>
-    <dd>Same as thead, but for Table Footers</dd>
+- `.trow2`
+	
+This is the same as trow1 except it uses the second Alternating Table Row.
 
-    <dt>`.tborder`</dt>
-    <dd>This uses CSS to properly display Table Borders.</dd>
+- `.tfoot`
+	
+Same as thead, but for Table Footers
 
-    <dt>`.trow_shaded`</dt>
-    <dd>This is used to shade a row in a table (for example moderated threads and posts) and uses the Shaded Table Row CSS in the Theme Editor</dd>
+- `.tborder`
+	
+This uses CSS to properly display Table Borders.
 
-    <dt>`.trow_sep`</dt>
-    <dd>This uses the Table Row Separator CSS in the Theme Editor.</dd>
-</dl>
+- `.trow_shaded`
+	
+This is used to shade a row in a table (for example moderated threads and posts) and uses the Shaded Table Row CSS in the Theme Editor
+
+- `.trow_sep`
+	
+This uses the Table Row Separator CSS in the Theme Editor.
 
 For example, a sample table may look like this:
 
