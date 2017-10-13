@@ -1,0 +1,23 @@
+{% capture _blackhole %}
+{% if include.version.type_major %}
+    {% assign type = 'Major' %}
+{% else %}
+    {% assign typesCsv = '' %}
+
+    {% if include.version.type_feature == true or include.version.type contains 'feature' %}
+        {% assign typesCsv = typesCsv | append: ' Feature' %}
+    {% endif %}
+    {% if include.version.fixed_issues_number or include.version.type contains 'maintenance' %}
+        {% if include.version.type_maintenance != false or include.version.type_maintenance == true %}
+            {% assign typesCsv = typesCsv | append: ' Maintenance' %}
+        {% endif %}
+    {% endif %}
+    {% if include.version.fixed_security_issues_number or include.version.type contains 'security' %}
+        {% if include.version.type_security != false or include.version.type_security == true %}
+            {% assign typesCsv = typesCsv | append: ' Security' %}
+        {% endif %}
+    {% endif %}
+
+    {% assign type = typesCsv | strip | replace: ' ', ', ' %}
+{% endif %}
+{% endcapture %}{{ type }}

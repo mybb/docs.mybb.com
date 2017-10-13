@@ -1,0 +1,96 @@
+{% capture _blackhole %}
+    {% if version.type_major %}
+        {% assign type = 'Major' %}
+    {% else %}
+        {% assign typesCsv = '' %}
+
+        {% if version.type_feature == true %}
+            {% assign typesCsv = typesCsv | append: ' Feature' %}
+        {% endif %}
+        {% if version.fixed_issues_number %}
+            {% if version.type_maintenance != false or version.type_maintenance == true %}
+                {% assign typesCsv = typesCsv | append: ' Maintenance' %}
+            {% endif %}
+        {% endif %}
+        {% if version.fixed_security_issues_number %}
+            {% if version.type_security != false or version.type_security == true %}
+                {% assign typesCsv = typesCsv | append: ' Security' %}
+            {% endif %}
+        {% endif %}
+
+        {% assign type = typesCsv | strip | replace: ' ', ', ' %}
+    {% endif %}
+{% endcapture %}
+MyBB {{ version.version_number }} Released &mdash; {{ type | replace: ', ', ' &amp; ' }} Release
+---
+
+
+MyBB {{ version.version_number }} is now available, and is a {{ type | downcase | replace: ', ', ' &amp; ' }} release.<br><br>
+{%
+if version.comment %}
+{{
+    version.comment
+}}<br><br>{%
+endif %}{%
+
+if version.fixed_security_issues_number || version.fixed_issues_number
+%}
+
+<ul>{%
+    if version.fixed_security_issues_number %}{%
+        if version.fixed_security_issues_number == 1 %}{%
+            assign vulnerability_inflexed = 'vulnerability' %}{%
+        else %}{%
+            assign vulnerability_inflexed = 'vulnerabilities' %}{%
+        endif %}
+        <li>
+            <strong>{{ version.fixed_security_issues_number }} security {{ vulnerability_inflexed }} addressed{%
+            if version.fixed_security_issues %}:{% endif %}</strong>{%
+            if version.fixed_security_issues %}<br>
+            <ul>{%
+                for issue in version.fixed_security_issues %}
+                <li>{{ issue.severity | capitalize }} risk: {{ issue.description }}{%
+                    if issue.reported_by.name %}{%
+                        assign responsible_disclosure_reports = true
+                        %} &mdash; reported by {{ issue.reported_by.name | markdownify | replace: '<p>', '' | replace: '</p>
+', '' }}{%
+                        if issue.reported_by.association %} of {{ issue.reported_by.association | markdownify | replace: '<p>', '' | replace: '</p>
+', '' }}{%
+                        endif %}{%
+                    endif %}</li>{%
+                endfor %}
+            </ul>{%
+            endif %}
+        </li>{%
+    endif %}{%
+    if version.fixed_issues_number %}{%
+        if version.fixed_issues_number == 1 %}{%
+            assign issue_inflexed = 'issue' %}{%
+        else %}{%
+            assign issue_inflexed = 'issues' %}{%
+        endif %}
+        <li>{% capture text %}<strong>{{ version.fixed_issues_number }} {{ issue_inflexed }} resolved</strong>{% endcapture %}{%
+            if version.fixed_issues_link %}
+            <a href="{{ version.fixed_issues_link }}">{{ text }}</a>{%
+            else %}
+            {{ text }}{%
+            endif %}
+        </li>{%
+    endif %}
+</ul>{%
+endif %}
+
+<br>
+Check <a href="https://docs.mybb.com/versions/{{ version.version_number }}"><strong>Release Notes</strong></a> for a list of changes to language files, templates and unresolved issues.<br><br>
+
+<a href="https://mybb.com/download"><h3>Get latest MyBB Full &amp; Upgrade Packages &rarr;</h3></a>
+{%
+if responsible_disclosure_reports %}
+The MyBB Project extends thanks to reporters and researchers following responsible disclosure.<br><br>
+{%
+endif %}
+Go to <a href="https://mybb.com/security">mybb.com/security</a> to report possible security concerns or to learn more about security research at MyBB.<br>
+If you would like to contribute to the Project, <a href="https://mybb.com/get-involved">Get Involved</a>.<br><br>
+
+Thanks,<br>
+MyBB Team

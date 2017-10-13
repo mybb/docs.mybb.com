@@ -1,11 +1,23 @@
-name:      MyBB Documentation
-markdown:  kramdown
+name: MyBB Documentation
+markdown: kramdown
 kramdown:
   input: GFM
 highlighter: rouge
 permalink: pretty
 baseurl: ""
 mainsiteurl: https://mybb.com
+
+collections:
+  versions:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: versions
+    values:
+      layout: "version"
+      title: ""
 
 gems:
   - jekyll-redirect-from

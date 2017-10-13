@@ -59,22 +59,27 @@ Download links are provided on this page for older versions for non-production-s
 ### Version 1 series
 
 #### 1.8.x
+<table>
+    <tr>
+        <th>Version Number</th>
+        <th>Release Date</th>
+        <th>Release Type</th>
+        <th>Availability</th>
+    </tr>
+{% assign versions_sorted = (site.versions | sort: 'release_date') | reverse %}
+{% for version in versions_sorted %}
+    {% if version.version_number contains '1.8.' %}
+        {% capture type %}{% include release_type.html version = version %}{% endcapture %}
 
-| Version Number | Release Date | Release type | Availability |
-| :------------: | ------------ | ------------ | :---------: |
-| [1.8.12](1.8.12) *`Latest`* | 22 May 2017 | Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1812.zip) |
-| [1.8.11](1.8.11) | 4 April 2017 | Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1811.zip) |
-| [1.8.10](1.8.10) | 10 January 2017 | Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1810.zip) |
-| [1.8.9](1.8.9) | 21 December 2016 | Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1809.zip) |
-| [1.8.8](1.8.8) | 17 October 2016 | Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1808.zip) |
-| [1.8.7](1.8.7) | 11 March 2016 | Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1807.zip) |
-| [1.8.6](1.8.6) | 7 September 2015 | Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1806.zip) |
-| [1.8.5](1.8.5) | 27 May 2015 | Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1805.zip) |
-| [1.8.4](1.8.4) | 15 February 2015 | Feature Update, Security and Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1804.zip) |
-| [1.8.3](1.8.3) | 20 November 2014 | Security Release | [Download](https://resources.mybb.com/downloads/mybb_1803.zip) |
-| [1.8.2](1.8.2) | 13 November 2014 | Security Release | [Download](https://resources.mybb.com/downloads/mybb_1802.zip) |
-| [1.8.1](1.8.1) | 23 October 2014 | Maintenance Release | [Download](https://resources.mybb.com/downloads/mybb_1801.zip) |
-| [1.8.0](1.8.0) | 1 September 2014 | Major Release | [Download](https://resources.mybb.com/downloads/mybb_1800.zip) |
+        <tr>
+            <td><a href="{{ version.version_number }}">{{ version.version_number }}</a></td>
+            <td>{{ version.release_date | date: '%e %B %Y' }}</td>
+            <td>{{ type }}</td>
+            <td><a href="https://resources.mybb.com/downloads/mybb_{{ version.version_number | replace: '.', '' }}.zip">Download</a></td>
+        </tr>
+    {% endif %}
+{% endfor %}
+</table>
 
 #### 1.6.x
 
