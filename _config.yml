@@ -21,3 +21,5 @@ defaults:
 
 gems:
   - jekyll-redirect-from
+
+exclude: ["CNAME", "README.md", "CONTRIBUTING.md"]
