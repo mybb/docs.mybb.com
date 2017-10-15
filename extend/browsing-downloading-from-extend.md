@@ -43,7 +43,7 @@ For each project you can view the cover and the following information:
 
 There is also a download button that allows you to download the latest **stable** build.
 
-Clicking the project names or the Details button directs you towards the project page, on which you can see detailed information: full description, previews, license, suggestions, bugs, etc.
+Clicking the project name or the Details button directs you towards the project page, on which you can see detailed information: full description, previews, license, suggestions, bugs, etc.
 
 On the right side you can select a subcategory.
 
@@ -63,7 +63,7 @@ Under description there are 4 buttons:
 
 - Report (where you can report a project)
 
-Under this buttons there is a tab with the following links:
+Under these buttons there is a tab with the following links:
 
 - Details (where you can see project details)
 
