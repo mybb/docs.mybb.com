@@ -1,0 +1,3912 @@
+version_code: 1813
+hooks:
+  - name: moderation_start
+    file: moderation.php
+    line: 35
+  - name: moderation_cancel_delayedmoderation
+    file: moderation.php
+    line: 153
+  - name: moderation_do_delayedmoderation
+    file: moderation.php
+    line: 346
+  - name: moderation_delayedmoderation
+    file: moderation.php
+    line: 671
+  - name: moderation_stick
+    file: moderation.php
+    line: 716
+  - name: moderation_removeredirects
+    file: moderation.php
+    line: 749
+  - name: moderation_deletethread
+    file: moderation.php
+    line: 770
+  - name: moderation_do_deletethread
+    file: moderation.php
+    line: 790
+  - name: moderation_deletepoll
+    file: moderation.php
+    line: 817
+  - name: moderation_do_deletepoll
+    file: moderation.php
+    line: 854
+  - name: moderation_approvethread
+    file: moderation.php
+    line: 876
+  - name: moderation_unapprovethread
+    file: moderation.php
+    line: 898
+  - name: moderation_restorethread
+    file: moderation.php
+    line: 920
+  - name: moderation_softdeletethread
+    file: moderation.php
+    line: 942
+  - name: moderation_move
+    file: moderation.php
+    line: 960
+  - name: moderation_do_move
+    file: moderation.php
+    line: 1001
+  - name: moderation_viewthreadnotes
+    file: moderation.php
+    line: 1041
+  - name: moderation_threadnotes
+    file: moderation.php
+    line: 1227
+  - name: moderation_do_threadnotes
+    file: moderation.php
+    line: 1244
+  - name: moderation_getip
+    file: moderation.php
+    line: 1280
+  - name: moderation_getpmip
+    file: moderation.php
+    line: 1319
+  - name: moderation_merge
+    file: moderation.php
+    line: 1333
+  - name: moderation_do_merge
+    file: moderation.php
+    line: 1350
+  - name: moderation_split
+    file: moderation.php
+    line: 1484
+  - name: moderation_do_split
+    file: moderation.php
+    line: 1501
+  - name: moderation_removesubscriptions
+    file: moderation.php
+    line: 1567
+  - name: moderation_do_multimoveposts
+    file: moderation.php
+    line: 2561
+  - name: moderation_purgespammer_purge
+    file: moderation.php
+    line: 2910
+  - name: moderation_purgespammer_show
+    file: moderation.php
+    line: 2997
+  - name: moderation_confirmation
+    file: moderation.php
+    line: 3039
+  - name: member_do_register_start
+    file: member.php
+    line: 94
+  - name: member_do_register_end
+    file: member.php
+    line: 402
+  - name: member_do_register_end
+    file: member.php
+    line: 436
+  - name: member_do_register_end
+    file: member.php
+    line: 460
+  - name: member_do_register_end
+    file: member.php
+    line: 548
+  - name: member_do_register_end
+    file: member.php
+    line: 662
+  - name: member_do_register_end
+    file: member.php
+    line: 670
+  - name: member_coppa_form
+    file: member.php
+    line: 684
+  - name: member_register_coppa
+    file: member.php
+    line: 753
+  - name: member_register_agreement
+    file: member.php
+    line: 777
+  - name: member_register_start
+    file: member.php
+    line: 784
+  - name: member_register_end
+    file: member.php
+    line: 1358
+  - name: member_activate_start
+    file: member.php
+    line: 1371
+  - name: member_activate_emailupdated
+    file: member.php
+    line: 1437
+  - name: member_activate_emailactivated
+    file: member.php
+    line: 1447
+  - name: member_activate_accountactivated
+    file: member.php
+    line: 1453
+  - name: member_activate_form
+    file: member.php
+    line: 1460
+  - name: member_resendactivation
+    file: member.php
+    line: 1477
+  - name: member_resendactivation_end
+    file: member.php
+    line: 1496
+  - name: member_do_resendactivation_start
+    file: member.php
+    line: 1504
+  - name: member_do_resendactivation_end
+    file: member.php
+    line: 1567
+  - name: member_lostpw
+    file: member.php
+    line: 1575
+  - name: member_do_lostpw_start
+    file: member.php
+    line: 1583
+  - name: member_do_lostpw_end
+    file: member.php
+    line: 1629
+  - name: member_resetpassword_start
+    file: member.php
+    line: 1636
+  - name: member_resetpassword_process
+    file: member.php
+    line: 1719
+  - name: member_resetpassword_reset
+    file: member.php
+    line: 1725
+  - name: member_resetpassword_form
+    file: member.php
+    line: 1731
+  - name: member_do_login_start
+    file: member.php
+    line: 1766
+  - name: member_do_login_end
+    file: member.php
+    line: 1829
+  - name: member_do_login_end
+    file: member.php
+    line: 1852
+  - name: member_login
+    file: member.php
+    line: 1857
+  - name: member_login_end
+    file: member.php
+    line: 1942
+  - name: member_logout_start
+    file: member.php
+    line: 1950
+  - name: member_logout_end
+    file: member.php
+    line: 1979
+  - name: member_viewnotes
+    file: member.php
+    line: 2005
+  - name: member_profile_start
+    file: member.php
+    line: 2014
+  - name: member_profile_end
+    file: member.php
+    line: 2811
+  - name: member_do_emailuser_start
+    file: member.php
+    line: 2822
+  - name: member_do_emailuser_end
+    file: member.php
+    line: 2983
+  - name: member_emailuser_start
+    file: member.php
+    line: 2995
+  - name: member_emailuser_end
+    file: member.php
+    line: 3128
+  - name: newthread_do_newthread_start
+    file: newthread.php
+    line: 252
+  - name: newthread_do_newthread_end
+    file: newthread.php
+    line: 500
+  - name: newthread_start
+    file: newthread.php
+    line: 513
+  - name: newthread_end
+    file: newthread.php
+    line: 1173
+  - name: usercp2_start
+    file: usercp2.php
+    line: 35
+  - name: usercp2_do_addsubscription
+    file: usercp2.php
+    line: 60
+  - name: usercp2_addsubscription_forum
+    file: usercp2.php
+    line: 89
+  - name: usercp2_addsubscription_thread
+    file: usercp2.php
+    line: 153
+  - name: usercp2_removesubscription_forum
+    file: usercp2.php
+    line: 170
+  - name: usercp2_removesubscription_thread
+    file: usercp2.php
+    line: 200
+  - name: usercp2_removesubscriptions_forum
+    file: usercp2.php
+    line: 218
+  - name: usercp2_removesubscriptions_thread
+    file: usercp2.php
+    line: 233
+  - name: index_start
+    file: index.php
+    line: 23
+  - name: index_end
+    file: index.php
+    line: 381
+  - name: contact_start
+    file: contact.php
+    line: 22
+  - name: contact_do_start
+    file: contact.php
+    line: 117
+  - name: contact_do_end
+    file: contact.php
+    line: 228
+  - name: contact_end
+    file: contact.php
+    line: 293
+  - name: sendthread_do_sendtofriend_start
+    file: sendthread.php
+    line: 150
+  - name: sendthread_do_sendtofriend_end
+    file: sendthread.php
+    line: 235
+  - name: sendthread_start
+    file: sendthread.php
+    line: 246
+  - name: sendthread_end
+    file: sendthread.php
+    line: 290
+  - name: showthread_start
+    file: showthread.php
+    line: 457
+  - name: showthread_poll_results
+    file: showthread.php
+    line: 616
+  - name: showthread_poll
+    file: showthread.php
+    line: 633
+  - name: showthread_ismod
+    file: showthread.php
+    line: 703
+  - name: showthread_threaded
+    file: showthread.php
+    line: 906
+  - name: showthread_linear
+    file: showthread.php
+    line: 1101
+  - name: showthread_end
+    file: showthread.php
+    line: 1559
+  - name: stats_start
+    file: stats.php
+    line: 38
+  - name: stats_end
+    file: stats.php
+    line: 222
+  - name: ratethread_start
+    file: ratethread.php
+    line: 85
+  - name: ratethread_process
+    file: ratethread.php
+    line: 104
+  - name: ratethread_end
+    file: ratethread.php
+    line: 133
+  - name: showteam_start
+    file: showteam.php
+    line: 22
+  - name: showteam_user
+    file: showteam.php
+    line: 175
+  - name: showteam_end
+    file: showteam.php
+    line: 205
+  - name: usercp_start
+    file: usercp.php
+    line: 57
+  - name: usercp_do_profile_start
+    file: usercp.php
+    line: 144
+  - name: usercp_do_profile_end
+    file: usercp.php
+    line: 274
+  - name: usercp_profile_start
+    file: usercp.php
+    line: 303
+  - name: usercp_profile_end
+    file: usercp.php
+    line: 728
+  - name: usercp_do_options_start
+    file: usercp.php
+    line: 739
+  - name: usercp_do_options_end
+    file: usercp.php
+    line: 803
+  - name: usercp_options_start
+    file: usercp.php
+    line: 811
+  - name: usercp_options_end
+    file: usercp.php
+    line: 1156
+  - name: usercp_do_email_start
+    file: usercp.php
+    line: 1169
+  - name: usercp_do_email_verify
+    file: usercp.php
+    line: 1218
+  - name: usercp_do_email_changed
+    file: usercp.php
+    line: 1227
+  - name: usercp_email
+    file: usercp.php
+    line: 1252
+  - name: usercp_do_password_start
+    file: usercp.php
+    line: 1265
+  - name: usercp_do_password_end
+    file: usercp.php
+    line: 1298
+  - name: usercp_password
+    file: usercp.php
+    line: 1311
+  - name: usercp_do_changename_start
+    file: usercp.php
+    line: 1322
+  - name: usercp_do_changename_end
+    file: usercp.php
+    line: 1352
+  - name: usercp_changename_start
+    file: usercp.php
+    line: 1366
+  - name: usercp_changename_end
+    file: usercp.php
+    line: 1372
+  - name: usercp_do_subscriptions_start
+    file: usercp.php
+    line: 1383
+  - name: usercp_subscriptions_start
+    file: usercp.php
+    line: 1426
+  - name: usercp_subscriptions_end
+    file: usercp.php
+    line: 1742
+  - name: usercp_forumsubscriptions_start
+    file: usercp.php
+    line: 1750
+  - name: usercp_forumsubscriptions_end
+    file: usercp.php
+    line: 1856
+  - name: usercp_do_editsig_start
+    file: usercp.php
+    line: 1867
+  - name: usercp_do_editsig_process
+    file: usercp.php
+    line: 1892
+  - name: usercp_do_editsig_end
+    file: usercp.php
+    line: 1894
+  - name: usercp_editsig_start
+    file: usercp.php
+    line: 1900
+  - name: usercp_editsig_end
+    file: usercp.php
+    line: 1963
+  - name: usercp_editsig_end
+    file: usercp.php
+    line: 2012
+  - name: usercp_do_avatar_start
+    file: usercp.php
+    line: 2025
+  - name: usercp_do_avatar_end
+    file: usercp.php
+    line: 2173
+  - name: usercp_avatar_start
+    file: usercp.php
+    line: 2185
+  - name: usercp_avatar_intermediate
+    file: usercp.php
+    line: 2214
+  - name: usercp_avatar_end
+    file: usercp.php
+    line: 2244
+  - name: usercp_acceptrequest_start
+    file: usercp.php
+    line: 2268
+  - name: usercp_acceptrequest_end
+    file: usercp.php
+    line: 2355
+  - name: usercp_declinerequest_start
+    file: usercp.php
+    line: 2373
+  - name: usercp_declinerequest_end
+    file: usercp.php
+    line: 2385
+  - name: usercp_cancelrequest_start
+    file: usercp.php
+    line: 2403
+  - name: usercp_cancelrequest_end
+    file: usercp.php
+    line: 2407
+  - name: usercp_do_editlists_start
+    file: usercp.php
+    line: 2417
+  - name: usercp_do_editlists_end
+    file: usercp.php
+    line: 2742
+  - name: usercp_editlists_start
+    file: usercp.php
+    line: 2804
+  - name: usercp_editlists_end
+    file: usercp.php
+    line: 2958
+  - name: usercp_drafts_start
+    file: usercp.php
+    line: 2966
+  - name: usercp_drafts_end
+    file: usercp.php
+    line: 3020
+  - name: usercp_do_drafts_start
+    file: usercp.php
+    line: 3031
+  - name: usercp_do_drafts_end
+    file: usercp.php
+    line: 3070
+  - name: usercp_usergroups_start
+    file: usercp.php
+    line: 3076
+  - name: usercp_usergroups_change_displaygroup
+    file: usercp.php
+    line: 3099
+  - name: usercp_usergroups_leave_group
+    file: usercp.php
+    line: 3125
+  - name: usercp_usergroups_join_group_request
+    file: usercp.php
+    line: 3203
+  - name: usercp_usergroups_join_group
+    file: usercp.php
+    line: 3217
+  - name: usercp_usergroups_accept_invite
+    file: usercp.php
+    line: 3241
+  - name: usercp_usergroups_end
+    file: usercp.php
+    line: 3457
+  - name: usercp_attachments_start
+    file: usercp.php
+    line: 3465
+  - name: usercp_attachments_end
+    file: usercp.php
+    line: 3564
+  - name: usercp_do_attachments_start
+    file: usercp.php
+    line: 3575
+  - name: usercp_do_attachments_end
+    file: usercp.php
+    line: 3587
+  - name: usercp_do_notepad_start
+    file: usercp.php
+    line: 3602
+  - name: usercp_do_notepad_end
+    file: usercp.php
+    line: 3604
+  - name: usercp_notepad_start
+    file: usercp.php
+    line: 3767
+  - name: usercp_notepad_end
+    file: usercp.php
+    line: 3770
+  - name: usercp_end
+    file: usercp.php
+    line: 4179
+  - name: modcp_nav
+    file: modcp.php
+    line: 262
+  - name: modcp_start
+    file: modcp.php
+    line: 276
+  - name: modcp_do_reports
+    file: modcp.php
+    line: 331
+  - name: modcp_reports_start
+    file: modcp.php
+    line: 414
+  - name: modcp_reports_intermediate
+    file: modcp.php
+    line: 531
+  - name: modcp_reports_report
+    file: modcp.php
+    line: 622
+  - name: modcp_reports_end
+    file: modcp.php
+    line: 627
+  - name: modcp_allreports_start
+    file: modcp.php
+    line: 723
+  - name: modcp_allreports_report
+    file: modcp.php
+    line: 804
+  - name: modcp_allreports_end
+    file: modcp.php
+    line: 809
+  - name: modcp_modlogs_start
+    file: modcp.php
+    line: 872
+  - name: modcp_modlogs_result
+    file: modcp.php
+    line: 1002
+  - name: modcp_modlogs_filter
+    file: modcp.php
+    line: 1012
+  - name: modcp_do_delete_announcement
+    file: modcp.php
+    line: 1072
+  - name: modcp_delete_announcement
+    file: modcp.php
+    line: 1104
+  - name: modcp_do_new_announcement_start
+    file: modcp.php
+    line: 1233
+  - name: modcp_do_new_announcement_end
+    file: modcp.php
+    line: 1259
+  - name: modcp_new_announcement
+    file: modcp.php
+    line: 1480
+  - name: modcp_do_edit_announcement_start
+    file: modcp.php
+    line: 1615
+  - name: modcp_do_edit_announcement_end
+    file: modcp.php
+    line: 1641
+  - name: modcp_edit_announcement
+    file: modcp.php
+    line: 1894
+  - name: modcp_announcements
+    file: modcp.php
+    line: 1966
+  - name: modcp_do_modqueue_start
+    file: modcp.php
+    line: 1985
+  - name: modcp_do_modqueue_end
+    file: modcp.php
+    line: 2034
+  - name: modcp_do_modqueue_end
+    file: modcp.php
+    line: 2082
+  - name: modcp_do_modqueue_end
+    file: modcp.php
+    line: 2113
+  - name: modcp_modqueue_threads_end
+    file: modcp.php
+    line: 2230
+  - name: modcp_modqueue_posts_end
+    file: modcp.php
+    line: 2354
+  - name: modcp_modqueue_attachments_end
+    file: modcp.php
+    line: 2471
+  - name: modcp_modqueue_end
+    file: modcp.php
+    line: 2496
+  - name: modcp_do_editprofile_start
+    file: modcp.php
+    line: 2525
+  - name: modcp_do_editprofile_update
+    file: modcp.php
+    line: 2740
+  - name: modcp_do_editprofile_end
+    file: modcp.php
+    line: 2750
+  - name: modcp_editprofile_start
+    file: modcp.php
+    line: 2938
+  - name: modcp_editprofile_end
+    file: modcp.php
+    line: 3277
+  - name: modcp_finduser_start
+    file: modcp.php
+    line: 3383
+  - name: modcp_finduser_end
+    file: modcp.php
+    line: 3421
+  - name: modcp_warninglogs_start
+    file: modcp.php
+    line: 3539
+  - name: modcp_warninglogs_end
+    file: modcp.php
+    line: 3638
+  - name: modcp_ipsearch_posts_start
+    file: modcp.php
+    line: 3682
+  - name: modcp_ipsearch_users_start
+    file: modcp.php
+    line: 3776
+  - name: modcp_ipsearch_end
+    file: modcp.php
+    line: 3996
+  - name: modcp_iplookup_end
+    file: modcp.php
+    line: 4039
+  - name: modcp_banning_start
+    file: modcp.php
+    line: 4097
+  - name: modcp_banning
+    file: modcp.php
+    line: 4183
+  - name: modcp_liftban_start
+    file: modcp.php
+    line: 4213
+  - name: modcp_liftban_end
+    file: modcp.php
+    line: 4230
+  - name: modcp_do_banuser_start
+    file: modcp.php
+    line: 4322
+  - name: modcp_do_banuser_end
+    file: modcp.php
+    line: 4393
+  - name: modcp_banuser_start
+    file: modcp.php
+    line: 4430
+  - name: modcp_banuser_end
+    file: modcp.php
+    line: 4561
+  - name: modcp_do_modnotes_start
+    file: modcp.php
+    line: 4572
+  - name: modcp_do_modnotes_end
+    file: modcp.php
+    line: 4580
+  - name: modcp_modlogs_result
+    file: modcp.php
+    line: 4789
+  - name: modcp_end
+    file: modcp.php
+    line: 4899
+  - name: managegroup_do_add_start
+    file: managegroup.php
+    line: 58
+  - name: managegroup_do_add_end
+    file: managegroup.php
+    line: 73
+  - name: managegroup_do_invite_start
+    file: managegroup.php
+    line: 96
+  - name: managegroup_do_invite_end
+    file: managegroup.php
+    line: 144
+  - name: managegroup_do_joinrequests_start
+    file: managegroup.php
+    line: 169
+  - name: managegroup_do_joinrequests_end
+    file: managegroup.php
+    line: 194
+  - name: managegroup_joinrequests_start
+    file: managegroup.php
+    line: 201
+  - name: managegroup_joinrequests_end
+    file: managegroup.php
+    line: 225
+  - name: managegroup_do_manageusers_start
+    file: managegroup.php
+    line: 240
+  - name: managegroup_do_manageusers_end
+    file: managegroup.php
+    line: 254
+  - name: managegroup_start
+    file: managegroup.php
+    line: 260
+  - name: managegroup_end
+    file: managegroup.php
+    line: 437
+  - name: report_start
+    file: report.php
+    line: 25
+  - name: report_type
+    file: report.php
+    line: 130
+  - name: report_do_report_start
+    file: report.php
+    line: 156
+  - name: report_do_report_end
+    file: report.php
+    line: 165
+  - name: report_do_report_end
+    file: report.php
+    line: 223
+  - name: report_end
+    file: report.php
+    line: 281
+  - name: search_results_start
+    file: search.php
+    line: 68
+  - name: search_results_thread
+    file: search.php
+    line: 673
+  - name: search_results_end
+    file: search.php
+    line: 724
+  - name: search_results_post
+    file: search.php
+    line: 1092
+  - name: search_results_end
+    file: search.php
+    line: 1144
+  - name: search_do_search_process
+    file: search.php
+    line: 1223
+  - name: search_do_search_process
+    file: search.php
+    line: 1300
+  - name: search_do_search_process
+    file: search.php
+    line: 1348
+  - name: search_do_search_process
+    file: search.php
+    line: 1416
+  - name: search_do_search_process
+    file: search.php
+    line: 1493
+  - name: search_do_search_start
+    file: search.php
+    line: 1499
+  - name: search_do_search_process
+    file: search.php
+    line: 1585
+  - name: search_do_search_end
+    file: search.php
+    line: 1598
+  - name: search_thread_start
+    file: search.php
+    line: 1630
+  - name: search_thread_process
+    file: search.php
+    line: 1698
+  - name: search_do_search_end
+    file: search.php
+    line: 1702
+  - name: search_start
+    file: search.php
+    line: 1707
+  - name: search_end
+    file: search.php
+    line: 1720
+  - name: forumdisplay_start
+    file: forumdisplay.php
+    line: 38
+  - name: forumdisplay_announcement
+    file: forumdisplay.php
+    line: 835
+  - name: forumdisplay_get_threads
+    file: forumdisplay.php
+    line: 866
+  - name: forumdisplay_thread
+    file: forumdisplay.php
+    line: 1010
+  - name: forumdisplay_thread_end
+    file: forumdisplay.php
+    line: 1352
+  - name: forumdisplay_end
+    file: forumdisplay.php
+    line: 1518
+  - name: portal_start
+    file: portal.php
+    line: 59
+  - name: portal_announcement
+    file: portal.php
+    line: 606
+  - name: portal_end
+    file: portal.php
+    line: 722
+  - name: misc_start
+    file: misc.php
+    line: 27
+  - name: misc_markread_forum
+    file: misc.php
+    line: 81
+  - name: misc_markread_end
+    file: misc.php
+    line: 96
+  - name: misc_clearpass
+    file: misc.php
+    line: 104
+  - name: misc_rules_start
+    file: misc.php
+    line: 121
+  - name: misc_rules_end
+    file: misc.php
+    line: 158
+  - name: misc_do_helpsearch_start
+    file: misc.php
+    line: 167
+  - name: misc_do_helpsearch_process
+    file: misc.php
+    line: 239
+  - name: misc_do_helpsearch_end
+    file: misc.php
+    line: 243
+  - name: misc_helpresults_start
+    file: misc.php
+    line: 262
+  - name: misc_helpresults_bit
+    file: misc.php
+    line: 347
+  - name: misc_helpresults_end
+    file: misc.php
+    line: 357
+  - name: misc_help_helpdoc_start
+    file: misc.php
+    line: 384
+  - name: misc_help_helpdoc_end
+    file: misc.php
+    line: 423
+  - name: misc_help_section_start
+    file: misc.php
+    line: 435
+  - name: misc_help_section_end
+    file: misc.php
+    line: 509
+  - name: misc_buddypopup_start
+    file: misc.php
+    line: 517
+  - name: misc_buddypopup_end
+    file: misc.php
+    line: 611
+  - name: misc_syndication_start
+    file: misc.php
+    line: 921
+  - name: misc_syndication_end
+    file: misc.php
+    line: 1026
+  - name: misc_clearcookies
+    file: misc.php
+    line: 1035
+  - name: reputation_start
+    file: reputation.php
+    line: 24
+  - name: reputation_do_add_start
+    file: reputation.php
+    line: 238
+  - name: reputation_do_add_process
+    file: reputation.php
+    line: 377
+  - name: reputation_do_add_end
+    file: reputation.php
+    line: 405
+  - name: reputation_add_start
+    file: reputation.php
+    line: 415
+  - name: reputation_add_end
+    file: reputation.php
+    line: 492
+  - name: reputation_add_end_error
+    file: reputation.php
+    line: 499
+  - name: reputation_vote
+    file: reputation.php
+    line: 1049
+  - name: reputation_end
+    file: reputation.php
+    line: 1060
+  - name: memberlist_start
+    file: memberlist.php
+    line: 27
+  - name: memberlist_search
+    file: memberlist.php
+    line: 39
+  - name: memberlist_intermediate
+    file: memberlist.php
+    line: 284
+  - name: memberlist_user
+    file: memberlist.php
+    line: 330
+    parameters:
+      - "$user"
+  - name: memberlist_end
+    file: memberlist.php
+    line: 455
+  - name: archive_start
+    file: archive/index.php
+    line: 19
+  - name: archive_announcement_start
+    file: archive/index.php
+    line: 67
+  - name: archive_announcement_end
+    file: archive/index.php
+    line: 72
+  - name: archive_thread_start
+    file: archive/index.php
+    line: 120
+  - name: archive_thread_post
+    file: archive/index.php
+    line: 221
+  - name: archive_thread_end
+    file: archive/index.php
+    line: 229
+  - name: archive_forum_start
+    file: archive/index.php
+    line: 277
+  - name: archive_forum_thread
+    file: archive/index.php
+    line: 374
+  - name: archive_forum_thread
+    file: archive/index.php
+    line: 412
+  - name: archive_forum_end
+    file: archive/index.php
+    line: 427
+  - name: archive_index_start
+    file: archive/index.php
+    line: 438
+  - name: archive_index_end
+    file: archive/index.php
+    line: 444
+  - name: archive_end
+    file: archive/index.php
+    line: 463
+  - name: admin_unlock_start
+    file: admin/index.php
+    line: 109
+  - name: admin_unlock_end
+    file: admin/index.php
+    line: 134
+  - name: admin_login
+    file: admin/index.php
+    line: 154
+  - name: admin_login_incorrect_pin
+    file: admin/index.php
+    line: 194
+  - name: admin_login_success
+    file: admin/index.php
+    line: 268
+  - name: admin_login_fail
+    file: admin/index.php
+    line: 346
+  - name: admin_login_lockout
+    file: admin/index.php
+    line: 364
+  - name: admin_logout
+    file: admin/index.php
+    line: 501
+  - name: admin_tabs
+    file: admin/index.php
+    line: 752
+    parameters:
+      - "$modules"
+  - name: admin_load
+    file: admin/index.php
+    line: 819
+  - name: admin_style_templates
+    file: admin/modules/style/templates.php
+    line: 108
+  - name: admin_style_templates_add_set
+    file: admin/modules/style/templates.php
+    line: 112
+  - name: admin_style_templates_add_set_commit
+    file: admin/modules/style/templates.php
+    line: 125
+  - name: admin_style_templates_add_template
+    file: admin/modules/style/templates.php
+    line: 175
+  - name: admin_style_templates_add_template_commit
+    file: admin/modules/style/templates.php
+    line: 216
+  - name: admin_style_templates_add_template_group
+    file: admin/modules/style/templates.php
+    line: 330
+  - name: admin_style_templates_add_template_group_commit
+    file: admin/modules/style/templates.php
+    line: 377
+  - name: admin_style_templates_edit_set
+    file: admin/modules/style/templates.php
+    line: 439
+  - name: admin_style_templates_edit_set_commit
+    file: admin/modules/style/templates.php
+    line: 454
+  - name: admin_style_templates_edit_template
+    file: admin/modules/style/templates.php
+    line: 517
+  - name: admin_style_templates_edit_template_commit_start
+    file: admin/modules/style/templates.php
+    line: 550
+  - name: admin_style_templates_edit_template_commit
+    file: admin/modules/style/templates.php
+    line: 574
+  - name: admin_style_templates_edit_template_group
+    file: admin/modules/style/templates.php
+    line: 763
+  - name: admin_style_templates_edit_template_group_commit
+    file: admin/modules/style/templates.php
+    line: 807
+  - name: admin_style_templates_search_replace
+    file: admin/modules/style/templates.php
+    line: 854
+  - name: admin_style_templates_search_replace_find
+    file: admin/modules/style/templates.php
+    line: 873
+  - name: admin_style_templates_search_replace_title
+    file: admin/modules/style/templates.php
+    line: 1056
+  - name: admin_style_templates_find_updated
+    file: admin/modules/style/templates.php
+    line: 1291
+  - name: admin_style_template_group_delete
+    file: admin/modules/style/templates.php
+    line: 1391
+  - name: admin_style_template_group_delete_commit
+    file: admin/modules/style/templates.php
+    line: 1400
+  - name: admin_style_templates_delete_set
+    file: admin/modules/style/templates.php
+    line: 1426
+  - name: admin_style_templates_delete_set_commit
+    file: admin/modules/style/templates.php
+    line: 1454
+  - name: admin_style_templates_delete_template
+    file: admin/modules/style/templates.php
+    line: 1492
+  - name: admin_style_templates_delete_template_commit
+    file: admin/modules/style/templates.php
+    line: 1499
+  - name: admin_style_templates_diff_report
+    file: admin/modules/style/templates.php
+    line: 1546
+  - name: admin_style_templates_diff_report_run
+    file: admin/modules/style/templates.php
+    line: 1571
+  - name: admin_style_templates_revert
+    file: admin/modules/style/templates.php
+    line: 1638
+  - name: admin_style_templates_revert_commit
+    file: admin/modules/style/templates.php
+    line: 1645
+  - name: admin_style_templates_set
+    file: admin/modules/style/templates.php
+    line: 1675
+  - name: admin_style_templates_start
+    file: admin/modules/style/templates.php
+    line: 1932
+  - name: admin_style_themes_begin
+    file: admin/modules/style/themes.php
+    line: 135
+  - name: admin_style_themes_browse
+    file: admin/modules/style/themes.php
+    line: 139
+  - name: admin_style_themes_import
+    file: admin/modules/style/themes.php
+    line: 303
+  - name: admin_style_themes_import_commit
+    file: admin/modules/style/themes.php
+    line: 390
+  - name: admin_style_themes_export
+    file: admin/modules/style/themes.php
+    line: 529
+  - name: admin_style_themes_export_commit
+    file: admin/modules/style/themes.php
+    line: 667
+  - name: admin_style_themes_duplicate
+    file: admin/modules/style/themes.php
+    line: 747
+  - name: admin_style_themes_duplicate_commit
+    file: admin/modules/style/themes.php
+    line: 820
+  - name: admin_style_themes_add
+    file: admin/modules/style/themes.php
+    line: 888
+  - name: admin_style_themes_add_commit
+    file: admin/modules/style/themes.php
+    line: 911
+  - name: admin_style_themes_delete
+    file: admin/modules/style/themes.php
+    line: 967
+  - name: admin_style_themes_delete_commit
+    file: admin/modules/style/themes.php
+    line: 1046
+  - name: admin_style_themes_edit
+    file: admin/modules/style/themes.php
+    line: 1072
+  - name: admin_style_themes_edit_commit
+    file: admin/modules/style/themes.php
+    line: 1189
+  - name: admin_style_themes_stylesheet_properties
+    file: admin/modules/style/themes.php
+    line: 1643
+  - name: admin_style_themes_stylesheet_properties_commit
+    file: admin/modules/style/themes.php
+    line: 1773
+  - name: admin_style_themes_edit_stylesheet_simple
+    file: admin/modules/style/themes.php
+    line: 2020
+  - name: admin_style_themes_edit_stylesheet_simple_commit
+    file: admin/modules/style/themes.php
+    line: 2095
+  - name: admin_style_themes_edit_stylesheet_advanced
+    file: admin/modules/style/themes.php
+    line: 2284
+  - name: admin_style_themes_edit_stylesheet_advanced_commit
+    file: admin/modules/style/themes.php
+    line: 2330
+  - name: admin_style_themes_delete_stylesheet
+    file: admin/modules/style/themes.php
+    line: 2454
+  - name: admin_style_themes_delete_stylesheet_commit
+    file: admin/modules/style/themes.php
+    line: 2490
+  - name: admin_style_themes_add_stylesheet
+    file: admin/modules/style/themes.php
+    line: 2516
+  - name: admin_style_themes_add_stylesheet_commit
+    file: admin/modules/style/themes.php
+    line: 2618
+  - name: admin_style_themes_set_default
+    file: admin/modules/style/themes.php
+    line: 2935
+  - name: admin_style_themes_set_default_commit
+    file: admin/modules/style/themes.php
+    line: 2942
+  - name: admin_style_themes_force
+    file: admin/modules/style/themes.php
+    line: 2963
+  - name: admin_style_themes_force_commit
+    file: admin/modules/style/themes.php
+    line: 2977
+  - name: admin_style_themes_start
+    file: admin/modules/style/themes.php
+    line: 2997
+  - name: admin_style_menu
+    file: admin/modules/style/module_meta.php
+    line: 28
+    parameters:
+      - "$sub_menu"
+  - name: admin_style_action_handler
+    file: admin/modules/style/module_meta.php
+    line: 50
+    parameters:
+      - "$actions"
+  - name: admin_style_permissions
+    file: admin/modules/style/module_meta.php
+    line: 76
+    parameters:
+      - "$admin_permissions"
+  - name: admin_user_groups_begin
+    file: admin/modules/user/groups.php
+    line: 117
+  - name: admin_user_groups_approve_join_request
+    file: admin/modules/user/groups.php
+    line: 136
+  - name: admin_user_groups_approve_join_request_commit
+    file: admin/modules/user/groups.php
+    line: 144
+  - name: admin_user_groups_deny_join_request
+    file: admin/modules/user/groups.php
+    line: 167
+  - name: admin_user_groups_deny_join_request_commit
+    file: admin/modules/user/groups.php
+    line: 172
+  - name: admin_user_groups_join_requests_start
+    file: admin/modules/user/groups.php
+    line: 189
+  - name: admin_user_groups_join_requests_commit
+    file: admin/modules/user/groups.php
+    line: 213
+  - name: admin_user_groups_join_requests_commit_end
+    file: admin/modules/user/groups.php
+    line: 218
+  - name: admin_user_groups_add_leader
+    file: admin/modules/user/groups.php
+    line: 326
+  - name: admin_user_groups_add_leader_commit
+    file: admin/modules/user/groups.php
+    line: 361
+  - name: admin_user_groups_leaders
+    file: admin/modules/user/groups.php
+    line: 393
+  - name: admin_user_groups_delete_leader
+    file: admin/modules/user/groups.php
+    line: 562
+  - name: admin_user_groups_delete_leader_commit
+    file: admin/modules/user/groups.php
+    line: 566
+  - name: admin_user_groups_delete_leader_commit_end
+    file: admin/modules/user/groups.php
+    line: 571
+  - name: admin_user_groups_edit_leader
+    file: admin/modules/user/groups.php
+    line: 606
+  - name: admin_user_groups_edit_leader_commit
+    file: admin/modules/user/groups.php
+    line: 616
+  - name: admin_user_groups_add
+    file: admin/modules/user/groups.php
+    line: 668
+  - name: admin_user_groups_add_commit
+    file: admin/modules/user/groups.php
+    line: 721
+  - name: admin_user_groups_add_commit_end
+    file: admin/modules/user/groups.php
+    line: 725
+  - name: admin_user_groups_edit
+    file: admin/modules/user/groups.php
+    line: 819
+  - name: admin_user_groups_edit_commit
+    file: admin/modules/user/groups.php
+    line: 965
+  - name: admin_user_groups_edit_graph_tabs
+    file: admin/modules/user/groups.php
+    line: 1043
+    parameters:
+      - "$tabs"
+  - name: admin_user_groups_edit_graph
+    file: admin/modules/user/groups.php
+    line: 1258
+  - name: admin_user_groups_delete
+    file: admin/modules/user/groups.php
+    line: 1289
+  - name: admin_user_groups_delete_commit
+    file: admin/modules/user/groups.php
+    line: 1307
+  - name: admin_user_groups_delete_commit_end
+    file: admin/modules/user/groups.php
+    line: 1336
+  - name: admin_user_groups_disporder
+    file: admin/modules/user/groups.php
+    line: 1358
+  - name: admin_user_groups_disporder_commit
+    file: admin/modules/user/groups.php
+    line: 1376
+  - name: admin_user_groups_start
+    file: admin/modules/user/groups.php
+    line: 1384
+  - name: admin_user_groups_start_commit
+    file: admin/modules/user/groups.php
+    line: 1395
+  - name: admin_user_group_promotions_begin
+    file: admin/modules/user/group_promotions.php
+    line: 37
+  - name: admin_user_group_promotions_disable
+    file: admin/modules/user/group_promotions.php
+    line: 61
+  - name: admin_user_group_promotions_disable_commit
+    file: admin/modules/user/group_promotions.php
+    line: 69
+  - name: admin_user_group_promotions_delete
+    file: admin/modules/user/group_promotions.php
+    line: 107
+  - name: admin_user_group_promotions_delete_commit
+    file: admin/modules/user/group_promotions.php
+    line: 113
+  - name: admin_user_group_promotions_enable
+    file: admin/modules/user/group_promotions.php
+    line: 150
+  - name: admin_user_group_promotions_enable_commit
+    file: admin/modules/user/group_promotions.php
+    line: 156
+  - name: admin_user_group_promotions_edit
+    file: admin/modules/user/group_promotions.php
+    line: 184
+  - name: admin_user_group_promotions_edit_commit
+    file: admin/modules/user/group_promotions.php
+    line: 276
+  - name: admin_user_group_promotions_add
+    file: admin/modules/user/group_promotions.php
+    line: 412
+  - name: admin_user_group_promotions_add_commit
+    file: admin/modules/user/group_promotions.php
+    line: 506
+  - name: admin_user_group_promotions_logs
+    file: admin/modules/user/group_promotions.php
+    line: 636
+  - name: admin_user_group_promotions_start
+    file: admin/modules/user/group_promotions.php
+    line: 719
+  - name: admin_user_mass_email
+    file: admin/modules/user/mass_mail.php
+    line: 42
+  - name: admin_user_mass_email_edit_start
+    file: admin/modules/user/mass_mail.php
+    line: 56
+  - name: admin_user_mass_email_edit_commit
+    file: admin/modules/user/mass_mail.php
+    line: 195
+  - name: admin_user_mass_email_send_start
+    file: admin/modules/user/mass_mail.php
+    line: 616
+  - name: admin_user_mass_email_send_finalize_commit
+    file: admin/modules/user/mass_mail.php
+    line: 659
+  - name: admin_user_mass_email_send_define_commit
+    file: admin/modules/user/mass_mail.php
+    line: 902
+  - name: admin_user_mass_email_send_review_commit
+    file: admin/modules/user/mass_mail.php
+    line: 1013
+  - name: admin_user_mass_email_send_insert_commit
+    file: admin/modules/user/mass_mail.php
+    line: 1123
+  - name: admin_user_mass_email_send_update_commit
+    file: admin/modules/user/mass_mail.php
+    line: 1137
+  - name: admin_user_mass_email_preview_end
+    file: admin/modules/user/mass_mail.php
+    line: 1356
+  - name: admin_user_mass_email_delete_start
+    file: admin/modules/user/mass_mail.php
+    line: 1376
+  - name: admin_user_mass_email_delete_commit
+    file: admin/modules/user/mass_mail.php
+    line: 1382
+  - name: admin_user_mass_email_preview_start
+    file: admin/modules/user/mass_mail.php
+    line: 1422
+  - name: admin_user_mass_email_preview_end
+    file: admin/modules/user/mass_mail.php
+    line: 1440
+  - name: admin_user_mass_email_resend_start
+    file: admin/modules/user/mass_mail.php
+    line: 1463
+  - name: admin_user_mass_email_resend_end
+    file: admin/modules/user/mass_mail.php
+    line: 1489
+  - name: admin_user_mass_email_cancel
+    file: admin/modules/user/mass_mail.php
+    line: 1519
+  - name: admin_user_mass_email_archive_start
+    file: admin/modules/user/mass_mail.php
+    line: 1533
+  - name: admin_user_mass_email_archive_end
+    file: admin/modules/user/mass_mail.php
+    line: 1580
+  - name: admin_user_mass_email_start
+    file: admin/modules/user/mass_mail.php
+    line: 1591
+  - name: admin_user_mass_email_end
+    file: admin/modules/user/mass_mail.php
+    line: 1663
+  - name: admin_user_banning_begin
+    file: admin/modules/user/banning.php
+    line: 51
+  - name: admin_user_banning_prune
+    file: admin/modules/user/banning.php
+    line: 78
+  - name: admin_user_banning_prune_commit
+    file: admin/modules/user/banning.php
+    line: 97
+  - name: admin_user_banning_lift
+    file: admin/modules/user/banning.php
+    line: 138
+  - name: admin_user_banning_lift_commit
+    file: admin/modules/user/banning.php
+    line: 149
+  - name: admin_user_banning_edit
+    file: admin/modules/user/banning.php
+    line: 181
+  - name: admin_user_banning_edit_commit
+    file: admin/modules/user/banning.php
+    line: 239
+  - name: admin_user_banning_start
+    file: admin/modules/user/banning.php
+    line: 308
+  - name: admin_user_banning_start_commit
+    file: admin/modules/user/banning.php
+    line: 401
+  - name: admin_user_titles_begin
+    file: admin/modules/user/titles.php
+    line: 33
+  - name: admin_user_titles_add
+    file: admin/modules/user/titles.php
+    line: 37
+  - name: admin_user_titles_add_commit
+    file: admin/modules/user/titles.php
+    line: 68
+  - name: admin_user_titles_edit
+    file: admin/modules/user/titles.php
+    line: 126
+  - name: admin_user_titles_edit_commit
+    file: admin/modules/user/titles.php
+    line: 155
+  - name: admin_user_titles_delete
+    file: admin/modules/user/titles.php
+    line: 224
+  - name: admin_user_titles_delete_commit
+    file: admin/modules/user/titles.php
+    line: 230
+  - name: admin_user_titles_start
+    file: admin/modules/user/titles.php
+    line: 248
+  - name: admin_user_users_begin
+    file: admin/modules/user/users.php
+    line: 143
+  - name: admin_user_users_coppa_activate
+    file: admin/modules/user/users.php
+    line: 225
+  - name: admin_user_users_coppa_activate_commit
+    file: admin/modules/user/users.php
+    line: 247
+  - name: admin_user_users_coppa_end
+    file: admin/modules/user/users.php
+    line: 299
+  - name: admin_user_users_add
+    file: admin/modules/user/users.php
+    line: 306
+  - name: admin_user_users_add_commit
+    file: admin/modules/user/users.php
+    line: 359
+  - name: admin_user_users_edit
+    file: admin/modules/user/users.php
+    line: 436
+  - name: admin_user_users_edit_start
+    file: admin/modules/user/users.php
+    line: 440
+  - name: admin_user_users_edit_commit_start
+    file: admin/modules/user/users.php
+    line: 826
+  - name: admin_user_users_edit_commit
+    file: admin/modules/user/users.php
+    line: 839
+  - name: admin_user_users_edit_end
+    file: admin/modules/user/users.php
+    line: 852
+  - name: admin_user_users_edit_graph_tabs
+    file: admin/modules/user/users.php
+    line: 969
+    parameters:
+      - "$tabs"
+  - name: admin_user_users_edit_overview
+    file: admin/modules/user/users.php
+    line: 1119
+  - name: admin_user_users_edit_profile
+    file: admin/modules/user/users.php
+    line: 1227
+  - name: admin_user_users_edit_settings
+    file: admin/modules/user/users.php
+    line: 1353
+  - name: admin_user_users_edit_signatur
+    file: admin/modules/user/users.php
+    line: 1488
+  - name: admin_user_users_edit_avatar
+    file: admin/modules/user/users.php
+    line: 1554
+  - name: admin_user_users_edit_moderator_options
+    file: admin/modules/user/users.php
+    line: 1654
+  - name: admin_user_users_edit_graph
+    file: admin/modules/user/users.php
+    line: 1657
+  - name: admin_user_users_delete
+    file: admin/modules/user/users.php
+    line: 1746
+  - name: admin_user_users_delete_commit
+    file: admin/modules/user/users.php
+    line: 1750
+  - name: admin_user_users_delete_commit_end
+    file: admin/modules/user/users.php
+    line: 1765
+  - name: admin_user_users_referrers
+    file: admin/modules/user/users.php
+    line: 1789
+  - name: admin_user_users_ipaddresses
+    file: admin/modules/user/users.php
+    line: 1839
+  - name: admin_user_users_merge
+    file: admin/modules/user/users.php
+    line: 1919
+  - name: admin_user_users_merge_commit
+    file: admin/modules/user/users.php
+    line: 2132
+  - name: admin_user_users_search
+    file: admin/modules/user/users.php
+    line: 2249
+  - name: admin_user_users_search_commit
+    file: admin/modules/user/users.php
+    line: 2323
+  - name: admin_user_users_inline
+    file: admin/modules/user/users.php
+    line: 2389
+  - name: admin_user_users_start
+    file: admin/modules/user/users.php
+    line: 3038
+  - name: admin_user_awaiting_activation_begin
+    file: admin/modules/user/awaiting_activation.php
+    line: 25
+  - name: admin_user_awaiting_activation_activate
+    file: admin/modules/user/awaiting_activation.php
+    line: 29
+  - name: admin_user_awaiting_activation_activate_delete_commit
+    file: admin/modules/user/awaiting_activation.php
+    line: 62
+  - name: admin_user_awaiting_activation_activate_commit
+    file: admin/modules/user/awaiting_activation.php
+    line: 100
+  - name: admin_user_awaiting_activation_start
+    file: admin/modules/user/awaiting_activation.php
+    line: 112
+  - name: admin_user_admin_permissions_begin
+    file: admin/modules/user/admin_permissions.php
+    line: 42
+  - name: admin_user_admin_permissions_delete
+    file: admin/modules/user/admin_permissions.php
+    line: 70
+  - name: admin_user_admin_permissions_delete_commit
+    file: admin/modules/user/admin_permissions.php
+    line: 78
+  - name: admin_user_admin_permissions_edit
+    file: admin/modules/user/admin_permissions.php
+    line: 119
+  - name: admin_user_admin_permissions_edit_commit
+    file: admin/modules/user/admin_permissions.php
+    line: 158
+  - name: admin_user_admin_permissions_group
+    file: admin/modules/user/admin_permissions.php
+    line: 312
+  - name: admin_user_admin_permissions_start
+    file: admin/modules/user/admin_permissions.php
+    line: 381
+  - name: admin_user_menu
+    file: admin/modules/user/module_meta.php
+    line: 34
+    parameters:
+      - "$sub_menu"
+  - name: admin_user_action_handler
+    file: admin/modules/user/module_meta.php
+    line: 62
+    parameters:
+      - "$actions"
+  - name: admin_user_permissions
+    file: admin/modules/user/module_meta.php
+    line: 94
+    parameters:
+      - "$admin_permissions"
+  - name: admin_tools_maillogs_begin
+    file: admin/modules/tools/maillogs.php
+    line: 19
+  - name: admin_tools_maillogs_prune
+    file: admin/modules/tools/maillogs.php
+    line: 23
+  - name: admin_tools_maillogs_prune_delete_all_commit
+    file: admin/modules/tools/maillogs.php
+    line: 30
+  - name: admin_tools_maillogs_prune_commit
+    file: admin/modules/tools/maillogs.php
+    line: 51
+  - name: admin_tools_maillogs_view
+    file: admin/modules/tools/maillogs.php
+    line: 67
+  - name: admin_tools_maillogs_start
+    file: admin/modules/tools/maillogs.php
+    line: 147
+  - name: admin_tools_recount_rebuild
+    file: admin/modules/tools/recount_rebuild.php
+    line: 19
+  - name: admin_tools_recount_rebuild_start
+    file: admin/modules/tools/recount_rebuild.php
+    line: 471
+  - name: admin_tools_recount_rebuild_forum_counters
+    file: admin/modules/tools/recount_rebuild.php
+    line: 484
+  - name: admin_tools_recount_rebuild_thread_counters
+    file: admin/modules/tools/recount_rebuild.php
+    line: 500
+  - name: admin_tools_recount_rebuild_user_posts
+    file: admin/modules/tools/recount_rebuild.php
+    line: 516
+  - name: admin_tools_recount_rebuild_user_threads
+    file: admin/modules/tools/recount_rebuild.php
+    line: 532
+  - name: admin_tools_recount_rebuild_attachment_thumbs
+    file: admin/modules/tools/recount_rebuild.php
+    line: 548
+  - name: admin_tools_recount_recount_reputation
+    file: admin/modules/tools/recount_rebuild.php
+    line: 565
+  - name: admin_tools_recount_recount_warning
+    file: admin/modules/tools/recount_rebuild.php
+    line: 582
+  - name: admin_tools_recount_recount_private_messages
+    file: admin/modules/tools/recount_rebuild.php
+    line: 599
+  - name: admin_tools_recount_recount_referral
+    file: admin/modules/tools/recount_rebuild.php
+    line: 616
+  - name: admin_tools_recount_recount_thread_ratings
+    file: admin/modules/tools/recount_rebuild.php
+    line: 633
+  - name: admin_tools_recount_rebuild_poll_counters
+    file: admin/modules/tools/recount_rebuild.php
+    line: 650
+  - name: admin_tools_recount_rebuild_stats
+    file: admin/modules/tools/recount_rebuild.php
+    line: 667
+  - name: admin_tools_recount_rebuild_output_list
+    file: admin/modules/tools/recount_rebuild.php
+    line: 756
+  - name: admin_tools_mailerrors_begin
+    file: admin/modules/tools/mailerrors.php
+    line: 19
+  - name: admin_tools_mailerrors_prune
+    file: admin/modules/tools/mailerrors.php
+    line: 23
+  - name: admin_tools_mailerrors_prune_delete_all_commit
+    file: admin/modules/tools/mailerrors.php
+    line: 30
+  - name: admin_tools_mailerrors_prune_commit
+    file: admin/modules/tools/mailerrors.php
+    line: 51
+  - name: admin_tools_mailerrors_view
+    file: admin/modules/tools/mailerrors.php
+    line: 67
+  - name: admin_tools_mailerrors_start
+    file: admin/modules/tools/mailerrors.php
+    line: 151
+  - name: admin_tools_cache_begin
+    file: admin/modules/tools/cache.php
+    line: 19
+  - name: admin_tools_cache_view
+    file: admin/modules/tools/cache.php
+    line: 29
+  - name: admin_tools_cache_rebuild
+    file: admin/modules/tools/cache.php
+    line: 88
+  - name: admin_tools_cache_rebuild_commit
+    file: admin/modules/tools/cache.php
+    line: 95
+  - name: admin_tools_cache_rebuild_commit
+    file: admin/modules/tools/cache.php
+    line: 109
+  - name: admin_tools_cache_rebuild_commit
+    file: admin/modules/tools/cache.php
+    line: 122
+  - name: admin_tools_cache_rebuild_commit
+    file: admin/modules/tools/cache.php
+    line: 135
+  - name: admin_tools_cache_rebuild_commit
+    file: admin/modules/tools/cache.php
+    line: 148
+  - name: admin_tools_cache_rebuild_all
+    file: admin/modules/tools/cache.php
+    line: 171
+  - name: admin_tools_cache_rebuild_all_commit
+    file: admin/modules/tools/cache.php
+    line: 201
+  - name: admin_tools_cache_start
+    file: admin/modules/tools/cache.php
+    line: 220
+  - name: admin_tools_statistics_begin
+    file: admin/modules/tools/statistics.php
+    line: 35
+  - name: admin_tools_statistics_overall_begin
+    file: admin/modules/tools/statistics.php
+    line: 48
+  - name: admin_tools_modlog_begin
+    file: admin/modules/tools/modlog.php
+    line: 30
+  - name: admin_tools_modlog_prune
+    file: admin/modules/tools/modlog.php
+    line: 34
+  - name: admin_tools_modlog_prune_commit
+    file: admin/modules/tools/modlog.php
+    line: 66
+  - name: admin_tools_modlog_start
+    file: admin/modules/tools/modlog.php
+    line: 136
+  - name: admin_tools_system_health_begin
+    file: admin/modules/tools/system_health.php
+    line: 37
+  - name: admin_tools_system_health_template_do_check_start
+    file: admin/modules/tools/system_health.php
+    line: 49
+  - name: admin_tools_system_health_template_do_check
+    file: admin/modules/tools/system_health.php
+    line: 66
+  - name: admin_tools_system_health_template_check
+    file: admin/modules/tools/system_health.php
+    line: 144
+  - name: admin_tools_system_health_utf8_conversion
+    file: admin/modules/tools/system_health.php
+    line: 178
+  - name: admin_tools_system_health_utf8_conversion_commit
+    file: admin/modules/tools/system_health.php
+    line: 370
+  - name: admin_tools_system_health_start
+    file: admin/modules/tools/system_health.php
+    line: 707
+  - name: admin_tools_system_health_output_chmod_list
+    file: admin/modules/tools/system_health.php
+    line: 976
+  - name: admin_tools_tasks_begin
+    file: admin/modules/tools/tasks.php
+    line: 21
+  - name: admin_tools_tasks_add
+    file: admin/modules/tools/tasks.php
+    line: 68
+  - name: admin_tools_tasks_add_commit
+    file: admin/modules/tools/tasks.php
+    line: 142
+  - name: admin_tools_tasks_edit
+    file: admin/modules/tools/tasks.php
+    line: 260
+  - name: admin_tools_tasks_edit_commit
+    file: admin/modules/tools/tasks.php
+    line: 341
+  - name: admin_tools_tasks_delete
+    file: admin/modules/tools/tasks.php
+    line: 468
+  - name: admin_tools_tasks_delete_commit
+    file: admin/modules/tools/tasks.php
+    line: 478
+  - name: admin_tools_tasks_enable
+    file: admin/modules/tools/tasks.php
+    line: 514
+  - name: admin_tools_tasks_disable
+    file: admin/modules/tools/tasks.php
+    line: 518
+  - name: admin_tools_tasks_enable_commit
+    file: admin/modules/tools/tasks.php
+    line: 536
+  - name: admin_tools_tasks_enable_commit
+    file: admin/modules/tools/tasks.php
+    line: 556
+  - name: admin_tools_tasks_disable_commit
+    file: admin/modules/tools/tasks.php
+    line: 571
+  - name: admin_tools_tasks_run
+    file: admin/modules/tools/tasks.php
+    line: 594
+  - name: admin_tools_tasks_run_commit
+    file: admin/modules/tools/tasks.php
+    line: 608
+  - name: admin_tools_tasks_logs
+    file: admin/modules/tools/tasks.php
+    line: 619
+  - name: admin_tools_tasks_start
+    file: admin/modules/tools/tasks.php
+    line: 719
+  - name: admin_tools_file_verification_begin
+    file: admin/modules/tools/file_verification.php
+    line: 21
+  - name: admin_tools_file_verification_check
+    file: admin/modules/tools/file_verification.php
+    line: 25
+  - name: admin_tools_file_verification_check_commit_start
+    file: admin/modules/tools/file_verification.php
+    line: 89
+  - name: admin_tools_php_info_phpinfo
+    file: admin/modules/tools/php_info.php
+    line: 19
+  - name: admin_tools_php_info_begin
+    file: admin/modules/tools/php_info.php
+    line: 30
+  - name: admin_tools_php_info_start
+    file: admin/modules/tools/php_info.php
+    line: 34
+  - name: admin_tools_optimizedb_begin
+    file: admin/modules/tools/optimizedb.php
+    line: 19
+  - name: admin_tools_optimizedb_start
+    file: admin/modules/tools/optimizedb.php
+    line: 23
+  - name: admin_tools_optimizedb_start_begin
+    file: admin/modules/tools/optimizedb.php
+    line: 48
+  - name: admin_tools_backupdb_begin
+    file: admin/modules/tools/backupdb.php
+    line: 55
+  - name: admin_tools_backupdb_dlbackup
+    file: admin/modules/tools/backupdb.php
+    line: 65
+  - name: admin_tools_backupdb_dlbackup_commit
+    file: admin/modules/tools/backupdb.php
+    line: 72
+  - name: admin_tools_backupdb_delete
+    file: admin/modules/tools/backupdb.php
+    line: 110
+  - name: admin_tools_backupdb_delete_commit
+    file: admin/modules/tools/backupdb.php
+    line: 118
+  - name: admin_tools_backupdb_backup
+    file: admin/modules/tools/backupdb.php
+    line: 140
+  - name: admin_tools_backupdb_backup_disk_commit
+    file: admin/modules/tools/backupdb.php
+    line: 290
+  - name: admin_tools_backupdb_backup_download_commit
+    file: admin/modules/tools/backupdb.php
+    line: 301
+  - name: admin_tools_backupdb_start
+    file: admin/modules/tools/backupdb.php
+    line: 423
+  - name: admin_tools_warninglog_begin
+    file: admin/modules/tools/warninglog.php
+    line: 19
+  - name: admin_tools_warninglog_do_revoke
+    file: admin/modules/tools/warninglog.php
+    line: 40
+  - name: admin_tools_warninglog_do_revoke_commit
+    file: admin/modules/tools/warninglog.php
+    line: 72
+  - name: admin_tools_warninglog_view
+    file: admin/modules/tools/warninglog.php
+    line: 107
+  - name: admin_tools_warninglog_start
+    file: admin/modules/tools/warninglog.php
+    line: 237
+  - name: admin_tools_spamlog_begin
+    file: admin/modules/tools/spamlog.php
+    line: 29
+  - name: admin_tools_spamlog_prune
+    file: admin/modules/tools/spamlog.php
+    line: 39
+  - name: admin_tools_spamlog_prune_commit
+    file: admin/modules/tools/spamlog.php
+    line: 67
+  - name: admin_tools_spamlog_start
+    file: admin/modules/tools/spamlog.php
+    line: 112
+  - name: admin_tools_menu
+    file: admin/modules/tools/module_meta.php
+    line: 34
+    parameters:
+      - "$sub_menu"
+  - name: admin_tools_action_handler
+    file: admin/modules/tools/module_meta.php
+    line: 70
+    parameters:
+      - "$actions"
+  - name: admin_tools_menu_logs
+    file: admin/modules/tools/module_meta.php
+    line: 81
+    parameters:
+      - "$sub_menu"
+  - name: admin_tools_permissions
+    file: admin/modules/tools/module_meta.php
+    line: 129
+    parameters:
+      - "$admin_permissions"
+  - name: admin_tools_adminlog_begin
+    file: admin/modules/tools/adminlog.php
+    line: 30
+  - name: admin_tools_adminlog_prune
+    file: admin/modules/tools/adminlog.php
+    line: 40
+  - name: admin_tools_adminlog_prune_commit
+    file: admin/modules/tools/adminlog.php
+    line: 68
+  - name: admin_tools_adminlog_start
+    file: admin/modules/tools/adminlog.php
+    line: 156
+  - name: admin_tools_get_admin_log_action
+    file: admin/modules/tools/adminlog.php
+    line: 579
+    parameters:
+      - "$plugin_array"
+  - name: admin_forum_moderation_queue_begin
+    file: admin/modules/forum/moderation_queue.php
+    line: 37
+  - name: admin_forum_moderation_queue_commit
+    file: admin/modules/forum/moderation_queue.php
+    line: 42
+  - name: admin_forum_moderation_queue_threads_commit
+    file: admin/modules/forum/moderation_queue.php
+    line: 78
+  - name: admin_forum_moderation_queue_posts_commit
+    file: admin/modules/forum/moderation_queue.php
+    line: 116
+  - name: admin_forum_moderation_queue_attachments_commit
+    file: admin/modules/forum/moderation_queue.php
+    line: 141
+  - name: admin_forum_moderation_queue_threads
+    file: admin/modules/forum/moderation_queue.php
+    line: 160
+  - name: admin_forum_moderation_queue_posts
+    file: admin/modules/forum/moderation_queue.php
+    line: 290
+  - name: admin_forum_moderation_queue_attachments
+    file: admin/modules/forum/moderation_queue.php
+    line: 443
+  - name: admin_forum_management_begin
+    file: admin/modules/forum/management.php
+    line: 63
+  - name: admin_forum_management_copy
+    file: admin/modules/forum/management.php
+    line: 67
+  - name: admin_forum_management_copy_commit
+    file: admin/modules/forum/management.php
+    line: 171
+  - name: admin_forum_management_editmod
+    file: admin/modules/forum/management.php
+    line: 276
+  - name: admin_forum_management_editmod_commit
+    file: admin/modules/forum/management.php
+    line: 335
+  - name: admin_forum_management_clear_permission
+    file: admin/modules/forum/management.php
+    line: 437
+  - name: admin_forum_management_clear_permission_commit
+    file: admin/modules/forum/management.php
+    line: 458
+  - name: admin_forum_management_permissions
+    file: admin/modules/forum/management.php
+    line: 473
+  - name: admin_forum_management_permissions_commit
+    file: admin/modules/forum/management.php
+    line: 530
+  - name: admin_forum_management_permission_groups
+    file: admin/modules/forum/management.php
+    line: 734
+    parameters:
+      - "$groups"
+  - name: admin_forum_management_add
+    file: admin/modules/forum/management.php
+    line: 811
+  - name: admin_forum_management_add_commit
+    file: admin/modules/forum/management.php
+    line: 912
+  - name: admin_forum_management_edit
+    file: admin/modules/forum/management.php
+    line: 1312
+  - name: admin_forum_management_edit_commit
+    file: admin/modules/forum/management.php
+    line: 1474
+  - name: admin_forum_management_deletemod
+    file: admin/modules/forum/management.php
+    line: 1877
+  - name: admin_forum_management_deletemod_commit
+    file: admin/modules/forum/management.php
+    line: 1904
+  - name: admin_forum_management_delete
+    file: admin/modules/forum/management.php
+    line: 1947
+  - name: admin_forum_management_delete_commit
+    file: admin/modules/forum/management.php
+    line: 2029
+  - name: admin_forum_management_start
+    file: admin/modules/forum/management.php
+    line: 2061
+  - name: admin_forum_management_start_permissions_commit
+    file: admin/modules/forum/management.php
+    line: 2116
+  - name: admin_forum_management_start_moderators_commit
+    file: admin/modules/forum/management.php
+    line: 2209
+  - name: admin_forum_management_start_disporder_commit
+    file: admin/modules/forum/management.php
+    line: 2240
+  - name: admin_forum_management_start_graph_tabs
+    file: admin/modules/forum/management.php
+    line: 2281
+    parameters:
+      - "$tabs"
+  - name: admin_forum_management_start_graph
+    file: admin/modules/forum/management.php
+    line: 2664
+  - name: admin_forum_attachments_begin
+    file: admin/modules/forum/attachments.php
+    line: 40
+  - name: admin_forum_attachments_delete
+    file: admin/modules/forum/attachments.php
+    line: 44
+  - name: admin_forum_attachments_delete_commit
+    file: admin/modules/forum/attachments.php
+    line: 82
+  - name: admin_forum_attachments_stats
+    file: admin/modules/forum/attachments.php
+    line: 100
+  - name: admin_forum_attachments_delete_orphans
+    file: admin/modules/forum/attachments.php
+    line: 225
+  - name: admin_forum_attachments_delete_orphans_commit
+    file: admin/modules/forum/attachments.php
+    line: 276
+  - name: admin_forum_attachments_orphans
+    file: admin/modules/forum/attachments.php
+    line: 306
+  - name: admin_forum_attachments_step3
+    file: admin/modules/forum/attachments.php
+    line: 319
+  - name: admin_forum_attachments_orphans_step2
+    file: admin/modules/forum/attachments.php
+    line: 433
+  - name: admin_forum_attachments_orphans_step1
+    file: admin/modules/forum/attachments.php
+    line: 509
+  - name: admin_forum_attachments_start
+    file: admin/modules/forum/attachments.php
+    line: 633
+  - name: admin_forum_announcements_begin
+    file: admin/modules/forum/announcements.php
+    line: 48
+  - name: admin_forum_announcements_add
+    file: admin/modules/forum/announcements.php
+    line: 52
+  - name: admin_forum_announcements_add_commit
+    file: admin/modules/forum/announcements.php
+    line: 172
+  - name: admin_forum_announcements_edit
+    file: admin/modules/forum/announcements.php
+    line: 434
+  - name: admin_forum_announcements_edit_commit
+    file: admin/modules/forum/announcements.php
+    line: 552
+  - name: admin_forum_announcements_delete
+    file: admin/modules/forum/announcements.php
+    line: 801
+  - name: admin_forum_announcements_delete_commit
+    file: admin/modules/forum/announcements.php
+    line: 807
+  - name: admin_forum_announcements_start
+    file: admin/modules/forum/announcements.php
+    line: 824
+  - name: admin_forum_menu
+    file: admin/modules/forum/module_meta.php
+    line: 30
+    parameters:
+      - "$sub_menu"
+  - name: admin_forum_action_handler
+    file: admin/modules/forum/module_meta.php
+    line: 55
+    parameters:
+      - "$actions"
+  - name: admin_forum_permissions
+    file: admin/modules/forum/module_meta.php
+    line: 83
+    parameters:
+      - "$admin_permissions"
+  - name: admin_home_index_begin
+    file: admin/modules/home/index.php
+    line: 17
+  - name: admin_home_version_check_start
+    file: admin/modules/home/index.php
+    line: 33
+  - name: admin_home_version_check
+    file: admin/modules/home/index.php
+    line: 50
+  - name: admin_home_index_start
+    file: admin/modules/home/index.php
+    line: 171
+  - name: admin_home_index_start_begin
+    file: admin/modules/home/index.php
+    line: 182
+  - name: admin_home_index_output_message
+    file: admin/modules/home/index.php
+    line: 302
+  - name: admin_home_credits_begin
+    file: admin/modules/home/credits.php
+    line: 19
+  - name: admin_home_credits_start
+    file: admin/modules/home/credits.php
+    line: 43
+  - name: admin_home_preferences_begin
+    file: admin/modules/home/preferences.php
+    line: 19
+  - name: admin_home_preferences_start
+    file: admin/modules/home/preferences.php
+    line: 51
+  - name: admin_home_preferences_start_commit
+    file: admin/modules/home/preferences.php
+    line: 93
+  - name: admin_home_menu
+    file: admin/modules/home/module_meta.php
+    line: 29
+    parameters:
+      - "$sub_menu"
+  - name: admin_home_action_handler
+    file: admin/modules/home/module_meta.php
+    line: 63
+    parameters:
+      - "$actions"
+  - name: admin_home_menu_quick_access
+    file: admin/modules/home/module_meta.php
+    line: 84
+    parameters:
+      - "$sub_menu"
+  - name: admin_config_post_icons_begin
+    file: admin/modules/config/post_icons.php
+    line: 19
+  - name: admin_config_post_icons_add
+    file: admin/modules/config/post_icons.php
+    line: 23
+  - name: admin_config_post_icons_add_commit
+    file: admin/modules/config/post_icons.php
+    line: 46
+  - name: admin_config_post_icons_add_multiple
+    file: admin/modules/config/post_icons.php
+    line: 105
+  - name: admin_config_post_icons_add_multiple_commit
+    file: admin/modules/config/post_icons.php
+    line: 249
+  - name: admin_config_post_icons_edit
+    file: admin/modules/config/post_icons.php
+    line: 313
+  - name: admin_config_post_icons_edit_commit
+    file: admin/modules/config/post_icons.php
+    line: 334
+  - name: admin_config_post_icons_delete
+    file: admin/modules/config/post_icons.php
+    line: 402
+  - name: admin_config_post_icons_delete_commit
+    file: admin/modules/config/post_icons.php
+    line: 408
+  - name: admin_config_post_icons_start
+    file: admin/modules/config/post_icons.php
+    line: 426
+  - name: admin_config_banning_begin
+    file: admin/modules/config/banning.php
+    line: 19
+  - name: admin_config_banning_add
+    file: admin/modules/config/banning.php
+    line: 23
+  - name: admin_config_banning_add_commit
+    file: admin/modules/config/banning.php
+    line: 45
+  - name: admin_config_banning_delete
+    file: admin/modules/config/banning.php
+    line: 105
+  - name: admin_config_banning_delete_commit
+    file: admin/modules/config/banning.php
+    line: 131
+  - name: admin_config_banning_start
+    file: admin/modules/config/banning.php
+    line: 157
+  - name: admin_config_profile_fields_begin
+    file: admin/modules/config/profile_fields.php
+    line: 19
+  - name: admin_config_profile_fields_add
+    file: admin/modules/config/profile_fields.php
+    line: 23
+  - name: admin_config_profile_fields_add_commit
+    file: admin/modules/config/profile_fields.php
+    line: 110
+  - name: admin_config_profile_fields_edit
+    file: admin/modules/config/profile_fields.php
+    line: 348
+  - name: admin_config_profile_fields_edit_commit
+    file: admin/modules/config/profile_fields.php
+    line: 427
+  - name: admin_config_profile_fields_delete
+    file: admin/modules/config/profile_fields.php
+    line: 671
+  - name: admin_config_profile_fields_delete_commit
+    file: admin/modules/config/profile_fields.php
+    line: 679
+  - name: admin_config_profile_fields_start
+    file: admin/modules/config/profile_fields.php
+    line: 697
+  - name: admin_config_badwords_begin
+    file: admin/modules/config/badwords.php
+    line: 19
+  - name: admin_config_badwords_add
+    file: admin/modules/config/badwords.php
+    line: 23
+  - name: admin_config_badwords_add_commit
+    file: admin/modules/config/badwords.php
+    line: 67
+  - name: admin_config_badwords_delete
+    file: admin/modules/config/badwords.php
+    line: 100
+  - name: admin_config_badwords_delete_commit
+    file: admin/modules/config/badwords.php
+    line: 107
+  - name: admin_config_badwords_edit
+    file: admin/modules/config/badwords.php
+    line: 135
+  - name: admin_config_badwords_edit_commit
+    file: admin/modules/config/badwords.php
+    line: 161
+  - name: admin_config_badwords_start
+    file: admin/modules/config/badwords.php
+    line: 219
+  - name: admin_config_mod_tools_begin
+    file: admin/modules/config/mod_tools.php
+    line: 19
+  - name: admin_config_mod_tools_delete_post_tool
+    file: admin/modules/config/mod_tools.php
+    line: 39
+  - name: admin_config_mod_tools_delete_post_tool_commit
+    file: admin/modules/config/mod_tools.php
+    line: 46
+  - name: admin_config_mod_tools_delete_thread_tool
+    file: admin/modules/config/mod_tools.php
+    line: 79
+  - name: admin_config_mod_tools_delete_thread_tool_commit
+    file: admin/modules/config/mod_tools.php
+    line: 86
+  - name: admin_config_mod_tools_post_tools
+    file: admin/modules/config/mod_tools.php
+    line: 103
+  - name: admin_config_mod_tools_edit_thread_tool
+    file: admin/modules/config/mod_tools.php
+    line: 161
+  - name: admin_config_mod_tools_edit_thread_tool_commit
+    file: admin/modules/config/mod_tools.php
+    line: 367
+  - name: admin_config_mod_tools_add_thread_tool
+    file: admin/modules/config/mod_tools.php
+    line: 664
+  - name: admin_config_mod_tools_add_thread_tool_commit
+    file: admin/modules/config/mod_tools.php
+    line: 873
+  - name: admin_config_mod_tools_edit_post_tool
+    file: admin/modules/config/mod_tools.php
+    line: 1144
+  - name: admin_config_mod_tools_edit_post_tool_commit
+    file: admin/modules/config/mod_tools.php
+    line: 1374
+  - name: admin_config_mod_tools_add_post_tool
+    file: admin/modules/config/mod_tools.php
+    line: 1747
+  - name: admin_config_mod_tools_add_post_tool_commit
+    file: admin/modules/config/mod_tools.php
+    line: 2013
+  - name: admin_config_mod_tools_start
+    file: admin/modules/config/mod_tools.php
+    line: 2316
+  - name: admin_config_questions_begin
+    file: admin/modules/config/questions.php
+    line: 19
+  - name: admin_config_questions_add
+    file: admin/modules/config/questions.php
+    line: 23
+  - name: admin_config_questions_add_commit
+    file: admin/modules/config/questions.php
+    line: 48
+  - name: admin_config_questions_edit
+    file: admin/modules/config/questions.php
+    line: 110
+  - name: admin_config_questions_edit_commit
+    file: admin/modules/config/questions.php
+    line: 134
+  - name: admin_config_questions_delete
+    file: admin/modules/config/questions.php
+    line: 198
+  - name: admin_config_questions_delete_commit
+    file: admin/modules/config/questions.php
+    line: 205
+  - name: admin_config_questions_disable
+    file: admin/modules/config/questions.php
+    line: 230
+  - name: admin_config_questions_disable_commit
+    file: admin/modules/config/questions.php
+    line: 236
+  - name: admin_config_questions_enable
+    file: admin/modules/config/questions.php
+    line: 258
+  - name: admin_config_questions_enable_commit
+    file: admin/modules/config/questions.php
+    line: 264
+  - name: admin_config_questions_start
+    file: admin/modules/config/questions.php
+    line: 277
+  - name: admin_config_help_documents_begin
+    file: admin/modules/config/help_documents.php
+    line: 19
+  - name: admin_config_help_documents_add
+    file: admin/modules/config/help_documents.php
+    line: 24
+  - name: admin_config_help_documents_add_section
+    file: admin/modules/config/help_documents.php
+    line: 29
+  - name: admin_config_help_documents_add_section_commit
+    file: admin/modules/config/help_documents.php
+    line: 66
+  - name: admin_config_help_documents_add_page
+    file: admin/modules/config/help_documents.php
+    line: 128
+  - name: admin_config_help_documents_add_page_commit
+    file: admin/modules/config/help_documents.php
+    line: 177
+  - name: admin_config_help_documents_edit
+    file: admin/modules/config/help_documents.php
+    line: 252
+  - name: admin_config_help_documents_edit_section
+    file: admin/modules/config/help_documents.php
+    line: 260
+  - name: admin_config_help_documents_edit_section_commit
+    file: admin/modules/config/help_documents.php
+    line: 302
+  - name: admin_config_help_documents_edit_page
+    file: admin/modules/config/help_documents.php
+    line: 361
+  - name: admin_config_help_documents_edit_page_commit
+    file: admin/modules/config/help_documents.php
+    line: 410
+  - name: admin_config_help_documents_delete
+    file: admin/modules/config/help_documents.php
+    line: 491
+  - name: admin_config_help_documents_delete_section_commit
+    file: admin/modules/config/help_documents.php
+    line: 515
+  - name: admin_config_help_documents_delete_page_commit
+    file: admin/modules/config/help_documents.php
+    line: 541
+  - name: admin_config_help_documents_start
+    file: admin/modules/config/help_documents.php
+    line: 589
+  - name: admin_config_settings_begin
+    file: admin/modules/config/settings.php
+    line: 19
+  - name: admin_config_settings_addgroup
+    file: admin/modules/config/settings.php
+    line: 24
+  - name: admin_config_settings_addgroup_commit
+    file: admin/modules/config/settings.php
+    line: 57
+  - name: admin_config_settings_editgroup
+    file: admin/modules/config/settings.php
+    line: 133
+  - name: admin_config_settings_editgroup_commit
+    file: admin/modules/config/settings.php
+    line: 165
+  - name: admin_config_settings_deletegroup
+    file: admin/modules/config/settings.php
+    line: 241
+  - name: admin_config_settings_deletegroup_commit
+    file: admin/modules/config/settings.php
+    line: 251
+  - name: admin_config_settings_add
+    file: admin/modules/config/settings.php
+    line: 268
+  - name: admin_config_settings_add_commit
+    file: admin/modules/config/settings.php
+    line: 348
+  - name: admin_config_settings_edit
+    file: admin/modules/config/settings.php
+    line: 473
+  - name: admin_config_settings_edit_commit
+    file: admin/modules/config/settings.php
+    line: 551
+  - name: admin_config_settings_delete
+    file: admin/modules/config/settings.php
+    line: 697
+  - name: admin_config_settings_delete_commit
+    file: admin/modules/config/settings.php
+    line: 706
+  - name: admin_config_settings_manage
+    file: admin/modules/config/settings.php
+    line: 723
+  - name: admin_config_settings_manage_commit
+    file: admin/modules/config/settings.php
+    line: 748
+  - name: admin_config_settings_change
+    file: admin/modules/config/settings.php
+    line: 875
+  - name: admin_config_settings_change_commit
+    file: admin/modules/config/settings.php
+    line: 1103
+  - name: admin_config_settings_start
+    file: admin/modules/config/settings.php
+    line: 1539
+  - name: admin_settings_print_peekers
+    file: admin/modules/config/settings.php
+    line: 1767
+    parameters:
+      - "$peekers"
+  - name: admin_config_mycode_begin
+    file: admin/modules/config/mycode.php
+    line: 19
+  - name: admin_config_mycode_toggle_status
+    file: admin/modules/config/mycode.php
+    line: 38
+  - name: admin_config_mycode_toggle_status_commit
+    file: admin/modules/config/mycode.php
+    line: 54
+  - name: admin_config_mycode_xmlhttp_test_mycode_start
+    file: admin/modules/config/mycode.php
+    line: 69
+  - name: admin_config_mycode_xmlhttp_test_mycode_end
+    file: admin/modules/config/mycode.php
+    line: 80
+  - name: admin_config_mycode_add
+    file: admin/modules/config/mycode.php
+    line: 88
+  - name: admin_config_mycode_add_commit
+    file: admin/modules/config/mycode.php
+    line: 133
+  - name: admin_config_mycode_edit
+    file: admin/modules/config/mycode.php
+    line: 222
+  - name: admin_config_mycode_edit_commit
+    file: admin/modules/config/mycode.php
+    line: 265
+  - name: admin_config_mycode_delete
+    file: admin/modules/config/mycode.php
+    line: 354
+  - name: admin_config_mycode_delete_commit
+    file: admin/modules/config/mycode.php
+    line: 366
+  - name: admin_config_mycode_start
+    file: admin/modules/config/mycode.php
+    line: 384
+  - name: admin_config_warning_begin
+    file: admin/modules/config/warning.php
+    line: 45
+  - name: admin_config_warning_add_level
+    file: admin/modules/config/warning.php
+    line: 49
+  - name: admin_config_warning_add_level_commit
+    file: admin/modules/config/warning.php
+    line: 97
+  - name: admin_config_warning_edit_level
+    file: admin/modules/config/warning.php
+    line: 218
+  - name: admin_config_warning_edit_level_commit
+    file: admin/modules/config/warning.php
+    line: 264
+  - name: admin_config_warning_delete_level
+    file: admin/modules/config/warning.php
+    line: 425
+  - name: admin_config_warning_delete_level_commit
+    file: admin/modules/config/warning.php
+    line: 432
+  - name: admin_config_warning_add_type
+    file: admin/modules/config/warning.php
+    line: 448
+  - name: admin_config_warning_add_type_commit
+    file: admin/modules/config/warning.php
+    line: 472
+  - name: admin_config_warning_edit_type
+    file: admin/modules/config/warning.php
+    line: 536
+  - name: admin_config_warning_edit_type_commit
+    file: admin/modules/config/warning.php
+    line: 558
+  - name: admin_config_warning_delete_type
+    file: admin/modules/config/warning.php
+    line: 638
+  - name: admin_config_warning_delete_type_commit
+    file: admin/modules/config/warning.php
+    line: 645
+  - name: admin_config_warning_levels
+    file: admin/modules/config/warning.php
+    line: 661
+  - name: admin_config_warning_start
+    file: admin/modules/config/warning.php
+    line: 731
+  - name: admin_config_plugins_begin
+    file: admin/modules/config/plugins.php
+    line: 19
+  - name: admin_config_plugins_check
+    file: admin/modules/config/plugins.php
+    line: 205
+  - name: admin_config_plugins_activate
+    file: admin/modules/config/plugins.php
+    line: 382
+  - name: admin_config_plugins_deactivate
+    file: admin/modules/config/plugins.php
+    line: 386
+  - name: admin_config_plugins_activate_commit
+    file: admin/modules/config/plugins.php
+    line: 469
+  - name: admin_config_plugins_deactivate_commit
+    file: admin/modules/config/plugins.php
+    line: 473
+  - name: admin_config_plugins_plugin_list
+    file: admin/modules/config/plugins.php
+    line: 510
+  - name: admin_config_spiders_begin
+    file: admin/modules/config/spiders.php
+    line: 19
+  - name: admin_config_spiders_add
+    file: admin/modules/config/spiders.php
+    line: 23
+  - name: admin_config_spiders_add_commit
+    file: admin/modules/config/spiders.php
+    line: 49
+  - name: admin_config_spiders_delete
+    file: admin/modules/config/spiders.php
+    line: 133
+  - name: admin_config_spiders_delete_commit
+    file: admin/modules/config/spiders.php
+    line: 140
+  - name: admin_config_spiders_edit
+    file: admin/modules/config/spiders.php
+    line: 168
+  - name: admin_config_spiders_edit_commit
+    file: admin/modules/config/spiders.php
+    line: 192
+  - name: admin_config_spiders_start
+    file: admin/modules/config/spiders.php
+    line: 260
+  - name: report_content_types
+    file: admin/modules/config/report_reasons.php
+    line: 21
+    parameters:
+      - "$content_types"
+  - name: admin_config_report_reasons_begin
+    file: admin/modules/config/report_reasons.php
+    line: 23
+  - name: admin_config_report_reasons_add
+    file: admin/modules/config/report_reasons.php
+    line: 29
+  - name: admin_config_report_reasons_add_commit
+    file: admin/modules/config/report_reasons.php
+    line: 70
+  - name: admin_config_report_reasons_edit
+    file: admin/modules/config/report_reasons.php
+    line: 141
+  - name: admin_config_report_reasons_edit_commit
+    file: admin/modules/config/report_reasons.php
+    line: 181
+  - name: admin_config_report_reasons_delete
+    file: admin/modules/config/report_reasons.php
+    line: 257
+  - name: admin_config_report_reasons_delete_commit
+    file: admin/modules/config/report_reasons.php
+    line: 271
+  - name: admin_config_report_reasons_start
+    file: admin/modules/config/report_reasons.php
+    line: 287
+  - name: admin_config_report_reasons_start_commit
+    file: admin/modules/config/report_reasons.php
+    line: 298
+  - name: admin_config_languages_begin
+    file: admin/modules/config/languages.php
+    line: 21
+  - name: admin_config_languages_edit_properties
+    file: admin/modules/config/languages.php
+    line: 33
+  - name: admin_config_languages_edit_properties_commit
+    file: admin/modules/config/languages.php
+    line: 91
+  - name: admin_config_languages_quick_phrases
+    file: admin/modules/config/languages.php
+    line: 202
+  - name: admin_config_languages_edit
+    file: admin/modules/config/languages.php
+    line: 406
+  - name: admin_config_languages_edit_commit
+    file: admin/modules/config/languages.php
+    line: 475
+  - name: admin_config_languages_start
+    file: admin/modules/config/languages.php
+    line: 998
+  - name: admin_config_attachment_types_begin
+    file: admin/modules/config/attachment_types.php
+    line: 19
+  - name: admin_config_attachment_types_add
+    file: admin/modules/config/attachment_types.php
+    line: 23
+  - name: admin_config_attachment_types_add_commit
+    file: admin/modules/config/attachment_types.php
+    line: 99
+  - name: admin_config_attachment_types_edit
+    file: admin/modules/config/attachment_types.php
+    line: 314
+  - name: admin_config_attachment_types_edit_commit
+    file: admin/modules/config/attachment_types.php
+    line: 381
+  - name: admin_config_attachment_types_delete
+    file: admin/modules/config/attachment_types.php
+    line: 597
+  - name: admin_config_attachment_types_delete_commit
+    file: admin/modules/config/attachment_types.php
+    line: 603
+  - name: admin_config_attachment_types_toggle_status
+    file: admin/modules/config/attachment_types.php
+    line: 638
+  - name: admin_config_attachment_types_toggle_status_commit
+    file: admin/modules/config/attachment_types.php
+    line: 648
+  - name: admin_config_attachment_types_start
+    file: admin/modules/config/attachment_types.php
+    line: 675
+  - name: admin_config_smilies_begin
+    file: admin/modules/config/smilies.php
+    line: 19
+  - name: admin_config_smilies_add
+    file: admin/modules/config/smilies.php
+    line: 23
+  - name: admin_config_smilies_add_commit
+    file: admin/modules/config/smilies.php
+    line: 79
+  - name: admin_config_smilies_edit
+    file: admin/modules/config/smilies.php
+    line: 159
+  - name: admin_config_smilies_edit_commit
+    file: admin/modules/config/smilies.php
+    line: 213
+  - name: admin_config_smilies_delete
+    file: admin/modules/config/smilies.php
+    line: 289
+  - name: admin_config_smilies_delete_commit
+    file: admin/modules/config/smilies.php
+    line: 296
+  - name: admin_config_smilies_add_multiple
+    file: admin/modules/config/smilies.php
+    line: 313
+  - name: admin_config_smilies_add_multiple_step1
+    file: admin/modules/config/smilies.php
+    line: 319
+  - name: admin_config_smilies_add_multiple_step2
+    file: admin/modules/config/smilies.php
+    line: 440
+  - name: admin_config_smilies_add_multiple_commit
+    file: admin/modules/config/smilies.php
+    line: 481
+  - name: admin_config_smilies_mass_edit
+    file: admin/modules/config/smilies.php
+    line: 537
+  - name: admin_config_smilies_mass_edit_commit
+    file: admin/modules/config/smilies.php
+    line: 584
+  - name: admin_config_smilies_start
+    file: admin/modules/config/smilies.php
+    line: 685
+  - name: admin_config_calendars_begin
+    file: admin/modules/config/calendars.php
+    line: 33
+  - name: admin_config_calendars_add
+    file: admin/modules/config/calendars.php
+    line: 37
+  - name: admin_config_calendars_add_commit
+    file: admin/modules/config/calendars.php
+    line: 41
+  - name: admin_config_calendars_add_commit_start
+    file: admin/modules/config/calendars.php
+    line: 69
+  - name: admin_config_calendars_add_commit_end
+    file: admin/modules/config/calendars.php
+    line: 73
+  - name: admin_config_calendars_permissions
+    file: admin/modules/config/calendars.php
+    line: 141
+  - name: admin_config_calendars_permissions_commit
+    file: admin/modules/config/calendars.php
+    line: 181
+  - name: admin_config_calendars_edit
+    file: admin/modules/config/calendars.php
+    line: 282
+  - name: admin_config_calendars_edit_commit
+    file: admin/modules/config/calendars.php
+    line: 312
+  - name: admin_config_calendars_delete
+    file: admin/modules/config/calendars.php
+    line: 382
+  - name: admin_config_calendars_delete_commit
+    file: admin/modules/config/calendars.php
+    line: 397
+  - name: admin_config_calendars_update_order
+    file: admin/modules/config/calendars.php
+    line: 418
+  - name: admin_config_calendars_update_order_commit
+    file: admin/modules/config/calendars.php
+    line: 428
+  - name: admin_config_thread_prefixes_begin
+    file: admin/modules/config/thread_prefixes.php
+    line: 32
+  - name: admin_config_thread_prefixes_add_prefix
+    file: admin/modules/config/thread_prefixes.php
+    line: 36
+  - name: admin_config_thread_prefixes_add_prefix_commit
+    file: admin/modules/config/thread_prefixes.php
+    line: 125
+  - name: admin_config_thread_prefixes_edit_prefix_start
+    file: admin/modules/config/thread_prefixes.php
+    line: 238
+  - name: admin_config_thread_prefixes_edit_prefix_commit
+    file: admin/modules/config/thread_prefixes.php
+    line: 325
+  - name: admin_config_thread_prefixes_delete_prefix
+    file: admin/modules/config/thread_prefixes.php
+    line: 477
+  - name: admin_config_thread_prefixes_delete_thread_prefix_commit
+    file: admin/modules/config/thread_prefixes.php
+    line: 487
+  - name: admin_config_thread_prefixes_start
+    file: admin/modules/config/thread_prefixes.php
+    line: 506
+  - name: admin_config_menu
+    file: admin/modules/config/module_meta.php
+    line: 44
+    parameters:
+      - "$sub_menu"
+  - name: admin_config_action_handler
+    file: admin/modules/config/module_meta.php
+    line: 83
+    parameters:
+      - "$actions"
+  - name: admin_config_permissions
+    file: admin/modules/config/module_meta.php
+    line: 125
+    parameters:
+      - "$admin_permissions"
+  - name: admin_page_output_header
+    file: admin/inc/class_page.php
+    line: 81
+    parameters:
+      - "$args"
+  - name: admin_page_output_footer
+    file: admin/inc/class_page.php
+    line: 208
+    parameters:
+      - "$args"
+  - name: admin_page_show_login_start
+    file: admin/inc/class_page.php
+    line: 372
+    parameters:
+      - "$args"
+  - name: admin_page_show_login_end
+    file: admin/inc/class_page.php
+    line: 508
+    parameters:
+      - "$args"
+  - name: admin_page_output_tab_control_start
+    file: admin/inc/class_page.php
+    line: 782
+    parameters:
+      - "$tabs"
+  - name: admin_page_output_tab_control_end
+    file: admin/inc/class_page.php
+    line: 801
+    parameters:
+      - "$tabs"
+  - name: admin_page_output_nav_tabs_start
+    file: admin/inc/class_page.php
+    line: 813
+    parameters:
+      - "$tabs"
+  - name: admin_page_output_nav_tabs_end
+    file: admin/inc/class_page.php
+    line: 851
+    parameters:
+      - "$arguments"
+  - name: admin_page_output_confirm_action
+    file: admin/inc/class_page.php
+    line: 872
+    parameters:
+      - "$args"
+  - name: admin_form_output_submit_wrapper
+    file: admin/inc/class_form.php
+    line: 871
+    parameters:
+      - "$buttons"
+  - name: admin_form_end
+    file: admin/inc/class_form.php
+    line: 896
+    parameters:
+      - "$this"
+  - name: admin_formcontainer_output_row
+    file: admin/inc/class_form.php
+    line: 965
+    parameters:
+      - "$pluginargs"
+  - name: admin_formcontainer_end
+    file: admin/inc/class_form.php
+    line: 1058
+    parameters:
+      - "$hook"
+  - name: update_theme_stylesheet_list_set_css_url
+    file: admin/inc/functions_themes.php
+    line: 1027
+    parameters:
+      - "$css_url"
+  - name: private_start
+    file: private.php
+    line: 89
+  - name: private_do_search_start
+    file: private.php
+    line: 127
+  - name: private_do_search_process
+    file: private.php
+    line: 208
+  - name: private_do_search_end
+    file: private.php
+    line: 233
+  - name: private_results_start
+    file: private.php
+    line: 248
+  - name: private_results_end
+    file: private.php
+    line: 500
+  - name: private_advanced_search
+    file: private.php
+    line: 508
+  - name: private_send_do_send
+    file: private.php
+    line: 555
+  - name: private_do_send_end
+    file: private.php
+    line: 644
+  - name: private_send_start
+    file: private.php
+    line: 664
+  - name: private_send_end
+    file: private.php
+    line: 956
+  - name: private_read
+    file: private.php
+    line: 964
+  - name: private_read_end
+    file: private.php
+    line: 1211
+  - name: private_tracking_start
+    file: private.php
+    line: 1224
+  - name: private_tracking_end
+    file: private.php
+    line: 1351
+  - name: private_do_tracking_start
+    file: private.php
+    line: 1362
+  - name: private_do_tracking_end
+    file: private.php
+    line: 1377
+  - name: private_do_tracking_end
+    file: private.php
+    line: 1393
+  - name: private_do_tracking_end
+    file: private.php
+    line: 1420
+  - name: private_stopalltracking_start
+    file: private.php
+    line: 1430
+  - name: private_stopalltracking_end
+    file: private.php
+    line: 1437
+  - name: private_folders_start
+    file: private.php
+    line: 1443
+  - name: private_folders_end
+    file: private.php
+    line: 1474
+  - name: private_do_folders_start
+    file: private.php
+    line: 1485
+  - name: private_do_folders_end
+    file: private.php
+    line: 1578
+  - name: private_empty_start
+    file: private.php
+    line: 1590
+  - name: private_empty_end
+    file: private.php
+    line: 1605
+  - name: private_do_empty_start
+    file: private.php
+    line: 1616
+  - name: private_do_empty_end
+    file: private.php
+    line: 1649
+  - name: private_do_stuff
+    file: private.php
+    line: 1658
+  - name: private_delete_start
+    file: private.php
+    line: 1747
+  - name: private_delete_end
+    file: private.php
+    line: 1766
+  - name: private_export_start
+    file: private.php
+    line: 1777
+  - name: private_export_end
+    file: private.php
+    line: 1794
+  - name: private_do_export_start
+    file: private.php
+    line: 1806
+  - name: private_do_export_end
+    file: private.php
+    line: 2032
+  - name: private_inbox
+    file: private.php
+    line: 2075
+  - name: private_message
+    file: private.php
+    line: 2391
+  - name: private_end
+    file: private.php
+    line: 2471
+  - name: warnings_start
+    file: warnings.php
+    line: 39
+  - name: warnings_do_warn_start
+    file: warnings.php
+    line: 71
+  - name: warnings_do_warn_end
+    file: warnings.php
+    line: 127
+  - name: warnings_warning
+    file: warnings.php
+    line: 292
+  - name: warnings_warn_start
+    file: warnings.php
+    line: 301
+  - name: warnings_warn_end
+    file: warnings.php
+    line: 498
+  - name: warnings_do_revoke_start
+    file: warnings.php
+    line: 535
+  - name: warnings_view_start
+    file: warnings.php
+    line: 597
+  - name: warnings_view_end
+    file: warnings.php
+    line: 696
+  - name: warnings_warning
+    file: warnings.php
+    line: 858
+  - name: warnings_end
+    file: warnings.php
+    line: 867
+  - name: announcements_start
+    file: announcements.php
+    line: 29
+  - name: announcements_end
+    file: announcements.php
+    line: 125
+  - name: attachment_start
+    file: attachment.php
+    line: 44
+  - name: attachment_end
+    file: attachment.php
+    line: 119
+  - name: online_today_start
+    file: online.php
+    line: 38
+  - name: online_today_end
+    file: online.php
+    line: 119
+  - name: online_start
+    file: online.php
+    line: 126
+  - name: online_user
+    file: online.php
+    line: 220
+  - name: online_end
+    file: online.php
+    line: 280
+  - name: xmlhttp
+    file: xmlhttp.php
+    line: 205
+  - name: xmlhttp_get_users_start
+    file: xmlhttp.php
+    line: 253
+  - name: xmlhttp_get_users_end
+    file: xmlhttp.php
+    line: 284
+  - name: xmlhttp_edit_subject_start
+    file: xmlhttp.php
+    line: 333
+  - name: xmlhttp_edit_subject_end
+    file: xmlhttp.php
+    line: 422
+  - name: xmlhttp_edit_post_start
+    file: xmlhttp.php
+    line: 465
+  - name: xmlhttp_edit_post_end
+    file: xmlhttp.php
+    line: 493
+  - name: xmlhttp_update_post
+    file: xmlhttp.php
+    line: 655
+  - name: xmlhttp_get_multiquoted_start
+    file: xmlhttp.php
+    line: 672
+  - name: xmlhttp_get_multiquoted_intermediate
+    file: xmlhttp.php
+    line: 729
+  - name: xmlhttp_get_multiquoted_end
+    file: xmlhttp.php
+    line: 761
+  - name: xmlhttp_refresh_captcha
+    file: xmlhttp.php
+    line: 783
+  - name: xmlhttp_validate_captcha
+    file: xmlhttp.php
+    line: 802
+  - name: xmlhttp_refresh_question
+    file: xmlhttp.php
+    line: 848
+  - name: xmlhttp_validate_question
+    file: xmlhttp.php
+    line: 894
+  - name: xmlhttp_complex_password
+    file: xmlhttp.php
+    line: 917
+  - name: xmlhttp_username_availability
+    file: xmlhttp.php
+    line: 974
+  - name: xmlhttp_email_availability
+    file: xmlhttp.php
+    line: 1016
+  - name: xmlhttp_get_buddyselect_start
+    file: xmlhttp.php
+    line: 1041
+  - name: xmlhttp_get_buddyselect_end
+    file: xmlhttp.php
+    line: 1064
+  - name: editpost_start
+    file: editpost.php
+    line: 31
+  - name: editpost_deletepost
+    file: editpost.php
+    line: 254
+  - name: editpost_restorepost
+    file: editpost.php
+    line: 381
+  - name: editpost_do_editpost_start
+    file: editpost.php
+    line: 460
+  - name: editpost_do_editpost_end
+    file: editpost.php
+    line: 543
+  - name: editpost_action_start
+    file: editpost.php
+    line: 551
+  - name: editpost_end
+    file: editpost.php
+    line: 941
+  - name: global_start
+    file: global.php
+    line: 99
+  - name: global_intermediate
+    file: global.php
+    line: 477
+  - name: global_end
+    file: global.php
+    line: 1138
+  - name: calendar_start
+    file: calendar.php
+    line: 56
+  - name: calendar_do_addevent_start
+    file: calendar.php
+    line: 93
+  - name: calendar_do_addevent_end
+    file: calendar.php
+    line: 212
+  - name: calendar_addevent_start
+    file: calendar.php
+    line: 245
+  - name: calendar_addevent_end
+    file: calendar.php
+    line: 551
+  - name: calendar_do_deleteevent_start
+    file: calendar.php
+    line: 592
+  - name: calendar_do_deleteevent_end
+    file: calendar.php
+    line: 598
+  - name: calendar_do_editevent_start
+    file: calendar.php
+    line: 644
+  - name: calendar_do_editevent_end
+    file: calendar.php
+    line: 761
+  - name: calendar_editevent_start
+    file: calendar.php
+    line: 808
+  - name: calendar_editevent_end
+    file: calendar.php
+    line: 1166
+  - name: calendar_move_start
+    file: calendar.php
+    line: 1210
+  - name: calendar_move_end
+    file: calendar.php
+    line: 1225
+  - name: calendar_do_move_start
+    file: calendar.php
+    line: 1283
+  - name: calendar_do_move_end
+    file: calendar.php
+    line: 1287
+  - name: calendar_approve_start
+    file: calendar.php
+    line: 1331
+  - name: calendar_approve_end
+    file: calendar.php
+    line: 1335
+  - name: calendar_unapprove_start
+    file: calendar.php
+    line: 1379
+  - name: calendar_unapprove_end
+    file: calendar.php
+    line: 1383
+  - name: calendar_event_start
+    file: calendar.php
+    line: 1425
+  - name: calendar_event_end
+    file: calendar.php
+    line: 1633
+  - name: calendar_dayview_start
+    file: calendar.php
+    line: 1702
+  - name: calendar_dayview_end
+    file: calendar.php
+    line: 1976
+  - name: calendar_weekview_start
+    file: calendar.php
+    line: 2051
+  - name: calendar_weekview_end
+    file: calendar.php
+    line: 2262
+  - name: calendar_main_view
+    file: calendar.php
+    line: 2298
+  - name: calendar_end
+    file: calendar.php
+    line: 2568
+  - name: polls_start
+    file: polls.php
+    line: 23
+  - name: polls_newpoll_start
+    file: polls.php
+    line: 52
+  - name: polls_newpoll_end
+    file: polls.php
+    line: 173
+  - name: polls_do_newpoll_start
+    file: polls.php
+    line: 183
+  - name: polls_do_newpoll_process
+    file: polls.php
+    line: 336
+  - name: polls_do_newpoll_end
+    file: polls.php
+    line: 342
+  - name: polls_editpoll_start
+    file: polls.php
+    line: 358
+  - name: polls_editpoll_end
+    file: polls.php
+    line: 550
+  - name: polls_do_editpoll_start
+    file: polls.php
+    line: 561
+  - name: polls_do_editpoll_process
+    file: polls.php
+    line: 729
+  - name: polls_do_editpoll_end
+    file: polls.php
+    line: 733
+  - name: polls_showresults_start
+    file: polls.php
+    line: 770
+  - name: polls_showresults_end
+    file: polls.php
+    line: 896
+  - name: polls_vote_start
+    file: polls.php
+    line: 915
+  - name: polls_vote_process
+    file: polls.php
+    line: 1056
+  - name: polls_vote_end
+    file: polls.php
+    line: 1060
+  - name: polls_do_undovote_start
+    file: polls.php
+    line: 1082
+  - name: polls_do_undovote_process
+    file: polls.php
+    line: 1195
+  - name: polls_do_undovote_end
+    file: polls.php
+    line: 1200
+  - name: newreply_do_newreply_start
+    file: newreply.php
+    line: 303
+  - name: newreply_do_newreply_end
+    file: newreply.php
+    line: 593
+  - name: newreply_start
+    file: newreply.php
+    line: 732
+  - name: newreply_end
+    file: newreply.php
+    line: 1535
+  - name: css_start
+    file: css.php
+    line: 28
+  - name: css_end
+    file: css.php
+    line: 35
+  - name: parse_message_start
+    file: inc/class_parser.php
+    line: 126
+    parameters:
+      - "$message"
+  - name: parse_message_htmlsanitized
+    file: inc/class_parser.php
+    line: 169
+    parameters:
+      - "$message"
+  - name: parse_message_me_mycode
+    file: inc/class_parser.php
+    line: 180
+    parameters:
+      - "$message"
+  - name: parse_message
+    file: inc/class_parser.php
+    line: 201
+    parameters:
+      - "$message"
+  - name: parse_message_end
+    file: inc/class_parser.php
+    line: 239
+    parameters:
+      - "$message"
+  - name: text_parse_message
+    file: inc/class_parser.php
+    line: 1749
+    parameters:
+      - "$message"
+  - name: class_moderation_close_threads
+    file: inc/class_moderation.php
+    line: 31
+    parameters:
+      - "$tids"
+  - name: class_moderation_open_threads
+    file: inc/class_moderation.php
+    line: 67
+    parameters:
+      - "$tids"
+  - name: class_moderation_stick_threads
+    file: inc/class_moderation.php
+    line: 102
+    parameters:
+      - "$tids"
+  - name: class_moderation_unstick_threads
+    file: inc/class_moderation.php
+    line: 137
+    parameters:
+      - "$tids"
+  - name: class_moderation_remove_redirects
+    file: inc/class_moderation.php
+    line: 159
+    parameters:
+      - "$tid"
+  - name: class_moderation_delete_thread_start
+    file: inc/class_moderation.php
+    line: 189
+    parameters:
+      - "$tid"
+  - name: class_moderation_delete_thread
+    file: inc/class_moderation.php
+    line: 328
+    parameters:
+      - "$tid"
+  - name: class_moderation_delete_poll
+    file: inc/class_moderation.php
+    line: 350
+    parameters:
+      - "$pid"
+  - name: class_moderation_approve_threads
+    file: inc/class_moderation.php
+    line: 469
+    parameters:
+      - "$tids"
+  - name: class_moderation_unapprove_threads
+    file: inc/class_moderation.php
+    line: 619
+    parameters:
+      - "$tids"
+  - name: class_moderation_delete_post_start
+    file: inc/class_moderation.php
+    line: 664
+    parameters:
+      - "$pid"
+  - name: class_moderation_delete_post
+    file: inc/class_moderation.php
+    line: 720
+    parameters:
+      - "$post['pid']"
+  - name: class_moderation_merge_posts
+    file: inc/class_moderation.php
+    line: 952
+    parameters:
+      - "$arguments"
+  - name: class_moderation_move_thread_redirect
+    file: inc/class_moderation.php
+    line: 1052
+    parameters:
+      - "$arguments"
+  - name: class_moderation_copy_thread
+    file: inc/class_moderation.php
+    line: 1142
+    parameters:
+      - "$arguments"
+  - name: class_moderation_move_simple
+    file: inc/class_moderation.php
+    line: 1259
+    parameters:
+      - "$arguments"
+  - name: class_moderation_merge_threads
+    file: inc/class_moderation.php
+    line: 1532
+    parameters:
+      - "$arguments"
+  - name: class_moderation_split_posts
+    file: inc/class_moderation.php
+    line: 2124
+    parameters:
+      - "$arguments"
+  - name: class_moderation_move_threads
+    file: inc/class_moderation.php
+    line: 2366
+    parameters:
+      - "$arguments"
+  - name: class_moderation_approve_posts
+    file: inc/class_moderation.php
+    line: 2525
+    parameters:
+      - "$pids"
+  - name: class_moderation_unapprove_posts
+    file: inc/class_moderation.php
+    line: 2693
+    parameters:
+      - "$pids"
+  - name: class_moderation_change_thread_subject
+    file: inc/class_moderation.php
+    line: 2777
+    parameters:
+      - "$arguments"
+  - name: class_moderation_expire_thread
+    file: inc/class_moderation.php
+    line: 2806
+    parameters:
+      - "$arguments"
+  - name: class_moderation_remove_thread_subscriptions
+    file: inc/class_moderation.php
+    line: 3112
+    parameters:
+      - "$arguments"
+  - name: class_moderation_apply_thread_prefix
+    file: inc/class_moderation.php
+    line: 3148
+    parameters:
+      - "$arguments"
+  - name: class_moderation_soft_delete_posts
+    file: inc/class_moderation.php
+    line: 3282
+    parameters:
+      - "$pids"
+  - name: class_moderation_restore_posts
+    file: inc/class_moderation.php
+    line: 3433
+    parameters:
+      - "$pids"
+  - name: class_moderation_restore_threads
+    file: inc/class_moderation.php
+    line: 3583
+    parameters:
+      - "$tids"
+  - name: class_moderation_soft_delete_threads
+    file: inc/class_moderation.php
+    line: 3739
+    parameters:
+      - "$tids"
+  - name: postbit_prev
+    file: inc/functions_post.php
+    line: 819
+    parameters:
+      - "$post"
+  - name: postbit_pm
+    file: inc/functions_post.php
+    line: 822
+    parameters:
+      - "$post"
+  - name: postbit_announcement
+    file: inc/functions_post.php
+    line: 825
+    parameters:
+      - "$post"
+  - name: postbit
+    file: inc/functions_post.php
+    line: 828
+    parameters:
+      - "$post"
+  - name: captcha_build_start
+    file: inc/class_captcha.php
+    line: 100
+    parameters:
+      - "$args"
+  - name: captcha_build_end
+    file: inc/class_captcha.php
+    line: 155
+    parameters:
+      - "$args"
+  - name: captcha_validate_start
+    file: inc/class_captcha.php
+    line: 238
+    parameters:
+      - "$this"
+  - name: captcha_validate_end
+    file: inc/class_captcha.php
+    line: 357
+    parameters:
+      - "$this"
+  - name: captcha_invalidate_end
+    file: inc/class_captcha.php
+    line: 384
+    parameters:
+      - "$this"
+  - name: build_forumbits_forum
+    file: inc/functions_forumlist.php
+    line: 60
+    parameters:
+      - "$forum"
+  - name: pre_output_page
+    file: inc/functions.php
+    line: 23
+    parameters:
+      - "$contents"
+  - name: post_output_page
+    file: inc/functions.php
+    line: 98
+  - name: send_mail_queue_start
+    file: inc/functions.php
+    line: 251
+  - name: send_mail_queue_end
+    file: inc/functions.php
+    line: 277
+  - name: my_date
+    file: inc/functions.php
+    line: 545
+    parameters:
+      - "$date"
+  - name: error
+    file: inc/functions.php
+    line: 798
+    parameters:
+      - "$error"
+  - name: no_permission
+    file: inc/functions.php
+    line: 887
+  - name: redirect
+    file: inc/functions.php
+    line: 956
+    parameters:
+      - "$redirect_args"
+  - name: mycode_add_codebuttons
+    file: inc/functions.php
+    line: 3253
+    parameters:
+      - "$editor_lang_strings"
+  - name: get_ip
+    file: inc/functions.php
+    line: 3988
+    parameters:
+      - "$ip_array"
+  - name: mark_reports
+    file: inc/functions.php
+    line: 4669
+    parameters:
+      - "$arguments"
+  - name: functions_fetch_ban_times
+    file: inc/functions.php
+    line: 7447
+    parameters:
+      - "$ban_times"
+  - name: copy_file_to_cdn_end
+    file: inc/functions.php
+    line: 8700
+    parameters:
+      - "$hook_args"
+  - name: parse_quoted_message
+    file: inc/functions_posting.php
+    line: 209
+    parameters:
+      - "$quoted_post"
+  - name: remove_attachment_do_delete
+    file: inc/functions_upload.php
+    line: 35
+    parameters:
+      - "$attachment"
+  - name: remove_attachments_do_delete
+    file: inc/functions_upload.php
+    line: 113
+    parameters:
+      - "$attachment"
+  - name: remove_avatars_do_delete
+    file: inc/functions_upload.php
+    line: 165
+    parameters:
+      - "$file"
+  - name: upload_avatar_end
+    file: inc/functions_upload.php
+    line: 354
+    parameters:
+      - "$ret"
+  - name: upload_attachment_start
+    file: inc/functions_upload.php
+    line: 409
+    parameters:
+      - "$attachment"
+  - name: upload_attachment_thumb_start
+    file: inc/functions_upload.php
+    line: 621
+    parameters:
+      - "$attacharray"
+  - name: upload_attachment_do_insert
+    file: inc/functions_upload.php
+    line: 643
+    parameters:
+      - "$attacharray"
+  - name: delete_uploaded_file
+    file: inc/functions_upload.php
+    line: 711
+    parameters:
+      - "$hook_params"
+  - name: delete_upload_directory
+    file: inc/functions_upload.php
+    line: 745
+    parameters:
+      - "$hook_params"
+  - name: upload_file_end
+    file: inc/functions_upload.php
+    line: 793
+    parameters:
+      - "$upload"
+  - name: send_report_report_type
+    file: inc/functions_modcp.php
+    line: 228
+  - name: task_checktables
+    file: inc/tasks/checktables.php
+    line: 77
+    parameters:
+      - "$task"
+  - name: task_usercleanup
+    file: inc/tasks/usercleanup.php
+    line: 70
+    parameters:
+      - "$task"
+  - name: task_logcleanup
+    file: inc/tasks/logcleanup.php
+    line: 59
+    parameters:
+      - "$task"
+  - name: task_userpruning
+    file: inc/tasks/userpruning.php
+    line: 87
+    parameters:
+      - "$args"
+  - name: task_threadviews
+    file: inc/tasks/threadviews.php
+    line: 31
+    parameters:
+      - "$task"
+  - name: task_massmail
+    file: inc/tasks/massmail.php
+    line: 33
+    parameters:
+      - "$args"
+  - name: task_backupdb
+    file: inc/tasks/backupdb.php
+    line: 59
+    parameters:
+      - "$args"
+  - name: task_delayedmoderation
+    file: inc/tasks/delayedmoderation.php
+    line: 31
+    parameters:
+      - "$args"
+  - name: task_dailycleanup_start
+    file: inc/tasks/dailycleanup.php
+    line: 31
+    parameters:
+      - "$args"
+  - name: task_dailycleanup_end
+    file: inc/tasks/dailycleanup.php
+    line: 70
+    parameters:
+      - "$args"
+  - name: task_hourlycleanup
+    file: inc/tasks/hourlycleanup.php
+    line: 28
+    parameters:
+      - "$args"
+  - name: task_promotions
+    file: inc/tasks/promotions.php
+    line: 167
+    parameters:
+      - "$args"
+  - name: fetch_wol_activity_end
+    file: inc/functions_online.php
+    line: 579
+    parameters:
+      - "$user_activity"
+  - name: build_friendly_wol_location_end
+    file: inc/functions_online.php
+    line: 1120
+    parameters:
+      - "$plugin_array"
+  - name: datahandler_event_validate
+    file: inc/datahandlers/event.php
+    line: 430
+    parameters:
+      - "$this"
+  - name: datahandler_event_insert
+    file: inc/datahandlers/event.php
+    line: 522
+    parameters:
+      - "$this"
+  - name: datahandler_event_insert_end
+    file: inc/datahandlers/event.php
+    line: 533
+    parameters:
+      - "$this"
+  - name: datahandler_event_update
+    file: inc/datahandlers/event.php
+    line: 628
+    parameters:
+      - "$this"
+  - name: datahandler_event_update_end
+    file: inc/datahandlers/event.php
+    line: 638
+    parameters:
+      - "$this"
+  - name: datahandler_user_validate
+    file: inc/datahandlers/user.php
+    line: 1052
+    parameters:
+      - "$this"
+  - name: datahandler_user_insert
+    file: inc/datahandlers/user.php
+    line: 1180
+    parameters:
+      - "$this"
+  - name: datahandler_user_insert_end
+    file: inc/datahandlers/user.php
+    line: 1228
+    parameters:
+      - "$this"
+  - name: datahandler_user_update
+    file: inc/datahandlers/user.php
+    line: 1413
+    parameters:
+      - "$this"
+  - name: datahandler_user_delete_start
+    file: inc/datahandlers/user.php
+    line: 1516
+    parameters:
+      - "$this"
+  - name: datahandler_user_delete_end
+    file: inc/datahandlers/user.php
+    line: 1584
+    parameters:
+      - "$this"
+  - name: datahandler_user_delete_content
+    file: inc/datahandlers/user.php
+    line: 1622
+    parameters:
+      - "$this"
+  - name: datahandler_user_delete_posts
+    file: inc/datahandlers/user.php
+    line: 1694
+    parameters:
+      - "$this"
+  - name: datahandler_user_clear_profile
+    file: inc/datahandlers/user.php
+    line: 1769
+    parameters:
+      - "$this"
+  - name: datahandler_pm_validate
+    file: inc/datahandlers/pm.php
+    line: 479
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_updatedraft
+    file: inc/datahandlers/pm.php
+    line: 604
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_updatedraft_commit
+    file: inc/datahandlers/pm.php
+    line: 608
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert
+    file: inc/datahandlers/pm.php
+    line: 686
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_commit
+    file: inc/datahandlers/pm.php
+    line: 690
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_savedcopy
+    file: inc/datahandlers/pm.php
+    line: 743
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_savedcopy_commit
+    file: inc/datahandlers/pm.php
+    line: 747
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_end
+    file: inc/datahandlers/pm.php
+    line: 760
+    parameters:
+      - "$this"
+  - name: datahandler_post_validate_post
+    file: inc/datahandlers/post.php
+    line: 805
+    parameters:
+      - "$this"
+  - name: datahandler_post_insert_merge
+    file: inc/datahandlers/post.php
+    line: 1009
+    parameters:
+      - "$this"
+  - name: datahandler_post_insert_post
+    file: inc/datahandlers/post.php
+    line: 1048
+    parameters:
+      - "$this"
+  - name: datahandler_post_insert_post
+    file: inc/datahandlers/post.php
+    line: 1072
+    parameters:
+      - "$this"
+  - name: datahandler_post_insert_subscribed
+    file: inc/datahandlers/post.php
+    line: 1235
+    parameters:
+      - "$args"
+  - name: datahandler_post_insert_post_end
+    file: inc/datahandlers/post.php
+    line: 1292
+    parameters:
+      - "$this"
+  - name: datahandler_post_validate_thread
+    file: inc/datahandlers/post.php
+    line: 1352
+    parameters:
+      - "$this"
+  - name: datahandler_post_insert_thread
+    file: inc/datahandlers/post.php
+    line: 1447
+    parameters:
+      - "$this"
+  - name: datahandler_post_insert_thread_post
+    file: inc/datahandlers/post.php
+    line: 1462
+    parameters:
+      - "$this"
+  - name: datahandler_post_insert_thread
+    file: inc/datahandlers/post.php
+    line: 1489
+    parameters:
+      - "$this"
+  - name: datahandler_post_insert_thread_post
+    file: inc/datahandlers/post.php
+    line: 1507
+    parameters:
+      - "$this"
+  - name: datahandler_post_insert_thread_end
+    file: inc/datahandlers/post.php
+    line: 1753
+    parameters:
+      - "$this"
+  - name: datahandler_post_update_thread
+    file: inc/datahandlers/post.php
+    line: 1833
+    parameters:
+      - "$this"
+  - name: datahandler_post_update
+    file: inc/datahandlers/post.php
+    line: 1886
+    parameters:
+      - "$this"
+  - name: datahandler_post_update_end
+    file: inc/datahandlers/post.php
+    line: 1921
+    parameters:
+      - "$this"
+  - name: datahandler_login_verify_password_start
+    file: inc/datahandlers/login.php
+    line: 163
+    parameters:
+      - "$args"
+  - name: datahandler_login_verify_password_end
+    file: inc/datahandlers/login.php
+    line: 194
+    parameters:
+      - "$args"
+  - name: datahandler_login_validate_start
+    file: inc/datahandlers/login.php
+    line: 270
+    parameters:
+      - "$this"
+  - name: datahandler_login_validate_end
+    file: inc/datahandlers/login.php
+    line: 287
+    parameters:
+      - "$this"
+  - name: datahandler_login_complete_start
+    file: inc/datahandlers/login.php
+    line: 307
+    parameters:
+      - "$this"
+  - name: datahandler_login_complete_end
+    file: inc/datahandlers/login.php
+    line: 336
+    parameters:
+      - "$this"
+  - name: datahandler_warnings_validate_warning
+    file: inc/datahandlers/warnings.php
+    line: 268
+    parameters:
+      - "$this"
+  - name: datahandler_warnings_insert_warning
+    file: inc/datahandlers/warnings.php
+    line: 702
+    parameters:
+      - "$this"
+  - name: datahandler_warnings_update_warning
+    file: inc/datahandlers/warnings.php
+    line: 731
+    parameters:
+      - "$this"
+  - name: password_changed
+    file: inc/functions_user.php
+    line: 159
+  - name: create_password
+    file: inc/functions_user.php
+    line: 195
+    parameters:
+      - "$parameters"
+  - name: verify_user_password
+    file: inc/functions_user.php
+    line: 237
+    parameters:
+      - "$parameters"
+  - name: usercp_menu
+    file: inc/functions_user.php
+    line: 505
+  - name: usercp_menu_built
+    file: inc/functions_user.php
+    line: 515
+  - name: report_content_types
+    file: inc/class_datacache.php
+    line: 1241
+    parameters:
+      - "$content_types"
+  - name: printthread_start
+    file: printthread.php
+    line: 24
+  - name: printthread_start
+    file: printthread.php
+    line: 33
+  - name: printthread_post
+    file: printthread.php
+    line: 180
+  - name: printthread_end
+    file: printthread.php
+    line: 184
+  - name: syndication_start
+    file: syndication.php
+    line: 69
+  - name: syndication_get_posts
+    file: syndication.php
+    line: 173
