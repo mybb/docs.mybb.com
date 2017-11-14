@@ -14,7 +14,7 @@ categories: [development]
    Target version milestones are removed from unresolved Issues and Pull Requests.
 
 
-1. ### Package building and testing
+1. ### Package Building and Testing
    The [mybb/mybb-build](https://github.com/mybb/mybb-build) build script is used to perform tasks related to preparing releasable packages and associated information.
    The output is securely shared between Team members and tested.
 
