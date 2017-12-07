@@ -18,6 +18,26 @@ To ban an IP address, just enter the IP address, or range of IP addresses using 
 
 You can later delete any banned IP address by simply selecting the delete icon on the right hand side of the page for the corresponding IP address.
 
+## Banned Accounts
+
+The banning section is located under the Users & Groups tab and it allows you to ban registered users.
+
+#### Banning Accounts
+
+To ban registered user you need to fill following fields:
+
+[*] **Username** - The username of the account you wish to ban. Auto-complete is enabled on this field. (This field is necessary).
+[*] **Ban reason** - The reason to show the user explaining why they were banned.
+[*] **Ban Length** - The length of the ban (and when it will be lifted). (This field is necessary).
+
+#### Editing or Removing Ban for Account
+
+You can remove ban for some account by selecting **Lift** option under *Controls* section. Also, you can edit ban reason or expand ban by selecting **Edit** option under *Controls* section.
+
+#### Pruning Threads & Posts
+
+You can prune (delete) all threads and posts by specific user by selecting **Prune Threads & Posts** under *Moderation* section.
+
 ## Disallowed Usernames
 
 Disallowing usernames allows you to prevent usernames from being registered by users. From the Admin CP, you can view the date the username was disallowed as well as its last attempted use. It is important to note that disallowing a username does not affect already registered users, and does not remove any access for existing users; it only disallows the username for new registrations.
