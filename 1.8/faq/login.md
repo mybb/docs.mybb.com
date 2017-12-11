@@ -53,3 +53,7 @@ You can use [this tool](/tools/cookie-settings) to generate appropriate cookie s
 These cookie settings should work on all MyBB installations. If you have site-integration, your cookie settings may need to be more generalized.
 
 After you change your cookie settings, please advise your users to log out and clear cookies stored by their browser, so that the new cookies can take effect.
+
+If you cannot login you need to access the database table called **mybb_setting** then locate the fields called **cookie_domain** and **cookie_path** and change those manually.
+
+You also have to verify that the file **inc/settings.php** has got the corrent domain path. Edit the file and locate the option **$settings['cookiedomain']** and set it to your domain. Normally you do not edit in settings.php, but if mybb hasn't been able to edit the file because of login problems, you can fix it manually.
