@@ -2,6 +2,9 @@
 layout: page
 title:  "Install"
 categories: [install]
+
+redirect_from:
+- /Installing.html
 ---
 
 Thanks for choosing MyBB as the discussion board software for your community!

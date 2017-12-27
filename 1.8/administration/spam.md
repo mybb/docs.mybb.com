@@ -44,7 +44,7 @@ In `Admin CP > Configuration > General Configuration`, a visual CAPTCHA challeng
 
 ### Stop Forum Spam
 
-In `Admin CP > Configuration > Stop Forum Spam`, you can configure all user registration information to be checked against [Stop Forum Spam's database](http://stopforumspam.com/) of known spammers, which crowdsources data from many websites. If the information that a registering user just entered is in their database, registration will be denied to them. Registration is required at their [website](http://stopforumspam.com/signup) to get an API key.
+In `Admin CP > Configuration > Stop Forum Spam`, you can configure all user registration information to be checked against [Stop Forum Spam's database](https://stopforumspam.com/) of known spammers, which crowdsources data from many websites. If the information that a registering user just entered is in their database, registration will be denied to them. Registration is required at their [official forum](https://www.stopforumspam.com/forum/register.php) to get an API key.
 
 ## Human Spammers
 

@@ -3,6 +3,9 @@ layout: page
 title:  "Error Messages"
 categories: [faq]
 description: "Common MyBB error messages and how to fix them."
+
+redirect_from:
+- /Help-Common_Error_Messages.html
 ---
 
 # Introduction

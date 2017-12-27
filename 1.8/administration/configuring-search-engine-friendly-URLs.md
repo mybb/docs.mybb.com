@@ -2,6 +2,9 @@
 layout: page
 title:  "Configuring Search Engine Friendly URLs"
 categories: [administration]
+
+redirect_from:
+- /SEF_URLs.html
 ---
 
 MyBB 1.8 provides built-in support for Search Engine Friendly (SEF) URLs, which can aid in optimizing communities for search engine ranking.

@@ -3,6 +3,9 @@ layout: page
 title:  "Cannot Logout"
 categories: [faq]
 description: "Resolve issues with logging out from your forum."
+
+redirect_from:
+- /Help-Cannot_logout.html
 ---
 
 # Unable to logout

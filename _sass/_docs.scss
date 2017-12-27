@@ -154,6 +154,7 @@ article#docs_page {
 			font-size: 1.5em;
 		}
 	}
+
 	.category-list {
 		list-style: none;
 		margin: 0;
@@ -183,6 +184,21 @@ article#docs_page {
 			&:last-child {
 				border: none;
 			}
+		}
+	}
+
+	.eol-notice {
+		width: 95%;
+		background: #ff9c9c;
+		border-radius: 4px;
+		padding:20px;
+		border:2px solid #ff0000;
+		margin-right:20px;
+		margin-bottom:30px;
+
+		.eol-notice__heading {
+			font-size: 2em;
+			color: black;
 		}
 	}
 }

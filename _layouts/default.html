@@ -6,6 +6,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src https: 'unsafe-inline' 'unsafe-eval'">
 	<title>
 		{% if page.url == "/" %}
 		{{ page.title }}
@@ -18,19 +19,13 @@
 	<meta name="description" content="The official documentation for MyBB, a free and open source PHP and MySQL forum software system." />
 	<link rel="stylesheet" href="{{ site.mainsiteurl }}/assets/css/syntax.css" />
 	<link rel="stylesheet" href="{{ site.mainsiteurl }}/assets/css/main.css" />
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/docs.css?rev1" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/docs.css?rev2" />
 
 	<!-- icons -->
 		<link rel="apple-touch-icon-precomposed" href="{{ site.mainsiteurl }}/assets/images/mybb-precomposed.ico" />
 		<link rel="shortcut icon" type="image/x-icon" href="{{ site.mainsiteurl }}/assets/images/mybb-icon.ico" sizes="16x16" />
 		<link rel="icon" type="image/x-icon" href="{{ site.mainsiteurl }}/assets/images/mybb-icon.ico" sizes="16x16" />
 	<!-- end icons -->
-
-	<script>
-		if ((window.location.host == "docs.mybb.com") && (window.location.protocol != "https:")) {
-			window.location.protocol = "https";
-		}
-	</script>
 </head>
 <body>
 	<div id="container">
@@ -84,7 +79,7 @@
 		</footer>
 	</div> <!--! end of #container -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI= sha384-/Gm+ur33q/W+9ANGYwB2Q4V0ZWApToOzRuA8md/1p9xMMxpqnlguMvk8QuEFWA1B sha512-h9kKZlwV1xrIcr2LwAPZhjlkx+x62mNwuQK5PAu9d3D+JXMNlGx8akZbqpXvp0vA54rz+DrqYVrzUGDMhwKmwQ==" crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/jquery.1.11.0.min.js"><\/script>')</script>
 	<script src="{{ site.mainsiteurl }}/assets/js/jquery.anythingslider.min.js"></script>
 	<script src="{{ site.baseurl }}/assets/js/toc.js"></script>

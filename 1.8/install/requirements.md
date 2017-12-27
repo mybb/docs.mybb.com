@@ -2,6 +2,9 @@
 layout: page
 title:  "Requirements"
 categories: [install]
+
+redirect_from:
+- /Requirements.html
 ---
 
 # Minimum Requirements

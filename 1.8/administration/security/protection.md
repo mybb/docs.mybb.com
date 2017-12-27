@@ -16,7 +16,7 @@ Now your real Admin CP directory should look something like `Svt06wbowXgMVvFmkFa
 
 **Note**: If you change the Admin CP directory and add any plugins that use it after, you will have to rename the directory in the plugin before uploading it.
 
-# Protect the Admin CP with HTTP Basic Auth
+## Protect the Admin CP with HTTP Basic Auth
 
 Also known as "htpasswd protection," adding HTTP Basic Auth protection to your Admin Control Panel directory is one of many ways to put sensitive settings behind another layer of security, and thus making it theoretically harder for hackers to take advantage of. The procedures differ between web servers, but specific instructions for cPanel, Apache, and Nginx (all on a Linux system) are provided below.
 
@@ -73,7 +73,7 @@ auth_basic_user_file /path/to/.htpasswd;
 	- If the command is not found, install the `apache2-utils`, `httpd-utils`, or similar package for your Linux distribution.  
 	- **NOTE:** Replace `/path/to/.htpasswd` in both places with the respective file location.
 
-# Configuring an Admin CP PIN
+## Configuring an Admin CP PIN
 
 With MyBB 1.8, an Admin Control Panel "Secret PIN" setting was added to the core, inspired by a popular community tutorial. To enable the PIN:
 
@@ -127,6 +127,45 @@ UPDATE `mybb_forums` SET `allowhtml` = '0';
 ```
 
 Afterwards you should go to Admin CP > Tools & Maintenance > Cache Manager > forums > Rebuild Cache to make sure this change is cached and is applied immediately.
+
+## Configure access to private hosts and IP addresses
+
+MyBB 1.8.8 introduced two new values to the `inc/config.php` file containing respecively host names and IPv4 addresses the script should not be connecting to (e.g. while attempting to check remote avatars), mitigating a Server Side Request Forgery (SSRF) vulnerability.
+
+While MyBB will continue to work when these values are not present, it is highly recommended that board administrators update their configuration files by appending the default fragment included below to the PHP code. Additionally, if other hostnames or IPv4 addresses that may point to private network servers are present, they should be appended to these arrays. `$config['disallowed_remote_addresses']` supports wildcards and address groups in CIDR notation.
+
+```
+/**
+ * Disallowed Remote Hosts
+ *  List of hosts the fetch_remote_file() function will not
+ *  perform requests to.
+ *  It is recommended that you enter hosts resolving to the
+ *  forum server here to prevent Server Side Request
+ *  Forgery attacks.
+ */
+
+$config['disallowed_remote_hosts'] = array(
+	'localhost',
+);
+
+/**
+ * Disallowed Remote Addresses
+ *  List of IPv4 addresses the fetch_remote_file() function
+ *  will not perform requests to.
+ *  It is recommended that you enter addresses resolving to
+ *  the forum server here to prevent Server Side Request
+ *  Forgery attacks.
+ *  Removing all values disables resolving hosts in that
+ *  function.
+ */
+
+$config['disallowed_remote_addresses'] = array(
+	'127.0.0.1',
+	'10.0.0.0/8',
+	'172.16.0.0/12',
+	'192.168.0.0/16',
+);
+```
 
 ## Hide the Version Number
 

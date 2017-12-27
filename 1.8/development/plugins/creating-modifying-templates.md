@@ -66,7 +66,7 @@ require_once MYBB_ROOT."/inc/adminfunctions_templates.php";
 
 find_replace_templatesets(
     "index",
-    "#" . preg_quote('') . "#i",
+    "#" . preg_quote('<body>') . "#i",
     '<body>{$myVar}'
 );
 ```
