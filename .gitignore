@@ -1,5 +1,4 @@
 _site
-Gemfile
 Gemfile.lock
 .jekyll-metadata
 key_public.pem
