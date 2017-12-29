@@ -7,6 +7,9 @@ permalink: pretty
 baseurl: /docs.mybb.com # MUST BE REMOVED BEFORE SUBMITTING PULL REQUEST
 mainsiteurl: https://mybb.com
 
+search_site: docs.mybb.com
+search_field_placeholder: Search Documentation
+
 remote_theme: mybb/mybb-website-theme
 
 plugins:
