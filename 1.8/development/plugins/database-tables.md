@@ -529,22 +529,161 @@ List of all database tables created with a standard MyBB installation that descr
 -- newusergroup smallint unsigned New usergroup id.  
 -- usergrouptype varchar(120)  Primary or Secondary.  
   
-- mybb_questions
-- mybb_questionsessions
-- mybb_reportedcontent
-- mybb_reputation
-- mybb_searchlog
-- mybb_sessions
-- mybb_settinggroups
-- mybb_settings
-- mybb_smilies
-- mybb_spamlog
-- mybb_spiders
-- mybb_stats
-- mybb_tasklog
-- mybb_tasks
-- mybb_templategroups
-- mybb_templates
+- mybb_questions  
+--  qid int unsigned The id of the question. Primary Key.  
+-- question varchar(200) The question.  
+-- answer varchar(150) The correct answer.  
+-- shown int unsigned How many times the question was shown.  
+-- correct int unsigned How many times the question was answered correctly.  
+-- incorrect int unsigned How many times the question was answered wrong.  
+-- active tinyint(1) Whether the question is active.  
+  
+- mybb_questionsessions  
+-- sid varchar(32) A unique string assigned to the session. Primary Key.  
+-- qid int unsigned The id of the question.  
+-- dateline int unsigned The timestamp the session was created.  
+  
+- mybb_reportedcontent  
+-- rid int unsigned The id of the report. Primary Key.  
+-- id int unsigned Information about the report.  
+-- id2 int unsigned Information about the report.  
+-- id3 int unsigned Information about the report.  
+-- uid int unsigned The id of the user reported.  
+-- reportstatus tinyint(1) Whether the report is marked as read.  
+-- reasonid smallint unsigned The id of the reason for reporting.  
+-- reason varchar(250) The reason for reporting.  
+-- type varchar(50) The type of report.  
+-- reports int unsigned The number of reports.  
+-- reporters text The users who reported the content.  
+-- dateline int unsigned The timestamp of the report.  
+-- lastreport int unsigned  
+  
+- mybb_reportreasons  
+-- rid int unsigned The id of the reason. Primary Key.  
+-- title varchar(250) The title of the reason.  
+-- appliesto varchar(250) The type of content it applies to.  
+-- extra tinyint(1) Whether additional comment is necessary.  
+-- disporder smallint The display order of the reason.  
+  
+- mybb_reputation  
+-- rid int unsigned The id of the reputation. Primary Key.  
+-- uid int unsigned The user being affected.  
+-- adduid int unsigned The user who added the reputation.  
+-- pid int unsigned The post it is attached to.  
+-- reputation smallint The power of the reputation.  
+-- dateline int unsigned The timestamp of the reputation.  
+-- comments text Comments.  
+  
+- mybb_searchlog  
+-- sid varchar(32) A unique string for the search. Primary Key.  
+-- uid int unsigned The user doing the search.  
+-- dateline int unsigned The timestamp of the search.  
+-- ipaddress varbinary(16) The ip address of the searcher.  
+-- threads longtext A list of threads that fit the result.  
+-- posts longtext A list of posts that fit the result.  
+-- resulttype varchar(10) Whether to show results as threads or posts.  
+-- querycache text Where conditions for the search.  
+-- keywords text Words used.  
+  
+- mybb_sessions  
+-- sid varchar(32) A unique string for the session.  
+-- uid int unsigned The user a session belongs to. 0 for guest.  
+-- ip varbinary(16) The ip address of the session.  
+-- time int unsigned The time the session was last updated.  
+-- location varchar(150) The url the user is viewing.  
+-- useragent varchar(200) The useragent of the user.  
+-- anonymous tinyint(1) Whether the user is invisible.  
+-- nopermission tinyint(1) Whether the user is viewing a no permission page.  
+-- location1 int(10) unsigned Information about the location.  
+-- location2 int(10) unsigned Information about the location.  
+  
+- mybb_settinggroups  
+-- gid smallint unsigned The id of the setting group. Primary Key.  
+-- name varchar(100) The name of the setting group.  
+-- title varchar(220) The title of the setting group.  
+-- description text A description of the setting group.  
+-- disporder smallint unsigned The display order.  
+-- isdefault tinyint(1) Whether the setting group is default. Plugins should use 0.  
+  
+- mybb_settings  
+-- sid smallint unsigned The id of the setting. Primary Key.  
+-- name varchar(120) The name of the setting. Must be unique.  
+-- title varchar(120) The title of the setting when viewing it in the ACP.   
+-- description text A description of the setting.  
+-- optionscode text What kind of field to use for the setting.  
+-- value text The value of the setting.  
+-- disporder smallint unsigned The display order within the setting group.  
+-- gid smallint unsigned The id of the setting group.  
+-- isdefault tinyint(1) Whether the setting is default. Plugins should use 0.  
+  
+- mybb_smilies  
+-- sid smallint unsigned The id of the smily. Primary Key.  
+-- name varchar(120) The name of the smily.  
+-- find text The string to search for.  
+-- image varchar(220) The image to replace with.  
+-- disporder smallint unsigned The display order.  
+-- showclickable tinyint(1) Whether the smily is clickable to insert.  
+  
+- mybb_spamlog  
+-- sid int unsigned The id of the entry. Primary Key.  
+-- username varchar(120) The username used.  
+-- email varchar(220) The email address used.  
+-- ipaddress varbinary(16) The ip address used.  
+-- dateline int unsigned The timestamp of the entry.  
+-- data text Information about the entry.  
+  
+- mybb_spiders  
+-- sid int unsigned The id of the robot. Primary Key.  
+-- name varchar(100) The name of the robot.  
+-- theme smallint unsigned The theme the robot will use.  
+-- language varchar(20) The language the robot will use.  
+-- usergroup smallint unsigned The usergroup the robot will inherit permissions from.  
+-- useragent varchar(200) The useragent of the robot.  
+-- lastvisit int unsigned The timestamp of the last visit.  
+  
+- mybb_stats  
+-- dateline int unsigned The timestamp the stats were generated. Primary Key.  
+-- numusers int unsigned How many users there are.  
+-- numthreads int unsigned How many threads there are.  
+-- numposts int unsigned How many posts there are.  
+  
+- mybb_tasklog  
+-- lid int unsigned The id of the entry. Primary Key.  
+-- tid int unsigned The id of the task ran.  
+-- dateline int unsigned The timestamp the task ran at.  
+-- data text Information about the task.  
+  
+- mybb_tasks  
+-- tid int unsigned The id of the task. Primary Key.  
+-- title varchar(120) The title of the task.  
+-- description text A description of the task.  
+-- file varchar(30) The file to run.  
+-- minute varchar(200) A CSV list of minutes to run on. * for every minute. 
+-- hour varchar(200) A CSV list of hours to run. * for every hour.  
+-- day varchar(100) A CSV list of what days of the month to run. * for every day.  
+-- month varchar(30) A CSV list of what months to run. * for every month.  
+-- weekday varchar(15) A CSV list of what days to run. * for all days of the week.  
+-- nextrun int unsigned A timestamp of the next time the task is due to run.  
+-- lastrun int unsigned A timestamp of the last time the task ran.  
+-- enabled tinyint(1) Whether the task is enabled.  
+-- logging tinyint(1) Whether the task is logged.  
+-- locked int unsigned A timestamp of when the task was disabled.  
+  
+- mybb_templategroups  
+-- gid int unsigned The id of the template group. Primary Key.  
+-- prefix varchar(50) The prefix to templates in the group.  
+-- title varchar(100) The title of the template group. Use <lang:variable_name_here>  
+-- isdefault tinyint(1) Whether the template group is default. Plugins should use 0.  
+  
+- mybb_templates  
+-- tid int unsigned The id of the template. Primary Key.  
+-- title varchar(120) The title of the template.  
+-- template text The mark-up of the template.  
+-- sid smallint The id of the style the template is attached to.  
+-- version varchar(20) The version code of the template.  
+-- status varchar(10) The status of the template.  
+-- dateline int unsigned The timestamp the template was last edited.  
+  
 - mybb_templatesets
 - mybb_themes
 - mybb_themestylesheets
