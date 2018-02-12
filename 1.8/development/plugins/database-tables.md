@@ -6,8 +6,27 @@ categories: [plugins]
 
 List of all database tables created with a standard MyBB installation that describes the structure and format of each table.
 
-- mybb_adminlog
-- mybb_adminoptions
+- mybb_adminlog  
+-- uid INT The id of the admin who performed the action.  
+-- ipaddress VARBINARY(16) The ip of the person who performed the action.  
+-- dateline BIGINT(20) The time of the action.  
+-- module VARCHAR(50) Which module of the ACP.  
+-- action VARCHAR(50) Any action that was requested.  
+-- data TEXT serialized data about the action.  
+  
+- mybb_adminoptions  
+-- uid INT The id of the admin.  Negative numbers are used for usergroups.    
+-- cpstyle VARCHAR(50) What theme this admin uses.  
+-- cplanguage VARCHAR(50) What language the user uses.  
+-- codepress TINYINT(1) If the user has codepress enabled.  
+-- notes TEXT Any notes the admin has.  
+-- permissions TEXT A serialized array of admin permissions.  
+-- defaultviews TEXT Serialized data about views such as users.  
+-- loginattempts SMALLINT How many attempts at logging in.  
+-- loginlockoutexpiry INT When a lockout expires.  
+-- authsecret varchar(16) The 2FA code a user gets.  
+-- recovery_codes varchar(177) A code to recover from 2FA.  
+  
 - mybb_adminsessions
 - mybb_adminviews
 - mybb_announcements
