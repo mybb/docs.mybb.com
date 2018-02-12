@@ -862,6 +862,90 @@ List of all database tables created with a standard MyBB installation that descr
 -- canuseipsearch tinyint(1) Whether the group can use ip search.  
   
 - mybb_users  
+-- uid int unsigned The id of the user.  
+-- username varchar(120) The name of the user.  
+-- password varchar(120) The hashed password.  
+-- salt varchar(10) Salt used for creating the hash.  
+-- loginkey varchar(50) A unique string for tracking the session and verifying post requests.  
+-- email varchar(220) Email address.  
+-- postnum int(10) unsigned The number of posts.  
+-- threadnum int(10) unsigned The number of threads.  
+-- avatar varchar(200) The url of the avatar.  
+-- avatardimensions varchar(10) The dimensions of the avatar.  
+-- avatartype varchar(10) What type of avatar is used.  
+-- usergroup smallint unsigned The primary usergroup the person is in.  
+-- additionalgroups varchar(200) A CSV list of additional groups the user is in.  
+-- displaygroup smallint unsigned The display group. 0 is primary group.  
+-- usertitle varchar(250) The custom title a user has.  
+-- regdate int unsigned The timestamp the user registered.  
+-- lastactive int unsigned The timestamp of the last activity.  
+-- lastvisit int unsigned The timestamp of the last visit.  
+-- lastpost int unsigned The timestamp of the last post.  
+-- website varchar(200) The user's website.  
+-- icq varchar(10) ICQ.  
+-- aim varchar(50) AIM.  
+-- yahoo varchar(50) Yahoo Id.  
+-- skype varchar(75) Skype Id.  
+-- google varchar(75) Google Plus Id.  
+-- birthday varchar(15) User's birthday.  
+-- birthdayprivacy varchar(4) Who can view the user's birthday.  
+-- signature text The user's signature.  
+-- allownotices tinyint(1) Show notices.  
+-- hideemail tinyint(1) Whether to hide email address from other users.  
+-- subscriptionmethod tinyint(1) What to do for subscriptions.  
+-- invisible tinyint(1) Don't show up on who's online.  
+-- receivepms tinyint(1) Whether private messages can be received.  
+-- receivefrombuddy tinyint(1) Only receive private messages from buddies.  
+-- pmnotice tinyint(1) Show notice of new private message. 
+-- pmnotify tinyint(1) Show notice of new private message.  
+-- buddyrequestspm tinyint(1) Send private message for buddy requests.  
+-- buddyrequestsauto tinyint(1) Automatically approve buddy requests.  
+-- threadmode varchar(8) Whether to show linear or threaded.  
+-- showimages tinyint(1) Whether to show images in threads.  
+-- showvideos tinyint(1) Whether to show videos in threads.  
+-- showsigs tinyint(1) Whether to show signatures of other users.  
+-- showavatars tinyint(1) Whether to show avatars.  
+-- showquickreply tinyint(1) Whether to show the quick reply form.  
+-- showredirect tinyint(1) Whether to show friendly redirect pages.  
+-- ppp smallint(6) unsigned How many posts per page.  
+-- tpp smallint(6) unsigned How many threads per page.  
+-- daysprune smallint(6) unsigned The cutoff date for threads.  
+-- dateformat varchar(4) The format to show the date.  
+-- timeformat varchar(4) The format to show time.  
+-- timezone varchar(5) The time zone the user is in.  
+-- dst tinyint(1) Whether daylight savings time is used.  
+-- dstcorrection tinyint(1) Whether to automatically detect daylight savings time.  
+-- buddylist text A CSV list of users that are buddies.  
+-- ignorelist text A CSV list of users that are ignored.  
+-- style smallint unsigned The id of the theme the user is using.  
+-- away tinyint(1) Whether the user is away.  
+-- awaydate int(10) Timestamp of when the user went away.  
+-- returndate varchar(15) The date of return.  
+-- awayreason varchar(200) The reason for being away.  
+-- pmfolders text Folders for private messages.  
+-- notepad text Personal notes the user has made.  
+-- referrer int unsigned The id of the user who referred the user.  
+-- referrals int unsigned How many referrals the user has.  
+-- reputation int The reputation score.  
+-- regip varbinary(16) The ip address used to register.  
+-- lastip varbinary(16) The last ip address used by the user.  
+-- language varchar(50) The language used by the user.  
+-- timeonline int unsigned The number of seconds spent online.  
+-- showcodebuttons tinyint(1) Whether the mycode editor should be shown.  
+-- totalpms int(10) unsigned The number of private messages.  
+-- unreadpms int(10) unsigned The number of unread private messages.  
+-- warningpoints int(3) unsigned The number of warning points a user has.  
+-- moderateposts tinyint(1) Whether the user needs to have posts moderated.  
+-- moderationtime int unsigned The timestamp of when posts no longer are moderated.   
+-- suspendposting tinyint(1) Whether the user's posting privilege is suspended.  
+-- suspensiontime int unsigned The timestamp of when the suspension is over.  
+-- suspendsignature tinyint(1) Whether the user's signature privilege is suspended.  
+-- suspendsigtime int unsigned The timestamp the user's signature is no longer suspended.  
+-- coppauser tinyint(1) Whether the user is a coppa user.  
+-- classicpostbit tinyint(1) Whether posts are shown in classic mode.  
+-- loginattempts smallint(2) unsigned The number of failed log in attempts.  
+-- usernotes text Notes on the user by moderators.  
+-- sourceeditor tinyint(1) Whether to put the editor in source mode.  
    
 - mybb_usertitles  
 -- utid smallint unsigned The id of the user title. Primary Key.  
