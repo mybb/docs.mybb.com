@@ -292,15 +292,116 @@ List of all database tables created with a standard MyBB installation that descr
 -- enabled tinyint(1) Whether the section is enabled.  
 -- disporder smallint unsigned The display order.  
   
-- mybb_icons
-- mybb_joinrequests
-- mybb_mailerrors
-- mybb_maillogs
-- mybb_mailqueue
-- mybb_massemails
-- mybb_moderatorlog
-- mybb_moderators
-- mybb_modtools
+- mybb_icons  
+-- iid smallint unsigned The id of the icon. Primary Key.  
+-- name varchar(120) The name of the icon.  
+-- path varchar(220) The path to the icon.  
+  
+- mybb_joinrequests  
+-- rid int unsigned The id of the request. Primary Key.  
+-- uid int unsigned The id of the user.  
+-- gid smallint unsigned The id of the usergroup.  
+-- reason varchar(250) The reason to approve the request.  
+-- dateline int unsigned The timestamp of the request.  
+-- invite tinyint(1) Whether an invite was issued.  
+  
+- mybb_mailerrors  
+-- eid int unsigned The id of the email. Primary Key.  
+-- subject varchar(200) The subject of the email.  
+-- message text The content of the email.  
+-- toaddress varchar(150) The recipient's email address.  
+-- fromaddress varchar(150) The sender's email addrerss.  
+-- dateline int unsigned The timestamp of the email.  
+-- error text A description of the error.  
+-- smtperror varchar(200) A description of SMPT error.  
+-- smtpcode smallint(5) unsigned The code assigned to the SMTP error.  
+  
+- mybb_maillogs  
+-- mid int unsigned The id of the message. Primary Key.  
+-- subject varchar(200) The email subject.  
+-- message text The message.  
+-- dateline int unsigned The timestamp of the email.  
+-- fromuid int unsigned The id of the user it is from.  
+-- fromemail varchar(200) The email address of the sender.  
+-- touid int unsigned The id of the recipient.  
+-- toemail varchar(200) The email address of the recipient.  
+-- tid int unsigned The id of the thread.  
+-- ipaddress varbinary(16) The ip of the sender.  
+-- type tinyint(1)    
+    
+- mybb_mailqueue  
+-- mid int unsigned The id of the email. Primary Key.  
+-- mailto varchar(200) The email address of the recipient.  
+-- mailfrom varchar(200) The email address of the sender.  
+-- subject varchar(200) The subject of the email.  
+-- message text The message.  
+-- headers text The headers sent with the email.  
+  
+- mybb_massemails  
+-- mid int unsigned The id of the mass mailing. Primary Key.  
+-- uid int unsigned The id of the user sending the email.  
+-- subject varchar(200) The subject of the email.  
+-- message text The message.  
+-- htmlmessage text The HTML of the email.  
+-- type tinyint(1) 0 = Email, 1 = Private Message.
+-- format tinyint(1) 0 = Plain Text, 1 = HTML Only, 2 = HTML and Plain Text.  
+-- dateline int unsigned The timestamp the mass email was created.  
+-- senddate int unsigned The timestamp of when the email was sent.  
+-- status tinyint(1) 0 = Not completed, 1 = completed.  
+-- sentcount int unsigned How many emails have been sent.  
+-- totalcount int unsigned How many emails will be sent.  
+-- conditions text The where conditions.  
+-- perpage smallint(4) unsigned How many mailings should go per page.  
+  
+- mybb_moderatorlog  
+-- uid int unsigned The id of the moderator.  
+-- dateline int unsigned The timestamp of the event.  
+-- fid smallint unsigned The id of the forum.  
+-- tid int unsigned The id of the thread.  
+-- pid int unsigned The id of the post.  
+-- action text The action taken.  
+-- data text Serialized data about the event.  
+-- ipaddress varbinary(16) The ip used for the event.  
+  
+- mybb_moderators  
+-- mid smallint unsigned The id assigned to the moderator. Primary Key.  
+-- fid smallint unsigned The id of the forum.  
+-- id int unsigned The id of the user.  
+-- isgroup tinyint(1) unsigned Whether the moderator is a usergroup.  
+-- caneditposts tinyint(1) Whether the moderator can edit posts.  
+-- cansoftdeleteposts tinyint(1) Whether the moderator can soft delete posts.  
+-- canrestoreposts tinyint(1) Whether the moderator can restore soft deleted posts.  
+-- candeleteposts tinyint(1) Whether the moderator can permanently delete posts.  
+-- cansoftdeletethreads tinyint(1) Whether the moderator can soft delete threads.  
+-- canrestorethreads tinyint(1) Whether the moderator can restore soft deleted threads.  
+-- candeletethreads tinyint(1) Whether the moderator can permanently delete threads.  
+-- canviewips tinyint(1) Whether the moderator can view ips.  
+-- canviewunapprove tinyint(1) Whether the moderator can view unapproved posts and threads.  
+-- canviewdeleted tinyint(1) Whether the moderator can view deleted content.  
+-- canopenclosethreads tinyint(1) Whether the moderator can lock and unlock threads.  
+-- canstickunstickthreads tinyint(1) Whether the moderator can stick and unstick threads.  
+-- canapproveunapprovethreads tinyint(1) Whether the moderator can approve and unapprove threads.  
+-- canapproveunapproveposts tinyint(1) Whether the moderator can approve and unapprove posts.  
+-- canapproveunapproveattachs tinyint(1) Whether the moderator can approve and unapprove attachments.  
+-- canmanagethreads tinyint(1) Whether the moderator can manage threads.  
+-- canmanagepolls tinyint(1) Whether the moderator can manage polls.  
+-- canpostclosedthreads tinyint(1) Whether the moderator can reply to locked threads.  
+-- canmovetononmodforum tinyint(1) Whether the moderator can move a thread to a forum they don't moderate.  
+-- canusecustomtools tinyint(1) Whether the moderator can use custom mod tools.  
+-- canmanageannouncements tinyint(1) Whether the moderator can manage announcements.  
+-- canmanagereportedposts tinyint(1) Whether the moderator can manage reported content.  
+-- canviewmodlog tinyint(1) Whether the moderator can view the mod log.  
+  
+- mybb_modtools  
+-- tid smallint unsigned The id of the tool. Primary Key.  
+-- name varchar(200) The name of the tool.  
+-- description text A description of what the tool does.  
+-- forums text CSV of what forums the tool can be used in.  
+-- groups text CSV of what usergroups can use the tool.  
+-- type char(1) Whether the tool is for threads or posts.  
+-- postoptions text Serialized data about what is done to the post.  
+-- threadoptions text Serialized data about what is done to the thread.  
+  
 - mybb_mycode
 - mybb_polls
 - mybb_pollvotes
