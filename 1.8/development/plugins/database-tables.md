@@ -95,9 +95,9 @@ List of all database tables created with a standard MyBB installation that descr
 -- uid int unsigned The id of the user.  
 -- dateline int unsigned When the user got put into awaiting activation.  
 -- code varchar(100) A string to validate the request.  
--- type char(1)  
+-- type char(1) Used for things like changing email and password reset.  
 -- validated tinyint(1) Whether the code has been used.  
--- misc varchar(255)  
+-- misc varchar(255) Other information about the entry.  
   
 - mybb_badwords  
 -- bid int unsigned The id of the word. Primary Key.  
@@ -135,7 +135,7 @@ List of all database tables created with a standard MyBB installation that descr
 -- disporder smallint unsigned Display order of the calendar.  
 -- startofweek tinyint(1) What day the week starts on.  
 -- showbirthdays tinyint(1) Whether to show birthdays on the calendar.  
--- eventlimit smallint(3) unsigned  
+-- eventlimit smallint(3) unsigned How many events can be placed on the calendar.  
 -- moderation tinyint(1) Whether events need to be moderated.  
 -- allowhtml tinyint(1) Whether HTML is allowed.  
 -- allowmycode tinyint(1) Whether mycode is allowed.  
@@ -327,7 +327,7 @@ List of all database tables created with a standard MyBB installation that descr
 -- toemail varchar(200) The email address of the recipient.  
 -- tid int unsigned The id of the thread.  
 -- ipaddress varbinary(16) The ip of the sender.  
--- type tinyint(1)    
+-- type tinyint(1)  
     
 - mybb_mailqueue  
 -- mid int unsigned The id of the email. Primary Key.  
@@ -684,19 +684,125 @@ List of all database tables created with a standard MyBB installation that descr
 -- status varchar(10) The status of the template.  
 -- dateline int unsigned The timestamp the template was last edited.  
   
-- mybb_templatesets
-- mybb_themes
-- mybb_themestylesheets
-- mybb_threadprefixes
-- mybb_threadratings
-- mybb_threads
-- mybb_threadsread
-- mybb_threadsubscriptions
-- mybb_threadviews
-- mybb_userfields
-- mybb_usergroups
-- mybb_users
-- mybb_usertitles
-- mybb_warninglevels
-- mybb_warnings
-- mybb_warningtypes
+- mybb_templatesets  
+-- sid smallint unsigned The id of the template set. Primary Key.  
+-- title varchar(120) The title of the template set.  
+  
+- mybb_themes  
+-- tid smallint unsigned The id of the theme. Primary Key.  
+-- name varchar(100) The name of the theme.  
+-- pid smallint unsigned The id of the parent theme.  
+-- def tinyint(1) Whether the theme is default.  
+-- properties text Serialized data about the theme.  
+-- stylesheets text A CSV list of stylesheets used with the theme.  
+-- allowedgroups text A CSV list of usergroups allowed to use the theme. all for all usergroups.  
+  
+- mybb_themestylesheets  
+-- sid int unsigned The id of the stylesheet. Primary Key.  
+-- name varchar(30) The name of the stylesheet.  
+-- tid smallint unsigned The id of the theme it belongs to.  
+-- attachedto text A pipe separated list of what pages the stylesheet is attached to.  
+-- stylesheet longtext The CSS of the stylesheet.  
+-- cachefile varchar(100) The file that has a minified version of the css.  
+-- lastmodified int unsigned The timestamp of when the stylesheet was last edited.  
+  
+- mybb_threadprefixes  
+-- pid int unsigned The id of the prefix. Primary Key.  
+-- prefix varchar(120) The name of the prefix.  
+-- displaystyle varchar(200) How the prefix is displayed.  
+-- forums text A CSV list of what forums the prefix can be used in. 
+-- groups text A CSV list of what groups can use the prefix.  
+  
+- mybb_threadratings  
+-- rid int unsigned The id of the rating. Primary Key.  
+-- tid int unsigned The id of the thread.  
+-- uid int unsigned The id of the user.  
+-- rating tinyint(1) unsigned The rating given to the thread.  
+-- ipaddress varbinary(16) The ip address of the user giving the rating.  
+  
+- mybb_threads  
+-- tid int unsigned The id of the thread. Primary Key.  
+-- fid smallint unsigned The id of the forum the thread is in.  
+-- subject varchar(120) The title of the thread.  
+-- prefix smallint unsigned The id of the prefix the thread has.  
+-- icon smallint unsigned The id of the icon a thread has.  
+-- poll int unsigned Whether the thread has a poll.  
+-- uid int unsigned The id of the author.  
+-- username varchar(80) The name of the author.  
+-- dateline int unsigned The timestamp of when the thread was created.  
+-- firstpost int unsigned The id of the first post of the thread.  
+-- lastpost int unsigned The timestamp of the last post in the thread.  
+-- lastposter varchar(120) The username of the last poster.  
+-- lastposteruid int unsigned The id of the last poster.  
+-- views int(100) unsigned The number of views a thread has.  
+-- replies int(100) unsigned The number of replies a thread has.  
+-- closed varchar(30) Whether a thread is locked or moved. 0 = open, 1 = locked, moved|tid_here for moved.  
+-- sticky tinyint(1) Whether the thread is a sticky.  
+-- numratings smallint unsigned The number of ratings a thread has.  
+-- totalratings smallint unsigned The total of all the ratings a thread has.  
+-- notes text Notes about the thread visible to moderators.  
+-- visible tinyint(1) Visibility of the thread. -2 = draft, -1 = deleted, 0 = unapproved, 1 = visible  
+-- unapprovedposts int(10) unsigned The number of unapproved posts in the thread.  
+-- deletedposts int(10) unsigned The number of deleted posts in the thread.  
+-- attachmentcount int(10) unsigned The number of attachments in the thread.  
+-- deletetime int(10) unsigned The timestamp of when a thread was deleted.  
+  
+- mybb_threadsread  
+-- tid int unsigned The thread read.  
+-- uid int unsigned The user who read the thread.  
+-- dateline int unsigned The timestamp the thread was read.  
+  
+- mybb_threadsubscriptions  
+-- sid int unsigned The id of the subscription.  
+-- uid int unsigned The id of the user.  
+-- tid int unsigned The id of the thread.  
+-- notification tinyint(1) The type of notification used.  
+-- dateline int unsigned The timestamp of when a user subscribed to the thread.  
+  
+- mybb_threadviews  
+-- tid int unsigned The id of the thread viewed.  
+  
+- mybb_userfields  
+--  ufid int unsigned The user a field applied to. Primary Key.  
+-- fid1 text The first profile field.  
+-- fid2 text The second profile field.  
+-- fid3 text The third profile field.  
+-- Each time a profile field is created a new column is created in this table with name fidx.  
+  
+- mybb_usergroups  
+-- 
+- mybb_users  
+-- 
+- mybb_usertitles  
+-- utid smallint unsigned The id of the user title. Primary Key.  
+-- posts int unsigned The number of posts required.  
+-- title varchar(250) The title of the usertitle.  
+-- stars smallint(4) unsigned The number of stars to display.  
+-- starimage varchar(120) The image used for stars.  
+  
+- mybb_warninglevels  
+-- lid int unsigned The id of the warning level.  
+-- percentage smallint(3) unsigned The warning percent a user needs to reach.  
+-- action text Details about what action is taken.  
+    
+- mybb_warnings  
+-- wid int unsigned The id of the warning. Primary Key.  
+-- uid int unsigned The user receiving the warning.  
+-- tid int unsigned The thread a warning was issued for.  
+-- pid int unsigned The post a warning was issued for.  
+-- title varchar(120) The name of the warning.  
+-- points smallint unsigned How many points were assigned by the warning.  
+-- dateline int unsigned The timestamp of when the warning was given.  
+-- issuedby int unsigned The id of the user giving the warning.  
+-- expires int unsigned The timestamp the warning expires.  
+-- expired tinyint(1) Whether the warning has expired.  
+-- daterevoked int unsigned The timestamp of when a warning was revoked.  
+-- revokedby int unsigned The id of the user who revoked the warning.  
+-- revokereason text The reason the warning was revoked.  
+-- notes text Notes about the warning.  
+  
+- mybb_warningtypes  
+-- tid int unsigned The id of the warning type. Primary Key.  
+-- title varchar(120) The title of the warning.  
+-- points smallint unsigned The number of points to assign.  
+-- expirationtime int unsigned The number of seconds a warning lasts.  
