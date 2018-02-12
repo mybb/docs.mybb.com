@@ -770,9 +770,99 @@ List of all database tables created with a standard MyBB installation that descr
 -- Each time a profile field is created a new column is created in this table with name fidx.  
   
 - mybb_usergroups  
--- 
+-- gid smallint unsigned The id of the group. Primary Key.  
+-- type tinyint(1) unsigned If the usergroup is a default or custom group.  
+-- title varchar(120) The name of the usergroup.  
+-- description text A description of the usergroup.  
+-- namestyle varchar(200) The style of the username. Use {username} to represent the user's name.  
+-- usertitle varchar(120) The default usertitle for members of this group.  
+-- stars smallint(4) unsigned The number of stars a member of this usergroup has.  
+-- starimage varchar(120) The image for stars.  
+-- image varchar(120) The image used for userbars.  
+-- disporder smallint(6) unsigned The order the usergroup is shown.  
+-- isbannedgroup tinyint(1) Whether the group is a banned group.  
+-- canview tinyint(1) Whether the group can view forums.  
+-- canviewthreads tinyint(1) Whether the group can view threads.  
+-- canviewprofiles tinyint(1) Whether the group can view profiles.  
+-- candlattachments tinyint(1) Whether the group can download attachments.  
+-- canviewboardclosed tinyint(1) Whether the group can view the board when it is closed.  
+-- canpostthreads tinyint(1) Whether the group can post threads.  
+-- canpostreplys tinyint(1) Whether the group can reply to threads.  
+-- canpostattachments tinyint(1) Whether the group can post attachments.  
+-- canratethreads tinyint(1) Whether the group can rate threads.  
+-- modposts tinyint(1) Whether the group needs posts to be moderated.  
+-- modthreads tinyint(1) Whether the group needs threads to be moderated.  
+-- mod_edit_posts tinyint(1) Whether the group needs posts moderated after being edited.  
+-- modattachments tinyint(1) Whether the group needs attachments to be moderated.  
+-- caneditposts tinyint(1) Whether the group can edit their own posts.  
+-- candeleteposts tinyint(1) Whether the group can delete their own posts.  
+-- candeletethreads tinyint(1) Whether the group can delete their own threads.  
+-- caneditattachments tinyint(1) Whether the group can edit their own attachments.  
+-- canviewdeletionnotice tinyint(1) Whether the group can view deleted posts.  
+-- canpostpolls tinyint(1) Whether the group can create polls.  
+-- canvotepolls tinyint(1) Whether the group can vote in polls.  
+-- canundovotes tinyint(1) Whether the group can undo their vote.  
+-- canusepms tinyint(1) Whether the group can use private messages.  
+-- cansendpms tinyint(1) Whether the group can send private messages.  
+-- cantrackpms tinyint(1) Whether the group can track the read status of private messages.  
+-- candenypmreceipts tinyint(1) Whether the group can deny read receipt.  
+-- pmquota int(3) unsigned How many messages users in this group can have.  
+-- maxpmrecipients int(4) unsigned How many users members of this group can send a private message to at one time.  
+-- cansendemail tinyint(1) Whether the group can send emails to users.  
+-- cansendemailoverride tinyint(1) Whether the group can send an email to a user even if the user has them disabled.  
+-- maxemails int(3) unsigned Max emails allowed per day.  
+-- emailfloodtime int(3) unsigned Time in minutes between emails.  
+-- canviewmemberlist tinyint(1) Whether the group can view the member list.  
+-- canviewcalendar tinyint(1) Whether the group can view the calendar.  
+-- canaddevents tinyint(1) Whether the group can add events to the calendar.  
+-- canbypasseventmod tinyint(1) Whether the group can bypass event moderation.  
+-- canmoderateevents tinyint(1) Whether the group can moderate events.  
+-- canviewonline tinyint(1) Whether the group can view who's online.  
+-- canviewwolinvis tinyint(1) Whether the group can view members that are invisible.  
+-- canviewonlineips tinyint(1) Whether the group can view the ip of users online.  
+-- cancp tinyint(1) Whether the group can use the Admin CP.  
+-- issupermod tinyint(1) Whether the group is a global moderator.  
+-- cansearch tinyint(1) Whether the group can search the forum.  
+-- canusercp tinyint(1) Whether the group can use the User CP.  
+-- canuploadavatars tinyint(1) Whether the group can upload avatars.  
+-- canratemembers tinyint(1)  
+-- canchangename tinyint(1) Whether the group can change their username.  
+-- canbereported tinyint(1) Whether the group can be reported.  
+-- canchangewebsite tinyint(1) Whether the group can change their website profile field.  
+-- showforumteam tinyint(1) Whether the group is shown on the forum team page.  
+-- usereputationsystem tinyint(1) Whether the group has their reputation shown.  
+-- cangivereputations tinyint(1) Whether the group can give reputation to users.  
+-- candeletereputations tinyint(1) Whether the group can delete reputations they give.  
+-- reputationpower int unsigned How many points to award or take away.  
+-- maxreputationsday int unsigned How many reputations can be given per day.  
+-- maxreputationsperuser int unsigned How many reputations can be given per user.  
+-- maxreputationsperthread int unsigned How many reputations can be given per thread.  
+-- candisplaygroup tinyint(1) Whether the group can be set as display group.  
+-- attachquota int unsigned The amount of space attachments can take.  
+-- cancustomtitle tinyint(1) Whether the group can use a custom title.  
+-- canwarnusers tinyint(1) Whether the group can warn other users.  
+-- canreceivewarnings tinyint(1) Whether the group can receive warnings.  
+-- maxwarningsday int(3) unsigned How many warnings can be given per day.  
+-- canmodcp tinyint(1) Whether the group can access the Mod CP.  
+-- showinbirthdaylist tinyint(1) Whether the group is shown in the birthday list.  
+-- canoverridepm tinyint(1) Whether the group can send private messages even if the recipient has them disabled.  
+-- canusesig tinyint(1) Whether the group can use a signature.  
+-- canusesigxposts smallint unsigned How many posts are required before a signature can be added.  
+-- signofollow tinyint(1) Whether links in a user's signature have the no_follow attribute.  
+-- edittimelimit int(4) unsigned The number of minutes before a post cna no longer be edited.  
+-- maxposts int(4) unsigned Max posts per day.  
+-- showmemberlist tinyint(1) Whether members of this group are shown in the member list.  
+-- canmanageannounce tinyint(1) Whether the group can manage announcements.  
+-- canmanagemodqueue tinyint(1) Whether the group can manage the moderation queue.  
+-- canmanagereportedcontent tinyint(1) Whether the group can manage reported content.  
+-- canviewmodlogs tinyint(1) Whether the group can view the moderator logs.  
+-- caneditprofiles tinyint(1) Whether the group can edit the profile's of other users.  
+-- canbanusers tinyint(1) Whether the group can ban users.  
+-- canviewwarnlogs tinyint(1) Whether the group can view warning logs.  
+-- canuseipsearch tinyint(1) Whether the group can use ip search.  
+  
 - mybb_users  
--- 
+   
 - mybb_usertitles  
 -- utid smallint unsigned The id of the user title. Primary Key.  
 -- posts int unsigned The number of posts required.  
