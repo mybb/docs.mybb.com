@@ -6,16 +6,16 @@ categories: [plugins]
 
 List of all database tables created with a standard MyBB installation that describes the structure and format of each table.
 
-- mybb_adminlog  
--- uid INT The id of the admin who performed the action.  
+- mybb_adminlog    
+-- uid INT UNSIGNED The id of the admin who performed the action.  
 -- ipaddress VARBINARY(16) The ip of the person who performed the action.  
--- dateline BIGINT(20) The time of the action.  
+-- dateline INT UNSIGNED The time of the action.  
 -- module VARCHAR(50) Which module of the ACP.  
 -- action VARCHAR(50) Any action that was requested.  
 -- data TEXT serialized data about the action.  
   
 - mybb_adminoptions  
--- uid INT The id of the admin.  Negative numbers are used for usergroups.    
+-- uid INT The id of the admin. Negative numbers are used for usergroups. Primary Key  
 -- cpstyle VARCHAR(50) What theme this admin uses.  
 -- cplanguage VARCHAR(50) What language the user uses.  
 -- codepress TINYINT(1) If the user has codepress enabled.  
@@ -27,9 +27,43 @@ List of all database tables created with a standard MyBB installation that descr
 -- authsecret varchar(16) The 2FA code a user gets.  
 -- recovery_codes varchar(177) A code to recover from 2FA.  
   
-- mybb_adminsessions
-- mybb_adminviews
-- mybb_announcements
+- mybb_adminsessions  
+-- sid varchar(32) A unique identifier for the session.  
+-- uid INT UNSIGNED The user the session belongs to.  
+-- loginkey VARCHAR(50) A unique key for this session to verify post requests.  
+-- ip VARBINARY(16) The ip of the admin.  
+-- dateline INT UNSIGNED The time the session was created.  
+-- lastactive INT UNSIGNED The last time the user was active.  
+-- data TEXT Serialized data about the session such as flash_message.  
+-- useragent VARCHAR(200) The useragent of the user.  
+-- authenticated TINYINT(1) If the user is authenticated.  
+  
+- mybb_adminviews  
+-- vid INT The id of the view. Primary Key.  
+-- uid INT UNSIGNED The user the view belongs to.  
+-- title VARCHAR(100) The name of the view.  
+-- type VARCHAR(6) The type of view such as user.  
+-- visibility TINYINT(1)  
+-- fields TEXT Serialized list of fields to include.  
+-- conditions TEXT Serialized data about the where conditions.  
+-- custom_profile_fields TEXT Serialized data about the custom profile fields included.  
+-- sortby VARCHAR(20) What field to sort by.  
+-- sortorder VARCHAR(4) ASC or DESC.  
+-- perpage SMALLINT(4) How many items per page.  
+-- view_type VARCHAR(6) The type of view such as card.  
+  
+- mybb_announcements  
+-- aid INT UNSIGNED The id of the announcement.  Primary Key.  
+-- fid INT NOT NULL The id of the forum the announcement is in. -1 for global.  
+-- uid INT UNSIGNED The person who wrote the announcement.  
+-- subject VARCHAR(120) The title of the announcement.  
+-- message TEXT The content of the announcement.  
+-- startdate INT UNSIGNED When the announcement should begin displaying.  
+-- enddate INT UNSIGNED When the announcement should stop being displayed.  
+-- allowhtml TINYINT(1) Whether HTML is allowed.  
+-- allowmycode TINYINT(1) Whether mycode is allowed.  
+-- allowsmilies TINYINT(1) Whether smilies are allowed.  
+  
 - mybb_attachments
 - mybb_attachtypes
 - mybb_awaitingactivation
