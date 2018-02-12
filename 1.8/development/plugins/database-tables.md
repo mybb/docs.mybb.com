@@ -187,13 +187,111 @@ List of all database tables created with a standard MyBB installation that descr
 -- usingtime tinyint(1)  
 -- repeats text Information about if the event repeats.  
   
-- mybb_forumpermissions
-- mybb_forums
-- mybb_forumsread
-- mybb_forumsubscriptions
-- mybb_groupleaders
-- mybb_helpdocs
-- mybb_helpsections
+- mybb_forumpermissions  
+-- pid int unsigned The id of the permission.  Primary Key.  
+-- fid int unsigned The id of the forum.  
+-- gid int unsigned The id of the usergroup.  
+-- canview tinyint(1) Can view the forum.  
+-- canviewthreads tinyint(1) Can view threads within the forum.  
+-- canonlyviewownthreads tinyint(1) Can only view own threads within forum.  
+-- candlattachments tinyint(1) Can download attachments in the forum.  
+-- canpostthreads tinyint(1) Can post threads in the forum.  
+-- canpostreplys tinyint(1) Can reply to threads in the forum.  
+-- canonlyreplyownthreads tinyint(1) Can only reply to own threads in the forum.  
+-- canpostattachments tinyint(1) Can post attachments in the forum.  
+-- canratethreads tinyint(1) Can rate threads in the forum.  
+-- caneditposts tinyint(1) Can edit own posts.  
+-- candeleteposts tinyint(1) Can delete own posts.  
+-- candeletethreads tinyint(1) Can delete own threads.  
+-- caneditattachments tinyint(1) Can edit own attachments.  
+-- canviewdeletionnotice tinyint(1) Can view deleted posts.  
+-- modposts tinyint(1) Can moderate posts.  
+-- modthreads tinyint(1) Can moderate threads.  
+-- mod_edit_posts tinyint(1) Can edit the posts of others.  
+-- modattachments tinyint(1) Can moderate attachments.  
+-- canpostpolls tinyint(1) Can post polls in the forum.  
+-- canvotepolls tinyint(1) Can vote in polls in the forum.  
+-- cansearch tinyint(1) Can search the forum.  
+  
+- mybb_forums  
+-- fid smallint unsigned The id of the forum. Primary Key.  
+-- name varchar(120) The name of the forum.  
+-- description text Description of the forum.  
+-- linkto varchar(180) The url the forum redirects to.  
+-- type char(1) C = Category, F = Forum, L = Link  
+-- pid smallint unsigned The parent forum id.  
+-- parentlist text A CSV list of parents.  
+-- disporder smallint unsigned Display Order.  
+-- active tinyint(1) Whether the forum will be shown to others.  
+-- open tinyint(1) Whether users can post in the forum.  
+-- threads int unsigned Number of threads.  
+-- posts int unsigned Number of posts.  
+-- lastpost int(10) unsigned The timestamp of the last post.  
+-- lastposter varchar(120) The username of the last poster.  
+-- lastposteruid int(10) unsigned The uid of the last poster.  
+-- lastposttid int(10) unsigned The id of the last thread posted in.  
+-- lastpostsubject varchar(120) The title of the last thread posted in.  
+-- allowhtml tinyint(1) Whether HTML is enabled.  
+-- allowmycode tinyint(1) Whether mycode is enabled.  
+-- allowsmilies tinyint(1) Whether smilies are enabled.  
+-- allowimgcode tinyint(1) Whether img code is enabled.  
+-- allowvideocode tinyint(1) Whether video code is enabled.  
+-- allowpicons tinyint(1) Whether post icons are enabled.  
+-- allowtratings tinyint(1) Whether thread rating is enabled.  
+-- usepostcounts tinyint(1) Whether posts count towards a user's post count.  
+-- usethreadcounts tinyint(1) Whether threads count towards a user's thread count.  
+-- requireprefix tinyint(1) Whether threads require a prefix.  
+-- password varchar(50) The password to a forum. Note hash, not plaintext.  
+-- showinjump tinyint(1) Whether the forum is shown in the jump menu.  
+-- style smallint unsigned The default style of the forum.  
+-- overridestyle tinyint(1) Whether this forum overides a style a user chose.  
+-- rulestype tinyint(1) The way rules are displayed.  
+-- rulestitle varchar(200) The title of the rules.  
+-- rules text The content of rules.  
+-- unapprovedthreads int(10) unsigned How many unapproved threads are in the forum.  
+-- unapprovedposts int(10) unsigned How many unapproved posts are in the forum.  
+-- deletedthreads int(10) unsigned How many deleted threads are in the forum.  
+-- deletedposts int(10) unsigned How many deleted posts are in the forum.  
+-- defaultdatecut smallint(4) unsigned The number of days to shown threads from. 9999 is forever.  
+-- defaultsortby varchar(10) The default method for sorting threads.  
+-- defaultsortorder varchar(4) ASC or DESC.  
+  
+- mybb_forumsread  
+-- fid int unsigned The id of the forum.  
+-- uid int unsigned The id of the user.  
+-- dateline int unsigned The timestamp the forum was read.  
+  
+- mybb_forumsubscriptions  
+-- fsid int unsigned The id of the subscription. Primary Key.  
+-- fid smallint unsigned The id of the forum.  
+-- uid int unsigned The id of the user.  
+  
+- mybb_groupleaders  
+-- lid smallint unsigned The id of the leader. Primary Key.  
+-- gid smallint unsigned The id of the usergroup.  
+-- uid int unsigned The id of the group leader.  
+-- canmanagemembers tinyint(1) Whether the group leader can manage members.  
+-- canmanagerequests tinyint(1) Whether the group leader can manage join requests.  
+-- caninvitemembers tinyint(1) Whether the group leader can invite members to the group.  
+  
+- mybb_helpdocs  
+-- hid smallint unsigned The id of the document. Primary Key.  
+-- sid smallint unsigned The id of the section.  
+-- name varchar(120) The name of the document.  
+-- description text Description of the document.  
+-- document text The content of the document.  
+-- usetranslation tinyint(1) Whether to translate language.  
+-- enabled tinyint(1) Whether the document is enabled.  
+-- disporder smallint unsigned The display order.  
+  
+- mybb_helpsections  
+-- sid smallint unsigned The id of the section. Primary Key.  
+-- name varchar(120) The name of the section.  
+-- description text Description of the section.  
+-- usetranslation tinyint(1) Whether to translate the section.  
+-- enabled tinyint(1) Whether the section is enabled.  
+-- disporder smallint unsigned The display order.  
+  
 - mybb_icons
 - mybb_joinrequests
 - mybb_mailerrors
