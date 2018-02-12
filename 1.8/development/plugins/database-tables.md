@@ -123,13 +123,70 @@ List of all database tables created with a standard MyBB installation that descr
 -- lifted int unsigned The timestamp of when the ban was lifted.  
 -- reason varchar(255) The ban reason.  
   
-- mybb_buddyrequests
-- mybb_calendarpermissions
-- mybb_calendars
-- mybb_captcha
-- mybb_datacache
-- mybb_delayedmoderation
-- mybb_events
+- mybb_buddyrequests  
+-- id int(10) unsignedThe id of the request. Primary Key.  
+-- uid int unsigned The person making the request.  
+-- touid int unsigned The person receiving the request.  
+-- date int unsigned The timestamp of the request.  
+  
+- mybb_calendars  
+-- cid int unsigned The id of the calendar. Primary Key.  
+-- name varchar(100) The name of the calendar.  
+-- disporder smallint unsigned Display order of the calendar.  
+-- startofweek tinyint(1) What day the week starts on.  
+-- showbirthdays tinyint(1) Whether to show birthdays on the calendar.  
+-- eventlimit smallint(3) unsigned  
+-- moderation tinyint(1) Whether events need to be moderated.  
+-- allowhtml tinyint(1) Whether HTML is allowed.  
+-- allowmycode tinyint(1) Whether mycode is allowed.  
+-- allowimgcode tinyint(1) Whether img code is allowed.  
+-- allowvideocode tinyint(1) Whether video code is allowed.  
+-- allowsmilies tinyint(1) Whether smilies are allowed.  
+  
+- mybb_calendarpermissions  
+-- cid int unsigned The id of the permissions.
+-- gid int unsigned The group this applies to.  
+-- canviewcalendar tinyint(1) If the group can view the calendar.  
+-- canaddevents tinyint(1) If the group can add events.  
+-- canbypasseventmod tinyint(1) Whether events from this group bypass moderation rules.  
+-- canmoderateevents tinyint(1) Whether this group can moderate events.  
+  
+- mybb_captcha  
+-- imagehash varchar(32) A unique identifier to the captcha.  
+-- imagestring varchar(8) The real string.  
+-- dateline int unsigned The timestamp of the captcha.  
+-- used tinyint(1) Whether it was used.  
+  
+- mybb_datacache  
+-- title varchar(50) The title of the cache. Primary Key.  
+-- cache mediumtext Serialized contents.  Use $cache->read($title) to read and $cache->update($title, $contents) to update.  
+  
+- mybb_delayedmoderation  
+-- did int unsigned The id. Primary Key.
+-- type varchar(30)  
+-- delaydateline int unsigned The timestamp to perform the operation.  
+-- uid int(10) unsigned The id of the user.  
+-- fid smallint(5) unsigned The id of the forum.  
+-- tids text A CSV list of thread ids.  
+-- dateline int unsigned The timestamp of the request.  
+-- inputs text  
+  
+- mybb_events  
+-- eid int unsigned The event id. Primary Key.  
+-- cid int unsigned The id of the calendar.  
+-- uid int unsigned The event creator.  
+-- name varchar(120) The name of the event.  
+-- description text A description of the event.  
+-- visible tinyint(1) Whether the event is visible.  
+-- private tinyint(1) Whether the event is private.  
+-- dateline int(10) unsigned The timestamp the event was created.  
+-- starttime int(10) unsigned The timestamp it starts.  
+-- endtime int(10) unsigned The timestampt it stops.  
+-- timezone varchar(5) The timezone the event is in.  
+-- ignoretimezone tinyint(1) Whether time zone should be ignored.  
+-- usingtime tinyint(1)  
+-- repeats text Information about if the event repeats.  
+  
 - mybb_forumpermissions
 - mybb_forums
 - mybb_forumsread
