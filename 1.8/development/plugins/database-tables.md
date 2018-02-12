@@ -7,69 +7,122 @@ categories: [plugins]
 List of all database tables created with a standard MyBB installation that describes the structure and format of each table.
 
 - mybb_adminlog    
--- uid INT UNSIGNED The id of the admin who performed the action.  
--- ipaddress VARBINARY(16) The ip of the person who performed the action.  
--- dateline INT UNSIGNED The time of the action.  
--- module VARCHAR(50) Which module of the ACP.  
--- action VARCHAR(50) Any action that was requested.  
--- data TEXT serialized data about the action.  
+-- uid int unsigned The id of the admin who performed the action.  
+-- ipaddress varbinary(16) The ip of the person who performed the action.  
+-- dateline int unsigned The time of the action.  
+-- module varchar(50) Which module of the ACP.  
+-- action varchar(50) Any action that was requested.  
+-- data text serialized data about the action.  
   
 - mybb_adminoptions  
--- uid INT The id of the admin. Negative numbers are used for usergroups. Primary Key  
--- cpstyle VARCHAR(50) What theme this admin uses.  
--- cplanguage VARCHAR(50) What language the user uses.  
--- codepress TINYINT(1) If the user has codepress enabled.  
--- notes TEXT Any notes the admin has.  
--- permissions TEXT A serialized array of admin permissions.  
--- defaultviews TEXT Serialized data about views such as users.  
--- loginattempts SMALLINT How many attempts at logging in.  
--- loginlockoutexpiry INT When a lockout expires.  
+-- uid int The id of the admin. Negative numbers are used for usergroups. Primary Key  
+-- cpstyle varchar(50) What theme this admin uses.  
+-- cplanguage varchar(50) What language the user uses.  
+-- codepress tinyint(1) If the user has codepress enabled.  
+-- notes text Any notes the admin has.  
+-- permissions text A serialized array of admin permissions.  
+-- defaultviews text Serialized data about views such as users.  
+-- loginattempts smallint How many attempts at logging in.  
+-- loginlockoutexpiry int When a lockout expires.  
 -- authsecret varchar(16) The 2FA code a user gets.  
 -- recovery_codes varchar(177) A code to recover from 2FA.  
   
 - mybb_adminsessions  
 -- sid varchar(32) A unique identifier for the session.  
--- uid INT UNSIGNED The user the session belongs to.  
--- loginkey VARCHAR(50) A unique key for this session to verify post requests.  
--- ip VARBINARY(16) The ip of the admin.  
--- dateline INT UNSIGNED The time the session was created.  
--- lastactive INT UNSIGNED The last time the user was active.  
--- data TEXT Serialized data about the session such as flash_message.  
--- useragent VARCHAR(200) The useragent of the user.  
--- authenticated TINYINT(1) If the user is authenticated.  
+-- uid int unsigned The user the session belongs to.  
+-- loginkey varchar(50) A unique key for this session to verify post requests.  
+-- ip varbinary(16) The ip of the admin.  
+-- dateline int unsigned The time the session was created.  
+-- lastactive int unsigned The last time the user was active.  
+-- data text Serialized data about the session such as flash_message.  
+-- useragent varchar(200) The useragent of the user.  
+-- authenticated tinyint(1) If the user is authenticated.  
   
 - mybb_adminviews  
--- vid INT The id of the view. Primary Key.  
--- uid INT UNSIGNED The user the view belongs to.  
--- title VARCHAR(100) The name of the view.  
--- type VARCHAR(6) The type of view such as user.  
--- visibility TINYINT(1)  
--- fields TEXT Serialized list of fields to include.  
--- conditions TEXT Serialized data about the where conditions.  
--- custom_profile_fields TEXT Serialized data about the custom profile fields included.  
--- sortby VARCHAR(20) What field to sort by.  
--- sortorder VARCHAR(4) ASC or DESC.  
--- perpage SMALLINT(4) How many items per page.  
--- view_type VARCHAR(6) The type of view such as card.  
+-- vid int The id of the view. Primary Key.  
+-- uid int unsigned The user the view belongs to.  
+-- title varchar(100) The name of the view.  
+-- type varchar(6) The type of view such as user.  
+-- visibility tinyint(1)  
+-- fields text Serialized list of fields to include.  
+-- conditions text Serialized data about the where conditions.  
+-- custom_profile_fields text Serialized data about the custom profile fields included.  
+-- sortby varchar(20) What field to sort by.  
+-- sortorder varchar(4) ASC or DESC.  
+-- perpage smallint(4) How many items per page.  
+-- view_type varchar(6) The type of view such as card.  
   
 - mybb_announcements  
--- aid INT UNSIGNED The id of the announcement.  Primary Key.  
--- fid INT NOT NULL The id of the forum the announcement is in. -1 for global.  
--- uid INT UNSIGNED The person who wrote the announcement.  
--- subject VARCHAR(120) The title of the announcement.  
--- message TEXT The content of the announcement.  
--- startdate INT UNSIGNED When the announcement should begin displaying.  
--- enddate INT UNSIGNED When the announcement should stop being displayed.  
--- allowhtml TINYINT(1) Whether HTML is allowed.  
--- allowmycode TINYINT(1) Whether mycode is allowed.  
--- allowsmilies TINYINT(1) Whether smilies are allowed.  
+-- aid int unsigned The id of the announcement.  Primary Key.  
+-- fid int The id of the forum the announcement is in. -1 for global.  
+-- uid int unsigned The person who wrote the announcement.  
+-- subject varchar(120) The title of the announcement.  
+-- message text The content of the announcement.  
+-- startdate int unsigned When the announcement should begin displaying.  
+-- enddate int unsigned When the announcement should stop being displayed.  
+-- allowhtml tinyint(1) Whether HTML is allowed.  
+-- allowmycode tinyint(1) Whether mycode is allowed.  
+-- allowsmilies tinyint(1) Whether smilies are allowed.  
   
-- mybb_attachments
-- mybb_attachtypes
-- mybb_awaitingactivation
-- mybb_badwords
-- mybb_banfilters
-- mybb_banned
+- mybb_attachments  
+-- aid int unsigned The id of the attachment. Primary Key.  
+-- pid int unsigned The post the attachment belongs to.  
+-- posthash varchar(50) The hash that was used to validate the post.  
+-- uid int unsigned The user who uploaded it.  
+-- filename varchar(120) The name of the file.  
+-- filetype varchar(120) The type of file.  
+-- filesize int(10) The size of the file.  
+-- attachname varchar(120) The name used internally.    
+-- downloads int unsigned How many times the attachment has been downloaded.  
+-- dateuploaded int unsigned The timestamp of when it was uploaded.  
+-- visible tinyint(1) Whether the attachment is visible.  
+-- thumbnail varchar(120) The thumbnail image.  
+  
+- mybb_attachtypes  
+-- atid int unsigned The id of the attachment type. Primary Key.  
+-- name varchar(120) The name of the attachment type.  
+-- mimetype varchar(120) The mimetype used by web servers.  
+-- extension varchar(10) The file ending such as .png.  
+-- maxsize int(15) unsigned The maximum file size of the attachment.  
+-- icon varchar(100) The url for an icon.  
+-- enabled tinyint(1) Whether the attachment type is enabled.  
+-- groups text The groups allowed to use this attachment type. -1 for all.    
+-- forums text What forums are allowed to have this attachment type. -1 for all.  
+-- avatarfile tinyint(1) If this kind of file can be used for uploading avatars.  
+  
+- mybb_awaitingactivation  
+-- aid int unsigned The id assigned. Primary Key.  
+-- uid int unsigned The id of the user.  
+-- dateline int unsigned When the user got put into awaiting activation.  
+-- code varchar(100) A string to validate the request.  
+-- type char(1)  
+-- validated tinyint(1) Whether the code has been used.  
+-- misc varchar(255)  
+  
+- mybb_badwords  
+-- bid int unsigned The id of the word. Primary Key.  
+-- badword varchar(100) The string to replace.  
+-- replacement varchar(100) The value of the replacement.  
+  
+- mybb_banfilters  
+-- fid int unsigned The id of the filter. Primary Key.  
+-- filter varchar(200) Data about the filter.  
+-- type tinyint(1) A numeric type associated with the filter. 1 = IP, 2 = Username  
+-- lastuse int unsigned The last time a user was caught by the filter.  
+-- dateline int unsigned The timestamp the filter was added.  
+  
+- mybb_banned  
+-- uid int unsigned The id of who was banned.  
+-- gid int unsigned The group the person is banned into.  
+-- oldgroup int unsigned The old usergroup before banning.  
+-- oldadditionalgroups text The old additional groups before banning.  
+-- olddisplaygroup int unsigned The old display group before banning.  
+-- admin int unsigned The id of the person doing the banning.  
+-- dateline int unsigned The timestamp of when the ban was initiated.  
+-- bantime varchar(50) The length of time the user is banned.  
+-- lifted int unsigned The timestamp of when the ban was lifted.  
+-- reason varchar(255) The ban reason.  
+  
 - mybb_buddyrequests
 - mybb_calendarpermissions
 - mybb_calendars
