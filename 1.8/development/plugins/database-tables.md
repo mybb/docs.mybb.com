@@ -402,14 +402,133 @@ List of all database tables created with a standard MyBB installation that descr
 -- postoptions text Serialized data about what is done to the post.  
 -- threadoptions text Serialized data about what is done to the thread.  
   
-- mybb_mycode
-- mybb_polls
-- mybb_pollvotes
-- mybb_posts
-- mybb_privatemessages
-- mybb_profilefields
-- mybb_promotionlogs
+- mybb_mycode  
+-- cid int unsigned The id of the code. Primary Key.  
+-- title varchar(100) The title of the code.  
+-- description text A description of what the code does.  
+-- regex text The regular expression.  
+-- replacement text The replacement.  
+-- active tinyint(1) Whether the code is active.  
+-- parseorder smallint unsigned The order the code is parsed.  
+  
+- mybb_polls  
+-- pid int unsigned The id of the poll.  
+-- tid int unsigned The id of the thread.  
+-- question varchar(200) The question.  
+-- dateline int unsigned The timestamp the poll was created.  
+-- options text NOT NULL, The options for the poll.  
+-- votes text NOT NULL, Data about the votes.  
+-- numoptions smallint unsigned The number of poll options.  
+-- numvotes int unsigned The total number of voters.  
+-- timeout int unsigned The timestamp when the poll is closed.  
+-- closed tinyint(1) Whether the poll is closed.  
+-- multiple tinyint(1) Whether a user can select multiple options.  
+-- public tinyint(1) Whether the results include usernames.  
+-- maxoptions smallint unsigned The maximum amount of options a user can vote for.  
+  
+- mybb_pollvotes  
+-- vid int unsigned The id of the vote. Primary Key.  
+-- pid int unsigned The id of the poll.  
+-- uid int unsigned The id of the user.  
+-- voteoption smallint unsigned The option voted for.  
+-- dateline int unsigned The timestamp the vote was cast.  
+-- ipaddress varbinary(16) The voter's ip address.  
+  
+- mybb_posts  
+-- pid int unsigned The id of the post. Primary Key.  
+-- tid int unsigned The id of the thread.  
+-- replyto int unsigned The id of the post being replied to.  
+-- fid smallint unsigned The id of the forum.  
+-- subject varchar(120) The subject of the post.  
+-- icon smallint unsigned The id of the post icon.  
+-- uid int unsigned The id of the user.  
+-- username varchar(80) The name of the user.  
+-- dateline int unsigned The timestamp of the post.  
+-- message text The message.  
+-- ipaddress varbinary(16) The ip address.  
+-- includesig tinyint(1) Whether to include the user's signature.  
+-- smilieoff tinyint(1) Whether smilies are enabled.  
+-- edituid int unsigned The id of the person who edited the post.  
+-- edittime int unsigned The timestamp the post was last edited.  
+-- editreason varchar(150) The reason the post was edited.  
+-- visible tinyint(1) The visibility of the post. -2 = Draft, -1 = Deleted, 0 = Unapproved, 1 = Visible.  
+  
+- mybb_privatemessages  
+-- pmid int unsigned The id of the message. Primary Key.  
+-- uid int unsigned The id of the sender.  
+-- toid int unsigned The id of the recipient.  
+-- fromid int unsigned The id of the user it is from.  
+-- recipients text A list of recipients.  
+-- folder smallint unsigned The id of the folder.  
+-- subject varchar(120) The subject of the message.  
+-- icon smallint unsigned The icon of the message.  
+-- message text The message.  
+-- dateline int unsigned The timestamp of the message.  
+-- deletetime int unsigned The timestamp of when the message was deleted.  
+-- status tinyint(1) Whether the message has been read.  
+-- statustime int unsigned The timestamp the status last changed.  
+-- includesig tinyint(1) Whether the sender's signature is included.  
+-- smilieoff tinyint(1) Whether smilies are enabled.  
+-- receipt tinyint(1) Whether tracking is used.  
+-- readtime int unsigned The timestamp of when the message was read.  
+-- ipaddress varbinary(16) The ip address of the sender.  
+  
+- mybb_profilefields  
+-- fid smallint unsigned The id of the field. Primary Key.  
+-- name varchar(100) The name of the field.  
+-- description text A description of the field.  
+-- disporder smallint unsigned The display order.  
+-- type text The type of field.  
+-- regex text A regular expression the value must match.  
+-- length smallint unsigned The minimum length of the field.  
+-- maxlength smallint unsigned The maximum length of the value.  
+-- required tinyint(1) Whether the field is required.  
+-- registration tinyint(1) Whether the field is shown on the registration form.  
+-- profile tinyint(1) Show this field on profile.  
+-- postbit tinyint(1) Show this field in posts.  
+-- viewableby text Which groups can view the field.  
+-- editableby text Which groups can edit the field.  
+-- postnum smallint unsigned The number of posts to access this field.  
+-- allowhtml tinyint(1) Whether HTML is allowed in the field.  
+-- allowmycode tinyint(1) Whether mycode is allowed in the field.  
+-- allowsmilies tinyint(1) Whether smilies are allowed in the field.  
+-- allowimgcode tinyint(1) Whether img code is allowed in the field.  
+-- allowvideocode tinyint(1) Whether video code is allowed in the field.  
+    
+- mybb_promotionlogs  
+-- plid int unsigned The id of the entry. Primary Key.  
+-- pid int unsigned The id of the promotion.  
+-- uid int unsigned The id of the user.  
+-- oldusergroup varchar(200) The old usergroup.  
+-- newusergroup smallint The id of the new usergroup.  
+-- dateline int unsigned Timestamp of the event.  
+-- type varchar(9) Primary or secondary.  
+  
 - mybb_promotions
+-- pid int unsigned The id of the promotion. Primary Key.  
+-- title varchar(120) The title of the promotion.  
+-- description text A description of the promotion.  
+-- enabled tinyint(1) Whether the promotion is active.  
+-- logging tinyint(1) Whether the promotion should be logged.  
+-- posts int unsigned How many posts.  
+-- posttype char(2) What the post count must be in relation to posts.  
+-- threads int unsigned How many threads.  
+-- threadtype char(2) What the thread count must be in relation to threads.  
+-- registered int unsigned How much time registered.   
+-- registeredtype varchar(20) Hours, Days, Weeks, Months, Years   
+-- online int unsigned Time spent online.  
+-- onlinetype varchar(20) Online time modifier.  
+-- reputations int Number of reputations.  
+-- reputationtype char(2) What the reputation count must be in relation to reputions.  
+-- referrals int unsigned Nukber of referrals.  
+-- referralstype char(2) What the referral count must be in relation to referrals.  
+-- warnings int unsigned Warning points required.  
+-- warningstype char(2) What the warning points must be in relation to warnings.  
+-- requirements varchar(200) What criteria to use.  
+-- originalusergroup varchar(120) Old usergroup.  
+-- newusergroup smallint unsigned New usergroup id.  
+-- usergrouptype varchar(120)  Primary or Secondary.  
+  
 - mybb_questions
 - mybb_questionsessions
 - mybb_reportedcontent
