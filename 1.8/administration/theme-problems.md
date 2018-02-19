@@ -1,3 +1,9 @@
+---
+layout:   page
+title:    "Theme Problems"
+categories: [administration]
+---
+
 # Broken themes
 If your theme doesn't look right or is completely broken you can try the following things to help you fix it.
 
