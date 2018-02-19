@@ -32,14 +32,14 @@ Go to **User CP > Edit Options**. You should see the translation in the **Other 
 
 ### Default forum translation
 
-If you want your new translation to be default for all new users and guests you can change it by going to **Admin CP > Configuration > Settings > General Configuration > Default Language**.
+If you want your new translation to be default for all new users and guests you can change it by going to **Admin CP > Configuration > Change Settings > General Configuration > Default Language.**
 This would make this the default translation for all new users and guests.
 
-**Please note:** Changing this in Admin CP will not force new default translation to existing users on board. They need to change it manually in their profiles.
+**Please note:** Changing this in the Admin CP will not force a new default translation for existing users on the forum. They will need to change it manually in their profiles.
 
 #### Default translation for Admin CP
 
-You can set the default Admin CP language to be different than default forums translation.
+You can set the default Admin CP language to be different than the default forums translation.
 To do that you should go to **Admin CP > Home > Preferences > Admin Control Panel Language**
 
-Note that you have options **Default** and languages installed on your board. Option Default will make default Admin CP translation same as board translation.
+Note that you have the options **Default** and languages installed on your board. Option Default will make the default Admin CP translation the same as the forum translation.
