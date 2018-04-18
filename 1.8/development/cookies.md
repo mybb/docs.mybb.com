@@ -149,6 +149,9 @@ The following is a list of the cookies that MyBB sets, and a note about each one
 
 	<dt>mybbuser</dt>
 	<dd>This cookie stores the login information for the Front End, and is set when a user logs in, and is removed when the user logs out. The UID and the login key are stored in this cookie.</dd>
+	
+	<dt>PHPSESSID</dt>
+	<dd>This is not straightaway linked to MyBB but this is part of $mybb->cookies; responsible to hold the session ID.</dd>
 
 	<dt>pollvotes[$pid]</dt>
 	<dd>Stores a guest's vote on poll $pid.</dd>
