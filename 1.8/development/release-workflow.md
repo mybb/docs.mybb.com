@@ -39,7 +39,9 @@ categories: [development]
 
       - [@mybbsecurity](https://twitter.com/mybbsecurity) on Twitter (in accordance with [rules](https://github.com/mybb/meta-internal/blob/master/docs/social-twitter-mybbsecurity.md)),
       - [@mybb](https://twitter.com/mybb) on Twitter,
-      - `#18-support` channel on Discord (pinned message).
+      - `#18-support` channel on Discord (pinned message),
+
+   6. the Release Notes and Release Blog Post pages are archived using [web.archive.org](https://web.archive.org/).
 
 4. ### Repository Updates
 
