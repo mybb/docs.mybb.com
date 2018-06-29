@@ -6,17 +6,24 @@ categories: [development]
 
 0. ### Repository Maintenance
 
-   The version is updated in:
-   - `MyBB::$version`, `MyBB::$version_code` (_inc/class_core.php_),
-   - `$langinfo['version']` in the English language manifest (_inc/languages/english.php_),
-   - `version` attributes of `<theme>`, `<stylesheet>`, `<template>` depending on changes (_install/resources/mybb_theme.xml_).
+   - #### Public Repositories
 
-   Target version milestones are removed from unresolved Issues and Pull Requests.
+     The version is updated in:
+     - `MyBB::$version`, `MyBB::$version_code` (_inc/class_core.php_),
+     - `$langinfo['version']` in the English language manifest (_inc/languages/english.php_),
+     - `version` attributes of `<theme>`, `<stylesheet>`, `<template>` depending on changes (_install/resources/mybb_theme.xml_).
 
+     Target version milestones are removed from unresolved Issues and Pull Requests. Labels are updated.
+
+     The final public codebase is marked with a signed `mybb_*_build` git tag.
+
+   - #### Internal Repositories
+
+     Security patches (if any) are added to the data repository at the `mybb_*_build` tag/branch.
 
 1. ### Package Building and Testing
    The [mybb/mybb-build](https://github.com/mybb/mybb-build) build script is used to perform tasks related to preparing releasable packages and associated information.
-   The output is securely shared between Team members and tested.
+   The input and output is securely shared between Team members and tested.
 
 2. ### Announcements Preparation
 
@@ -46,8 +53,8 @@ categories: [development]
 4. ### Repository Updates
 
    1. A `MyBB 1.8.x` synchronization commit, containing any changes that have been applied outside the public repository, is pushed and tagged (`mybb_18xx`),
-   2. a [Release](https://github.com/mybb/mybb/releases) is created and all packages are attached,
-   3. the version metadata is updated to list GitHub as a download source for the packages.
+   2. a [Release](https://github.com/mybb/mybb/releases) is created and all packages are attached (including `build_*.zip`, containing the input and output of the build script),
+   4. the version metadata is updated to list GitHub as a download source for the packages.
 
 5. ### Documentation Updates
    The plugin hooks data is pushed to the Docs repository.
