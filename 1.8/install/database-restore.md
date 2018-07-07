@@ -35,7 +35,7 @@ To restore a database to your forum, you will first need to know what database t
 
 6. We are not quite done yet. You may now need to configure your database settings (.../inc/config.php).
 
-**Note: If your restoring a database from IcyBoards, you will need to replace your current prefix (in ../inc/config.php) with your new prefix (in PhpMyAdmin).**
+**Note: If you are restoring a database from IcyBoards, you will need to replace your current prefix (in ../inc/config.php) with your new prefix (in PhpMyAdmin).**
 
 ## SQLite Database Restore
 
