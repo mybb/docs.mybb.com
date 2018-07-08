@@ -15,6 +15,8 @@ To restore a database to your forum, you will first need to know what database t
 
 * PostgreSQL (In this demonstration, PhpPgAdmin will be used)
 
+In the following instructions Linux CentOS 7 will be used, so commands may differ.
+
 ## MySQL Database Restore
 
 1. Once logged into PhpMyAdmin, select your database from the side-menu on the left. 
@@ -39,7 +41,21 @@ To restore a database to your forum, you will first need to know what database t
 
 ## SQLite Database Restore
 
-1. 
+1. Login to PhpLiteAdmin and select your database from the side-menu on the left. 
+
+[![phpliteadmin screen](https://i.gyazo.com/977c411c55aceb763dae6b524323caf4.png)](https://i.gyazo.com/977c411c55aceb763dae6b524323caf4.png)
+
+2. Select "Import" from the top menu and you will be presented with a page like this:
+
+[![phpliteadmin import](https://i.gyazo.com/d8bf3f0c277aaf6d38295adfcd364b8b.png)](https://i.gyazo.com/d8bf3f0c277aaf6d38295adfcd364b8b.png)
+
+3. Select "Choose File", browse to your backup, and click "Open" on the Windows Prompt.
+
+4. Generally, the settings on this page can be left as is, but you may alter where appropriate.
+
+5. Click "Import". If successful, you will see your tables in the side-menu on the left, as well as a message letting you know the import was successful.
+
+[![phpliteadmin success](https://i.gyazo.com/0aafbe3053692a90f114125deb21bded.png)](https://i.gyazo.com/0aafbe3053692a90f114125deb21bded.png)
 
 ## PostgreSQL Database Restore
 
@@ -110,3 +126,7 @@ To restore a database to your forum, you will first need to know what database t
 4. Followed by:
 
 ``` \dt ```
+
+[![ssh postgrestables](https://i.gyazo.com/6469a1d6802d36eb3694d528259dd4b5.png)](https://i.gyazo.com/6469a1d6802d36eb3694d528259dd4b5.png)
+
+
