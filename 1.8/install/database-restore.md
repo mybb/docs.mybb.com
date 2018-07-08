@@ -33,12 +33,6 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 5. Click "Go". If successful, a message saying so will be presented as well as your tables in the side-menu on the left.
 
-### Optional
-
-6. We are not quite done yet. You may now need to configure your database settings (.../inc/config.php).
-
-**Note: If you are restoring a database from IcyBoards, you will need to replace your current prefix (in ../inc/config.php) with your new prefix (in PhpMyAdmin).**
-
 ## SQLite Database Restore
 
 1. Login to PhpLiteAdmin and select your database from the side-menu on the left. 
@@ -59,6 +53,19 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 ## PostgreSQL Database Restore
 
+1. Login to PhpPgAdmin and select your database from the side-menu on the left.
+
+[![phppgadmin screen](https://i.gyazo.com/26cc40c5ed671cd2f0ff075da275df6b.png)](https://i.gyazo.com/26cc40c5ed671cd2f0ff075da275df6b.png)
+
+2. Select "SQL" from the top menu and you will be presented with a page like this:
+
+[![phppgadmin import](https://i.gyazo.com/9bba8dde27d530ec52bb001ece08018e.png)](https://i.gyazo.com/9bba8dde27d530ec52bb001ece08018e.png)
+
+3. Select "Choose File", browse to your backup, and click "Open" on the Windows Prompt.
+
+4. Click "Execute". Allow the SQL to run. If successful, you will be able to scroll down to the bottom of the page and it will look something like this:
+
+[![phppgadmin successful](https://i.gyazo.com/5c74e92bb59bf5d2cf0c4afa4ac5e50d.png)](https://i.gyazo.com/5c74e92bb59bf5d2cf0c4afa4ac5e50d.png)
 
 ## Database Restore using SSH
 
@@ -129,4 +136,8 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 [![ssh postgrestables](https://i.gyazo.com/6469a1d6802d36eb3694d528259dd4b5.png)](https://i.gyazo.com/6469a1d6802d36eb3694d528259dd4b5.png)
 
+## Optional
 
+1. Now that you have restored your database, we are not quite done yet. You may now need to configure your database settings (.../inc/config.php).
+
+**Note: If you are restoring a database from IcyBoards, you will need to replace your current prefix (in ../inc/config.php) with your new prefix (in PhpMyAdmin).**
