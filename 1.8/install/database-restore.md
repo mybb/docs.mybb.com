@@ -92,3 +92,21 @@ To restore a database to your forum, you will first need to know what database t
 
 
 ### PostgreSQL
+
+1. After logging into your server via SSH, you will now need to enter PostgreSQL. Your method may slightly differ when logging in. Run the following to login:
+
+``` su - postgres ```
+
+[![ssh postgres](https://i.gyazo.com/cfac0f26d760077e92e76c40f9052b81.png)](https://i.gyazo.com/cfac0f26d760077e92e76c40f9052b81.png)
+
+2. To restore your database, you will need to run the following:
+
+``` psql database_name < /PATH/TO/DUMP.SQL ```
+
+3. You can now proceed to run the following to output your tables:
+
+``` psql database_name ```
+
+4. Followed by:
+
+``` \dt ```
