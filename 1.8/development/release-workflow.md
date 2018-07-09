@@ -52,7 +52,7 @@ categories: [development]
 
 4. ### Repository Updates
 
-   1. A `MyBB 1.8.x` synchronization commit, containing any changes that have been applied outside the public repository, is pushed and tagged (`mybb_18xx`),
+   1. A `MyBB 1.8.x` synchronization commit, containing any changes that have been applied outside the public repository, is pushed and tagged (signed `mybb_18xx` git tag),
    2. a [Release](https://github.com/mybb/mybb/releases) is created and all packages are attached (including `build_*.zip`, containing the input and output of the build script),
    4. the version metadata is updated to list GitHub as a download source for the packages.
 
