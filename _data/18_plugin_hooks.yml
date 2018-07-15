@@ -1,4 +1,4 @@
-version_code: 1816
+version_code: 1817
 hooks:
   - name: admin_config_action_handler
     file: admin/modules/config/module_meta.php
@@ -1163,16 +1163,16 @@ hooks:
     line: 148
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
-    line: 135
+    line: 122
+  - name: admin_tools_cache_rebuild_commit
+    file: admin/modules/tools/cache.php
+    line: 109
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
     line: 95
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
-    line: 122
-  - name: admin_tools_cache_rebuild_commit
-    file: admin/modules/tools/cache.php
-    line: 109
+    line: 135
   - name: admin_tools_cache_start
     file: admin/modules/tools/cache.php
     line: 220
@@ -1844,10 +1844,10 @@ hooks:
     line: 277
   - name: archive_forum_thread
     file: archive/index.php
-    line: 412
+    line: 374
   - name: archive_forum_thread
     file: archive/index.php
-    line: 374
+    line: 412
   - name: archive_index_end
     file: archive/index.php
     line: 444
@@ -1896,10 +1896,10 @@ hooks:
     line: 1331
   - name: calendar_dayview_end
     file: calendar.php
-    line: 1982
+    line: 1994
   - name: calendar_dayview_start
     file: calendar.php
-    line: 1705
+    line: 1711
   - name: calendar_do_addevent_end
     file: calendar.php
     line: 212
@@ -1932,16 +1932,16 @@ hooks:
     line: 808
   - name: calendar_end
     file: calendar.php
-    line: 2574
+    line: 2586
   - name: calendar_event_end
     file: calendar.php
-    line: 1636
+    line: 1642
   - name: calendar_event_start
     file: calendar.php
     line: 1425
   - name: calendar_main_view
     file: calendar.php
-    line: 2304
+    line: 2316
   - name: calendar_move_end
     file: calendar.php
     line: 1225
@@ -1959,10 +1959,10 @@ hooks:
     line: 1379
   - name: calendar_weekview_end
     file: calendar.php
-    line: 2268
+    line: 2280
   - name: calendar_weekview_start
     file: calendar.php
-    line: 2057
+    line: 2069
   - name: captcha_build_end
     file: inc/class_captcha.php
     line: 142
@@ -2147,7 +2147,7 @@ hooks:
     line: 22
   - name: copy_file_to_cdn_end
     file: inc/functions.php
-    line: 8730
+    line: 8736
     parameters:
       - "$hook_args"
   - name: create_password
@@ -2263,12 +2263,12 @@ hooks:
       - "$this"
   - name: datahandler_post_insert_post
     file: inc/datahandlers/post.php
-    line: 1118
+    line: 1094
     parameters:
       - "$this"
   - name: datahandler_post_insert_post
     file: inc/datahandlers/post.php
-    line: 1094
+    line: 1118
     parameters:
       - "$this"
   - name: datahandler_post_insert_post_end
@@ -2298,12 +2298,12 @@ hooks:
       - "$this"
   - name: datahandler_post_insert_thread_post
     file: inc/datahandlers/post.php
-    line: 1553
+    line: 1508
     parameters:
       - "$this"
   - name: datahandler_post_insert_thread_post
     file: inc/datahandlers/post.php
-    line: 1508
+    line: 1553
     parameters:
       - "$this"
   - name: datahandler_post_update
@@ -2434,7 +2434,7 @@ hooks:
       - "$user_activity"
   - name: format_name
     file: inc/functions.php
-    line: 3098
+    line: 3104
     parameters:
       - "$parameters"
   - name: forumdisplay_announcement
@@ -2457,12 +2457,12 @@ hooks:
     line: 1332
   - name: functions_fetch_ban_times
     file: inc/functions.php
-    line: 7479
+    line: 7485
     parameters:
       - "$ban_times"
   - name: get_ip
     file: inc/functions.php
-    line: 4017
+    line: 4023
     parameters:
       - "$ip_array"
   - name: global_end
@@ -2476,7 +2476,7 @@ hooks:
     line: 94
   - name: index_end
     file: index.php
-    line: 398
+    line: 424
   - name: index_start
     file: index.php
     line: 23
@@ -2518,7 +2518,7 @@ hooks:
     line: 260
   - name: mark_reports
     file: inc/functions.php
-    line: 4698
+    line: 4704
     parameters:
       - "$arguments"
   - name: member_activate_accountactivated
@@ -2541,10 +2541,10 @@ hooks:
     line: 684
   - name: member_do_emailuser_end
     file: member.php
-    line: 2984
+    line: 2990
   - name: member_do_emailuser_start
     file: member.php
-    line: 2823
+    line: 2829
   - name: member_do_login_end
     file: member.php
     line: 1837
@@ -2562,12 +2562,6 @@ hooks:
     line: 1587
   - name: member_do_register_end
     file: member.php
-    line: 402
-  - name: member_do_register_end
-    file: member.php
-    line: 460
-  - name: member_do_register_end
-    file: member.php
     line: 436
   - name: member_do_register_end
     file: member.php
@@ -2578,6 +2572,12 @@ hooks:
   - name: member_do_register_end
     file: member.php
     line: 548
+  - name: member_do_register_end
+    file: member.php
+    line: 402
+  - name: member_do_register_end
+    file: member.php
+    line: 460
   - name: member_do_register_start
     file: member.php
     line: 94
@@ -2589,10 +2589,10 @@ hooks:
     line: 1508
   - name: member_emailuser_end
     file: member.php
-    line: 3129
+    line: 3135
   - name: member_emailuser_start
     file: member.php
-    line: 2996
+    line: 3002
   - name: member_login
     file: member.php
     line: 1865
@@ -2610,7 +2610,7 @@ hooks:
     line: 1579
   - name: member_profile_end
     file: member.php
-    line: 2812
+    line: 2818
   - name: member_profile_start
     file: member.php
     line: 2023
@@ -2649,7 +2649,7 @@ hooks:
     line: 2014
   - name: memberlist_end
     file: memberlist.php
-    line: 488
+    line: 494
   - name: memberlist_intermediate
     file: memberlist.php
     line: 306
@@ -2741,25 +2741,25 @@ hooks:
     line: 1968
   - name: modcp_banning
     file: modcp.php
-    line: 4199
+    line: 4205
   - name: modcp_banning_start
     file: modcp.php
-    line: 4113
+    line: 4119
   - name: modcp_banuser_end
     file: modcp.php
-    line: 4579
+    line: 4585
   - name: modcp_banuser_start
     file: modcp.php
-    line: 4448
+    line: 4454
   - name: modcp_delete_announcement
     file: modcp.php
     line: 1106
   - name: modcp_do_banuser_end
     file: modcp.php
-    line: 4411
+    line: 4417
   - name: modcp_do_banuser_start
     file: modcp.php
-    line: 4340
+    line: 4346
   - name: modcp_do_delete_announcement
     file: modcp.php
     line: 1074
@@ -2780,19 +2780,19 @@ hooks:
     line: 2741
   - name: modcp_do_modnotes_end
     file: modcp.php
-    line: 4598
+    line: 4604
   - name: modcp_do_modnotes_start
     file: modcp.php
-    line: 4590
+    line: 4596
   - name: modcp_do_modqueue_end
     file: modcp.php
-    line: 2115
+    line: 2036
   - name: modcp_do_modqueue_end
     file: modcp.php
     line: 2084
   - name: modcp_do_modqueue_end
     file: modcp.php
-    line: 2036
+    line: 2115
   - name: modcp_do_modqueue_start
     file: modcp.php
     line: 1987
@@ -2810,46 +2810,46 @@ hooks:
     line: 1896
   - name: modcp_editprofile_end
     file: modcp.php
-    line: 3288
+    line: 3294
   - name: modcp_editprofile_start
     file: modcp.php
-    line: 2941
+    line: 2947
   - name: modcp_end
     file: modcp.php
-    line: 4917
+    line: 4923
   - name: modcp_finduser_end
     file: modcp.php
-    line: 3432
+    line: 3438
   - name: modcp_finduser_start
     file: modcp.php
-    line: 3394
+    line: 3400
   - name: modcp_iplookup_end
     file: modcp.php
-    line: 4055
+    line: 4061
   - name: modcp_ipsearch_end
     file: modcp.php
-    line: 4012
+    line: 4018
   - name: modcp_ipsearch_posts_start
     file: modcp.php
-    line: 3698
+    line: 3704
   - name: modcp_ipsearch_users_start
     file: modcp.php
-    line: 3792
+    line: 3798
   - name: modcp_liftban_end
     file: modcp.php
-    line: 4246
+    line: 4252
   - name: modcp_liftban_start
     file: modcp.php
-    line: 4229
+    line: 4235
   - name: modcp_modlogs_filter
     file: modcp.php
     line: 1014
   - name: modcp_modlogs_result
     file: modcp.php
-    line: 1004
+    line: 4813
   - name: modcp_modlogs_result
     file: modcp.php
-    line: 4807
+    line: 1004
   - name: modcp_modlogs_start
     file: modcp.php
     line: 874
@@ -2888,10 +2888,10 @@ hooks:
     line: 278
   - name: modcp_warninglogs_end
     file: modcp.php
-    line: 3650
+    line: 3656
   - name: modcp_warninglogs_start
     file: modcp.php
-    line: 3551
+    line: 3557
   - name: moderation_approvethread
     file: moderation.php
     line: 894
@@ -2989,7 +2989,7 @@ hooks:
       - "$date"
   - name: mycode_add_codebuttons
     file: inc/functions.php
-    line: 3282
+    line: 3288
     parameters:
       - "$editor_lang_strings"
   - name: newreply_do_newreply_end
@@ -3126,10 +3126,10 @@ hooks:
     line: 916
   - name: portal_announcement
     file: portal.php
-    line: 620
+    line: 636
   - name: portal_end
     file: portal.php
-    line: 736
+    line: 752
   - name: portal_start
     file: portal.php
     line: 59
@@ -3138,22 +3138,22 @@ hooks:
     line: 98
   - name: postbit
     file: inc/functions_post.php
-    line: 836
+    line: 842
     parameters:
       - "$post"
   - name: postbit_announcement
     file: inc/functions_post.php
-    line: 833
+    line: 839
     parameters:
       - "$post"
   - name: postbit_pm
     file: inc/functions_post.php
-    line: 830
+    line: 836
     parameters:
       - "$post"
   - name: postbit_prev
     file: inc/functions_post.php
-    line: 827
+    line: 833
     parameters:
       - "$post"
   - name: pre_output_page
@@ -3169,10 +3169,10 @@ hooks:
     line: 180
   - name: printthread_start
     file: printthread.php
-    line: 24
+    line: 33
   - name: printthread_start
     file: printthread.php
-    line: 33
+    line: 24
   - name: private_advanced_search
     file: private.php
     line: 510
@@ -3320,66 +3320,69 @@ hooks:
     parameters:
       - "$file"
   - name: report_content_types
-    file: inc/class_datacache.php
-    line: 1250
-    parameters:
-      - "$content_types"
-  - name: report_content_types
     file: admin/modules/config/report_reasons.php
     line: 21
     parameters:
       - "$content_types"
+  - name: report_content_types
+    file: inc/class_datacache.php
+    line: 1250
+    parameters:
+      - "$content_types"
   - name: report_do_report_end
     file: report.php
-    line: 163
+    line: 161
   - name: report_do_report_end
     file: report.php
-    line: 221
+    line: 219
   - name: report_do_report_start
     file: report.php
-    line: 154
+    line: 152
   - name: report_end
     file: report.php
-    line: 279
+    line: 277
   - name: report_start
     file: report.php
     line: 25
   - name: report_type
     file: report.php
-    line: 128
+    line: 126
   - name: reputation_add_end
     file: reputation.php
-    line: 501
+    line: 507
   - name: reputation_add_end_error
     file: reputation.php
-    line: 508
+    line: 514
   - name: reputation_add_start
     file: reputation.php
-    line: 423
+    line: 429
   - name: reputation_do_add_end
     file: reputation.php
-    line: 413
+    line: 419
   - name: reputation_do_add_process
     file: reputation.php
-    line: 385
+    line: 391
   - name: reputation_do_add_start
     file: reputation.php
-    line: 246
+    line: 252
   - name: reputation_end
     file: reputation.php
-    line: 1053
+    line: 1059
   - name: reputation_start
     file: reputation.php
     line: 24
   - name: reputation_vote
     file: reputation.php
-    line: 1042
-  - name: search_do_search_end
-    file: search.php
-    line: 1628
+    line: 1048
   - name: search_do_search_end
     file: search.php
     line: 1732
+  - name: search_do_search_end
+    file: search.php
+    line: 1628
+  - name: search_do_search_process
+    file: search.php
+    line: 1360
   - name: search_do_search_process
     file: search.php
     line: 1523
@@ -3391,13 +3394,10 @@ hooks:
     line: 1437
   - name: search_do_search_process
     file: search.php
-    line: 1303
-  - name: search_do_search_process
-    file: search.php
-    line: 1360
-  - name: search_do_search_process
-    file: search.php
     line: 1615
+  - name: search_do_search_process
+    file: search.php
+    line: 1303
   - name: search_do_search_start
     file: search.php
     line: 1529
@@ -3735,10 +3735,10 @@ hooks:
     line: 3057
   - name: usercp_editsig_end
     file: usercp.php
-    line: 2265
+    line: 2216
   - name: usercp_editsig_end
     file: usercp.php
-    line: 2216
+    line: 2265
   - name: usercp_editsig_start
     file: usercp.php
     line: 2153
@@ -3845,10 +3845,10 @@ hooks:
     line: 302
   - name: warnings_warning
     file: warnings.php
-    line: 859
+    line: 293
   - name: warnings_warning
     file: warnings.php
-    line: 293
+    line: 859
   - name: xmlhttp
     file: xmlhttp.php
     line: 205
