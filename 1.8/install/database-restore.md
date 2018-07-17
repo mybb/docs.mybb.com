@@ -7,7 +7,7 @@ redirect_from:
 - /Database-Restore.html
 ---
 
-To restore a database to your forum, you will first need to know what database type your forum is using in order to determine which instructions to follow. MyBB supports the following database types:
+To restore a database to your forum, you will first need to know what database engine your forum is using in order to determine which instructions to follow. MyBB supports the following database types:
 
 * MySQL (In this demonstration, PhpMyAdmin will be used)
 
@@ -21,11 +21,11 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 1. Once logged into PhpMyAdmin, select your database from the side-menu on the left. 
 
-[![database screen](https://i.gyazo.com/f4376fa46113a79a691d023ee07bf430.png)](https://i.gyazo.com/f4376fa46113a79a691d023ee07bf430.png)
+[![database screen](/assets/images/1.8/database-restore/phpmyadmin_1.png)](/assets/images/1.8/database-restore/phpmyadmin_1.png)
 
 2. From here, select "Import" from the top menu. You will be presented with a page like this:
 
-[![import screen](https://i.gyazo.com/d460da5ba195ecc8f6b0056a8d01b0f0.png)](https://i.gyazo.com/d460da5ba195ecc8f6b0056a8d01b0f0.png)
+[![import screen](/assets/images/1.8/database-restore/phpmyadmin_2.png)](/assets/images/1.8/database-restore/phpmyadmin_2.png)
 
 3. Select "Choose File", browse to your backup, and click "Open" on the Windows Prompt. 
 
@@ -37,11 +37,11 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 1. Login to PhpLiteAdmin and select your database from the side-menu on the left. 
 
-[![phpliteadmin screen](https://i.gyazo.com/977c411c55aceb763dae6b524323caf4.png)](https://i.gyazo.com/977c411c55aceb763dae6b524323caf4.png)
+[![phpliteadmin screen](/assets/images/1.8/database-restore/sqlite_1.png)](/assets/images/1.8/database-restore/sqlite_1.png)
 
 2. Select "Import" from the top menu and you will be presented with a page like this:
 
-[![phpliteadmin import](https://i.gyazo.com/d8bf3f0c277aaf6d38295adfcd364b8b.png)](https://i.gyazo.com/d8bf3f0c277aaf6d38295adfcd364b8b.png)
+[![phpliteadmin import](/assets/images/1.8/database-restore/sqlite_2.png)](/assets/images/1.8/database-restore/sqlite_2.png)
 
 3. Select "Choose File", browse to your backup, and click "Open" on the Windows Prompt.
 
@@ -49,23 +49,23 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 5. Click "Import". If successful, you will see your tables in the side-menu on the left, as well as a message letting you know the import was successful.
 
-[![phpliteadmin success](https://i.gyazo.com/0aafbe3053692a90f114125deb21bded.png)](https://i.gyazo.com/0aafbe3053692a90f114125deb21bded.png)
+[![phpliteadmin success](/assets/images/1.8/database-restore/sqlite_3.png)](/assets/images/1.8/database-restore/sqlite_3.png)
 
 ## PostgreSQL Database Restore
 
 1. Login to PhpPgAdmin and select your database from the side-menu on the left.
 
-[![phppgadmin screen](https://i.gyazo.com/26cc40c5ed671cd2f0ff075da275df6b.png)](https://i.gyazo.com/26cc40c5ed671cd2f0ff075da275df6b.png)
+[![phppgadmin screen](/assets/images/1.8/database-restore/phppgadmin_1.png)](/assets/images/1.8/database-restore/phppgadmin_1.png)
 
 2. Select "SQL" from the top menu and you will be presented with a page like this:
 
-[![phppgadmin import](https://i.gyazo.com/9bba8dde27d530ec52bb001ece08018e.png)](https://i.gyazo.com/9bba8dde27d530ec52bb001ece08018e.png)
+[![phppgadmin import](/assets/images/1.8/database-restore/phppgadmin_2.png)](/assets/images/1.8/database-restore/phppgadmin_2.png)
 
 3. Select "Choose File", browse to your backup, and click "Open" on the Windows Prompt.
 
 4. Click "Execute". Allow the SQL to run. If successful, you will be able to scroll down to the bottom of the page and it will look something like this:
 
-[![phppgadmin successful](https://i.gyazo.com/5c74e92bb59bf5d2cf0c4afa4ac5e50d.png)](https://i.gyazo.com/5c74e92bb59bf5d2cf0c4afa4ac5e50d.png)
+[![phppgadmin successful](/assets/images/1.8/database-restore/phppgadmin_3.png)](/assets/images/1.8/database-restore/phppgadmin_3.png)
 
 ## Database Restore using SSH
 
@@ -73,11 +73,13 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 1. After logging into your server via SSH, run the following:
 
-``` mysql -u YOUR_MYBB_DB_USER -p YOUR_MYBB_DBNAME < /PATH/TO/DUMP.SQL ``` 
+```
+mysql -u YOUR_MYBB_DB_USER -p YOUR_MYBB_DBNAME < /PATH/TO/DUMP.SQL
+```
 
 2. You will be prompted for your password. If successful, your SSH window will look something like this:
 
-[![importssh screen](https://i.gyazo.com/7c06e62e690921ba9efecf130fddc1ec.png)](https://i.gyazo.com/7c06e62e690921ba9efecf130fddc1ec.png)
+[![importssh screen](/assets/images/1.8/database-restore/ssh_mysql_1.png)](/assets/images/1.8/database-restore/ssh_mysql_1.png)
 
 3. To be sure, log back into MySQL by running the following (When prompted, enter password):
 
@@ -89,7 +91,7 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 5. If successful, your SSH window will look something like this:
 
-[![ssh mysqltables](https://i.gyazo.com/b4bf33214eca3d8458c6aa34dae81026.png)](https://i.gyazo.com/b4bf33214eca3d8458c6aa34dae81026.png)
+[![ssh mysqltables](/assets/images/1.8/database-restore/ssh_mysql_2.png)](/assets/images/1.8/database-restore/ssh_mysql_2.png)
 
 ### SQLite
 
@@ -103,7 +105,7 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 3. Once you have entered SQLite, you will be greeted with a simlar message to the following:
 
-[![ssh sqlitegreeting](https://i.gyazo.com/1ff04ce7c6e643ca3ddcd242c832b0f7.png)](https://i.gyazo.com/1ff04ce7c6e643ca3ddcd242c832b0f7.png)
+[![ssh sqlitegreeting](/assets/images/1.8/database-restore/ssh_sqlite_1.png)](/assets/images/1.8/database-restore/ssh_sqlite_1.png)
 
 3. Proceed to run the following:
 
@@ -111,7 +113,7 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 4. Your SSH window should now look something like this:
 
-[![ssh sqlitetables](https://i.gyazo.com/bbb6839e815b8e403f5347baab622030.png)](https://i.gyazo.com/bbb6839e815b8e403f5347baab622030.png)
+[![ssh sqlitetables](/assets/images/1.8/database-restore/ssh_sqlite_2.png)](/assets/images/1.8/database-restore/ssh_sqlite_2.png)
 
 
 ### PostgreSQL
@@ -120,7 +122,7 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 ``` su - postgres ```
 
-[![ssh postgres](https://i.gyazo.com/cfac0f26d760077e92e76c40f9052b81.png)](https://i.gyazo.com/cfac0f26d760077e92e76c40f9052b81.png)
+[![ssh postgres](/assets/images/1.8/database-restore/ssh_postgresql_1.png)](/assets/images/1.8/database-restore/ssh_postgresql_1.png)
 
 2. To restore your database, you will need to run the following:
 
@@ -134,7 +136,7 @@ In the following instructions Linux CentOS 7 will be used, so commands may diffe
 
 ``` \dt ```
 
-[![ssh postgrestables](https://i.gyazo.com/6469a1d6802d36eb3694d528259dd4b5.png)](https://i.gyazo.com/6469a1d6802d36eb3694d528259dd4b5.png)
+[![ssh postgrestables](/assets/images/1.8/database-restore/ssh_postgresql_2.png)](/assets/images/1.8/database-restore/ssh_postgresql_2.png)
 
 ## Optional
 
