@@ -83,11 +83,15 @@ mysql -u YOUR_MYBB_DB_USER -p YOUR_MYBB_DBNAME < /PATH/TO/DUMP.SQL
 
 3. To be sure, log back into MySQL by running the following (When prompted, enter password):
 
-```mysql -u YOUR_MYBB_DB_USER -p```
+```
+mysql -u YOUR_MYBB_DB_USER -p
+```
 
 4. Now run the following to select your database and show existing tables:
 
-```USE database_name_here; SHOW TABLES;```
+```
+USE database_name_here; SHOW TABLES;
+```
 
 5. If successful, your SSH window will look something like this:
 
@@ -97,11 +101,15 @@ mysql -u YOUR_MYBB_DB_USER -p YOUR_MYBB_DBNAME < /PATH/TO/DUMP.SQL
 
 1. After logging into your server via SSH, run the following to import your database:
 
-``` sqlite3 database_name < /PATH/TO/DUMP.SQL ```
+```
+sqlite3 database_name < /PATH/TO/DUMP.SQL 
+```
 
 2. Now login to your database and check to see if your tables exist by running the following:
 
-``` sqlite3 database_name.db ```
+```
+sqlite3 database_name.db
+```
 
 3. Once you have entered SQLite, you will be greeted with a simlar message to the following:
 
@@ -109,7 +117,9 @@ mysql -u YOUR_MYBB_DB_USER -p YOUR_MYBB_DBNAME < /PATH/TO/DUMP.SQL
 
 3. Proceed to run the following:
 
-``` .tables ```
+``` 
+.tables
+```
 
 4. Your SSH window should now look something like this:
 
@@ -120,21 +130,29 @@ mysql -u YOUR_MYBB_DB_USER -p YOUR_MYBB_DBNAME < /PATH/TO/DUMP.SQL
 
 1. After logging into your server via SSH, you will now need to enter PostgreSQL. Your method may slightly differ when logging in. Run the following to login:
 
-``` su - postgres ```
+``` 
+su - postgres
+```
 
 [![ssh postgres](/assets/images/1.8/database-restore/ssh_postgresql_1.png)](/assets/images/1.8/database-restore/ssh_postgresql_1.png)
 
 2. To restore your database, you will need to run the following:
 
-``` psql database_name < /PATH/TO/DUMP.SQL ```
+``` 
+psql database_name < /PATH/TO/DUMP.SQL
+```
 
 3. You can now proceed to run the following to output your tables:
 
-``` psql database_name ```
+``` 
+psql database_name
+```
 
 4. Followed by:
 
-``` \dt ```
+``` 
+\dt
+```
 
 [![ssh postgrestables](/assets/images/1.8/database-restore/ssh_postgresql_2.png)](/assets/images/1.8/database-restore/ssh_postgresql_2.png)
 
