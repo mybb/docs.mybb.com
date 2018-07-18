@@ -158,11 +158,15 @@ psql database_name
 
 ## Optional
 
-1. Now that you have restored your database, we are not quite done yet. You may now need to configure your database settings in ```./inc/config.php```.
+1. Now that you have restored your database, we are not quite done yet. You may now need to configure your database settings in ```./inc/config.php``` :
+
+```
+$config['database']['table_prefix'] = 'mybb_'; - The Table Prefix from the database should be placed here.
+```
 
 **Note: If you are restoring a database from IcyBoards, you will need to replace your current prefix in ```./inc/config.php``` with your new prefix (in PhpMyAdmin). Additionally, you will need correct the ```Uploads Path``` and ```Avatar Upload Path``` in the Admin CP:**
 
 ``` 
 Uploads Path - By default, MyBB's Upload Path is ./uploads
-Avatar Upload Path - By default, MyBB's Avatar Upload Path is .uploads/avatars
+Avatar Upload Path - By default, MyBB's Avatar Upload Path is ./uploads/avatars
 ``` 
