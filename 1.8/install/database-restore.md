@@ -7,13 +7,13 @@ redirect_from:
 - /Database-Restore.html
 ---
 
-To restore a database to your forum, you will first need to know what database engine your forum is using in order to determine which instructions to follow. MyBB supports the following database types:
+To restore a database to your forum, you will first need to know what database engine your forum is using in order to determine which instructions to follow. MyBB supports the following database engines:
 
-* MySQL (In this demonstration, PhpMyAdmin will be used)
+* MySQL (In this demonstration, [PhpMyAdmin](https://www.phpmyadmin.net/) will be used)
 
-* SQLite (In this demonstration, PhpLiteAdmin will be used)
+* SQLite (In this demonstration, [PhpLiteAdmin](https://www.phpliteadmin.org/) will be used)
 
-* PostgreSQL (In this demonstration, PhpPgAdmin will be used)
+* PostgreSQL (In this demonstration, [PhpPgAdmin](http://phppgadmin.sourceforge.net) will be used)
 
 In the following instructions Linux CentOS 7 will be used, so commands may differ.
 
@@ -158,6 +158,6 @@ psql database_name
 
 ## Optional
 
-1. Now that you have restored your database, we are not quite done yet. You may now need to configure your database settings (.../inc/config.php).
+1. Now that you have restored your database, we are not quite done yet. You may now need to configure your database settings in ```./inc/config.php```.
 
-**Note: If you are restoring a database from IcyBoards, you will need to replace your current prefix (in ../inc/config.php) with your new prefix (in PhpMyAdmin).**
+**Note: If you are restoring a database from IcyBoards, you will need to replace your current prefix in ```./inc/config.php``` with your new prefix (in PhpMyAdmin). Additionally, you will need correct the ```Uploads Path``` and ```Avatar Upload Path``` in the Admin CP.**
