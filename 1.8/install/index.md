@@ -37,7 +37,7 @@ The process of uploading your files will depend on your hosting configuration, b
 
 ### File Permissions
 
-Certain file permissions are required for MyBB to function correctly. Once you've uploaded your files you will need to set the permissions on certain files and directories. Before granting certain files and directories chmod 777, you may want to try chmod 755 or chmod 775. 
+Certain file permissions are required for MyBB to function correctly. Once you've uploaded your files you will need to set the permissions on certain files and directories. Before granting certain files and directories chmod 777, you may want to try chmod 755 or chmod 775.
 
 ** Before applying file permissions, rename config.default.php (.../inc/config.default.php) to config.php
 

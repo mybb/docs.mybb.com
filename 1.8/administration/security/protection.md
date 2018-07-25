@@ -22,7 +22,7 @@ Also known as "htpasswd protection," adding HTTP Basic Auth protection to your A
 
 When finished with one of the instruction sets below, browse to your Admin CP again, and you should receive an additional username/password prompt before seeing the Admin CP login or interface.
 
-## cPanel Basic Auth Configuration (without SSH)
+### cPanel Basic Auth Configuration (without SSH)
 
 Similar to Apache, but with the cPanel UI on shared hosts.
 
@@ -32,7 +32,7 @@ Similar to Apache, but with the cPanel UI on shared hosts.
 - Fill out the given form with a username and strong password (>85 score)
 - Click `Save`.
 
-## Apache Basic Auth Configuration (with or without SSH)
+### Apache Basic Auth Configuration (with or without SSH)
 
 Requirements:
 - SSH access to site
@@ -53,7 +53,7 @@ require valid-user
 - Run shell command: `htpasswd -c -b /path/to/.htpasswd desired_username desired_secure_password`
     - **NOTE:** Replace `/path/to/.htpasswd` in both places with the respective file location.
 
-## Nginx Basic Auth Configuration (with SSH)
+### Nginx Basic Auth Configuration (with SSH)
 
 Requirements:
 
