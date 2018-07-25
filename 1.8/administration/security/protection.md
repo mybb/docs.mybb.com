@@ -8,6 +8,18 @@ categories: [security]
 
 One thing we cannot stress enough is to always have your MyBB installation up to date. If you are running an older version, you are open to security vulnerabilities that were already fixed. MyBB takes security very seriously. Whenever a security vulnerability is reported it is patched very quickly and a new release is sent out. You should never skip upgrading, as you will be opening yourself to a security risk that hackers can easily take advantage of.
 
+### Additional Server Configuration
+
+The MyBB package contains `htaccess.txt` and `htaccess-nginx.txt` files in the MyBB root directory.
+
+In case of Apache servers:
+ - `htaccess.txt` should be renamed to `.htaccess` and kept in the same directory,
+ - additionally, make sure that your installation contains a `.htaccess` file in the `admin/backups/` directory (already renamed in the package).
+
+
+ In case of nginx servers:
+ - the directives included in the `htaccess-nginx.txt` file should be inserted into the nginx configuration file of your server.
+
 ## Fine Tuning the Admin CP
 
 The Admin CP is the most powerful tool in MyBB. If anyone gains access to it, they can easily deface your forum and get complete control over it. It is therefore important to guarantee that only you or your administrators can access it. For starters you should rename your Admin CP directory and hide all links to it. Once you have done that it is a good idea to install [Admin CP Honeypot](https://community.mybb.com/thread-94406.html). This will take your previous Admin CP location and install a fake Admin CP, which will record the IP of anyone who tries to login to it and email you a small report.

@@ -35,6 +35,18 @@ Next, you will need to upload the **contents** of the `Upload/` directory to eit
 
 The process of uploading your files will depend on your hosting configuration, but FTP is the most common method. [FileZilla](https://filezilla-project.org/) is a free FTP client suitable for uploading MyBB.
 
+### Additional Server Configuration
+
+The MyBB package contains `htaccess.txt` and `htaccess-nginx.txt` files in the MyBB root directory.
+
+In case of Apache servers:
+ - `htaccess.txt` should be renamed to `.htaccess` and kept in the same directory,
+ - additionally, make sure that your installation contains a `.htaccess` file in the `admin/backups/` directory (already renamed in the package).
+
+
+ In case of nginx servers:
+ - the directives included in the `htaccess-nginx.txt` file should be inserted into the nginx configuration file of your server.
+
 ### File Permissions
 
 Certain file permissions are required for MyBB to function correctly. Once you've uploaded your files you will need to set the permissions on certain files and directories. Before granting certain files and directories chmod 777, you may want to try chmod 755 or chmod 775.
