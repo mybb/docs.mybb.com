@@ -22,8 +22,6 @@ The following PHP extensions are also needed:
 - [gd](https://secure.php.net/manual/en/book.image.php)
 - [The respective vendor specific database PHP extension](https://secure.php.net/manual/en/refs.database.php)
 
-MyBB 1.6 supports PHP >= 5.0.
-
 # Recommendations
 
 Although not required, we highly recommend:
