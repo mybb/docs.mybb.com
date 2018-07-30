@@ -26,5 +26,5 @@ The following PHP extensions are also needed:
 
 Although not required, we highly recommend:
 
-- PHP 5.5
-- MySQL 5.5
+- PHP 7.2
+- MySQL 8.0
