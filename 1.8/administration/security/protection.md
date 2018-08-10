@@ -8,6 +8,8 @@ categories: [security]
 
 One thing we cannot stress enough is to always have your MyBB installation up to date. If you are running an older version, you are open to security vulnerabilities that were already fixed. MyBB takes security very seriously. Whenever a security vulnerability is reported it is patched very quickly and a new release is sent out. You should never skip upgrading, as you will be opening yourself to a security risk that hackers can easily take advantage of.
 
+Similarly, installed MyBB extensions should be kept up to date, especially if new releases address security issues &mdash; we recommend subscribing to used plugins and themes on the [Extend](https://community.mybb.com/mods.php) section to get notified of extension updates.
+
 ## Additional Server Configuration
 
 The MyBB package contains `htaccess.txt` and `htaccess-nginx.txt` files in the MyBB root directory.
