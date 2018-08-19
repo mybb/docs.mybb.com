@@ -106,3 +106,6 @@ return array(
 ```
 
 **Change the `compatibility` value to your version. For example from 16* to 18* to try and run a former MyBB 1.6.x plugin on 1.8.x. Note that this doesn't always work, as some plugins may depend on deprecated functionality from the MyBB 1.6 series.**
+
+### Useful links
+- [How to use PuTTY on Windows](https://www.ssh.com/ssh/putty/windows/)
