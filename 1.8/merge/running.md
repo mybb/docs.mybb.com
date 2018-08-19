@@ -97,3 +97,7 @@ If any of this information you don't want sent, simply un-tick the "Send anonymo
 # After running
 After you used the Merge System you should run all "Recount and Rebuild" tools, which are located under "Tools and Maintenance" in your Admin-CP. After that you should also rebuild the caches.
 As last thing you need to recheck all permission (forum and group).
+
+### Useful links
+- [How to use File Manager in cPanel](https://documentation.cpanel.net/display/74Docs/File+Manager)
+- [Fixing Database Errors](https://docs.mybb.com/1.8/faq/database-errors/)

@@ -98,3 +98,6 @@ Once you've downloaded the correct upgrade package for you, it's time to do the 
 If you run into any problems at any point of the upgrade process, visit the [Community Forum](https://community.mybb.com/) for help.
 
 Otherwise, *congratulations*! You've just upgraded your forum!
+
+### Useful links
+- [How to use File Manager in cPanel](https://documentation.cpanel.net/display/74Docs/File+Manager)

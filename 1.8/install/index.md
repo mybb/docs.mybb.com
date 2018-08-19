@@ -270,3 +270,11 @@ rm -Rf Upload mybb.zip
 mv inc/config.default.php inc/config.php
 chmod -R 0777 cache uploads inc/settings.php inc/config.php
 ```
+
+### Useful links
+- [How to use File Manager in cPanel](https://documentation.cpanel.net/display/74Docs/File+Manager)
+- [How to install Linux, Apache, MySQL, PHP (LAMP) stack](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04)
+- [How to install Linux, Nginx, MySQL, PHP (LEMP) stack](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04)
+- [Linux chmod command tutorial for beginners](https://www.howtoforge.com/tutorial/linux-chmod-command/)
+- [Fixing Database Errors](https://docs.mybb.com/1.8/faq/database-errors/)
+- [How to use PuTTY on Windows](https://www.ssh.com/ssh/putty/windows/)

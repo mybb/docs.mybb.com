@@ -159,3 +159,7 @@ This error occurs when you upgrade your forum from MyBB 1.6.4 or older to MyBB 1
 3. Replace it with:
 
     `{$hiddencaptcha}`
+
+### Useful links
+- [Upgrade MyBB](https://docs.mybb.com/1.8/install/upgrade/)
+- [Fixing database errors](https://docs.mybb.com/1.8/faq/database-errors/)
