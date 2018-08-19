@@ -53,3 +53,6 @@ You can use [this tool](/tools/cookie-settings) to generate appropriate cookie s
 These cookie settings should work on all MyBB installations. If you have site-integration, your cookie settings may need to be more generalized.
 
 After you change your cookie settings, please advise your users to log out and clear cookies stored by their browser, so that the new cookies can take effect.
+
+### Useful links
+- [Login/Logout problems? PLEASE READ](https://community.mybb.com/thread-42123.html)
