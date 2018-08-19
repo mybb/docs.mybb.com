@@ -173,3 +173,4 @@ Avatar Upload Path - By default, MyBB's Avatar Upload Path is ./uploads/avatars
 
 ### Useful links
 - [How to perform a backup](https://docs.mybb.com/1.8/administration/backups/)
+- [How to use PuTTY on Windows](https://www.ssh.com/ssh/putty/windows/)
