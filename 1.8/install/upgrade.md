@@ -9,11 +9,13 @@ redirect_from:
 
 ## Preparing for your Upgrade
 
-Before you upgrade, you should always read the announcement blog post properly before starting. The new version's changes will clearly be explained and provide an insight into how difficult the upgrade will be.
+Before you upgrade, you should always read the announcement blog post properly before starting. This will include the release notes and issues fixed. The new version's changes will clearly be explained and provide an insight into how difficult the upgrade will be. It is advised to take time and go through all relevant information before starting the upgrade.
+
+**Note: If using a pre-release, please take care when upgrading and read the files contained within the pack to determine which templates will need updating and so forth.
 
 1. First, you may want to shut down your forum. Doing this means that no one will interrupt the upgrade process accidentally. Please remember that switching the forum off by using the **Board Online/Offline** setting is **not** recommended. The best method is to use a `.htaccess` restriction on your forum's root folder so that no one can access the front-end. 
 
-To restrict access to your forum except from your IP address, you need to place the following code in your root `.htaccess` file if you're using apache or in the server block of your site's config file if you're using nginx. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
+To restrict access to your forum except from your IP address, you need to place the following code in your root `.htaccess` file if you're using apache, or in the server block of your site's config file if you're using nginx. Replace `127.0.0.1` with [your IP address](https://icanhazip.com/).
 
 Apache 2.2:
 

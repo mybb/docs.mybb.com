@@ -19,27 +19,31 @@ When using MyBB, you may encounter an Internal MyBB Error, an SQL error, or see 
 **Error Type:** *MyBB Error (41)*
 
 **Error Message:** Your board has not yet been installed and configured. Please do so before attempting to browse it.
-Information: This occurs when the file `inc/config.php` is incorrectly configured. If you have not already installed your forum, you need to go to `install/index.php` and run through the installation process, including entering your database details. If you have already installed your forum, and you have data in your database, then you will need to open `inc/config.php`, use this sample `inc/config.php` text, and edit in your database information.
+
+**Information:** This occurs when the file `inc/config.php` is incorrectly configured. If you have not already installed your forum, you need to go to `install/index.php` and run through the installation process, including entering your database details. If you have already installed your forum, and you have data in your database, then you will need to open `inc/config.php`, use this sample `inc/config.php` text, and edit in your database information.
 
 ## MyBB Error (43)
 
 **Error Type:** *MyBB Error (43)*
 
 **Error Message:** The install directory (`install/`) still exists on your server and is not locked. To access MyBB please either remove this directory or create an empty file in it called `lock`.
-Information: This occurs when your `install` folder is still present, or has not been locked. To solve this error, either completely delete the `install` folder, or create an empty file called `lock` inside the folder. MyBB requires you to remove or lock this folder so that nobody can run the installation or upgrade script and corrupt or erase your database with it.
+
+**Information:** This occurs when your `install` folder is still present, or has not been locked. To solve this error, either completely delete the `install` folder, or create an empty file called `lock` inside the folder. MyBB requires you to remove or lock this folder so that nobody can run the installation or upgrade script and corrupt or erase your database with it.
 
 ## MyBB Error (42)
 
 **Error Type:** *MyBB Error (42)*
 
 **Error Message:** Your board has not yet been upgraded. Please do so before attempting to browse it.
-Information: This occurs when you are attempting to do a major upgrade (e.g. 1.6.x to 1.8.x) and do not run the upgrade script after uploading the new files. To fix this, go to `install/upgrade.php` and choose your old version from the list and follow the directions given by the upgrader..
+
+**Information:** This occurs when you are attempting to do a major upgrade (e.g. 1.6.x to 1.8.x) and do not run the upgrade script after uploading the new files. To fix this, go to `install/upgrade.php` and choose your old version from the list and follow the directions given by the upgrader..
 
 ## MyBB Error (44)
 
 **Error Type:** *MyBB Error (44)*
 
 **Error Message:** MyBB was unable to load the SQL extension. Please contact the MyBB Group for support. MyBB Website
+
 **Information:** This occurs when the database type is incorrect in `inc/config.php`. To fix this, open `inc/config.php` and check the entry for `$config['database']['type']`. A common issue is having `mysql` instead of `mysqli`, or having `mysqli` instead of `mysql`. If you do not know what needs to be here, contact your host provider.
 
 # SQL Errors
@@ -138,7 +142,7 @@ The installer is currently locked, please remove `lock` from the install directo
 
 You don't have permission to access `admin/index.php` on this server.
 
-Information: This is nearly always a problem with *mod_security*. *mod_security* is an Apache extension that is used for security. In MyBB 1.4, *mod_security* treats the way the URLs are set out in the ACP as a security threat, so it will deny you access.
+**Information:** This is nearly always a problem with *mod_security*. *mod_security* is an Apache extension that is used for security. In MyBB 1.4, *mod_security* treats the way the URLs are set out in the ACP as a security threat, so it will deny you access.
 
 You should contact your host provider and ask them to whitelist your domain or hosting account against *mod_security* - basically so that it doesn't affect you anymore.
 
