@@ -1,4 +1,4 @@
-version_code: 1818
+version_code: 1819
 hooks:
   - name: admin_config_action_handler
     file: admin/modules/config/module_meta.php
@@ -1160,19 +1160,19 @@ hooks:
     line: 201
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
-    line: 148
+    line: 135
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
-    line: 135
+    line: 109
+  - name: admin_tools_cache_rebuild_commit
+    file: admin/modules/tools/cache.php
+    line: 148
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
     line: 95
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
     line: 122
-  - name: admin_tools_cache_rebuild_commit
-    file: admin/modules/tools/cache.php
-    line: 109
   - name: admin_tools_cache_start
     file: admin/modules/tools/cache.php
     line: 220
@@ -2298,12 +2298,12 @@ hooks:
       - "$this"
   - name: datahandler_post_insert_thread_post
     file: inc/datahandlers/post.php
-    line: 1548
+    line: 1503
     parameters:
       - "$this"
   - name: datahandler_post_insert_thread_post
     file: inc/datahandlers/post.php
-    line: 1503
+    line: 1548
     parameters:
       - "$this"
   - name: datahandler_post_update
@@ -2415,7 +2415,7 @@ hooks:
     line: 465
   - name: editpost_end
     file: editpost.php
-    line: 961
+    line: 927
   - name: editpost_restorepost
     file: editpost.php
     line: 386
@@ -2547,10 +2547,10 @@ hooks:
     line: 2878
   - name: member_do_login_end
     file: member.php
-    line: 1909
+    line: 1886
   - name: member_do_login_end
     file: member.php
-    line: 1886
+    line: 1909
   - name: member_do_login_start
     file: member.php
     line: 1823
@@ -2562,7 +2562,7 @@ hooks:
     line: 1579
   - name: member_do_register_end
     file: member.php
-    line: 662
+    line: 548
   - name: member_do_register_end
     file: member.php
     line: 460
@@ -2571,13 +2571,13 @@ hooks:
     line: 670
   - name: member_do_register_end
     file: member.php
-    line: 548
-  - name: member_do_register_end
-    file: member.php
-    line: 436
+    line: 662
   - name: member_do_register_end
     file: member.php
     line: 402
+  - name: member_do_register_end
+    file: member.php
+    line: 436
   - name: member_do_register_start
     file: member.php
     line: 94
@@ -2672,7 +2672,7 @@ hooks:
     line: 525
   - name: misc_clearcookies
     file: misc.php
-    line: 1043
+    line: 1035
   - name: misc_clearpass
     file: misc.php
     line: 104
@@ -2723,10 +2723,10 @@ hooks:
     line: 27
   - name: misc_syndication_end
     file: misc.php
-    line: 1034
+    line: 1026
   - name: misc_syndication_start
     file: misc.php
-    line: 929
+    line: 921
   - name: modcp_allreports_end
     file: modcp.php
     line: 811
@@ -2846,10 +2846,10 @@ hooks:
     line: 1014
   - name: modcp_modlogs_result
     file: modcp.php
-    line: 4819
+    line: 1004
   - name: modcp_modlogs_result
     file: modcp.php
-    line: 1004
+    line: 4819
   - name: modcp_modlogs_start
     file: modcp.php
     line: 874
@@ -3325,21 +3325,21 @@ hooks:
     parameters:
       - "$file"
   - name: report_content_types
-    file: admin/modules/config/report_reasons.php
-    line: 21
-    parameters:
-      - "$content_types"
-  - name: report_content_types
     file: inc/class_datacache.php
     line: 1250
     parameters:
       - "$content_types"
-  - name: report_do_report_end
-    file: report.php
-    line: 219
+  - name: report_content_types
+    file: admin/modules/config/report_reasons.php
+    line: 21
+    parameters:
+      - "$content_types"
   - name: report_do_report_end
     file: report.php
     line: 161
+  - name: report_do_report_end
+    file: report.php
+    line: 219
   - name: report_do_report_start
     file: report.php
     line: 152
@@ -3387,13 +3387,13 @@ hooks:
     line: 1746
   - name: search_do_search_process
     file: search.php
-    line: 1451
-  - name: search_do_search_process
-    file: search.php
-    line: 1629
-  - name: search_do_search_process
-    file: search.php
     line: 1537
+  - name: search_do_search_process
+    file: search.php
+    line: 1374
+  - name: search_do_search_process
+    file: search.php
+    line: 1451
   - name: search_do_search_process
     file: search.php
     line: 1240
@@ -3402,7 +3402,7 @@ hooks:
     line: 1317
   - name: search_do_search_process
     file: search.php
-    line: 1374
+    line: 1629
   - name: search_do_search_start
     file: search.php
     line: 1543
@@ -3593,130 +3593,133 @@ hooks:
       - "$upload"
   - name: usercp2_addsubscription_forum
     file: usercp.php
-    line: 1933
+    line: 1978
   - name: usercp2_addsubscription_thread
     file: usercp.php
-    line: 2002
+    line: 2047
   - name: usercp2_do_addsubscription
     file: usercp.php
-    line: 1896
+    line: 1941
   - name: usercp2_removesubscription_forum
     file: usercp.php
-    line: 2027
+    line: 2072
   - name: usercp2_removesubscription_thread
     file: usercp.php
-    line: 2061
+    line: 2106
   - name: usercp2_removesubscriptions_forum
     file: usercp.php
-    line: 2084
+    line: 2129
   - name: usercp2_removesubscriptions_thread
     file: usercp.php
-    line: 2100
+    line: 2145
   - name: usercp_acceptrequest_end
     file: usercp.php
-    line: 2608
+    line: 2653
   - name: usercp_acceptrequest_start
     file: usercp.php
-    line: 2521
+    line: 2566
   - name: usercp_attachments_end
     file: usercp.php
-    line: 3833
+    line: 3891
   - name: usercp_attachments_start
     file: usercp.php
-    line: 3727
+    line: 3772
   - name: usercp_avatar_end
     file: usercp.php
-    line: 2497
+    line: 2542
   - name: usercp_avatar_intermediate
     file: usercp.php
-    line: 2467
+    line: 2512
   - name: usercp_avatar_start
     file: usercp.php
-    line: 2438
+    line: 2483
   - name: usercp_cancelrequest_end
     file: usercp.php
-    line: 2660
+    line: 2705
   - name: usercp_cancelrequest_start
     file: usercp.php
-    line: 2656
+    line: 2701
   - name: usercp_changename_end
     file: usercp.php
-    line: 1376
+    line: 1421
   - name: usercp_changename_start
     file: usercp.php
-    line: 1370
+    line: 1415
   - name: usercp_declinerequest_end
     file: usercp.php
-    line: 2638
+    line: 2683
   - name: usercp_declinerequest_start
     file: usercp.php
-    line: 2626
+    line: 2671
   - name: usercp_do_attachments_end
     file: usercp.php
-    line: 3856
+    line: 3935
   - name: usercp_do_attachments_start
     file: usercp.php
-    line: 3844
+    line: 3902
   - name: usercp_do_avatar_end
     file: usercp.php
-    line: 2426
+    line: 2471
   - name: usercp_do_avatar_start
     file: usercp.php
-    line: 2278
+    line: 2323
   - name: usercp_do_changename_end
     file: usercp.php
-    line: 1356
+    line: 1401
   - name: usercp_do_changename_start
     file: usercp.php
-    line: 1326
+    line: 1371
   - name: usercp_do_drafts_end
     file: usercp.php
-    line: 3323
+    line: 3368
   - name: usercp_do_drafts_start
     file: usercp.php
-    line: 3284
+    line: 3329
   - name: usercp_do_editlists_end
     file: usercp.php
-    line: 2995
+    line: 3040
   - name: usercp_do_editlists_start
     file: usercp.php
-    line: 2670
+    line: 2715
   - name: usercp_do_editsig_end
     file: usercp.php
-    line: 2147
+    line: 2192
   - name: usercp_do_editsig_process
     file: usercp.php
-    line: 2145
+    line: 2190
   - name: usercp_do_editsig_start
     file: usercp.php
-    line: 2120
+    line: 2165
   - name: usercp_do_email_changed
     file: usercp.php
-    line: 1231
+    line: 1276
+  - name: usercp_do_email_changed
+    file: usercp.php
+    line: 1240
   - name: usercp_do_email_start
     file: usercp.php
-    line: 1173
+    line: 1175
   - name: usercp_do_email_verify
     file: usercp.php
-    line: 1222
+    line: 1267
   - name: usercp_do_notepad_end
     file: usercp.php
-    line: 3873
+    line: 3952
   - name: usercp_do_notepad_start
     file: usercp.php
-    line: 3871
+    line: 3950
   - name: usercp_do_options_end
     file: usercp.php
-    line: 807
+    line: 809
   - name: usercp_do_options_start
     file: usercp.php
-    line: 743
+    line: 745
   - name: usercp_do_password_end
     file: usercp.php
-    line: 1302
+    line: 1347
   - name: usercp_do_password_start
     file: usercp.php
-    line: 1269
+    line: 1314
   - name: usercp_do_profile_end
     file: usercp.php
     line: 279
@@ -3725,64 +3728,64 @@ hooks:
     line: 148
   - name: usercp_do_subscriptions_start
     file: usercp.php
-    line: 1387
+    line: 1432
   - name: usercp_drafts_end
     file: usercp.php
-    line: 3273
+    line: 3318
   - name: usercp_drafts_start
     file: usercp.php
-    line: 3219
+    line: 3264
   - name: usercp_editlists_end
     file: usercp.php
-    line: 3211
+    line: 3256
   - name: usercp_editlists_start
     file: usercp.php
-    line: 3057
+    line: 3102
   - name: usercp_editsig_end
     file: usercp.php
-    line: 2216
+    line: 2261
   - name: usercp_editsig_end
     file: usercp.php
-    line: 2265
+    line: 2310
   - name: usercp_editsig_start
     file: usercp.php
-    line: 2153
+    line: 2198
   - name: usercp_email
     file: usercp.php
-    line: 1256
+    line: 1301
   - name: usercp_end
     file: usercp.php
-    line: 4448
+    line: 4527
   - name: usercp_forumsubscriptions_end
     file: usercp.php
-    line: 1860
+    line: 1905
   - name: usercp_forumsubscriptions_start
     file: usercp.php
-    line: 1754
+    line: 1799
   - name: usercp_menu
     file: inc/functions_user.php
-    line: 505
+    line: 471
   - name: usercp_menu_built
     file: inc/functions_user.php
-    line: 515
+    line: 481
   - name: usercp_notepad_end
     file: usercp.php
-    line: 4039
+    line: 4118
   - name: usercp_notepad_start
     file: usercp.php
-    line: 4036
+    line: 4115
   - name: usercp_options_end
     file: usercp.php
-    line: 1160
+    line: 1162
   - name: usercp_options_start
     file: usercp.php
-    line: 815
+    line: 817
   - name: usercp_password
     file: usercp.php
-    line: 1315
+    line: 1360
   - name: usercp_profile_end
     file: usercp.php
-    line: 732
+    line: 734
   - name: usercp_profile_start
     file: usercp.php
     line: 308
@@ -3791,31 +3794,31 @@ hooks:
     line: 61
   - name: usercp_subscriptions_end
     file: usercp.php
-    line: 1746
+    line: 1791
   - name: usercp_subscriptions_start
     file: usercp.php
-    line: 1430
+    line: 1475
   - name: usercp_usergroups_accept_invite
     file: usercp.php
-    line: 3503
+    line: 3548
   - name: usercp_usergroups_change_displaygroup
     file: usercp.php
-    line: 3352
+    line: 3397
   - name: usercp_usergroups_end
     file: usercp.php
-    line: 3719
+    line: 3764
   - name: usercp_usergroups_join_group
     file: usercp.php
-    line: 3479
+    line: 3524
   - name: usercp_usergroups_join_group_request
     file: usercp.php
-    line: 3465
+    line: 3510
   - name: usercp_usergroups_leave_group
     file: usercp.php
-    line: 3378
+    line: 3423
   - name: usercp_usergroups_start
     file: usercp.php
-    line: 3329
+    line: 3374
   - name: verify_user_password
     file: inc/functions_user.php
     line: 237
