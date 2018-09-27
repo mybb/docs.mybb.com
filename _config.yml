@@ -4,7 +4,7 @@ kramdown:
   input: GFM
 highlighter: rouge
 permalink: pretty
-baseurl: /docs.mybb.com # MUST BE REMOVED BEFORE SUBMITTING PULL REQUEST
+baseurl: ""
 mainsiteurl: https://mybb.com
 
 search_site: docs.mybb.com
