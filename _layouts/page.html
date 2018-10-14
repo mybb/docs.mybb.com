@@ -1,32 +1,40 @@
 ---
-layout: default
+layout: simple
+section: docs
 ---
-<article id="docs_page">
-	<header id="mainFeature">
+<article class="main main--docs-page">
+	<header class="main-feature">
 		<div class="wrapper">
-			<h1><a href="{{ site.baseurl }}/">MyBB Documentation</a> &rsaquo;</h1>
-			<h2>{{ page.title }}</h2>
+			<p class="main-feature__parent"><a href="{{ site.baseurl }}/" class="main-feature__parent__link">MyBB Documentation</a> {% include icon.html icon='chevron-right' %}</p>
+			<h1 class="main-feature__page-title">{{ page.title }}</h1>
+			{% if page.description == "empty" %}
+
+			{% else %}
+			<p class="main-feature__description">{{ page.description | replace:"!SITE_BASEURL!",site.baseurl }}</p>
+			{% endif %}
 		</div>
 	</header>
-	<div class="page wrapper">
-		{% if page.toc != false and layout.toc != false %}
-		<div class="toc"></div>
-		{% endif %}
+	<div class="wrapper">
+		<div class="page-content">
+			{% if page.toc != false and layout.toc != false %}
+			<div class="toc"></div>
+			{% endif %}
 
-		{% if page.url contains "/1.6/" %}
-		<div class="eol-notice">
-			<span class="eol-notice__heading">MyBB 1.6 Series EOL &ndash; Important Notice</span>
-			<p>The MyBB 1.6 series reached End-Of-Life on October 1, 2015. The MyBB Group strongly encourages all communities running MyBB 1.6 to upgrade as soon as possible to avoid the possibility of future bugs and/or vulnerabilities.
-				<a href="https://blog.mybb.com/2015/10/01/support-for-mybb-1-6-x-has-ended/">Find out more &rarr;</a>
+			{% if page.url contains "/1.6/" %}
+			<div class="eol-notice">
+				<span class="eol-notice__heading">MyBB 1.6 Series EOL &ndash; Important Notice</span>
+				<p>The MyBB 1.6 series reached End-Of-Life on October 1, 2015. The MyBB Group strongly encourages all communities running MyBB 1.6 to upgrade as soon as possible to avoid the possibility of future bugs and/or vulnerabilities.
+					<a href="https://blog.mybb.com/2015/10/01/support-for-mybb-1-6-x-has-ended/">Find out more &rarr;</a>
+				</p>
+				<p>The 1.6 Documentation is no longer maintained and some information may be outdated.</p>
+			</div>
+			{% endif %}
+
+			{{ content }}
+
+			<p class="edit-page">
+				<a href="https://github.com/mybb/docs.mybb.com/blob/gh-pages/{{ page.path }}" title="Contribute to this article on GitHub" class="edit-page__link">{% include icon.html icon='pencil-alt' %} Edit this page on GitHub</a>
 			</p>
-			<p>The 1.6 Documentation is no longer maintained and some information may be outdated.</p>
 		</div>
-		{% endif %}
-
-		{{ content }}
-
-		<p class="edit-page">
-			<a href="https://github.com/mybb/docs.mybb.com/blob/gh-pages/{{ page.path }}" title="Contribute to this article on GitHub" class="edit-page-link"><i class="fa fa-pencil"></i><span class="text">Edit this page on GitHub</span></a>
-		</p>
 	</div>
 </article>

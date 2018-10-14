@@ -7,7 +7,13 @@ permalink: pretty
 baseurl: ""
 mainsiteurl: https://mybb.com
 
-gems:
+search_site: docs.mybb.com
+search_field_placeholder: Search Documentation
+
+remote_theme: mybb/mybb-website-theme
+
+plugins:
   - jekyll-redirect-from
+  - jekyll-remote-theme
 
 exclude: ["CNAME", "README.md", "CONTRIBUTING.md", "key_private.key", "key_public.pem"]

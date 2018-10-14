@@ -1,66 +1,59 @@
 ---
-layout: default
+layout: simple
 title:  "MyBB Documentation"
 categories: [page]
 ---
 
-<article id="docs_page">
-	<header id="mainFeature">
+<article class="main main--docs-page">
+	<header class="main-feature">
 		<div class="wrapper">
-			<h1>MyBB Documentation</h1>
-			<p class="description">Welcome to the MyBB Documentation. Here you can read tutorials and the online documentation and find solutions to common problems with MyBB.</p>
+			<p class="main-feature__parent"><a href="{{ site.baseurl }}/" class="main-feature__parent__link">MyBB Documentation</a> {% include icon.html icon='chevron-right' %}</p>
+			<h1 class="main-feature__page-title">All Docs</h1>
 		</div>
 	</header>
-	<div class="page wrapper">
-		<div style="width: 48%; float: left;">
-			<section>
-				<h1>MyBB 1.8 Documentation</h1>
-
-				<section>
+	<div class="wrapper">
+		<div class="page-content page-content--columns">
+			<div class="page-column">
+				<section class="block block--basic">
+					<h1>MyBB 1.8 Documentation</h1>
 					<h2>Installation</h2>
 					{% include category.html category="install" %}
 
 					<h2>Merge System</h2>
 					{% include category.html category="merge" %}
-				</section>
 
-				<section>
 					<h2>FAQ</h2>
 					{% include category.html category="faq" %}
-				</section>
 
-				<section>
 					<h2>Administration</h2>
 					{% include category.html category="administration" %}
 
 					<h3>Security</h3>
 					{% include category.html category="security" %}
 				</section>
-			</section>
-			<section>
-				<h1>MyBB 1.6 Documentation</h1>
+				<section class="block block--basic">
+					<h1>MyBB 1.6 Documentation</h1>
+					<p><a href="{{ site.baseurl }}/1.6/">View old documentation for 1.6</a></p>
+				</section>
+			</div>
+			<div class="page-column">
+				<section class="block block--basic">
+					<h1>MyBB Development</h1>
+					{% include category.html category="development" %}
 
-				<a href="{{ site.baseurl }}/1.6/">View old documentation for 1.6</a>
-			</section>
-		</div>
-		<div style="width: 48%; float: right;">
-			<section>
-				<h1>MyBB Development</h1>
-				{% include category.html category="development" %}
+					<h2>Plugin Development</h2>
+					{% include category.html category="plugins" %}
 
-				<h2>Plugin Development</h2>
-				{% include category.html category="plugins" %}
+					<h2>Theme Development</h2>
+					{% include category.html category="themes" %}
 
-				<h2>Theme Development</h2>
-				{% include category.html category="themes" %}
+					<h2>Translations</h2>
+					{% include category.html category="translations" %}
 
-				<h2>Translations</h2>
-				{% include category.html category="translations" %}
-
-				<a name="mods-guide"></a>
-				<h2>Extend Website</h2>
-				{% include category.html category="extend" %}
-			</section>
+					<h2 name="mods-guide">Extend Website</h2>
+					{% include category.html category="extend" %}
+				</section>
+			</div>
 		</div>
 	</div>
 </article>
