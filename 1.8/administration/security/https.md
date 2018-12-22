@@ -131,7 +131,7 @@ Additional headers, added to every response from your server, can contain direct
 | Header name | Suggested value for MyBB | Description |
 | - | - | - |
 | `Strict-Transport-Security` | `max-age=31536000; includeSubDomains; preload` | Prevents the browser from downgrading connections to your website to plaintext HTTP until the `max-age` time has elapsed. If `includeSubDomains` is specified, the rule applies to all subdomains. The `preload` part instructs that this rule can be hardcoded into web browsers (<a href="https://hstspreload.appspot.com/">read more</a>). Include only if your forum is working correctly under HTTPS (you can set the `max-age` to lower periods of time and increase it afterwards). |
-| `Content-Security-Policy` | `upgrade-insecure-requests; default-src https: data: 'unsafe-inline' 'unsafe-eval'` | Instructs the browser to upgrade protocols of included HTTP resources to HTTPS and to block unsecured elements. | 
+| `Content-Security-Policy` | `upgrade-insecure-requests; default-src https: data: 'unsafe-inline' 'unsafe-eval'; frame-ancestors 'none'; base-uri 'self'` | Instructs the browser to upgrade protocols of included HTTP resources to HTTPS, block unsecured elements, disallow including the website in frames and limit usage of `<base>` directives | 
 | `X-Frame-Options` | `deny` | Improves the protection against clickjacking by preventing the website from being displayed in frames. |
 | `X-XSS-Protection` | `1; mode=block` | Enables the browser's XSS filter. |
 | `X-Content-Type-Options` | `nosniff` | Intructs the browser to interpret filetypes according to the content type header. |
