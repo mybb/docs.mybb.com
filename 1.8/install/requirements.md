@@ -26,5 +26,5 @@ The following PHP extensions are also needed:
 
 Although not required, we highly recommend:
 
-- PHP 7.2
+- PHP 7.3
 - PostgreSQL 10.0 or MySQL 8.0
