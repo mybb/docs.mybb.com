@@ -4,7 +4,7 @@ title:  "Themes"
 categories: [administration]
 ---
 
-### About Themes / Skins
+# About Themes / Skins
 
 Themes, also known as **skins**, **forum designs**, or **styles**  improve the style and design of your board. They stylize the layout of your forum (it can be front-end design and back-end design). Themes use stylesheets (CSS files) and HTML-based templates.
 
@@ -21,14 +21,10 @@ For 1.6 Themes check [MyBB 1.6 Documentation]({{ site.baseurl }}/1.6/), or direc
 
 ## Installing themes
 
-Firstly, after you download (usually a ZIP file), extract it somewhere and find in the resulting folder a file named  `<theme name>.xml` or similar..
-Also, many authors provide a README file in there, which will help you install it correctly. Sometimes there is more complexity than a basic installation as described here.
+Firstly, after you download (usually a ZIP file), extract it somewhere and find in the resulting folder a file named  `<theme name>.xml` or similar... This is the file you will need for the installation (through the Admin CP).
+Many authors provide a README file within the resulting extracted folder, which will help you install it correctly. Sometimes there is more complexity than a basic installation as described here.
 
-## Uploading Images
-
-In the folder, you will probably see either a folder of images named similar to the theme, or an images folder with a subfolder (usually named the same as the theme, or similar) of images. Upload the entire folder that contains the images to `images/<theme-images-folder-name>`, unless the documentation provided with your theme requests otherwise.
-
-## Uploading the XML File
+### Uploading the XML File
 
 An XML file is bundled with a theme download. This XML file contains all the templates the theme uses, as well as some other default settings and details about the theme.
 
@@ -38,3 +34,7 @@ Under `Import from` choose `Local file` -> Search and upload your `.xml` file (f
 You may need to check the `Ignore version compatiblity` option so you can upload it. And click **Import theme** to finish.
 
 A tutorial with images can be found here: [Theme installation](https://community.mybb.com/thread-163256.html).
+
+## Uploading Images
+
+In the folder, you will probably see either a folder of images named similar to the theme, or an images folder with a subfolder (usually named the same as the theme, or similar) of images. Upload the entire folder that contains the images to `images/<theme-images-folder-name>`, unless the documentation provided with your theme requests otherwise.
