@@ -17,7 +17,7 @@ The following hooks are available to plugins in MyBB version code <strong>{{ sit
         </tr>
     </thead>
     <tbody>
-        {% assign hooks = site.data.18_plugin_hooks.hooks | sort: 'file' %}
+        {% assign hooks = site.data.18_plugin_hooks.hooks %}
         {% for hook in hooks %}
         <tr>
             <td>
