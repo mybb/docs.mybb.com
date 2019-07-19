@@ -4,11 +4,11 @@ title:  "Security Workflow"
 categories: [development]
 ---
 
-# Security workflow
+# Security Workflow
 
 If the report is rejected at any point, the workflow skips to _Final Feedback_.
 
-1. ### Submission
+1. ### Reporting
    - Team members handling security issues and team leaders are required to have available and accessible public keys.
    - No initial reports should be transmitted over unencrypted or insecure channels.
 
@@ -23,24 +23,28 @@ If the report is rejected at any point, the workflow skips to _Final Feedback_.
    If applicable, a Team member response to the author that their report has been acknowledged and is being processed.
 
 3. ### Internal Processing
-   1. #### Internal report created
-   A _[Vulnerability Report]_-prefixed staff-only thread is created in the **Development → 1.8** section.
+   1. #### Triage and Analysis
+   The vulnerability is being assessed by team members handling security issues.
 
-   2. #### Triage and Analysis
-   The vulnerability is being assessed by team members handling security issues: a Low/Medium/High Risk is assigned and details related to causes, impact and possible solutions are attached. The thread is added to the _Getting * Ready_ list for the upcoming version.
+     A _[Vulnerability Report]_-prefixed staff-only thread is created in the **Development → 1.8** section.
 
-   3. #### Technical Assessment Feedback
+     A _Low_/_Medium_/_High_ Risk is assigned and details related to causes, impact and possible solutions are attached.  The thread is added to the _Getting * Ready_ list for the upcoming version.
+
+   2. #### Technical Assessment Feedback
    If applicable, a Team member informs the reporter whether their submission is confirmed, invalid, or no fix is expected.
 
-   3. #### Countermeasures implementation
-      1. The development team and security team members prepare and implement measures (including code patches in `git diff` format, advisories and third party cooperation) that will eliminate or mitigate affected environments and prevent related threats in the future. Once an acceptable solution is provided, a `[fix]` link is added to the _Getting * Ready_ thread.
-      2. Prepared countermeasures are being verified internally.
+   3. #### Remediation
+      1. The development team and security team members prepare and implement measures (including code patches in `git diff` format, advisories and third party cooperation) that will eliminate or mitigate affected environments and prevent related threats in the future.
+
+         Once an acceptable solution is provided, a `[fix]` link is added to the _Getting * Ready_ thread.
+
+      2. Prepared countermeasures are verified internally.
 
    4. #### Consultation
    If applicable, Team members cooperate with the reporter to arrive with the best solution possible. During and after the solution development the patch details may be forwarded to the reporter to verify that all vulnerabilities have been properly addressed.
 
 4. ### Releasing
-   1. #### QA packages verification
+   1. #### Package Verification
    Team members handling security issues verify that the release candidate QA packages contain valid countermeasures.
 
    2. #### Release
