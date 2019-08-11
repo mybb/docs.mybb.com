@@ -39,7 +39,7 @@ For automatically scheduled backups, see [Task Manager]({{ site.baseurl }}/1.8/a
 
 The [Directory Structure]({{ site.baseurl }}/1.8/development/directory-structure/), besides MyBB's source code, also contains user-generated content and files related to installed extensions (like themes, plugins, language packs). In most use cases, backups of the following locations should be created for easier recovery.
 
-Whenever the board's funcionality is changed (e.g. by MyBB upgrade, installation of a plugin, theme, language pack):
+Whenever the board's functionality is changed (e.g. by MyBB upgrade, installation of a plugin, theme, language pack):
 - **images/** (if any extensions added their files),
 - **inc/languages/** (if any additional language packs are used),
 - **inc/plugins/** (if any plugins are used),
