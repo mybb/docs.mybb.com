@@ -7,7 +7,7 @@ categories: [administration]
 ## About User Titles
 
 User titles is text that is displayed under the username in posts, threads, profile and on the member list.
-Each group has it's own default user title which is shown if a user doesn't use a custom user title.
+Each group has its own default user title which is shown if a user doesn't use a custom user title.
 
 ## How to set Default User Titles
 
@@ -22,7 +22,7 @@ At `Admin Control Panel -> Users & Groups -> Groups -> <usergroup name>` You can
 
 Just fill out the **Default User Title** field.
 
-#### Set User Titles According the Number of Users Posts
+#### Set User Titles According to the Number of Users Posts
 
 The "Registered" group by default has this option.
 
@@ -52,13 +52,13 @@ Here you can set the star image for this User Title.
 
 ### Edit Your Own User Title Through the User CP
 
-You can easily edit your user title through your profile by going to `User CP -> Edit profile`. At right side of it you have Custom User Title field. Just input your new user title and click save.
+You can easily edit your user title through your profile by going to `User CP -> Edit profile`. At the right side of it, you have Custom User Title field. Just input your new user title and click save.
 
 ### Edit Custom User Title Through the Mod CP
 
 This can be done through the Moderator Control Panel as well. By going to user profile and clicking at `Edit this user in Mod CP` on exactly same way. 
 
-### Edit Custom User Title Throught Admin CP
+### Edit Custom User Title Through Admin CP
 
 This can also be edited for a specific user through Admin Control Panel. When you visit a user profile, click `Edit this user in Admin CP`, and then select the Profile tab.
 Or you can visit `Admin CP -> Users & Groups -> Users`.  Click on the user that you wish to edit and then navigate to the `Profile` tab.
