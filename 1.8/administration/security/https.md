@@ -76,10 +76,10 @@ Once your forum works properly under the new protocol, you can set up your serve
   ```
 
 # Removing mixed content
-Mixed content (insecure content) occurs when the initial page is delivered over HTTPS, but includes content (such as images, videos, etc.) downloaded through unsecure HTTP, limiting the security benefits of HTTPS (<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content#Mixed_active_content">read more</a>).
+Mixed content (insecure content) occurs when the initial page is delivered over HTTPS, but includes content (such as images, videos, etc.) downloaded through insecure HTTP, limiting the security benefits of HTTPS (<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content#Mixed_active_content">read more</a>).
 
 ## Templates and CSS
-Some resources, like images, CSS or JavaScript files might be loaded through your MyBB theme's CSS files (<strong><i>Templates & Style &rarr; Themes</i></strong>) and templates (<strong><i>Templates & Style &rarr; Templates</i></strong>). Those are usually located in the <strong>headerinclude</strong> template (<i>Ungrouped Templates</i>). You can also use the <strong>Search/Replace</strong> utility to find all occurences of `http://` to replace it with `https://`, making sure these resources work correctly under the new address first.
+Some resources, like images, CSS or JavaScript files might be loaded through your MyBB theme's CSS files (<strong><i>Templates & Style &rarr; Themes</i></strong>) and templates (<strong><i>Templates & Style &rarr; Templates</i></strong>). Those are usually located in the <strong>headerinclude</strong> template (<i>Ungrouped Templates</i>). You can also use the <strong>Search/Replace</strong> utility to find all occurrences of `http://` to replace it with `https://`, making sure these resources work correctly under the new address first.
 
 ## User content
 The usual MyBB installation inserts external content into the forum page source basing on user's input in two places:
