@@ -7,7 +7,7 @@ Without proper protections enabled, forums inevitably get targeted by spammers. 
 
 # Automated vs Human Spammers
 
-When receiving an influx of spam, it's important to identify if you're up against automated (software) "spambots" or human spammers. Human spammers are often able to get past security questions, captchas, and most other antispam "challenges." If human spammers are the culprit in an attack mounted against your forum, much different steps must be taken to reduce the amount of spam that gets through to public view.
+When receiving an influx of spam, it's important to identify if you're up against automated (software) "spambots" or human spammers. Human spammers are often able to get past security questions, captchas, and most other antispam "challenges." If human spammers are the culprit in an attack mounted against your forum, many different steps must be taken to reduce the amount of spam that gets through to public view.
 
 Note that Automated Spammer countermeasures can still be useful against human spammers, but are often just not as effective.
 
