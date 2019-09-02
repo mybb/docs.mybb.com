@@ -9,7 +9,7 @@
 		{% for pc in catpage.categories %}
 		{% if pc == include.category %}
 			<li class="category-list__item">
-				<h3 class="category-list__item__title"><a href="{{ site.baseurl }}{{ catpage.url }}" class="category-list__item__link">{{ catpage.title }}</a></h3>
+				<p class="category-list__item__title"><a href="{{ site.baseurl }}{{ catpage.url }}" class="category-list__item__link">{{ catpage.title }}</a></p>
 				{% if catpage.description != "" %}<p class="category-list__item__description">{{ catpage.description }}</p>{% endif %}
 			</li>
 		{% endif %}
