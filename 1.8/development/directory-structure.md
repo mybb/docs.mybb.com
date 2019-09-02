@@ -31,7 +31,7 @@ Locations marked as "_internal_" contain source code or other files that don't n
   - **plugins/** &mdash; plugin source code files _(internal)_
 
   - **config.default.php** &mdash; renamed to _config.php_ after installation
-  - **config.php** &mdash; the MyBB configuration file (database connection details and security options)
+  - [**config.php** &mdash; the MyBB configuration file]({{ site.baseurl }}/1.8/administration/configuration-file/) (database connection details and security options)
   - **settings.php** &mdash; compiled contents of the board's Settings
 
 - **install/** &mdash; files related to the MyBB installer and upgrade script; should be removed after use

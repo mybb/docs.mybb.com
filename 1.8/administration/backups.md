@@ -4,7 +4,7 @@ title:    "Backups"
 categories: [administration]
 ---
 
-# Database
+## Database
 
 From the database backups page, you can easily create backups that are either stored on your server or downloaded to your computer. The database backups listing page shows you all backups that are currently stored on your server, the size of the backup, the time and day of creation, and allows you to download or delete the backup.
 
@@ -35,7 +35,7 @@ From the database backups page, you can easily create backups that are either st
 For automatically scheduled backups, see [Task Manager]({{ site.baseurl }}/1.8/administration/task-manager/#weekly-backups).
 
 
-# Files
+## Files
 
 The [Directory Structure]({{ site.baseurl }}/1.8/development/directory-structure/), besides MyBB's source code, also contains user-generated content and files related to installed extensions (like themes, plugins, language packs). In most use cases, backups of the following locations should be created for easier recovery.
 

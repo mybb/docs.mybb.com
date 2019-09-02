@@ -42,9 +42,9 @@ The following apps can be used as Two-Factor Authentication Apps. Note that this
 3. Click `Save Personal Notes & Preferences`.
 4. A QR code will be presented to you when the page reloads. Scan that QR code with your authenticator app, and then the required setup is complete.
 
-**If you lose your device or authenticator app**, make sure to save your backup codes in a safe place. They can be used if you no longer have the authenticator app for any reason. Note that the **codes are regenerated every time the backup codes page is viewed**, so you can only view them once. Viewing the page again will invalidate all old codes and generate a new set. As a result, it is strongly recommended to keep your backup codes in a safe place!
+**Make sure to save your backup codes in a safe place** to be able to login again in case you device is lost or damaged. They can be used if you no longer have the authenticator app for any reason. Note that the **codes are regenerated every time the backup codes page is viewed**, so you can only view them once. Viewing the page again will invalidate all old codes and generate a new set. As a result, it is strongly recommended to keep your backup codes in a safe place!
 
-**NOTE:** This feature is only available to administrators' accounts via the admin cp. However, it is planned to extend this feature to other users with MyBB 2.0.
+**NOTE:** This feature is only available to administrators' accounts via the Admin CP. However, it is planned to extend this feature to other users with MyBB 2.0.
 
 # Troubleshooting
 

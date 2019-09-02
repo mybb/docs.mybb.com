@@ -25,7 +25,7 @@ If you're configuring a server on your own, you need to follow <a href="https://
 It's also possible to use <a href="https://letsencrypt.org/">Let's Encrypt</a>, an automated CA providing free certificates with comparable level of security and tools that make the setup and certificate renewal process easier &mdash; refer to <a href="https://certbot.eff.org/">certbot.eff.org</a> for installation instructions and make yourself familiar with its <a href="https://certbot.eff.org/docs/using.html">usage guide</a>.
 
 ## Reverse proxies
-If your websites take advantage of reverse proxies (such as Amazon CloudFront or Cloudflare) you should set up both connections (between your users and the proxy server as well as between the proxy server and the origin server) to use HTTPS. For example, Cloudflare provides <a href="https://blog.cloudflare.com/cloudflare-ca-encryption-origin/">Origin CA</a> certificates that can be installed on your server to be able to communicate with Cloudflare securely; you can also use certificates provided by Let's Encrypt. Remeber to instruct the proxy server to always use secure connections on both sides.
+If your websites take advantage of reverse proxies (such as Amazon CloudFront or Cloudflare) you should set up both connections (between your users and the proxy server as well as between the proxy server and the origin server) to use HTTPS. For example, Cloudflare provides <a href="https://blog.cloudflare.com/cloudflare-ca-encryption-origin/">Origin CA</a> certificates that can be installed on your server to be able to communicate with Cloudflare securely; you can also use certificates provided by Let's Encrypt. Remember to instruct the proxy server to always use secure connections on both sides.
 
 # Switching and enforcing HTTPS
 
@@ -39,20 +39,20 @@ Once your forum works properly under the new protocol, you can set up your serve
 
   First, add the following line in the <strong>.htaccess</strong> file in your forum's main directory or your <i>VirtualHost</i> file if it's not already present:
 
-  ```
+  ```apache
   RewriteEngine On
   ```
 
   Following the statement, insert a rule that will redirect the traffic changing the protocol under the condition that it's not HTTPS:
 
-  ```
+  ```apache
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   ```
 
   Alternatively, if you use a reverse proxy and the connection between the proxy and your server doesn't happen over HTTPS (which is highly discouraged), you might need your server to check the value of the `X-Forwarded-Proto` header (supplied by the reverse proxy) instead:
 
-  ```
+  ```apache
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   ```
@@ -61,15 +61,15 @@ Once your forum works properly under the new protocol, you can set up your serve
 
 - <strong>nginx</strong> servers:
 
-  ```
+  ```nginx
   server {
       listen 80 default_server;
       listen [::]:80 default_server;
       server_name _;
       return 301 https://$host$request_uri;
-    }
+  }
   ```
-  ```
+  ```nginx
   if ($http_x_forwarded_proto = "http") {
       return 301 https://$server_name$request_uri;
   }
@@ -131,7 +131,7 @@ Additional headers, added to every response from your server, can contain direct
 | Header name | Suggested value for MyBB | Description |
 | - | - | - |
 | `Strict-Transport-Security` | `max-age=31536000; includeSubDomains; preload` | Prevents the browser from downgrading connections to your website to plaintext HTTP until the `max-age` time has elapsed. If `includeSubDomains` is specified, the rule applies to all subdomains. The `preload` part instructs that this rule can be hardcoded into web browsers (<a href="https://hstspreload.appspot.com/">read more</a>). Include only if your forum is working correctly under HTTPS (you can set the `max-age` to lower periods of time and increase it afterwards). |
-| `Content-Security-Policy` | `upgrade-insecure-requests; default-src https: data: 'unsafe-inline' 'unsafe-eval'; frame-ancestors 'none'; base-uri 'self'` | Instructs the browser to upgrade protocols of included HTTP resources to HTTPS, block unsecured elements, disallow including the website in frames and limit usage of `<base>` directives | 
+| `Content-Security-Policy` | `upgrade-insecure-requests; default-src https: data: 'unsafe-inline' 'unsafe-eval'; frame-ancestors 'none'; base-uri 'self'` | Instructs the browser to upgrade protocols of included HTTP resources to HTTPS, block unsecured elements, disallow including the website in frames and limit usage of `<base>` directives |
 | `X-Frame-Options` | `deny` | Improves the protection against clickjacking by preventing the website from being displayed in frames. |
 | `X-XSS-Protection` | `1; mode=block` | Enables the browser's XSS filter. |
 | `X-Content-Type-Options` | `nosniff` | Intructs the browser to interpret filetypes according to the content type header. |
@@ -165,7 +165,7 @@ If your board takes advantage of resources (such as CSS or JavaScript files) sto
 
 SRI can be implemented by including the `integrity="..."` attribute in `<link>` and `<script>` elements, e.g.:
 
-```
+```html
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
 ```
 
@@ -183,4 +183,4 @@ You can generate SRI checksums (hashes) on <a href="https://www.srihash.org/">sr
 
 - <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Using_CSP_violation_reports">CSP violation reports</a> can be used with <a href="https://report-uri.io/">report-uri.io</a> to log all events breaking the rules set by the Content Security Policy header, such as attempts to load insecure content.
 
-We offer support and validation of HTTPS setups on the <a href="https://community.mybb.com/forum-179.html">Community forums</a>.
+We offer support and validation of HTTPS setups on the <a href="https://community.mybb.com/forum-179.html">Community Forums</a>.
