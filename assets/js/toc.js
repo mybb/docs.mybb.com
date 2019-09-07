@@ -58,9 +58,9 @@
       this_level,
       html = settings.title + " <" +settings.listType + " class=\"" + settings.classes.list +"\">";
     headers.on('click', function() {
-      if (!settings.noBackToTopLinks) {
+      //if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;
-      }
+      //}
     })
     .addClass('clickable-header')
     .each(function(_, header) {
