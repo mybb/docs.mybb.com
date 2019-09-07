@@ -2,12 +2,13 @@
 layout: page
 title:  "MyBB Security Guide"
 categories: [security]
+description: "Hardening & Best Practices for Securing Forums"
 ---
 
 ## General Advice
 Forum users with elevated permissions should follow universal digital security recommendations, including the use [strong, unique passwords and password managers](https://ssd.eff.org/en/module/creating-strong-passwords) and _Two-Factor Authentication_ (2FA) for their forum accounts as well as any related personal accounts (e.g. used for password recovery). _Universal 2nd Factor_ (U2F) and on-device TOTP types are [preferred](https://www.eff.org/deeplinks/2017/09/guide-common-types-two-factor-authentication-web) to SMS-based codes.
 
-Scanning devices with antivirus tools and installing security software is also a good idea. Consult reputed publications and organizations for recommendation appropriate for used platforms (e.g. [AV-TEST](https://www.av-test.org/en/antivirus/), [AV-Comparatives](https://www.av-comparatives.org/consumer/test-results/), [SE Labs](https://www.selabs.uk/en/reports/consumers), [MRG Effitas](https://www.mrg-effitas.com/services/endpoint-protection-testing/360-protection-testing/)).
+Scanning devices with antivirus tools and installing security software is also a good idea. Consult reputed publications and organizations for recommendation appropriate for used platforms (e.g. [AV-Comparatives](https://www.av-comparatives.org/consumer/test-results/), [AV-TEST](https://www.av-test.org/en/antivirus/), [MRG Effitas](https://www.mrg-effitas.com/services/endpoint-protection-testing/360-protection-testing/), [SE Labs](https://www.selabs.uk/en/reports/consumers)).
 
 ## Software & Updates
 
@@ -31,7 +32,7 @@ Making backups of all forum files and database is **extremely important**. The c
 
 Forum administrators can enable and customize frequency of the included _Weekly Backup_ task (**Tools & Maintenance &rarr; Task Manager**) to let MyBB create copies of the database ready for download.
 
-[**MyBB Documentation: Backups &rarr;**](/1.8/administration/backups/)
+[**MyBB Documentation &rsaquo; Backups &rarr;**](/1.8/administration/backups/)
 
 ## MyBB &mdash; General Configuration
 
@@ -136,8 +137,8 @@ Displaying which MyBB version the forum is running may make it easier for potent
     In the server block for the forum, add to disable access to the `inc/` directory:
 
     ```nginx
-    location /inc {
-      deny all;
+    location ~ /inc {
+      internal;
     }
     ```
 
