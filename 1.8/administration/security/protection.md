@@ -363,7 +363,9 @@ The **File Verification** (**Tools & Maintenance**) can be used to check MyBB so
 The [Admin CP Honeypot](https://community.mybb.com/thread-94406.html) installs a fake Admin CP that may be used together with a [renamed Admin CP directory](#rename-the-admin-cp-directory), recording the IP of anyone who tries to login to it and emailing you a small report.
 
 ## Environment
-We recommend choosing reputable and trusted providers for domain, hosting, and other infrastructure services. Forum staff with access to such administrative accounts should have 2-Factor Authentication (2FA) enabled and make sure hidden features like _reset password_ cannot be used to easily bypass it.
+We recommend choosing reputable and trusted providers for domain, hosting, and other infrastructure services.
+
+Forum staff with access to such administrative accounts should have 2-Factor Authentication (2FA) enabled and make sure hidden features like _reset password_ cannot be used to easily bypass it. Server management tools and other installed web applications should only be used over a secure connection (HTTPS, SFTP, SSH).
 
 ### Domain
 Domains associated with the board should have a [registrar lock](https://en.wikipedia.org/wiki/Registrar-Lock) and [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) enabled to limit attempts of domain and traffic hijacking.

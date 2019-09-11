@@ -5,7 +5,7 @@ categories: [security]
 ---
 
 # Security and privacy with TLS
-<strong>TLS</strong> (<i>Transport Layer Security</i>; previously SSL, <i>Secure Sockets Layer</i>) is a set of cryptographic protocols providing encrypted connections over a computer network. The protocol used for accessing web pages, HTTP, wrapped in TLS is known as <strong>HTTPS</strong> (<i>Hypertext Transfer Protocol <u>Secure</u></i>) and is becoming the standard of the modern web &mdash; more than half of web page impressions are served using HTTPS.
+<strong>TLS</strong> (<i>Transport Layer Security</i>; previously SSL, <i>Secure Sockets Layer</i>) is a set of cryptographic protocols providing encrypted connections over a computer network. The protocol used for accessing web pages, HTTP, wrapped in TLS is known as <strong>HTTPS</strong> (<i>Hypertext Transfer Protocol <u>Secure</u></i>) and is a standard of the modern web.
 
 TLS certificates issued by <i>certificate authorities</i> (CAs) are used for asymmetric encryption, where web browsers request the public key for a particular website to encrypt information that can be decrypted with the corresponding private key known only to the destination server, eliminating the possibility of anyone being able to read the data itself even if the whole communication is being intercepted. This results in establishing a shared key for symmetric encryption, where the encryption and decryption is being done using the same secret for optimal performance.
 
@@ -90,33 +90,31 @@ As long as users provide HTTPS-based URLs to these elements browsers will render
 
 This can be aided by installing <a href="https://community.mybb.com/mods.php?action=view&pid=450"><strong>DVZ Secure Content</strong></a>, a MyBB 1.8.x plugin with two operating modes described below.
 
-### Blocking insecure resources
-A simple and straightforward way to make your forums work properly under HTTPS is blocking all elements pointed to using `http://` &mdash; simply make sure the <i>Filter non-HTTPS MyCode images</i> and <i>Block non-HTTPS avatars</i> settings are set to <strong>On</strong> under <strong><i>Configuration &rarr; Settings &rarr; DVZ Secure Content</i></strong>.
+- ### Blocking insecure resources
+  A simple and straightforward way to make your forums work properly under HTTPS is blocking all elements pointed to using `http://` &mdash; simply make sure the <i>Filter non-HTTPS MyCode images</i> and <i>Block non-HTTPS avatars</i> settings are set to <strong>On</strong> under <strong><i>Configuration &rarr; Settings &rarr; DVZ Secure Content</i></strong>.
 You can notify your forum's users that images and videos will be displayed if they provide `https://` URLs.
 
-### Proxying insecure resources
-It's possible to keep displaying all content securely, regardless of the protocol used with a <i>resource proxy</i>. Instead of pointing browsers to original URLs (that your forum users provide), the content can be served from your own server that first fetches it from the original server and then forwards it to the end user &mdash; always over HTTPS.
+- ### Proxying insecure resources
+  It's possible to keep displaying all content securely, regardless of the protocol used with a <i>resource proxy</i>. Instead of pointing browsers to original URLs (that your forum users provide), the content can be served from your own server that first fetches it from the original server and then forwards it to the end user &mdash; always over HTTPS.
 
-This will require a resource proxy script, best if running on a server other than your forum's (you will need a VPS or a dedicated server):
+  This will require a resource proxy script, best if running on a server other than your forum's (you will need a VPS or a dedicated server):
 
-- <a href="https://github.com/atmos/camo">github.com/atmos/camo</a> for NodeJS,
-- <a href="https://github.com/ankane/camo">github.com/ankane/camo</a> for Ruby
+  - <a href="https://github.com/atmos/camo">github.com/atmos/camo</a> for NodeJS,
+  - <a href="https://github.com/ankane/camo">github.com/ankane/camo</a> for Ruby.
 
-After setting up a resource proxy, configure the mentioned plugin by setting <i>Image proxy</i> to <strong><i>On</i></strong> and configure the remaining settings. An example configuration for the <i>atmos/camo</i> implementation:
+  After setting up a resource proxy, configure the mentioned plugin by setting <i>Image proxy</i> to <strong><i>On</i></strong> and configure the remaining settings. An example configuration for the <i>atmos/camo</i> implementation:
 
-- <i>Image proxy URL scheme</i>: `{PROXY_URL}{DIGEST}/{URL}`
-- <i>Image proxy URL</i>: `https://camo-url.example.com/`
-- <i>Image proxy key</i>: `0x24FEEDFACEDEADBEEFCAFE`
-- <i>Image proxy digest algorithm</i>: `sha1`
-- <i>Image proxy forwarded URL protocol</i>: <i>No changes</i>
-- <i>Image proxy forwarded URL encoding</i>: <i>Hex encoding</i>
+  - <i>Image proxy URL scheme</i>: `{PROXY_URL}{DIGEST}/{URL}`
+  - <i>Image proxy URL</i>: `https://camo-url.example.com/`
+  - <i>Image proxy key</i>: `0x24FEEDFACEDEADBEEFCAFE`
+  - <i>Image proxy digest algorithm</i>: `sha1`
+  - <i>Image proxy forwarded URL protocol</i>: <i>No changes</i>
+  - <i>Image proxy forwarded URL encoding</i>: <i>Hex encoding</i>
 
- This can vary with each implementation &mdash; if you're having problems, consult the script's documentation or <a href="https://community.mybb.com/forum-179.html">create a support thread</a>.
+  This can vary with each implementation &mdash; if you're having problems, consult the script's documentation or <a href="https://community.mybb.com/forum-179.html">create a support thread</a>.
 
-You can also decide whether all or HTTP resources only should be forwarded in the <i>Image proxy policy</i> and <i>Proxy avatars</i> settings.
-Proxying all remote resources has positive impact on your forum users' privacy because information like the IP addresses and operating system &amp; browser-related details are revealed only to the resource proxy server (in most cases operated by the same people that operate the forum itself). Third party servers, where such resources are being stored, will only receive information related to the proxy server that relays the data further.
-
-<hr />
+  You can also decide whether all or HTTP resources only should be forwarded in the <i>Image proxy policy</i> and <i>Proxy avatars</i> settings.
+  Proxying all remote resources has positive impact on your forum users' privacy because information like the IP addresses and operating system &amp; browser-related details are revealed only to the resource proxy server (in most cases operated by the same people that operate the forum itself). Third party servers, where such resources are being stored, will only receive information related to the proxy server that relays the data further.
 
 After configuring your setup, use the plugin's tools available on <strong><i>Configuration &rarr; Plugins</i></strong> to secure the video widget templates and avatars &mdash; all <i>Security overview</i> indicators should read <i>Yes</i> (with the exception of <i>All remote resources proxied</i>, if you didn't decide to use a resource proxy).
 
@@ -175,12 +173,13 @@ You can generate SRI checksums (hashes) on <a href="https://www.srihash.org/">sr
 
 # Verifying & monitoring
 
-- Most modern browsers will display detailed warnings in the webmaster tools' Console when mixed content is detected.
+- Most modern browsers will display detailed warnings in the Console when mixed content is detected.
 - Your websites can be checked using external tools:
+  - <a href="https://www.hardenize.com/">hardenize.com</a>
   - <a href="https://observatory.mozilla.org/">observatory.mozilla.org</a>
-  - <a href="https://securityheaders.io/">securityheaders.io</a>
+  - <a href="https://securityheaders.com/">securityheaders.io</a>
   - <a href="https://www.ssllabs.com/ssltest/">ssllabs.com/ssltest/</a>
 
-- <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Using_CSP_violation_reports">CSP violation reports</a> can be used with <a href="https://report-uri.io/">report-uri.io</a> to log all events breaking the rules set by the Content Security Policy header, such as attempts to load insecure content.
+- <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Using_CSP_violation_reports">CSP violation reports</a> can be used with <a href="https://report-uri.com/">report-uri.io</a> to log all events breaking the rules set by the Content Security Policy header, such as attempts to load insecure content.
 
 We offer support and validation of HTTPS setups on the <a href="https://community.mybb.com/forum-179.html">Community Forums</a>.
