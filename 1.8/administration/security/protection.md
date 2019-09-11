@@ -60,6 +60,9 @@ UPDATE mybb_profilefields SET allowhtml = 0;
 
 Afterwards go to **Tools & Maintenance &rarr; Cache Manager** and Rebuild the `forums` and `profilefields` cache to make sure these changes are applied immediately.
 
+### Enable _SameSite Cookie Flag_
+Some web attacks can be prevented by having the _Site Details &raquo; SameSite Cookie Flag_ setting (**Configuration &rarr; Settings**) set to **Yes** (default).
+
 ### Apply Server-Specific Directives
 The MyBB package contains `htaccess.txt` and `htaccess-nginx.txt` files in the MyBB root directory.
 
@@ -361,6 +364,9 @@ The **File Verification** (**Tools & Maintenance**) can be used to check MyBB so
 
 ### _Admin CP Honeypot_
 The [Admin CP Honeypot](https://community.mybb.com/thread-94406.html) installs a fake Admin CP that may be used together with a [renamed Admin CP directory](#rename-the-admin-cp-directory), recording the IP of anyone who tries to login to it and emailing you a small report.
+
+### External Tools
+Some search engine webmaster tools offer alerts upon discovery of problems affecting websites, including malicious activity (e.g. [Bing](https://www.bing.com/toolbox/webmaster), [Google](https://search.google.com/search-console/about), [Yandex](https://webmaster.yandex.com/welcome/)), which may also help identify the issue.
 
 ## Environment
 We recommend choosing reputable and trusted providers for domain, hosting, and other infrastructure services.
