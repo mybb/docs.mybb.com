@@ -388,6 +388,12 @@ If the forum traffic is cached by accelerators or caching servers (e.g. _Varnish
 ### Third Party Software
 Applications installed on the same server may affect each other's functionality directly &mdash; by accessing foreign files, database or executing foreign code &mdash; and indirectly &mdash; e.g. by accessing server software. Vulnerability in third party software may threaten the security of the forum, therefore all web applications should be kept up to date and secured, similar to MyBB. For more information you should look up articles on securing any other software you have installed.
 
+
+## Response Readiness
+Administrators running MyBB forums should be familiar with steps and tools involved in the response to potential security incidents and data breaches:
+
+[**MyBB Documentation &rsaquo; Security Incident Response & Recovery &rarr;**](/1.8/administration/security/recovery/)
+
 ---
 See also:
 - [**Security Research at MyBB &rarr;**](https://mybb.com/get-involved/security/)

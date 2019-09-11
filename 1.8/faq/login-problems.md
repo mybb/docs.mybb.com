@@ -10,6 +10,7 @@ redirect_from:
 
 # Unable to Log In
 
+## Cookie Settings
 Most of the time this is a problem with your cookie settings being incorrect or inadequate. For more information about MyBB's cookies, read [Cookies](/1.8/development/cookies/).
 
 Your cookie settings can be found in: **Admin CP** > **Configuration** > **Settings** > **Site Details**. The two settings are *Cookie Domain* and *Cookie Path*.
@@ -53,6 +54,13 @@ You can use [this tool](/tools/cookie-settings) to generate appropriate cookie s
 These cookie settings should work on all MyBB installations. If you have site-integration, your cookie settings may need to be more generalized.
 
 After you change your cookie settings, please advise your users to log out and clear cookies stored by their browser, so that the new cookies can take effect.
+
+## Password Change
+It's possible to change a user's password by executing an SQL query &mdash; replace `RANDOM_VALUE` with desired password, and `USER_ID` with targeted user's ID:
+```sql
+UPDATE mybb_users SET `password` = md5(CONCAT(md5('temp-salt'), md5('RANDOM_VALUE'))), salt = 'temp-salt' WHERE uid = USER_ID;
+```
+After this operation, you should change the password again using MyBB's interface.
 
 ### Useful links
 - [Login/Logout problems? PLEASE READ](https://community.mybb.com/thread-42123.html)
