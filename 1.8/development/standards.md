@@ -6,7 +6,7 @@ categories: [development]
 
 The purpose of this document is to outline the development standards for use whilst developing MyBB. Plugin and modification authors are recommended to use these coding standards when developing plugins and modifications.
 
-These coding standards were written for the MyBB 1.x series.
+These coding standards were written for MyBB series up to 1.8.
 
 ## Coding Standards
 

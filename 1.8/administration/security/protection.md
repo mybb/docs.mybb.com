@@ -397,6 +397,6 @@ Administrators running MyBB forums should be familiar with steps and tools invol
 ---
 See also:
 - [**Security Research at MyBB &rarr;**](https://mybb.com/get-involved/security/)
-- [**Known Security Issues in MyBB 1.8 &rarr;**](https://github.com/mybb/mybb/blob/feature/SECURITY.md#known-security-issues)
+- [**Known Security Issues in MyBB 1.8 &rarr;**](https://github.com/mybb/mybb/blob/feature/.github/SECURITY.md#known-security-issues)
 - [**MyBB Community &rsaquo; Security Management and Support &rarr;**](https://community.mybb.com/forum-179.html)
 - [**Contact MyBB Team regarding security concerns &rarr;**](https://mybb.com/contact/)
