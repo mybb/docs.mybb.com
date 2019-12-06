@@ -13,7 +13,7 @@ If you encounter issues with following this transfer process, [create a support 
 
 # Backup/Export Data
 
-1. Log into your MyBB Admin Control Panel, and disable all plugins by navigating to `Configuration` and setting `Disable All Plugins` to `Yes`.
+1. Log into your MyBB Admin Control Panel, and disable all plugins by navigating to ` Configuration, Board Settings, General Configuration` and setting `Disable All Plugins` to `Yes`.
 
 2. Close your forum by navigating to `Configuration`, `Board Online / Offline`, and setting the board to closed. This will ensure that the data you export in the next step is the latest and that no activity is lost in the transfer to the new host.
 
