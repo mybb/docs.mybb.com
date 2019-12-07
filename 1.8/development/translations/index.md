@@ -102,7 +102,7 @@ To check your translations you can set up a copy of MyBB and set it to use your 
 
 The image files for the group images can be found in `images/groupimages/english/`. You can create a new folder `images/groupimages/newlang/`, copy all images from `images/groupimages/english/` to `images/groupimages/newlang/` and replace them by buttons with text in your language. As you see the buttons are still using the old style. For those a PSD file also exists, made by madmax:
 
-.psd  groupimages_eng.psd (Size: 221.55 KB / Downloads: 565)
+[.psd  groupimages_eng.psd](https://community.mybb.com/attachment.php?aid=3215)
 
 Apart from the images there is also a language file for the installer (install/resources/language.lang.php), however, it does not contain all text for the installer and you might therefore consider not translating it but simply creating a document in your language with instructions on how to install MyBB. In addition, most people will be knowledgeable enough to install MyBB with English instructions so this doesn't have a high priority.
 
@@ -122,7 +122,7 @@ After you have completed the five steps above you are ready to offer your langua
 
 The English readme file is so that administrators who do not speak the language can install it nonetheless. You can find a template for an English readme file here:
 
-.html  readme.html (Size: 11 KB / Downloads: 1414)
+[.html  readme.html](https://community.mybb.com/attachment.php?aid=2764)
 
 You can edit it to include the English name of your language. Make sure the folder structure mentioned in the readme file matches the folder structure in your archive. Please also ensure that your readme mentions whether or not you have translated the Admin CP as well and adjust the readme file accordingly.
 
