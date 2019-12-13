@@ -71,7 +71,7 @@ Once you have set the permissions for your new user, be sure to reload the privi
 FLUSH PRIVILEGES;
 ```
 
-# Table <table> doesn't exist
+# Table &lt;table&gt; doesn't exist
 
 Missing a table? First, consider a few key things:
 
