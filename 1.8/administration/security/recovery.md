@@ -153,9 +153,6 @@ UPDATE mybb_banned SET oldgroup = '2', oldadditionalgroups = '', olddisplaygroup
 
 MyBB Extensions may use additional tables that will need to be reviewed.
 
-#### General SQL Errors
-You may during this process run into some common SQL Errors, we recommend to first search these on the [Error Messages](/1.8/faq/errors/) document as a solution should be there. If not you can open a support thread on our forums &mdash; [MyBB Forums](https://community.mybb.com/).
-
 ### Locally Stored Data
 Malicious code served by compromised websites may be saved locally in the browser (e.g. cookies, cache, workers). This can be mitigated by [instructing browsers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) to clear all data.
 

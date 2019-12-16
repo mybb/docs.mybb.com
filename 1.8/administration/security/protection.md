@@ -174,6 +174,8 @@ Changing the table prefix can prove to be helpful in certain cases. If an attack
 
   The output will be a list of SQL statements that can be run to rename the tables.
 
+After renaming the tables, adjust the value of `$config['database']['table_prefix']` in the [Configuration File](/1.8/administration/configuration-file/) accordingly.
+
 ## MyBB &mdash; Admin Control Panel
 ### Use Two-Factor Authentication (2FA)
 
