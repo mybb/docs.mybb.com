@@ -163,7 +163,7 @@ Copy the following code, replacing `RANDOM_VALUE` with a [random value](https://
 $clearDataToken = 'RANDOM_VALUE';
 
 if (!isset($mybb->cookies['clear_data_token']) || $mybb->cookies['clear_data_token'] !== $clearDataToken) {
-    header('Clear-Site-Data: "cookies", "cache", "storage", "executionContexts"');
+    header('Clear-Site-Data: "cookies", "cache", "storage"');
     header('Refresh: 0');
 
     my_setcookie('clear_data_token', $clearDataToken);
