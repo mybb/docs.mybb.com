@@ -183,7 +183,7 @@ The database may contain sensitive tokens that can be used on the restored forum
 ```sql
 DELETE FROM mybb_adminsessions; -- Purge ACP login state
 DELETE FROM mybb_awaitingactivation WHERE type == 'p'; -- Purge password reset requests
-UPDATE mybb_datacache SET cache = 'a:1:{s:14:"encryption_key";s:0:"";}' WHERE title = 'internal_settings'; -- Reset encryption_key used with anti-SCRF tokens
+UPDATE mybb_datacache SET cache = 'a:1:{s:14:"encryption_key";s:0:"";}' WHERE title = 'internal_settings'; -- Reset encryption_key used with anti-CSRF tokens
 UPDATE mybb_users SET loginkey = ''; -- Purge front-end login state and anti-CSRF tokens
 ```
 
