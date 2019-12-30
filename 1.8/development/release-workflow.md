@@ -43,8 +43,8 @@ categories: [development]
 
    1. the file checksums are uploaded to [`mybb.com/checksums/`](https://github.com/mybb/mybb.com/tree/gh-pages/checksums),
    2. the packages are uploaded to `resources.mybb.com` and verified,
-   3. the version metadata is pushed to the repository, adding Release Notes and updating MyBB.com pages,
-   4. the Release Blog Post is published,
+   3. the version metadata with listed accessible download locations for packages is pushed to the repository, adding Release Notes and updating MyBB.com pages,
+   4. the Release Blog Post is published with _MyBB Team_ as the author, with tags _Release_, _Updates_, and _Security_ if the release addresses security-related issues,
    5. the Release Blog Post is propagated to public channels:
 
       - [@mybbsecurity](https://twitter.com/mybbsecurity) on Twitter (in accordance with [rules](https://github.com/mybb/meta-internal/blob/master/docs/social-twitter-mybbsecurity.md)),
