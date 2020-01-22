@@ -98,7 +98,7 @@ When using MyBB, you may encounter an Internal MyBB Error, an SQL error, or see 
 
 **Information:** *This is an issue with the connection to your database, your host will have to solve this issue for you.
 
-# SQLite Error 1
+## SQLite Error 1
 
 **Database:** *SQLite*
 
@@ -126,7 +126,7 @@ When using MyBB, you may encounter an Internal MyBB Error, an SQL error, or see 
 
 **Query:** `SELECT loginattempts FROM mybb_users WHERE LOWER(username)='username' LIMIT 1`
 
-**Information:** Note: this fix does not apply to all *unknown column* errors, it is specifically for the query in the image (with a different username/table prefix etc of course). Please do not suggest this fix when someone has any other *unknown column* error.
+**Information:** Note: this fix does not apply to all *unknown column* errors, it is specifically for the above specific query (with a different username/table prefix etc of course). Please do not suggest this fix when someone has any other *unknown column* error.
 
 This occurs when you are using MySQL and you attempt to upgrade from 1.4.3 to 1.4.4, after you upload all the new files, but do not run the upgrade script. In 1.4.4, a new column, `loginattempts`, was added to the users table for a new security feature. The error shows as the 1.4.4 `member.php` file is trying to find the `loginattempts` column in a 1.4.3 database, where it doesn't exist. To fix this issue, go to `install/upgrade.php` and choose 1.4.2/1.4.3 from the list.
 
