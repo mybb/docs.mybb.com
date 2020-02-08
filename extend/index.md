@@ -35,13 +35,9 @@ Any username with the following format is an approved developer:
 [![Approved Developer](/assets/images/mods/approved_developer.png)](/assets/images/mods/approved_developer.png)
 
 #### Main Page
-When you first reach the Extend site page you're faced with some information about its content but what leads you to all the places is the menu and the quick search bar.
+When you first reach the Extend site page you're faced with some information about its content. You will be presented with the best and latest statistics from our currently approved content.
 
 [![Menu and Search](/assets/images/mods/index1.png)](/assets/images/mods/index1.png)
-
-By placing the mouse over the Menu, you will see quite a few options to select from.
-
-[![Menu Options](/assets/images/mods/index2.png)](/assets/images/mods/index2.png)
 
 The items that are of interest to all types of users are the following:
 
