@@ -81,7 +81,7 @@ On the right side, you can see the latest build and a Donate button if the owner
 #### Download
 This page allows you to download the most recent stable build.
 
-[![Project Page](assets/images/extend/downloaders3.png)](/assets/images/extend/downloaders3.png)
+[![Project Page](/assets/images/extend/downloaders3.png)](/assets/images/extend/downloaders3.png)
 
 You can view the changes made in this build by extending the Changes section. Before downloading, you must accept the license by ticking the checkbox.
 
