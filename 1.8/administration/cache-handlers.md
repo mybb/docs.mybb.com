@@ -14,6 +14,14 @@ https://www.php.net/manual/en/book.apc.php
 
 Please note, APC Cache Handler is no longer officially supported.
 
+**APCu Cache Handler**
+
+APCu is APC stripped of opcode caching. 
+
+https://www.php.net/manual/en/book.apcu.php
+
+Please note, APCu is available in MyBB versions 1.8.23 onwards. 
+
 **Disk Cache Handler**
 
 Cache file are written to the filesystem within the `cache/` directory as PHP files. The `cache/` directory must be writeable for this cache handler to function.
