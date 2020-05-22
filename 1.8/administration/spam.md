@@ -41,6 +41,7 @@ In `Admin CP > Configuration > General Configuration`, a visual CAPTCHA challeng
 + **MyBB Default CAPTCHA**, in which a PHP GD captcha is generated. This can often be passed by automated systems and usually should not be used.
 + **reCAPTCHA**, which displays a "ReCAPTCHA" challenge; signup is required at [Google's ReCAPTCHA site](https://www.google.com/recaptcha/intro/index.html) to get the Public and Private keys that must be configured.
 + **NoCAPTCHA reCAPTCHA**, which displays the latest version of reCAPTCHA, in which a user simply clicks a checkbox to continue, or as a fallback must complete a simple picture-selection challenge; signup is required at [Google's ReCAPTCHA site](https://www.google.com/recaptcha/intro/index.html) to get the Public and Private keys that must be configured.
++ **hCaptcha**, displays a checkbox similar to reCAPTCHA, but offers enhanced privacy, rewards for challenges, works in countries where Google reCAPTCHA is blocked and more. Signup is required at [hCaptcha.com](https://www.hcaptcha.com/) to obtain private and public key. Available in MyBB 1.8.23 or higher.
 
 ### Stop Forum Spam
 
