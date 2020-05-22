@@ -12,11 +12,11 @@ The Alternative PHP Cache (APC) is a free and open opcode cache for PHP. Its goa
 
 https://www.php.net/manual/en/book.apc.php
 
-Please note, APC Cache Handler is no longer officially supported by PHP.
+Please note, APC Cache Handler is no longer officially supported.
 
 **Disk Cache Handler**
 
-RFC 2616 compliant caching provides a mechanism to verify whether stale or expired content is still fresh, and can represent a significant performance boost when the origin server supports conditional requests by honouring the If-None-Match HTTP request header. Content is only regenerated from scratch when the content has changed, and not when the cached entry expires.
+Cache file are written to the filesystem within the `cache/` directory as PHP files. The `cache/` directory must be writeable for this cache handler to function.
 
 https://httpd.apache.org/docs/2.4/mod/mod_cache.html
 
