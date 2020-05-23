@@ -33,7 +33,7 @@ $config['cache_store'] = 'apcu';
 - ### Files
   `files`
 
-  Cache file are written to the filesystem within the `cache/` directory as PHP files. The `cache/` directory must be writeable for this cache handler to function.
+  Cache files are written to the filesystem within the `cache/` directory as PHP files. The `cache/` directory must be writeable for this cache handler to function.
 
 - ### [eAccelerator](https://github.com/eaccelerator/eaccelerator/wiki)
   `eaccelerator`
