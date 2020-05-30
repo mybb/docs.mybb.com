@@ -84,4 +84,4 @@ You then need to edit the value on line 70. For example, if you wished to use Re
   $config['cache_store'] = 'redis';
 </table>
 
-Don't forget, if you wish to use Redis or Memcache you will also need to set the Hostname and Port settings which are also set in the config.php file. The setting for Memcache can be found at line 50 and the settings for Redis can be found at line 62. You will edit the Hostname and Port number values similiar to above.
+Don't forget, if you wish to use Redis or Memcache you will also need to set the Hostname and Port settings which are also set in the config.php file. The settings for Memcache can be found at line 50 and the settings for Redis can be found at line 62. You will edit the Hostname and Port number values similiar to above.
