@@ -26,7 +26,6 @@ Please note, APCu is available in MyBB versions 1.8.23 onwards.
 
 Cache files are written to the filesystem within the `cache/` directory as PHP files. The `cache/` directory must be writeable for this cache handler to function.
 
-https://httpd.apache.org/docs/2.4/mod/mod_cache.html
 
 **eAccelerator**
 
@@ -61,7 +60,7 @@ Redis has a great article that explains in full the ins and outs of the Cache Ha
 https://redis.io/documentation
 
 Please note, Redis will only work with installs running MyBB version 1.8.23 or higher. You will also need to set the Redis hostname and port setting for this Cache Handler to work.
-
+—————
 You can select which Cache Handler you would like to use on your MyBB install by logging in to your website FTP server and navigate to the MyBB root directory, then selecting /inc and edit the config.php file. Around line 38 you should find the following:
 
 <table>
