@@ -24,7 +24,7 @@ Please note, APCu is available in MyBB versions 1.8.23 onwards.
 
 **Disk Cache Handler**
 
-Cache file are written to the filesystem within the `cache/` directory as PHP files. The `cache/` directory must be writeable for this cache handler to function.
+Cache files are written to the filesystem within the `cache/` directory as PHP files. The `cache/` directory must be writeable for this cache handler to function.
 
 https://httpd.apache.org/docs/2.4/mod/mod_cache.html
 
