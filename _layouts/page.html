@@ -15,19 +15,29 @@ section: docs
 		</div>
 	</header>
 	<div class="wrapper">
+		{% if page.url contains "/1.6/" %}
+		<div class="block">
+			<div class="version-list-eol-note">
+				{% include icon.html icon='exclamation-triangle' %}
+				<p><strong>The 1.6 Documentation is no longer maintained and some information may be outdated.</strong></p>
+				<p>The MyBB 1.6 series reached end of life on October 1, 2015.</p>
+				<p>
+					This means there will be no more security or maintenance releases for these series and forums running these versions of MyBB may be at risk of unfixed security issues. <strong>All administrators are strongly encouraged to upgrade their forums to the latest release of MyBB as soon as possible.</strong>
+				</p>
+				<div class="release-notes__note__buttons">
+					<a href="{{ site.mainsiteurl }}/download/" class="button button--medium">
+						{% include icon.html icon="download" %} Download latest
+					</a>
+					<a href="https://blog.mybb.com/2015/10/01/support-for-mybb-1-6-x-has-ended/" class="button button--medium button--secondary button--default-background-border">
+						{% include icon.html icon="info-circle" %} Find out more
+					</a>
+				</div>
+			</div>
+		</div>
+		{% endif %}
 		<div class="page-content block--markdown">
 			{% if page.toc != false and layout.toc != false %}
 			<div class="toc"></div>
-			{% endif %}
-
-			{% if page.url contains "/1.6/" %}
-			<div class="eol-notice">
-				<span class="eol-notice__heading">MyBB 1.6 Series EOL &ndash; Important Notice</span>
-				<p>The MyBB 1.6 series reached End-Of-Life on October 1, 2015. The MyBB Group strongly encourages all communities running MyBB 1.6 to upgrade as soon as possible to avoid the possibility of future bugs and/or vulnerabilities.
-					<a href="https://blog.mybb.com/2015/10/01/support-for-mybb-1-6-x-has-ended/">Find out more &rarr;</a>
-				</p>
-				<p>The 1.6 Documentation is no longer maintained and some information may be outdated.</p>
-			</div>
 			{% endif %}
 
 			{{ content }}
