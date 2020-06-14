@@ -52,9 +52,9 @@ These cookie settings should work on all MyBB installations. If you have site-in
 After you change your cookie settings, you may have to advise your users to log out and clear cookies stored by their browser, so that the new cookies can take effect.
 
 # Password Change
-It's possible to change a user's password by executing an SQL query &mdash; replace `RANDOM_VALUE` with desired password, and `USER_ID` with targeted user's ID:
+It's possible to change a user's password by executing an SQL query &mdash; replace `NEW_PASSWORD` with desired password, and `USER_ID` with targeted user's ID:
 ```sql
-UPDATE mybb_users SET `password` = md5(CONCAT(md5('temp-salt'), md5('RANDOM_VALUE'))), salt = 'temp-salt' WHERE uid = USER_ID;
+UPDATE mybb_users SET `password` = md5(CONCAT(md5('temp-salt'), md5('NEW_PASSWORD'))), salt = 'temp-salt' WHERE uid = USER_ID;
 ```
 After this operation, you should change the password again using MyBB's interface.
 
@@ -66,17 +66,17 @@ $config['secret_pin'] = '1234';
 Setting an value empty removes PIN verification.
 
 # Admin CP Lockout Reset
-To allow more login attempts after an administrator account has been locked out, execute the following SQL query (change `1` to user ID of the account):
+To allow more login attempts after an administrator account has been locked out, execute the following SQL query (change `USER_ID` to user ID of the account):
 ```sql
-UPDATE mybb_adminoptions SET loginattempts = 0 WHERE uid = 1;
+UPDATE mybb_adminoptions SET loginattempts = 0 WHERE uid = USER_ID;
 ```
 
 # Admin CP 2FA Bypass
 To log into the Admin CP without using the Two-Factor Authentication code:
 1. Enter your _Username_ and _Password_ and proceed,
-2. Once you are prompted to enter an _Authentication code_, execute the following SQL query (change `1` to user ID of the account):
+2. Once you are prompted to enter an _Authentication code_, execute the following SQL query (change `USER_ID` to user ID of the account):
 ```sql
-UPDATE mybb_adminsessions SET authenticated = 1 WHERE uid = 1;
+UPDATE mybb_adminsessions SET authenticated = 1 WHERE uid = USER_ID;
 ```
 3. Go to your Admin CP's URL again.
 
