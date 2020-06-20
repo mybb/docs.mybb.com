@@ -24,11 +24,11 @@ If the report is rejected at any point, the workflow skips to _Final Feedback_.
 
 3. ### Internal Processing
    1. #### Triage and Analysis
-   The vulnerability is being assessed by team members handling security issues.
+      The vulnerability is being assessed by team members handling security issues.
 
-     A _[Vulnerability Report]_-prefixed staff-only thread is created in the **Development → 1.8** section.
+      A _[Vulnerability Report]_-prefixed staff-only thread is created in the **Development → 1.8** section.
 
-     A _Low_/_Medium_/_High_ Risk is assigned and details related to causes, impact and possible solutions are attached.  The thread is added to the _Getting * Ready_ list for the upcoming version.
+      A _Low_ / _Medium_ / _High_ Risk is assigned and details related to causes, impact and possible solutions are attached.  The thread is added to the _Getting * Ready_ list for the upcoming version.
 
    2. #### Technical Assessment Feedback
    If applicable, a Team member informs the reporter whether their submission is confirmed, invalid, or no fix is expected.
