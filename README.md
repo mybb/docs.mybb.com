@@ -10,9 +10,15 @@ Some assets are pulled from the [`mybb-website-theme`](https://github.com/mybb/m
 
 Clone the repository with `git` and use [Docker](https://www.docker.com/get-started) to serve the website from local source:
 ```sh
-docker run -it --rm -v "$PWD":/usr/src/app -p "4000:4000" mybb/jekyll-docker
+$ docker run -it --rm -p "4000:4000" -v "$PWD":/usr/src/app mybb/jekyll-docker
 ```
 This will create a container from a [customized Jekyll image](https://github.com/mybb/jekyll-docker). The website will be available at `https://127.0.0.1:4000` (your browser will warn you about an unsigned certificate that was just generated).
+
+### Using Local Theme
+To additionally preview changes made in a clone of [`mybb-website-theme`](https://github.com/mybb/mybb-website-theme/) in a sibling directory `../mybb-website-theme/`), run instead:
+```sh
+$ docker run -it --rm -p "4000:4000" -v "$PWD":/usr/src/app -v "$PWD/../mybb-website-theme":/usr/src/app/_themes/theme mybb/jekyll-docker
+```
 
 ## Contributing
 

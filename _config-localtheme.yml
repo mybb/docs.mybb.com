@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-local-theme
+
+remote_theme: false
+local_theme: theme
