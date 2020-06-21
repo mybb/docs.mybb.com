@@ -1,4 +1,6 @@
-_site
+_site/
+_themes/
+vendor/
 Gemfile
 Gemfile.lock
 .jekyll-metadata
