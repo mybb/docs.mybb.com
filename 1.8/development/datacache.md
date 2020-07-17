@@ -6,7 +6,7 @@ categories: [development]
 
 # Datacache
 
-Besides dedicated database table structures, MyBB utilizes a data cache system. Cache entries are saved in the `mybb_datacache` table and propagated to [configured](/1.8/administration/configuration-file/) cache store.
+Besides dedicated database table structures, MyBB utilizes a data cache system. Cache entries are saved in the `mybb_datacache` table and propagated to configured [cache store](/1.8/administration/cache-handlers/).
 
 The following table lists default content of the Admin CP's **Tools & Maintenance &rarr; Cache Manager**. Entries with  _Redundancy_ are usually created for performance improvements and can be rebuilt automatically using the database.
 

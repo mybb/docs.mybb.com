@@ -56,7 +56,7 @@ $config['hide_admin_links'] = 0;
  *  By default, the database is used to store this data.
  *
  *  If you wish to use the file system (cache/ directory), MemCache (or MemCached), xcache, APC, or eAccelerator
- *  you can change the value below to 'files', 'memcache', 'memcached', 'xcache', 'apc' or 'eaccelerator' from 'db'.
+ *  you can change the value below to 'files', 'memcache', 'memcached', 'xcache', 'apc', 'apcu', 'eaccelerator' or 'redis' from 'db'
  */
 
 $config['cache_store'] = 'db';
@@ -72,6 +72,18 @@ $config['cache_store'] = 'db';
 
 $config['memcache']['host'] = 'localhost';
 $config['memcache']['port'] = 11211;
+
+/**
+ * Redis configuration
+ *  If you are using Redis as your data-cache
+ *  you need to configure the hostname and port
+ *  of your redis server below. If you want
+ *  to connect via unix sockets, use the full
+ *  path to the unix socket as host and leave
+ *  the port setting unconfigured or false.
+ */
+$config['redis']['host'] = 'localhost';
+$config['redis']['port'] = 6379;
 
 /**
  * Super Administrators
