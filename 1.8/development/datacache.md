@@ -23,7 +23,6 @@ Name | Storage | Redundancy
 `attachtypes` | Datacache system | Yes
 `awaitingactivation` | Datacache system | Yes
 `badwords` | Datacache system | Yes
-`banned` | Datacache system | Yes
 `bannedemails` | Datacache system | Yes
 `bannedips` | Datacache system | Yes
 `birthdays` | Datacache system | Yes
