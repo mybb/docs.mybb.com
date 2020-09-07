@@ -103,7 +103,8 @@ if($example != "sample")
 {
     $example = "sample";
 }
-else {
+else
+{
     $example = "test";
 }
 ```
