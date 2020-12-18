@@ -53,7 +53,7 @@ If all has worked correctly you should see the following at the top of your inde
 
 ## Working with a Template Group
 
-In the case you are implementing many templates it is easier to scale by creating a template group for all of your templates.
+It is easier to scale when implementing many templates by creating a template group for all relevant templates.
 
 A template group can be created like this:
 
@@ -67,7 +67,7 @@ $template_group = array(
 $db->insert_query('templategroups', $template_group);
 ```
 
-This will create a template group titled 'Hello World', and will include all templates that uses the unique prefix of 'hello_world'.
+The above code example will create a template group titled 'Hello World' and will include all templates that use the unique prefix of 'hello_world'.
 
 An example of creating one template group and two templates:
 
@@ -104,7 +104,7 @@ $db->insert_query('templates', $insert_array_second);
 
 ```
 
-Deletion of a template group is done separately from your templates. If you intend to delete only your template group and not your templates, you will have to change the sid for all templates, or they will not show up in Admin CP.
+Deletion of a template group is done separately from templates. If there is a need to delete a template group but not its matching templates, change the sid on the templates, or else they will not show up in the Admin CP.
 
 Example of deleting a template group and changing sid for relevant templates:
 
