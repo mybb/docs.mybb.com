@@ -29,7 +29,9 @@ If you encounter issues with following this transfer process, [create a support 
 
 6. Using a tool such as phpMyAdmin, browse to the blank database on your new host, and import the data exported in Step 3 of [Backup/Export Data](#backup-export-data).
 
-7. Using an FTP client, upload **ALL** of your forum's files to the new web host.
+7. Change the site configuration variables in `./inc/settings.php` to the values appropriate for your new host, e.g. subdomain, contact mail, contact link, etc. (If you find yourself being redirected to your old URL, you probably missed this step!)
+
+8. Using an FTP client, upload **ALL** of your forum's files to the new web host.
 
 # Domain Transfer
 
@@ -37,6 +39,6 @@ In many cases, your new web host will help transfer your domain and point it to 
 
 # Completing the Transfer
 
-8. Your domain should hopefully be pointed to the new host at this point, and your forum should behave exactly as it did on your old host. If it doesn't, [create a support thread in the MyBB Community Forums](https://community.mybb.com/newthread.php?fid=176), or contact your new web host for assistance, providing them with a link to this documentation.
+9. Your domain should hopefully be pointed to the new host at this point, and your forum should behave exactly as it did on your old host. If it doesn't, [create a support thread in the MyBB Community Forums](https://community.mybb.com/newthread.php?fid=176), or contact your new web host for assistance, providing them with a link to this documentation.
 
-9. Re-open your board by following Steps 1-2 of [Backup/Export Data](#backup-export-data), but opening the board instead of closing it.
+10. Re-open your board by following Steps 1-2 of [Backup/Export Data](#backup-export-data), but opening the board instead of closing it.
