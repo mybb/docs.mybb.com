@@ -51,6 +51,75 @@ If all has worked correctly you should see the following at the top of your inde
 <strong>Hello World</strong>
 ```
 
+## Working with a Template Group
+
+It is easier to scale when implementing many templates by creating a template group for all relevant templates.
+
+A template group can be created like this:
+
+```php
+$template_group = array(
+    'prefix' => $db->escape_string("hello_world"),
+    'title' => $db->escape_string("Hello World"),
+    'isdefault' => 0
+);
+
+$db->insert_query('templategroups', $template_group);
+```
+
+The above code example will create a template group titled 'Hello World' and will include all templates that use the unique prefix of 'hello_world'.
+
+An example of creating one template group and two templates:
+
+```php
+global $db;
+
+$template_group = array(
+    'prefix' => $db->escape_string("hello_world"),
+    'title' => $db->escape_string("Hello World"),
+    'isdefault' => 0
+);
+
+$db->insert_query('templategroups', $template_group);
+
+$insert_array_first = array(
+    'title' => 'hello_world_first',
+    'template' => $db->escape_string($template_first),
+    'sid' => '-2',
+    'version' => '',
+    'dateline' => time()
+);
+
+$db->insert_query('templates', $insert_array_first);
+
+$insert_array_second = array(
+    'title' => 'hello_world_second',
+    'template' => $db->escape_string($template_second),
+    'sid' => '-2',
+    'version' => '',
+    'dateline' => time()
+);
+
+$db->insert_query('templates', $insert_array_second);
+
+```
+
+Deletion of a template group is done separately from templates. If there is a need to delete a template group but not its matching templates, change the sid on the templates, or else they will not show up in the Admin CP.
+
+Example of deleting a template group and changing sid for relevant templates:
+
+```php
+global $db;
+
+$db->delete_query("templategroups", "prefix = 'hello_world'");
+
+$update_array = array(
+    'sid' => '-1'
+);
+
+$db->update_query("templates", $update_array, "title like '%hello_world_%'");
+```
+
 ## Editing Templates
 
 Most plugins require some changes to the front end of the site, typically to display some extra information.
