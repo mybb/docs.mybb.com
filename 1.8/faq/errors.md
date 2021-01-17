@@ -144,5 +144,5 @@ When using MyBB, you may encounter an Internal MyBB Error, an SQL error, or see 
       `{$hiddencaptcha}`
 
 ### Useful links
-- [Upgrade MyBB](https://docs.mybb.com/1.8/install/upgrade/)
-- [Fixing database errors](https://docs.mybb.com/1.8/faq/database-errors/)
+- [Upgrade MyBB](/1.8/install/upgrade/)
+- [Fixing database errors](/1.8/faq/database-errors/)
