@@ -130,6 +130,9 @@ When using MyBB, you may encounter an Internal MyBB Error, an SQL error, or see 
 
   You should contact your host provider and ask them to whitelist your domain or hosting account against *mod_security* - basically so that it doesn't affect you anymore.
 
+- ### *404 Not Found* for Internal Links
+  **Information:** When following internal links (forums, threads, etc.) with [Search Engine Friendly URLs](/1.8/administration/configuring-search-engine-friendly-URLs/) enabled, a HTTP 404 error may appear when the URL redirects are not properly configured. Make sure the appropriate file or code fragment is used, or disable the _Enable search engine friendly URLs_ setting.
+
 - ### Catchable Fatal Error (4096)
   This error occurs when you upgrade your forum from MyBB 1.6.4 or older to MyBB 1.6.5 or newer, or when you install a theme that was not updated properly. The *member_register* template has to be updated.
 
