@@ -7,12 +7,12 @@ redirect_from:
 - /Requirements.html
 ---
 
-# Minimum Requirements
+# Requirements
 
 MyBB 1.8 and the Merge System 1.8 have a few minimum system requirements:
 
-- PHP >= 5.2
-- MySQL >= 5.0, PostgreSQL >= 8.1 or SQLite >= 3
+- PHP &ge; 5.2, [&lt; 8.0](https://github.com/mybb/mybb/issues/4138)
+- MySQL &ge; 5.0, PostgreSQL &ge; 8.1 or SQLite &ge; 3
 - Apache, nginx, lighttpd or IIS webserver
 
 The following PHP extensions are also needed:
@@ -26,5 +26,5 @@ The following PHP extensions are also needed:
 
 Although not required, we highly recommend:
 
-- PHP 7.3
-- PostgreSQL 10.0 or MySQL 8.0
+- PHP 7.4
+- latest version of PostgreSQL or MySQL
