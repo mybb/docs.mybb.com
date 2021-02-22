@@ -1,4 +1,4 @@
-version_code: 1824
+version_code: 1825
 hooks:
   - name: admin_form_output_submit_wrapper
     file: admin/inc/class_form.php
@@ -1438,6 +1438,87 @@ hooks:
   - name: admin_user_admin_permissions_start
     file: admin/modules/user/admin_permissions.php
     line: 387
+  - name: admin_user_awaiting_activation_begin
+    file: admin/modules/user/awaiting_activation.php
+    line: 25
+  - name: admin_user_awaiting_activation_activate
+    file: admin/modules/user/awaiting_activation.php
+    line: 29
+  - name: admin_user_awaiting_activation_activate_delete_commit
+    file: admin/modules/user/awaiting_activation.php
+    line: 67
+  - name: admin_user_awaiting_activation_activate_commit
+    file: admin/modules/user/awaiting_activation.php
+    line: 105
+  - name: admin_user_awaiting_activation_start
+    file: admin/modules/user/awaiting_activation.php
+    line: 117
+  - name: admin_user_banning_begin
+    file: admin/modules/user/banning.php
+    line: 52
+  - name: admin_user_banning_prune
+    file: admin/modules/user/banning.php
+    line: 79
+  - name: admin_user_banning_prune_commit
+    file: admin/modules/user/banning.php
+    line: 98
+  - name: admin_user_banning_lift
+    file: admin/modules/user/banning.php
+    line: 139
+  - name: admin_user_banning_lift_commit
+    file: admin/modules/user/banning.php
+    line: 150
+  - name: admin_user_banning_edit
+    file: admin/modules/user/banning.php
+    line: 181
+  - name: admin_user_banning_edit_commit
+    file: admin/modules/user/banning.php
+    line: 239
+  - name: admin_user_banning_start
+    file: admin/modules/user/banning.php
+    line: 306
+  - name: admin_user_banning_start_commit
+    file: admin/modules/user/banning.php
+    line: 399
+  - name: admin_user_group_promotions_begin
+    file: admin/modules/user/group_promotions.php
+    line: 37
+  - name: admin_user_group_promotions_disable
+    file: admin/modules/user/group_promotions.php
+    line: 61
+  - name: admin_user_group_promotions_disable_commit
+    file: admin/modules/user/group_promotions.php
+    line: 69
+  - name: admin_user_group_promotions_delete
+    file: admin/modules/user/group_promotions.php
+    line: 107
+  - name: admin_user_group_promotions_delete_commit
+    file: admin/modules/user/group_promotions.php
+    line: 113
+  - name: admin_user_group_promotions_enable
+    file: admin/modules/user/group_promotions.php
+    line: 150
+  - name: admin_user_group_promotions_enable_commit
+    file: admin/modules/user/group_promotions.php
+    line: 156
+  - name: admin_user_group_promotions_edit
+    file: admin/modules/user/group_promotions.php
+    line: 184
+  - name: admin_user_group_promotions_edit_commit
+    file: admin/modules/user/group_promotions.php
+    line: 276
+  - name: admin_user_group_promotions_add
+    file: admin/modules/user/group_promotions.php
+    line: 412
+  - name: admin_user_group_promotions_add_commit
+    file: admin/modules/user/group_promotions.php
+    line: 506
+  - name: admin_user_group_promotions_logs
+    file: admin/modules/user/group_promotions.php
+    line: 636
+  - name: admin_user_group_promotions_start
+    file: admin/modules/user/group_promotions.php
+    line: 725
   - name: admin_user_groups_begin
     file: admin/modules/user/groups.php
     line: 117
@@ -1593,6 +1674,39 @@ hooks:
   - name: admin_user_mass_email_end
     file: admin/modules/user/mass_mail.php
     line: 1663
+  - name: admin_user_menu
+    file: admin/modules/user/module_meta.php
+    line: 34
+    parameters:
+      - "$sub_menu"
+  - name: admin_user_action_handler
+    file: admin/modules/user/module_meta.php
+    line: 62
+    parameters:
+      - "$actions"
+  - name: admin_user_permissions
+    file: admin/modules/user/module_meta.php
+    line: 94
+    parameters:
+      - "$admin_permissions"
+  - name: admin_user_titles_begin
+    file: admin/modules/user/titles.php
+    line: 33
+  - name: admin_user_titles_add
+    file: admin/modules/user/titles.php
+    line: 37
+  - name: admin_user_titles_add_commit
+    file: admin/modules/user/titles.php
+    line: 68
+  - name: admin_user_titles_edit
+    file: admin/modules/user/titles.php
+    line: 126
+  - name: admin_user_titles_edit_commit
+    file: admin/modules/user/titles.php
+    line: 155
+  - name: admin_user_titles_delete
+    file: admin/modules/user/titles.php
+    line: 224
   - name: admin_user_titles_delete_commit
     file: admin/modules/user/titles.php
     line: 230
@@ -1620,123 +1734,26 @@ hooks:
   - name: admin_user_users_edit
     file: admin/modules/user/users.php
     line: 436
-  - name: admin_unlock_start
-    file: admin/index.php
-    line: 109
-  - name: admin_user_awaiting_activation_activate_commit
-    file: admin/modules/user/awaiting_activation.php
-    line: 105
-  - name: admin_user_awaiting_activation_start
-    file: admin/modules/user/awaiting_activation.php
-    line: 117
-  - name: admin_user_banning_begin
-    file: admin/modules/user/banning.php
-    line: 52
-  - name: admin_user_banning_prune
-    file: admin/modules/user/banning.php
-    line: 79
-  - name: admin_user_banning_prune_commit
-    file: admin/modules/user/banning.php
-    line: 98
-  - name: admin_login
-    file: admin/index.php
-    line: 154
-  - name: admin_user_banning_lift
-    file: admin/modules/user/banning.php
-    line: 139
-  - name: admin_user_banning_lift_commit
-    file: admin/modules/user/banning.php
-    line: 150
-  - name: admin_user_banning_edit
-    file: admin/modules/user/banning.php
-    line: 181
-  - name: admin_user_banning_edit_commit
-    file: admin/modules/user/banning.php
-    line: 239
-  - name: admin_user_banning_start
-    file: admin/modules/user/banning.php
-    line: 306
-  - name: admin_user_banning_start_commit
-    file: admin/modules/user/banning.php
-    line: 399
-  - name: admin_user_group_promotions_begin
-    file: admin/modules/user/group_promotions.php
-    line: 37
-  - name: admin_user_group_promotions_disable
-    file: admin/modules/user/group_promotions.php
-    line: 61
-  - name: admin_user_group_promotions_disable_commit
-    file: admin/modules/user/group_promotions.php
-    line: 69
-  - name: admin_user_group_promotions_delete
-    file: admin/modules/user/group_promotions.php
-    line: 107
-  - name: admin_user_group_promotions_delete_commit
-    file: admin/modules/user/group_promotions.php
-    line: 113
-  - name: admin_user_group_promotions_enable
-    file: admin/modules/user/group_promotions.php
-    line: 150
-  - name: admin_user_group_promotions_enable_commit
-    file: admin/modules/user/group_promotions.php
-    line: 156
-  - name: admin_user_group_promotions_edit
-    file: admin/modules/user/group_promotions.php
-    line: 184
-  - name: admin_user_group_promotions_edit_commit
-    file: admin/modules/user/group_promotions.php
-    line: 276
-  - name: admin_user_group_promotions_add
-    file: admin/modules/user/group_promotions.php
-    line: 412
-  - name: admin_user_group_promotions_add_commit
-    file: admin/modules/user/group_promotions.php
-    line: 506
-  - name: admin_user_group_promotions_logs
-    file: admin/modules/user/group_promotions.php
-    line: 636
-  - name: admin_user_group_promotions_start
-    file: admin/modules/user/group_promotions.php
-    line: 725
-  - name: admin_user_titles_begin
-    file: admin/modules/user/titles.php
-    line: 33
-  - name: admin_user_titles_add
-    file: admin/modules/user/titles.php
-    line: 37
-  - name: admin_user_titles_add_commit
-    file: admin/modules/user/titles.php
-    line: 68
-  - name: admin_user_titles_edit
-    file: admin/modules/user/titles.php
-    line: 126
-  - name: admin_user_titles_edit_commit
-    file: admin/modules/user/titles.php
-    line: 155
-  - name: admin_user_titles_delete
-    file: admin/modules/user/titles.php
-    line: 224
   - name: admin_user_users_edit_start
     file: admin/modules/user/users.php
     line: 440
-  - name: admin_unlock_end
-    file: admin/index.php
-    line: 134
   - name: admin_user_users_edit_commit_start
     file: admin/modules/user/users.php
     line: 824
-  - name: admin_login_incorrect_pin
-    file: admin/index.php
-    line: 194
-  - name: admin_user_awaiting_activation_activate_delete_commit
-    file: admin/modules/user/awaiting_activation.php
-    line: 67
-  - name: admin_login_success
-    file: admin/index.php
-    line: 268
-  - name: admin_user_awaiting_activation_activate
-    file: admin/modules/user/awaiting_activation.php
-    line: 29
+  - name: admin_user_users_edit_commit
+    file: admin/modules/user/users.php
+    line: 837
+  - name: admin_user_users_edit_end
+    file: admin/modules/user/users.php
+    line: 850
+  - name: admin_user_users_edit_graph_tabs
+    file: admin/modules/user/users.php
+    line: 967
+    parameters:
+      - "$tabs"
+  - name: admin_user_users_edit_overview
+    file: admin/modules/user/users.php
+    line: 1115
   - name: admin_user_users_edit_profile
     file: admin/modules/user/users.php
     line: 1221
@@ -1755,65 +1772,16 @@ hooks:
     line: 1317
     parameters:
       - "$forum_options"
-  - name: admin_user_users_edit_other_options
-    file: admin/modules/user/users.php
-    line: 1364
-    parameters:
-      - "$other_options"
-  - name: admin_login_fail
-    file: admin/index.php
-    line: 346
-  - name: admin_user_users_edit_commit
-    file: admin/modules/user/users.php
-    line: 837
-  - name: admin_user_users_edit_end
-    file: admin/modules/user/users.php
-    line: 850
-  - name: admin_user_users_edit_overview
-    file: admin/modules/user/users.php
-    line: 1115
-  - name: admin_login_lockout
-    file: admin/index.php
-    line: 364
-  - name: admin_logout
-    file: admin/index.php
-    line: 501
-  - name: admin_tabs
-    file: admin/index.php
-    line: 755
-    parameters:
-      - "$modules"
-  - name: admin_load
-    file: admin/index.php
-    line: 822
-  - name: admin_user_awaiting_activation_begin
-    file: admin/modules/user/awaiting_activation.php
-    line: 25
-  - name: admin_user_menu
-    file: admin/modules/user/module_meta.php
-    line: 34
-    parameters:
-      - "$sub_menu"
-  - name: admin_user_action_handler
-    file: admin/modules/user/module_meta.php
-    line: 62
-    parameters:
-      - "$actions"
-  - name: admin_user_permissions
-    file: admin/modules/user/module_meta.php
-    line: 94
-    parameters:
-      - "$admin_permissions"
-  - name: admin_user_users_edit_graph_tabs
-    file: admin/modules/user/users.php
-    line: 967
-    parameters:
-      - "$tabs"
   - name: admin_user_users_edit_thread_options
     file: admin/modules/user/users.php
     line: 1348
     parameters:
       - "$thread_options"
+  - name: admin_user_users_edit_other_options
+    file: admin/modules/user/users.php
+    line: 1364
+    parameters:
+      - "$other_options"
   - name: admin_user_users_edit_settings
     file: admin/modules/user/users.php
     line: 1370
@@ -1862,6 +1830,38 @@ hooks:
   - name: admin_user_users_start
     file: admin/modules/user/users.php
     line: 3063
+  - name: admin_unlock_start
+    file: admin/index.php
+    line: 109
+  - name: admin_unlock_end
+    file: admin/index.php
+    line: 134
+  - name: admin_login
+    file: admin/index.php
+    line: 154
+  - name: admin_login_incorrect_pin
+    file: admin/index.php
+    line: 194
+  - name: admin_login_success
+    file: admin/index.php
+    line: 268
+  - name: admin_login_fail
+    file: admin/index.php
+    line: 346
+  - name: admin_login_lockout
+    file: admin/index.php
+    line: 364
+  - name: admin_logout
+    file: admin/index.php
+    line: 501
+  - name: admin_tabs
+    file: admin/index.php
+    line: 755
+    parameters:
+      - "$modules"
+  - name: admin_load
+    file: admin/index.php
+    line: 822
   - name: archive_start
     file: archive/index.php
     line: 19
@@ -1901,16 +1901,6 @@ hooks:
   - name: archive_end
     file: archive/index.php
     line: 463
-  - name: captcha_build_start
-    file: inc/class_captcha.php
-    line: 103
-    parameters:
-      - "$args"
-  - name: captcha_build_end
-    file: inc/class_captcha.php
-    line: 168
-    parameters:
-      - "$args"
   - name: datahandler_event_validate
     file: inc/datahandlers/event.php
     line: 430
@@ -1951,146 +1941,61 @@ hooks:
     line: 270
     parameters:
       - "$this"
-  - name: datahandler_login_complete_start
-    file: inc/datahandlers/login.php
-    line: 307
-    parameters:
-      - "$this"
-  - name: datahandler_user_delete_start
-    file: inc/datahandlers/user.php
-    line: 1518
-    parameters:
-      - "$this"
-  - name: datahandler_user_delete_end
-    file: inc/datahandlers/user.php
-    line: 1586
-    parameters:
-      - "$this"
-  - name: datahandler_user_delete_content
-    file: inc/datahandlers/user.php
-    line: 1623
-    parameters:
-      - "$this"
-  - name: datahandler_user_delete_posts
-    file: inc/datahandlers/user.php
-    line: 1695
-    parameters:
-      - "$this"
-  - name: datahandler_user_clear_profile
-    file: inc/datahandlers/user.php
-    line: 1768
-    parameters:
-      - "$this"
-  - name: captcha_validate_start
-    file: inc/class_captcha.php
-    line: 254
-    parameters:
-      - "$this"
-  - name: captcha_validate_end
-    file: inc/class_captcha.php
-    line: 381
-    parameters:
-      - "$this"
-  - name: datahandler_user_validate
-    file: inc/datahandlers/user.php
-    line: 1058
-    parameters:
-      - "$this"
-  - name: captcha_invalidate_end
-    file: inc/class_captcha.php
-    line: 408
-    parameters:
-      - "$this"
-  - name: class_moderation_close_threads
-    file: inc/class_moderation.php
-    line: 31
-    parameters:
-      - "$tids"
-  - name: class_moderation_open_threads
-    file: inc/class_moderation.php
-    line: 67
-    parameters:
-      - "$tids"
-  - name: class_moderation_stick_threads
-    file: inc/class_moderation.php
-    line: 102
-    parameters:
-      - "$tids"
-  - name: class_moderation_unstick_threads
-    file: inc/class_moderation.php
-    line: 137
-    parameters:
-      - "$tids"
-  - name: class_moderation_remove_redirects
-    file: inc/class_moderation.php
-    line: 159
-    parameters:
-      - "$tid"
-  - name: class_moderation_delete_thread_start
-    file: inc/class_moderation.php
-    line: 189
-    parameters:
-      - "$tid"
-  - name: class_moderation_delete_thread
-    file: inc/class_moderation.php
-    line: 328
-    parameters:
-      - "$tid"
-  - name: datahandler_user_insert
-    file: inc/datahandlers/user.php
-    line: 1190
-    parameters:
-      - "$this"
-  - name: report_content_types
-    file: inc/class_datacache.php
-    line: 1253
-    parameters:
-      - "$content_types"
-  - name: class_moderation_delete_poll
-    file: inc/class_moderation.php
-    line: 350
-    parameters:
-      - "$pid"
-  - name: datahandler_user_insert_end
-    file: inc/datahandlers/user.php
-    line: 1238
-    parameters:
-      - "$this"
-  - name: datahandler_user_update
-    file: inc/datahandlers/user.php
-    line: 1415
-    parameters:
-      - "$this"
-  - name: class_moderation_approve_threads
-    file: inc/class_moderation.php
-    line: 469
-    parameters:
-      - "$tids"
-  - name: class_moderation_unapprove_threads
-    file: inc/class_moderation.php
-    line: 619
-    parameters:
-      - "$tids"
   - name: datahandler_login_validate_end
     file: inc/datahandlers/login.php
     line: 287
     parameters:
       - "$this"
-  - name: class_moderation_delete_post_start
-    file: inc/class_moderation.php
-    line: 664
+  - name: datahandler_login_complete_start
+    file: inc/datahandlers/login.php
+    line: 307
     parameters:
-      - "$pid"
+      - "$this"
   - name: datahandler_login_complete_end
     file: inc/datahandlers/login.php
     line: 333
     parameters:
       - "$this"
-  - name: class_moderation_delete_post
-    file: inc/class_moderation.php
-    line: 720
+  - name: datahandler_pm_validate
+    file: inc/datahandlers/pm.php
+    line: 487
     parameters:
-      - "$post['pid']"
+      - "$this"
+  - name: datahandler_pm_insert_updatedraft
+    file: inc/datahandlers/pm.php
+    line: 612
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_updatedraft_commit
+    file: inc/datahandlers/pm.php
+    line: 616
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert
+    file: inc/datahandlers/pm.php
+    line: 694
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_commit
+    file: inc/datahandlers/pm.php
+    line: 698
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_savedcopy
+    file: inc/datahandlers/pm.php
+    line: 751
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_savedcopy_commit
+    file: inc/datahandlers/pm.php
+    line: 755
+    parameters:
+      - "$this"
+  - name: datahandler_pm_insert_end
+    file: inc/datahandlers/pm.php
+    line: 768
+    parameters:
+      - "$this"
   - name: datahandler_post_validate_post
     file: inc/datahandlers/post.php
     line: 840
@@ -2136,16 +2041,6 @@ hooks:
     line: 1501
     parameters:
       - "$this"
-  - name: class_moderation_merge_posts
-    file: inc/class_moderation.php
-    line: 952
-    parameters:
-      - "$arguments"
-  - name: class_moderation_move_thread_redirect
-    file: inc/class_moderation.php
-    line: 1052
-    parameters:
-      - "$arguments"
   - name: datahandler_post_insert_thread
     file: inc/datahandlers/post.php
     line: 1528
@@ -2176,6 +2071,56 @@ hooks:
     line: 1977
     parameters:
       - "$this"
+  - name: datahandler_user_validate
+    file: inc/datahandlers/user.php
+    line: 1058
+    parameters:
+      - "$this"
+  - name: datahandler_user_insert
+    file: inc/datahandlers/user.php
+    line: 1190
+    parameters:
+      - "$this"
+  - name: datahandler_user_insert_end
+    file: inc/datahandlers/user.php
+    line: 1238
+    parameters:
+      - "$this"
+  - name: datahandler_user_update
+    file: inc/datahandlers/user.php
+    line: 1415
+    parameters:
+      - "$this"
+  - name: datahandler_user_delete_start
+    file: inc/datahandlers/user.php
+    line: 1518
+    parameters:
+      - "$this"
+  - name: datahandler_user_delete_end
+    file: inc/datahandlers/user.php
+    line: 1586
+    parameters:
+      - "$this"
+  - name: datahandler_user_delete_content
+    file: inc/datahandlers/user.php
+    line: 1623
+    parameters:
+      - "$this"
+  - name: datahandler_user_delete_posts
+    file: inc/datahandlers/user.php
+    line: 1695
+    parameters:
+      - "$this"
+  - name: datahandler_user_clear_profile
+    file: inc/datahandlers/user.php
+    line: 1768
+    parameters:
+      - "$this"
+  - name: datahandler_warnings_validate_warning
+    file: inc/datahandlers/warnings.php
+    line: 268
+    parameters:
+      - "$this"
   - name: datahandler_warnings_insert_warning
     file: inc/datahandlers/warnings.php
     line: 702
@@ -2186,16 +2131,21 @@ hooks:
     line: 731
     parameters:
       - "$this"
-  - name: class_moderation_copy_thread
-    file: inc/class_moderation.php
-    line: 1142
+  - name: task_backupdb
+    file: inc/tasks/backupdb.php
+    line: 59
     parameters:
-      - "$arguments"
-  - name: datahandler_warnings_validate_warning
-    file: inc/datahandlers/warnings.php
-    line: 268
+      - "$args"
+  - name: task_checktables
+    file: inc/tasks/checktables.php
+    line: 77
     parameters:
-      - "$this"
+      - "$task"
+  - name: task_dailycleanup_start
+    file: inc/tasks/dailycleanup.php
+    line: 31
+    parameters:
+      - "$args"
   - name: task_dailycleanup_end
     file: inc/tasks/dailycleanup.php
     line: 70
@@ -2206,21 +2156,151 @@ hooks:
     line: 31
     parameters:
       - "$args"
+  - name: task_hourlycleanup
+    file: inc/tasks/hourlycleanup.php
+    line: 28
+    parameters:
+      - "$args"
+  - name: task_logcleanup
+    file: inc/tasks/logcleanup.php
+    line: 59
+    parameters:
+      - "$task"
+  - name: task_massmail
+    file: inc/tasks/massmail.php
+    line: 33
+    parameters:
+      - "$args"
+  - name: task_promotions
+    file: inc/tasks/promotions.php
+    line: 167
+    parameters:
+      - "$args"
+  - name: task_threadviews
+    file: inc/tasks/threadviews.php
+    line: 31
+    parameters:
+      - "$task"
+  - name: task_usercleanup
+    file: inc/tasks/usercleanup.php
+    line: 70
+    parameters:
+      - "$task"
+  - name: task_userpruning
+    file: inc/tasks/userpruning.php
+    line: 87
+    parameters:
+      - "$args"
+  - name: captcha_build_start
+    file: inc/class_captcha.php
+    line: 103
+    parameters:
+      - "$args"
+  - name: captcha_build_end
+    file: inc/class_captcha.php
+    line: 168
+    parameters:
+      - "$args"
+  - name: captcha_validate_start
+    file: inc/class_captcha.php
+    line: 254
+    parameters:
+      - "$this"
+  - name: captcha_validate_end
+    file: inc/class_captcha.php
+    line: 381
+    parameters:
+      - "$this"
+  - name: captcha_invalidate_end
+    file: inc/class_captcha.php
+    line: 408
+    parameters:
+      - "$this"
+  - name: report_content_types
+    file: inc/class_datacache.php
+    line: 1253
+    parameters:
+      - "$content_types"
+  - name: class_moderation_close_threads
+    file: inc/class_moderation.php
+    line: 31
+    parameters:
+      - "$tids"
+  - name: class_moderation_open_threads
+    file: inc/class_moderation.php
+    line: 67
+    parameters:
+      - "$tids"
+  - name: class_moderation_stick_threads
+    file: inc/class_moderation.php
+    line: 102
+    parameters:
+      - "$tids"
+  - name: class_moderation_unstick_threads
+    file: inc/class_moderation.php
+    line: 137
+    parameters:
+      - "$tids"
+  - name: class_moderation_remove_redirects
+    file: inc/class_moderation.php
+    line: 159
+    parameters:
+      - "$tid"
+  - name: class_moderation_delete_thread_start
+    file: inc/class_moderation.php
+    line: 189
+    parameters:
+      - "$tid"
+  - name: class_moderation_delete_thread
+    file: inc/class_moderation.php
+    line: 328
+    parameters:
+      - "$tid"
+  - name: class_moderation_delete_poll
+    file: inc/class_moderation.php
+    line: 350
+    parameters:
+      - "$pid"
+  - name: class_moderation_approve_threads
+    file: inc/class_moderation.php
+    line: 469
+    parameters:
+      - "$tids"
+  - name: class_moderation_unapprove_threads
+    file: inc/class_moderation.php
+    line: 619
+    parameters:
+      - "$tids"
+  - name: class_moderation_delete_post_start
+    file: inc/class_moderation.php
+    line: 664
+    parameters:
+      - "$pid"
+  - name: class_moderation_delete_post
+    file: inc/class_moderation.php
+    line: 720
+    parameters:
+      - "$post['pid']"
+  - name: class_moderation_merge_posts
+    file: inc/class_moderation.php
+    line: 952
+    parameters:
+      - "$arguments"
+  - name: class_moderation_move_thread_redirect
+    file: inc/class_moderation.php
+    line: 1052
+    parameters:
+      - "$arguments"
+  - name: class_moderation_copy_thread
+    file: inc/class_moderation.php
+    line: 1142
+    parameters:
+      - "$arguments"
   - name: class_moderation_move_simple
     file: inc/class_moderation.php
     line: 1259
     parameters:
       - "$arguments"
-  - name: datahandler_pm_insert_end
-    file: inc/datahandlers/pm.php
-    line: 768
-    parameters:
-      - "$this"
-  - name: task_checktables
-    file: inc/tasks/checktables.php
-    line: 77
-    parameters:
-      - "$task"
   - name: class_moderation_merge_threads
     file: inc/class_moderation.php
     line: 1532
@@ -2251,26 +2331,6 @@ hooks:
     line: 2778
     parameters:
       - "$arguments"
-  - name: task_backupdb
-    file: inc/tasks/backupdb.php
-    line: 59
-    parameters:
-      - "$args"
-  - name: task_dailycleanup_start
-    file: inc/tasks/dailycleanup.php
-    line: 31
-    parameters:
-      - "$args"
-  - name: task_hourlycleanup
-    file: inc/tasks/hourlycleanup.php
-    line: 28
-    parameters:
-      - "$args"
-  - name: task_threadviews
-    file: inc/tasks/threadviews.php
-    line: 31
-    parameters:
-      - "$task"
   - name: class_moderation_expire_thread
     file: inc/class_moderation.php
     line: 2807
@@ -2286,46 +2346,11 @@ hooks:
     line: 3149
     parameters:
       - "$arguments"
-  - name: datahandler_pm_insert_updatedraft_commit
-    file: inc/datahandlers/pm.php
-    line: 616
-    parameters:
-      - "$this"
   - name: class_moderation_soft_delete_posts
     file: inc/class_moderation.php
     line: 3283
     parameters:
       - "$pids"
-  - name: datahandler_pm_validate
-    file: inc/datahandlers/pm.php
-    line: 487
-    parameters:
-      - "$this"
-  - name: datahandler_pm_insert_updatedraft
-    file: inc/datahandlers/pm.php
-    line: 612
-    parameters:
-      - "$this"
-  - name: datahandler_pm_insert
-    file: inc/datahandlers/pm.php
-    line: 694
-    parameters:
-      - "$this"
-  - name: datahandler_pm_insert_commit
-    file: inc/datahandlers/pm.php
-    line: 698
-    parameters:
-      - "$this"
-  - name: datahandler_pm_insert_savedcopy
-    file: inc/datahandlers/pm.php
-    line: 751
-    parameters:
-      - "$this"
-  - name: datahandler_pm_insert_savedcopy_commit
-    file: inc/datahandlers/pm.php
-    line: 755
-    parameters:
-      - "$this"
   - name: class_moderation_restore_posts
     file: inc/class_moderation.php
     line: 3434
@@ -2368,7 +2393,7 @@ hooks:
       - "$message"
   - name: text_parse_message
     file: inc/class_parser.php
-    line: 1855
+    line: 1849
     parameters:
       - "$message"
   - name: pre_session_load
@@ -2471,36 +2496,11 @@ hooks:
     line: 1111
     parameters:
       - "$plugin_array"
-  - name: task_massmail
-    file: inc/tasks/massmail.php
-    line: 33
-    parameters:
-      - "$args"
   - name: postbit_prev
     file: inc/functions_post.php
     line: 844
     parameters:
       - "$post"
-  - name: task_logcleanup
-    file: inc/tasks/logcleanup.php
-    line: 59
-    parameters:
-      - "$task"
-  - name: task_promotions
-    file: inc/tasks/promotions.php
-    line: 167
-    parameters:
-      - "$args"
-  - name: task_usercleanup
-    file: inc/tasks/usercleanup.php
-    line: 70
-    parameters:
-      - "$task"
-  - name: task_userpruning
-    file: inc/tasks/userpruning.php
-    line: 87
-    parameters:
-      - "$args"
   - name: postbit_pm
     file: inc/functions_post.php
     line: 847
