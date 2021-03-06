@@ -69,7 +69,7 @@ Once you've downloaded the correct upgrade package for you, it's time to do the 
 
 2. If the blog post announcement mentions that the upgrade script **is** required, then perform the following:
 
-	1. Open your forum's home page in your web browser and add `/install/` to the URL. For example, `www.yourdomain.com/install/` or `www.yourdomain.com/forum/install/`.
+	1. Open your forum's home page in your web browser and add `/install/upgrade.php` to the URL. For example, `www.yourdomain.com/install/upgrade.php` or `www.yourdomain.com/forum/install/upgrade.php`. If you visit `/install`, you will be prompted to either install MyBB, or upgrade your existing copy - you do not need to install a clean forum first before upgrading, so pick the option to upgrade.
 
 	2. It might ask you to remove a file called `lock` in this folder. Use an FTP Client or a File Manager to remove the `install/lock` file.
 
