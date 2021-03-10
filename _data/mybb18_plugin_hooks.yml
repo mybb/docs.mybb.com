@@ -1,4 +1,4 @@
-version_code: 1825
+version_code: 1826
 hooks:
   - name: admin_form_output_submit_wrapper
     file: admin/inc/class_form.php
@@ -745,77 +745,77 @@ hooks:
     line: 67
   - name: admin_forum_management_copy_commit
     file: admin/modules/forum/management.php
-    line: 175
+    line: 181
   - name: admin_forum_management_editmod
     file: admin/modules/forum/management.php
-    line: 280
+    line: 286
   - name: admin_forum_management_editmod_commit
     file: admin/modules/forum/management.php
-    line: 339
+    line: 345
   - name: admin_forum_management_clear_permission
     file: admin/modules/forum/management.php
-    line: 441
+    line: 447
   - name: admin_forum_management_clear_permission_commit
     file: admin/modules/forum/management.php
-    line: 462
+    line: 468
   - name: admin_forum_management_permissions
     file: admin/modules/forum/management.php
-    line: 477
+    line: 483
   - name: admin_forum_management_permissions_commit
     file: admin/modules/forum/management.php
-    line: 534
+    line: 540
   - name: admin_forum_management_permission_groups
     file: admin/modules/forum/management.php
-    line: 738
+    line: 744
     parameters:
       - "$groups"
   - name: admin_forum_management_add
     file: admin/modules/forum/management.php
-    line: 815
+    line: 821
   - name: admin_forum_management_add_start
     file: admin/modules/forum/management.php
-    line: 870
+    line: 876
   - name: admin_forum_management_add_commit
     file: admin/modules/forum/management.php
-    line: 919
+    line: 925
   - name: admin_forum_management_edit
     file: admin/modules/forum/management.php
-    line: 1319
+    line: 1325
   - name: admin_forum_management_edit_commit
     file: admin/modules/forum/management.php
-    line: 1481
+    line: 1487
   - name: admin_forum_management_deletemod
     file: admin/modules/forum/management.php
-    line: 1884
+    line: 1890
   - name: admin_forum_management_deletemod_commit
     file: admin/modules/forum/management.php
-    line: 1911
+    line: 1917
   - name: admin_forum_management_delete
     file: admin/modules/forum/management.php
-    line: 1954
+    line: 1960
   - name: admin_forum_management_delete_commit
     file: admin/modules/forum/management.php
-    line: 2029
+    line: 2035
   - name: admin_forum_management_start
     file: admin/modules/forum/management.php
-    line: 2061
+    line: 2067
   - name: admin_forum_management_start_permissions_commit
     file: admin/modules/forum/management.php
-    line: 2116
+    line: 2122
   - name: admin_forum_management_start_moderators_commit
     file: admin/modules/forum/management.php
-    line: 2209
+    line: 2215
   - name: admin_forum_management_start_disporder_commit
     file: admin/modules/forum/management.php
-    line: 2240
+    line: 2246
   - name: admin_forum_management_start_graph_tabs
     file: admin/modules/forum/management.php
-    line: 2281
+    line: 2287
     parameters:
       - "$tabs"
   - name: admin_forum_management_start_graph
     file: admin/modules/forum/management.php
-    line: 2664
+    line: 2670
   - name: admin_forum_moderation_queue_begin
     file: admin/modules/forum/moderation_queue.php
     line: 37
@@ -2465,17 +2465,17 @@ hooks:
       - "$arguments"
   - name: functions_fetch_ban_times
     file: inc/functions.php
-    line: 7691
+    line: 7672
     parameters:
       - "$ban_times"
   - name: copy_file_to_cdn_start
     file: inc/functions.php
-    line: 8911
+    line: 8892
     parameters:
       - "$hook_args"
   - name: copy_file_to_cdn_end
     file: inc/functions.php
-    line: 8954
+    line: 8935
     parameters:
       - "$hook_args"
   - name: build_forumbits_forum
@@ -3872,40 +3872,40 @@ hooks:
     line: 3681
   - name: usercp_usergroups_end
     file: usercp.php
-    line: 3897
+    line: 3911
   - name: usercp_attachments_start
     file: usercp.php
-    line: 3912
+    line: 3926
   - name: usercp_attachments_end
     file: usercp.php
-    line: 4032
+    line: 4046
   - name: usercp_do_attachments_start
     file: usercp.php
-    line: 4049
+    line: 4063
   - name: usercp_do_attachments_end
     file: usercp.php
-    line: 4077
+    line: 4091
   - name: usercp_do_notepad_start
     file: usercp.php
-    line: 4092
+    line: 4106
   - name: usercp_do_notepad_end
     file: usercp.php
-    line: 4094
+    line: 4108
   - name: usercp_notepad_start
     file: usercp.php
-    line: 4265
+    line: 4279
   - name: usercp_notepad_end
     file: usercp.php
-    line: 4268
+    line: 4282
   - name: usercp_thread_subscriptions_thread
     file: usercp.php
-    line: 4338
+    line: 4352
   - name: usercp_latest_threads_thread
     file: usercp.php
-    line: 4531
+    line: 4545
   - name: usercp_end
     file: usercp.php
-    line: 4679
+    line: 4693
   - name: warnings_start
     file: warnings.php
     line: 40
