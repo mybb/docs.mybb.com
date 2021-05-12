@@ -156,28 +156,30 @@ The configured file will contain information useful in identifying the cause.
       `{$hiddencaptcha}`
 
 - #### _Parser output validation failed_
-  This problem may also manifest in empty contents of some posts and messages and "_MyBB Internal: One or more warnings occurred_" errors. It may be caused by invalid HTML created by custom MyCodes, plugins related to post parsing, or MyCode templates.
+  A `Parser output validation failed` saved in the error log when viewing forum content. This problem may also manifest in empty contents of some posts and messages.
+
+  Caused by invalid HTML created by custom MyCodes, plugins related to post parsing, or MyCode templates.
 
   To identify the problematic element:
-  - create a thread on your forum that don't use particular MyCodes or other non-default features (embeds, mentions, etc.),
+  - copy the content of the broken message to a new thread, and remove custom MyCodes or other non-default features (embeds, mentions, etc.), or
   - temporarily deactivate all or suspected plugins (you can use the _Configuration → Setings → Disable All Plugins_ setting)
 
   and see if the errors continue to occur.
 
-  We recommend checking for updates for the affected extension or contacting the author. You can also ask for help in [MyBB Support]({{ site.mainsite_url }}/support/) channels.
+  If the errors are related to downloaded extensions, we recommend checking for new versions or contacting thir authors. You can also ask for help in [MyBB Support]({{ site.mainsite_url }}/support/) channels.
 
   ##### Correcting Validation Issues
   Invalid HTML can be added to post content through:
   - MyCode _Replacement_ values
-  - theme templates used in parsing MyCode
+  - theme templates used for parsing MyCode
   - plugins' source code
 
-  You can use the technical details of the error saved in the [configured log file](/1.8/faq/errors/#enabling-error-logs). This includes the original message, the resulting output, and detailed validation errors related to the HTML structure.
+  You can use the technical details of the error saved in the [error log file](/1.8/faq/errors/#enabling-error-logs). This includes the original message, the resulting output, and detailed validation errors related to the HTML structure.
 
   ##### Disabling Validation
-  The parser validation is a security feature added in MyBB 1.8.27, and can be temporarily disabled by modifying the [`inc/class_parser.php`](https://github.com/mybb/mybb/pull/4337/files#diff-7ad919b51e7204f9b1853df2ea4d68315653dec7299bd5d3e049d8f9d24d3072R100-R110) file, and setting the `$output_validation_policy` value to `0`:
+  The parser validation is a security feature added in MyBB 1.8.27, and can be temporarily disabled by modifying the [`inc/class_parser.php`](https://github.com/mybb/mybb/pull/4337/files#diff-7ad919b51e7204f9b1853df2ea4d68315653dec7299bd5d3e049d8f9d24d3072R122) file, and changing the `$output_validation_policy` value to `VALIDATION_DISABLE`:
   ```php
-  public $output_validation_policy = 0;
+  public $output_validation_policy = VALIDATION_DISABLE;
   ```
   Once the underlying problems are resolved, restore the original value.
 
