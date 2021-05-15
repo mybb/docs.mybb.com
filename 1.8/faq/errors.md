@@ -156,7 +156,7 @@ The configured file will contain information useful in identifying the cause.
       `{$hiddencaptcha}`
 
 - #### _Parser output validation failed_
-  A `Parser output validation failed` saved in the error log when viewing forum content. This problem may also manifest in empty contents of some posts and messages.
+  When parser output fails to validate as forum content is viewed, an error is saved in the error log. These validation errors can result in the contents of some posts and messages appearing as empty.
 
   Caused by invalid HTML created by custom MyCodes, plugins related to post parsing, or MyCode templates.
 
@@ -166,7 +166,7 @@ The configured file will contain information useful in identifying the cause.
 
   and see if the errors continue to occur.
 
-  If the errors are related to downloaded extensions, we recommend checking for new versions or contacting thir authors. You can also ask for help in [MyBB Support]({{ site.mainsite_url }}/support/) channels.
+  If the errors are related to downloaded extensions, we recommend checking for new versions or contacting their authors. You can also ask for help in [MyBB Support]({{ site.mainsite_url }}/support/) channels.
 
   ##### Correcting Validation Issues
   Invalid HTML can be added to post content through:
