@@ -186,7 +186,7 @@ This data is cached in the `forums` [datacache](/1.8/development/datacache/).
   - _Forum Content_ conditions are satisfied for the associated forums
   - the target user has thread viewing permissions for the forum (`canviewthreads` is `1`)
   - the target user has permissions to view anyone's threads for the forum (`canonlyviewownthreads` is `0`), or is the author of the thread and is not a guest
-  - the thread's visibility conditions are satisfied for the target user (see [Visibility Status](#visibility-status))
+  - the thread's visibility conditions are satisfied for the target user (see [Visibility State](#visibility-state))
 
 - **Post**
 
@@ -194,7 +194,7 @@ This data is cached in the `forums` [datacache](/1.8/development/datacache/).
   - _Forum Metadata_ conditions are satisfied for the associated forums
   - _Forum Content_ conditions are satisfied for the associated forums
   - _Thread_ conditions are satisfied for the associated thread
-  - the post's visibility conditions are satisfied for the target user (see [Visibility Status](#visibility-status))
+  - the post's visibility conditions are satisfied for the target user (see [Visibility State](#visibility-state))
 
 ## Examples
 _The following code is included for demonstrative purposes only, and may not conform to production coding standards._
