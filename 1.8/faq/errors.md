@@ -177,7 +177,7 @@ The configured file will contain information useful in identifying the cause.
   You can use the technical details of the error saved in the [error log file](/1.8/faq/errors/#enabling-error-logs). This includes the original message, the resulting output, and detailed validation errors related to the HTML structure.
 
   ##### Disabling Validation
-  The parser validation is a security feature added in MyBB 1.8.27, and can be temporarily disabled by modifying the [`inc/class_parser.php`](https://github.com/mybb/mybb/pull/4337/files#diff-7ad919b51e7204f9b1853df2ea4d68315653dec7299bd5d3e049d8f9d24d3072R122) file, and changing the `$output_validation_policy` value to `VALIDATION_DISABLE`:
+  The parser validation is a security feature added in MyBB 1.8.27, and can be temporarily disabled by modifying the [`inc/class_parser.php`](https://github.com/mybb/mybb/blob/mybb_1827/inc/class_parser.php#L122) file, and changing the `$output_validation_policy` value to `VALIDATION_DISABLE`:
   ```php
   public $output_validation_policy = VALIDATION_DISABLE;
   ```
