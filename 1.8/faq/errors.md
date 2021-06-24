@@ -18,6 +18,15 @@ MyBB, depending on the board's settings, may not always show error details. To e
 1. set **Error Logging Medium** to _Log errors_,
 1. set **Error Logging Location** to e.g. `./error.log`, a location that cannot be accessed through the web (see the [Security Guide](/1.8/administration/security/protection/#apply-server-specific-directives) for server configuration instructions).
 
+If the Admin CP cannot be accessed, these settings can be overridden manually by adding the following lines at the end of the `inc/settings.php` file:
+```php
+// manual overrides
+$settings['errorlogmedium'] = 'log';
+$settings['errortypemedium'] = 'both';
+$settings['errorloglocation'] = './error.log';
+```
+_Note: Manual changes are temporary and will be lost when modifying settings using the Admin CP._
+
 The configured file will contain information useful in identifying the cause.
 
 ## Error Types
