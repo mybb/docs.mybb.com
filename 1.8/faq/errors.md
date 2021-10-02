@@ -171,12 +171,12 @@ The configured file will contain information useful in identifying the cause.
   - MyCode _Replacement_ values of custom MyCodes
   - theme templates used for parsing MyCode
   - plugins related to post parsing
-  - user groups' _Username Style_
+  - HTML entered in the Admin CP (e.g. _Forum Rules_, user groups' _Username Style_)
 
   ##### Identifying the Cause
 
   To identify the problematic MyCode:
-  - copy the content of the broken message to a new thread, and remove custom MyCodes or other non-default features (embeds, mentions, etc.), or
+  - isolate the content of the broken message (e.g. by copying it to a new thread), and remove custom MyCodes or other non-default features (embeds, mentions, etc.), or
   - temporarily deactivate all or suspected plugins (you can use the _Configuration → Setings → Disable All Plugins_ setting)
 
   and see if the errors continue to occur.
@@ -185,14 +185,14 @@ The configured file will contain information useful in identifying the cause.
 
   ##### Correcting Validation Issues
 
-  Use the technical details of the error saved in the [error log file](/1.8/faq/errors/#enabling-error-logs) to identify the cause. These include the original message, the resulting output, and detailed validation errors related to the HTML structure.
+  Use the technical details of the error saved in the [error log file](/1.8/faq/errors/#enabling-error-logs) to identify the cause. These include the original message, the resulting output, and detailed validation errors related to the HTML structure (usually, most entries in the array are not critical or result from previous errors, but are included for clarity).
 
   You can use the [Parser Validation Debug](https://github.com/dvz/mybb-tools/raw/main/_parser-debug.php) tool to inspect validation details of selected posts on the forum, or decode raw errors that were logged in the past (see [usage instructions](https://github.com/dvz/mybb-tools#usage)).
 
   ##### Disabling Validation
-  Parser output validation is a security feature added in MyBB 1.8.27, and can be temporarily disabled by modifying the [`inc/class_parser.php`](https://github.com/mybb/mybb/blob/mybb_1827/inc/class_parser.php#L122) file, and changing the `$output_validation_policy` value to `VALIDATION_DISABLE`:
+  Parser output validation is a security feature added in MyBB 1.8.27, and can be temporarily disabled by modifying the [`inc/class_parser.php`](https://github.com/mybb/mybb/blob/mybb_1827/inc/class_parser.php#L122) file, and changing the `$output_validation_policy` value to `VALIDATION_REPORT_ONLY`:
   ```php
-  public $output_validation_policy = VALIDATION_DISABLE;
+  public $output_validation_policy = VALIDATION_REPORT_ONLY;
   ```
   Once the underlying problems are resolved, restore the original value.
 
