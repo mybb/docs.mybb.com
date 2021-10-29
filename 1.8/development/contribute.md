@@ -51,8 +51,10 @@ For more information, please see [GitHub's guide on setting up Git](https://help
 
 If you are working on a Windows environment you must ensure you commit all files with LF line endings. Please make sure you set the following options:
 
-    $ git config --global core.autocrlf false
-    $ git config --global core.eol lf
+```bash
+  $ git config --global core.autocrlf false
+  $ git config --global core.eol lf
+```
 
 When reviewing a commit, if the entire file looks as though it has changed (and not just individual lines) then chances are the line endings are incorrect.
 
