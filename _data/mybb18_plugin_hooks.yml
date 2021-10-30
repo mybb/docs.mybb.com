@@ -1,4 +1,4 @@
-version_code: 1828
+version_code: 1829
 hooks:
   - name: admin_form_output_submit_wrapper
     file: admin/inc/class_form.php
@@ -544,37 +544,37 @@ hooks:
     line: 268
   - name: admin_config_settings_add_commit
     file: admin/modules/config/settings.php
-    line: 348
+    line: 344
   - name: admin_config_settings_edit
     file: admin/modules/config/settings.php
-    line: 474
+    line: 470
   - name: admin_config_settings_edit_commit
     file: admin/modules/config/settings.php
-    line: 552
+    line: 544
   - name: admin_config_settings_delete
     file: admin/modules/config/settings.php
-    line: 703
+    line: 695
   - name: admin_config_settings_delete_commit
     file: admin/modules/config/settings.php
-    line: 712
+    line: 704
   - name: admin_config_settings_manage
     file: admin/modules/config/settings.php
-    line: 729
+    line: 721
   - name: admin_config_settings_manage_commit
     file: admin/modules/config/settings.php
-    line: 754
+    line: 746
   - name: admin_config_settings_change
     file: admin/modules/config/settings.php
-    line: 881
+    line: 873
   - name: admin_config_settings_change_commit
     file: admin/modules/config/settings.php
-    line: 1312
+    line: 1304
   - name: admin_config_settings_start
     file: admin/modules/config/settings.php
-    line: 1796
+    line: 1788
   - name: admin_settings_print_peekers
     file: admin/modules/config/settings.php
-    line: 2030
+    line: 2022
     parameters:
       - "$peekers"
   - name: admin_config_smilies_begin
