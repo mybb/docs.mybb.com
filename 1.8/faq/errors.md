@@ -169,7 +169,11 @@ The configured file will contain information useful in identifying the cause.
 
   Invalid HTML is usually added to post content by customizations and extensions, like:
   - MyCode _Replacement_ values of custom MyCodes
-  - theme templates used for parsing MyCode
+  - theme templates used for parsing MyCode:
+    - _MyCode Templates_ group (`mycode_`..)
+    - _Video MyCode Templates_ group (`video_`...)
+    - `postbit_gotopost` template (_Post Bit Templates_)
+    - `smilie` template (_Ungrouped Templates_)
   - plugins related to post parsing
   - HTML entered in the Admin CP (e.g. _Forum Rules_, user groups' _Username Style_)
 
