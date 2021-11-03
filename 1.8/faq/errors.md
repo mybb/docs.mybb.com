@@ -194,7 +194,7 @@ The configured file will contain information useful in identifying the cause.
   ```php
   public $output_validation_policy = self::VALIDATION_REPORT_ONLY;
   ```
-  Once the underlying problems are resolved, restore the original value.
+  Once the underlying problems are resolved, restore the original value (`VALIDATION_REQUIRE`).
 
 ### Useful links
 - [Upgrade MyBB](/1.8/install/upgrade/)
