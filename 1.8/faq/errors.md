@@ -192,7 +192,7 @@ The configured file will contain information useful in identifying the cause.
   ##### Disabling Validation
   Parser output validation is a security feature added in MyBB 1.8.27, and can be temporarily disabled by modifying the [`inc/class_parser.php`](https://github.com/mybb/mybb/blob/mybb_1827/inc/class_parser.php#L122) file, and changing the `$output_validation_policy` value to `VALIDATION_REPORT_ONLY`:
   ```php
-  public $output_validation_policy = VALIDATION_REPORT_ONLY;
+  public $output_validation_policy = self::VALIDATION_REPORT_ONLY;
   ```
   Once the underlying problems are resolved, restore the original value.
 
