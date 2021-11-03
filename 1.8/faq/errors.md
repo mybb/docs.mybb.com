@@ -190,11 +190,11 @@ The configured file will contain information useful in identifying the cause.
   You can use the [Parser Validation Debug](https://github.com/dvz/mybb-tools/raw/main/_parser-debug.php) tool to inspect validation details of selected posts on the forum, or decode raw errors that were logged in the past (see [usage instructions](https://github.com/dvz/mybb-tools#usage)).
 
   ##### Disabling Validation
-  Parser output validation is a security feature added in MyBB 1.8.27, and can be temporarily disabled by modifying the [`inc/class_parser.php`](https://github.com/mybb/mybb/blob/mybb_1827/inc/class_parser.php#L122) file, and changing the `$output_validation_policy` value to `VALIDATION_REPORT_ONLY`:
+  Parser output validation is a security feature added in MyBB 1.8.27, and can be temporarily disabled by modifying the [`inc/class_parser.php`](https://github.com/mybb/mybb/blob/mybb_1827/inc/class_parser.php#L122) file, and changing the `$output_validation_policy` value from `VALIDATION_REQUIRE` to `VALIDATION_REPORT_ONLY`:
   ```php
   public $output_validation_policy = self::VALIDATION_REPORT_ONLY;
   ```
-  Once the underlying problems are resolved, restore the original value (`VALIDATION_REQUIRE`).
+  Once the underlying problems are resolved, restore the original value.
 
 ### Useful links
 - [Upgrade MyBB](/1.8/install/upgrade/)
