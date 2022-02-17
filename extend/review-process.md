@@ -16,12 +16,6 @@ The *Extend* platform provides an official, central directory of plugins, themes
 
 Major problems related to new submissions, when spotted, can prevent it from appearing on the platform. Extension maintainers can additionally request technical reviews of specific builds (versions) to make it possible for other users to easily find safe extensions.
 
-## Project Approval
-
-Submissions of new projects, along with the initial build, must reviewed by the MyBB staff in order to appear on the platform. Projects submitted by *Approved Developers* are added immediately.
-
-The Project Approval process involves basic checks performed to reduce duplicate submissions and prevent potential abuse of the *Extend* platform.
-
 ## Build Review
 
 Selected builds can be submitted for review by project authors. Build-level reviews are more intensive and  can be interpreted as limited security audits (especially in plugin submissions). If the review passes successfully, the build is visually marked as reviewed and safe for use.
