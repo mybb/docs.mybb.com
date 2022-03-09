@@ -1,4 +1,4 @@
-version_code: 1829
+version_code: 1830
 hooks:
   - name: admin_form_output_submit_wrapper
     file: admin/inc/class_form.php
