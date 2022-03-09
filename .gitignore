@@ -7,3 +7,5 @@ Gemfile.lock
 key_public.pem
 key_private.key
 .sass-cache/
+.vscode/
+.idea/

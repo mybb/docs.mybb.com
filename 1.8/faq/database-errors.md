@@ -42,7 +42,7 @@ On a Unix environment, you will want to login via SSH and enter your database co
 
 **Note: If you are using a different DBMS, such as PostgreSQL, the process will be different than the steps outlined below. If you're using SQLite, none of the below steps apply.**
 
-```
+```bash
 mysql -u root -p
 ```
 **Tip: Don't ever use the MySQL `root` user for your MyBB database. If something happens and an attacker is able to exploit your forum, they will be able to cause far more damage with the `root` user than with a user constrained to only your MyBB database. It is only being used here so that you can be certain you'll have the necessary privileges to run potential `GRANT` statements to give a MyBB database user access to the MyBB database.**

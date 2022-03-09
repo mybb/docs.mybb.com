@@ -56,7 +56,7 @@ Go to `Admin CP -> Templates & Styles -> Templates -> Find Updated Templates`
 
 If the codebuttons are showing for you and only few members are unable to see it, then you can run the following query to enable "Show the MyCode formatting options on the posting pages" for the whole board through this SQL query:
 
-```php
+```sql
 UPDATE `mybb_users` SET `showcodebuttons` = '1' WHERE `showcodebuttons` = '0'
 ```
 ** Note: Make sure you back up your database before running any SQL queries manually.**

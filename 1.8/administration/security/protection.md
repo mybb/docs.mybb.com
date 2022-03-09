@@ -280,7 +280,7 @@ Also known as _htpasswd protection_, adding HTTP Basic Auth protection to the Ad
      require valid-user
      ```
   1. Run the following shell command:
-     ```sh
+     ```bash
      htpasswd -c -b /PATH/TO/.htpasswd DESIRED-USERNAME DESIRED-SECURE-PASSWORD
      ```
 
@@ -296,7 +296,7 @@ Also known as _htpasswd protection_, adding HTTP Basic Auth protection to the Ad
      }
      ```
   1. Run the following shell command:
-     ```sh
+     ```bash
      htpasswd -c -b /PATH/TO/.htpasswd DESIRED-USERNAME DESIRED-SECURE-PASSWORD
      ```
   	 If the command is not found, install the `apache2-utils`, `httpd-utils`, or similar package for your Linux distribution.

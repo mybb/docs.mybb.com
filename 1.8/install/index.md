@@ -57,14 +57,14 @@ Certain file permissions are required for MyBB to function correctly. Once you'v
 
 If you have SSH access, you can apply the necessary permissions via the following command, executed from your root MyBB directory:
 
-```sh
+```bash
 chmod 666 inc/config.php inc/settings.php
 chmod 777 cache/ cache/themes/ uploads/ uploads/avatars/
 ```
 
 Optionally, you can also apply the following permissions:
 
-```sh
+```bash
 chmod 666 inc/languages/english/*.php inc/languages/english/admin/*.php
 chmod 777 cache/ cache/themes/ uploads/ uploads/avatars/ admin/backups/
 ```
@@ -229,7 +229,7 @@ If you have SSH access on your *nix server you may prefer to use one of the foll
 
 ### `wget`
 
-```sh
+```bash
 wget --content-disposition https://www.mybb.com/download/latest -O mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
@@ -240,7 +240,7 @@ chmod -R 0777 cache uploads inc/settings.php inc/config.php
 
 ### `curl`
 
-```sh
+```bash
 curl https://www.mybb.com/download/latest -o mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
@@ -251,7 +251,7 @@ chmod -R 0777 cache uploads inc/settings.php inc/config.php
 
 ### `aria2c`
 
-```sh
+```bash
 aria2c https://www.mybb.com/download/latest -o mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
@@ -262,7 +262,7 @@ chmod -R 0777 cache uploads inc/settings.php inc/config.php
 
 ### `lynx`
 
-```sh
+```bash
 lynx -crawl -dump https://www.mybb.com/download/latest > mybb.zip
 unzip mybb.zip "Upload/*"
 mv Upload/* .
@@ -273,8 +273,8 @@ chmod -R 0777 cache uploads inc/settings.php inc/config.php
 
 ### Useful links
 - [How to use File Manager in cPanel](https://documentation.cpanel.net/display/74Docs/File+Manager)
-- [How to install Linux, Apache, MySQL, PHP (LAMP) stack](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04)
-- [How to install Linux, Nginx, MySQL, PHP (LEMP) stack](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04)
+- [How to install Linux, Apache, MySQL, PHP (LAMP) stack](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04)
+- [How to install Linux, Nginx, MySQL, PHP (LEMP) stack](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04)
 - [Linux chmod command tutorial for beginners](https://www.howtoforge.com/tutorial/linux-chmod-command/)
 - [Fixing Database Errors](https://docs.mybb.com/1.8/faq/database-errors/)
 - [How to use PuTTY on Windows](https://www.ssh.com/ssh/putty/windows/)

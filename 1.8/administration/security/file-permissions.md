@@ -27,14 +27,14 @@ For increased security, you can change the file permissions of the `inc/config.p
 
 If you have SSH access, you can apply the necessary permissions via the following command, executed from your root MyBB directory:
 
-```sh
+```bash
 chmod 666 inc/config.php inc/settings.php
 chmod 777 cache/ cache/themes/ uploads/ uploads/avatars/
 ```
 
 Optionally, you can also apply the following permissions:
 
-```sh
+```bash
 chmod 666 inc/languages/english/*.php inc/languages/english/admin/*.php
 chmod 777 cache/ cache/themes/ uploads/ uploads/avatars/ admin/backups/
 ```

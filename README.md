@@ -9,7 +9,7 @@ Some assets are pulled from the [`mybb-website-theme`](https://github.com/mybb/m
 ## Development
 
 Download the repository content and use [Docker](https://www.docker.com/get-started) to serve the website from local source. Make sure to allow Docker to access the directory using _File sharing_ and run:
-```sh
+```bash
 $ docker run -it --rm -p "4000:4000" -v "${PWD}:/usr/src/app" mybb/jekyll-docker
 ```
 
@@ -17,7 +17,7 @@ This will create a container from a [customized Jekyll image](https://github.com
 
 ### Using Local Theme
 To additionally preview changes made to [`mybb-website-theme`](https://github.com/mybb/mybb-website-theme/) in a sibling directory `../mybb-website-theme/`), run instead:
-```sh
+```bash
 $ docker run -it --rm -p "4000:4000" -v "${PWD}:/usr/src/app" -v "${PWD}/../mybb-website-theme:/usr/src/app/_themes/theme" mybb/jekyll-docker
 ```
 

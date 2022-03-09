@@ -62,7 +62,7 @@ These parameters configure the mysqldump to be very close to the format of the [
 
 To create a cron job for automatically executing that backup, run: 
 
-``` 
+```bash
 chmod +x ~/forum_backup.sh
 crontab -e
 # in the crontab editor, enter a CRON expression like:
