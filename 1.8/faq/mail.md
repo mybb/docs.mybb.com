@@ -65,3 +65,17 @@ The final result of the edit should be:
 ```
 
 `-AT-YOURDOMAIN` in the above code must be replaced by `@` followed by the domain where the forum is hosted.
+
+
+## Additional Parameters for PHP's `mail()`
+To set additional parameters passed to the configured program used by the [`mail()` function](https://www.php.net/function.mail) (when _PHP mail_ is the selected Mail Handler), define them in the `$config['mail_parameters']` option of the [Configuration File](/1.8/administration/configuration-file/):
+```php
+/**
+ * Additional Parameters for PHP's mail()
+ *  Only used when 'PHP mail' is selected as Mail Handler.
+ *  More information: https://www.php.net/function.mail
+ */
+$config['mail_parameters'] = '';
+```
+
+Before MyBB 1.8.31, this value was configured in _Mail Settings_.
