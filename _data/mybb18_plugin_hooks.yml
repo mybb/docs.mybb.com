@@ -1,4 +1,4 @@
-version_code: 1830
+version_code: 1831
 hooks:
   - name: admin_form_output_submit_wrapper
     file: admin/inc/class_form.php
@@ -22,47 +22,47 @@ hooks:
       - "$hook"
   - name: admin_page_output_header
     file: admin/inc/class_page.php
-    line: 81
+    line: 86
     parameters:
       - "$args"
   - name: admin_page_output_footer
     file: admin/inc/class_page.php
-    line: 208
+    line: 213
     parameters:
       - "$args"
   - name: admin_page_show_login_start
     file: admin/inc/class_page.php
-    line: 372
+    line: 377
     parameters:
       - "$args"
   - name: admin_page_show_login_end
     file: admin/inc/class_page.php
-    line: 508
+    line: 513
     parameters:
       - "$args"
   - name: admin_page_output_tab_control_start
     file: admin/inc/class_page.php
-    line: 793
+    line: 798
     parameters:
       - "$tabs"
   - name: admin_page_output_tab_control_end
     file: admin/inc/class_page.php
-    line: 812
+    line: 817
     parameters:
       - "$tabs"
   - name: admin_page_output_nav_tabs_start
     file: admin/inc/class_page.php
-    line: 824
+    line: 829
     parameters:
       - "$tabs"
   - name: admin_page_output_nav_tabs_end
     file: admin/inc/class_page.php
-    line: 862
+    line: 867
     parameters:
       - "$arguments"
   - name: admin_page_output_confirm_action
     file: admin/inc/class_page.php
-    line: 883
+    line: 888
     parameters:
       - "$args"
   - name: update_theme_stylesheet_list_set_css_url
@@ -571,10 +571,10 @@ hooks:
     line: 1304
   - name: admin_config_settings_start
     file: admin/modules/config/settings.php
-    line: 1788
+    line: 1794
   - name: admin_settings_print_peekers
     file: admin/modules/config/settings.php
-    line: 2022
+    line: 2028
     parameters:
       - "$peekers"
   - name: admin_config_smilies_begin
@@ -1164,13 +1164,13 @@ hooks:
     line: 140
   - name: admin_tools_backupdb_backup_disk_commit
     file: admin/modules/tools/backupdb.php
-    line: 298
+    line: 322
   - name: admin_tools_backupdb_backup_download_commit
     file: admin/modules/tools/backupdb.php
-    line: 309
+    line: 333
   - name: admin_tools_backupdb_start
     file: admin/modules/tools/backupdb.php
-    line: 431
+    line: 455
   - name: admin_tools_cache_begin
     file: admin/modules/tools/cache.php
     line: 19
@@ -1858,34 +1858,34 @@ hooks:
     line: 1948
   - name: admin_user_users_merge_commit
     file: admin/modules/user/users.php
-    line: 2170
+    line: 2180
   - name: admin_user_users_search
     file: admin/modules/user/users.php
-    line: 2287
+    line: 2297
   - name: admin_user_users_search_commit
     file: admin/modules/user/users.php
-    line: 2359
+    line: 2369
   - name: admin_user_users_inline
     file: admin/modules/user/users.php
-    line: 2425
+    line: 2435
   - name: admin_user_multiactivate
     file: admin/modules/user/users.php
-    line: 2498
+    line: 2508
     parameters:
       - "$to_update"
   - name: admin_user_multiprune_threads
     file: admin/modules/user/users.php
-    line: 2846
+    line: 2856
     parameters:
       - "$prune_array"
   - name: admin_user_multiusergroup
     file: admin/modules/user/users.php
-    line: 3005
+    line: 3015
     parameters:
       - "$hook_params"
   - name: admin_user_users_start
     file: admin/modules/user/users.php
-    line: 3093
+    line: 3103
   - name: admin_unlock_start
     file: admin/index.php
     line: 105
@@ -1903,21 +1903,21 @@ hooks:
     line: 264
   - name: admin_login_fail
     file: admin/index.php
-    line: 343
+    line: 348
   - name: admin_login_lockout
     file: admin/index.php
-    line: 361
+    line: 366
   - name: admin_logout
     file: admin/index.php
-    line: 498
+    line: 503
   - name: admin_tabs
     file: admin/index.php
-    line: 756
+    line: 761
     parameters:
       - "$modules"
   - name: admin_load
     file: admin/index.php
-    line: 823
+    line: 828
   - name: archive_start
     file: archive/index.php
     line: 19
@@ -2194,7 +2194,7 @@ hooks:
       - "$args"
   - name: task_checktables
     file: inc/tasks/checktables.php
-    line: 77
+    line: 76
     parameters:
       - "$task"
   - name: task_dailycleanup_start
@@ -2314,7 +2314,7 @@ hooks:
       - "$args"
   - name: report_content_types
     file: inc/class_datacache.php
-    line: 1266
+    line: 1272
     parameters:
       - "$content_types"
   - name: class_moderation_close_threads
@@ -2494,12 +2494,12 @@ hooks:
       - "$message"
   - name: text_parse_message
     file: inc/class_parser.php
-    line: 1954
+    line: 1956
     parameters:
       - "$message"
   - name: pre_session_load
     file: inc/class_session.php
-    line: 81
+    line: 84
     parameters:
       - "$this"
   - name: pre_parse_page
@@ -2576,37 +2576,37 @@ hooks:
       - "$hook_args"
   - name: format_name
     file: inc/functions.php
-    line: 3492
+    line: 3497
     parameters:
       - "$parameters"
   - name: mycode_add_codebuttons
     file: inc/functions.php
-    line: 3676
+    line: 3681
     parameters:
       - "$editor_lang_strings"
   - name: get_ip
     file: inc/functions.php
-    line: 4459
+    line: 4464
     parameters:
       - "$ip_array"
   - name: mark_reports
     file: inc/functions.php
-    line: 5132
+    line: 5137
     parameters:
       - "$arguments"
   - name: functions_fetch_ban_times
     file: inc/functions.php
-    line: 7945
+    line: 7950
     parameters:
       - "$ban_times"
   - name: copy_file_to_cdn_start
     file: inc/functions.php
-    line: 9168
+    line: 9173
     parameters:
       - "$hook_args"
   - name: copy_file_to_cdn_end
     file: inc/functions.php
-    line: 9211
+    line: 9216
     parameters:
       - "$hook_args"
   - name: build_forumbits_forum
@@ -2649,7 +2649,7 @@ hooks:
       - "$post"
   - name: parse_quoted_message
     file: inc/functions_posting.php
-    line: 212
+    line: 219
     parameters:
       - "$quoted_post"
   - name: remove_attachment_do_delete
@@ -2879,10 +2879,10 @@ hooks:
     line: 1373
   - name: forumdisplay_threadlist
     file: forumdisplay.php
-    line: 1537
+    line: 1533
   - name: forumdisplay_end
     file: forumdisplay.php
-    line: 1554
+    line: 1550
   - name: global_start
     file: global.php
     line: 100
@@ -2891,7 +2891,7 @@ hooks:
     line: 498
   - name: global_end
     file: global.php
-    line: 1260
+    line: 1276
   - name: index_start
     file: index.php
     line: 26
@@ -3415,10 +3415,10 @@ hooks:
     line: 734
   - name: newreply_threadreview_post
     file: newreply.php
-    line: 1328
+    line: 1332
   - name: newreply_end
     file: newreply.php
-    line: 1509
+    line: 1514
   - name: newthread_do_newthread_start
     file: newthread.php
     line: 260
