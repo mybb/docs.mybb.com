@@ -201,6 +201,8 @@ UPDATE mybb_users SET password = '';
 
 First login attempts will be rejected by MyBB, forcing users to reset their passwords by e-mail.
 
+_Note: no additional columns should be modified for this purpose, as password hashes and salts will be re-generated automatically. Values in the `salt` column should be preserved to avoid unexpected behavior._
+
 ## Using MyBB Again
 
 ### Restore Your Admin Account
