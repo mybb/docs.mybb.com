@@ -1,4 +1,4 @@
-version_code: 1833
+version_code: 1834
 hooks:
   - name: admin_form_output_submit_wrapper
     file: admin/inc/class_form.php
@@ -231,22 +231,22 @@ hooks:
     line: 21
   - name: admin_config_languages_edit_properties
     file: admin/modules/config/languages.php
-    line: 33
+    line: 34
   - name: admin_config_languages_edit_properties_commit
     file: admin/modules/config/languages.php
-    line: 91
+    line: 92
   - name: admin_config_languages_quick_phrases
     file: admin/modules/config/languages.php
-    line: 215
+    line: 216
   - name: admin_config_languages_edit
     file: admin/modules/config/languages.php
-    line: 440
+    line: 441
   - name: admin_config_languages_edit_commit
     file: admin/modules/config/languages.php
-    line: 525
+    line: 526
   - name: admin_config_languages_start
     file: admin/modules/config/languages.php
-    line: 1082
+    line: 1083
   - name: admin_config_mod_tools_begin
     file: admin/modules/config/mod_tools.php
     line: 19
@@ -1179,31 +1179,31 @@ hooks:
     line: 29
   - name: admin_tools_cache_rebuild
     file: admin/modules/tools/cache.php
-    line: 88
+    line: 90
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
-    line: 95
+    line: 97
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
-    line: 109
+    line: 111
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
-    line: 122
+    line: 124
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
-    line: 135
+    line: 137
   - name: admin_tools_cache_rebuild_commit
     file: admin/modules/tools/cache.php
-    line: 148
+    line: 150
   - name: admin_tools_cache_rebuild_all
     file: admin/modules/tools/cache.php
-    line: 171
+    line: 173
   - name: admin_tools_cache_rebuild_all_commit
     file: admin/modules/tools/cache.php
-    line: 201
+    line: 203
   - name: admin_tools_cache_start
     file: admin/modules/tools/cache.php
-    line: 220
+    line: 222
   - name: admin_tools_file_verification_begin
     file: admin/modules/tools/file_verification.php
     line: 21
@@ -1266,7 +1266,7 @@ hooks:
     line: 144
   - name: admin_tools_modlog_modlogs_result
     file: admin/modules/tools/modlog.php
-    line: 292
+    line: 295
   - name: admin_tools_menu
     file: admin/modules/tools/module_meta.php
     line: 34
@@ -1388,13 +1388,13 @@ hooks:
     line: 178
   - name: admin_tools_system_health_utf8_conversion_commit
     file: admin/modules/tools/system_health.php
-    line: 370
+    line: 368
   - name: admin_tools_system_health_start
     file: admin/modules/tools/system_health.php
-    line: 707
+    line: 705
   - name: admin_tools_system_health_output_chmod_list
     file: admin/modules/tools/system_health.php
-    line: 968
+    line: 966
   - name: admin_tools_tasks_begin
     file: admin/modules/tools/tasks.php
     line: 21
@@ -1989,27 +1989,27 @@ hooks:
       - "$args"
   - name: datahandler_login_verify_password_end
     file: inc/datahandlers/login.php
-    line: 194
+    line: 186
     parameters:
       - "$args"
   - name: datahandler_login_validate_start
     file: inc/datahandlers/login.php
-    line: 270
+    line: 262
     parameters:
       - "$this"
   - name: datahandler_login_validate_end
     file: inc/datahandlers/login.php
-    line: 287
+    line: 279
     parameters:
       - "$this"
   - name: datahandler_login_complete_start
     file: inc/datahandlers/login.php
-    line: 307
+    line: 299
     parameters:
       - "$this"
   - name: datahandler_login_complete_end
     file: inc/datahandlers/login.php
-    line: 333
+    line: 325
     parameters:
       - "$this"
   - name: datahandler_pm_validate
@@ -2074,57 +2074,57 @@ hooks:
       - "$this"
   - name: datahandler_post_insert_subscribed
     file: inc/datahandlers/post.php
-    line: 1322
+    line: 1324
     parameters:
       - "$args"
   - name: datahandler_post_insert_post_end
     file: inc/datahandlers/post.php
-    line: 1379
+    line: 1381
     parameters:
       - "$this"
   - name: datahandler_post_validate_thread
     file: inc/datahandlers/post.php
-    line: 1439
+    line: 1441
     parameters:
       - "$this"
   - name: datahandler_post_insert_thread
     file: inc/datahandlers/post.php
-    line: 1535
+    line: 1537
     parameters:
       - "$this"
   - name: datahandler_post_insert_thread_post
     file: inc/datahandlers/post.php
-    line: 1550
+    line: 1552
     parameters:
       - "$this"
   - name: datahandler_post_insert_thread
     file: inc/datahandlers/post.php
-    line: 1577
+    line: 1579
     parameters:
       - "$this"
   - name: datahandler_post_insert_thread_post
     file: inc/datahandlers/post.php
-    line: 1595
+    line: 1597
     parameters:
       - "$this"
   - name: datahandler_post_insert_thread_end
     file: inc/datahandlers/post.php
-    line: 1839
+    line: 1841
     parameters:
       - "$this"
   - name: datahandler_post_update_thread
     file: inc/datahandlers/post.php
-    line: 1928
+    line: 1930
     parameters:
       - "$this"
   - name: datahandler_post_update
     file: inc/datahandlers/post.php
-    line: 1995
+    line: 1997
     parameters:
       - "$this"
   - name: datahandler_post_update_end
     file: inc/datahandlers/post.php
-    line: 2030
+    line: 2032
     parameters:
       - "$this"
   - name: datahandler_user_validate
@@ -2314,7 +2314,7 @@ hooks:
       - "$args"
   - name: report_content_types
     file: inc/class_datacache.php
-    line: 1272
+    line: 1276
     parameters:
       - "$content_types"
   - name: class_moderation_close_threads
@@ -2359,112 +2359,112 @@ hooks:
       - "$pid"
   - name: class_moderation_approve_threads
     file: inc/class_moderation.php
-    line: 479
+    line: 486
     parameters:
       - "$tids"
   - name: class_moderation_unapprove_threads
     file: inc/class_moderation.php
-    line: 631
+    line: 645
     parameters:
       - "$tids"
   - name: class_moderation_delete_post_start
     file: inc/class_moderation.php
-    line: 676
+    line: 690
     parameters:
       - "$pid"
   - name: class_moderation_delete_post
     file: inc/class_moderation.php
-    line: 732
+    line: 746
     parameters:
       - "$post['pid']"
   - name: class_moderation_merge_posts
     file: inc/class_moderation.php
-    line: 964
+    line: 978
     parameters:
       - "$arguments"
   - name: class_moderation_move_thread_redirect
     file: inc/class_moderation.php
-    line: 1064
+    line: 1078
     parameters:
       - "$arguments"
   - name: class_moderation_copy_thread
     file: inc/class_moderation.php
-    line: 1154
+    line: 1168
     parameters:
       - "$arguments"
   - name: class_moderation_move_simple
     file: inc/class_moderation.php
-    line: 1271
+    line: 1285
     parameters:
       - "$arguments"
   - name: class_moderation_merge_threads
     file: inc/class_moderation.php
-    line: 1544
+    line: 1558
     parameters:
       - "$arguments"
   - name: class_moderation_split_posts
     file: inc/class_moderation.php
-    line: 2137
+    line: 2151
     parameters:
       - "$arguments"
   - name: class_moderation_move_threads
     file: inc/class_moderation.php
-    line: 2381
+    line: 2395
     parameters:
       - "$arguments"
   - name: class_moderation_approve_posts
     file: inc/class_moderation.php
-    line: 2540
+    line: 2554
     parameters:
       - "$pids"
   - name: class_moderation_unapprove_posts
     file: inc/class_moderation.php
-    line: 2708
+    line: 2722
     parameters:
       - "$pids"
   - name: class_moderation_change_thread_subject_newsubject
     file: inc/class_moderation.php
-    line: 2796
+    line: 2810
     parameters:
       - "$args"
   - name: class_moderation_change_thread_subject
     file: inc/class_moderation.php
-    line: 2806
+    line: 2820
     parameters:
       - "$arguments"
   - name: class_moderation_expire_thread
     file: inc/class_moderation.php
-    line: 2835
+    line: 2849
     parameters:
       - "$arguments"
   - name: class_moderation_remove_thread_subscriptions
     file: inc/class_moderation.php
-    line: 3141
+    line: 3155
     parameters:
       - "$arguments"
   - name: class_moderation_apply_thread_prefix
     file: inc/class_moderation.php
-    line: 3177
+    line: 3191
     parameters:
       - "$arguments"
   - name: class_moderation_soft_delete_posts
     file: inc/class_moderation.php
-    line: 3311
+    line: 3325
     parameters:
       - "$pids"
   - name: class_moderation_restore_posts
     file: inc/class_moderation.php
-    line: 3462
+    line: 3476
     parameters:
       - "$pids"
   - name: class_moderation_restore_threads
     file: inc/class_moderation.php
-    line: 3614
+    line: 3631
     parameters:
       - "$tids"
   - name: class_moderation_soft_delete_threads
     file: inc/class_moderation.php
-    line: 3772
+    line: 3792
     parameters:
       - "$tids"
   - name: parse_message_start
@@ -2494,7 +2494,7 @@ hooks:
       - "$message"
   - name: text_parse_message
     file: inc/class_parser.php
-    line: 1956
+    line: 1970
     parameters:
       - "$message"
   - name: pre_session_load
@@ -2528,85 +2528,85 @@ hooks:
       - "$date"
   - name: my_mailhandler_builtin_after_init
     file: inc/functions.php
-    line: 591
+    line: 593
     parameters:
       - "$my_mailhandler_builtin"
   - name: my_mailhandler_init
     file: inc/functions.php
-    line: 601
+    line: 606
     parameters:
       - "$my_mailhandler"
   - name: my_mail_pre_build_message
     file: inc/functions.php
-    line: 667
+    line: 675
     parameters:
       - "$my_mail_parameters"
   - name: my_mail_pre_send
     file: inc/functions.php
-    line: 672
+    line: 683
     parameters:
       - "$my_mail_parameters"
   - name: my_mail_post_send
     file: inc/functions.php
-    line: 680
+    line: 694
     parameters:
       - "$my_mail_parameters"
   - name: error
     file: inc/functions.php
-    line: 896
+    line: 911
     parameters:
       - "$error"
   - name: no_permission
     file: inc/functions.php
-    line: 985
+    line: 1000
   - name: redirect
     file: inc/functions.php
-    line: 1054
+    line: 1069
     parameters:
       - "$redirect_args"
   - name: multipage
     file: inc/functions.php
-    line: 1145
+    line: 1160
     parameters:
       - "$args"
   - name: is_moderator
     file: inc/functions.php
-    line: 2058
+    line: 2059
     parameters:
       - "$hook_args"
   - name: format_name
     file: inc/functions.php
-    line: 3503
+    line: 3504
     parameters:
       - "$parameters"
   - name: mycode_add_codebuttons
     file: inc/functions.php
-    line: 3687
+    line: 3688
     parameters:
       - "$editor_lang_strings"
   - name: get_ip
     file: inc/functions.php
-    line: 4470
+    line: 4471
     parameters:
       - "$ip_array"
   - name: mark_reports
     file: inc/functions.php
-    line: 5143
+    line: 5144
     parameters:
       - "$arguments"
   - name: functions_fetch_ban_times
     file: inc/functions.php
-    line: 7956
+    line: 7957
     parameters:
       - "$ban_times"
   - name: copy_file_to_cdn_start
     file: inc/functions.php
-    line: 9179
+    line: 9195
     parameters:
       - "$hook_args"
   - name: copy_file_to_cdn_end
     file: inc/functions.php
-    line: 9222
+    line: 9238
     parameters:
       - "$hook_args"
   - name: build_forumbits_forum
@@ -2704,23 +2704,23 @@ hooks:
       - "$upload"
   - name: password_changed
     file: inc/functions_user.php
-    line: 159
+    line: 153
   - name: create_password
     file: inc/functions_user.php
-    line: 195
+    line: 189
     parameters:
       - "$parameters"
   - name: verify_user_password
     file: inc/functions_user.php
-    line: 237
+    line: 231
     parameters:
       - "$parameters"
   - name: usercp_menu
     file: inc/functions_user.php
-    line: 471
+    line: 465
   - name: usercp_menu_built
     file: inc/functions_user.php
-    line: 481
+    line: 475
   - name: announcements_start
     file: announcements.php
     line: 29
@@ -2856,33 +2856,33 @@ hooks:
     line: 603
   - name: editpost_end
     file: editpost.php
-    line: 980
+    line: 982
   - name: forumdisplay_start
     file: forumdisplay.php
     line: 38
   - name: forumdisplay_announcement
     file: forumdisplay.php
-    line: 845
+    line: 847
   - name: forumdisplay_get_threads
     file: forumdisplay.php
-    line: 876
+    line: 878
   - name: forumdisplay_before_thread
     file: forumdisplay.php
-    line: 925
+    line: 927
     parameters:
       - "$args"
   - name: forumdisplay_thread
     file: forumdisplay.php
-    line: 1031
+    line: 1033
   - name: forumdisplay_thread_end
     file: forumdisplay.php
-    line: 1382
+    line: 1384
   - name: forumdisplay_threadlist
     file: forumdisplay.php
-    line: 1542
+    line: 1544
   - name: forumdisplay_end
     file: forumdisplay.php
-    line: 1559
+    line: 1561
   - name: global_start
     file: global.php
     line: 100
@@ -3265,52 +3265,52 @@ hooks:
     line: 3638
   - name: modcp_ipsearch_posts_start
     file: modcp.php
-    line: 3687
+    line: 3688
   - name: modcp_ipsearch_users_start
     file: modcp.php
-    line: 3781
+    line: 3783
   - name: modcp_ipsearch_end
     file: modcp.php
-    line: 4001
+    line: 4003
   - name: modcp_iplookup_end
     file: modcp.php
-    line: 4044
+    line: 4046
   - name: modcp_banning_start
     file: modcp.php
-    line: 4102
+    line: 4104
   - name: modcp_banning
     file: modcp.php
-    line: 4188
+    line: 4190
   - name: modcp_liftban_start
     file: modcp.php
-    line: 4218
+    line: 4220
   - name: modcp_liftban_end
     file: modcp.php
-    line: 4234
+    line: 4236
   - name: modcp_do_banuser_start
     file: modcp.php
-    line: 4328
+    line: 4330
   - name: modcp_do_banuser_end
     file: modcp.php
-    line: 4397
+    line: 4399
   - name: modcp_banuser_start
     file: modcp.php
-    line: 4434
+    line: 4436
   - name: modcp_banuser_end
     file: modcp.php
-    line: 4565
+    line: 4567
   - name: modcp_do_modnotes_start
     file: modcp.php
-    line: 4576
+    line: 4578
   - name: modcp_do_modnotes_end
     file: modcp.php
-    line: 4584
+    line: 4586
   - name: modcp_modlogs_result
     file: modcp.php
-    line: 4793
+    line: 4795
   - name: modcp_end
     file: modcp.php
-    line: 4907
+    line: 4909
   - name: moderation_start
     file: moderation.php
     line: 35
@@ -3394,43 +3394,43 @@ hooks:
     line: 2166
   - name: moderation_do_multimoveposts
     file: moderation.php
-    line: 2679
+    line: 2682
   - name: moderation_purgespammer_purge
     file: moderation.php
-    line: 3028
+    line: 3031
   - name: moderation_purgespammer_show
     file: moderation.php
-    line: 3117
+    line: 3120
   - name: moderation_confirmation
     file: moderation.php
-    line: 3165
+    line: 3168
   - name: newreply_do_newreply_start
     file: newreply.php
-    line: 312
+    line: 313
   - name: newreply_do_newreply_end
     file: newreply.php
-    line: 600
+    line: 601
   - name: newreply_start
     file: newreply.php
-    line: 734
+    line: 735
   - name: newreply_threadreview_post
     file: newreply.php
-    line: 1332
+    line: 1333
   - name: newreply_end
     file: newreply.php
-    line: 1514
+    line: 1515
   - name: newthread_do_newthread_start
     file: newthread.php
-    line: 262
+    line: 263
   - name: newthread_do_newthread_end
     file: newthread.php
-    line: 509
+    line: 510
   - name: newthread_start
     file: newthread.php
-    line: 522
+    line: 523
   - name: newthread_end
     file: newthread.php
-    line: 1163
+    line: 1165
   - name: online_today_start
     file: online.php
     line: 38
@@ -3685,22 +3685,22 @@ hooks:
     line: 438
   - name: reputation_add_end
     file: reputation.php
-    line: 516
+    line: 517
   - name: reputation_add_end_error
     file: reputation.php
-    line: 523
+    line: 524
   - name: reputation_delete_start
     file: reputation.php
-    line: 546
+    line: 547
   - name: reputation_delete_end
     file: reputation.php
-    line: 563
+    line: 564
   - name: reputation_vote
     file: reputation.php
-    line: 1078
+    line: 1079
   - name: reputation_end
     file: reputation.php
-    line: 1089
+    line: 1090
   - name: search_results_start
     file: search.php
     line: 68
@@ -3778,25 +3778,25 @@ hooks:
     line: 304
   - name: showthread_start
     file: showthread.php
-    line: 470
+    line: 471
   - name: showthread_poll_results
     file: showthread.php
-    line: 642
+    line: 643
   - name: showthread_poll
     file: showthread.php
-    line: 659
+    line: 660
   - name: showthread_ismod
     file: showthread.php
-    line: 729
+    line: 731
   - name: showthread_threaded
     file: showthread.php
-    line: 915
+    line: 918
   - name: showthread_linear
     file: showthread.php
-    line: 1121
+    line: 1124
   - name: showthread_end
     file: showthread.php
-    line: 1615
+    line: 1619
   - name: stats_start
     file: stats.php
     line: 38
@@ -3931,118 +3931,118 @@ hooks:
     line: 2407
   - name: usercp_editsig_end
     file: usercp.php
-    line: 2466
+    line: 2467
   - name: usercp_do_avatar_start
     file: usercp.php
-    line: 2479
+    line: 2480
   - name: usercp_do_avatar_end
     file: usercp.php
-    line: 2637
+    line: 2638
   - name: usercp_avatar_start
     file: usercp.php
-    line: 2649
+    line: 2650
   - name: usercp_avatar_intermediate
     file: usercp.php
-    line: 2678
+    line: 2679
   - name: usercp_avatar_end
     file: usercp.php
-    line: 2708
+    line: 2709
   - name: usercp_acceptrequest_start
     file: usercp.php
-    line: 2732
+    line: 2733
   - name: usercp_acceptrequest_end
     file: usercp.php
-    line: 2819
+    line: 2820
   - name: usercp_declinerequest_start
     file: usercp.php
-    line: 2837
+    line: 2838
   - name: usercp_declinerequest_end
     file: usercp.php
-    line: 2849
+    line: 2850
   - name: usercp_cancelrequest_start
     file: usercp.php
-    line: 2867
+    line: 2868
   - name: usercp_cancelrequest_end
     file: usercp.php
-    line: 2871
+    line: 2872
   - name: usercp_do_editlists_start
     file: usercp.php
-    line: 2881
+    line: 2882
   - name: usercp_do_editlists_end
     file: usercp.php
-    line: 3206
+    line: 3207
   - name: usercp_editlists_start
     file: usercp.php
-    line: 3270
+    line: 3271
   - name: usercp_editlists_end
     file: usercp.php
-    line: 3423
+    line: 3424
   - name: usercp_drafts_start
     file: usercp.php
-    line: 3431
+    line: 3432
   - name: usercp_drafts_end
     file: usercp.php
-    line: 3485
+    line: 3486
   - name: usercp_do_drafts_start
     file: usercp.php
-    line: 3502
+    line: 3503
   - name: usercp_do_drafts_end
     file: usercp.php
-    line: 3542
+    line: 3543
   - name: usercp_usergroups_start
     file: usercp.php
-    line: 3552
+    line: 3553
   - name: usercp_usergroups_change_displaygroup
     file: usercp.php
-    line: 3572
+    line: 3573
   - name: usercp_usergroups_leave_group
     file: usercp.php
-    line: 3598
+    line: 3599
   - name: usercp_usergroups_join_group_request
     file: usercp.php
-    line: 3685
+    line: 3686
   - name: usercp_usergroups_join_group
     file: usercp.php
-    line: 3699
+    line: 3700
   - name: usercp_usergroups_accept_invite
     file: usercp.php
-    line: 3723
+    line: 3724
   - name: usercp_usergroups_end
     file: usercp.php
-    line: 3957
+    line: 3958
   - name: usercp_attachments_start
     file: usercp.php
-    line: 3972
+    line: 3973
   - name: usercp_attachments_end
     file: usercp.php
-    line: 4096
+    line: 4097
   - name: usercp_do_attachments_start
     file: usercp.php
-    line: 4113
+    line: 4114
   - name: usercp_do_attachments_end
     file: usercp.php
-    line: 4141
+    line: 4142
   - name: usercp_do_notepad_start
     file: usercp.php
-    line: 4156
+    line: 4157
   - name: usercp_do_notepad_end
     file: usercp.php
-    line: 4158
+    line: 4159
   - name: usercp_notepad_start
     file: usercp.php
-    line: 4330
+    line: 4333
   - name: usercp_notepad_end
     file: usercp.php
-    line: 4333
+    line: 4336
   - name: usercp_thread_subscriptions_thread
     file: usercp.php
-    line: 4419
+    line: 4422
   - name: usercp_latest_threads_thread
     file: usercp.php
-    line: 4599
+    line: 4602
   - name: usercp_end
     file: usercp.php
-    line: 4747
+    line: 4750
   - name: warnings_start
     file: warnings.php
     line: 40
@@ -4051,31 +4051,31 @@ hooks:
     line: 72
   - name: warnings_do_warn_end
     file: warnings.php
-    line: 128
+    line: 130
   - name: warnings_warning
     file: warnings.php
-    line: 293
+    line: 294
   - name: warnings_warn_start
     file: warnings.php
-    line: 302
+    line: 303
   - name: warnings_warn_end
     file: warnings.php
-    line: 499
+    line: 500
   - name: warnings_do_revoke_start
     file: warnings.php
-    line: 536
+    line: 537
   - name: warnings_view_start
     file: warnings.php
-    line: 598
+    line: 599
   - name: warnings_view_end
     file: warnings.php
-    line: 697
+    line: 698
   - name: warnings_warning
     file: warnings.php
-    line: 859
+    line: 860
   - name: warnings_end
     file: warnings.php
-    line: 868
+    line: 869
   - name: xmlhttp
     file: xmlhttp.php
     line: 205
