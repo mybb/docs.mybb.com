@@ -1,4 +1,4 @@
-version_code: 1834
+version_code: 1835
 hooks:
   - name: admin_form_output_submit_wrapper
     file: admin/inc/class_form.php
@@ -2576,37 +2576,37 @@ hooks:
       - "$hook_args"
   - name: format_name
     file: inc/functions.php
-    line: 3504
+    line: 3523
     parameters:
       - "$parameters"
   - name: mycode_add_codebuttons
     file: inc/functions.php
-    line: 3688
+    line: 3707
     parameters:
       - "$editor_lang_strings"
   - name: get_ip
     file: inc/functions.php
-    line: 4471
+    line: 4490
     parameters:
       - "$ip_array"
   - name: mark_reports
     file: inc/functions.php
-    line: 5144
+    line: 5163
     parameters:
       - "$arguments"
   - name: functions_fetch_ban_times
     file: inc/functions.php
-    line: 7957
+    line: 7976
     parameters:
       - "$ban_times"
   - name: copy_file_to_cdn_start
     file: inc/functions.php
-    line: 9195
+    line: 9214
     parameters:
       - "$hook_args"
   - name: copy_file_to_cdn_end
     file: inc/functions.php
-    line: 9238
+    line: 9257
     parameters:
       - "$hook_args"
   - name: build_forumbits_forum
@@ -2619,12 +2619,12 @@ hooks:
     line: 228
   - name: fetch_wol_activity_end
     file: inc/functions_online.php
-    line: 573
+    line: 577
     parameters:
       - "$user_activity"
   - name: build_friendly_wol_location_end
     file: inc/functions_online.php
-    line: 1111
+    line: 1115
     parameters:
       - "$plugin_array"
   - name: postbit_prev
@@ -3020,52 +3020,52 @@ hooks:
     line: 1700
   - name: member_do_login_start
     file: member.php
-    line: 1739
+    line: 1735
   - name: member_do_login_end
     file: member.php
-    line: 1820
+    line: 1816
   - name: member_do_login_end
     file: member.php
-    line: 1853
+    line: 1849
   - name: member_login
     file: member.php
-    line: 1858
+    line: 1854
   - name: member_login_end
     file: member.php
-    line: 1948
+    line: 1944
   - name: member_logout_start
     file: member.php
-    line: 1956
+    line: 1952
   - name: member_logout_end
     file: member.php
-    line: 1985
+    line: 1981
   - name: member_viewnotes
     file: member.php
-    line: 2011
+    line: 2007
   - name: member_profile_start
     file: member.php
-    line: 2046
+    line: 2042
   - name: member_profile_end
     file: member.php
-    line: 2853
+    line: 2849
   - name: member_do_emailuser_start
     file: member.php
-    line: 2864
+    line: 2860
   - name: member_do_emailuser_end
     file: member.php
-    line: 3025
+    line: 3021
   - name: member_emailuser_start
     file: member.php
-    line: 3037
+    line: 3033
   - name: member_emailuser_end
     file: member.php
-    line: 3170
+    line: 3166
   - name: member_referrals_start
     file: member.php
-    line: 3178
+    line: 3174
   - name: member_referrals_end
     file: member.php
-    line: 3252
+    line: 3248
   - name: memberlist_start
     file: memberlist.php
     line: 27
@@ -3247,70 +3247,70 @@ hooks:
     line: 2724
   - name: modcp_editprofile_start
     file: modcp.php
-    line: 2920
+    line: 2922
   - name: modcp_editprofile_end
     file: modcp.php
-    line: 3270
+    line: 3272
   - name: modcp_finduser_start
     file: modcp.php
-    line: 3376
+    line: 3378
   - name: modcp_finduser_end
     file: modcp.php
-    line: 3414
+    line: 3416
   - name: modcp_warninglogs_start
     file: modcp.php
-    line: 3533
+    line: 3535
   - name: modcp_warninglogs_end
     file: modcp.php
-    line: 3638
+    line: 3640
   - name: modcp_ipsearch_posts_start
     file: modcp.php
-    line: 3688
+    line: 3690
   - name: modcp_ipsearch_users_start
     file: modcp.php
-    line: 3783
+    line: 3785
   - name: modcp_ipsearch_end
     file: modcp.php
-    line: 4003
+    line: 4005
   - name: modcp_iplookup_end
     file: modcp.php
-    line: 4046
+    line: 4048
   - name: modcp_banning_start
     file: modcp.php
-    line: 4104
+    line: 4106
   - name: modcp_banning
     file: modcp.php
-    line: 4190
+    line: 4192
   - name: modcp_liftban_start
     file: modcp.php
-    line: 4220
+    line: 4222
   - name: modcp_liftban_end
     file: modcp.php
-    line: 4236
+    line: 4238
   - name: modcp_do_banuser_start
     file: modcp.php
-    line: 4330
+    line: 4332
   - name: modcp_do_banuser_end
     file: modcp.php
-    line: 4399
+    line: 4401
   - name: modcp_banuser_start
     file: modcp.php
-    line: 4436
+    line: 4438
   - name: modcp_banuser_end
     file: modcp.php
-    line: 4567
+    line: 4569
   - name: modcp_do_modnotes_start
     file: modcp.php
-    line: 4578
+    line: 4580
   - name: modcp_do_modnotes_end
     file: modcp.php
-    line: 4586
+    line: 4588
   - name: modcp_modlogs_result
     file: modcp.php
-    line: 4795
+    line: 4797
   - name: modcp_end
     file: modcp.php
-    line: 4909
+    line: 4911
   - name: moderation_start
     file: moderation.php
     line: 35
