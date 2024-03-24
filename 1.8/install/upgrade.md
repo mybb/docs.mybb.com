@@ -129,7 +129,7 @@ Some plugins, themes, language packs may be incompatible with the new version an
 
 ## Finish the Upgrade
 ### Verify Forum Functionality
-Ensure that your forum functions correct and it looks the way it's supposed to look! Take your time don't rush it.
+Ensure that your forum functions correct and it looks the way it's supposed to look! Take your time; don't rush it.
 
 ### Restore Access to the Forum
 If you added IP address restrictions or closed the board earlier using the _Board Online/Offline_ setting, you can now revert these changes to restore public access. 
