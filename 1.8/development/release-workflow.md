@@ -115,7 +115,6 @@ categories: [development]
    1. **The Release Blog Post is published**.
    1. A link to the Release Blog Post is posted in:
       - [@mybb@fosstodon.org](https://fosstodon.org/@mybb) on Mastodon (automated by _WordPress.com_),
-      - [@mybb](https://twitter.com/mybb) on Twitter,
       - [@mybbsecurity](https://twitter.com/mybbsecurity) on Twitter (security releases only), indicating the number of addressed vulnerabilities per severity:
         ```
         MyBB 1.8.x addressing (...) high, (...) medium, (...) low risk vulnerabilities has been released. https://blog.mybb.com/...
