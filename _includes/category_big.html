@@ -7,12 +7,43 @@
 	{% endif %}
 	{% for catpage in sorted_pages %}
 		{% for pc in catpage.categories %}
-		{% if pc == include.category %}
-			<li class="category-list__item">
-				<p class="category-list__item__title"><a href="{{ site.baseurl }}{{ catpage.url }}" class="category-list__item__link">{{ catpage.title }}</a></p>
-				{% if catpage.description != "" %}<p class="category-list__item__description">{{ catpage.description }}</p>{% endif %}
-			</li>
-		{% endif %}
+			{% if pc == include.category %}
+				{% assign existsInNewerBranch = false %}
+
+				{% assign pageDirs = catpage.dir | split: '/' %}
+				{% assign pageBranch = pageDirs[1] %}
+
+				{% if site.data.branches contains pageBranch %}
+					{% assign afterPageBranch = false %}
+
+					{% assign pageBranchUrlPrefix = '/' | append: pageBranch %}
+					{% assign branchlessUrl = catpage.url | remove_first: pageBranchUrlPrefix %}
+
+					{% for branch in site.data.branches %}
+						{% assign branchUrl = '/' | append: branch[0] | append: branchlessUrl %}
+						{% assign branchPage = site.pages | where: "url", branchUrl | first %}
+
+						{% if branchPage %}
+							{% if afterPageBranch == true %}
+								{% assign existsInNewerBranch = true %}
+							{% elsif branch[0] == pageBranch %}
+								{% assign afterPageBranch = true %}
+							{% endif %}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+
+				{% unless existsInNewerBranch %}
+					<li class="category-list__item">
+						<p class="category-list__item__title">
+							<a href="{{ site.baseurl }}{{ catpage.url }}" class="category-list__item__link">{{ catpage.title }}</a>
+						</p>
+						{% if catpage.description != "" %}
+							<p class="category-list__item__description">{{ catpage.description }}</p>
+						{% endif %}
+					</li>
+				{% endunless %}
+			{% endif %}
 		{% endfor %}
 	{% endfor %}
 </ul>
