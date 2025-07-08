@@ -4,4 +4,4 @@ title:  "Administration"
 categories: []
 ---
 
-{% include category_big.html category="administration" %}
+{% include category.html category="administration" style="big" %}

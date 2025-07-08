@@ -4,4 +4,4 @@ title:  "Security"
 categories: []
 ---
 
-{% include category_big.html category="security" %}
+{% include category.html category="security" style="big" %}

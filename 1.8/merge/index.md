@@ -6,7 +6,7 @@ toc: false
 ---
 
 ## Merge System Guides
-{% include category_big.html category="merge" sort="order" %}
+{% include category.html category="merge" sort="order" style="big" %}
 <br />
 
 ## About the MyBB Merge System

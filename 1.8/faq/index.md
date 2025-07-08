@@ -4,4 +4,4 @@ title:  "FAQ"
 categories: []
 ---
 
-{% include category_big.html category="faq" %}
+{% include category.html category="faq" style="big" %}

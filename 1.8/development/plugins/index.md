@@ -4,4 +4,4 @@ title:  "Plugin Development"
 categories: []
 ---
 
-{% include category_big.html category="plugins" %}
+{% include category.html category="plugins" style="big" %}
