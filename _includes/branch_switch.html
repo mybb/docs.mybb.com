@@ -1,0 +1,30 @@
+{% assign pageDirs = page.dir | split: '/' %}
+{% assign pageBranch = pageDirs[1] %}
+
+{% assign pageCount = 0 %}
+
+{% capture branchSwitch %}
+	{% if site.data.branches contains pageBranch %}
+		{% assign pageBranchUrlPrefix = '/' | append: pageBranch %}
+		{% assign branchlessUrl = page.url | remove_first: pageBranchUrlPrefix %}
+
+		<nav class="branch-switch">
+			<p class="branch-switch__title">Series</p>
+
+			{% for branch in site.data.branches %}
+				{% assign branchUrl = '/' | append: branch[0] | append: branchlessUrl %}
+				{% assign branchPage = site.pages | where: "url", branchUrl | first %}
+
+				{% if branchPage %}
+					{% assign pageCount = pageCount | plus: 1 %}
+
+					<a href="{{ branchPage.url }}" class="{% if branch[0] == pageBranch %}active{% endif %}">{{ branch[0] }}</a>
+				{% endif %}
+			{% endfor %}
+		</nav>
+	{% endif %}
+{% endcapture %}
+
+{% if pageCount > 1 %}
+	{{ branchSwitch }}
+{% endif %}
