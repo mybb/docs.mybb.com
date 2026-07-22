@@ -2,6 +2,7 @@
 layout: page
 title:  "Upload Directory"
 categories: [faq]
+description: "removing the extra Upload directory"
 ---
 
 ## Upload directory
