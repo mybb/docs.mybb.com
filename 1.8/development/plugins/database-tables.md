@@ -6,77 +6,977 @@ categories: [plugins]
 
 List of all database tables created with a standard MyBB installation that describes the structure and format of each table.
 
-- mybb_adminlog
-- mybb_adminoptions
-- mybb_adminsessions
-- mybb_adminviews
-- mybb_announcements
-- mybb_attachments
-- mybb_attachtypes
-- mybb_awaitingactivation
-- mybb_badwords
-- mybb_banfilters
-- mybb_banned
-- mybb_buddyrequests
-- mybb_calendarpermissions
-- mybb_calendars
-- mybb_captcha
-- mybb_datacache
-- mybb_delayedmoderation
-- mybb_events
-- mybb_forumpermissions
-- mybb_forums
-- mybb_forumsread
-- mybb_forumsubscriptions
-- mybb_groupleaders
-- mybb_helpdocs
-- mybb_helpsections
-- mybb_icons
-- mybb_joinrequests
-- mybb_mailerrors
-- mybb_maillogs
-- mybb_mailqueue
-- mybb_massemails
-- mybb_moderatorlog
-- mybb_moderators
-- mybb_modtools
-- mybb_mycode
-- mybb_polls
-- mybb_pollvotes
-- mybb_posts
-- mybb_privatemessages
-- mybb_profilefields
-- mybb_promotionlogs
+- mybb_adminlog    
+-- uid int unsigned The id of the admin who performed the action.  
+-- ipaddress varbinary(16) The ip of the person who performed the action.  
+-- dateline int unsigned The time of the action.  
+-- module varchar(50) Which module of the ACP.  
+-- action varchar(50) Any action that was requested.  
+-- data text serialized data about the action.  
+  
+- mybb_adminoptions  
+-- uid int The id of the admin. Negative numbers are used for usergroups. Primary Key  
+-- cpstyle varchar(50) What theme this admin uses.  
+-- cplanguage varchar(50) What language the user uses.  
+-- codepress tinyint(1) If the user has codepress enabled.  
+-- notes text Any notes the admin has.  
+-- permissions text A serialized array of admin permissions.  
+-- defaultviews text Serialized data about views such as users.  
+-- loginattempts smallint How many attempts at logging in.  
+-- loginlockoutexpiry int When a lockout expires.  
+-- authsecret varchar(16) The 2FA code a user gets.  
+-- recovery_codes varchar(177) A code to recover from 2FA.  
+  
+- mybb_adminsessions  
+-- sid varchar(32) A unique identifier for the session.  
+-- uid int unsigned The user the session belongs to.  
+-- loginkey varchar(50) A unique key for this session to verify post requests.  
+-- ip varbinary(16) The ip of the admin.  
+-- dateline int unsigned The time the session was created.  
+-- lastactive int unsigned The last time the user was active.  
+-- data text Serialized data about the session such as flash_message.  
+-- useragent varchar(200) The useragent of the user.  
+-- authenticated tinyint(1) If the user is authenticated.  
+  
+- mybb_adminviews  
+-- vid int The id of the view. Primary Key.  
+-- uid int unsigned The user the view belongs to.  
+-- title varchar(100) The name of the view.  
+-- type varchar(6) The type of view such as user.  
+-- visibility tinyint(1)  
+-- fields text Serialized list of fields to include.  
+-- conditions text Serialized data about the where conditions.  
+-- custom_profile_fields text Serialized data about the custom profile fields included.  
+-- sortby varchar(20) What field to sort by.  
+-- sortorder varchar(4) ASC or DESC.  
+-- perpage smallint(4) How many items per page.  
+-- view_type varchar(6) The type of view such as card.  
+  
+- mybb_announcements  
+-- aid int unsigned The id of the announcement.  Primary Key.  
+-- fid int The id of the forum the announcement is in. -1 for global.  
+-- uid int unsigned The person who wrote the announcement.  
+-- subject varchar(120) The title of the announcement.  
+-- message text The content of the announcement.  
+-- startdate int unsigned When the announcement should begin displaying.  
+-- enddate int unsigned When the announcement should stop being displayed.  
+-- allowhtml tinyint(1) Whether HTML is allowed.  
+-- allowmycode tinyint(1) Whether mycode is allowed.  
+-- allowsmilies tinyint(1) Whether smilies are allowed.  
+  
+- mybb_attachments  
+-- aid int unsigned The id of the attachment. Primary Key.  
+-- pid int unsigned The post the attachment belongs to.  
+-- posthash varchar(50) The hash that was used to validate the post.  
+-- uid int unsigned The user who uploaded it.  
+-- filename varchar(120) The name of the file.  
+-- filetype varchar(120) The type of file.  
+-- filesize int(10) The size of the file.  
+-- attachname varchar(120) The name used internally.    
+-- downloads int unsigned How many times the attachment has been downloaded.  
+-- dateuploaded int unsigned The timestamp of when it was uploaded.  
+-- visible tinyint(1) Whether the attachment is visible.  
+-- thumbnail varchar(120) The thumbnail image.  
+  
+- mybb_attachtypes  
+-- atid int unsigned The id of the attachment type. Primary Key.  
+-- name varchar(120) The name of the attachment type.  
+-- mimetype varchar(120) The mimetype used by web servers.  
+-- extension varchar(10) The file ending such as .png.  
+-- maxsize int(15) unsigned The maximum file size of the attachment.  
+-- icon varchar(100) The url for an icon.  
+-- enabled tinyint(1) Whether the attachment type is enabled.  
+-- groups text The groups allowed to use this attachment type. -1 for all.    
+-- forums text What forums are allowed to have this attachment type. -1 for all.  
+-- avatarfile tinyint(1) If this kind of file can be used for uploading avatars.  
+  
+- mybb_awaitingactivation  
+-- aid int unsigned The id assigned. Primary Key.  
+-- uid int unsigned The id of the user.  
+-- dateline int unsigned When the user got put into awaiting activation.  
+-- code varchar(100) A string to validate the request.  
+-- type char(1) Used for things like changing email and password reset.  
+-- validated tinyint(1) Whether the code has been used.  
+-- misc varchar(255) Other information about the entry.  
+  
+- mybb_badwords  
+-- bid int unsigned The id of the word. Primary Key.  
+-- badword varchar(100) The string to replace.  
+-- replacement varchar(100) The value of the replacement.  
+  
+- mybb_banfilters  
+-- fid int unsigned The id of the filter. Primary Key.  
+-- filter varchar(200) Data about the filter.  
+-- type tinyint(1) A numeric type associated with the filter. 1 = IP, 2 = Username  
+-- lastuse int unsigned The last time a user was caught by the filter.  
+-- dateline int unsigned The timestamp the filter was added.  
+  
+- mybb_banned  
+-- uid int unsigned The id of who was banned.  
+-- gid int unsigned The group the person is banned into.  
+-- oldgroup int unsigned The old usergroup before banning.  
+-- oldadditionalgroups text The old additional groups before banning.  
+-- olddisplaygroup int unsigned The old display group before banning.  
+-- admin int unsigned The id of the person doing the banning.  
+-- dateline int unsigned The timestamp of when the ban was initiated.  
+-- bantime varchar(50) The length of time the user is banned.  
+-- lifted int unsigned The timestamp of when the ban was lifted.  
+-- reason varchar(255) The ban reason.  
+  
+- mybb_buddyrequests  
+-- id int(10) unsignedThe id of the request. Primary Key.  
+-- uid int unsigned The person making the request.  
+-- touid int unsigned The person receiving the request.  
+-- date int unsigned The timestamp of the request.  
+  
+- mybb_calendars  
+-- cid int unsigned The id of the calendar. Primary Key.  
+-- name varchar(100) The name of the calendar.  
+-- disporder smallint unsigned Display order of the calendar.  
+-- startofweek tinyint(1) What day the week starts on.  
+-- showbirthdays tinyint(1) Whether to show birthdays on the calendar.  
+-- eventlimit smallint(3) unsigned How many events can be placed on the calendar.  
+-- moderation tinyint(1) Whether events need to be moderated.  
+-- allowhtml tinyint(1) Whether HTML is allowed.  
+-- allowmycode tinyint(1) Whether mycode is allowed.  
+-- allowimgcode tinyint(1) Whether img code is allowed.  
+-- allowvideocode tinyint(1) Whether video code is allowed.  
+-- allowsmilies tinyint(1) Whether smilies are allowed.  
+  
+- mybb_calendarpermissions  
+-- cid int unsigned The id of the permissions.
+-- gid int unsigned The group this applies to.  
+-- canviewcalendar tinyint(1) If the group can view the calendar.  
+-- canaddevents tinyint(1) If the group can add events.  
+-- canbypasseventmod tinyint(1) Whether events from this group bypass moderation rules.  
+-- canmoderateevents tinyint(1) Whether this group can moderate events.  
+  
+- mybb_captcha  
+-- imagehash varchar(32) A unique identifier to the captcha.  
+-- imagestring varchar(8) The real string.  
+-- dateline int unsigned The timestamp of the captcha.  
+-- used tinyint(1) Whether it was used.  
+  
+- mybb_datacache  
+-- title varchar(50) The title of the cache. Primary Key.  
+-- cache mediumtext Serialized contents.  Use $cache->read($title) to read and $cache->update($title, $contents) to update.  
+  
+- mybb_delayedmoderation  
+-- did int unsigned The id. Primary Key.
+-- type varchar(30)  
+-- delaydateline int unsigned The timestamp to perform the operation.  
+-- uid int(10) unsigned The id of the user.  
+-- fid smallint(5) unsigned The id of the forum.  
+-- tids text A CSV list of thread ids.  
+-- dateline int unsigned The timestamp of the request.  
+-- inputs text  
+  
+- mybb_events  
+-- eid int unsigned The event id. Primary Key.  
+-- cid int unsigned The id of the calendar.  
+-- uid int unsigned The event creator.  
+-- name varchar(120) The name of the event.  
+-- description text A description of the event.  
+-- visible tinyint(1) Whether the event is visible.  
+-- private tinyint(1) Whether the event is private.  
+-- dateline int(10) unsigned The timestamp the event was created.  
+-- starttime int(10) unsigned The timestamp it starts.  
+-- endtime int(10) unsigned The timestampt it stops.  
+-- timezone varchar(5) The timezone the event is in.  
+-- ignoretimezone tinyint(1) Whether time zone should be ignored.  
+-- usingtime tinyint(1)  
+-- repeats text Information about if the event repeats.  
+  
+- mybb_forumpermissions  
+-- pid int unsigned The id of the permission.  Primary Key.  
+-- fid int unsigned The id of the forum.  
+-- gid int unsigned The id of the usergroup.  
+-- canview tinyint(1) Can view the forum.  
+-- canviewthreads tinyint(1) Can view threads within the forum.  
+-- canonlyviewownthreads tinyint(1) Can only view own threads within forum.  
+-- candlattachments tinyint(1) Can download attachments in the forum.  
+-- canpostthreads tinyint(1) Can post threads in the forum.  
+-- canpostreplys tinyint(1) Can reply to threads in the forum.  
+-- canonlyreplyownthreads tinyint(1) Can only reply to own threads in the forum.  
+-- canpostattachments tinyint(1) Can post attachments in the forum.  
+-- canratethreads tinyint(1) Can rate threads in the forum.  
+-- caneditposts tinyint(1) Can edit own posts.  
+-- candeleteposts tinyint(1) Can delete own posts.  
+-- candeletethreads tinyint(1) Can delete own threads.  
+-- caneditattachments tinyint(1) Can edit own attachments.  
+-- canviewdeletionnotice tinyint(1) Can view deleted posts.  
+-- modposts tinyint(1) Can moderate posts.  
+-- modthreads tinyint(1) Can moderate threads.  
+-- mod_edit_posts tinyint(1) Can edit the posts of others.  
+-- modattachments tinyint(1) Can moderate attachments.  
+-- canpostpolls tinyint(1) Can post polls in the forum.  
+-- canvotepolls tinyint(1) Can vote in polls in the forum.  
+-- cansearch tinyint(1) Can search the forum.  
+  
+- mybb_forums  
+-- fid smallint unsigned The id of the forum. Primary Key.  
+-- name varchar(120) The name of the forum.  
+-- description text Description of the forum.  
+-- linkto varchar(180) The url the forum redirects to.  
+-- type char(1) C = Category, F = Forum, L = Link  
+-- pid smallint unsigned The parent forum id.  
+-- parentlist text A CSV list of parents.  
+-- disporder smallint unsigned Display Order.  
+-- active tinyint(1) Whether the forum will be shown to others.  
+-- open tinyint(1) Whether users can post in the forum.  
+-- threads int unsigned Number of threads.  
+-- posts int unsigned Number of posts.  
+-- lastpost int(10) unsigned The timestamp of the last post.  
+-- lastposter varchar(120) The username of the last poster.  
+-- lastposteruid int(10) unsigned The uid of the last poster.  
+-- lastposttid int(10) unsigned The id of the last thread posted in.  
+-- lastpostsubject varchar(120) The title of the last thread posted in.  
+-- allowhtml tinyint(1) Whether HTML is enabled.  
+-- allowmycode tinyint(1) Whether mycode is enabled.  
+-- allowsmilies tinyint(1) Whether smilies are enabled.  
+-- allowimgcode tinyint(1) Whether img code is enabled.  
+-- allowvideocode tinyint(1) Whether video code is enabled.  
+-- allowpicons tinyint(1) Whether post icons are enabled.  
+-- allowtratings tinyint(1) Whether thread rating is enabled.  
+-- usepostcounts tinyint(1) Whether posts count towards a user's post count.  
+-- usethreadcounts tinyint(1) Whether threads count towards a user's thread count.  
+-- requireprefix tinyint(1) Whether threads require a prefix.  
+-- password varchar(50) The password to a forum. Note hash, not plaintext.  
+-- showinjump tinyint(1) Whether the forum is shown in the jump menu.  
+-- style smallint unsigned The default style of the forum.  
+-- overridestyle tinyint(1) Whether this forum overides a style a user chose.  
+-- rulestype tinyint(1) The way rules are displayed.  
+-- rulestitle varchar(200) The title of the rules.  
+-- rules text The content of rules.  
+-- unapprovedthreads int(10) unsigned How many unapproved threads are in the forum.  
+-- unapprovedposts int(10) unsigned How many unapproved posts are in the forum.  
+-- deletedthreads int(10) unsigned How many deleted threads are in the forum.  
+-- deletedposts int(10) unsigned How many deleted posts are in the forum.  
+-- defaultdatecut smallint(4) unsigned The number of days to shown threads from. 9999 is forever.  
+-- defaultsortby varchar(10) The default method for sorting threads.  
+-- defaultsortorder varchar(4) ASC or DESC.  
+  
+- mybb_forumsread  
+-- fid int unsigned The id of the forum.  
+-- uid int unsigned The id of the user.  
+-- dateline int unsigned The timestamp the forum was read.  
+  
+- mybb_forumsubscriptions  
+-- fsid int unsigned The id of the subscription. Primary Key.  
+-- fid smallint unsigned The id of the forum.  
+-- uid int unsigned The id of the user.  
+  
+- mybb_groupleaders  
+-- lid smallint unsigned The id of the leader. Primary Key.  
+-- gid smallint unsigned The id of the usergroup.  
+-- uid int unsigned The id of the group leader.  
+-- canmanagemembers tinyint(1) Whether the group leader can manage members.  
+-- canmanagerequests tinyint(1) Whether the group leader can manage join requests.  
+-- caninvitemembers tinyint(1) Whether the group leader can invite members to the group.  
+  
+- mybb_helpdocs  
+-- hid smallint unsigned The id of the document. Primary Key.  
+-- sid smallint unsigned The id of the section.  
+-- name varchar(120) The name of the document.  
+-- description text Description of the document.  
+-- document text The content of the document.  
+-- usetranslation tinyint(1) Whether to translate language.  
+-- enabled tinyint(1) Whether the document is enabled.  
+-- disporder smallint unsigned The display order.  
+  
+- mybb_helpsections  
+-- sid smallint unsigned The id of the section. Primary Key.  
+-- name varchar(120) The name of the section.  
+-- description text Description of the section.  
+-- usetranslation tinyint(1) Whether to translate the section.  
+-- enabled tinyint(1) Whether the section is enabled.  
+-- disporder smallint unsigned The display order.  
+  
+- mybb_icons  
+-- iid smallint unsigned The id of the icon. Primary Key.  
+-- name varchar(120) The name of the icon.  
+-- path varchar(220) The path to the icon.  
+  
+- mybb_joinrequests  
+-- rid int unsigned The id of the request. Primary Key.  
+-- uid int unsigned The id of the user.  
+-- gid smallint unsigned The id of the usergroup.  
+-- reason varchar(250) The reason to approve the request.  
+-- dateline int unsigned The timestamp of the request.  
+-- invite tinyint(1) Whether an invite was issued.  
+  
+- mybb_mailerrors  
+-- eid int unsigned The id of the email. Primary Key.  
+-- subject varchar(200) The subject of the email.  
+-- message text The content of the email.  
+-- toaddress varchar(150) The recipient's email address.  
+-- fromaddress varchar(150) The sender's email addrerss.  
+-- dateline int unsigned The timestamp of the email.  
+-- error text A description of the error.  
+-- smtperror varchar(200) A description of SMPT error.  
+-- smtpcode smallint(5) unsigned The code assigned to the SMTP error.  
+  
+- mybb_maillogs  
+-- mid int unsigned The id of the message. Primary Key.  
+-- subject varchar(200) The email subject.  
+-- message text The message.  
+-- dateline int unsigned The timestamp of the email.  
+-- fromuid int unsigned The id of the user it is from.  
+-- fromemail varchar(200) The email address of the sender.  
+-- touid int unsigned The id of the recipient.  
+-- toemail varchar(200) The email address of the recipient.  
+-- tid int unsigned The id of the thread.  
+-- ipaddress varbinary(16) The ip of the sender.  
+-- type tinyint(1)  
+    
+- mybb_mailqueue  
+-- mid int unsigned The id of the email. Primary Key.  
+-- mailto varchar(200) The email address of the recipient.  
+-- mailfrom varchar(200) The email address of the sender.  
+-- subject varchar(200) The subject of the email.  
+-- message text The message.  
+-- headers text The headers sent with the email.  
+  
+- mybb_massemails  
+-- mid int unsigned The id of the mass mailing. Primary Key.  
+-- uid int unsigned The id of the user sending the email.  
+-- subject varchar(200) The subject of the email.  
+-- message text The message.  
+-- htmlmessage text The HTML of the email.  
+-- type tinyint(1) 0 = Email, 1 = Private Message.
+-- format tinyint(1) 0 = Plain Text, 1 = HTML Only, 2 = HTML and Plain Text.  
+-- dateline int unsigned The timestamp the mass email was created.  
+-- senddate int unsigned The timestamp of when the email was sent.  
+-- status tinyint(1) 0 = Not completed, 1 = completed.  
+-- sentcount int unsigned How many emails have been sent.  
+-- totalcount int unsigned How many emails will be sent.  
+-- conditions text The where conditions.  
+-- perpage smallint(4) unsigned How many mailings should go per page.  
+  
+- mybb_moderatorlog  
+-- uid int unsigned The id of the moderator.  
+-- dateline int unsigned The timestamp of the event.  
+-- fid smallint unsigned The id of the forum.  
+-- tid int unsigned The id of the thread.  
+-- pid int unsigned The id of the post.  
+-- action text The action taken.  
+-- data text Serialized data about the event.  
+-- ipaddress varbinary(16) The ip used for the event.  
+  
+- mybb_moderators  
+-- mid smallint unsigned The id assigned to the moderator. Primary Key.  
+-- fid smallint unsigned The id of the forum.  
+-- id int unsigned The id of the user.  
+-- isgroup tinyint(1) unsigned Whether the moderator is a usergroup.  
+-- caneditposts tinyint(1) Whether the moderator can edit posts.  
+-- cansoftdeleteposts tinyint(1) Whether the moderator can soft delete posts.  
+-- canrestoreposts tinyint(1) Whether the moderator can restore soft deleted posts.  
+-- candeleteposts tinyint(1) Whether the moderator can permanently delete posts.  
+-- cansoftdeletethreads tinyint(1) Whether the moderator can soft delete threads.  
+-- canrestorethreads tinyint(1) Whether the moderator can restore soft deleted threads.  
+-- candeletethreads tinyint(1) Whether the moderator can permanently delete threads.  
+-- canviewips tinyint(1) Whether the moderator can view ips.  
+-- canviewunapprove tinyint(1) Whether the moderator can view unapproved posts and threads.  
+-- canviewdeleted tinyint(1) Whether the moderator can view deleted content.  
+-- canopenclosethreads tinyint(1) Whether the moderator can lock and unlock threads.  
+-- canstickunstickthreads tinyint(1) Whether the moderator can stick and unstick threads.  
+-- canapproveunapprovethreads tinyint(1) Whether the moderator can approve and unapprove threads.  
+-- canapproveunapproveposts tinyint(1) Whether the moderator can approve and unapprove posts.  
+-- canapproveunapproveattachs tinyint(1) Whether the moderator can approve and unapprove attachments.  
+-- canmanagethreads tinyint(1) Whether the moderator can manage threads.  
+-- canmanagepolls tinyint(1) Whether the moderator can manage polls.  
+-- canpostclosedthreads tinyint(1) Whether the moderator can reply to locked threads.  
+-- canmovetononmodforum tinyint(1) Whether the moderator can move a thread to a forum they don't moderate.  
+-- canusecustomtools tinyint(1) Whether the moderator can use custom mod tools.  
+-- canmanageannouncements tinyint(1) Whether the moderator can manage announcements.  
+-- canmanagereportedposts tinyint(1) Whether the moderator can manage reported content.  
+-- canviewmodlog tinyint(1) Whether the moderator can view the mod log.  
+  
+- mybb_modtools  
+-- tid smallint unsigned The id of the tool. Primary Key.  
+-- name varchar(200) The name of the tool.  
+-- description text A description of what the tool does.  
+-- forums text CSV of what forums the tool can be used in.  
+-- groups text CSV of what usergroups can use the tool.  
+-- type char(1) Whether the tool is for threads or posts.  
+-- postoptions text Serialized data about what is done to the post.  
+-- threadoptions text Serialized data about what is done to the thread.  
+  
+- mybb_mycode  
+-- cid int unsigned The id of the code. Primary Key.  
+-- title varchar(100) The title of the code.  
+-- description text A description of what the code does.  
+-- regex text The regular expression.  
+-- replacement text The replacement.  
+-- active tinyint(1) Whether the code is active.  
+-- parseorder smallint unsigned The order the code is parsed.  
+  
+- mybb_polls  
+-- pid int unsigned The id of the poll.  
+-- tid int unsigned The id of the thread.  
+-- question varchar(200) The question.  
+-- dateline int unsigned The timestamp the poll was created.  
+-- options text NOT NULL, The options for the poll.  
+-- votes text NOT NULL, Data about the votes.  
+-- numoptions smallint unsigned The number of poll options.  
+-- numvotes int unsigned The total number of voters.  
+-- timeout int unsigned The timestamp when the poll is closed.  
+-- closed tinyint(1) Whether the poll is closed.  
+-- multiple tinyint(1) Whether a user can select multiple options.  
+-- public tinyint(1) Whether the results include usernames.  
+-- maxoptions smallint unsigned The maximum amount of options a user can vote for.  
+  
+- mybb_pollvotes  
+-- vid int unsigned The id of the vote. Primary Key.  
+-- pid int unsigned The id of the poll.  
+-- uid int unsigned The id of the user.  
+-- voteoption smallint unsigned The option voted for.  
+-- dateline int unsigned The timestamp the vote was cast.  
+-- ipaddress varbinary(16) The voter's ip address.  
+  
+- mybb_posts  
+-- pid int unsigned The id of the post. Primary Key.  
+-- tid int unsigned The id of the thread.  
+-- replyto int unsigned The id of the post being replied to.  
+-- fid smallint unsigned The id of the forum.  
+-- subject varchar(120) The subject of the post.  
+-- icon smallint unsigned The id of the post icon.  
+-- uid int unsigned The id of the user.  
+-- username varchar(80) The name of the user.  
+-- dateline int unsigned The timestamp of the post.  
+-- message text The message.  
+-- ipaddress varbinary(16) The ip address.  
+-- includesig tinyint(1) Whether to include the user's signature.  
+-- smilieoff tinyint(1) Whether smilies are enabled.  
+-- edituid int unsigned The id of the person who edited the post.  
+-- edittime int unsigned The timestamp the post was last edited.  
+-- editreason varchar(150) The reason the post was edited.  
+-- visible tinyint(1) The visibility of the post. -2 = Draft, -1 = Deleted, 0 = Unapproved, 1 = Visible.  
+  
+- mybb_privatemessages  
+-- pmid int unsigned The id of the message. Primary Key.  
+-- uid int unsigned The id of the sender.  
+-- toid int unsigned The id of the recipient.  
+-- fromid int unsigned The id of the user it is from.  
+-- recipients text A list of recipients.  
+-- folder smallint unsigned The id of the folder.  
+-- subject varchar(120) The subject of the message.  
+-- icon smallint unsigned The icon of the message.  
+-- message text The message.  
+-- dateline int unsigned The timestamp of the message.  
+-- deletetime int unsigned The timestamp of when the message was deleted.  
+-- status tinyint(1) Whether the message has been read.  
+-- statustime int unsigned The timestamp the status last changed.  
+-- includesig tinyint(1) Whether the sender's signature is included.  
+-- smilieoff tinyint(1) Whether smilies are enabled.  
+-- receipt tinyint(1) Whether tracking is used.  
+-- readtime int unsigned The timestamp of when the message was read.  
+-- ipaddress varbinary(16) The ip address of the sender.  
+  
+- mybb_profilefields  
+-- fid smallint unsigned The id of the field. Primary Key.  
+-- name varchar(100) The name of the field.  
+-- description text A description of the field.  
+-- disporder smallint unsigned The display order.  
+-- type text The type of field.  
+-- regex text A regular expression the value must match.  
+-- length smallint unsigned The minimum length of the field.  
+-- maxlength smallint unsigned The maximum length of the value.  
+-- required tinyint(1) Whether the field is required.  
+-- registration tinyint(1) Whether the field is shown on the registration form.  
+-- profile tinyint(1) Show this field on profile.  
+-- postbit tinyint(1) Show this field in posts.  
+-- viewableby text Which groups can view the field.  
+-- editableby text Which groups can edit the field.  
+-- postnum smallint unsigned The number of posts to access this field.  
+-- allowhtml tinyint(1) Whether HTML is allowed in the field.  
+-- allowmycode tinyint(1) Whether mycode is allowed in the field.  
+-- allowsmilies tinyint(1) Whether smilies are allowed in the field.  
+-- allowimgcode tinyint(1) Whether img code is allowed in the field.  
+-- allowvideocode tinyint(1) Whether video code is allowed in the field.  
+    
+- mybb_promotionlogs  
+-- plid int unsigned The id of the entry. Primary Key.  
+-- pid int unsigned The id of the promotion.  
+-- uid int unsigned The id of the user.  
+-- oldusergroup varchar(200) The old usergroup.  
+-- newusergroup smallint The id of the new usergroup.  
+-- dateline int unsigned Timestamp of the event.  
+-- type varchar(9) Primary or secondary.  
+  
 - mybb_promotions
-- mybb_questions
-- mybb_questionsessions
-- mybb_reportedcontent
-- mybb_reputation
-- mybb_searchlog
-- mybb_sessions
-- mybb_settinggroups
-- mybb_settings
-- mybb_smilies
-- mybb_spamlog
-- mybb_spiders
-- mybb_stats
-- mybb_tasklog
-- mybb_tasks
-- mybb_templategroups
-- mybb_templates
-- mybb_templatesets
-- mybb_themes
-- mybb_themestylesheets
-- mybb_threadprefixes
-- mybb_threadratings
-- mybb_threads
-- mybb_threadsread
-- mybb_threadsubscriptions
-- mybb_threadviews
-- mybb_userfields
-- mybb_usergroups
-- mybb_users
-- mybb_usertitles
-- mybb_warninglevels
-- mybb_warnings
-- mybb_warningtypes
+-- pid int unsigned The id of the promotion. Primary Key.  
+-- title varchar(120) The title of the promotion.  
+-- description text A description of the promotion.  
+-- enabled tinyint(1) Whether the promotion is active.  
+-- logging tinyint(1) Whether the promotion should be logged.  
+-- posts int unsigned How many posts.  
+-- posttype char(2) What the post count must be in relation to posts.  
+-- threads int unsigned How many threads.  
+-- threadtype char(2) What the thread count must be in relation to threads.  
+-- registered int unsigned How much time registered.   
+-- registeredtype varchar(20) Hours, Days, Weeks, Months, Years   
+-- online int unsigned Time spent online.  
+-- onlinetype varchar(20) Online time modifier.  
+-- reputations int Number of reputations.  
+-- reputationtype char(2) What the reputation count must be in relation to reputions.  
+-- referrals int unsigned Nukber of referrals.  
+-- referralstype char(2) What the referral count must be in relation to referrals.  
+-- warnings int unsigned Warning points required.  
+-- warningstype char(2) What the warning points must be in relation to warnings.  
+-- requirements varchar(200) What criteria to use.  
+-- originalusergroup varchar(120) Old usergroup.  
+-- newusergroup smallint unsigned New usergroup id.  
+-- usergrouptype varchar(120)  Primary or Secondary.  
+  
+- mybb_questions  
+--  qid int unsigned The id of the question. Primary Key.  
+-- question varchar(200) The question.  
+-- answer varchar(150) The correct answer.  
+-- shown int unsigned How many times the question was shown.  
+-- correct int unsigned How many times the question was answered correctly.  
+-- incorrect int unsigned How many times the question was answered wrong.  
+-- active tinyint(1) Whether the question is active.  
+  
+- mybb_questionsessions  
+-- sid varchar(32) A unique string assigned to the session. Primary Key.  
+-- qid int unsigned The id of the question.  
+-- dateline int unsigned The timestamp the session was created.  
+  
+- mybb_reportedcontent  
+-- rid int unsigned The id of the report. Primary Key.  
+-- id int unsigned Information about the report.  
+-- id2 int unsigned Information about the report.  
+-- id3 int unsigned Information about the report.  
+-- uid int unsigned The id of the user reported.  
+-- reportstatus tinyint(1) Whether the report is marked as read.  
+-- reasonid smallint unsigned The id of the reason for reporting.  
+-- reason varchar(250) The reason for reporting.  
+-- type varchar(50) The type of report.  
+-- reports int unsigned The number of reports.  
+-- reporters text The users who reported the content.  
+-- dateline int unsigned The timestamp of the report.  
+-- lastreport int unsigned  
+  
+- mybb_reportreasons  
+-- rid int unsigned The id of the reason. Primary Key.  
+-- title varchar(250) The title of the reason.  
+-- appliesto varchar(250) The type of content it applies to.  
+-- extra tinyint(1) Whether additional comment is necessary.  
+-- disporder smallint The display order of the reason.  
+  
+- mybb_reputation  
+-- rid int unsigned The id of the reputation. Primary Key.  
+-- uid int unsigned The user being affected.  
+-- adduid int unsigned The user who added the reputation.  
+-- pid int unsigned The post it is attached to.  
+-- reputation smallint The power of the reputation.  
+-- dateline int unsigned The timestamp of the reputation.  
+-- comments text Comments.  
+  
+- mybb_searchlog  
+-- sid varchar(32) A unique string for the search. Primary Key.  
+-- uid int unsigned The user doing the search.  
+-- dateline int unsigned The timestamp of the search.  
+-- ipaddress varbinary(16) The ip address of the searcher.  
+-- threads longtext A list of threads that fit the result.  
+-- posts longtext A list of posts that fit the result.  
+-- resulttype varchar(10) Whether to show results as threads or posts.  
+-- querycache text Where conditions for the search.  
+-- keywords text Words used.  
+  
+- mybb_sessions  
+-- sid varchar(32) A unique string for the session.  
+-- uid int unsigned The user a session belongs to. 0 for guest.  
+-- ip varbinary(16) The ip address of the session.  
+-- time int unsigned The time the session was last updated.  
+-- location varchar(150) The url the user is viewing.  
+-- useragent varchar(200) The useragent of the user.  
+-- anonymous tinyint(1) Whether the user is invisible.  
+-- nopermission tinyint(1) Whether the user is viewing a no permission page.  
+-- location1 int(10) unsigned Information about the location.  
+-- location2 int(10) unsigned Information about the location.  
+  
+- mybb_settinggroups  
+-- gid smallint unsigned The id of the setting group. Primary Key.  
+-- name varchar(100) The name of the setting group.  
+-- title varchar(220) The title of the setting group.  
+-- description text A description of the setting group.  
+-- disporder smallint unsigned The display order.  
+-- isdefault tinyint(1) Whether the setting group is default. Plugins should use 0.  
+  
+- mybb_settings  
+-- sid smallint unsigned The id of the setting. Primary Key.  
+-- name varchar(120) The name of the setting. Must be unique.  
+-- title varchar(120) The title of the setting when viewing it in the ACP.   
+-- description text A description of the setting.  
+-- optionscode text What kind of field to use for the setting.  
+-- value text The value of the setting.  
+-- disporder smallint unsigned The display order within the setting group.  
+-- gid smallint unsigned The id of the setting group.  
+-- isdefault tinyint(1) Whether the setting is default. Plugins should use 0.  
+  
+- mybb_smilies  
+-- sid smallint unsigned The id of the smily. Primary Key.  
+-- name varchar(120) The name of the smily.  
+-- find text The string to search for.  
+-- image varchar(220) The image to replace with.  
+-- disporder smallint unsigned The display order.  
+-- showclickable tinyint(1) Whether the smily is clickable to insert.  
+  
+- mybb_spamlog  
+-- sid int unsigned The id of the entry. Primary Key.  
+-- username varchar(120) The username used.  
+-- email varchar(220) The email address used.  
+-- ipaddress varbinary(16) The ip address used.  
+-- dateline int unsigned The timestamp of the entry.  
+-- data text Information about the entry.  
+  
+- mybb_spiders  
+-- sid int unsigned The id of the robot. Primary Key.  
+-- name varchar(100) The name of the robot.  
+-- theme smallint unsigned The theme the robot will use.  
+-- language varchar(20) The language the robot will use.  
+-- usergroup smallint unsigned The usergroup the robot will inherit permissions from.  
+-- useragent varchar(200) The useragent of the robot.  
+-- lastvisit int unsigned The timestamp of the last visit.  
+  
+- mybb_stats  
+-- dateline int unsigned The timestamp the stats were generated. Primary Key.  
+-- numusers int unsigned How many users there are.  
+-- numthreads int unsigned How many threads there are.  
+-- numposts int unsigned How many posts there are.  
+  
+- mybb_tasklog  
+-- lid int unsigned The id of the entry. Primary Key.  
+-- tid int unsigned The id of the task ran.  
+-- dateline int unsigned The timestamp the task ran at.  
+-- data text Information about the task.  
+  
+- mybb_tasks  
+-- tid int unsigned The id of the task. Primary Key.  
+-- title varchar(120) The title of the task.  
+-- description text A description of the task.  
+-- file varchar(30) The file to run.  
+-- minute varchar(200) A CSV list of minutes to run on. * for every minute. 
+-- hour varchar(200) A CSV list of hours to run. * for every hour.  
+-- day varchar(100) A CSV list of what days of the month to run. * for every day.  
+-- month varchar(30) A CSV list of what months to run. * for every month.  
+-- weekday varchar(15) A CSV list of what days to run. * for all days of the week.  
+-- nextrun int unsigned A timestamp of the next time the task is due to run.  
+-- lastrun int unsigned A timestamp of the last time the task ran.  
+-- enabled tinyint(1) Whether the task is enabled.  
+-- logging tinyint(1) Whether the task is logged.  
+-- locked int unsigned A timestamp of when the task was disabled.  
+  
+- mybb_templategroups  
+-- gid int unsigned The id of the template group. Primary Key.  
+-- prefix varchar(50) The prefix to templates in the group.  
+-- title varchar(100) The title of the template group. Use <lang:variable_name_here>  
+-- isdefault tinyint(1) Whether the template group is default. Plugins should use 0.  
+  
+- mybb_templates  
+-- tid int unsigned The id of the template. Primary Key.  
+-- title varchar(120) The title of the template.  
+-- template text The mark-up of the template.  
+-- sid smallint The id of the style the template is attached to.  
+-- version varchar(20) The version code of the template.  
+-- status varchar(10) The status of the template.  
+-- dateline int unsigned The timestamp the template was last edited.  
+  
+- mybb_templatesets  
+-- sid smallint unsigned The id of the template set. Primary Key.  
+-- title varchar(120) The title of the template set.  
+  
+- mybb_themes  
+-- tid smallint unsigned The id of the theme. Primary Key.  
+-- name varchar(100) The name of the theme.  
+-- pid smallint unsigned The id of the parent theme.  
+-- def tinyint(1) Whether the theme is default.  
+-- properties text Serialized data about the theme.  
+-- stylesheets text A CSV list of stylesheets used with the theme.  
+-- allowedgroups text A CSV list of usergroups allowed to use the theme. all for all usergroups.  
+  
+- mybb_themestylesheets  
+-- sid int unsigned The id of the stylesheet. Primary Key.  
+-- name varchar(30) The name of the stylesheet.  
+-- tid smallint unsigned The id of the theme it belongs to.  
+-- attachedto text A pipe separated list of what pages the stylesheet is attached to.  
+-- stylesheet longtext The CSS of the stylesheet.  
+-- cachefile varchar(100) The file that has a minified version of the css.  
+-- lastmodified int unsigned The timestamp of when the stylesheet was last edited.  
+  
+- mybb_threadprefixes  
+-- pid int unsigned The id of the prefix. Primary Key.  
+-- prefix varchar(120) The name of the prefix.  
+-- displaystyle varchar(200) How the prefix is displayed.  
+-- forums text A CSV list of what forums the prefix can be used in. 
+-- groups text A CSV list of what groups can use the prefix.  
+  
+- mybb_threadratings  
+-- rid int unsigned The id of the rating. Primary Key.  
+-- tid int unsigned The id of the thread.  
+-- uid int unsigned The id of the user.  
+-- rating tinyint(1) unsigned The rating given to the thread.  
+-- ipaddress varbinary(16) The ip address of the user giving the rating.  
+  
+- mybb_threads  
+-- tid int unsigned The id of the thread. Primary Key.  
+-- fid smallint unsigned The id of the forum the thread is in.  
+-- subject varchar(120) The title of the thread.  
+-- prefix smallint unsigned The id of the prefix the thread has.  
+-- icon smallint unsigned The id of the icon a thread has.  
+-- poll int unsigned Whether the thread has a poll.  
+-- uid int unsigned The id of the author.  
+-- username varchar(80) The name of the author.  
+-- dateline int unsigned The timestamp of when the thread was created.  
+-- firstpost int unsigned The id of the first post of the thread.  
+-- lastpost int unsigned The timestamp of the last post in the thread.  
+-- lastposter varchar(120) The username of the last poster.  
+-- lastposteruid int unsigned The id of the last poster.  
+-- views int(100) unsigned The number of views a thread has.  
+-- replies int(100) unsigned The number of replies a thread has.  
+-- closed varchar(30) Whether a thread is locked or moved. 0 = open, 1 = locked, moved|tid_here for moved.  
+-- sticky tinyint(1) Whether the thread is a sticky.  
+-- numratings smallint unsigned The number of ratings a thread has.  
+-- totalratings smallint unsigned The total of all the ratings a thread has.  
+-- notes text Notes about the thread visible to moderators.  
+-- visible tinyint(1) Visibility of the thread. -2 = draft, -1 = deleted, 0 = unapproved, 1 = visible  
+-- unapprovedposts int(10) unsigned The number of unapproved posts in the thread.  
+-- deletedposts int(10) unsigned The number of deleted posts in the thread.  
+-- attachmentcount int(10) unsigned The number of attachments in the thread.  
+-- deletetime int(10) unsigned The timestamp of when a thread was deleted.  
+  
+- mybb_threadsread  
+-- tid int unsigned The thread read.  
+-- uid int unsigned The user who read the thread.  
+-- dateline int unsigned The timestamp the thread was read.  
+  
+- mybb_threadsubscriptions  
+-- sid int unsigned The id of the subscription.  
+-- uid int unsigned The id of the user.  
+-- tid int unsigned The id of the thread.  
+-- notification tinyint(1) The type of notification used.  
+-- dateline int unsigned The timestamp of when a user subscribed to the thread.  
+  
+- mybb_threadviews  
+-- tid int unsigned The id of the thread viewed.  
+  
+- mybb_userfields  
+--  ufid int unsigned The user a field applied to. Primary Key.  
+-- fid1 text The first profile field.  
+-- fid2 text The second profile field.  
+-- fid3 text The third profile field.  
+-- Each time a profile field is created a new column is created in this table with name fidx.  
+  
+- mybb_usergroups  
+-- gid smallint unsigned The id of the group. Primary Key.  
+-- type tinyint(1) unsigned If the usergroup is a default or custom group.  
+-- title varchar(120) The name of the usergroup.  
+-- description text A description of the usergroup.  
+-- namestyle varchar(200) The style of the username. Use {username} to represent the user's name.  
+-- usertitle varchar(120) The default usertitle for members of this group.  
+-- stars smallint(4) unsigned The number of stars a member of this usergroup has.  
+-- starimage varchar(120) The image for stars.  
+-- image varchar(120) The image used for userbars.  
+-- disporder smallint(6) unsigned The order the usergroup is shown.  
+-- isbannedgroup tinyint(1) Whether the group is a banned group.  
+-- canview tinyint(1) Whether the group can view forums.  
+-- canviewthreads tinyint(1) Whether the group can view threads.  
+-- canviewprofiles tinyint(1) Whether the group can view profiles.  
+-- candlattachments tinyint(1) Whether the group can download attachments.  
+-- canviewboardclosed tinyint(1) Whether the group can view the board when it is closed.  
+-- canpostthreads tinyint(1) Whether the group can post threads.  
+-- canpostreplys tinyint(1) Whether the group can reply to threads.  
+-- canpostattachments tinyint(1) Whether the group can post attachments.  
+-- canratethreads tinyint(1) Whether the group can rate threads.  
+-- modposts tinyint(1) Whether the group needs posts to be moderated.  
+-- modthreads tinyint(1) Whether the group needs threads to be moderated.  
+-- mod_edit_posts tinyint(1) Whether the group needs posts moderated after being edited.  
+-- modattachments tinyint(1) Whether the group needs attachments to be moderated.  
+-- caneditposts tinyint(1) Whether the group can edit their own posts.  
+-- candeleteposts tinyint(1) Whether the group can delete their own posts.  
+-- candeletethreads tinyint(1) Whether the group can delete their own threads.  
+-- caneditattachments tinyint(1) Whether the group can edit their own attachments.  
+-- canviewdeletionnotice tinyint(1) Whether the group can view deleted posts.  
+-- canpostpolls tinyint(1) Whether the group can create polls.  
+-- canvotepolls tinyint(1) Whether the group can vote in polls.  
+-- canundovotes tinyint(1) Whether the group can undo their vote.  
+-- canusepms tinyint(1) Whether the group can use private messages.  
+-- cansendpms tinyint(1) Whether the group can send private messages.  
+-- cantrackpms tinyint(1) Whether the group can track the read status of private messages.  
+-- candenypmreceipts tinyint(1) Whether the group can deny read receipt.  
+-- pmquota int(3) unsigned How many messages users in this group can have.  
+-- maxpmrecipients int(4) unsigned How many users members of this group can send a private message to at one time.  
+-- cansendemail tinyint(1) Whether the group can send emails to users.  
+-- cansendemailoverride tinyint(1) Whether the group can send an email to a user even if the user has them disabled.  
+-- maxemails int(3) unsigned Max emails allowed per day.  
+-- emailfloodtime int(3) unsigned Time in minutes between emails.  
+-- canviewmemberlist tinyint(1) Whether the group can view the member list.  
+-- canviewcalendar tinyint(1) Whether the group can view the calendar.  
+-- canaddevents tinyint(1) Whether the group can add events to the calendar.  
+-- canbypasseventmod tinyint(1) Whether the group can bypass event moderation.  
+-- canmoderateevents tinyint(1) Whether the group can moderate events.  
+-- canviewonline tinyint(1) Whether the group can view who's online.  
+-- canviewwolinvis tinyint(1) Whether the group can view members that are invisible.  
+-- canviewonlineips tinyint(1) Whether the group can view the ip of users online.  
+-- cancp tinyint(1) Whether the group can use the Admin CP.  
+-- issupermod tinyint(1) Whether the group is a global moderator.  
+-- cansearch tinyint(1) Whether the group can search the forum.  
+-- canusercp tinyint(1) Whether the group can use the User CP.  
+-- canuploadavatars tinyint(1) Whether the group can upload avatars.  
+-- canratemembers tinyint(1)  
+-- canchangename tinyint(1) Whether the group can change their username.  
+-- canbereported tinyint(1) Whether the group can be reported.  
+-- canchangewebsite tinyint(1) Whether the group can change their website profile field.  
+-- showforumteam tinyint(1) Whether the group is shown on the forum team page.  
+-- usereputationsystem tinyint(1) Whether the group has their reputation shown.  
+-- cangivereputations tinyint(1) Whether the group can give reputation to users.  
+-- candeletereputations tinyint(1) Whether the group can delete reputations they give.  
+-- reputationpower int unsigned How many points to award or take away.  
+-- maxreputationsday int unsigned How many reputations can be given per day.  
+-- maxreputationsperuser int unsigned How many reputations can be given per user.  
+-- maxreputationsperthread int unsigned How many reputations can be given per thread.  
+-- candisplaygroup tinyint(1) Whether the group can be set as display group.  
+-- attachquota int unsigned The amount of space attachments can take.  
+-- cancustomtitle tinyint(1) Whether the group can use a custom title.  
+-- canwarnusers tinyint(1) Whether the group can warn other users.  
+-- canreceivewarnings tinyint(1) Whether the group can receive warnings.  
+-- maxwarningsday int(3) unsigned How many warnings can be given per day.  
+-- canmodcp tinyint(1) Whether the group can access the Mod CP.  
+-- showinbirthdaylist tinyint(1) Whether the group is shown in the birthday list.  
+-- canoverridepm tinyint(1) Whether the group can send private messages even if the recipient has them disabled.  
+-- canusesig tinyint(1) Whether the group can use a signature.  
+-- canusesigxposts smallint unsigned How many posts are required before a signature can be added.  
+-- signofollow tinyint(1) Whether links in a user's signature have the no_follow attribute.  
+-- edittimelimit int(4) unsigned The number of minutes before a post cna no longer be edited.  
+-- maxposts int(4) unsigned Max posts per day.  
+-- showmemberlist tinyint(1) Whether members of this group are shown in the member list.  
+-- canmanageannounce tinyint(1) Whether the group can manage announcements.  
+-- canmanagemodqueue tinyint(1) Whether the group can manage the moderation queue.  
+-- canmanagereportedcontent tinyint(1) Whether the group can manage reported content.  
+-- canviewmodlogs tinyint(1) Whether the group can view the moderator logs.  
+-- caneditprofiles tinyint(1) Whether the group can edit the profile's of other users.  
+-- canbanusers tinyint(1) Whether the group can ban users.  
+-- canviewwarnlogs tinyint(1) Whether the group can view warning logs.  
+-- canuseipsearch tinyint(1) Whether the group can use ip search.  
+  
+- mybb_users  
+-- uid int unsigned The id of the user.  
+-- username varchar(120) The name of the user.  
+-- password varchar(120) The hashed password.  
+-- salt varchar(10) Salt used for creating the hash.  
+-- loginkey varchar(50) A unique string for tracking the session and verifying post requests.  
+-- email varchar(220) Email address.  
+-- postnum int(10) unsigned The number of posts.  
+-- threadnum int(10) unsigned The number of threads.  
+-- avatar varchar(200) The url of the avatar.  
+-- avatardimensions varchar(10) The dimensions of the avatar.  
+-- avatartype varchar(10) What type of avatar is used.  
+-- usergroup smallint unsigned The primary usergroup the person is in.  
+-- additionalgroups varchar(200) A CSV list of additional groups the user is in.  
+-- displaygroup smallint unsigned The display group. 0 is primary group.  
+-- usertitle varchar(250) The custom title a user has.  
+-- regdate int unsigned The timestamp the user registered.  
+-- lastactive int unsigned The timestamp of the last activity.  
+-- lastvisit int unsigned The timestamp of the last visit.  
+-- lastpost int unsigned The timestamp of the last post.  
+-- website varchar(200) The user's website.  
+-- icq varchar(10) ICQ.  
+-- aim varchar(50) AIM.  
+-- yahoo varchar(50) Yahoo Id.  
+-- skype varchar(75) Skype Id.  
+-- google varchar(75) Google Plus Id.  
+-- birthday varchar(15) User's birthday.  
+-- birthdayprivacy varchar(4) Who can view the user's birthday.  
+-- signature text The user's signature.  
+-- allownotices tinyint(1) Show notices.  
+-- hideemail tinyint(1) Whether to hide email address from other users.  
+-- subscriptionmethod tinyint(1) What to do for subscriptions.  
+-- invisible tinyint(1) Don't show up on who's online.  
+-- receivepms tinyint(1) Whether private messages can be received.  
+-- receivefrombuddy tinyint(1) Only receive private messages from buddies.  
+-- pmnotice tinyint(1) Show notice of new private message. 
+-- pmnotify tinyint(1) Show notice of new private message.  
+-- buddyrequestspm tinyint(1) Send private message for buddy requests.  
+-- buddyrequestsauto tinyint(1) Automatically approve buddy requests.  
+-- threadmode varchar(8) Whether to show linear or threaded.  
+-- showimages tinyint(1) Whether to show images in threads.  
+-- showvideos tinyint(1) Whether to show videos in threads.  
+-- showsigs tinyint(1) Whether to show signatures of other users.  
+-- showavatars tinyint(1) Whether to show avatars.  
+-- showquickreply tinyint(1) Whether to show the quick reply form.  
+-- showredirect tinyint(1) Whether to show friendly redirect pages.  
+-- ppp smallint(6) unsigned How many posts per page.  
+-- tpp smallint(6) unsigned How many threads per page.  
+-- daysprune smallint(6) unsigned The cutoff date for threads.  
+-- dateformat varchar(4) The format to show the date.  
+-- timeformat varchar(4) The format to show time.  
+-- timezone varchar(5) The time zone the user is in.  
+-- dst tinyint(1) Whether daylight savings time is used.  
+-- dstcorrection tinyint(1) Whether to automatically detect daylight savings time.  
+-- buddylist text A CSV list of users that are buddies.  
+-- ignorelist text A CSV list of users that are ignored.  
+-- style smallint unsigned The id of the theme the user is using.  
+-- away tinyint(1) Whether the user is away.  
+-- awaydate int(10) Timestamp of when the user went away.  
+-- returndate varchar(15) The date of return.  
+-- awayreason varchar(200) The reason for being away.  
+-- pmfolders text Folders for private messages.  
+-- notepad text Personal notes the user has made.  
+-- referrer int unsigned The id of the user who referred the user.  
+-- referrals int unsigned How many referrals the user has.  
+-- reputation int The reputation score.  
+-- regip varbinary(16) The ip address used to register.  
+-- lastip varbinary(16) The last ip address used by the user.  
+-- language varchar(50) The language used by the user.  
+-- timeonline int unsigned The number of seconds spent online.  
+-- showcodebuttons tinyint(1) Whether the mycode editor should be shown.  
+-- totalpms int(10) unsigned The number of private messages.  
+-- unreadpms int(10) unsigned The number of unread private messages.  
+-- warningpoints int(3) unsigned The number of warning points a user has.  
+-- moderateposts tinyint(1) Whether the user needs to have posts moderated.  
+-- moderationtime int unsigned The timestamp of when posts no longer are moderated.   
+-- suspendposting tinyint(1) Whether the user's posting privilege is suspended.  
+-- suspensiontime int unsigned The timestamp of when the suspension is over.  
+-- suspendsignature tinyint(1) Whether the user's signature privilege is suspended.  
+-- suspendsigtime int unsigned The timestamp the user's signature is no longer suspended.  
+-- coppauser tinyint(1) Whether the user is a coppa user.  
+-- classicpostbit tinyint(1) Whether posts are shown in classic mode.  
+-- loginattempts smallint(2) unsigned The number of failed log in attempts.  
+-- usernotes text Notes on the user by moderators.  
+-- sourceeditor tinyint(1) Whether to put the editor in source mode.  
+   
+- mybb_usertitles  
+-- utid smallint unsigned The id of the user title. Primary Key.  
+-- posts int unsigned The number of posts required.  
+-- title varchar(250) The title of the usertitle.  
+-- stars smallint(4) unsigned The number of stars to display.  
+-- starimage varchar(120) The image used for stars.  
+  
+- mybb_warninglevels  
+-- lid int unsigned The id of the warning level.  
+-- percentage smallint(3) unsigned The warning percent a user needs to reach.  
+-- action text Details about what action is taken.  
+    
+- mybb_warnings  
+-- wid int unsigned The id of the warning. Primary Key.  
+-- uid int unsigned The user receiving the warning.  
+-- tid int unsigned The thread a warning was issued for.  
+-- pid int unsigned The post a warning was issued for.  
+-- title varchar(120) The name of the warning.  
+-- points smallint unsigned How many points were assigned by the warning.  
+-- dateline int unsigned The timestamp of when the warning was given.  
+-- issuedby int unsigned The id of the user giving the warning.  
+-- expires int unsigned The timestamp the warning expires.  
+-- expired tinyint(1) Whether the warning has expired.  
+-- daterevoked int unsigned The timestamp of when a warning was revoked.  
+-- revokedby int unsigned The id of the user who revoked the warning.  
+-- revokereason text The reason the warning was revoked.  
+-- notes text Notes about the warning.  
+  
+- mybb_warningtypes  
+-- tid int unsigned The id of the warning type. Primary Key.  
+-- title varchar(120) The title of the warning.  
+-- points smallint unsigned The number of points to assign.  
+-- expirationtime int unsigned The number of seconds a warning lasts.  
